@@ -932,7 +932,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 
 /* Random screen popups animation & style */
-/* Premium Random screen popups animation & style (3-second lifecycle) */
+/* Premium Single Screen Popup animation & style (5-second lifecycle) */
 .cjp-pop-badge {
   position: fixed;
   z-index: 99999;
@@ -953,7 +953,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
   cursor: pointer;
   pointer-events: auto;
   user-select: none;
-  animation: cjpPopAnim 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: cjpPopAnim 5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   will-change: transform, opacity;
 }
 .cjp-pop-badge::before {
@@ -990,15 +990,15 @@ button, input, textarea, select { font: inherit; color: inherit; }
     opacity: 0;
     transform: scale(0.2) translateY(24px) rotate(-10deg);
   }
-  8% {
+  5% {
     opacity: 1;
     transform: scale(1.08) translateY(-4px) rotate(2deg);
   }
-  14% {
+  10% {
     opacity: 1;
     transform: scale(1) translateY(0) rotate(0deg);
   }
-  86% {
+  90% {
     opacity: 1;
     transform: scale(1) translateY(0) rotate(0deg);
   }

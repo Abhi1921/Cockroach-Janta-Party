@@ -314,8 +314,8 @@
   };
 
   const spawnRandomPop = () => {
-    // Keep max 7 active popups on screen for performance & clean aesthetic
-    if (document.querySelectorAll(".cjp-pop-badge").length > 7) return;
+    // Strictly ONLY 1 active popup on screen at any time
+    if (document.querySelectorAll(".cjp-pop-badge").length > 0) return;
 
     const el = document.createElement("a");
     el.href = "join.html";
@@ -323,15 +323,16 @@
     el.innerHTML = getRandomMsg();
 
     // Random location across viewport bounds
-    const rx = Math.floor(3 + Math.random() * 76); // 3% to 79% width
-    const ry = Math.floor(10 + Math.random() * 76); // 10% to 86% height
+    const rx = Math.floor(4 + Math.random() * 74); // 4% to 78% width
+    const ry = Math.floor(12 + Math.random() * 74); // 12% to 86% height
     el.style.left = `${rx}vw`;
     el.style.top = `${ry}vh`;
 
     document.body.appendChild(el);
-    setTimeout(() => el.remove(), 3000);
+    setTimeout(() => el.remove(), 4950);
   };
 
-  // Trigger continuous random name popups every 600ms
-  setInterval(spawnRandomPop, 600);
+  // Immediately spawn first popup, then sequence next popup every 5.2 seconds
+  spawnRandomPop();
+  setInterval(spawnRandomPop, 5200);
 })();
