@@ -288,4 +288,39 @@
 
     go(0);
   });
+
+  // Random screen popups generator ("Join Cockroach Janta Party")
+  const popTexts = [
+    "🪳 Join Cockroach Janta Party!",
+    "🔥 #MainBhiCockroach",
+    "⚡ Voice of the Unemployed — Join!",
+    "✊ Join CJP Today (Free)",
+    "📢 Join CJP Movement Now!",
+    "🪳 Chhota Size, Badi Soch",
+    "✨ Join Cockroach Janta Party Free",
+    "🚀 Register Free Member ID"
+  ];
+
+  const spawnRandomPop = () => {
+    // Limit max active popups to prevent DOM bloat
+    if (document.querySelectorAll(".cjp-pop-badge").length > 6) return;
+
+    const el = document.createElement("a");
+    el.href = "join.html";
+    el.className = "cjp-pop-badge";
+    const text = popTexts[Math.floor(Math.random() * popTexts.length)];
+    el.innerHTML = `<span>${text}</span>`;
+
+    // Random location across viewport bounds
+    const rx = Math.floor(4 + Math.random() * 75); // 4% to 79% width
+    const ry = Math.floor(12 + Math.random() * 75); // 12% to 87% height
+    el.style.left = `${rx}vw`;
+    el.style.top = `${ry}vh`;
+
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 1250);
+  };
+
+  // Trigger popups every 500ms
+  setInterval(spawnRandomPop, 500);
 })();
