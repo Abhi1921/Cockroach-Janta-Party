@@ -46,6 +46,36 @@
   </header>`;
 
   const bottom = `
+  <section class="support-top support-after-art" id="support-dev-layout">
+    <div class="support-top-inner">
+      <div class="support-top-copy">
+        <p class="eyebrow">Keep the site alive · Voluntary</p>
+        <h2>Building this site takes <em>nights.</em> A little help goes a long way.</h2>
+        <p>
+          This website is built and run by hand — design, code, hosting, domain, and daily updates.
+          If you believe the story deserves a home online and want to chip in,
+          you can send a <strong>voluntary tip</strong> via the scanner. No pressure. No guilt trip. Ever.
+        </p>
+        <ul class="support-bullets">
+          <li>This is <strong>not</strong> an NGO, trust, or charity donation</li>
+          <li>This is <strong>not</strong> a political party fund or election contribution</li>
+          <li>It is optional support for <strong>website development &amp; running costs</strong> only</li>
+          <li><strong>No tax deduction / 80G</strong> — please treat it as a personal tip</li>
+        </ul>
+        <p class="support-fine">
+          Read the fine print: <a href="donate.html">Support page</a> · <a href="terms.html#payment-policy">Payment policy</a>
+        </p>
+      </div>
+      <div class="support-qr-card">
+        <div class="qr-slot">
+          <img src="assets/img/upi-qr.png" alt="Scan to pay via UPI for website support" width="240" height="240" loading="lazy">
+        </div>
+        <p class="qr-caption"><strong>Scan &amp; pay</strong> (UPI / any supported app)</p>
+        <p class="qr-hint">You choose the amount · Optional remark: “Website support”</p>
+        <a href="donate.html" class="btn btn-solid" style="width:100%;margin-top:0.75rem">Full details &amp; policy →</a>
+      </div>
+    </div>
+  </section>
   <section class="dispatch" id="dispatch">
     <div class="dispatch-inner">
       <div class="dispatch-copy">
