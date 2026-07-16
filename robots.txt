@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cockrochjantapartycjp.com/sitemap.xml
+
+# Block junk crawlers lightly (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10

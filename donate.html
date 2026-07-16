@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Us | Support CJP Independent Development</title>
+  <meta name="description" content="Voluntary contributions keep the Cockroach Janta Party website online — hosting, security, and independent development. Transparent use of funds.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cockrochjantapartycjp.com/donate.html">
+  <meta property="og:url" content="https://cockrochjantapartycjp.com/donate.html">
+  <meta property="og:title" content="Support Us | Support CJP">
+  <meta property="og:description" content="Keep the site online. Transparent, voluntary support for website infrastructure.">
+  <meta property="og:image" content="https://cockrochjantapartycjp.com/assets/img/og-default.svg">
+  <meta name="theme-color" content="#0b0f0e">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="donate">
+  <div id="site-top"></div>
+  <main id="main">
+    <section class="page">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Fuel</nav>
+      <p class="eyebrow">Infrastructure · Independent</p>
+      <h1 class="page-title">Fuel the <em>site.</em></h1>
+      <p class="lede">No party treasury. No corporate underwriter. Just hosting bills, security patches, and stubborn maintainers. Chip in if this site helped you feel less alone in the chaos.</p>
+      <div class="notice-box">
+        <h2><span class="info-dot">i</span> Transparency</h2>
+        <p>Voluntary amounts support website work only — development, hosting, domains, tooling — not campaign war chests.</p>
+        <ul class="notice-grid">
+          <li>Development time</li><li>Hosting &amp; CDN</li>
+          <li>Domain &amp; SSL</li><li>Security updates</li>
+          <li>Uptime monitoring</li><li>Accessibility fixes</li>
+        </ul>
+      </div>
+      <form class="donate-form" id="donateForm">
+        <p class="eyebrow">Amount (₹)</p>
+        <div class="donate-amounts">
+          <button type="button" class="amount-chip" data-amount="99">₹99</button>
+          <button type="button" class="amount-chip is-selected" data-amount="199">₹199</button>
+          <button type="button" class="amount-chip" data-amount="499">₹499</button>
+          <button type="button" class="amount-chip" data-amount="999">₹999</button>
+        </div>
+        <div class="field"><label for="amount">Custom</label><input type="number" id="amount" name="amount" min="1" value="199" required></div>
+        <div class="field"><label for="donor_name">Name</label><input type="text" id="donor_name" name="name" placeholder="Anonymous is fine" autocomplete="name"></div>
+        <div class="field"><label for="donor_email">Email *</label><input type="email" id="donor_email" name="email" required autocomplete="email"></div>
+        <button type="submit" class="btn btn-solid btn-wide">Record support (demo) →</button>
+        <p class="form-note">Demo stores intent in your browser. Hook a payment gateway on deploy.</p>
+      </form>
+    </section>
+  </main>
+  <div id="site-bottom"></div>
+  <script src="assets/js/site-config.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

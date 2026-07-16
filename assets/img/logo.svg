@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="CJP Logo">
+  <circle cx="60" cy="60" r="58" fill="#ffffff" stroke="#1d4ed8" stroke-width="4"/>
+  <circle cx="60" cy="60" r="46" fill="none" stroke="#0f766e" stroke-width="1.5" opacity=".45"/>
+  <g transform="translate(60 62)">
+    <ellipse cx="0" cy="2" rx="17" ry="13" fill="#1d4ed8"/>
+    <ellipse cx="0" cy="-12" rx="11" ry="9" fill="#0f766e"/>
+    <circle cx="-4.5" cy="-13" r="2" fill="#fff"/>
+    <circle cx="4.5" cy="-13" r="2" fill="#fff"/>
+    <path d="M-9 -19 Q-17 -30 -7 -36M9 -19 Q17 -30 7 -36" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M-15 0 L-32 -7M-16 6 L-34 4M-14 11 L-30 17M15 0 L32 -7M16 6 L34 4M14 11 L30 17" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+</svg>
