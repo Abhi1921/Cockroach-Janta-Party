@@ -1,15 +1,15 @@
 {
   "name": "Cockroach Janta Party",
   "short_name": "CJP",
-  "description": "Youth civic movement for accountability in India. Receipts over rhetoric.",
+  "description": "Voice of the Lazy & Unemployed. Youth satirical movement founded 16 May 2026.",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#0b0f0e",
-  "theme_color": "#0b0f0e",
+  "background_color": "#faf7f5",
+  "theme_color": "#9f1239",
   "lang": "en-IN",
   "icons": [
     {
-      "src": "assets/img/logo.svg",
+      "src": "assets/img/logo.png",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"

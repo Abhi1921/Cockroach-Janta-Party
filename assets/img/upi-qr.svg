@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280">
+  <rect width="280" height="280" fill="#faf7f5" stroke="#9f1239" stroke-width="4" stroke-dasharray="10 8" rx="12"/>
+  <text x="140" y="120" text-anchor="middle" fill="#9f1239" font-family="Arial,sans-serif" font-size="16" font-weight="700">UPI / QR SCANNER</text>
+  <text x="140" y="150" text-anchor="middle" fill="#6b5348" font-family="Arial,sans-serif" font-size="13">Yahan apna QR image lagao</text>
+  <text x="140" y="175" text-anchor="middle" fill="#6b5348" font-family="Arial,sans-serif" font-size="12">assets/img/upi-qr.png</text>
+  <text x="140" y="210" text-anchor="middle" fill="#9f1239" font-family="Arial,sans-serif" font-size="11">Replace this file</text>
+</svg>

@@ -80,16 +80,16 @@
 
   const botReply = (text) => {
     const t = text.toLowerCase();
-    if (t.includes("join")) return "Join Us is free and lifelong — open join.html and file your application.";
+    if (t.includes("join")) return "Join is free — open join.html. Eligibility is satirical: unemployed, lazy, chronically online.";
     if (t.includes("issue") || t.includes("raise") || t.includes("file"))
-      return "File Issue is members-first. Join, then submit with names, places, and receipts.";
+      return "File Issue is for members. Join first, then report with names and receipts.";
     if (t.includes("donate") || t.includes("support") || t.includes("fuel"))
-      return "Support Us keeps hosting independent. Any amount helps — see donate.html.";
-    if (t.includes("rank") || t.includes("seo"))
-      return "We ship technical SEO (sitemap, schema, meta). Rankings also need content + links over time.";
+      return "Support Us keeps hosting independent. See donate.html.";
+    if (t.includes("abhijeet") || t.includes("founder") || t.includes("dipke"))
+      return "Founded 16 May 2026 by Abhijeet Dipke after the CJI 'cockroach' remarks.";
     if (t.includes("hello") || t.includes("hi") || t.includes("namaste"))
-      return "Namaste. Receipts over rhetoric — how can we help?";
-    return "Try Vision, Manifesto, Tracker, or Contact. Or just join — ₹0 forever.";
+      return "Namaste. Voice of the Lazy & Unemployed — how can we help?";
+    return "Try About, Manifesto, News, or Protests — or just Join Free.";
   };
 
   const addBubble = (text, who = "user") => {
@@ -213,4 +213,79 @@
     const n = localStorage.getItem("cjp_app_counter") || "29735";
     appNo.textContent = `REQ / ${n}`;
   }
+
+  // Protest / page slider
+  $$("[data-slider]").forEach((root) => {
+    const viewport = $(".cjp-slider-viewport", root) || root;
+    const track = $("[data-slider-track]", root);
+    const slides = $$("[data-slide]", root);
+    const prev = $("[data-slider-prev]", root);
+    const next = $("[data-slider-next]", root);
+    const dotsWrap = $("[data-slider-dots]", root);
+    if (!track || !slides.length) return;
+
+    let index = 0;
+    let timer;
+    const gap = 16;
+
+    const perView = () => {
+      const w = viewport.clientWidth;
+      if (w < 640) return 1;
+      if (w < 980) return 2;
+      return 3;
+    };
+
+    const layout = () => {
+      const pv = perView();
+      const slideW = (viewport.clientWidth - gap * (pv - 1)) / pv;
+      slides.forEach((s) => {
+        s.style.flex = `0 0 ${slideW}px`;
+        s.style.width = `${slideW}px`;
+      });
+      track.style.gap = `${gap}px`;
+      return { pv, slideW };
+    };
+
+    const maxIndex = () => Math.max(0, slides.length - perView());
+
+    const paintDots = () => {
+      if (!dotsWrap) return;
+      const max = maxIndex();
+      dotsWrap.innerHTML = "";
+      for (let i = 0; i <= max; i++) {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "cjp-slider-dot" + (i === index ? " is-active" : "");
+        b.setAttribute("aria-label", `Go to slide group ${i + 1}`);
+        b.addEventListener("click", () => go(i));
+        dotsWrap.appendChild(b);
+      }
+    };
+
+    const go = (i) => {
+      const { slideW } = layout();
+      index = Math.max(0, Math.min(i, maxIndex()));
+      track.style.transform = `translateX(${-index * (slideW + gap)}px)`;
+      paintDots();
+      restart();
+    };
+
+    const restart = () => {
+      clearInterval(timer);
+      timer = setInterval(() => go(index >= maxIndex() ? 0 : index + 1), 4500);
+    };
+
+    prev?.addEventListener("click", () => go(index - 1));
+    next?.addEventListener("click", () => go(index + 1));
+    window.addEventListener("resize", () => go(Math.min(index, maxIndex())));
+
+    let startX = 0;
+    track.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener("touchend", (e) => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) go(dx < 0 ? index + 1 : index - 1);
+    });
+
+    go(0);
+  });
 })();

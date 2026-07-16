@@ -3,57 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support Us | Support CJP Independent Development</title>
-  <meta name="description" content="Voluntary contributions keep the Cockroach Janta Party website online — hosting, security, and independent development. Transparent use of funds.">
+  <title>Support the Website Developer | Voluntary UPI — Not NGO</title>
+  <meta name="description" content="Voluntary support for building and running cockrochjantapartycjp.com. Not an NGO donation, not a political party fund, not tax-deductible.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://cockrochjantapartycjp.com/donate.html">
   <meta property="og:url" content="https://cockrochjantapartycjp.com/donate.html">
-  <meta property="og:title" content="Support Us | Support CJP">
-  <meta property="og:description" content="Keep the site online. Transparent, voluntary support for website infrastructure.">
-  <meta property="og:image" content="https://cockrochjantapartycjp.com/assets/img/og-default.svg">
-  <meta name="theme-color" content="#0b0f0e">
-  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <meta property="og:title" content="Support the Website | Voluntary · Not NGO">
+  <meta property="og:description" content="Optional UPI support for website development &amp; hosting. Not charity. Not party funds.">
+  <meta property="og:image" content="https://cockrochjantapartycjp.com/assets/img/og-default.png">
+  <meta name="theme-color" content="#9f1239">
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body data-page="donate">
+<body data-page="donate" data-ticker="off">
   <div id="site-top"></div>
   <main id="main">
     <section class="page">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Fuel</nav>
-      <p class="eyebrow">Infrastructure · Independent</p>
-      <h1 class="page-title">Fuel the <em>site.</em></h1>
-      <p class="lede">No party treasury. No corporate underwriter. Just hosting bills, security patches, and stubborn maintainers. Chip in if this site helped you feel less alone in the chaos.</p>
-      <div class="notice-box">
-        <h2><span class="info-dot">i</span> Transparency</h2>
-        <p>Voluntary amounts support website work only — development, hosting, domains, tooling — not campaign war chests.</p>
-        <ul class="notice-grid">
-          <li>Development time</li><li>Hosting &amp; CDN</li>
-          <li>Domain &amp; SSL</li><li>Security updates</li>
-          <li>Uptime monitoring</li><li>Accessibility fixes</li>
-        </ul>
-      </div>
-      <form class="donate-form" id="donateForm">
-        <p class="eyebrow">Amount (₹)</p>
-        <div class="donate-amounts">
-          <button type="button" class="amount-chip" data-amount="99">₹99</button>
-          <button type="button" class="amount-chip is-selected" data-amount="199">₹199</button>
-          <button type="button" class="amount-chip" data-amount="499">₹499</button>
-          <button type="button" class="amount-chip" data-amount="999">₹999</button>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Support website</nav>
+      <p class="eyebrow">Voluntary · Website work only</p>
+      <h1 class="page-title">Support the person <em>building this site.</em></h1>
+      <p class="lede">
+        Ye page <strong>Cockroach Janta Party ka election / party fund nahi</strong> hai.
+        Main independently ye website design, code, host aur update kar raha hoon — din raat.
+        Agar aap chahte ho ki site online rahe aur improve hoti rahe, to <strong>optional</strong> UPI support de sakte ho.
+      </p>
+
+      <div class="support-pay-grid">
+        <div class="support-qr-card">
+          <div class="qr-slot" id="upiScanner">
+            <img src="assets/img/upi-qr.png" alt="Scan to pay via UPI for website support" width="260" height="260" id="upiQrImage">
+          </div>
+          <p class="qr-caption"><strong>Scan to pay (UPI)</strong></p>
+          <p class="qr-hint">Any UPI app · Optional remark: “Website support”</p>
         </div>
-        <div class="field"><label for="amount">Custom</label><input type="number" id="amount" name="amount" min="1" value="199" required></div>
-        <div class="field"><label for="donor_name">Name</label><input type="text" id="donor_name" name="name" placeholder="Anonymous is fine" autocomplete="name"></div>
-        <div class="field"><label for="donor_email">Email *</label><input type="email" id="donor_email" name="email" required autocomplete="email"></div>
-        <button type="submit" class="btn btn-solid btn-wide">Record support (demo) →</button>
-        <p class="form-note">Demo stores intent in your browser. Hook a payment gateway on deploy.</p>
-      </form>
+        <div>
+          <div class="notice-box">
+            <h2><span class="info-dot">i</span> Ye paise kis liye?</h2>
+            <ul class="notice-grid">
+              <li>Website development time</li>
+              <li>Domain &amp; SSL</li>
+              <li>Hosting / server</li>
+              <li>Security &amp; updates</li>
+              <li>Bug fixes &amp; new pages</li>
+              <li>Tools &amp; backups</li>
+            </ul>
+          </div>
+          <div class="notice-box" style="border-color:var(--signal)">
+            <h2><span class="info-dot">!</span> Legal clarity (padho)</h2>
+            <ul class="support-bullets" style="margin:0">
+              <li><strong>NGO / Section 8 / trust donation nahi</strong> — registered charity nahi hai</li>
+              <li><strong>80G / tax benefit nahi</strong> — isko “donation for tax saving” mat samjho</li>
+              <li><strong>Political party contribution nahi</strong> — ECI-registered party fund nahi</li>
+              <li><strong>Voluntary personal support</strong> website developer / maintainer ko, website chalane ke liye</li>
+              <li>Amount <strong>optional</strong> hai; join / membership free rehta hai</li>
+              <li>Payment UPI apps ke through aapke bank rules ke hisaab se hota hai</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="page-title" style="font-size:1.6rem;margin-top:2.5rem">Payment <em>policy</em></h2>
+      <div class="lede" style="max-width:70ch">
+        <p><strong>1. Nature of payment.</strong> Aap jo bhejte ho wo voluntary contribution / personal support for website development &amp; maintenance hai — goods/services ke badle fixed invoice nahi, unless alag se decide ho.</p>
+        <p><strong>2. No charity claim.</strong> Hum 80G receipt, NGO certificate, ya “donate to save tax” claim nahi karte.</p>
+        <p><strong>3. No party fund.</strong> Ye amount CJP movement ka official political fund nahi maana jaaye. Satire site infrastructure ke liye hai.</p>
+        <p><strong>4. Refunds.</strong> UPI send ke baad galat amount / duplicate payment ho to UPI app + developer se contact karo (<a href="contact.html">Contact</a>). Case-by-case help.</p>
+        <p><strong>5. Transparency.</strong> Use: hosting, domain, tools, development time. Personal misuse claim nahi — lekin ye public audited NGO nahi.</p>
+        <p><strong>6. Your choice.</strong> Support na dena = koi problem nahi. Site content free padh sakte ho.</p>
+      </div>
+      <p><a href="terms.html#payment-policy">Same policy on Terms page →</a></p>
     </section>
   </main>
   <div id="site-bottom"></div>
   <script src="assets/js/site-config.js" defer></script>
   <script src="assets/js/layout.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+  <script>
+    // Agar upi-qr.png exist kare to auto use (optional)
+    (function () {
+      var img = document.getElementById("upiQrImage");
+      if (!img) return;
+      var test = new Image();
+      test.onload = function () { img.src = "assets/img/upi-qr.png"; img.alt = "Scan to pay via UPI"; };
+      test.src = "assets/img/upi-qr.png";
+    })();
+  </script>
 </body>
 </html>
