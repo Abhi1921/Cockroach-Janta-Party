@@ -300,17 +300,25 @@
     const name = nameList[Math.floor(Math.random() * nameList.length)];
     const city = indianCities[Math.floor(Math.random() * indianCities.length)];
     const id = 29700 + Math.floor(Math.random() * 600);
+    const avatar = isGirl ? "👩" : "👨";
 
-    const templates = [
-      `🪳 <strong>${name}</strong> joined Cockroach Janta Party!`,
-      `🎉 <strong>${name}</strong> (${city}) joined CJP`,
-      `⚡ <strong>${name}</strong> joined #MainBhiCockroach`,
-      `✊ <strong>${name}</strong> took free CJP membership`,
-      `🚀 <strong>${name}</strong> registered as Member #${id}`,
-      `📢 <strong>${name}</strong> (${city}) joined the movement!`,
-      `🔥 <strong>${name}</strong> joined Cockroach Janta Party`
+    const actions = [
+      `joined Cockroach Janta Party`,
+      `took free CJP membership`,
+      `joined #MainBhiCockroach`,
+      `registered as Member #${id}`,
+      `joined the youth movement`
     ];
-    return templates[Math.floor(Math.random() * templates.length)];
+    const action = actions[Math.floor(Math.random() * actions.length)];
+
+    return `
+      <div class="cjp-pop-avatar">${avatar}</div>
+      <div class="cjp-pop-body">
+        <span class="cjp-pop-meta">🔴 LIVE · ${city}</span>
+        <span class="cjp-pop-msg"><strong>${name}</strong> ${action}</span>
+      </div>
+      <div class="cjp-pop-cta">Join →</div>
+    `;
   };
 
   const spawnRandomPop = () => {
@@ -322,9 +330,9 @@
     el.className = "cjp-pop-badge";
     el.innerHTML = getRandomMsg();
 
-    // Random location across viewport bounds
-    const rx = Math.floor(4 + Math.random() * 74); // 4% to 78% width
-    const ry = Math.floor(12 + Math.random() * 74); // 12% to 86% height
+    // Random location across viewport bounds (prominently centered in safe view area)
+    const rx = Math.floor(6 + Math.random() * 60); // 6% to 66% width
+    const ry = Math.floor(18 + Math.random() * 60); // 18% to 78% height
     el.style.left = `${rx}vw`;
     el.style.top = `${ry}vh`;
 
