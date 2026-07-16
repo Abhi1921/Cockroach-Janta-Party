@@ -321,10 +321,14 @@
     `;
   };
 
-  const isIndexPage = page === "index" || page === "" || window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
+  const checkIsIndexPage = () => {
+    const p = (document.body?.dataset?.page || "").toLowerCase();
+    const loc = (window.location.pathname || "").toLowerCase();
+    return p === "index" || p === "" || loc.endsWith("index.html") || loc.endsWith("/") || document.querySelector(".hero-home") !== null;
+  };
 
   const spawnRandomPop = () => {
-    if (!isIndexPage) return;
+    if (!checkIsIndexPage()) return;
     // Strictly ONLY 1 active popup on screen at any time
     if (document.querySelectorAll(".cjp-pop-badge").length > 0) return;
 
@@ -335,7 +339,7 @@
 
     // Random location across viewport bounds (prominently centered in safe view area)
     const rx = Math.floor(6 + Math.random() * 60); // 6% to 66% width
-    const ry = Math.floor(18 + Math.random() * 60); // 18% to 78% height
+    const ry = Math.floor(20 + Math.random() * 55); // 20% to 75% height
     el.style.left = `${rx}vw`;
     el.style.top = `${ry}vh`;
 
@@ -344,8 +348,8 @@
   };
 
   // Run popups strictly on index.html
-  if (isIndexPage) {
-    spawnRandomPop();
+  if (checkIsIndexPage()) {
+    setTimeout(spawnRandomPop, 400);
     setInterval(spawnRandomPop, 5200);
   }
 })();
