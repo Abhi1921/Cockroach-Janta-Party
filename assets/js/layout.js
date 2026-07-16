@@ -39,6 +39,15 @@
         ${nav.map(([href, label]) => `<a href="${href}" class="${active(href).trim()}">${label}</a>`).join("")}
       </nav>
       <div class="header-actions">
+        <div class="lang-select" id="langSelect">
+          <button type="button" class="lang-btn" aria-expanded="false" aria-label="Select Language">
+            🌐 <span>ENGLISH</span> ▾
+          </button>
+          <div class="lang-menu" hidden role="listbox" aria-label="Languages">
+            <button type="button" class="lang-opt" role="option" data-lang="en" aria-selected="true">🌐 English</button>
+            <button type="button" class="lang-opt" role="option" data-lang="hi" aria-selected="false">🇮🇳 हिन्दी</button>
+          </div>
+        </div>
         <a href="donate.html" class="btn btn-ghost${active("donate.html")}">Support site</a>
         <a href="join.html" class="btn btn-solid${active("join.html")}">Join Free</a>
       </div>

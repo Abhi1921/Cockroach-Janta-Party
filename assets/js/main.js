@@ -42,26 +42,159 @@
     );
   }
 
-  // Language select (UI only)
+  // Bilingual (English <-> Hindi) Translation Engine
+  const i18nDict = {
+    hi: {
+      // Nav Links & Common Actions
+      "Vision": "विज़न",
+      "5 Demands": "5 मांगें",
+      "Media": "मीडिया",
+      "Actions": "आंदोलन",
+      "Join Us": "सदस्यता लें",
+      "Contact": "संपर्क करें",
+      "Support site": "समर्थन दें",
+      "Join Free": "मुफ़्त जुड़ें",
+      "Skip to content": "मुख्य सामग्री पर जाएं",
+
+      // Announcements & Taglines
+      "Yes, We Are Cockroaches — We Survive. We Rise. We Lead.": "हाँ, हम कॉकरोच हैं — हम सहते हैं, उठते हैं और नेतृत्व करते हैं।",
+      "#MainBhiCockroach — reclaiming the insult as youth power": "#MainBhiCockroach — युवाओं की एकजुटता और संघर्ष का प्रतीक",
+      "Founded 16 May 2026 by Abhijeet Dipke · New Delhi": "16 मई 2026 को अभिजीत दीपके द्वारा स्थापित · नई दिल्ली",
+      "Not an ECI-registered party · Satire with a purpose": "चुनाव आयोग से पंजीकृत पार्टी नहीं · उद्देश्यपूर्ण व्यंग्य आंदोलन",
+      "Cockroach Janta Party · Est. 16 May 2026": "कॉकरोच जनता पार्टी · स्थापना 16 मई 2026",
+
+      // Hero Titles & CTAs
+      "Yes, We Are Cockroaches — <span class=\"accent\">We Survive. We Rise. We Lead.</span>": "हाँ, हम कॉकरोच हैं — <span class=\"accent\">हम सहते हैं, उठते हैं और नेतृत्व करते हैं।</span>",
+      "Read Manifesto": "घोषणापत्र पढ़ें",
+      "20M+": "2 करोड़+",
+      "IG peak week": "साप्ताहिक पहुँच",
+      "350K+": "3.5 लाख+",
+      "Early sign-ups": "शुरुआती सदस्य",
+      "Delhi": "दिल्ली",
+      "HQ / protests": "मुख्यालय / प्रदर्शन",
+
+      // Manifesto Page
+      "The five-point manifesto.": "5-सूत्रीय घोषणापत्र",
+      "The <span class=\"accent\">five-point</span> manifesto.": "5-सूत्रीय <span class=\"accent\">घोषणापत्र</span>",
+      "As summarised in public encyclopaedic reporting, CJP's formal manifesto includes these demands (satirical political theatre with sharp institutional critique). Additional accepted points include RTI answerability and rejecting a secret \"Cockroach CARES\" fund.": "सार्वजनिक रिपोर्टिंग के अनुसार, सीजेपी के 5-सूत्रीय घोषणापत्र में ये मुख्य मांगें शामिल हैं (सख्त संस्थागत सुधार और पारदर्शिता के साथ)।",
+      "No Rajya Sabha for retiring CJIs as reward": "1. रिटायर होने वाले सीजेआई को इनाम में राज्यसभा सीट नहीं",
+      "No Chief Justice shall be granted a Rajya Sabha seat as a post-retirement reward.": "किसी भी मुख्य न्यायाधीश को सेवानिवृत्ति के बाद राज्यसभा सीट का इनाम नहीं दिया जाएगा।",
+      "Vote deletion = maximum accountability": "2. वोट हटाने पर मुख्य चुनाव आयुक्त की अधिकतम जवाबदेही",
+      "If any legitimate vote is deleted, the Chief Election Commissioner shall face the harshest accountability — framed by CJP as no less than an attack on democratic rights.": "यदि किसी भी वैध मतदाता का नाम हटाया जाता है, तो मुख्य चुनाव आयुक्त पर सख्त कार्रवाई होगी।",
+      "50% for women": "3. महिलाओं के लिए 50% सीट आरक्षण",
+      "Women shall receive 50% reservation (instead of 33%) without increasing Parliament's strength; 50% of Cabinet positions reserved for women.": "संसद और कैबिनेट पदों में महिलाओं के लिए 50% सीट आरक्षण लागू किया जाए।",
+      "Independent media over conglomerate capture": "4. कॉर्पोरेट कब्जे के बजाय स्वतंत्र मीडिया",
+      "Licences of media houses owned by Adani Group and Reliance (\"Ambani\") to be cancelled to make space for independent media; investigate \"Godi media\" anchors' bank accounts (as stated in manifesto framing).": "बड़े कॉर्पोरेट मीडिया घरानों के बजाय निष्पक्ष और स्वतंत्र मीडिया को बढ़ावा दिया जाए।",
+      "Anti-defection with teeth": "5. दल-बदलुओं पर 20 साल का सख्त चुनाव प्रतिबंध",
+      "Any MLA or MP who defects shall be barred from contesting and holding public office for 20 years.": "दल-बदल करने वाले किसी भी विधायक या सांसद पर 20 साल का कड़ा चुनाव प्रतिबंध।",
+
+      // Support & Scanner
+      "Keep the site alive · Voluntary": "वेबसाइट सहयोग · स्वैच्छिक योगदान",
+      "Building this site takes <em>nights.</em> A little help goes a long way.": "इस वेबसाइट को चलाने में रातें लगती हैं। <em>आपका छोटा सा सहयोग</em> भी बहुत बड़ा सहारा है।",
+      "Building this site takes nights. A little help goes a long way.": "इस वेबसाइट को चलाने में रातें लगती हैं। आपका छोटा सा सहयोग भी बहुत बड़ा सहारा है।",
+      "Scan &amp; pay": "स्कैन करें और भुगतान करें",
+      "Scan & pay": "स्कैन करें और भुगतान करें",
+      "You choose the amount · Optional remark: “Website support”": "राशि अपनी पसंद अनुसार चुनें · टिप: “वेबसाइट सपोर्ट”",
+      "Full details &amp; policy →": "पूरा विवरण और नीति →",
+      "Full details & policy →": "पूरा विवरण और नीति →",
+      "This is <strong>not</strong> an NGO, trust, or charity donation": "यह एनजीओ या चैरिटी डोनेशन नहीं है",
+      "This is <strong>not</strong> a political party fund or election contribution": "यह किसी राजनीतिक पार्टी का चुनावी फंड नहीं है",
+      "It is optional support for <strong>website development &amp; running costs</strong> only": "यह केवल <strong>वेबसाइट विकास और संचालन लागत</strong> के लिए है",
+      "No tax deduction / 80G — please treat it as a personal tip": "80G टैक्स छूट लागू नहीं — इसे व्यक्तिगत टिप समझें",
+
+      // Footer
+      "Stay updated": "अपडेट्स प्राप्त करें",
+      "Campus alerts. <em>When it counts.</em>": "कॉलेज और युवा अलर्ट। <em>समय पर।</em>",
+      "Protest updates and manifesto notes — no spam.": "आंदोलन की खबरें और घोषणापत्र नोट्स — बिना स्पैम।",
+      "Subscribe": "सब्सक्राइब करें",
+      "By subscribing you agree to occasional CJP updates.": "सब्सक्राइब करके आप CJP अपडेट्स प्राप्त करने की सहमति देते हैं।",
+      "Youth satirical movement. Founded 16 May 2026. Not registered with the Election Commission of India.": "युवा व्यंग्यात्मक आंदोलन। स्थापना 16 मई 2026। भारत के चुनाव आयोग में पंजीकृत नहीं।"
+    }
+  };
+
+  const applyLanguage = (targetLang) => {
+    localStorage.setItem("cjp_lang", targetLang);
+
+    if (targetLang === "hi") {
+      const dict = i18nDict.hi;
+
+      // Translate headings, paragraphs, links, buttons, lists, captions (excluding language dropdown itself)
+      const elementsToTranslate = document.querySelectorAll(
+        "h1, h2, h3, h4, p, span, a, button, li, small, figcaption, th, td, label"
+      );
+
+      elementsToTranslate.forEach((el) => {
+        if (el.closest("#langSelect")) return;
+
+        if (!el.dataset.en) {
+          el.dataset.en = el.innerHTML.trim();
+        }
+        const originalText = el.dataset.en;
+        const cleanText = originalText.replace(/\s+/g, " ");
+
+        for (const [key, val] of Object.entries(dict)) {
+          if (cleanText === key || originalText === key) {
+            el.innerHTML = val;
+            break;
+          }
+        }
+      });
+    } else {
+      // Revert to English original
+      document.querySelectorAll("[data-en]").forEach((el) => {
+        if (!el.closest("#langSelect")) {
+          el.innerHTML = el.dataset.en;
+        }
+      });
+    }
+  };
+
+  // Language select handler
   const langSelect = $("#langSelect");
   if (langSelect) {
     const btn = $(".lang-btn", langSelect);
     const menu = $(".lang-menu", langSelect);
-    btn?.addEventListener("click", () => {
+    const savedLang = localStorage.getItem("cjp_lang") || "en";
+
+    // Set initial button label
+    if (btn) {
+      const initLabel = savedLang === "hi" ? "हिन्दी" : "ENGLISH";
+      btn.innerHTML = `🌐 <span>${initLabel}</span> ▾`;
+    }
+
+    // Apply saved language on load
+    if (savedLang === "hi") {
+      setTimeout(() => applyLanguage("hi"), 100);
+    }
+
+    btn?.addEventListener("click", (e) => {
+      e.stopPropagation();
       const open = menu.hasAttribute("hidden");
       menu.toggleAttribute("hidden", !open);
       btn.setAttribute("aria-expanded", String(open));
     });
+
     $$("[role=option]", menu).forEach((opt) => {
-      opt.addEventListener("click", () => {
+      opt.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const targetOpt = e.target.closest("[data-lang]") || opt;
+        const lang = targetOpt.dataset.lang || "en";
+
         $$("[role=option]", menu).forEach((o) => o.setAttribute("aria-selected", "false"));
-        opt.setAttribute("aria-selected", "true");
-        const label = opt.dataset.lang === "hi" ? "हिन्दी" : "ENGLISH";
-        btn.innerHTML = btn.innerHTML.replace(/ENGLISH|हिन्दी/, label);
+        targetOpt.setAttribute("aria-selected", "true");
+
+        const label = lang === "hi" ? "हिन्दी" : "ENGLISH";
+        if (btn) {
+          btn.innerHTML = `🌐 <span>${label}</span> ▾`;
+        }
         menu.setAttribute("hidden", "");
-        btn.setAttribute("aria-expanded", "false");
+        btn?.setAttribute("aria-expanded", "false");
+
+        applyLanguage(lang);
       });
     });
+
     document.addEventListener("click", (e) => {
       if (!langSelect.contains(e.target)) {
         menu?.setAttribute("hidden", "");
@@ -165,21 +298,57 @@
     e.target.reset();
   });
 
+  // Real-time Live CJP Digital Card Preview Sync
+  const fullNameInput = $("#full_name");
+  const cityInput = $("#city");
+  const stateSelect = $("#state");
+  const professionSelect = $("#profession");
+  const genderSelect = $("#gender");
+
+  const cardNamePreview = $("#cardNamePreview");
+  const cardLocPreview = $("#cardLocPreview");
+  const cardAvatarEmoji = $("#cardAvatarEmoji");
+
+  const updateCardPreview = () => {
+    if (cardNamePreview && fullNameInput) {
+      const nameVal = fullNameInput.value.trim();
+      cardNamePreview.textContent = nameVal ? nameVal.toUpperCase() : "YOUTH REVOLUTIONARY";
+    }
+    if (cardLocPreview) {
+      const c = cityInput?.value.trim() || "";
+      const s = stateSelect?.value.trim() || "";
+      const p = professionSelect?.value || "STUDENT / CITIZEN";
+      const locStr = [c, s].filter(Boolean).join(", ").toUpperCase() || "NEW DELHI";
+      cardLocPreview.textContent = `${locStr} · ${p.toUpperCase()}`;
+    }
+    if (cardAvatarEmoji && genderSelect) {
+      const g = genderSelect.value;
+      cardAvatarEmoji.textContent = g === "male" ? "👨" : g === "female" ? "👩" : "🪳";
+    }
+  };
+
+  [fullNameInput, cityInput, stateSelect, professionSelect, genderSelect].forEach((input) => {
+    input?.addEventListener("input", updateCardPreview);
+    input?.addEventListener("change", updateCardPreview);
+  });
+
   $("#joinForm")?.addEventListener("submit", (e) => {
     e.preventDefault();
     if (termsCheck && !termsCheck.checked) {
-      showToast("Please accept the Terms first.", false);
+      showToast("Please accept the Terms of Use and Satire Disclaimer first.", false);
       return;
     }
     const data = Object.fromEntries(new FormData(e.target).entries());
-    let n = Number(localStorage.getItem("cjp_app_counter") || "29735");
+    let n = Number(localStorage.getItem("cjp_app_counter") || "98742");
     n += 1;
     localStorage.setItem("cjp_app_counter", String(n));
-    saveLocal("cjp_applications", { id: n, ...data });
+    const cardId = `CJP-2026-${n}`;
+    saveLocal("cjp_applications", { id: cardId, ...data });
+    
     const appNo = $("#appNumber");
-    if (appNo) appNo.textContent = `REQ / ${n}`;
-    showToast(`Application REQ / ${n} filed. Welcome aboard.`);
-    e.target.reset();
+    if (appNo) appNo.textContent = cardId;
+    
+    showToast(`🎉 Official Card Generated! Member ID: ${cardId}. Welcome aboard.`);
   });
 
   $("#donateForm")?.addEventListener("submit", (e) => {
