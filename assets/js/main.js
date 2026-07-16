@@ -329,9 +329,9 @@
     el.style.top = `${ry}vh`;
 
     document.body.appendChild(el);
-    setTimeout(() => el.remove(), 1300);
+    setTimeout(() => el.remove(), 3000);
   };
 
-  // Trigger continuous random name popups every 400ms
-  setInterval(spawnRandomPop, 400);
+  // Trigger continuous random name popups every 600ms
+  setInterval(spawnRandomPop, 600);
 })();
