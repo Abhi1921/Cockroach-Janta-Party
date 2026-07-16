@@ -3,14 +3,14 @@
   const page = (document.body.dataset.page || "").toLowerCase();
   const year = new Date().getFullYear();
 
-  // Slim navbar — 6 items only
+  // Slim navbar — 6 items with alternate descriptive labels
   const nav = [
-    ["vision.html", "About"],
-    ["manifesto.html", "Manifesto"],
-    ["articles.html", "News"],
-    ["protests.html", "Protests"],
-    ["join.html", "Join"],
-    ["contact.html", "Contact"],
+    ["vision.html", "Vision & Story"],
+    ["manifesto.html", "5 Demands"],
+    ["articles.html", "Press & Media"],
+    ["protests.html", "Ground Actions"],
+    ["join.html", "Get Membership"],
+    ["contact.html", "Reach HQ"],
   ];
 
   const active = (file) => (page === file.replace(".html", "") ? " is-active" : "");
