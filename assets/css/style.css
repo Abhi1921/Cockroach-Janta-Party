@@ -698,32 +698,255 @@ button, input, textarea, select { font: inherit; color: inherit; }
 
 .contest-card { display: none; }
 
-@media (max-width: 1000px) {
+/* ==========================================================================
+   Comprehensive Mobile Responsiveness System (Phones, Foldables, Tablets)
+   ========================================================================== */
+
+/* Medium Screens & Laptops (max-width: 1100px) */
+@media (max-width: 1100px) {
+  .header-inner {
+    padding: 0.6rem 1rem;
+  }
+  .brand img {
+    width: 54px;
+    height: 54px;
+  }
+  .brand-text strong {
+    font-size: 0.9rem;
+  }
+  .brand-text small {
+    font-size: 0.65rem;
+  }
+  .main-nav {
+    gap: 0.35rem 0.8rem;
+  }
+  .hero-home {
+    padding: 2.5rem 4vw 3rem;
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets & Mobile Navigation Trigger (max-width: 960px) */
+@media (max-width: 960px) {
   .main-nav { display: none; }
   .header-inner.nav-open .main-nav {
-    display: flex; position: absolute; top: 100%; left: 0; right: 0;
-    background: #fff; flex-direction: column; padding: 1rem;
-    border-bottom: 1px solid var(--line); gap: 0.7rem;
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    flex-direction: column;
+    padding: 1.2rem;
+    border-bottom: 2px solid var(--signal);
+    gap: 0.85rem;
+    box-shadow: 0 16px 36px rgba(28, 16, 16, 0.15);
+    backdrop-filter: blur(16px);
+    z-index: 99;
+  }
+  .header-inner.nav-open .main-nav a {
+    font-size: 0.95rem;
+    padding: 0.45rem 0.6rem;
+    border-radius: 8px;
+  }
+  .header-inner.nav-open .main-nav a.is-active,
+  .header-inner.nav-open .main-nav a:hover {
+    background: var(--bg-2);
+    color: var(--signal);
   }
   .nav-toggle { display: flex; }
-  .hero-home { grid-template-columns: 1fr; min-height: auto; }
-  .hero-collage { height: 320px; }
+  
+  .hero-home {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 2rem;
+  }
+  .hero-copy {
+    max-width: 100%;
+    text-align: left;
+  }
+  .hero-collage {
+    height: 340px;
+    margin-top: 1rem;
+  }
   .news-grid,
   .news-grid.campaign-align,
-  .news-grid.press-align { grid-template-columns: 1fr; }
-  .news-card.feature { min-height: 280px; grid-row: auto; }
-  .news-grid.campaign-align .news-card,
-  .news-grid.press-align .news-card { min-height: 260px; }
-  .photo-strip { grid-template-columns: 1fr 1fr; }
-  .about-gallery { grid-template-columns: 1fr; }
-  .about-shot { aspect-ratio: 4 / 5; }
-  .about-shot.wide { aspect-ratio: 16 / 10; }
-  .dispatch-inner, .footer-inner { grid-template-columns: 1fr; }
-  .footer-cols { grid-template-columns: 1fr 1fr; }
+  .news-grid.press-align {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .photo-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-gallery {
+    grid-template-columns: 1fr;
+  }
+  .dispatch-inner,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+  .footer-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
-@media (max-width: 700px) {
-  .hero-stats, .stats-row, .notice-grid, .field-row { grid-template-columns: 1fr; }
-  .dispatch-row { flex-direction: column; }
+
+/* Standard Mobile Phones (max-width: 640px) */
+@media (max-width: 640px) {
+  /* Header & Logo */
+  .header-inner {
+    padding: 0.5rem 0.75rem;
+  }
+  .brand {
+    gap: 0.5rem;
+    margin-left: 0;
+  }
+  .brand img {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+  }
+  .brand-text strong {
+    font-size: 0.82rem;
+  }
+  .brand-text small {
+    display: none; /* Hide small subtitle on tiny screens to preserve clean spacing */
+  }
+  .header-actions .btn-ghost {
+    display: none; /* Keep primary CTA button on small mobile bars */
+  }
+  .header-actions .btn-solid {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  /* Hero Typography & CTAs */
+  .hero-copy h1 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.02;
+  }
+  .hero-copy > p {
+    font-size: 0.95rem;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+    padding: 0.75rem;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.45rem;
+  }
+  .hero-stat {
+    padding: 0.6rem 0.4rem;
+    text-align: center;
+  }
+  .hero-stat strong {
+    font-size: 1rem;
+  }
+  .hero-stat span {
+    font-size: 0.62rem;
+  }
+
+  /* Section Padding & Titles */
+  .page {
+    padding: 2rem 1rem 3rem;
+  }
+  .page-title {
+    font-size: clamp(1.75rem, 7vw, 2.3rem);
+  }
+  .lede {
+    font-size: 0.95rem;
+  }
+
+  /* Cards, Grids & Lists */
+  .news-grid,
+  .news-grid.campaign-align,
+  .news-grid.press-align {
+    grid-template-columns: 1fr;
+  }
+  .photo-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+  .demand-list li {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+  .demand-num {
+    font-size: 1.2rem;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  /* QR Scanner & Voluntary Support Box */
+  .support-top-inner,
+  .support-pay-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  .support-top {
+    padding: 1.5rem 1rem;
+  }
+  .qr-slot img {
+    width: min(200px, 100%);
+  }
+
+  /* Tracker Table Mobile Scroll */
+  .tracker-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Live Popup Notification Card on Mobile */
+  .cjp-pop-badge {
+    left: 5% !important;
+    right: 5% !important;
+    top: auto !important;
+    bottom: 4.8rem !important;
+    max-width: 90vw !important;
+    padding: 0.55rem 0.85rem !important;
+  }
+  .cjp-pop-msg {
+    font-size: 0.8rem;
+  }
+
+  /* Footer Links */
+  .footer-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.75rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Extra Small Phones & Foldables (max-width: 400px) */
+@media (max-width: 400px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+  .footer-cols {
+    grid-template-columns: 1fr;
+  }
+  .photo-strip {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* —— Protest slider (equal cards) —— */
