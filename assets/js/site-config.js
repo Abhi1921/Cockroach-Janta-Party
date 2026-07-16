@@ -6,7 +6,7 @@ window.CJP_SITE = {
   name: "Cockroach Janta Party",
   legalName: "The Cockroach Janta Party",
   shortName: "CJP",
-  tagline: "Voice of the Lazy & Unemployed",
+  tagline: "Voice of the Youth · Unbroken & Resilient",
   description:
     "Indian youth satirical political movement founded 16 May 2026 by Abhijeet Dipke after CJI remarks comparing some unemployed youth to cockroaches. Not an ECI-registered party.",
   url: "https://cockrochjantapartycjp.com",
