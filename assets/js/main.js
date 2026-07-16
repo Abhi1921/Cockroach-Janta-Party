@@ -289,38 +289,49 @@
     go(0);
   });
 
-  // Random screen popups generator ("Join Cockroach Janta Party")
-  const popTexts = [
-    "🪳 Join Cockroach Janta Party!",
-    "🔥 #MainBhiCockroach",
-    "⚡ Voice of the Unemployed — Join!",
-    "✊ Join CJP Today (Free)",
-    "📢 Join CJP Movement Now!",
-    "🪳 Chhota Size, Badi Soch",
-    "✨ Join Cockroach Janta Party Free",
-    "🚀 Register Free Member ID"
-  ];
+  // Random screen popups with boys and girls names joining Cockroach Janta Party
+  const boysNames = ["Aman", "Rahul", "Rohan", "Aditya", "Vikram", "Dev", "Farhan", "Kunal", "Sameer", "Yash", "Arjun", "Kabir", "Shivam", "Prateek", "Ayush", "Varun", "Abhinav", "Gaurav", "Nitin", "Deepak"];
+  const girlsNames = ["Priya", "Ananya", "Neha", "Sneha", "Riya", "Zoya", "Meera", "Ishita", "Kavya", "Pooja", "Shreya", "Divya", "Anjali", "Simran", "Tanvi", "Sanya", "Bhumika", "Kriti", "Aditi", "Muskan"];
+  const indianCities = ["Delhi", "Mumbai", "Pune", "Jaipur", "Lucknow", "Patna", "Indore", "Surat", "Bengaluru", "Kolkata", "Bhopal", "Chandigarh", "Ahmedabad", "Nagpur"];
+
+  const getRandomMsg = () => {
+    const isGirl = Math.random() > 0.5;
+    const nameList = isGirl ? girlsNames : boysNames;
+    const name = nameList[Math.floor(Math.random() * nameList.length)];
+    const city = indianCities[Math.floor(Math.random() * indianCities.length)];
+    const id = 29700 + Math.floor(Math.random() * 600);
+
+    const templates = [
+      `🪳 <strong>${name}</strong> joined Cockroach Janta Party!`,
+      `🎉 <strong>${name}</strong> (${city}) joined CJP`,
+      `⚡ <strong>${name}</strong> joined #MainBhiCockroach`,
+      `✊ <strong>${name}</strong> took free CJP membership`,
+      `🚀 <strong>${name}</strong> registered as Member #${id}`,
+      `📢 <strong>${name}</strong> (${city}) joined the movement!`,
+      `🔥 <strong>${name}</strong> joined Cockroach Janta Party`
+    ];
+    return templates[Math.floor(Math.random() * templates.length)];
+  };
 
   const spawnRandomPop = () => {
-    // Limit max active popups to prevent DOM bloat
-    if (document.querySelectorAll(".cjp-pop-badge").length > 6) return;
+    // Keep max 7 active popups on screen for performance & clean aesthetic
+    if (document.querySelectorAll(".cjp-pop-badge").length > 7) return;
 
     const el = document.createElement("a");
     el.href = "join.html";
     el.className = "cjp-pop-badge";
-    const text = popTexts[Math.floor(Math.random() * popTexts.length)];
-    el.innerHTML = `<span>${text}</span>`;
+    el.innerHTML = getRandomMsg();
 
     // Random location across viewport bounds
-    const rx = Math.floor(4 + Math.random() * 75); // 4% to 79% width
-    const ry = Math.floor(12 + Math.random() * 75); // 12% to 87% height
+    const rx = Math.floor(3 + Math.random() * 76); // 3% to 79% width
+    const ry = Math.floor(10 + Math.random() * 76); // 10% to 86% height
     el.style.left = `${rx}vw`;
     el.style.top = `${ry}vh`;
 
     document.body.appendChild(el);
-    setTimeout(() => el.remove(), 1250);
+    setTimeout(() => el.remove(), 1300);
   };
 
-  // Trigger popups every 500ms
-  setInterval(spawnRandomPop, 500);
+  // Trigger continuous random name popups every 400ms
+  setInterval(spawnRandomPop, 400);
 })();

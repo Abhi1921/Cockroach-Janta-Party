@@ -959,6 +959,12 @@ button, input, textarea, select { font: inherit; color: inherit; }
   transform: scale(1.15) !important;
   box-shadow: 0 12px 30px rgba(159, 18, 57, 0.6);
 }
+.cjp-pop-badge strong {
+  color: #fbbf24;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(251, 191, 36, 0.4);
+}
 
 @keyframes cjpPopAnim {
   0% {
