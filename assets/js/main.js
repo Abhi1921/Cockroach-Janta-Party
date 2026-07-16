@@ -321,7 +321,10 @@
     `;
   };
 
+  const isIndexPage = page === "index" || page === "" || window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
+
   const spawnRandomPop = () => {
+    if (!isIndexPage) return;
     // Strictly ONLY 1 active popup on screen at any time
     if (document.querySelectorAll(".cjp-pop-badge").length > 0) return;
 
@@ -340,7 +343,9 @@
     setTimeout(() => el.remove(), 4950);
   };
 
-  // Immediately spawn first popup, then sequence next popup every 5.2 seconds
-  spawnRandomPop();
-  setInterval(spawnRandomPop, 5200);
+  // Run popups strictly on index.html
+  if (isIndexPage) {
+    spawnRandomPop();
+    setInterval(spawnRandomPop, 5200);
+  }
 })();
