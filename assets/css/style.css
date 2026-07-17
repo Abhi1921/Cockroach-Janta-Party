@@ -115,12 +115,12 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 
 .main-nav {
-  display: flex; flex: 1; justify-content: center; gap: 0.35rem 1.15rem; flex-wrap: nowrap; white-space: nowrap;
+  display: flex; flex: 1; justify-content: center; gap: 0.25rem 0.65rem; flex-wrap: nowrap; white-space: nowrap;
 }
 .main-nav a {
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--muted);
   padding: 0.35rem 0;

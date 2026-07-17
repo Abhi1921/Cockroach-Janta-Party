@@ -4,12 +4,15 @@
   const year = new Date().getFullYear();
 
   // Slim navbar — 6 items cleanly aligned in one line
-  // Slim navbar — 6 items cleanly aligned in one line
   const nav = [
     ["vision", "Vision"],
     ["manifesto", "5 Demands"],
     ["articles", "Media"],
     ["protests", "Actions"],
+    ["issues", "Issues"],
+    ["tracker", "Tracker"],
+    ["members", "Members"],
+    ["gallery", "Gallery"],
     ["join", "Join Us"],
     ["contact", "Contact"],
   ];
