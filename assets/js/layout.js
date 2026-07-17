@@ -112,8 +112,8 @@
       <div class="footer-brand">
         <img src="assets/img/logo.png" alt="" width="44" height="44" decoding="async">
         <div>
-          <strong>${S.legalName || "CJP"}</strong>
-          <p>Youth satirical movement. Founded ${S.foundedFull || "16 May 2026"}. Not registered with the Election Commission of India.</p>
+          <strong>${S.legalName || "The Cockroach Janta Party"}</strong>
+          <p>Youth satirical movement. Founded 16 May 2026. Not registered with the Election Commission of India.</p>
         </div>
       </div>
       <div class="footer-cols">
@@ -122,7 +122,7 @@
           <a href="vision">About</a>
           <a href="manifesto">Manifesto</a>
           <a href="articles">News</a>
-          <a href="protests">Protests</a>
+          <a href="protests">Protests (20 July)</a>
         </div>
         <div>
           <h4>More</h4>
@@ -152,6 +152,18 @@
       <p>Sources: public press &amp; Wikipedia (Cockroach Janta Party)</p>
     </div>
   </footer>
+  <div class="protest-mini-widget" id="protestMiniWidget">
+    <button type="button" class="widget-close" id="protestWidgetClose" aria-label="Close float widget">×</button>
+    <div class="widget-badge">🚨 NEXT PROTEST · 20 JULY 2026</div>
+    <a href="protests#protest-20-july" class="widget-body">
+      <img src="assets/img/cjp/protest-20-july.png" alt="20 July 2026 Jantar Mantar Youth Protest" width="70" height="90" loading="eager">
+      <div class="widget-info">
+        <strong>20 JULY MARCH</strong>
+        <p>Jantar Mantar, New Delhi · 10:00 AM</p>
+        <span class="btn-mini">RSVP / Details →</span>
+      </div>
+    </a>
+  </div>
   <button type="button" class="live-chat" id="liveChat" aria-label="Open Live Chat">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     Chat
