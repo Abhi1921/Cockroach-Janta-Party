@@ -857,6 +857,12 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 
 /* Standard Mobile Phones (max-width: 640px) */
+@media (max-width: 768px) {
+  .notice-box [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 @media (max-width: 640px) {
   /* Header & Logo */
   .header-inner {
