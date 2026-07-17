@@ -156,7 +156,7 @@
     <button type="button" class="widget-close" id="protestWidgetClose" aria-label="Close float widget">×</button>
     <div class="widget-badge">🚨 NEXT PROTEST · 20 JULY 2026</div>
     <a href="protests#protest-20-july" class="widget-body">
-      <img src="assets/img/cjp/protest-20-july.png" alt="20 July 2026 Jantar Mantar Youth Protest" width="70" height="90" loading="eager">
+      <img src="assets/img/cjp/protest-20-july.png?v=20july" alt="20 July 2026 Jantar Mantar Youth Protest" width="70" height="90" loading="eager">
       <div class="widget-info">
         <strong>20 JULY MARCH</strong>
         <p>Jantar Mantar, New Delhi · 10:00 AM</p>
