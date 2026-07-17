@@ -1,4 +1,4 @@
-# 301 Redirects for Clean URLs (removes .html from browser address bar)
+# Forced 301 redirects to remove .html from all URLs
 /index.html                     /                               301!
 /vision.html                    /vision                         301!
 /manifesto.html                 /manifesto                      301!
@@ -15,7 +15,7 @@
 /revolutionaries.html           /revolutionaries                301!
 /terms.html                     /terms                          301!
 
-# Internal rewrite rules to serve clean URLs without .html
+# Internal rewrite rules to map clean URLs back to HTML files
 /vision                         /vision.html                    200
 /manifesto                      /manifesto.html                 200
 /articles                       /articles.html                  200
