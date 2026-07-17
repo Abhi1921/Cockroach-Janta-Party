@@ -1,16 +1,14 @@
-# Cockroach Janta Party — https://cockrochjantapartycjp.com
+# Cockroach Janta Party — https://cockroachjantapartywale.com
 
-Static HTML / CSS / JS. All SEO tags point to **cockrochjantapartycjp.com**.
+Static HTML / CSS / JS. All SEO tags point to **cockroachjantapartywale.com**.
 
-## After upload
+## Deployment / SEO checklist
 
-1. Point domain DNS A/CNAME to your host  
-2. Enable **HTTPS**  
-3. Google Search Console → add `https://cockrochjantapartycjp.com` → submit `sitemap.xml`  
-4. Bing Webmaster Tools → same sitemap  
+1. Upload contents to root directory of your web host.
+2. Verify SSL (`https://cockroachjantapartywale.com`).
+3. Google Search Console → add `https://cockroachjantapartywale.com` → submit `sitemap.xml`  
+4. Bing Webmaster Tools → submit same sitemap.
 
-## Brand searches that should find you
+## Key search targets
 
-`Cockroach Janta Party`, `CJP`, `cockrochjantapartycjp`, `cockrochjantapartycjp.com`
-
-Random Google searches (“weather”, “cricket”) will **not** open this site — that isn’t how Google works, and stuffing keywords for that gets sites penalized.
+`Cockroach Janta Party`, `CJP`, `cockroachjantapartywale`, `cockroachjantapartywale.com`, `Abhijeet Dipke`, `#MainBhiCockroach`

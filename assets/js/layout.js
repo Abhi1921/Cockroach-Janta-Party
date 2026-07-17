@@ -144,7 +144,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© ${year} ${S.legalName || "CJP"} · cockrochjantapartycjp.com</p>
+      <p>© ${year} ${S.legalName || "CJP"} · cockroachjantapartywale.com</p>
       <p>Sources: public press &amp; Wikipedia (Cockroach Janta Party)</p>
     </div>
   </footer>

@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cockrochjantapartycjp.com/sitemap.xml
+Sitemap: https://cockroachjantapartywale.com/sitemap.xml
 
 # Block junk crawlers lightly (optional)
 User-agent: AhrefsBot
