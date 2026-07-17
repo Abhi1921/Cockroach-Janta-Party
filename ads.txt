@@ -1,2 +1,2 @@
 # Cockroach Janta Party Official ads.txt
-google.com, pub-6925854841247319, DIRECT, f08c47fec0942fa0
+google.com, pub-6925854041247319, DIRECT, f08c47fec0942fa0
