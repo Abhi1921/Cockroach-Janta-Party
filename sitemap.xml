@@ -7,91 +7,85 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/index.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://cockroachjantapartywale.com/manifesto.html</loc>
+    <loc>https://cockroachjantapartywale.com/manifesto</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/vision.html</loc>
+    <loc>https://cockroachjantapartywale.com/vision</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/join.html</loc>
+    <loc>https://cockroachjantapartywale.com/join</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/raise-issue.html</loc>
+    <loc>https://cockroachjantapartywale.com/raise-issue</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/issues.html</loc>
+    <loc>https://cockroachjantapartywale.com/issues</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/tracker.html</loc>
+    <loc>https://cockroachjantapartywale.com/tracker</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/articles.html</loc>
+    <loc>https://cockroachjantapartywale.com/articles</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/members.html</loc>
+    <loc>https://cockroachjantapartywale.com/members</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/gallery.html</loc>
+    <loc>https://cockroachjantapartywale.com/gallery</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/protests.html</loc>
+    <loc>https://cockroachjantapartywale.com/protests</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/revolutionaries.html</loc>
+    <loc>https://cockroachjantapartywale.com/revolutionaries</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/donate.html</loc>
+    <loc>https://cockroachjantapartywale.com/donate</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/contact.html</loc>
+    <loc>https://cockroachjantapartywale.com/contact</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://cockroachjantapartywale.com/terms.html</loc>
+    <loc>https://cockroachjantapartywale.com/terms</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -4,16 +4,17 @@
   const year = new Date().getFullYear();
 
   // Slim navbar — 6 items cleanly aligned in one line
+  // Slim navbar — 6 items cleanly aligned in one line
   const nav = [
-    ["vision.html", "Vision"],
-    ["manifesto.html", "5 Demands"],
-    ["articles.html", "Media"],
-    ["protests.html", "Actions"],
-    ["join.html", "Join Us"],
-    ["contact.html", "Contact"],
+    ["vision", "Vision"],
+    ["manifesto", "5 Demands"],
+    ["articles", "Media"],
+    ["protests", "Actions"],
+    ["join", "Join Us"],
+    ["contact", "Contact"],
   ];
 
-  const active = (file) => (page === file.replace(".html", "") ? " is-active" : "");
+  const active = (file) => (page === file.replace(".html", "").replace(/^\//, "") ? " is-active" : "");
 
   const top = `
   <a class="skip-link" href="#main">Skip to content</a>
@@ -27,7 +28,7 @@
   </div>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Cockroach Janta Party home">
+      <a class="brand" href="/" aria-label="Cockroach Janta Party home">
         <img src="assets/img/logo.png" alt="Cockroach Janta Party logo" width="52" height="52" decoding="async">
         <div class="brand-text">
           <strong>Cockroach Janta Party</strong>
@@ -48,8 +49,8 @@
             <button type="button" class="lang-opt" role="option" data-lang="hi" aria-selected="false">🇮🇳 हिन्दी</button>
           </div>
         </div>
-        <a href="donate.html" class="btn btn-ghost${active("donate.html")}">Support site</a>
-        <a href="join.html" class="btn btn-solid${active("join.html")}">Join Free</a>
+        <a href="donate" class="btn btn-ghost${active("donate")}">Support site</a>
+        <a href="join" class="btn btn-solid${active("join")}">Join Free</a>
       </div>
     </div>
   </header>`;
@@ -72,7 +73,7 @@
           <li><strong>No tax deduction / 80G</strong> — please treat it as a personal tip</li>
         </ul>
         <p class="support-fine">
-          Read the fine print: <a href="donate.html">Support page</a> · <a href="terms.html#payment-policy">Payment policy</a>
+          Read the fine print: <a href="donate">Support page</a> · <a href="terms#payment-policy">Payment policy</a>
         </p>
       </div>
       <div class="support-qr-card">
@@ -81,7 +82,7 @@
         </div>
         <p class="qr-caption"><strong>Scan &amp; pay</strong> (UPI / any supported app)</p>
         <p class="qr-hint">You choose the amount · Optional remark: “Website support”</p>
-        <a href="donate.html" class="btn btn-solid" style="width:100%;margin-top:0.75rem">Full details &amp; policy →</a>
+        <a href="donate" class="btn btn-solid" style="width:100%;margin-top:0.75rem">Full details &amp; policy →</a>
       </div>
     </div>
   </section>
@@ -115,30 +116,30 @@
       <div class="footer-cols">
         <div>
           <h4>Explore</h4>
-          <a href="vision.html">About</a>
-          <a href="manifesto.html">Manifesto</a>
-          <a href="articles.html">News</a>
-          <a href="protests.html">Protests</a>
+          <a href="vision">About</a>
+          <a href="manifesto">Manifesto</a>
+          <a href="articles">News</a>
+          <a href="protests">Protests</a>
         </div>
         <div>
           <h4>More</h4>
-          <a href="gallery.html">Gallery</a>
-          <a href="members.html">Members</a>
-          <a href="issues.html">Issues</a>
-          <a href="tracker.html">Tracker</a>
+          <a href="gallery">Gallery</a>
+          <a href="members">Members</a>
+          <a href="issues">Issues</a>
+          <a href="tracker">Tracker</a>
         </div>
         <div>
           <h4>Act</h4>
-          <a href="donate.html">Support site</a>
-          <a href="join.html">Join</a>
-          <a href="raise-issue.html">File Issue</a>
-          <a href="terms.html#payment-policy">Payment policy</a>
+          <a href="donate">Support site</a>
+          <a href="join">Join</a>
+          <a href="raise-issue">File Issue</a>
+          <a href="terms#payment-policy">Payment policy</a>
         </div>
         <div>
           <h4>Legal</h4>
-          <a href="contact.html">Contact</a>
-          <a href="terms.html">Terms</a>
-          <a href="terms.html#satire">Satire</a>
+          <a href="contact">Contact</a>
+          <a href="terms">Terms</a>
+          <a href="terms#satire">Satire</a>
           <a href="sitemap.xml">Sitemap</a>
         </div>
       </div>
