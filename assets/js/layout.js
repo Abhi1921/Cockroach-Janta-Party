@@ -264,22 +264,19 @@
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span style="color: #b8a29a;">Google Index Status:</span>
-        <strong style="color: #4ade80; display: flex; align-items: center; gap: 0.25rem;">
-          <span style="width: 8px; height: 8px; background: #4ade80; border-radius: 50%; display: inline-block;"></span>
-          Indexed
+        <strong style="color: #f59e0b; display: flex; align-items: center; gap: 0.25rem;">
+          <span style="width: 8px; height: 8px; background: #f59e0b; border-radius: 50%; display: inline-block;"></span>
+          Pending (Requested)
         </strong>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span style="color: #b8a29a;">Brand Keyword Rank:</span>
-        <strong style="color: #fbbf24;">#1 (CJP India)</strong>
+        <strong style="color: #ef4444;">Not Ranked (Low Authority)</strong>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span style="color: #b8a29a;">Active Swarm (Live):</span>
         <strong style="color: #60a5fa;" id="liveSwarmCount">164+ online</strong>
       </div>
-    </div>
-    <div style="margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.75rem; text-align: center;">
-      <a href="https://analytics.google.com/" target="_blank" rel="noopener" style="font-size: 0.72rem; color: #fbbf24; text-decoration: underline;">Open Google Analytics →</a>
     </div>
   </div>`;
 
