@@ -214,8 +214,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© ${year} ${S.legalName || "CJP"} · cockroachjantapartywale.com</p>
-      <p>Sources: public press &amp; Wikipedia (Cockroach Janta Party)</p>
+      <p>© ${year} Cockroach Janta Party · cockroachjantapartywale.com · Satirical &amp; Parody Movement</p>
+      <p>Sources: public press &amp; Wikipedia (Cockroach Janta Party) · Not an ECI-registered political party</p>
     </div>
   </footer>
   <div class="protest-mini-widget" id="protestMiniWidget">
