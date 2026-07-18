@@ -41,11 +41,18 @@
 
   const top = `
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="announce-bar" id="announceBar" role="region" aria-label="Supporters Ticker">
+  <div class="announce-bar" id="announceBar" role="region" aria-label="Announcements">
     <div class="announce-track">
-      ${generateTicker()}
+      <span>#MainBhiCockroach — reclaiming the insult as youth power</span>
+      <span>Founded ${S.foundedFull || "16 May 2026"} by ${S.founder || "Abhijeet Dipke"} · New Delhi</span>
+      <span>Not an ECI-registered party · Satire with a purpose</span>
     </div>
     <button type="button" class="announce-close" id="announceClose" aria-label="Close">×</button>
+  </div>
+  <div class="dev-ticker-bar" role="region" aria-label="Developer Support Ticker">
+    <div class="dev-ticker-track">
+      ${generateTicker()}
+    </div>
   </div>
   <header class="site-header">
     <div class="header-inner">

@@ -73,6 +73,29 @@ button, input, textarea, select { font: inherit; color: inherit; }
   to { transform: translateX(-50%); }
 }
 
+.dev-ticker-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0.25rem 1rem;
+  overflow: hidden;
+  background: #1c1010;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fbbf24;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+}
+.dev-ticker-track {
+  display: flex; gap: 4rem; white-space: nowrap;
+  animation: marquee-slow 75s linear infinite;
+}
+@keyframes marquee-slow {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 .site-header {
   position: sticky; top: 0; z-index: 40;
   background: rgba(255, 255, 255, 0.94);
