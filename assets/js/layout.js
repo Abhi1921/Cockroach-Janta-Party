@@ -251,6 +251,29 @@
   if (mountTop) mountTop.outerHTML = top;
   if (mountBottom) mountBottom.outerHTML = bottom;
 
+  // Close announce bar listener
+  const announceCloseBtn = document.getElementById("announceClose");
+  const announceBar = document.getElementById("announceBar");
+  if (announceCloseBtn && announceBar) {
+    announceCloseBtn.addEventListener("click", () => {
+      announceBar.style.display = "none";
+    });
+  }
+
+  // Close protest mini widget listener
+  const protestCloseBtn = document.getElementById("protestWidgetClose");
+  const protestWidget = document.getElementById("protestMiniWidget");
+  if (protestCloseBtn && protestWidget) {
+    protestCloseBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      protestWidget.style.display = "none";
+    });
+  }
+
+  // Prevent FOUC: Reveal page once layout is mounted
+  document.body.classList.remove("no-fouc");
+
   if (S.url && !document.getElementById("ld-org")) {
     const org = {
       "@context": "https://schema.org",

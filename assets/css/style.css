@@ -35,6 +35,11 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+body.no-fouc {
+  opacity: 0 !important;
 }
 
 img { max-width: 100%; display: block; }
