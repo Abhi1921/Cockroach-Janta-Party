@@ -108,7 +108,16 @@
       "Protest updates and manifesto notes — no spam.": "आंदोलन की खबरें और घोषणापत्र नोट्स — बिना स्पैम।",
       "Subscribe": "सब्सक्राइब करें",
       "By subscribing you agree to occasional CJP updates.": "सब्सक्राइब करके आप CJP अपडेट्स प्राप्त करने की सहमति देते हैं।",
-      "Youth satirical movement. Founded 16 May 2026. Not registered with the Election Commission of India.": "युवा व्यंग्यात्मक आंदोलन। स्थापना 16 मई 2026। भारत के चुनाव आयोग में पंजीकृत नहीं।"
+      "Youth satirical movement. Founded 16 May 2026. Not registered with the Election Commission of India.": "युवा व्यंग्यात्मक आंदोलन। स्थापना 16 मई 2026। भारत के चुनाव आयोग में पंजीकृत नहीं।",
+
+      // Breaking News Section
+      "TODAY'S BIG BREAKING NEWS": "आज की बड़ी ब्रेकिंग न्यूज़",
+      "Sonam Wangchuk <em>Detained by Delhi Police</em>": "सोनम वांगचुक को <em>दिल्ली पुलिस ने उठाया</em>",
+      "Climate activist Sonam Wangchuk forcefully removed from Jantar Mantar hunger strike site and shifted to Safdarjung Hospital amid tight security.": "जलवायु कार्यकर्ता सोनम वांगचुक को जंतर-मंतर पर भूख हड़ताल स्थल से जबरन हटाकर भारी सुरक्षा के बीच सफदरजंग अस्पताल में स्थानांतरित किया गया।",
+      "LATEST PRESS UPDATE": "ताजा प्रेस अपडेट",
+      "Hunger Strike Site Cleared": "भूख हड़ताल स्थल खाली कराया गया",
+      "Delhi Police barricaded the Jantar Mantar protest site, restricting public entry. Protesters claim several youth coordinators were also detained, prompting CJP founder Abhijeet Dipke to launch an immediate counter fast.": "दिल्ली पुलिस ने जंतर-मंतर विरोध प्रदर्शन स्थल की घेराबंदी कर दी है। प्रदर्शनकारियों का दावा है कि कई युवा समन्वयकों को भी हिरासत में लिया गया है, जिसके बाद सीजेपी संस्थापक अभिजीत दीपके ने तत्काल अनशन शुरू कर दिया है।",
+      "🚨 LIVE COVERAGE": "🚨 लाइव कवरेज"
     }
   };
 
