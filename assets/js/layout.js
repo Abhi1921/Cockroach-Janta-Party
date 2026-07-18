@@ -109,13 +109,13 @@
   </section>
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="assets/img/logo.png" alt="" width="44" height="44" decoding="async">
+      <a href="/" class="footer-brand" style="text-decoration: none; color: inherit;">
+        <img src="assets/img/logo.png" alt="Cockroach Janta Party logo" width="44" height="44" decoding="async">
         <div>
-          <strong>${S.legalName || "The Cockroach Janta Party"}</strong>
+          <strong>Cockroach Janta Party</strong>
           <p>Youth satirical movement. Founded 16 May 2026. Not registered with the Election Commission of India.</p>
         </div>
-      </div>
+      </a>
       <div class="footer-cols">
         <div>
           <h4>Explore</h4>
@@ -156,7 +156,7 @@
     <button type="button" class="widget-close" id="protestWidgetClose" aria-label="Close float widget">×</button>
     <div class="widget-badge">🚨 NEXT PROTEST · 20 JULY 2026</div>
     <a href="protests#protest-20-july" class="widget-body">
-      <img src="assets/img/cjp/protest-20-july.png?v=20july" alt="20 July 2026 Jantar Mantar Youth Protest" width="70" height="90" loading="eager">
+      <img src="assets/img/cjp/protest-20-july.jpg?v=20july" alt="20 July 2026 Jantar Mantar Youth Protest" width="70" height="90" loading="eager">
       <div class="widget-info">
         <strong>20 JULY MARCH</strong>
         <p>Jantar Mantar, New Delhi · 10:00 AM</p>

@@ -249,7 +249,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
   position: absolute; inset: 0; z-index: -1;
   background:
     linear-gradient(105deg, rgba(250,247,245,0.92) 0%, rgba(250,247,245,0.5) 48%, transparent 70%),
-    url("../img/cjp/protest-20-july.png?v=20july") right center / cover no-repeat;
+    url("../img/cjp/protest-20-july.jpg?v=20july") right center / cover no-repeat;
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
 @keyframes heroZoom {
