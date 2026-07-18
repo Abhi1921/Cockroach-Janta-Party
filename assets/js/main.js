@@ -530,4 +530,27 @@
     setTimeout(spawnRandomPop, 400);
     setInterval(spawnRandomPop, 5200);
   }
+
+  // Tap & Pay scanner blur reveal handler
+  const initScannerReveal = () => {
+    document.querySelectorAll(".qr-slot").forEach((slot) => {
+      if (!slot.querySelector(".qr-overlay")) {
+        const overlay = document.createElement("div");
+        overlay.className = "qr-overlay";
+        overlay.innerHTML = '<button type="button" class="tap-pay-btn">Tap & Pay</button>';
+        slot.appendChild(overlay);
+        
+        slot.addEventListener("click", () => {
+          slot.classList.add("unblurred");
+        });
+      }
+    });
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initScannerReveal);
+  } else {
+    initScannerReveal();
+  }
+  setTimeout(initScannerReveal, 100);
+  setTimeout(initScannerReveal, 500);
 })();
