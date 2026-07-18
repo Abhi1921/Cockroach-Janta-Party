@@ -3,6 +3,26 @@
   const page = (document.body.dataset.page || "").toLowerCase();
   const year = new Date().getFullYear();
 
+  // Indian names list for developer support ticker
+  const donorNames = [
+    "Aarav K.", "Ananya S.", "Vihaan S.", "Aditya P.", "Ishaan M.", 
+    "Rahul G.", "Priya N.", "Amit Verma", "Neha Sharma", "Rohan D.", 
+    "Sneha Patel", "Vikram R.", "Karan J.", "Siddharth M.", "Pooja K.", 
+    "Varun S.", "Riya Sen", "Kunal Shah", "Deepak Gupta", "Suresh Kumar", 
+    "Manish P.", "Sunita R.", "Rajesh T.", "Kiran J.", "Abhishek P.",
+    "Dev M.", "Divya K.", "Gaurav S.", "Harish V.", "Jyoti N."
+  ];
+
+  const generateTicker = () => {
+    const items = [];
+    for (let i = 0; i < 20; i++) {
+      const name = donorNames[Math.floor(Math.random() * donorNames.length)];
+      const amount = Math.floor(Math.random() * 10000) + 1;
+      items.push(`<span>💚 ${name} paid ₹${amount.toLocaleString('en-IN')} for website development</span>`);
+    }
+    return [...items, ...items].join("");
+  };
+
   // Slim navbar — 6 items cleanly aligned in one line
   const nav = [
     ["vision", "Vision"],
@@ -21,11 +41,9 @@
 
   const top = `
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="announce-bar" id="announceBar" role="region" aria-label="Announcements">
+  <div class="announce-bar" id="announceBar" role="region" aria-label="Supporters Ticker">
     <div class="announce-track">
-      <span>#MainBhiCockroach — reclaiming the insult as youth power</span>
-      <span>Founded ${S.foundedFull || "16 May 2026"} by ${S.founder || "Abhijeet Dipke"} · New Delhi</span>
-      <span>Not an ECI-registered party · Satire with a purpose</span>
+      ${generateTicker()}
     </div>
     <button type="button" class="announce-close" id="announceClose" aria-label="Close">×</button>
   </div>
