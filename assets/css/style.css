@@ -37,14 +37,30 @@ body {
   -webkit-font-smoothing: antialiased;
   opacity: 1;
   transition: opacity 0.15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 body.no-fouc {
   opacity: 0 !important;
 }
 
-img { max-width: 100%; display: block; }
+img {
+  max-width: 100%;
+  display: block;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
 a { color: inherit; text-decoration: none; }
-button, input, textarea, select { font: inherit; color: inherit; }
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
 
 .skip-link {
   position: absolute; left: -999px; top: 0;
