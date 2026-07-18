@@ -109,13 +109,26 @@
   </section>
   <footer class="site-footer">
     <div class="footer-inner">
-      <a href="/" class="footer-brand" style="text-decoration: none; color: inherit;">
-        <img src="assets/img/logo.png" alt="Cockroach Janta Party logo" width="44" height="44" decoding="async">
-        <div>
-          <strong>Cockroach Janta Party</strong>
-          <p>Youth satirical movement. Founded 16 May 2026. Not registered with the Election Commission of India.</p>
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <a href="/" class="footer-brand" style="text-decoration: none; color: inherit;">
+          <img src="assets/img/logo.png" alt="Cockroach Janta Party logo" width="44" height="44" decoding="async">
+          <div>
+            <strong>Cockroach Janta Party</strong>
+            <p>Youth satirical movement. Founded 16 May 2026. Not registered with the Election Commission of India.</p>
+          </div>
+        </a>
+        <div class="footer-socials" style="display: flex; gap: 0.75rem; align-items: center; margin-top: 0.5rem;">
+          <a href="https://x.com/cjp_official" target="_blank" rel="noopener" aria-label="CJP Official X (Twitter)" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; transition: all 0.2s;" onmouseover="this.style.background='var(--signal)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='scale(1)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://instagram.com/cjp_official" target="_blank" rel="noopener" aria-label="CJP Official Instagram" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; transition: all 0.2s;" onmouseover="this.style.background='var(--signal)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='scale(1)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://x.com/abhijeet_dipke" target="_blank" rel="noopener" aria-label="Founder Abhijeet Dipke X" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; transition: all 0.2s;" onmouseover="this.style.background='var(--signal)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='scale(1)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </a>
         </div>
-      </a>
+      </div>
       <div class="footer-cols">
         <div>
           <h4>Explore</h4>
