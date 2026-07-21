@@ -221,37 +221,80 @@
     <section class="page section-band" id="breaking-news-section">
       <p class="eyebrow" style="color: var(--signal); font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
         <span style="width: 8px; height: 8px; background: var(--signal); border-radius: 50%; display: inline-block; animation: pulse 1.4s ease infinite;"></span>
-        TODAY'S BIG BREAKING NEWS
+        TRENDING SWARM UPDATES (20 &amp; 21 JULY)
       </p>
-      <h2 class="page-title">Sonam Wangchuk <em>Detained by Delhi Police</em></h2>
-      <p class="lede">Climate activist Sonam Wangchuk forcefully removed from Jantar Mantar hunger strike site and shifted to Safdarjung Hospital amid tight security.</p>
+      <h2 class="page-title">CJP Sansad Chalo March <em>&amp; Government Negotiations</em></h2>
+      <p class="lede">Massive youth uprising in New Delhi over NEET paper leak scandals and student reforms. Here is everything that transpired yesterday and today on the ground.</p>
       
       <div class="breaking-news-grid">
-        <!-- Left: YouTube Video embed (Iframe) -->
-        <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 16px 40px rgba(28,16,16,0.15); background: #000; aspect-ratio: 16/9; position: relative;">
-          <iframe 
-            src="https://www.youtube.com/embed/5UjaUWbnWZ4" 
-            title="NewsX Video Coverage" 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-          </iframe>
-        </div>
-        
-        <!-- Right: Breaking News coverage details & image -->
+        <!-- Left Column: Video Iframe and Ground Clips -->
         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-          <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); position: relative; aspect-ratio: 16/10; box-shadow: 0 8px 24px rgba(28,16,16,0.12);">
-            <img src="assets/img/cjp/breaking_news_protest.png" alt="Late night protests in New Delhi" style="width: 100%; height: 100%; object-fit: cover;">
-            <span class="shot-label" style="background: var(--signal); font-weight: 700;">🚨 LIVE COVERAGE</span>
+          <!-- YouTube Video embed (Iframe) -->
+          <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 16px 40px rgba(28,16,16,0.15); background: #000; aspect-ratio: 16/9; position: relative;">
+            <iframe 
+              src="https://www.youtube.com/embed/5UjaUWbnWZ4" 
+              title="CJP Sansad Chalo News Coverage" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
           </div>
           
-          <div class="content-card" style="padding: 1.5rem; background: var(--surface);">
-            <div class="meta" style="color: var(--signal); font-weight: 700; font-family: var(--font-mono); font-size: 0.72rem; margin-bottom: 0.5rem;">LATEST PRESS UPDATE</div>
-            <h3 style="font-size: 1.2rem; margin: 0 0 0.5rem; font-family: var(--font-display);">Hunger Strike Site Cleared</h3>
+          <!-- Ground Photo Clips Header -->
+          <h3 style="font-size: 1.1rem; margin: 0.5rem 0 0; font-family: var(--font-display); color: var(--ink);">Ground Images &amp; Media Clips</h3>
+          
+          <!-- Grid of Trending Pics from the Ground -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); position: relative; aspect-ratio: 4/3; box-shadow: 0 4px 12px rgba(28,16,16,0.1);">
+              <img src="assets/img/cjp/protest-crowd.png" alt="CJP protest crowd at Jantar Mantar" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="shot-label" style="background: var(--signal); font-weight: 700;">✊ SWARM IN DELHI</span>
+            </div>
+            <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); position: relative; aspect-ratio: 4/3; box-shadow: 0 4px 12px rgba(28,16,16,0.1);">
+              <img src="assets/img/cjp/police-barricades.png" alt="Police barricades at Delhi protest" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="shot-label" style="background: var(--navy); font-weight: 700;">🚧 SECURITY FORCES</span>
+            </div>
+            <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); position: relative; aspect-ratio: 4/3; box-shadow: 0 4px 12px rgba(28,16,16,0.1);">
+              <img src="assets/img/cjp/student-banners.png" alt="Students holding CJP reform banners" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="shot-label" style="background: var(--gold); color: #000; font-weight: 700;">📜 DEMANDING REFORM</span>
+            </div>
+            <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); position: relative; aspect-ratio: 4/3; box-shadow: 0 4px 12px rgba(28,16,16,0.1);">
+              <img src="assets/img/cjp/hunger-strike.png" alt="Abhijeet Dipke hunger strike day 4" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="shot-label" style="background: var(--signal); font-weight: 700;">🚨 HUNGER STRIKE</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column: Yesterday & Today Timeline Updates -->
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          
+          <!-- Yesterday Card (20 July) -->
+          <div class="content-card" style="padding: 1.5rem; background: var(--surface); border-left: 4px solid var(--signal);">
+            <div class="meta" style="color: var(--signal); font-weight: 700; font-family: var(--font-mono); font-size: 0.72rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+              <span>🗓️ YESTERDAY: 20 JULY 2026</span>
+            </div>
+            <h3 style="font-size: 1.25rem; margin: 0 0 0.5rem; font-family: var(--font-display);">Sansad Chalo March &amp; Clash</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--muted); margin-bottom: 0.75rem;">
+              Over 100,000 CJP student supporters marched towards Parliament on the opening day of the Monsoon Session. Protesters demanded the immediate resignation of Union Education Minister Dharmendra Pradhan.
+            </p>
             <p style="font-size: 0.9rem; line-height: 1.6; color: var(--muted);">
-              Delhi Police barricaded the Jantar Mantar protest site, restricting public entry. Protesters claim several youth coordinators were also detained, prompting CJP founder Abhijeet Dipke to launch an immediate counter fast.
+              <strong>Police Action:</strong> Security forces deployed tear gas and batons (lathicharge) near Jantar Mantar to disperse the crowd. Local internet shutdowns were enforced and multiple student coordinators were detained.
             </p>
           </div>
+          
+          <!-- Today Card (21 July) -->
+          <div class="content-card" style="padding: 1.5rem; background: #fffcf8; border-left: 4px solid var(--gold); border-color: var(--gold);">
+            <div class="meta" style="color: var(--gold); font-weight: 700; font-family: var(--font-mono); font-size: 0.72rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+              <span>⚡ TODAY: 21 JULY 2026</span>
+            </div>
+            <h3 style="font-size: 1.25rem; margin: 0 0 0.5rem; font-family: var(--font-display);">Government Meeting &amp; Stand-off</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--muted); margin-bottom: 0.75rem;">
+              <strong>Ministerial Dialogue:</strong> CJP representatives Saurav Das and Ashutosh Ranka met Union Health Minister J.P. Nadda to present their demands. Nadda assured that the cabinet would hold internal discussions on exam safety and address the detention of activist Sonam Wangchuk.
+            </p>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--muted);">
+              <strong>Protest Status:</strong> Founder Abhijeet Dipke's hunger strike enters Day 4 under high police surveillance, declaring that the swarm will not back down until all student detainees are freed unconditionally.
+            </p>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -366,6 +409,12 @@
           <div class="meta" style="color:#fbbf24; font-weight:700;">20 JULY 2026</div>
           <h3>Jantar Mantar Mega Youth March</h3>
           <p>Over 100,000+ students assemble at Jantar Mantar, New Delhi for exam integrity, paper leak accountability, and student rights.</p>
+        </article>
+
+        <article class="content-card" style="border: 2px solid var(--gold); background: #221510; color: #fff;">
+          <div class="meta" style="color:#fbbf24; font-weight:700;">21 JULY 2026</div>
+          <h3>Govt Talks &amp; Continued Strike</h3>
+          <p>CJP representatives hold critical talks with Health Minister JP Nadda on exam reforms. Founder Abhijeet Dipke continues strike for detainee release.</p>
         </article>
       </div>
     </section>
