@@ -214,20 +214,38 @@ button, input, textarea, select {
   color: var(--signal);
   box-shadow: 0 4px 14px rgba(159, 18, 57, 0.15);
 }
+/* Universal Scrollbar Removal for Header & Dropdown Components */
+.site-header, .header-inner, .header-actions, .lang-select, .lang-menu, .main-nav {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+.site-header::-webkit-scrollbar,
+.header-inner::-webkit-scrollbar,
+.header-actions::-webkit-scrollbar,
+.lang-select::-webkit-scrollbar,
+.lang-menu::-webkit-scrollbar,
+.main-nav::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
 .lang-menu {
   position: absolute;
   right: 0;
-  top: calc(100% + 8px);
-  z-index: 9999;
+  top: calc(100% + 6px);
+  z-index: 99999;
   background: #ffffff;
   border: 1.5px solid var(--line);
   border-radius: 12px;
-  padding: 0.35rem;
-  box-shadow: 0 12px 32px rgba(28, 16, 16, 0.16);
+  padding: 0.4rem;
+  box-shadow: 0 16px 40px rgba(28, 16, 16, 0.22);
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  min-width: 125px;
+  gap: 0.3rem;
+  min-width: 145px;
+  overflow: visible !important;
+  white-space: nowrap;
 }
 .lang-menu[hidden] {
   display: none !important;
@@ -889,9 +907,11 @@ button, input, textarea, select {
     box-shadow: 0 20px 45px rgba(28, 16, 16, 0.25);
     backdrop-filter: blur(20px);
     z-index: 1000;
-    max-height: calc(82vh - 60px);
+    max-height: calc(88vh - 60px);
     overflow-y: auto;
     overflow-x: hidden;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
     -webkit-overflow-scrolling: touch;
     animation: rise 0.2s var(--ease) both;
   }
