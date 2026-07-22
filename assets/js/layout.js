@@ -215,7 +215,10 @@
     </div>
     <div class="footer-bottom">
       <p>© ${year} Cockroach Janta Party · cockroachjantapartywale.com · Satirical &amp; Parody Movement</p>
-      <p>Sources: public press &amp; Wikipedia (Cockroach Janta Party) · Not an ECI-registered political party</p>
+      <p>Sources: public press &amp; Wikipedia · Not an ECI-registered political party · Protected under Art. 19(1)(a)</p>
+    </div>
+    <div style="background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.08); padding: 0.85rem 1.25rem; font-size: 0.72rem; color: rgba(255,255,255,0.65); text-align: center; line-height: 1.5; font-family: var(--font-body);">
+      <strong>Legal Notice &amp; Disclaimer:</strong> Cockroach Janta Party Wale (CJP) is a satirical political parody and civic youth movement. It is NOT an ECI-registered political party, does not field election candidates, and does not collect electoral funds. All content is protected under Article 19(1)(a) of the Constitution of India. Voluntary tips are for website development &amp; server hosting only.
     </div>
   </footer>
   <div class="protest-mini-widget" id="protestMiniWidget">
