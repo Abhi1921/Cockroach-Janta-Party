@@ -531,17 +531,23 @@
     setInterval(spawnRandomPop, 5200);
   }
 
-  // Tap & Pay scanner blur reveal handler
+  // Tap & Pay scanner blur reveal handler with auto GPay / UPI Note: CJP
   const initScannerReveal = () => {
     document.querySelectorAll(".qr-slot").forEach((slot) => {
       if (!slot.querySelector(".qr-overlay")) {
         const overlay = document.createElement("div");
         overlay.className = "qr-overlay";
-        overlay.innerHTML = '<button type="button" class="tap-pay-btn">Tap & Pay</button>';
+        overlay.innerHTML = '<button type="button" class="tap-pay-btn">Tap &amp; Pay (Note: CJP)</button>';
         slot.appendChild(overlay);
         
         slot.addEventListener("click", () => {
           slot.classList.add("unblurred");
+          if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            const upiId = (window.CJP_SITE && window.CJP_SITE.upiId) || "";
+            if (upiId) {
+              window.location.href = `upi://pay?pa=${upiId}&pn=CJP%20Support&tn=CJP&cu=INR`;
+            }
+          }
         });
       }
     });

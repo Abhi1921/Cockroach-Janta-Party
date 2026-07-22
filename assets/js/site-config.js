@@ -21,6 +21,7 @@ window.CJP_SITE = {
   /** Person who receives voluntary website-support payments (not an NGO) */
   developerName: "Website Developer",
   developerNote: "Independent developer maintaining cockroachjantapartywale.com",
+  upiNote: "CJP",
   sameAs: [
     "https://cockroachjantapartywale.com",
     "https://en.wikipedia.org/wiki/Cockroach_Janta_Party",
