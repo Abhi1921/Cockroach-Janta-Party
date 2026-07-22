@@ -111,6 +111,12 @@
         <p class="qr-caption"><strong>Scan &amp; pay</strong> (UPI / any supported app)</p>
         <p class="qr-hint">You choose the amount · Remark / Description: <code style="font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;">CJP</code></p>
         
+        <!-- Personal Food / Snacks Support Note Box -->
+        <div style="background: linear-gradient(135deg, #fffcf8 0%, #fef3c7 100%); border: 1.5px solid #f59e0b; border-radius: 10px; padding: 0.65rem 0.8rem; margin-top: 0.75rem; font-size: 0.76rem; color: #78350f; line-height: 1.4; text-align: left; width: 100%;">
+          <strong style="font-weight: 800; font-family: var(--font-display); font-size: 0.82rem; color: #92400e; display: block; margin-bottom: 0.2rem;">☕ Support Developer's Hard Work! 🍕</strong>
+          Main independently din-raat mehnat karke ye website maintain karta hoon. Agar aap mere kaam ko support karna chahte ho — <strong>Chai ☕, Snacks 🍕, Dinner 🍔 ya Server Hosting 💻</strong> ke liye voluntary tip bhej sakte ho!
+        </div>
+
         <!-- Legal Compliance Disclosures Box -->
         <div style="margin-top: 0.75rem; padding: 0.65rem 0.85rem; background: #fffcf8; border: 1px solid #fecdd3; border-radius: 8px; font-size: 0.72rem; color: #9f1239; line-height: 1.45; text-align: left; width: 100%;">
           <strong style="display: block; font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; margin-bottom: 0.2rem; color: var(--signal);">⚖️ LEGAL PROCESS CONDITIONS:</strong>
@@ -369,6 +375,19 @@
             </div>
 
             <div style="text-align: left;">
+              <!-- Personal Food / Snacks Support Note Box -->
+              <div style="background: linear-gradient(135deg, #fffcf8 0%, #fef3c7 100%); border: 1.5px solid #f59e0b; border-radius: 12px; padding: 0.75rem 0.9rem; margin-bottom: 0.85rem; font-size: 0.8rem; color: #78350f; line-height: 1.45;">
+                <div style="font-weight: 800; font-family: var(--font-display); font-size: 0.88rem; color: #92400e; margin-bottom: 0.25rem;">
+                  ☕ Support the Developer's Hard Work! 🍕
+                </div>
+                <p style="margin: 0 0 0.35rem; font-size: 0.78rem;">
+                  Main independently din-raat mehnat karke ye website code, host aur updates maintain karta hoon. Agar aap mere hard work ko support karna chahte ho — <strong>Chai ☕, Snacks 🍕, Dinner 🍔 ya Server Hosting 💻</strong> ke liye voluntary tip bhej sakte ho!
+                </p>
+                <div style="font-size: 0.72rem; color: #b45309; font-weight: 700;">
+                  ❤️ Aapka chhota sa support bhi regular updates ke liye bada sahara hai!
+                </div>
+              </div>
+
               <strong style="font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); display: block; margin-bottom: 0.3rem;">📩 Paid via UPI? Send Instant Alert</strong>
               <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.85rem;">Scan karke pay karne ke baad niche details bharein. Real-time alert Mailtrap inbox me bhej diya jayega!</p>
               <form class="sec2-payment-form" style="display: flex; flex-direction: column; gap: 0.65rem;">
