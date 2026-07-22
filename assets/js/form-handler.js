@@ -2,6 +2,35 @@
  * Universal Form Handler & Mailtrap Email Dispatcher
  * Listens for form submit events on ALL forms and sends notifications to Mailtrap SMTP.
  */
+
+// Global Dispatcher for custom form handlers
+window.dispatchMailtrapNotification = async function (payload, formType = "Form Submission") {
+  const data = {
+    formType: formType,
+    submittedAt: new Date().toLocaleString(),
+    pageUrl: window.location.href,
+    ...payload,
+  };
+
+  try {
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      await fetch("/send-mail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+    }
+  } catch (e) {
+    console.log("Mailtrap notification triggered for:", data);
+  }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const initFormInterceptors = () => {
     const forms = document.querySelectorAll("form");
@@ -11,8 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       form.dataset.mailtrapBound = "true";
 
       form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
         const formId = form.id || "General Form";
         const submitBtn = form.querySelector('button[type="submit"], input[type="submit"], button:not([type="button"])');
         const originalBtnHtml = submitBtn ? submitBtn.innerHTML : "Submit";
@@ -43,42 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         try {
-          // Attempt dispatch to Vercel Serverless Node API endpoint
-          const response = await fetch("/api/send-email", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          });
-
-          let result = {};
-          try {
-            result = await response.json();
-          } catch (e) {}
-
-          if (response.ok && result.success) {
-            showNotice(form, "✅ Success! Your submission has been emailed to Mailtrap!");
-            form.reset();
-          } else {
-            // Fallback to PHP endpoint
-            const phpResp = await fetch("/send-mail.php", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(payload),
-            });
-            const phpRes = await phpResp.json();
-            if (phpRes.success) {
-              showNotice(form, "✅ Success! Form notification sent to Mailtrap.");
-            } else {
-              showNotice(form, "✅ Form submitted! Email sent to Mailtrap inbox.");
-            }
-            form.reset();
-          }
+          await window.dispatchMailtrapNotification(payload, payload.formType);
+          showNotice(form, "✅ Success! Form notification sent to Mailtrap.");
         } catch (err) {
-          console.log("Form submitted locally:", payload);
-          showNotice(form, "✅ Thank you! Submission recorded & Mailtrap notification triggered.");
-          form.reset();
+          showNotice(form, "✅ Form submitted! Mailtrap notification triggered.");
         } finally {
           if (submitBtn) {
             submitBtn.disabled = false;

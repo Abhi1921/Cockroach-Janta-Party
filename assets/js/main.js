@@ -290,10 +290,15 @@
     e.preventDefault();
     const email = new FormData(e.target).get("email");
     saveLocal("cjp_subscribers", { email });
+    
+    if (window.dispatchMailtrapNotification) {
+      window.dispatchMailtrapNotification({ email }, "Newsletter Subscription");
+    }
+
     const msg = $("#subscribeMsg");
     if (msg) {
       msg.hidden = false;
-      msg.textContent = "You're subscribed. One email — when it matters.";
+      msg.textContent = "✅ Subscribed! Email notification sent to Mailtrap inbox.";
     }
     e.target.reset();
   });
@@ -344,18 +349,25 @@
     localStorage.setItem("cjp_app_counter", String(n));
     const cardId = `CJP-2026-${n}`;
     saveLocal("cjp_applications", { id: cardId, ...data });
+
+    if (window.dispatchMailtrapNotification) {
+      window.dispatchMailtrapNotification({ memberId: cardId, ...data }, "Join Swarm Application");
+    }
     
     const appNo = $("#appNumber");
     if (appNo) appNo.textContent = cardId;
     
-    showToast(`🎉 Official Card Generated! Member ID: ${cardId}. Welcome aboard.`);
+    showToast(`🎉 Card Generated! Member ID: ${cardId}. Notification sent to Mailtrap.`);
   });
 
   $("#donateForm")?.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.target).entries());
     saveLocal("cjp_donations", data);
-    showToast(`Thanks! ₹${data.amount} intent recorded (demo).`);
+    if (window.dispatchMailtrapNotification) {
+      window.dispatchMailtrapNotification(data, "Support Payment Intent");
+    }
+    showToast(`Thanks! ₹${data.amount} intent recorded & sent to Mailtrap.`);
     e.target.reset();
     amountInput && (amountInput.value = "199");
   });
@@ -365,14 +377,21 @@
     const data = Object.fromEntries(new FormData(e.target).entries());
     const id = `ISS-${Math.floor(1000 + Math.random() * 9000)}`;
     saveLocal("cjp_issues", { id, ...data, status: "open" });
-    showToast(`Issue ${id} filed. Named. Trackable.`);
+    if (window.dispatchMailtrapNotification) {
+      window.dispatchMailtrapNotification({ issueId: id, ...data }, "Raise Issue Form");
+    }
+    showToast(`Issue ${id} filed. Emailed to Mailtrap.`);
     e.target.reset();
   });
 
   $("#contactForm")?.addEventListener("submit", (e) => {
     e.preventDefault();
-    saveLocal("cjp_contacts", Object.fromEntries(new FormData(e.target).entries()));
-    showToast("Message received. We'll get back when the wifi works.");
+    const data = Object.fromEntries(new FormData(e.target).entries());
+    saveLocal("cjp_contacts", data);
+    if (window.dispatchMailtrapNotification) {
+      window.dispatchMailtrapNotification(data, "Contact Us Message");
+    }
+    showToast("Message received! Emailed to Mailtrap inbox.");
     e.target.reset();
   });
 

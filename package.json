@@ -4,6 +4,6 @@
   "description": "Cockroach Janta Party Official Website with Mailtrap Integration",
   "main": "api/send-email.js",
   "dependencies": {
-    "nodemailer": "^6.9.13"
+    "nodemailer": "^6.10.1"
   }
 }
