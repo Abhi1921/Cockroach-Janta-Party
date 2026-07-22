@@ -99,45 +99,78 @@
       <h1 class="page-title">What the <em>media</em> reported.</h1>
       <p class="lede">External reporting (open in new tab). We summarise; always verify on the original page.</p>
 
-      <!-- Large media header banner -->
-      <div class="large-content-banner" style="margin: 3rem 0; border: 2px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.12);">
-        <img src="assets/img/cjp/breaking_news_protest.webp" alt="Reporters interviewing CJP coordinators at Delhi protest" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px;">
+      <!-- SECTION 2: THE ONLY VOLUNTARY DEVELOPER SCANNER BOX ON THIS PAGE -->
+      <section class="support-top support-top-sec2" id="support-dev-layout" style="margin: 2rem 0; padding: 1.5rem 1.75rem; background: #FFFDF7; border: 1.5px solid var(--saffron); border-radius: 16px; box-shadow: 0 10px 30px rgba(224, 101, 30, 0.12);">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;">
+          <div style="flex: 1 1 360px;">
+            <p class="eyebrow" style="color: var(--saffron); font-weight: 800; font-family: var(--font-mono); font-size: 0.72rem; margin: 0 0 0.3rem;">KEEP THE SITE ALIVE · VOLUNTARY TIP</p>
+            <h2 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin: 0 0 0.5rem; line-height: 1.25;">Building this site takes <em>nights.</em> A little help goes a long way.</h2>
+            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 0.75rem; line-height: 1.5;">
+              This website is built and run by hand — design, code, hosting, domain, and daily updates.
+              If you believe the story deserves a home online and want to chip in,
+              you can send a <strong>voluntary tip</strong> via the scanner. No pressure. No guilt trip. Ever.
+            </p>
+            <ul style="font-size: 0.82rem; color: var(--ink-soft); padding-left: 1.2rem; margin: 0; line-height: 1.5;">
+              <li>This is <strong>not</strong> an NGO, trust, or charity donation</li>
+              <li>This is <strong>not</strong> a political party fund or election contribution</li>
+              <li>Optional support for <strong>website development &amp; running costs</strong> only</li>
+            </ul>
+          </div>
+          <div style="text-align: center; background: #EFE4CC; padding: 0.85rem 1.1rem; border-radius: 14px; border: 1px solid #D8C9B0; flex: 0 0 auto;">
+            <div class="qr-slot" style="background: #fff; padding: 0.4rem; border-radius: 10px; display: inline-block;">
+              <img src="assets/img/upi-qr.webp" alt="Scan to pay via UPI for website support" width="160" height="160" loading="lazy" style="display: block;">
+            </div>
+            <p style="font-size: 0.82rem; margin: 0.4rem 0 0.1rem; color: var(--ink);"><strong>Scan &amp; pay via UPI</strong></p>
+            <p style="font-size: 0.72rem; color: var(--muted); margin: 0;">Remark: <code style="font-family:var(--font-mono);color:var(--saffron);font-weight:800;">CJP</code></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: 3-COLUMN CARD GRID WITH POSTERS, CONTENT & READ MORE -->
+      <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin: 2.5rem 0 1rem;">Media Reports &amp; <em>Press Desk</em></h2>
+      
+      <div class="cards-3col" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+        
+        <!-- Card 1 -->
+        <article class="content-card" style="border: 1px solid var(--line); background: #FFFDF7; border-radius: 14px; overflow: hidden; padding: 1.25rem; display: flex; flex-direction: column;">
+          <div class="card-img-frame" style="aspect-ratio: 16/10; overflow: hidden; border-radius: 10px; margin-bottom: 1rem; background: #1A1410;">
+            <img src="assets/img/cjp/breaking_news_protest.webp" alt="Parliament Lockout News" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--saffron); font-weight: 800; text-transform: uppercase;">🚨 22 JULY BREAKING NEWS</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.2rem; margin: 0.4rem 0 0.5rem; color: var(--ink);">Parliament Lockout Over CJP Lathicharge</h3>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.55; margin: 0 0 1rem; flex: 1;">
+            Lok Sabha &amp; Rajya Sabha proceedings halted on 22 July as opposition leaders demand accountability for police violence against CJP youth protesters.
+          </p>
+          <a href="https://news.google.com/search?q=CJP+parliament+protest" target="_blank" rel="noopener" class="btn btn-solid" style="padding: 0.55rem 1rem; font-size: 0.78rem; text-align: center; text-decoration: none;">Read More →</a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="content-card" style="border: 1px solid var(--line); background: #FFFDF7; border-radius: 14px; overflow: hidden; padding: 1.25rem; display: flex; flex-direction: column;">
+          <div class="card-img-frame" style="aspect-ratio: 16/10; overflow: hidden; border-radius: 10px; margin-bottom: 1rem; background: #1A1410;">
+            <img src="assets/img/cjp/05-press.webp" alt="BBC India Media Report" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--gold); font-weight: 800; text-transform: uppercase;">🌐 GOOGLE NEWS · BBC INDIA</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.2rem; margin: 0.4rem 0 0.5rem; color: var(--ink);">50,000+ Student Campus Auditor Swarms</h3>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.55; margin: 0 0 1rem; flex: 1;">
+            Abhijeet Dipke's 22 July statement launching decentralized campus squads to audit NTA exam centers across states and report technical glitches.
+          </p>
+          <a href="https://www.bbc.com/news" target="_blank" rel="noopener" class="btn btn-solid" style="padding: 0.55rem 1rem; font-size: 0.78rem; text-align: center; text-decoration: none;">Read More →</a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="content-card" style="border: 1px solid var(--line); background: #FFFDF7; border-radius: 14px; overflow: hidden; padding: 1.25rem; display: flex; flex-direction: column;">
+          <div class="card-img-frame" style="aspect-ratio: 16/10; overflow: hidden; border-radius: 10px; margin-bottom: 1rem; background: #1A1410;">
+            <img src="assets/img/cjp/press-conference.webp" alt="Press Conference Coverage" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--green); font-weight: 800; text-transform: uppercase;">📜 THE PRINT COVERAGE</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.2rem; margin: 0.4rem 0 0.5rem; color: var(--ink);">The 5-Point Swarm Manifesto Analysis</h3>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.55; margin: 0 0 1rem; flex: 1;">
+            How CJP's satirical demands for judicial cooling-off periods and 50% cabinet reservation for women gained traction across national opinion desks.
+          </p>
+          <a href="manifesto" class="btn btn-solid" style="padding: 0.55rem 1rem; font-size: 0.78rem; text-align: center; text-decoration: none;">Read More →</a>
+        </article>
+
       </div>
-
-      <!-- 3-Column Card Layout of News & Press Coverage -->
-      <div class="cards-3col" style="margin: 2.5rem 0;">
-        <div class="content-card" style="border: 2px solid var(--signal);">
-          <div class="card-img-frame">
-            <img src="assets/img/cjp/trending-cjp-poster-22july.webp" alt="22 July 2026 Parliament Swarm News Poster" loading="eager">
-          </div>
-          <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--signal); font-weight: 800; text-transform: uppercase;">🚨 22 JULY BREAKING NEWS</span>
-          <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin: 0.3rem 0 0.4rem;">22 July Parliament Lockout Over CJP Lathicharge</h3>
-          <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 0.75rem;">Lok Sabha &amp; Rajya Sabha proceedings halted on 22 July as opposition leaders demand accountability for police violence against CJP youth protesters.</p>
-          <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
-            <span style="font-family: var(--font-mono); font-size: 0.6rem; background: var(--bg-2); color: var(--signal); padding: 0.15rem 0.45rem; border-radius: 4px;">#22JulyNews</span>
-            <span style="font-family: var(--font-mono); font-size: 0.6rem; background: var(--bg-2); color: var(--signal); padding: 0.15rem 0.45rem; border-radius: 4px;">#ParliamentLockout</span>
-          </div>
-        </div>
-
-        <div class="content-card">
-          <div class="card-img-frame">
-            <img src="assets/img/cjp/cjp-22july-protest-art.webp" alt="Democracy & Exam Integrity Audit Campaign Poster" loading="eager">
-          </div>
-          <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--gold); font-weight: 800; text-transform: uppercase;">🌐 GOOGLE NEWS · BBC INDIA</span>
-          <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin: 0.3rem 0 0.4rem;">50,000+ Student Campus Auditor Swarms</h3>
-          <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 0.75rem;">Abhijeet Dipke's 22 July statement launching decentralized campus squads to audit NTA exam centers across states.</p>
-          <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
-            <span style="font-family: var(--font-mono); font-size: 0.6rem; background: var(--bg-2); color: var(--gold); padding: 0.15rem 0.45rem; border-radius: 4px;">#CampusAudit</span>
-            <span style="font-family: var(--font-mono); font-size: 0.6rem; background: var(--bg-2); color: var(--gold); padding: 0.15rem 0.45rem; border-radius: 4px;">#GenZPolitics</span>
-          </div>
-        </div>
-
-        <div class="content-card">
-          <div class="card-img-frame">
-            <img src="assets/img/cjp/cjp-demands-manifesto-art.webp" alt="CJP 5 Demands Official Manifesto Poster Art" loading="eager">
-          </div>
-          <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--navy); font-weight: 800; text-transform: uppercase;">📜 THE PRINT COVERAGE</span>
-          <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin: 0.3rem 0 0.4rem;">The 5-Point Swarm Manifesto</h3>
           <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 0.75rem;">Analysis of CJP's demands for judicial cooling-off periods, 50% women representation, and election accountability.</p>
           <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
             <span style="font-family: var(--font-mono); font-size: 0.6rem; background: var(--bg-2); color: var(--navy); padding: 0.15rem 0.45rem; border-radius: 4px;">#ManifestoAnalysis</span>

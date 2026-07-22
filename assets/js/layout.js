@@ -126,7 +126,7 @@
     </div>
   </div>`;
 
-  const bottom = `
+  const scannerBoxHtml = `
   <section class="support-top support-after-art" id="support-dev-layout">
     <div class="support-top-inner">
       <div class="support-top-copy">
@@ -178,12 +178,16 @@
               <input type="text" name="utr_number" placeholder="UTR Ref No." style="flex: 1.4; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
             </div>
             <button type="submit" class="btn btn-solid" style="width: 100%; font-size: 0.82rem; padding: 0.55rem; margin-top: 0.2rem;">📩 Send Payment Alert →</button>
+            <p class="form-success payment-alert-msg" hidden style="font-size: 0.75rem; color: var(--green); margin-top: 0.3rem; text-align: center; font-weight: 700;"></p>
           </form>
         </div>
         <a href="donate" class="btn btn-ghost" style="width:100%;margin-top:0.75rem;font-size:0.8rem;">Full details &amp; policy →</a>
       </div>
     </div>
-  </section>
+  </section>`;
+
+  const bottom = `
+  ${page === "index" || page === "" ? scannerBoxHtml : ""}
   <section class="dispatch" id="dispatch">
     <div class="dispatch-inner">
       <div class="dispatch-copy">
