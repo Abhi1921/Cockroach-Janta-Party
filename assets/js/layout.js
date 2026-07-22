@@ -23,17 +23,15 @@
     return [...items, ...items].join("");
   };
 
-  // Slim navbar — 6 items cleanly aligned in one line
+  // Primary nav links matching official cockroachjantaparty.com structure
   const nav = [
     ["vision", "Vision"],
-    ["manifesto", "5 Demands"],
-    ["articles", "Media"],
-    ["protests", "Actions"],
-    ["issues", "Issues"],
-    ["tracker", "Tracker"],
-    ["members", "Members"],
-    ["gallery", "Gallery"],
-    ["join", "Join Us"],
+    ["manifesto", "Manifesto"],
+    ["manifesto#charter", "Charter"],
+    ["join", "Eligibility"],
+    ["tracker", "Petitions"],
+    ["protests", "March"],
+    ["join", "Volunteer"],
     ["contact", "Contact"],
   ];
 
@@ -41,33 +39,68 @@
 
   const top = `
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="announce-bar" id="announceBar" role="region" aria-label="Announcements">
-    <div class="announce-track">
-      <span>#MainBhiCockroach — reclaiming the insult as youth power</span>
-      <span>Founded ${S.foundedFull || "16 May 2026"} by ${S.founder || "Abhijeet Dipke"} · New Delhi</span>
-      <span>Not an ECI-registered party · Satire with a purpose</span>
+  
+  <!-- 20 July Peaceful March Announcement Top Strip -->
+  <div class="MarchCampaignStrip-module__x5w8qa__strip" role="region" aria-label="20 July peaceful march announcement">
+    <div class="MarchCampaignStrip-module__x5w8qa__inner">
+      <span class="MarchCampaignStrip-module__x5w8qa__badge">20 July</span>
+      <p class="MarchCampaignStrip-module__x5w8qa__text">
+        <strong>Students have paid with their futures.</strong>
+        <span class="MarchCampaignStrip-module__x5w8qa__sep">·</span>
+        Since 20 June at Jantar Mantar our voices went unheard — on 20 July we march toward Parliament for accountability and the resignation of Education Minister Dharmendra Pradhan.
+      </p>
+      <a class="MarchCampaignStrip-module__x5w8qa__cta" href="protests">I'm coming →</a>
     </div>
-    <button type="button" class="announce-close" id="announceClose" aria-label="Close">×</button>
   </div>
+
+  <!-- Top Marquee Running Ticker Bar -->
+  <div class="top-strip">
+    <div class="ticker">
+      <span>Party Launch · Volume 1, Edition 1</span>
+      <span>Filed under: General Disgruntlement</span>
+      <span>Sponsored by no one. Funded by nothing.</span>
+      <span>HQ: Wherever the wifi works</span>
+      <span>Now accepting rants, retweets, and resentment</span>
+      <span>Party Launch · Volume 1, Edition 1</span>
+      <span>Filed under: General Disgruntlement</span>
+      <span>Sponsored by no one. Funded by nothing.</span>
+      <span>HQ: Wherever the wifi works</span>
+      <span>Now accepting rants, retweets, and resentment</span>
+    </div>
+  </div>
+
   <div class="dev-ticker-bar" role="region" aria-label="Developer Support Ticker">
     <div class="dev-ticker-track">
       ${generateTicker()}
     </div>
   </div>
-  <header class="site-header">
-    <div class="header-inner">
+
+  <header class="nav site-header">
+    <div class="nav-inner header-inner">
       <a class="brand" href="/" aria-label="Cockroach Janta Party home">
-        <img src="assets/img/logo.webp" alt="Cockroach Janta Party logo" width="52" height="52" decoding="async">
-        <div class="brand-text">
-          <strong>Cockroach Janta Party</strong>
-          <small>${S.tagline || "Voice of the Lazy & Unemployed"}</small>
-        </div>
+        <span class="brand-logo">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="48" height="48">
+            <circle cx="32" cy="32" r="29" fill="none" stroke="#E0651E" stroke-width="3.5" stroke-dasharray="46 1000" transform="rotate(-90 32 32)"></circle>
+            <circle cx="32" cy="32" r="29" fill="none" stroke="#1F5A2E" stroke-width="3.5" stroke-dasharray="46 1000" transform="rotate(30 32 32)"></circle>
+            <circle cx="32" cy="32" r="29" fill="none" stroke="#2A1A10" stroke-width="0.8"></circle>
+            <ellipse cx="32" cy="36" rx="11" ry="16" fill="#5A2F12"></ellipse>
+            <ellipse cx="32" cy="25" rx="7" ry="6" fill="#5A2F12"></ellipse>
+            <path d="M28 17 Q22 10 18 8 M36 17 Q42 10 46 8" stroke="#2A1A10" stroke-width="1.6" fill="none" stroke-linecap="round"></path>
+            <rect x="26" y="23" width="12" height="3.5" rx="1" fill="#0a0807"></rect>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">COCKROACH<br>JANTA PARTY</span>
+          <span class="brand-tag">कॉकरोच जनता पार्टी Est. 2026</span>
+        </span>
       </a>
       <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        ${nav.map(([href, label]) => `<a href="${href}" class="${active(href).trim()}">${label}</a>`).join("")}
+      <nav class="primary-nav main-nav" id="mainNav" aria-label="Primary">
+        <ul>
+          ${nav.map(([href, label]) => `<li><a href="${href}" class="${active(href).trim()}">${label}</a></li>`).join("")}
+        </ul>
       </nav>
-      <div class="header-actions">
+      <div class="nav-actions header-actions">
         <div class="lang-select" id="langSelect">
           <button type="button" class="lang-btn" aria-expanded="false" aria-label="Select Language">
             🌐 <span>ENGLISH</span> ▾
@@ -78,10 +111,21 @@
           </div>
         </div>
         <a href="donate" class="btn btn-ghost${active("donate")}">Support site</a>
-        <a href="join" class="btn btn-solid${active("join")}">Join Free</a>
+        <a href="join" class="btn-pill">Join the Party</a>
       </div>
     </div>
-  </header>`;
+  </header>
+
+  <!-- Exam Crisis Charter Banner Bar -->
+  <div class="exam-banner-bar">
+    <div class="exam-banner-inner">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span class="exam-banner-badge">Released 15 July 2026</span>
+        <span class="exam-banner-title">5 Demands to End India's Exam Crisis</span>
+      </div>
+      <a class="btn-primary" style="flex-shrink:0" href="manifesto">Read the Charter →</a>
+    </div>
+  </div>`;
 
   const bottom = `
   <section class="support-top support-after-art" id="support-dev-layout">
