@@ -80,17 +80,7 @@
   <header class="nav site-header">
     <div class="nav-inner header-inner">
       <a class="brand" href="/" aria-label="Cockroach Janta Party home">
-        <span class="brand-logo">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="48" height="48">
-            <circle cx="32" cy="32" r="29" fill="none" stroke="#E0651E" stroke-width="3.5" stroke-dasharray="46 1000" transform="rotate(-90 32 32)"></circle>
-            <circle cx="32" cy="32" r="29" fill="none" stroke="#1F5A2E" stroke-width="3.5" stroke-dasharray="46 1000" transform="rotate(30 32 32)"></circle>
-            <circle cx="32" cy="32" r="29" fill="none" stroke="#2A1A10" stroke-width="0.8"></circle>
-            <ellipse cx="32" cy="36" rx="11" ry="16" fill="#5A2F12"></ellipse>
-            <ellipse cx="32" cy="25" rx="7" ry="6" fill="#5A2F12"></ellipse>
-            <path d="M28 17 Q22 10 18 8 M36 17 Q42 10 46 8" stroke="#2A1A10" stroke-width="1.6" fill="none" stroke-linecap="round"></path>
-            <rect x="26" y="23" width="12" height="3.5" rx="1" fill="#0a0807"></rect>
-          </svg>
-        </span>
+        <img src="assets/img/logo.webp" alt="Cockroach Janta Party logo" width="48" height="48" decoding="async" style="object-fit:contain;border-radius:50%">
         <span class="brand-text">
           <span class="brand-name">COCKROACH<br>JANTA PARTY</span>
           <span class="brand-tag">कॉकरोच जनता पार्टी Est. 2026</span>
