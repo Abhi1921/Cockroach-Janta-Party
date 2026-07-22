@@ -325,6 +325,97 @@
   if (mountTop) mountTop.outerHTML = top;
   if (mountBottom) mountBottom.outerHTML = bottom;
 
+  // Instant Header & Language Dropdown Interactive Handlers
+  (function bindHeaderEvents() {
+    const navToggle = document.getElementById("navToggle");
+    const headerInner = document.querySelector(".header-inner");
+    const mainNav = document.getElementById("mainNav");
+    const langSelect = document.getElementById("langSelect");
+
+    if (navToggle && headerInner) {
+      navToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = headerInner.classList.toggle("nav-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      if (mainNav) {
+        mainNav.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            headerInner.classList.remove("nav-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    }
+
+    if (langSelect) {
+      const btn = langSelect.querySelector(".lang-btn");
+      const menu = langSelect.querySelector(".lang-menu");
+
+      if (btn && menu) {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const isHidden = menu.hasAttribute("hidden") || menu.style.display === "none";
+          if (isHidden) {
+            menu.removeAttribute("hidden");
+            menu.style.display = "flex";
+            btn.setAttribute("aria-expanded", "true");
+          } else {
+            menu.setAttribute("hidden", "");
+            menu.style.display = "none";
+            btn.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        menu.querySelectorAll("[role=option]").forEach(function (opt) {
+          opt.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const targetOpt = e.target.closest("[data-lang]") || opt;
+            const lang = targetOpt.getAttribute("data-lang") || "en";
+
+            menu.querySelectorAll("[role=option]").forEach(function (o) {
+              o.setAttribute("aria-selected", "false");
+            });
+            targetOpt.setAttribute("aria-selected", "true");
+
+            const labelSpan = btn.querySelector("span");
+            if (labelSpan) {
+              labelSpan.textContent = lang === "hi" ? "हिन्दी" : "ENGLISH";
+            }
+
+            menu.setAttribute("hidden", "");
+            menu.style.display = "none";
+            btn.setAttribute("aria-expanded", "false");
+
+            if (typeof window.applyCjpLanguage === "function") {
+              window.applyCjpLanguage(lang);
+            }
+          });
+        });
+      }
+    }
+
+    document.addEventListener("click", function (e) {
+      if (headerInner && !headerInner.contains(e.target)) {
+        headerInner.classList.remove("nav-open");
+        if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+      }
+      if (langSelect && !langSelect.contains(e.target)) {
+        const menu = langSelect.querySelector(".lang-menu");
+        const btn = langSelect.querySelector(".lang-btn");
+        if (menu) {
+          menu.setAttribute("hidden", "");
+          menu.style.display = "none";
+        }
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  })();
+
   // Inject Universal Form Handler for Mailtrap Notifications
   if (!document.getElementById("cjp-form-handler")) {
     const fh = document.createElement("script");

@@ -25,23 +25,6 @@
     });
   }
 
-  // Mobile nav
-  const navToggle = $("#navToggle");
-  const headerInner = $(".header-inner");
-  const mainNav = $("#mainNav");
-  if (navToggle && headerInner) {
-    navToggle.addEventListener("click", () => {
-      const open = headerInner.classList.toggle("nav-open");
-      navToggle.setAttribute("aria-expanded", String(open));
-    });
-    $$("a", mainNav).forEach((a) =>
-      a.addEventListener("click", () => {
-        headerInner.classList.remove("nav-open");
-        navToggle.setAttribute("aria-expanded", "false");
-      })
-    );
-  }
-
   // Bilingual (English <-> Hindi) Translation Engine
   const i18nDict = {
     hi: {
@@ -148,59 +131,12 @@
       });
     }
   };
+  window.applyCjpLanguage = applyLanguage;
 
-  // Language select handler
-  const langSelect = $("#langSelect");
-  if (langSelect) {
-    const btn = $(".lang-btn", langSelect);
-    const menu = $(".lang-menu", langSelect);
-    const savedLang = localStorage.getItem("cjp_lang") || "en";
-
-    // Set initial button label
-    if (btn) {
-      const initLabel = savedLang === "hi" ? "हिन्दी" : "ENGLISH";
-      btn.innerHTML = `🌐 <span>${initLabel}</span> ▾`;
-    }
-
-    // Apply saved language on load
-    if (savedLang === "hi") {
-      setTimeout(() => applyLanguage("hi"), 100);
-    }
-
-    btn?.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const open = menu.hasAttribute("hidden");
-      menu.toggleAttribute("hidden", !open);
-      btn.setAttribute("aria-expanded", String(open));
-    });
-
-    $$("[role=option]", menu).forEach((opt) => {
-      opt.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const targetOpt = e.target.closest("[data-lang]") || opt;
-        const lang = targetOpt.dataset.lang || "en";
-
-        $$("[role=option]", menu).forEach((o) => o.setAttribute("aria-selected", "false"));
-        targetOpt.setAttribute("aria-selected", "true");
-
-        const label = lang === "hi" ? "हिन्दी" : "ENGLISH";
-        if (btn) {
-          btn.innerHTML = `🌐 <span>${label}</span> ▾`;
-        }
-        menu.setAttribute("hidden", "");
-        btn?.setAttribute("aria-expanded", "false");
-
-        applyLanguage(lang);
-      });
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!langSelect.contains(e.target)) {
-        menu?.setAttribute("hidden", "");
-        btn?.setAttribute("aria-expanded", "false");
-      }
-    });
+  // Set initial language from storage on page load
+  const savedLang = localStorage.getItem("cjp_lang") || "en";
+  if (savedLang === "hi") {
+    setTimeout(() => applyLanguage("hi"), 100);
   }
 
   // Live chat

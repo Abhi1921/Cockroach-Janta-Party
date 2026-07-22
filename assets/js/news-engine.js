@@ -10,91 +10,91 @@
     year: 'numeric'
   });
 
-  // Default curated trending news & posters (fallback + CJP updates)
+  // Default curated trending news & posters (22 July 2026 updates)
   const defaultTrendingNews = [
     {
-      id: "news-cjp-sansad-2026",
-      title: "Sansad Chalo March: Over 100,000 Students Gather at Jantar Mantar",
+      id: "news-cjp-22july-parliament",
+      title: "22 July Parliament Lockout: Opposition Halts House Proceedings Over CJP Student Lathicharge",
       category: "cjp",
-      source: "CJP Swarm Bureau",
+      source: "CJP Swarm Bureau · New Delhi",
       sourceUrl: "protests.html",
-      pubDate: "Today · " + currentTodayDateStr,
-      description: "Massive student rally in New Delhi demanding education transparency, NEET paper leak audit, and resignation of exam authorities.",
-      image: "assets/img/cjp/trending-cjp-poster-1.webp",
-      badge: "🚨 LIVE COVERAGE",
+      pubDate: "22 July 2026",
+      description: "Parliament proceedings in Lok Sabha & Rajya Sabha disrupted on 22 July as opposition leaders demand accountability for police violence against CJP youth protesters.",
+      image: "assets/img/cjp/trending-cjp-poster-22july.webp",
+      badge: "🚨 22 JULY BREAKING",
       badgeColor: "var(--signal)",
-      tags: ["#MainBhiCockroach", "#SansadChalo", "#NEETLeak", "#JantarMantar"],
-      fullText: "Over 100,000 students and young professionals assembled near Jantar Mantar, New Delhi on the opening day of the Parliamentary session. Protesters raised slogans against exam paper leaks, demanding systemic judicial and election accountability."
+      tags: ["#22JulyProtest", "#ParliamentLockout", "#CJPYouth", "#MainBhiCockroach"],
+      fullText: "On 22 July 2026, opposition MPs shut down parliamentary proceedings to demand answers over police baton charges against CJP student protesters near Jantar Mantar. The CJP leadership reiterated demands for Education Minister Dharmendra Pradhan's resignation."
+    },
+    {
+      id: "news-cjp-22july-audit-art",
+      title: "CJP Founder Abhijeet Dipke Announces Nationwide Campus Auditor Swarms (22 July Statement)",
+      category: "cjp",
+      source: "CJP Press Room",
+      sourceUrl: "articles.html",
+      pubDate: "22 July 2026",
+      description: "Addressing media at Jantar Mantar on 22 July, founder Abhijeet Dipke launched decentralized student audit squads across Indian universities.",
+      image: "assets/img/cjp/cjp-22july-protest-art.webp",
+      badge: "✊ 22 JULY POSTER RELEASE",
+      badgeColor: "var(--gold)",
+      tags: ["#CampusSwarm", "#AbhijeetDipke", "#22JulyAudit", "#YouthRights"],
+      fullText: "In a press conference on 22 July 2026, CJP founder Abhijeet Dipke announced that while street marches are suspended to protect students from police aggression, 50,000+ CJP members will conduct digital and on-ground audits of exam centers across states."
     },
     {
       id: "news-google-neet-audit",
-      title: "NEET Paper Leak Scandal: Supreme Court Mandates Strict Audit Framework",
+      title: "NEET Paper Leak Scandal: Supreme Court Mandates Independent 3rd-Party Server Audits",
       category: "google",
       source: "Google News · Times of India",
       sourceUrl: "https://news.google.com/search?q=NEET+paper+leak",
-      pubDate: "Today · " + currentTodayDateStr,
+      pubDate: "22 July 2026",
       description: "Supreme Court directs central authorities to publish normalized scorecards and conduct independent third-party audits of all national competitive exams.",
-      image: "assets/img/cjp/trending-cjp-poster-2.webp",
+      image: "assets/img/cjp/trending-cjp-poster-1.webp",
       badge: "🎓 EXAM REFORM",
       badgeColor: "var(--gold)",
       tags: ["#NEETAudit", "#ExamIntegrity", "#StudentRights", "#GoogleNews"],
-      fullText: "In a landmark hearing, the apex court ordered a comprehensive audit of competitive examination servers and security protocols. Student groups across the nation welcomed the move while calling for immediate administrative accountability."
+      fullText: "In a landmark hearing on 22 July 2026, the apex court ordered a comprehensive audit of competitive examination servers and security protocols. Student groups across the nation welcomed the move while calling for immediate administrative accountability."
     },
     {
       id: "news-cjp-talks-nadda",
-      title: "CJP Delegation Meets Health Minister J.P. Nadda Over Student Demands",
+      title: "CJP Delegation & Health Ministry Hold High-Stakes Stand-Off Over Student Detainees",
       category: "cjp",
       source: "CJP Media Desk",
       sourceUrl: "articles.html",
-      pubDate: "Today · " + currentTodayDateStr,
-      description: "Key CJP representatives Saurav Das and Ashutosh Ranka held talks with Health Minister Nadda regarding exam safety and detainee releases.",
-      image: "assets/img/cjp/trending-cjp-poster-3.webp",
+      pubDate: "22 July 2026",
+      description: "Key CJP representatives held talks with Health Minister J.P. Nadda regarding exam safety and unconditional release of detained student leaders.",
+      image: "assets/img/cjp/trending-cjp-poster-2.webp",
       badge: "⚡ GOVT TALKS",
       badgeColor: "var(--navy)",
       tags: ["#JPNadda", "#YouthRepresentation", "#StudentDemands"],
-      fullText: "During the high-stakes dialogue, CJP delegates presented the 5-Point Swarm Manifesto. Minister Nadda assured internal cabinet reviews while discussing youth employment and examination safety."
+      fullText: "During the high-stakes dialogue on 22 July, CJP delegates presented the 5-Point Swarm Manifesto. Minister Nadda assured internal cabinet reviews while discussing youth employment and examination safety."
     },
     {
-      id: "news-google-youth-jobs",
-      title: "Youth Unemployment Crisis: Gen-Z Digital Movement Reshapes Indian Civic Discourse",
+      id: "news-google-wangchuk-health",
+      title: "Activists Visit Sonam Wangchuk Medical Care Desk — Joint Declaration Issued on 22 July",
       category: "google",
       source: "Google News · BBC India",
-      sourceUrl: "https://news.google.com/search?q=youth+unemployment+India",
-      pubDate: "Today · " + currentTodayDateStr,
-      description: "BBC feature on how satirical movements like Cockroach Janta Party transformed online outrage into peaceful ground mobilizations across Indian metros.",
-      image: "assets/img/cjp/protest-crowd.webp",
+      sourceUrl: "https://news.google.com/search?q=Sonam+Wangchuk+hunger+strike",
+      pubDate: "22 July 2026",
+      description: "Student delegations visit medical care desk following Sonam Wangchuk's eviction, issuing a joint manifesto for student & environmental rights.",
+      image: "assets/img/cjp/trending-cjp-poster-3.webp",
       badge: "🌐 GLOBAL MEDIA",
       badgeColor: "var(--signal)",
-      tags: ["#BBCNews", "#GenZPolitics", "#YouthUnemployment"],
-      fullText: "Global media coverage highlights the unprecedented surge of Gen-Z political satire in India. By reclaiming derogatory labels, millions of educated youth are advocating for employment rights, media freedom, and electoral integrity."
+      tags: ["#SonamWangchuk", "#BBCNews", "#GenZPolitics", "#HungerStrike"],
+      fullText: "On 22 July 2026, delegations of student leaders visited medical facilities where activist Sonam Wangchuk continues his fast, uniting youth environmentalists and student reform movements into a single pressure front."
     },
     {
       id: "news-hunger-strike-dipke",
-      title: "Indefinite Hunger Strike Enters Day 4 at Jantar Mantar HQ",
+      title: "Abhijeet Dipke Fasting & Sit-in at Jantar Mantar Headquarters Enters Crucial Phase",
       category: "cjp",
       source: "CJP Bureau",
       sourceUrl: "protests.html",
-      pubDate: "Today · " + currentTodayDateStr,
-      description: "CJP founder Abhijeet Dipke pledges to continue fast until all student coordinators detained during the 20 July march are unconditionally freed.",
+      pubDate: "22 July 2026",
+      description: "CJP founder Abhijeet Dipke pledges to continue fast until all student coordinators detained during the Sansad march are unconditionally freed.",
       image: "assets/img/cjp/hunger-strike.webp",
       badge: "🔥 HUNGER STRIKE",
       badgeColor: "var(--signal)",
       tags: ["#AbhijeetDipke", "#HungerStrike", "#FreeStudentDetainees"],
       fullText: "High police presence continues at Jantar Mantar as CJP founder Abhijeet Dipke maintains his indefinite hunger strike. Thousands of supportive messages continue to flood social media under #MainBhiCockroach."
-    },
-    {
-      id: "news-google-exam-cancellation",
-      title: "Ministry of Education Announces Nationwide Digital Exam Integrity Protocols",
-      category: "google",
-      source: "Google News · NDTV",
-      sourceUrl: "https://news.google.com/search?q=education+ministry+exam+reform",
-      pubDate: "Today · " + currentTodayDateStr,
-      description: "New AI-powered biometric verification and encrypted question paper transmission introduced for all upcoming national entrance examinations.",
-      image: "assets/img/cjp/student-banners.webp",
-      badge: "💻 DIGITAL REFORM",
-      badgeColor: "var(--gold)",
-      tags: ["#ExamReforms", "#NDTV", "#StudentPower"],
-      fullText: "In response to nationwide youth protests, the Education Ministry introduced new anti-tampering protocols, including real-time stream encryption and localized exam centre audits."
     }
   ];
 
