@@ -173,9 +173,9 @@
           <form class="bottom-payment-form" style="display: flex; flex-direction: column; gap: 0.55rem; width: 100%;">
             <input type="text" name="payer_name" required placeholder="Aapka Naam" style="width: 100%; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
             <input type="text" name="payer_contact" required placeholder="Email / Phone" style="width: 100%; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
-            <div style="display: flex; gap: 0.4rem;">
-              <input type="number" name="amount_paid" required placeholder="₹ Amount" style="flex: 1; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
-              <input type="text" name="utr_number" placeholder="UTR Ref No." style="flex: 1.4; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
+            <div style="display: flex; gap: 0.4rem; width: 100%; box-sizing: border-box;">
+              <input type="number" name="amount_paid" required placeholder="₹ Amount" style="flex: 1 1 40%; min-width: 0; width: 100%; box-sizing: border-box; padding: 0.5rem 0.6rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
+              <input type="text" name="utr_number" placeholder="UTR Ref No." style="flex: 1 1 60%; min-width: 0; width: 100%; box-sizing: border-box; padding: 0.5rem 0.6rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
             </div>
             <button type="submit" class="btn btn-solid" style="width: 100%; font-size: 0.82rem; padding: 0.55rem; margin-top: 0.2rem;">📩 Send Payment Alert →</button>
             <p class="form-success payment-alert-msg" hidden style="font-size: 0.75rem; color: var(--green); margin-top: 0.3rem; text-align: center; font-weight: 700;"></p>
@@ -490,11 +490,11 @@
               <span style="width: 8px; height: 8px; background: var(--signal); border-radius: 50%; display: inline-block; animation: pulse 1.4s ease infinite;"></span>
               OFFICIAL UPI SCANNER &amp; PAYMENT ALERT (SECTION 2)
             </p>
-            <h2 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--ink); margin: 0 0 0.4rem;">Scan &amp; Pay via UPI · <em>Instant Mailtrap Alert</em></h2>
+            <h2 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--ink); margin: 0 0 0.4rem;">Scan &amp; Pay via UPI · <em>Instant Payment Alert</em></h2>
             <p style="font-size: 0.9rem; color: var(--muted); max-width: 60ch;">Any UPI App (GPay / PhonePe / Paytm) · Remark / Description: <code style="font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;">CJP</code></p>
           </div>
           
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; align-items: start; max-width: 860px; margin: 0 auto; background: #ffffff; padding: 1.5rem; border: 2px solid var(--signal); border-radius: 18px; box-shadow: 0 16px 40px rgba(159, 18, 57, 0.12);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; align-items: start; max-width: 860px; margin: 0 auto; background: #ffffff; padding: 1.5rem; border: 2px solid var(--signal); border-radius: 18px; box-shadow: 0 16px 40px rgba(159, 18, 57, 0.12); box-sizing: border-box;">
             <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
               <div class="qr-slot" style="position: relative; border-radius: 12px; overflow: hidden; border: 2px dashed var(--signal); padding: 0.65rem; background: #faf7f5;">
                 <img src="assets/img/upi-qr.webp" alt="Scan to pay via UPI" width="210" height="210" loading="lazy" style="display: block; border-radius: 8px;">
@@ -512,7 +512,7 @@
               </div>
             </div>
 
-            <div style="text-align: left;">
+            <div style="text-align: left; min-width: 0; width: 100%; box-sizing: border-box;">
               <!-- Personal Food / Snacks Support Note Box -->
               <div style="background: linear-gradient(135deg, #fffcf8 0%, #fef3c7 100%); border: 1.5px solid #f59e0b; border-radius: 12px; padding: 0.75rem 0.9rem; margin-bottom: 0.85rem; font-size: 0.8rem; color: #78350f; line-height: 1.45;">
                 <div style="font-weight: 800; font-family: var(--font-display); font-size: 0.88rem; color: #92400e; margin-bottom: 0.25rem;">
@@ -527,15 +527,15 @@
               </div>
 
               <strong style="font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); display: block; margin-bottom: 0.3rem;">📩 Paid via UPI? Send Instant Alert</strong>
-              <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.85rem;">Scan karke pay karne ke baad niche details bharein. Real-time alert Mailtrap inbox me bhej diya jayega!</p>
-              <form class="sec2-payment-form" style="display: flex; flex-direction: column; gap: 0.65rem;">
-                <input type="text" name="payer_name" required placeholder="Aapka Naam (Name)" style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
-                <input type="text" name="payer_contact" required placeholder="Email ya Phone No." style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
-                <div style="display: flex; gap: 0.5rem;">
-                  <input type="number" name="amount_paid" required placeholder="Amount (₹)" style="flex: 1; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
-                  <input type="text" name="utr_number" placeholder="UTR / Ref No." style="flex: 1.4; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+              <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.85rem;">Scan karke pay karne ke baad niche details bharein. Real-time alert bhej diya jayega!</p>
+              <form class="sec2-payment-form" style="display: flex; flex-direction: column; gap: 0.65rem; width: 100%; box-sizing: border-box;">
+                <input type="text" name="payer_name" required placeholder="Aapka Naam (Name)" style="width: 100%; box-sizing: border-box; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+                <input type="text" name="payer_contact" required placeholder="Email ya Phone No." style="width: 100%; box-sizing: border-box; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+                <div style="display: flex; gap: 0.5rem; width: 100%; box-sizing: border-box;">
+                  <input type="number" name="amount_paid" required placeholder="Amount (₹)" style="flex: 1 1 40%; min-width: 0; width: 100%; box-sizing: border-box; padding: 0.55rem 0.6rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+                  <input type="text" name="utr_number" placeholder="UTR / Ref No." style="flex: 1 1 60%; min-width: 0; width: 100%; box-sizing: border-box; padding: 0.55rem 0.6rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
                 </div>
-                <button type="submit" class="btn btn-solid" style="width: 100%; font-size: 0.85rem; padding: 0.6rem; text-align: center; margin-top: 0.2rem;">📩 Send Payment Alert to Mailtrap →</button>
+                <button type="submit" class="btn btn-solid" style="width: 100%; box-sizing: border-box; font-size: 0.85rem; padding: 0.6rem; text-align: center; margin-top: 0.2rem;">📩 Send Payment Alert →</button>
               </form>
             </div>
           </div>

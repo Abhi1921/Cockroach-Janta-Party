@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.innerHTML = "⏳ Sending to Mailtrap...";
+          submitBtn.innerHTML = "⏳ Sending alert...";
         }
 
         // Collect all form input values
@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
           await window.dispatchMailtrapNotification(payload, payload.formType);
-          showNotice(form, "✅ Success! Form notification sent to Mailtrap.");
+          showNotice(form, "✅ Success! Notification sent.");
         } catch (err) {
-          showNotice(form, "✅ Form submitted! Mailtrap notification triggered.");
+          showNotice(form, "✅ Form submitted successfully!");
         } finally {
           if (submitBtn) {
             submitBtn.disabled = false;

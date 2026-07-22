@@ -234,7 +234,7 @@
     const msg = $("#subscribeMsg");
     if (msg) {
       msg.hidden = false;
-      msg.textContent = "✅ Subscribed! Email notification sent to Mailtrap inbox.";
+      msg.textContent = "✅ Subscribed! Thank you for supporting.";
     }
     e.target.reset();
   });
@@ -293,7 +293,7 @@
     const appNo = $("#appNumber");
     if (appNo) appNo.textContent = cardId;
     
-    showToast(`🎉 Card Generated! Member ID: ${cardId}. Notification sent to Mailtrap.`);
+    showToast(`🎉 Card Generated! Member ID: ${cardId}`);
   });
 
   $("#donateForm")?.addEventListener("submit", (e) => {
@@ -303,7 +303,7 @@
     if (window.dispatchMailtrapNotification) {
       window.dispatchMailtrapNotification(data, "Support Payment Intent");
     }
-    showToast(`Thanks! ₹${data.amount} intent recorded & sent to Mailtrap.`);
+    showToast(`Thanks! ₹${data.amount} intent recorded.`);
     e.target.reset();
     amountInput && (amountInput.value = "199");
   });
@@ -315,7 +315,7 @@
     if (window.dispatchMailtrapNotification) {
       window.dispatchMailtrapNotification(data, "UPI Support Payment Received");
     }
-    showToast("🎉 Payment Confirmation sent! Alert emailed to Mailtrap.");
+    showToast("🎉 Payment Confirmation sent! Alert received.");
     e.target.reset();
   });
 
@@ -327,7 +327,7 @@
     if (window.dispatchMailtrapNotification) {
       window.dispatchMailtrapNotification({ issueId: id, ...data }, "Raise Issue Form");
     }
-    showToast(`Issue ${id} filed. Emailed to Mailtrap.`);
+    showToast(`Issue ${id} filed successfully.`);
     e.target.reset();
   });
 
@@ -338,7 +338,7 @@
     if (window.dispatchMailtrapNotification) {
       window.dispatchMailtrapNotification(data, "Contact Us Message");
     }
-    showToast("Message received! Emailed to Mailtrap inbox.");
+    showToast("Message received! Thank you.");
     e.target.reset();
   });
 

@@ -38,6 +38,12 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
+input, select, textarea, button {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
