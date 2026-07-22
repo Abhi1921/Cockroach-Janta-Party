@@ -106,7 +106,7 @@
       </div>
       <div class="support-qr-card">
         <div class="qr-slot">
-          <img src="assets/img/upi-qr.png" alt="Scan to pay via UPI for website support" width="240" height="240" loading="lazy">
+          <img src="assets/img/upi-qr.webp" alt="Scan to pay via UPI for website support" width="240" height="240" loading="lazy">
         </div>
         <p class="qr-caption"><strong>Scan &amp; pay</strong> (UPI / any supported app)</p>
         <p class="qr-hint">You choose the amount · Remark / Description: <code style="font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;">CJP</code></p>
@@ -359,7 +359,7 @@
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; align-items: start; max-width: 860px; margin: 0 auto; background: #ffffff; padding: 1.5rem; border: 2px solid var(--signal); border-radius: 18px; box-shadow: 0 16px 40px rgba(159, 18, 57, 0.12);">
             <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
               <div class="qr-slot" style="position: relative; border-radius: 12px; overflow: hidden; border: 2px dashed var(--signal); padding: 0.65rem; background: #faf7f5;">
-                <img src="assets/img/upi-qr.png" alt="Scan to pay via UPI" width="210" height="210" loading="lazy" style="display: block; border-radius: 8px;">
+                <img src="assets/img/upi-qr.webp" alt="Scan to pay via UPI" width="210" height="210" loading="lazy" style="display: block; border-radius: 8px;">
               </div>
               <p style="font-size: 0.85rem; font-weight: 700; color: var(--ink); margin-top: 0.65rem; margin-bottom: 0.2rem;">Scan with GPay / PhonePe / Paytm</p>
               <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--signal); font-weight: 800; background: var(--bg-2); padding: 0.2rem 0.55rem; border-radius: 6px;">Remark / Note: CJP</span>
@@ -453,7 +453,7 @@
         <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 800; color: var(--signal); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">🔥 OFFICIAL TRENDING CAMPAIGN POSTER</span>
         <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 1rem; color: var(--ink);">Cockroach Janta Party Wale</h2>
         <div style="border-radius: 14px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(0,0,0,0.2); margin-bottom: 1.25rem;">
-          <img src="assets/img/cjp/trending-cjp-poster-1.png" alt="CJP Official Trending Poster - We Survive We Rise We Lead" style="width: 100%; height: auto; display: block;">
+          <img src="assets/img/cjp/trending-cjp-poster-1.webp" alt="CJP Official Trending Poster - We Survive We Rise We Lead" style="width: 100%; height: auto; display: block;">
         </div>
         <p style="font-size: 0.95rem; line-height: 1.5; color: var(--muted); margin-bottom: 1.25rem;">
           <strong>"Because degrees are temporary, survival is permanent."</strong><br>
