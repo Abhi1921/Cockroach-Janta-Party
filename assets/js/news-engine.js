@@ -102,13 +102,15 @@
   let activeCategory = "all";
   let searchQuery = "";
 
-  // Array of 15 unique images for live news cards (zero repeats)
+  // Array of verified unique poster images for live news cards (100% valid images, zero 404s)
   const poolImages = [
-    "assets/img/cjp/01-delhi-protest.webp",
-    "assets/img/cjp/02-heat-street.webp",
-    "assets/img/cjp/03-unemployed-youth.webp",
-    "assets/img/cjp/04-jantar-mantar.webp",
-    "assets/img/cjp/05-press.webp",
+    "assets/img/cjp/cjp-news-poster-2.webp",
+    "assets/img/cjp/cjp-news-poster-1.webp",
+    "assets/img/cjp/trending-cjp-poster-22july.webp",
+    "assets/img/cjp/cjp-22july-protest-art.webp",
+    "assets/img/cjp/cjp-demands-manifesto-art.webp",
+    "assets/img/cjp/cjp-vision-survive-art.webp",
+    "assets/img/cjp/breaking_news_protest.webp",
     "assets/img/cjp/protest-crowd.webp",
     "assets/img/cjp/police-barricades.webp",
     "assets/img/cjp/student-banners.webp",
@@ -117,8 +119,7 @@
     "assets/img/cjp/trending-cjp-poster-1.webp",
     "assets/img/cjp/trending-cjp-poster-2.webp",
     "assets/img/cjp/trending-cjp-poster-3.webp",
-    "assets/img/cjp/cjp-demands-manifesto-art.webp",
-    "assets/img/cjp/cjp-vision-survive-art.webp"
+    "assets/img/cjp/together-resilient.webp"
   ];
 
   // Real Google News Live RSS Fetcher (via RSS2JSON Proxy)
