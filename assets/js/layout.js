@@ -110,6 +110,15 @@
         </div>
         <p class="qr-caption"><strong>Scan &amp; pay</strong> (UPI / any supported app)</p>
         <p class="qr-hint">You choose the amount · Remark / Description: <code style="font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;">CJP</code></p>
+        
+        <!-- Legal Compliance Disclosures Box -->
+        <div style="margin-top: 0.75rem; padding: 0.65rem 0.85rem; background: #fffcf8; border: 1px solid #fecdd3; border-radius: 8px; font-size: 0.72rem; color: #9f1239; line-height: 1.45; text-align: left; width: 100%;">
+          <strong style="display: block; font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; margin-bottom: 0.2rem; color: var(--signal);">⚖️ LEGAL PROCESS CONDITIONS:</strong>
+          • <strong>Voluntary Tip:</strong> Personal hosting &amp; dev support.<br>
+          • <strong>Not NGO / Charity:</strong> No 80G tax receipt.<br>
+          • <strong>Not Political Fund:</strong> Not an ECI party.<br>
+          • <strong>Art. 19 Satire:</strong> Constitutionally protected.
+        </div>
         <div style="margin-top: 1rem; text-align: left; width: 100%;">
           <strong style="font-size: 0.82rem; color: var(--ink); display: block; margin-bottom: 0.35rem;">📩 Paid via UPI? Send Instant Alert</strong>
           <form class="bottom-payment-form" style="display: flex; flex-direction: column; gap: 0.55rem; width: 100%;">
@@ -348,6 +357,15 @@
               </div>
               <p style="font-size: 0.85rem; font-weight: 700; color: var(--ink); margin-top: 0.65rem; margin-bottom: 0.2rem;">Scan with GPay / PhonePe / Paytm</p>
               <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--signal); font-weight: 800; background: var(--bg-2); padding: 0.2rem 0.55rem; border-radius: 6px;">Remark / Note: CJP</span>
+              
+              <!-- Legal Compliance Disclosures Box -->
+              <div style="margin-top: 0.75rem; padding: 0.65rem 0.85rem; background: #fffcf8; border: 1px solid #fecdd3; border-radius: 8px; font-size: 0.72rem; color: #9f1239; line-height: 1.45; text-align: left; max-width: 250px;">
+                <strong style="display: block; font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; margin-bottom: 0.2rem; color: var(--signal);">⚖️ LEGAL DISCLOSURES:</strong>
+                • <strong>Voluntary Tip:</strong> Website hosting &amp; dev cost.<br>
+                • <strong>Not NGO / Charity:</strong> No 80G tax receipt.<br>
+                • <strong>Not Political Fund:</strong> Not an ECI party.<br>
+                • <strong>Art. 19 Satire:</strong> Constitutionally protected.
+              </div>
             </div>
 
             <div style="text-align: left;">
