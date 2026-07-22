@@ -531,21 +531,63 @@
     setInterval(spawnRandomPop, 5200);
   }
 
-  // Tap & Pay scanner blur reveal handler
+  // Tap & Pay scanner blur reveal & GPay Auto-Note UPI launcher handler
   const initScannerReveal = () => {
+    const S = window.CJP_SITE || {};
+    const upiId = S.upiId || "cjp@upi";
+    const upiNote = S.upiNote || "CJP Website Support";
+    const payeeName = S.name || "CJP Website Support";
+
     document.querySelectorAll(".qr-slot").forEach((slot) => {
       if (!slot.querySelector(".qr-overlay")) {
         const overlay = document.createElement("div");
         overlay.className = "qr-overlay";
-        overlay.innerHTML = '<button type="button" class="tap-pay-btn">Tap & Pay</button>';
+        overlay.innerHTML = `
+          <button type="button" class="tap-pay-btn">⚡ Pay via GPay / UPI</button>
+          <span style="font-size:0.65rem; color:#fff; font-family:var(--font-mono); margin-top:0.3rem; font-weight:700;">Auto-Note: "CJP Website Support"</span>
+        `;
         slot.appendChild(overlay);
-        
+
+        const triggerUpi = (amt = "") => {
+          slot.classList.add("unblurred");
+          const upiUrl = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${encodeURIComponent(payeeName)}&tn=${encodeURIComponent(upiNote)}&cu=INR${amt ? `&am=${amt}` : ''}`;
+          
+          // If on mobile device, launch UPI app directly
+          if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            window.location.href = upiUrl;
+          } else {
+            showToast(`Note pre-filled as "${upiNote}". Scan QR with GPay / PhonePe.`);
+          }
+        };
+
+        overlay.addEventListener("click", (e) => {
+          e.stopPropagation();
+          triggerUpi();
+        });
+
         slot.addEventListener("click", () => {
           slot.classList.add("unblurred");
         });
       }
     });
+
+    // Update scanner images with dynamic QR containing upi:// payload
+    document.querySelectorAll("#upiQrImage, .qr-slot img").forEach((img) => {
+      const currentSrc = img.getAttribute("src") || "";
+      if (currentSrc.includes("upi-qr.png") && !img.dataset.qrGenerated) {
+        img.dataset.qrGenerated = "1";
+        const qrPayload = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${encodeURIComponent(payeeName)}&tn=${encodeURIComponent(upiNote)}&cu=INR`;
+        const dynamicQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=280x280&margin=10&data=${encodeURIComponent(qrPayload)}`;
+        
+        // Test load dynamic QR with fallbacks
+        const testImg = new Image();
+        testImg.onload = () => { img.src = dynamicQrUrl; };
+        testImg.onerror = () => { img.src = currentSrc; };
+        testImg.src = dynamicQrUrl;
+      }
+    });
   };
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initScannerReveal);
   } else {
