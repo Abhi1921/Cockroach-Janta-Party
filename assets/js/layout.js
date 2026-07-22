@@ -110,7 +110,19 @@
         </div>
         <p class="qr-caption"><strong>Scan &amp; pay</strong> (UPI / any supported app)</p>
         <p class="qr-hint">You choose the amount · Remark / Description: <code style="font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;">CJP</code></p>
-        <a href="donate" class="btn btn-solid" style="width:100%;margin-top:0.75rem">Full details &amp; policy →</a>
+        <div style="margin-top: 1rem; text-align: left; width: 100%;">
+          <strong style="font-size: 0.82rem; color: var(--ink); display: block; margin-bottom: 0.35rem;">📩 Paid via UPI? Send Instant Alert</strong>
+          <form class="bottom-payment-form" style="display: flex; flex-direction: column; gap: 0.55rem; width: 100%;">
+            <input type="text" name="payer_name" required placeholder="Aapka Naam" style="width: 100%; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
+            <input type="text" name="payer_contact" required placeholder="Email / Phone" style="width: 100%; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
+            <div style="display: flex; gap: 0.4rem;">
+              <input type="number" name="amount_paid" required placeholder="₹ Amount" style="flex: 1; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
+              <input type="text" name="utr_number" placeholder="UTR Ref No." style="flex: 1.4; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.82rem;">
+            </div>
+            <button type="submit" class="btn btn-solid" style="width: 100%; font-size: 0.82rem; padding: 0.55rem; margin-top: 0.2rem;">📩 Send Payment Alert →</button>
+          </form>
+        </div>
+        <a href="donate" class="btn btn-ghost" style="width:100%;margin-top:0.75rem;font-size:0.8rem;">Full details &amp; policy →</a>
       </div>
     </div>
   </section>
@@ -305,6 +317,63 @@
     fh.src = "assets/js/form-handler.js";
     fh.defer = true;
     document.head.appendChild(fh);
+  }
+
+  // Inject Section 2 Scanner Band on Every Page
+  const injectSection2Scanner = () => {
+    if (document.getElementById("sec2-qr-scanner-band")) return;
+    if (page === "donate") return;
+
+    const firstSection = document.querySelector("main section, section, .hero-home, .hero, .page-header");
+    if (firstSection) {
+      const sec2Band = document.createElement("section");
+      sec2Band.id = "sec2-qr-scanner-band";
+      sec2Band.className = "section-band";
+      sec2Band.style.cssText = "background: linear-gradient(135deg, #fffcf8 0%, #fff5f5 100%); border-y: 2px solid var(--line); padding: 2.25rem 1.25rem; margin: 2rem 0;";
+      sec2Band.innerHTML = `
+        <div style="max-width: var(--max); margin: 0 auto;">
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 1.25rem;">
+            <p class="eyebrow" style="color: var(--signal); font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem; margin-bottom: 0.25rem;">
+              <span style="width: 8px; height: 8px; background: var(--signal); border-radius: 50%; display: inline-block; animation: pulse 1.4s ease infinite;"></span>
+              OFFICIAL UPI SCANNER &amp; PAYMENT ALERT (SECTION 2)
+            </p>
+            <h2 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--ink); margin: 0 0 0.4rem;">Scan &amp; Pay via UPI · <em>Instant Mailtrap Alert</em></h2>
+            <p style="font-size: 0.9rem; color: var(--muted); max-width: 60ch;">Any UPI App (GPay / PhonePe / Paytm) · Remark / Description: <code style="font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;">CJP</code></p>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; align-items: start; max-width: 860px; margin: 0 auto; background: #ffffff; padding: 1.5rem; border: 2px solid var(--signal); border-radius: 18px; box-shadow: 0 16px 40px rgba(159, 18, 57, 0.12);">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+              <div class="qr-slot" style="position: relative; border-radius: 12px; overflow: hidden; border: 2px dashed var(--signal); padding: 0.65rem; background: #faf7f5;">
+                <img src="assets/img/upi-qr.png" alt="Scan to pay via UPI" width="210" height="210" loading="lazy" style="display: block; border-radius: 8px;">
+              </div>
+              <p style="font-size: 0.85rem; font-weight: 700; color: var(--ink); margin-top: 0.65rem; margin-bottom: 0.2rem;">Scan with GPay / PhonePe / Paytm</p>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--signal); font-weight: 800; background: var(--bg-2); padding: 0.2rem 0.55rem; border-radius: 6px;">Remark / Note: CJP</span>
+            </div>
+
+            <div style="text-align: left;">
+              <strong style="font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); display: block; margin-bottom: 0.3rem;">📩 Paid via UPI? Send Instant Alert</strong>
+              <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.85rem;">Scan karke pay karne ke baad niche details bharein. Real-time alert Mailtrap inbox me bhej diya jayega!</p>
+              <form class="sec2-payment-form" style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <input type="text" name="payer_name" required placeholder="Aapka Naam (Name)" style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+                <input type="text" name="payer_contact" required placeholder="Email ya Phone No." style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+                <div style="display: flex; gap: 0.5rem;">
+                  <input type="number" name="amount_paid" required placeholder="Amount (₹)" style="flex: 1; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+                  <input type="text" name="utr_number" placeholder="UTR / Ref No." style="flex: 1.4; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+                </div>
+                <button type="submit" class="btn btn-solid" style="width: 100%; font-size: 0.85rem; padding: 0.6rem; text-align: center; margin-top: 0.2rem;">📩 Send Payment Alert to Mailtrap →</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      `;
+      firstSection.after(sec2Band);
+    }
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", injectSection2Scanner);
+  } else {
+    injectSection2Scanner();
   }
 
   // Close announce bar listener
