@@ -108,8 +108,8 @@
         <div class="qr-slot">
           <img src="assets/img/upi-qr.png" alt="Scan to pay via UPI for website support" width="240" height="240" loading="lazy">
         </div>
-        <p class="qr-caption"><strong>Scan or Tap &amp; Pay (GPay / PhonePe / Paytm)</strong></p>
-        <p class="qr-hint">Auto-Note: <code style="color:var(--signal); font-weight:700;">CJP Website Support</code></p>
+        <p class="qr-caption"><strong>Scan &amp; pay</strong> (UPI / any supported app)</p>
+        <p class="qr-hint">You choose the amount · Remark / Description: <code style="font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;">CJP</code></p>
         <a href="donate" class="btn btn-solid" style="width:100%;margin-top:0.75rem">Full details &amp; policy →</a>
       </div>
     </div>
