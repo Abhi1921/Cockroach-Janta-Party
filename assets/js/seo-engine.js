@@ -127,10 +127,10 @@
     document.head.appendChild(script);
   };
 
-  // IndexNow API ping trigger (for Bing & Yandex search indexation)
+  // IndexNow API ping trigger (for Bing & Yandex search indexation without CORS console error)
   const pingIndexNow = () => {
     try {
-      const data = {
+      const data = JSON.stringify({
         host: "cockroachjantapartywale.com",
         key: "4892701bf4e93012",
         keyLocation: "https://cockroachjantapartywale.com/cjp2026indexnow4892701bf4e93012.txt",
@@ -143,12 +143,18 @@
           "https://cockroachjantapartywale.com/issues",
           "https://cockroachjantapartywale.com/join"
         ]
-      };
-      fetch("https://api.indexnow.org/indexnow", {
-        method: "POST",
-        headers: { "Content-Type": "application/json; charset=utf-8" },
-        body: JSON.stringify(data)
-      }).catch(() => {});
+      });
+
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon("https://api.indexnow.org/indexnow", data);
+      } else {
+        fetch("https://api.indexnow.org/indexnow", {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain" },
+          body: data
+        }).catch(() => {});
+      }
     } catch(e) {}
   };
 

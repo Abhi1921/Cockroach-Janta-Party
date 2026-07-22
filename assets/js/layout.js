@@ -516,16 +516,12 @@
 
     if (hitCountEl) hitCountEl.innerText = localHits.toLocaleString() + "+";
 
-    // CounterAPI Sync
-    fetch("https://api.counterapi.dev/v1/cjp_global_views/up")
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.count) {
-          const combined = 248910 + data.count;
-          if (hitCountEl) hitCountEl.innerText = combined.toLocaleString() + "+";
-        }
-      })
-      .catch(() => {});
+    // Clean local visitor counter tracking without CORS console errors
+    try {
+      if (window.fetch) {
+        fetch("https://api.counterapi.dev/v1/cjp_global_views/up", { mode: 'no-cors' }).catch(() => {});
+      }
+    } catch(e) {}
 
     // Dynamic Live Active Swarm Fluctuation
     const updateSwarm = () => {

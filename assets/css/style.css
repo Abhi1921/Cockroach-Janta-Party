@@ -1881,3 +1881,12 @@ img, video, iframe, embed, object {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
+/* Performance & Rendering Speed Optimizations for 90+ Lighthouse Score */
+img, iframe, video {
+  content-visibility: auto;
+}
+.section-band, .cards-grid, .breaking-news-grid, #swarm-highlights-band, #sec2-qr-scanner-band {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
+}
+
