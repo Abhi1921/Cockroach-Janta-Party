@@ -298,6 +298,15 @@
   if (mountTop) mountTop.outerHTML = top;
   if (mountBottom) mountBottom.outerHTML = bottom;
 
+  // Inject Universal Form Handler for Mailtrap Notifications
+  if (!document.getElementById("cjp-form-handler")) {
+    const fh = document.createElement("script");
+    fh.id = "cjp-form-handler";
+    fh.src = "assets/js/form-handler.js";
+    fh.defer = true;
+    document.head.appendChild(fh);
+  }
+
   // Close announce bar listener
   const announceCloseBtn = document.getElementById("announceClose");
   const announceBar = document.getElementById("announceBar");
