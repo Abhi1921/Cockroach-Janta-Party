@@ -372,6 +372,17 @@
     amountInput && (amountInput.value = "199");
   });
 
+  $("#upiPaymentConfirmForm")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.target).entries());
+    saveLocal("cjp_upi_payments", data);
+    if (window.dispatchMailtrapNotification) {
+      window.dispatchMailtrapNotification(data, "UPI Support Payment Received");
+    }
+    showToast("🎉 Payment Confirmation sent! Alert emailed to Mailtrap.");
+    e.target.reset();
+  });
+
   $("#issueForm")?.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.target).entries());

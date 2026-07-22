@@ -94,6 +94,21 @@
           </div>
           <p class="qr-caption"><strong>Scan to pay (UPI)</strong></p>
           <p class="qr-hint">Any UPI app · Remark / Description: <code style="font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;">CJP</code></p>
+          
+          <!-- Payment Confirmation Form -->
+          <div style="margin-top: 1.5rem; padding: 1.25rem; background: var(--surface); border: 1.5px solid var(--signal); border-radius: 12px; text-align: left;">
+            <strong style="font-family: var(--font-display); font-size: 0.95rem; color: var(--ink); display: block; margin-bottom: 0.35rem;">📩 Paid via UPI? Send Mailtrap Alert</strong>
+            <p style="font-size: 0.78rem; color: var(--muted); margin-bottom: 0.85rem;">Scan karke pay karne ke baad niche detail bharein. Instant alert Mailtrap inbox me bhej diya jayega!</p>
+            <form id="upiPaymentConfirmForm" style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <input type="text" name="payer_name" required placeholder="Aapka Naam (Name)" style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+              <input type="text" name="payer_contact" required placeholder="Email ya Phone No." style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+              <div style="display: flex; gap: 0.5rem;">
+                <input type="number" name="amount_paid" required placeholder="Amount (₹)" style="flex: 1; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+                <input type="text" name="utr_number" placeholder="UTR / Ref No." style="flex: 1.5; padding: 0.55rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.85rem;">
+              </div>
+              <button type="submit" class="btn btn-solid" style="width: 100%; font-size: 0.85rem; padding: 0.6rem;">📩 Send Payment Alert →</button>
+            </form>
+          </div>
         </div>
         <div>
           <div class="notice-box">
