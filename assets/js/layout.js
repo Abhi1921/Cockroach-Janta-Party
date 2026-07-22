@@ -23,15 +23,17 @@
     return [...items, ...items].join("");
   };
 
-  // Primary nav links matching official cockroachjantaparty.com structure
+  // Complete 10 primary navbar links
   const nav = [
     ["vision", "Vision"],
-    ["manifesto", "Manifesto"],
-    ["manifesto#charter", "Charter"],
-    ["join", "Eligibility"],
-    ["tracker", "Petitions"],
-    ["protests", "March"],
-    ["join", "Volunteer"],
+    ["manifesto", "5 Demands"],
+    ["articles", "Media"],
+    ["protests", "Actions"],
+    ["issues", "Issues"],
+    ["tracker", "Tracker"],
+    ["members", "Members"],
+    ["gallery", "Gallery"],
+    ["join", "Join Us"],
     ["contact", "Contact"],
   ];
 

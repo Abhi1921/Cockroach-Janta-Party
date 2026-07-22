@@ -102,6 +102,25 @@
   let activeCategory = "all";
   let searchQuery = "";
 
+  // Array of 15 unique images for live news cards (zero repeats)
+  const poolImages = [
+    "assets/img/cjp/01-delhi-protest.webp",
+    "assets/img/cjp/02-heat-street.webp",
+    "assets/img/cjp/03-unemployed-youth.webp",
+    "assets/img/cjp/04-jantar-mantar.webp",
+    "assets/img/cjp/05-press.webp",
+    "assets/img/cjp/protest-crowd.webp",
+    "assets/img/cjp/police-barricades.webp",
+    "assets/img/cjp/student-banners.webp",
+    "assets/img/cjp/hunger-strike.webp",
+    "assets/img/cjp/press-conference.webp",
+    "assets/img/cjp/trending-cjp-poster-1.webp",
+    "assets/img/cjp/trending-cjp-poster-2.webp",
+    "assets/img/cjp/trending-cjp-poster-3.webp",
+    "assets/img/cjp/cjp-demands-manifesto-art.webp",
+    "assets/img/cjp/cjp-vision-survive-art.webp"
+  ];
+
   // Real Google News Live RSS Fetcher (via RSS2JSON Proxy)
   const fetchLiveGoogleNews = async () => {
     try {
@@ -119,7 +138,7 @@
           sourceUrl: item.link || "https://news.google.com",
           pubDate: item.pubDate ? new Date(item.pubDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : currentTodayDateStr,
           description: (item.description || item.title || "").replace(/<[^>]*>?/gm, '').slice(0, 160) + "...",
-          image: idx % 2 === 0 ? "assets/img/cjp/trending-cjp-poster-2.webp" : "assets/img/cjp/student-banners.webp",
+          image: poolImages[idx % poolImages.length],
           badge: "🌐 GOOGLE LIVE",
           badgeColor: "#2563eb",
           tags: ["#GoogleNewsLive", "#YouthNews", "#LatestUpdate"],

@@ -472,11 +472,11 @@
     el.className = "cjp-pop-badge";
     el.innerHTML = getRandomMsg();
 
-    // Random location across viewport bounds (prominently centered in safe view area)
-    const rx = Math.floor(6 + Math.random() * 60); // 6% to 66% width
-    const ry = Math.floor(20 + Math.random() * 55); // 20% to 75% height
-    el.style.left = `${rx}vw`;
-    el.style.top = `${ry}vh`;
+    // Position cleanly at bottom-left corner out of the way of central text & hero images
+    el.style.left = "1.5rem";
+    el.style.bottom = "1.5rem";
+    el.style.top = "auto";
+    el.style.right = "auto";
 
     document.body.appendChild(el);
     setTimeout(() => el.remove(), 4950);
