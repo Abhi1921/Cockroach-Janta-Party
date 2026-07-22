@@ -57,7 +57,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="Cockroach Janta Party home">
-        <img src="assets/img/logo.png" alt="Cockroach Janta Party logo" width="52" height="52" decoding="async">
+        <img src="assets/img/logo.webp" alt="Cockroach Janta Party logo" width="52" height="52" decoding="async">
         <div class="brand-text">
           <strong>Cockroach Janta Party</strong>
           <small>${S.tagline || "Voice of the Lazy & Unemployed"}</small>
@@ -163,7 +163,7 @@
     <div class="footer-inner">
       <div style="display: flex; flex-direction: column; gap: 1rem;">
         <a href="/" class="footer-brand" style="text-decoration: none; color: inherit;">
-          <img src="assets/img/logo.png" alt="Cockroach Janta Party logo" width="44" height="44" decoding="async">
+          <img src="assets/img/logo.webp" alt="Cockroach Janta Party logo" width="44" height="44" decoding="async">
           <div>
             <strong>Cockroach Janta Party</strong>
             <p style="margin: 0.5rem 0 0; font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.75);">
@@ -255,7 +255,7 @@
       🔥 TRENDING POSTER 2026
     </div>
     <div class="widget-body" id="openPosterModalBtn" style="display: flex; gap: 0.75rem; align-items: center; cursor: pointer;">
-      <img src="assets/img/cjp/trending-cjp-poster-1.png" alt="CJP Trending Campaign Poster 2026" width="70" height="90" style="object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.25); flex-shrink: 0;" loading="eager">
+      <img src="assets/img/cjp/trending-cjp-poster-1.webp" alt="CJP Trending Campaign Poster 2026" width="70" height="90" style="object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.25); flex-shrink: 0;" loading="eager">
       <div class="widget-info">
         <strong style="font-family: var(--font-display); font-size: 0.92rem; color: #fff; line-height: 1.15; display: block;">WE SURVIVE. WE RISE. WE LEAD.</strong>
         <p style="font-size: 0.72rem; color: rgba(255,255,255,0.85); margin: 0.2rem 0 0.35rem; line-height: 1.25;">Sansad March Poster · Delhi</p>
@@ -461,7 +461,7 @@
         </p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
           <a href="join" class="btn btn-solid" style="flex: 1; text-align: center;">✊ Join Swarm Free</a>
-          <a href="assets/img/cjp/trending-cjp-poster-1.png" target="_blank" download class="btn btn-ghost" style="flex: 1; text-align: center;">📥 Download Poster</a>
+          <a href="assets/img/cjp/trending-cjp-poster-1.webp" target="_blank" download class="btn btn-ghost" style="flex: 1; text-align: center;">📥 Download Poster</a>
         </div>
       </div>
     `;
@@ -516,13 +516,6 @@
 
     if (hitCountEl) hitCountEl.innerText = localHits.toLocaleString() + "+";
 
-    // Clean local visitor counter tracking without CORS console errors
-    try {
-      if (window.fetch) {
-        fetch("https://api.counterapi.dev/v1/cjp_global_views/up", { mode: 'no-cors' }).catch(() => {});
-      }
-    } catch(e) {}
-
     // Dynamic Live Active Swarm Fluctuation
     const updateSwarm = () => {
       if (!liveSwarmEl) return;
@@ -541,7 +534,7 @@
       name: S.legalName,
       alternateName: S.shortName,
       url: S.url,
-      logo: `${S.url}/assets/img/logo.png`,
+      logo: `${S.url}/assets/img/logo.webp`,
       description: S.description,
       foundingDate: "2026-05-16",
       founder: { "@type": "Person", name: S.founder },

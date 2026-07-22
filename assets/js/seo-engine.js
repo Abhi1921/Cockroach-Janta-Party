@@ -61,7 +61,7 @@
             "@type": "Organization",
             "name": "Cockroach Janta Party Wale",
             "url": "https://cockroachjantapartywale.com",
-            "logo": "https://cockroachjantapartywale.com/assets/img/logo.png"
+            "logo": "https://cockroachjantapartywale.com/assets/img/logo.webp"
           }
         },
         {
@@ -70,8 +70,8 @@
           "headline": "Cockroach Janta Party Mega Youth Movement & NEET Reform Drive",
           "description": "Live coverage of Cockroach Janta Party (CJP) protests, Jantar Mantar hunger strike, and student integrity demands.",
           "image": [
-            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-1.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-2.png"
+            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-1.webp",
+            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-2.webp"
           ],
           "datePublished": "2026-07-20T08:00:00+05:30",
           "dateModified": todayIso,
@@ -84,7 +84,7 @@
             "name": "Cockroach Janta Party",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://cockroachjantapartywale.com/assets/img/logo.png"
+              "url": "https://cockroachjantapartywale.com/assets/img/logo.webp"
             }
           },
           "mainEntityOfPage": {
@@ -127,44 +127,11 @@
     document.head.appendChild(script);
   };
 
-  // IndexNow API ping trigger (for Bing & Yandex search indexation without CORS console error)
-  const pingIndexNow = () => {
-    try {
-      const data = JSON.stringify({
-        host: "cockroachjantapartywale.com",
-        key: "4892701bf4e93012",
-        keyLocation: "https://cockroachjantapartywale.com/cjp2026indexnow4892701bf4e93012.txt",
-        urlList: [
-          "https://cockroachjantapartywale.com/",
-          "https://cockroachjantapartywale.com/vision",
-          "https://cockroachjantapartywale.com/manifesto",
-          "https://cockroachjantapartywale.com/articles",
-          "https://cockroachjantapartywale.com/protests",
-          "https://cockroachjantapartywale.com/issues",
-          "https://cockroachjantapartywale.com/join"
-        ]
-      });
-
-      if (navigator.sendBeacon) {
-        navigator.sendBeacon("https://api.indexnow.org/indexnow", data);
-      } else {
-        fetch("https://api.indexnow.org/indexnow", {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain" },
-          body: data
-        }).catch(() => {});
-      }
-    } catch(e) {}
-  };
-
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
       injectStructuredData();
-      pingIndexNow();
     });
   } else {
     injectStructuredData();
-    pingIndexNow();
   }
 })();
