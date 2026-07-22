@@ -50,11 +50,28 @@
       "5 Demands": "5 मांगें",
       "Media": "मीडिया",
       "Actions": "आंदोलन",
+      "Issues": "मुद्दे",
+      "Tracker": "ट्रैकर",
+      "Members": "सदस्य",
+      "Gallery": "गैलरी",
       "Join Us": "सदस्यता लें",
-      "Contact": "संपर्क करें",
+      "Contact": "संपर्क",
       "Support site": "समर्थन दें",
       "Join Free": "मुफ़्त जुड़ें",
       "Skip to content": "मुख्य सामग्री पर जाएं",
+
+      // Headings & Brand
+      "Cockroach Janta Party Wale": "कॉकरोच जनता पार्टी वाले",
+      "Because degrees are temporary, survival is permanent.": "क्योंकि डिग्रियां अस्थायी हैं, अस्तित्व स्थाई है।",
+      "Together. Resilient. Unstoppable.": "एकजुट। सशक्त। अटूट।",
+      "CJP Sansad Chalo March &amp; Government Negotiations": "CJP संसद चलो मार्च एवं सरकारी वार्ता",
+      "CJP Sansad Chalo March & Government Negotiations": "CJP संसद चलो मार्च एवं सरकारी वार्ता",
+      "Ground Images &amp; Media Clips": "ग्राउंड फोटो एवं मीडिया क्लिप्स",
+      "Ground Images & Media Clips": "ग्राउंड फोटो एवं मीडिया क्लिप्स",
+      "Sansad Chalo March &amp; Clash": "संसद चलो मार्च एवं झड़प",
+      "Sansad Chalo March & Clash": "संसद चलो मार्च एवं झड़प",
+      "Government Meeting &amp; Stand-off": "सरकारी बैठक एवं गतिरोध",
+      "Government Meeting & Stand-off": "सरकारी बैठक एवं गतिरोध",
 
       // Announcements & Taglines
       "Yes, We Are Cockroaches — We Survive. We Rise. We Lead.": "हाँ, हम कॉकरोच हैं — हम सहते हैं, उठते हैं और नेतृत्व करते हैं।",
@@ -63,8 +80,22 @@
       "Not an ECI-registered party · Satire with a purpose": "चुनाव आयोग से पंजीकृत पार्टी नहीं · उद्देश्यपूर्ण व्यंग्य आंदोलन",
       "Cockroach Janta Party · Est. 16 May 2026": "कॉकरोच जनता पार्टी · स्थापना 16 मई 2026",
 
+      // Badges & Labels
+      "SWARM IN DELHI": "✊ दिल्ली में जनसैलाब",
+      "SECURITY FORCES": "🚧 सुरक्षा बल",
+      "DEMANDING REFORM": "📜 सुधार की मांग",
+      "HUNGER STRIKE": "🚨 भूख हड़ताल",
+      "20 JULY PROTEST": "20 जुलाई विरोध प्रदर्शन",
+      "Jantar Mantar March": "जंतर-मंतर मार्च",
+      "Voice of the Lazy &amp; Unemployed": "आलसियों और बेरोजगारों की आवाज़",
+      "Voice of the Lazy & Unemployed": "आलसियों और बेरोजगारों की आवाज़",
+      "Campaign art": "आंदोलन कला",
+      "Gallery of the movement.": "आंदोलन की गैलरी",
+      "Full gallery": "पूरी गैलरी",
+      "Manifesto": "घोषणापत्र",
+      "Timeline of the Movement.": "आंदोलन की समयरेखा",
+
       // Hero Titles & CTAs
-      "Yes, We Are Cockroaches — <span class=\"accent\">We Survive. We Rise. We Lead.</span>": "हाँ, हम कॉकरोच हैं — <span class=\"accent\">हम सहते हैं, उठते हैं और नेतृत्व करते हैं।</span>",
       "Read Manifesto": "घोषणापत्र पढ़ें",
       "20M+": "2 करोड़+",
       "IG peak week": "साप्ताहिक पहुँच",
@@ -73,50 +104,12 @@
       "Delhi": "दिल्ली",
       "HQ / protests": "मुख्यालय / प्रदर्शन",
 
-      // Manifesto Page
-      "The five-point manifesto.": "5-सूत्रीय घोषणापत्र",
-      "The <span class=\"accent\">five-point</span> manifesto.": "5-सूत्रीय <span class=\"accent\">घोषणापत्र</span>",
-      "As summarised in public encyclopaedic reporting, CJP's formal manifesto includes these demands (satirical political theatre with sharp institutional critique). Additional accepted points include RTI answerability and rejecting a secret \"Cockroach CARES\" fund.": "सार्वजनिक रिपोर्टिंग के अनुसार, सीजेपी के 5-सूत्रीय घोषणापत्र में ये मुख्य मांगें शामिल हैं (सख्त संस्थागत सुधार और पारदर्शिता के साथ)।",
-      "No Rajya Sabha for retiring CJIs as reward": "1. रिटायर होने वाले सीजेआई को इनाम में राज्यसभा सीट नहीं",
-      "No Chief Justice shall be granted a Rajya Sabha seat as a post-retirement reward.": "किसी भी मुख्य न्यायाधीश को सेवानिवृत्ति के बाद राज्यसभा सीट का इनाम नहीं दिया जाएगा।",
-      "Vote deletion = maximum accountability": "2. वोट हटाने पर मुख्य चुनाव आयुक्त की अधिकतम जवाबदेही",
-      "If any legitimate vote is deleted, the Chief Election Commissioner shall face the harshest accountability — framed by CJP as no less than an attack on democratic rights.": "यदि किसी भी वैध मतदाता का नाम हटाया जाता है, तो मुख्य चुनाव आयुक्त पर सख्त कार्रवाई होगी।",
-      "50% for women": "3. महिलाओं के लिए 50% सीट आरक्षण",
-      "Women shall receive 50% reservation (instead of 33%) without increasing Parliament's strength; 50% of Cabinet positions reserved for women.": "संसद और कैबिनेट पदों में महिलाओं के लिए 50% सीट आरक्षण लागू किया जाए।",
-      "Independent media over conglomerate capture": "4. कॉर्पोरेट कब्जे के बजाय स्वतंत्र मीडिया",
-      "Licences of media houses owned by Adani Group and Reliance (\"Ambani\") to be cancelled to make space for independent media; investigate \"Godi media\" anchors' bank accounts (as stated in manifesto framing).": "बड़े कॉर्पोरेट मीडिया घरानों के बजाय निष्पक्ष और स्वतंत्र मीडिया को बढ़ावा दिया जाए।",
-      "Anti-defection with teeth": "5. दल-बदलुओं पर 20 साल का सख्त चुनाव प्रतिबंध",
-      "Any MLA or MP who defects shall be barred from contesting and holding public office for 20 years.": "दल-बदल करने वाले किसी भी विधायक या सांसद पर 20 साल का कड़ा चुनाव प्रतिबंध।",
-
-      // Support & Scanner
+      // Support & Footer
       "Keep the site alive · Voluntary": "वेबसाइट सहयोग · स्वैच्छिक योगदान",
-      "Building this site takes <em>nights.</em> A little help goes a long way.": "इस वेबसाइट को चलाने में रातें लगती हैं। <em>आपका छोटा सा सहयोग</em> भी बहुत बड़ा सहारा है।",
-      "Building this site takes nights. A little help goes a long way.": "इस वेबसाइट को चलाने में रातें लगती हैं। आपका छोटा सा सहयोग भी बहुत बड़ा सहारा है।",
       "Scan &amp; pay": "स्कैन करें और भुगतान करें",
       "Scan & pay": "स्कैन करें और भुगतान करें",
-      "You choose the amount · Remark / Description: <code style=\"font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;\">CJP</code>": "राशि अपनी पसंद अनुसार चुनें · डिस्क्रिप्शन / रिमार्क: <code style=\"font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;\">CJP</code>",
-      "Full details &amp; policy →": "पूरा विवरण और नीति →",
-      "Full details & policy →": "पूरा विवरण और नीति →",
-      "This is <strong>not</strong> an NGO, trust, or charity donation": "यह एनजीओ या चैरिटी डोनेशन नहीं है",
-      "This is <strong>not</strong> a political party fund or election contribution": "यह किसी राजनीतिक पार्टी का चुनावी फंड नहीं है",
-      "It is optional support for <strong>website development &amp; running costs</strong> only": "यह केवल <strong>वेबसाइट विकास और संचालन लागत</strong> के लिए है",
-      "No tax deduction / 80G — please treat it as a personal tip": "80G टैक्स छूट लागू नहीं — इसे व्यक्तिगत टिप समझें",
-
-      // Footer
       "Stay updated": "अपडेट्स प्राप्त करें",
-      "Campus alerts. <em>When it counts.</em>": "कॉलेज और युवा अलर्ट। <em>समय पर।</em>",
-      "Protest updates and manifesto notes — no spam.": "आंदोलन की खबरें और घोषणापत्र नोट्स — बिना स्पैम।",
       "Subscribe": "सब्सक्राइब करें",
-      "By subscribing you agree to occasional CJP updates.": "सब्सक्राइब करके आप CJP अपडेट्स प्राप्त करने की सहमति देते हैं।",
-      "Youth satirical movement. Founded 16 May 2026. Not registered with the Election Commission of India.": "युवा व्यंग्यात्मक आंदोलन। स्थापना 16 मई 2026। भारत के चुनाव आयोग में पंजीकृत नहीं।",
-
-      // Breaking News Section
-      "TODAY'S BIG BREAKING NEWS": "आज की बड़ी ब्रेकिंग न्यूज़",
-      "Sonam Wangchuk <em>Detained by Delhi Police</em>": "सोनम वांगचुक को <em>दिल्ली पुलिस ने उठाया</em>",
-      "Climate activist Sonam Wangchuk forcefully removed from Jantar Mantar hunger strike site and shifted to Safdarjung Hospital amid tight security.": "जलवायु कार्यकर्ता सोनम वांगचुक को जंतर-मंतर पर भूख हड़ताल स्थल से जबरन हटाकर भारी सुरक्षा के बीच सफदरजंग अस्पताल में स्थानांतरित किया गया।",
-      "LATEST PRESS UPDATE": "ताजा प्रेस अपडेट",
-      "Hunger Strike Site Cleared": "भूख हड़ताल स्थल खाली कराया गया",
-      "Delhi Police barricaded the Jantar Mantar protest site, restricting public entry. Protesters claim several youth coordinators were also detained, prompting CJP founder Abhijeet Dipke to launch an immediate counter fast.": "दिल्ली पुलिस ने जंतर-मंतर विरोध प्रदर्शन स्थल की घेराबंदी कर दी है। प्रदर्शनकारियों का दावा है कि कई युवा समन्वयकों को भी हिरासत में लिया गया है, जिसके बाद सीजेपी संस्थापक अभिजीत दीपके ने तत्काल अनशन शुरू कर दिया है।",
       "🚨 LIVE COVERAGE": "🚨 लाइव कवरेज"
     }
   };
@@ -127,7 +120,6 @@
     if (targetLang === "hi") {
       const dict = i18nDict.hi;
 
-      // Translate headings, paragraphs, links, buttons, lists, captions (excluding language dropdown itself)
       const elementsToTranslate = document.querySelectorAll(
         "h1, h2, h3, h4, p, span, a, button, li, small, figcaption, th, td, label"
       );
@@ -136,20 +128,19 @@
         if (el.closest("#langSelect")) return;
 
         if (!el.dataset.en) {
-          el.dataset.en = el.innerHTML.trim();
+          el.dataset.en = el.innerHTML;
         }
-        const originalText = el.dataset.en;
-        const cleanText = originalText.replace(/\s+/g, " ");
+        const originalHtml = el.dataset.en;
+        const textContent = el.textContent.trim();
 
         for (const [key, val] of Object.entries(dict)) {
-          if (cleanText === key || originalText === key) {
+          if (textContent === key || originalHtml.trim() === key || originalHtml.replace(/\s+/g, ' ') === key) {
             el.innerHTML = val;
             break;
           }
         }
       });
     } else {
-      // Revert to English original
       document.querySelectorAll("[data-en]").forEach((el) => {
         if (!el.closest("#langSelect")) {
           el.innerHTML = el.dataset.en;
