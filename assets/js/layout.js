@@ -362,18 +362,32 @@
     document.head.appendChild(el);
   }
 
-  // Basic security to protect source code from casual inspection (Disable right-click and common shortcuts)
-  document.addEventListener("contextmenu", (e) => e.preventDefault());
-  document.addEventListener("keydown", (e) => {
-    if (
-      e.keyCode === 123 || // F12
-      (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
-      (e.ctrlKey && e.shiftKey && e.keyCode === 74) || // Ctrl+Shift+J
-      (e.ctrlKey && e.keyCode === 85) || // Ctrl+U
-      (e.ctrlKey && e.shiftKey && e.keyCode === 67) // Ctrl+Shift+C
-    ) {
-      e.preventDefault();
-      return false;
+  // Smart internal link routing handler (Prevents 404 errors across local, Netlify, and Vercel environments)
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (!a) return;
+    const href = a.getAttribute("href");
+    if (!href || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("javascript:")) return;
+    
+    // If opening locally via file:// protocol, append .html if omitted
+    if (window.location.protocol === "file:") {
+      if (!href.endsWith(".html") && !href.includes("#") && href !== "/") {
+        e.preventDefault();
+        window.location.href = href + ".html";
+      } else if (href.includes("#") && !href.split("#")[0].endsWith(".html") && href.split("#")[0] !== "") {
+        e.preventDefault();
+        const parts = href.split("#");
+        window.location.href = parts[0] + ".html#" + parts[1];
+      }
     }
   });
+
+  // Auto-inject SEO engine on all pages
+  if (!document.getElementById("cjp-seo-engine-script")) {
+    const s = document.createElement("script");
+    s.id = "cjp-seo-engine-script";
+    s.src = "assets/js/seo-engine.js?v=17.0";
+    s.defer = true;
+    document.head.appendChild(s);
+  }
 })();

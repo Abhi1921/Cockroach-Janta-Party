@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/vision", "destination": "/vision.html" },
+    { "source": "/manifesto", "destination": "/manifesto.html" },
+    { "source": "/articles", "destination": "/articles.html" },
+    { "source": "/protests", "destination": "/protests.html" },
+    { "source": "/join", "destination": "/join.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/donate", "destination": "/donate.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/members", "destination": "/members.html" },
+    { "source": "/issues", "destination": "/issues.html" },
+    { "source": "/tracker", "destination": "/tracker.html" },
+    { "source": "/raise-issue", "destination": "/raise-issue.html" },
+    { "source": "/revolutionaries", "destination": "/revolutionaries.html" },
+    { "source": "/terms", "destination": "/terms.html" }
+  ]
+}
