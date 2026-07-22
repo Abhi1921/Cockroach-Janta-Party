@@ -524,15 +524,40 @@ button, input, textarea, select {
 .demand-list strong { display: block; margin-bottom: 0.25rem; }
 .demand-list p { margin: 0; color: var(--muted); }
 
-.card-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem; margin-top: 1.5rem;
+/* Clean 3-Column Card Layout System (Desktop 3 per row, Tablet 2, Mobile 1) */
+.cards-3col, .card-grid, .photo-strip, .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
 }
+.card-img-frame {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #1c1010;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 6px 18px rgba(28, 16, 16, 0.1);
+}
+.card-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease);
+}
+.content-card:hover .card-img-frame img {
+  transform: scale(1.06);
+}
+
 .content-card {
   border: 1px solid var(--line); background: var(--surface);
   padding: 1.25rem; border-radius: var(--radius);
   box-shadow: 0 4px 16px rgba(28,16,16,0.04);
   transition: transform 0.25s var(--ease), box-shadow 0.25s, border-color 0.25s;
+  display: flex;
+  flex-direction: column;
 }
 .content-card:hover {
   transform: translateY(-5px);
