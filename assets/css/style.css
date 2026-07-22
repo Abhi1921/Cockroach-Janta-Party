@@ -484,7 +484,7 @@ header.nav::-webkit-scrollbar,
   background: var(--signal);
 }
 
-/* Hero Section Layout & Poster Frame Constraints */
+/* Hero Section Layout & Poster Frame Constraints matching Screenshot 2 */
 .hero {
   background: var(--paper);
   padding: clamp(32px, 5vw, 64px) var(--gutter);
@@ -496,14 +496,205 @@ header.nav::-webkit-scrollbar,
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 380px;
-  gap: 3rem;
+  gap: 3.5rem;
   align-items: center;
 }
 @media (max-width: 960px) {
   .hero-inner {
     grid-template-columns: 1fr !important;
-    gap: 2rem;
+    gap: 2.5rem;
   }
+}
+.hero-title {
+  font-family: "Bowlby One", "Oswald", "Outfit", sans-serif;
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  margin: 0.8rem 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.ht-line1 {
+  font-family: "Bowlby One", "Oswald", sans-serif;
+  color: #1A1410;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  text-transform: uppercase;
+}
+.ht-line2 {
+  font-family: "Bowlby One", "Oswald", sans-serif;
+  color: #E0651E;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  text-transform: uppercase;
+}
+.ht-line3 {
+  font-family: "Playfair Display", "Georgia", "Outfit", serif;
+  color: #1F5A2E;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+}
+.hero-sub {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: #3D352E;
+  max-width: 52ch;
+  margin: 0 0 1.8rem;
+}
+
+/* 3D Offset Buttons matching Screenshot 2 */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.25rem;
+  margin-bottom: 1.2rem;
+}
+.hero-btn {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.9rem 1.5rem;
+  border: 2.5px solid #1A1410;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 #1A1410;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+.hero-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #1A1410;
+}
+.hero-btn-saffron {
+  background: #E0651E;
+  color: #FFFFFF;
+  font-size: 1.02rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.hero-btn-march {
+  background: #7F1D1D;
+  color: #FFFFFF;
+  border-color: #1A1410;
+}
+.hbm-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.hbm-dot {
+  width: 9px;
+  height: 9px;
+  background: #EF4444;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 1.4s ease infinite;
+}
+.hbm-sub {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.82);
+  letter-spacing: 0.08em;
+  margin-top: 0.25rem;
+  font-weight: 700;
+}
+.hero-read-link {
+  margin-bottom: 2.2rem;
+}
+.btn-read-manifesto {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 900;
+  color: #1A1410;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  letter-spacing: 0.08em;
+}
+
+/* Stats Strip Grid matching Screenshot 2 */
+.hero-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding-top: 1.8rem;
+  border-top: 1.5px solid #D8C9B0;
+  margin-bottom: 2.2rem;
+}
+@media (max-width: 640px) {
+  .hero-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.hs-col {
+  display: flex;
+  flex-direction: column;
+}
+.hs-num {
+  font-family: "Bowlby One", "Oswald", sans-serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 900;
+  color: #1A1410;
+  line-height: 1;
+}
+.hs-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+/* Social Links Pills Grid matching Screenshot 2 */
+.hero-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.hs-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.hs-pills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  background: #EFE4CC;
+  border: 1.5px solid #D8C9B0;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1A1410;
+  text-decoration: none;
+  box-shadow: 2px 2px 0 rgba(26,20,16,0.12);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.social-pill:hover {
+  background: #E0651E;
+  color: #FFFDF7;
+  border-color: #1A1410;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 #1A1410;
 }
 .hero-poster {
   max-width: 380px;
