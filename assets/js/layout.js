@@ -18,7 +18,14 @@
     for (let i = 0; i < 20; i++) {
       const name = donorNames[Math.floor(Math.random() * donorNames.length)];
       const amount = Math.floor(Math.random() * 10000) + 1;
-      items.push(`<span>💚 ${name} paid ₹${amount.toLocaleString('en-IN')} for website development</span>`);
+      items.push(`
+        <span class="dev-ticker-item">
+          <span class="dev-heart">💚</span>
+          <strong class="dev-donor-name">${name}</strong> paid
+          <span class="dev-amount-pill">₹${amount.toLocaleString('en-IN')}</span>
+          <span class="dev-sub">for website development</span>
+        </span>
+      `);
     }
     return [...items, ...items].join("");
   };

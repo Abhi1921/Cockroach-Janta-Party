@@ -156,24 +156,57 @@ button, input, textarea, select {
   to { transform: translateX(-50%); }
 }
 
-/* Developer Support Ticker Bar */
+/* Developer Support Ticker Bar matching website theme colors */
 .dev-ticker-bar {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 32px;
-  padding: 0.25rem 1rem;
+  min-height: 38px;
+  padding: 0.35rem 1rem;
   overflow: hidden;
-  background: #1A1410;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fbbf24;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1.5px solid var(--saffron);
+  color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 500;
+  font-size: 0.74rem;
+  font-weight: 600;
+  box-shadow: inset 0 -1px 4px rgba(224, 101, 30, 0.08);
 }
 .dev-ticker-track {
-  display: flex; gap: 4rem; white-space: nowrap;
-  animation: marquee-slow 75s linear infinite;
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  white-space: nowrap;
+  animation: marquee-slow 70s linear infinite;
+}
+.dev-ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink-soft);
+}
+.dev-heart {
+  font-size: 0.85rem;
+  filter: drop-shadow(0 0 2px rgba(31, 90, 46, 0.4));
+}
+.dev-donor-name {
+  color: var(--ink);
+  font-weight: 800;
+}
+.dev-amount-pill {
+  background: var(--saffron);
+  color: #FFFDF7;
+  font-weight: 800;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(224, 101, 30, 0.25);
+  letter-spacing: 0.02em;
+}
+.dev-sub {
+  color: var(--muted);
+  font-size: 0.7rem;
 }
 @keyframes marquee-slow {
   from { transform: translateX(0); }
