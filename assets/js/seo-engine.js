@@ -52,6 +52,19 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebSite",
+          "@id": canonicalUrl + "#website",
+          "url": "https://cockroachjantapartywale.com",
+          "name": "Cockroach Janta Party Wale",
+          "alternateName": ["Cockroach Janta Party", "Cockroach Janata Party", "CJP"],
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cockroach Janta Party Wale",
+            "url": "https://cockroachjantapartywale.com",
+            "logo": "https://cockroachjantapartywale.com/assets/img/logo.png"
+          }
+        },
+        {
           "@type": "NewsArticle",
           "@id": canonicalUrl + "#trending-news",
           "headline": "Cockroach Janta Party Mega Youth Movement & NEET Reform Drive",
