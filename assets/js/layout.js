@@ -363,8 +363,9 @@
     });
   };
 
-  if (openPosterModalBtn) {
-    openPosterModalBtn.addEventListener("click", (e) => {
+  if (protestWidget) {
+    protestWidget.addEventListener("click", (e) => {
+      if (e.target.closest("#protestWidgetClose")) return;
       e.preventDefault();
       showPosterModal();
     });
