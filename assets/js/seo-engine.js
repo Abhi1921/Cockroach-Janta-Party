@@ -1,3 +1,4 @@
+
 /**
  * CJP Trending SEO Engine & Indexing System
  * Automates OpenGraph, Twitter Cards, Schema.org Structured Data, and Indexing Pings.
@@ -92,11 +93,11 @@
           "@type": "WebSite",
           "@id": canonicalUrl + "#website",
           "url": "https://cockroachjantapartywale.com",
-          "name": "Cockroach Janta Party Wale",
-          "alternateName": ["Cockroach Janta Party", "Cockroach Janata Party", "CJP"],
+          "name": "Cockroach Janta Party",
+          "alternateName": ["Cockroach Janta Party Wale", "Cockroach Janata Party", "CJP"],
           "publisher": {
             "@type": "Organization",
-            "name": "Cockroach Janta Party Wale",
+            "name": "Cockroach Janta Party",
             "url": "https://cockroachjantapartywale.com",
             "logo": "https://cockroachjantapartywale.com/assets/img/logo.webp"
           }
