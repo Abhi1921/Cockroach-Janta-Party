@@ -1296,6 +1296,23 @@ header.nav::-webkit-scrollbar,
     -webkit-overflow-scrolling: touch;
     animation: rise 0.2s var(--ease) both;
   }
+  .header-inner.nav-open .main-nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem 0.6rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+  .header-inner.nav-open .main-nav li {
+    display: inline-flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   .header-inner.nav-open .main-nav a {
     font-size: 0.8rem;
     font-weight: 800;
