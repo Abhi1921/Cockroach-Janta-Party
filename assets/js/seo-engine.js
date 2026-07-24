@@ -135,8 +135,13 @@
           "@id": canonicalUrl + "#sansad-chalo-event",
           "name": "CJP Sansad Chalo Mega Youth March",
           "startDate": "2026-07-20T10:00:00+05:30",
+          "endDate": "2026-07-20T18:00:00+05:30",
           "eventStatus": "https://schema.org/EventScheduled",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "image": [
+            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-22july.webp",
+            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-1.webp"
+          ],
           "location": {
             "@type": "Place",
             "name": "Jantar Mantar",
@@ -149,6 +154,19 @@
             }
           },
           "description": "Massive peaceful youth protest for examination integrity, student representation, and public audit of competitive exams.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://cockroachjantapartywale.com/protests",
+            "validFrom": "2026-07-16T00:00:00+05:30"
+          },
+          "performer": {
+            "@type": "Organization",
+            "name": "Cockroach Janta Party",
+            "url": "https://cockroachjantapartywale.com"
+          },
           "organizer": {
             "@type": "Organization",
             "name": "Cockroach Janta Party",
