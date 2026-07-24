@@ -10,8 +10,36 @@
     year: 'numeric'
   });
 
-  // Default curated trending news & posters (22 July 2026 updates)
+  // Default curated trending news & posters (24 July 2026 updates)
   const defaultTrendingNews = [
+    {
+      id: "news-cjp-24july-talks",
+      title: "Government Invites CJP Leaders for High-Level Talks as Jantar Mantar Agitation Continues (24 July)",
+      category: "cjp",
+      source: "The Hindu & CJP Press Desk · Delhi",
+      sourceUrl: "protests.html",
+      pubDate: "24 July 2026",
+      description: "Central government representatives issue an official invitation for talks with CJP leadership on 24 July regarding NEET paper leak reforms and Dharmendra Pradhan's resignation.",
+      image: "assets/img/cjp/trending-news-24july.webp",
+      badge: "🚨 24 JULY BREAKING",
+      badgeColor: "var(--signal)",
+      tags: ["#24JulyGovtTalks", "#JantarMantarProtest", "#AbhijeetDipke", "#NEETReforms"],
+      fullText: "On 24 July 2026, representatives of the Central Government formally invited Cockroach Janta Party (CJP) leadership for negotiations. Founder Abhijeet Dipke reiterated at Jantar Mantar that the youth agitation will continue unabated until Education Minister Dharmendra Pradhan steps down and transparent NEET exam server audits are enforced."
+    },
+    {
+      id: "news-cjp-24july-sansad-march",
+      title: "Sansad Chalo Demands Escalate: Thousands Join CJP Youth Swarm Near Parliament (24 July)",
+      category: "cjp",
+      source: "Business Today & CJP Bureau",
+      sourceUrl: "protests.html",
+      pubDate: "24 July 2026",
+      description: "Thousands of students carrying #MainBhiCockroach banners swarm towards Indian Parliament demanding judicial neutrality and student representation.",
+      image: "assets/img/cjp/sansad-march-live.webp",
+      badge: "⚡ SANSAD MARCH LIVE",
+      badgeColor: "var(--gold)",
+      tags: ["#SansadChalo", "#EducationMinisterResign", "#MainBhiCockroach", "#GenZPolitics"],
+      fullText: "Massive youth rallies filled central Delhi on 24 July 2026 as students and unemployed youth marched towards Parliament under the CJP banner. Demonstrators demanded strict anti-defection laws, public exam audits, and immediate ministerial accountability."
+    },
     {
       id: "news-cjp-22july-parliament",
       title: "22 July Parliament Lockout: Opposition Halts House Proceedings Over CJP Student Lathicharge",
@@ -104,6 +132,8 @@
 
   // Array of verified unique poster images for live news cards (100% valid images, zero 404s)
   const poolImages = [
+    "assets/img/cjp/trending-news-24july.webp",
+    "assets/img/cjp/sansad-march-live.webp",
     "assets/img/cjp/cjp-news-poster-2.webp",
     "assets/img/cjp/cjp-news-poster-1.webp",
     "assets/img/cjp/trending-cjp-poster-22july.webp",
