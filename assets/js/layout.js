@@ -30,18 +30,18 @@
     return [...items, ...items].join("");
   };
 
-  // Complete 10 primary navbar links
+  // Complete 10 primary navbar links with mobile icons
   const nav = [
-    ["vision", "Vision"],
-    ["manifesto", "5 Demands"],
-    ["articles", "Media"],
-    ["protests", "Actions"],
-    ["issues", "Issues"],
-    ["tracker", "Tracker"],
-    ["members", "Members"],
-    ["gallery", "Gallery"],
-    ["join", "Join Us"],
-    ["contact", "Contact"],
+    ["vision", "Vision", "👁️"],
+    ["manifesto", "5 Demands", "📜"],
+    ["articles", "Media", "📰"],
+    ["protests", "Actions", "✊"],
+    ["issues", "Issues", "⚠️"],
+    ["tracker", "Tracker", "📊"],
+    ["members", "Members", "👥"],
+    ["gallery", "Gallery", "🖼️"],
+    ["join", "Join Us", "💳"],
+    ["contact", "Contact", "📩"],
   ];
 
   const active = (file) => (page === file.replace(".html", "").replace(/^\//, "") ? " is-active" : "");
@@ -95,9 +95,13 @@
       </a>
       <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="primary-nav main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          ${nav.map(([href, label]) => `<li><a href="${href}" class="${active(href).trim()}">${label}</a></li>`).join("")}
+        <ul class="mobile-nav-list">
+          ${nav.map(([href, label, icon]) => `<li><a href="${href}" class="${active(href).trim()}"><span class="nav-icon">${icon}</span><span class="nav-label">${label}</span></a></li>`).join("")}
         </ul>
+        <div class="mobile-nav-actions">
+          <a href="join" class="btn btn-solid btn-wide mobile-cta-join">✊ Join Swarm Free →</a>
+          <a href="donate" class="btn btn-ghost btn-wide mobile-cta-donate">💚 Support Developer</a>
+        </div>
       </nav>
       <div class="nav-actions header-actions">
         <div class="lang-select" id="langSelect">
