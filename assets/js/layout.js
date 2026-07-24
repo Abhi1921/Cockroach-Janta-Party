@@ -17,7 +17,7 @@
     const items = [];
     for (let i = 0; i < 20; i++) {
       const name = donorNames[Math.floor(Math.random() * donorNames.length)];
-      const amount = Math.floor(Math.random() * 10000) + 1;
+      const amount = Math.floor(Math.random() * 500) + 1;
       items.push(`
         <span class="dev-ticker-item">
           <span class="dev-heart">💚</span>
@@ -494,7 +494,7 @@
             <p style="font-size: 0.9rem; color: var(--muted); max-width: 60ch;">Any UPI App (GPay / PhonePe / Paytm) · Remark / Description: <code style="font-family:var(--font-mono);font-size:0.82rem;background:var(--bg-2);padding:0.15rem 0.5rem;border-radius:6px;color:var(--signal);font-weight:800;">CJP</code></p>
           </div>
           
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; align-items: start; max-width: 860px; margin: 0 auto; background: #ffffff; padding: 1.5rem; border: 2px solid var(--signal); border-radius: 18px; box-shadow: 0 16px 40px rgba(159, 18, 57, 0.12); box-sizing: border-box;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; align-items: start; max-width: 860px; margin: 0 auto; background: #ffffff; padding: 1.25rem; border: 2px solid var(--signal); border-radius: 18px; box-shadow: 0 16px 40px rgba(159, 18, 57, 0.12); box-sizing: border-box;">
             <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
               <div class="qr-slot" style="position: relative; border-radius: 12px; overflow: hidden; border: 2px dashed var(--signal); padding: 0.65rem; background: #faf7f5;">
                 <img src="assets/img/upi-qr.webp" alt="Scan to pay via UPI" width="210" height="210" loading="lazy" style="display: block; border-radius: 8px;">
