@@ -110,6 +110,22 @@
       elementsToTranslate.forEach((el) => {
         if (el.closest("#langSelect")) return;
 
+        // Special handling for nav links containing nav-label span to preserve nav-icon
+        if (el.classList && el.classList.contains("nav-label")) {
+          if (!el.dataset.en) el.dataset.en = el.innerHTML;
+          const orig = el.dataset.en.trim();
+          for (const [key, val] of Object.entries(dict)) {
+            if (orig === key) {
+              el.innerHTML = val;
+              break;
+            }
+          }
+          return;
+        }
+
+        // Skip parent <a> if it contains a nav-label child so we don't wipe inner spans
+        if (el.querySelector && el.querySelector(".nav-label")) return;
+
         if (!el.dataset.en) {
           el.dataset.en = el.innerHTML;
         }
