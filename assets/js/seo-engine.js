@@ -93,11 +93,11 @@
           "@type": "WebSite",
           "@id": canonicalUrl + "#website",
           "url": "https://cockroachjantapartywale.com",
-          "name": "Cockroach Janta Party",
-          "alternateName": ["Cockroach Janta Party Wale", "Cockroach Janata Party", "CJP"],
+          "name": "Cockroach Janta Party Official Website",
+          "alternateName": ["Cockroach Janta Party", "Cockroach Janta Party Wale", "Cockroach Janata Party", "CJP Official Website", "CJP"],
           "publisher": {
             "@type": "Organization",
-            "name": "Cockroach Janta Party",
+            "name": "Cockroach Janta Party Official Website",
             "url": "https://cockroachjantapartywale.com",
             "logo": "https://cockroachjantapartywale.com/assets/img/logo.webp"
           }
