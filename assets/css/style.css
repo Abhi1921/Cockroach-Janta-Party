@@ -1509,7 +1509,7 @@ header.nav::-webkit-scrollbar,
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
   .photo-strip {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
   .about-gallery {
     grid-template-columns: 1fr;
@@ -1608,8 +1608,8 @@ header.nav::-webkit-scrollbar,
     grid-template-columns: 1fr;
   }
   .photo-strip {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.45rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.75rem;
   }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
