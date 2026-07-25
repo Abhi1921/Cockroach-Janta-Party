@@ -2634,3 +2634,188 @@ img, iframe, video {
   }
 }
 
+/* ==========================================================================
+   July 23-25 News Integration & Poster Showcase Modern Styling
+   ========================================================================== */
+
+/* July 23-25 News Ticker Top Banner */
+.july-news-ticker-strip {
+  background: linear-gradient(90deg, #1A1410 0%, #2A1215 50%, #1A1410 100%);
+  border-bottom: 2px solid var(--saffron);
+  color: #FFFDF7;
+  padding: 0.55rem var(--gutter);
+  position: relative;
+  z-index: 1001;
+}
+.july-news-ticker-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+.july-badge {
+  background: linear-gradient(135deg, var(--saffron) 0%, var(--signal) 100%);
+  color: #FFFDF7;
+  font-family: var(--font-mono);
+  font-weight: 900;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  box-shadow: 0 0 12px rgba(224, 101, 30, 0.4);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #22C55E;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+.july-ticker-text {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.95);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.july-ticker-text strong {
+  color: var(--saffron-bright);
+}
+
+/* Poster Showcase Grid & Card Styling */
+.poster-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+@media (max-width: 900px) {
+  .poster-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.poster-card {
+  background: #140E0C;
+  border: 2px solid rgba(224, 101, 30, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.poster-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--saffron);
+  box-shadow: 0 20px 45px rgba(224, 101, 30, 0.3);
+}
+.poster-card-img {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #000;
+}
+.poster-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.poster-card:hover .poster-card-img img {
+  transform: scale(1.05);
+}
+.poster-card-body {
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #1A1410 0%, #0F0B09 100%);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.poster-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--saffron);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+.poster-card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: #FFFDF7;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+.poster-card-desc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 1rem;
+  line-height: 1.45;
+}
+
+/* Glassmorphic July Timeline Cards */
+.july-timeline {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.july-timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.5rem;
+  background: #FFFDF7;
+  border: 1.5px solid var(--line);
+  border-left: 5px solid var(--saffron);
+  padding: 1.4rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(26, 20, 16, 0.05);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s;
+}
+.july-timeline-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 10px 28px rgba(224, 101, 30, 0.12);
+}
+@media (max-width: 640px) {
+  .july-timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+.july-date-badge {
+  font-family: var(--font-mono);
+  font-weight: 900;
+  font-size: 0.85rem;
+  color: var(--saffron-dark);
+  background: var(--saffron-bg);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(224, 101, 30, 0.2);
+  text-align: center;
+  height: fit-content;
+}
+.july-item-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 0 0 0.4rem;
+  color: var(--ink);
+}
+.july-item-content p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+
