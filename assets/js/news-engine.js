@@ -16,6 +16,21 @@
   // Default curated trending news & posters with 2 PM Modi Videos + Top News Channels
   const defaultTrendingNews = [
     {
+      id: "news-dharmendra-pradhan-statement-25july",
+      title: "Jantar Mantar Protest News LIVE: इस्तीफा देने पर बोले धर्मेंद्र प्रधान! | Delhi CJP | Big Breaking",
+      category: "cjp",
+      source: "Aaj Tak & CJP Bureau · New Delhi Live Desk",
+      sourceUrl: "protests.html",
+      pubDate: "25 July 2026",
+      description: "Union Education Minister Dharmendra Pradhan breaks silence on Opposition & CJP demands for his resignation over NEET paper leak scandals during ongoing Jantar Mantar agitations.",
+      image: "assets/img/cjp/trending-cjp-poster-25july.webp",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🚨 BIG BREAKING · DHARMENDRA PRADHAN",
+      badgeColor: "var(--signal)",
+      tags: ["#DharmendraPradhan", "#JantarMantarProtest", "#ResignationStatement", "#DelhiCJP", "#BigBreaking"],
+      fullText: "On 25 July 2026, Union Education Minister Dharmendra Pradhan addressed the national media regarding demands for his resignation following widespread youth protests led by Cockroach Janta Party (CJP) at Jantar Mantar. The minister emphasized ongoing Supreme Court mandated third-party server audits and NTA structural reforms."
+    },
+    {
       id: "news-pm-modi-video-1",
       title: "PM Narendra Modi Live Address: Prime Minister Speaks on National Student Welfare & Exam Reforms",
       category: "cjp",
@@ -23,7 +38,7 @@
       sourceUrl: "https://www.youtube.com/@cockroachrevolution2029",
       pubDate: "25 July 2026",
       description: "Prime Minister Narendra Modi addresses the nation regarding educational technology audits, transparent entrance examinations, and youth empowerment initiatives.",
-      image: "assets/img/cjp/trending-cjp-poster-25july.webp",
+      image: "assets/img/cjp/cjp-jp-nadda-talks-25july.webp",
       youtubeId: VERIFIED_YT_ID,
       badge: "🎥 PM MODI VIDEO 1",
       badgeColor: "#dc2626",
@@ -225,7 +240,7 @@
   // Real Google News Live RSS Fetcher
   const fetchLiveGoogleNews = async () => {
     try {
-      const rssUrl = encodeURIComponent("https://news.google.com/rss/search?q=NEET+OR+student+protest+OR+youth+unemployment+India&hl=en-IN&gl=IN&ceid=IN:en");
+      const rssUrl = encodeURIComponent("https://news.google.com/rss/search?q=Dharmendra+Pradhan+OR+Jantar+Mantar+protest+OR+NEET+paper+leak&hl=en-IN&gl=IN&ceid=IN:en");
       const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
       const res = await fetch(apiUrl);
       if (!res.ok) return;
