@@ -10,7 +10,7 @@
     year: 'numeric'
   });
 
-  // Default curated trending news & posters (Full 16 May to 25 July 2026 updates)
+  // Default curated trending news & posters (Full 16 May to 25 July 2026 updates - 100% Unique Image Paths)
   const defaultTrendingNews = [
     {
       id: "news-cjp-25july-summit",
@@ -20,7 +20,7 @@
       sourceUrl: "manifesto.html",
       pubDate: "25 July 2026",
       description: "National Youth Executive convenes at Jantar Mantar headquarters to adopt a binding 5-point resolution demanding independent 3rd-party server audits for all national competitive exams.",
-      image: "assets/img/cjp/cjp-demands-manifesto-art.webp",
+      image: "assets/img/cjp/trending-cjp-poster-25july.webp",
       badge: "🔥 25 JULY SUMMIT",
       badgeColor: "var(--signal)",
       tags: ["#25JulySummit", "#ExamTransparency", "#MainBhiCockroach", "#CJPResolution"],
@@ -34,7 +34,7 @@
       sourceUrl: "protests.html",
       pubDate: "24 July 2026",
       description: "Central government representatives issue an official invitation for talks with CJP leadership on 24 July regarding NEET paper leak reforms and Dharmendra Pradhan's resignation.",
-      image: "assets/img/cjp/trending-news-24july.webp",
+      image: "assets/img/cjp/cjp-jp-nadda-talks-25july.webp",
       badge: "🚨 24 JULY BREAKING",
       badgeColor: "var(--signal)",
       tags: ["#24JulyGovtTalks", "#JantarMantarProtest", "#AbhijeetDipke", "#NEETReforms"],
@@ -76,7 +76,7 @@
       sourceUrl: "https://news.google.com/search?q=NEET+paper+leak",
       pubDate: "22 July 2026",
       description: "Supreme Court directs central authorities to publish normalized scorecards and conduct independent third-party audits of all national competitive exams.",
-      image: "assets/img/cjp/cjp-22july-protest-art.webp",
+      image: "assets/img/cjp/cjp-sc-hearing-victory.webp",
       badge: "🎓 EXAM REFORM",
       badgeColor: "var(--gold)",
       tags: ["#NEETAudit", "#ExamIntegrity", "#StudentRights", "#GoogleNews"],
@@ -118,7 +118,7 @@
       sourceUrl: "articles.html",
       pubDate: "10 July 2026",
       description: "Over 50,000 registered CJP student auditors initiate decentralized document and server verification across major Indian university campuses.",
-      image: "assets/img/cjp/cjp-news-poster-1.webp",
+      image: "assets/img/cjp/cjp-campus-audit-squads.webp",
       badge: "⚡ CAMPUS AUDIT",
       badgeColor: "var(--gold)",
       tags: ["#CampusAudit", "#CJPVolunteers", "#ExamSecurity"],
@@ -146,7 +146,7 @@
       sourceUrl: "manifesto.html",
       pubDate: "20 June 2026",
       description: "Founder Abhijeet Dipke unveils the historic manifesto demanding legislative protection for examinees and youth employment quotas.",
-      image: "assets/img/cjp/cjp-vision-survive-art.webp",
+      image: "assets/img/cjp/cjp-demands-manifesto-art.webp",
       badge: "📜 MANIFESTO RELEASE",
       badgeColor: "var(--gold)",
       tags: ["#5PointManifesto", "#StudentRights", "#AbhijeetDipke"],
