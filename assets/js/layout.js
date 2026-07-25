@@ -2,6 +2,7 @@
   const S = window.CJP_SITE || {};
   const page = (document.body.dataset.page || "").toLowerCase();
   const year = new Date().getFullYear();
+  const active = (href) => (page === href.toLowerCase() ? " active" : "");
 
   // Indian names list for developer support ticker
   const donorNames = [
