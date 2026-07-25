@@ -482,8 +482,12 @@
 
   // Inject Section 2 Scanner Band on Every Page
   const injectSection2Scanner = () => {
-    if (document.getElementById("sec2-qr-scanner-band")) return;
     if (page === "donate") return;
+    const oldSec = document.getElementById("support-dev-layout") || document.querySelector(".support-top-sec2");
+    if (oldSec && oldSec.id !== "sec2-qr-scanner-band") {
+      oldSec.remove();
+    }
+    if (document.getElementById("sec2-qr-scanner-band")) return;
 
     const firstSection = document.querySelector("main section, section, .hero-home, .hero, .page-header");
     if (firstSection) {
