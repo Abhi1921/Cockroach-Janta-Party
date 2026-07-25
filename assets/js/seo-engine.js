@@ -1,7 +1,7 @@
 
 /**
  * CJP Trending SEO Engine & Indexing System
- * Automates OpenGraph, Twitter Cards, Schema.org Structured Data, and Indexing Pings.
+ * Automates OpenGraph, Twitter Cards, Schema.org Structured Data, FAQPage, and Indexing Pings.
  */
 (() => {
   const S = window.CJP_SITE || {};
@@ -9,17 +9,48 @@
   const canonicalUrl = "https://cockroachjantapartywale.com" + window.location.pathname.replace(/\/index\.html$/, "/").replace(/\.html$/, "");
   const todayIso = new Date().toISOString();
 
-  // Dynamic Trending SEO Keywords
+  // Comprehensive Union SEO Keywords (Incorporates all terms from thecockroachjantaparty.org.in)
   const trendingKeywords = [
     "Cockroach Janta Party",
+    "Cockroach Janata Party",
+    "The Cockroach Janta Party",
+    "TCJP",
+    "CJP",
+    "कॉकरोच जनता पार्टी",
+    "cockroach janta party manifesto",
+    "cockroach janta party members",
+    "cockroach janta party join",
+    "cockroach janta party demands",
+    "cockroach janta party eligibility",
+    "India cockroach party",
+    "Janta party India 2026",
+    "Indian political satire",
+    "satirical political party India",
+    "Indian youth political movement",
+    "Indian electoral reform",
+    "anti-defection law India",
+    "women reservation 50 percent India",
+    "media monopoly India",
+    "Rajya Sabha post-retirement appointment",
+    "Ambani Adani media licences",
+    "graduate unemployment India",
+    "Indian politics 2026",
+    "unemployment political movement India",
+    "overqualified unemployed India",
+    "burnt-out youth India",
+    "Gen Z politics India",
+    "Gen Z political movement India",
+    "engineering graduates jobless India",
+    "why graduates are unemployed in India",
+    "India youth unemployment 2026",
+    "naukri nahi mil rahi",
+    "degree hai job nahi",
+    "satirical political movement India",
     "Cockroach Janta Party Wale",
     "cockroach janta party wale",
-    "cockroach janta party",
-    "Cockroach Janata Party",
     "Cockroach Party",
     "Cockroach Janta Party website",
     "Cockroach Janta Party India",
-    "CJP",
     "CJP official website",
     "CJP India",
     "cockroachjantapartywale.com",
@@ -41,7 +72,6 @@
     "exam integrity manifesto",
     "5 demands CJP",
     "youth political party India",
-    "satire political party India",
     "CJI cockroach remark",
     "India burnt out youth",
     "CJP swarm",
@@ -54,7 +84,6 @@
     "CJP leader",
     "Abhijeet Dipke hunger strike",
     "student rights movement India",
-    "Gen Z politics India",
     "CJP articles",
     "CJP manifesto",
     "CJP protests",
@@ -73,6 +102,26 @@
   }
   metaKeywords.content = trendingKeywords;
 
+  // Ensure Meta Tags Alignment from thecockroachjantaparty.org.in
+  const metaAdditions = [
+    { name: "format-detection", content: "telephone=no, address=no, email=no" },
+    { property: "og:see_also", content: "https://cockroachjantaparty.org" },
+    { property: "og:locale", content: "en_IN" },
+    { property: "og:site_name", content: "The Cockroach Janta Party" }
+  ];
+
+  metaAdditions.forEach(m => {
+    const selector = m.name ? `meta[name="${m.name}"]` : `meta[property="${m.property}"]`;
+    let tag = document.querySelector(selector);
+    if (!tag) {
+      tag = document.createElement('meta');
+      if (m.name) tag.name = m.name;
+      if (m.property) tag.setAttribute('property', m.property);
+      document.head.appendChild(tag);
+    }
+    tag.content = m.content;
+  });
+
   // Ensure Canonical Tag
   let linkCanonical = document.querySelector('link[rel="canonical"]');
   if (!linkCanonical) {
@@ -82,7 +131,7 @@
   }
   linkCanonical.href = canonicalUrl.endsWith('/') ? canonicalUrl : canonicalUrl + "/";
 
-  // Schema.org Live News & Event Structured Data Injection
+  // Schema.org Live News, FAQPage & Event Structured Data Injection
   const injectStructuredData = () => {
     if (document.getElementById("ld-trending-news")) return;
 
@@ -93,14 +142,119 @@
           "@type": "WebSite",
           "@id": canonicalUrl + "#website",
           "url": "https://cockroachjantapartywale.com",
-          "name": "Cockroach Janta Party Official Website",
-          "alternateName": ["Cockroach Janta Party", "Cockroach Janta Party Wale", "Cockroach Janata Party", "CJP Official Website", "CJP"],
+          "name": "The Cockroach Janta Party",
+          "alternateName": ["Cockroach Janta Party", "Cockroach Janta Party Wale", "Cockroach Janata Party", "TCJP", "CJP"],
           "publisher": {
             "@type": "Organization",
-            "name": "Cockroach Janta Party Official Website",
+            "name": "The Cockroach Janta Party",
             "url": "https://cockroachjantapartywale.com",
             "logo": "https://cockroachjantapartywale.com/assets/img/logo.webp"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://cockroachjantapartywale.com/articles?q={search_term_string}",
+            "query-input": "required name=search_term_string"
           }
+        },
+        {
+          "@type": "Organization",
+          "@id": canonicalUrl + "#organization",
+          "name": "The Cockroach Janta Party",
+          "alternateName": ["TCJP", "CJP"],
+          "url": "https://cockroachjantapartywale.com",
+          "logo": "https://cockroachjantapartywale.com/assets/img/logo.webp",
+          "image": "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-25july.png",
+          "areaServed": { "@type": "Country", "name": "India" },
+          "description": "The Cockroach Janta Party (CJP) is an Indian youth movement & satirical political platform founded by Abhijeet Dipke demanding NEET paper leak audits, judicial neutrality, and student rights.",
+          "slogan": "Voice of India's Burnt-Out Youth",
+          "email": "contact@cockroachjantapartywale.com",
+          "keywords": trendingKeywords
+        },
+        {
+          "@type": "FAQPage",
+          "@id": canonicalUrl + "#faqpage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is The Cockroach Janta Party?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Cockroach Janta Party (CJP) is an Indian youth movement founded in May 2026 by Abhijeet Dipke, in response to the public use of 'cockroach' as a slur against young, unemployed and politically active Indians. It reclaims the insult and pairs it with five demands covering judicial reform, electoral integrity, women's reservation, media monopoly, and the anti-defection law."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why is it called the Cockroach Janta Party?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The name reclaims a slur used against young, jobless and online Indians. Reclaiming insults is a recurring pattern in political movements: the more derisive the original term, the more durable the eventual movement."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the five demands of the Cockroach Janta Party?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The movement’s five demands are: (1) No Rajya Sabha seats for retiring Chief Justices. (2) Criminal liability under UAPA for any deleted legitimate vote. (3) Fifty per cent women's reservation in Parliament and Cabinet, without expanding the total seat count. (4) Cancellation of broadcast licences for media houses owned by Ambani and Adani. (5) A twenty-year bar on defectors from contesting elections or holding any public office."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I join the Cockroach Janta Party?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To join the movement and get your free digital card, visit our join page on cockroachjantapartywale.com/join. The platform is free and open to all resilient youth demanding exam integrity."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is the Cockroach Janta Party a registered political party?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The CJP movement is not registered with the Election Commission of India and describes itself as a platform and civic youth movement rather than a conventional party."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is the Cockroach Janta Party membership free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, signing up and getting your membership card on this website is 100% free with no fees or charges."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is the Cockroach Janta Party headquartered?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The movement operates wherever the wifi works, maintained by independent developers and student volunteers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who runs the Cockroach Janta Party?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The CJP movement was founded in May 2026 by Abhijeet Dipke along with student delegates across India."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the Cockroach Janta Party contest elections?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The CJP movement fields no candidates and is not registered with the Election Commission of India."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is the Cockroach Janta Party affiliated with any political party?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. CJP is independent and not affiliated with, endorsed by, or funded by any political party or election campaign."
+              }
+            }
+          ]
         },
         {
           "@type": "NewsArticle",
@@ -108,8 +262,8 @@
           "headline": "Cockroach Janta Party Mega Youth Movement & NEET Reform Drive",
           "description": "Live coverage of Cockroach Janta Party (CJP) protests, Jantar Mantar hunger strike, and student integrity demands.",
           "image": [
-            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-1.webp",
-            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-2.webp"
+            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-25july.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/sansad-march-live.webp"
           ],
           "datePublished": "2026-07-20T08:00:00+05:30",
           "dateModified": todayIso,
@@ -128,49 +282,6 @@
           "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": canonicalUrl
-          }
-        },
-        {
-          "@type": "Event",
-          "@id": canonicalUrl + "#sansad-chalo-event",
-          "name": "CJP Sansad Chalo Mega Youth March",
-          "startDate": "2026-07-20T10:00:00+05:30",
-          "endDate": "2026-07-20T18:00:00+05:30",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "image": [
-            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-22july.webp",
-            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-1.webp"
-          ],
-          "location": {
-            "@type": "Place",
-            "name": "Jantar Mantar",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Jantar Mantar Road",
-              "addressLocality": "New Delhi",
-              "postalCode": "110001",
-              "addressCountry": "IN"
-            }
-          },
-          "description": "Massive peaceful youth protest for examination integrity, student representation, and public audit of competitive exams.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR",
-            "availability": "https://schema.org/InStock",
-            "url": "https://cockroachjantapartywale.com/protests",
-            "validFrom": "2026-07-16T00:00:00+05:30"
-          },
-          "performer": {
-            "@type": "Organization",
-            "name": "Cockroach Janta Party",
-            "url": "https://cockroachjantapartywale.com"
-          },
-          "organizer": {
-            "@type": "Organization",
-            "name": "Cockroach Janta Party",
-            "url": "https://cockroachjantapartywale.com"
           }
         }
       ]
