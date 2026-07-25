@@ -1,6 +1,7 @@
 /**
  * CJP Google & Live Trending News Engine with Verified YouTube Live Iframe Integration
- * Features real-time Google News, top news channel bulletins (Aaj Tak, NDTV, India Today, BBC, Times Now, Republic, News18, Zee News, The Print), and 2 PM Modi Video embeds.
+ * Features real-time Google News, top news channel bulletins (Aaj Tak, NDTV, India Today, BBC, Times Now, Republic, News18, Zee News, The Print, WION), 
+ * 2 PM Modi Video embeds, and a Breaking News Resignation Popup for Dharmendra Pradhan.
  */
 (() => {
   const S = window.CJP_SITE || {};
@@ -13,7 +14,7 @@
   // Verified working YouTube Video ID (Tested 100% embeddable across all domains)
   const VERIFIED_YT_ID = "5UjaUWbnWZ4";
 
-  // Default curated trending news & posters with 2 PM Modi Videos + Top News Channels
+  // Default curated trending news & posters with 2 PM Modi Videos + Unique Top News Channels
   const defaultTrendingNews = [
     {
       id: "news-dharmendra-pradhan-statement-25july",
@@ -181,34 +182,19 @@
       fullText: "Zee News analyzes the core demands of the Cockroach Janta Party manifesto and its resonance among young voters."
     },
     {
-      id: "news-the-print",
-      title: "The Print Analysis: Satirical Politics Reclaiming Dignity for Burnt-Out Indian Youth",
-      category: "cjp",
-      source: "The Print · Opinion & Politics Desk",
-      sourceUrl: "https://theprint.in",
+      id: "news-wion-world",
+      title: "WION World News: Indian Youth Civil Movement Draws Global Academic Attention",
+      category: "google",
+      source: "WION News · International Bureau",
+      sourceUrl: "https://www.wionews.com",
       pubDate: "12 June 2026",
-      description: "The Print in-depth feature story on how digital satire and peaceful protests are shaping educational reform dialogue.",
+      description: "WION international broadcast examining digital satire, student resilience, and democratic accountability movements.",
       image: "assets/img/cjp/press-conference.webp",
       youtubeId: VERIFIED_YT_ID,
-      badge: "✍️ THE PRINT",
-      badgeColor: "var(--saffron)",
-      tags: ["#ThePrint", "#YouthPolitics", "#SatireMovement", "#ThePrintIndia"],
-      fullText: "The Print explores the creative campaign strategies of CJP and its impact on national education policy debates."
-    },
-    {
-      id: "news-cjp-swarm-bureau",
-      title: "CJP Swarm Bureau: National Executive Adopts 2026 Binding Resolution at Jantar Mantar",
-      category: "cjp",
-      source: "CJP National Swarm Bureau · New Delhi",
-      sourceUrl: "manifesto.html",
-      pubDate: "16 May 2026",
-      description: "CJP founding bureau releases its national declaration pledging zero tolerance for paper leaks and mandatory server logs.",
-      image: "assets/img/cjp/together-resilient.webp",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "🔥 CJP BUREAU",
-      badgeColor: "var(--signal)",
-      tags: ["#CJPBureau", "#MainBhiCockroach", "#Resolution2026", "#CJPExecutive"],
-      fullText: "CJP National Bureau confirms ongoing nationwide peaceful vigils until comprehensive entrance exam server audits are enforced."
+      badge: "🌍 WION WORLD",
+      badgeColor: "#059669",
+      tags: ["#WIONNews", "#GlobalYouth", "#SatireMovement", "#WION"],
+      fullText: "WION World News reports on how Gen-Z movements in India utilize satire and digital advocacy to pressure institutions for exam transparency."
     }
   ];
 
@@ -246,7 +232,7 @@
       if (!res.ok) return;
       const data = await res.json();
       if (data && data.status === "ok" && Array.isArray(data.items) && data.items.length > 0) {
-        const fetchedGoogleItems = data.items.slice(0, 6).map((item, idx) => ({
+        const fetchedGoogleItems = data.items.slice(0, 4).map((item, idx) => ({
           id: `gn-live-${idx}`,
           title: item.title || "Latest Student & Youth News Update",
           category: "google",
@@ -335,7 +321,7 @@
                 ${item.source}
               </span>
               <span style="font-family: var(--font-mono); font-size: 0.62rem; color: #9f1239; font-weight: 800; background: #fff5f5; border: 1px solid #fecdd3; padding: 0.15rem 0.45rem; border-radius: 4px;">
-                📺 ${item.badge.includes('MODI') ? 'PM Modi Video' : 'News Iframe'}
+                📺 ${item.badge.includes('MODI') ? 'PM Modi Video' : 'News Channel'}
               </span>
             </div>
             <h3 style="font-family: var(--font-display); font-size: 1.15rem; line-height: 1.25; margin: 0 0 0.6rem; color: var(--ink);">
@@ -401,6 +387,99 @@
 
     document.querySelectorAll(".load-yt-inline-btn").forEach((btn) => {
       btn.addEventListener("click", () => attachInlineYt(btn));
+    });
+  };
+
+  // Breaking News Popup Alert Function for Dharmendra Pradhan Resignation Statement
+  const openDharmendraPradhanResignationPopup = () => {
+    let popup = document.getElementById("cjp-breaking-popup-modal");
+    if (!popup) {
+      popup = document.createElement("div");
+      popup.id = "cjp-breaking-popup-modal";
+      popup.style.cssText = `
+        position: fixed; inset: 0; z-index: 9999999;
+        background: rgba(18, 8, 8, 0.9); backdrop-filter: blur(14px);
+        display: flex; align-items: center; justify-content: center;
+        padding: 1rem; opacity: 0; transition: opacity 0.35s ease;
+      `;
+      document.body.appendChild(popup);
+    }
+
+    popup.innerHTML = `
+      <div style="background: #ffffff; border: 3px solid var(--signal); border-radius: 22px; max-width: 740px; width: 100%; max-height: 92vh; overflow-y: auto; box-shadow: 0 28px 75px rgba(159,18,57,0.4); position: relative; animation: rise 0.35s var(--ease);">
+        <button type="button" id="closeBreakingPopup" style="position: absolute; top: 1rem; right: 1rem; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--signal); color: #fff; font-size: 1.6rem; cursor: pointer; display: grid; place-items: center; z-index: 30; box-shadow: 0 4px 14px rgba(0,0,0,0.3);">×</button>
+        
+        <!-- Live YouTube Video Iframe Embed Header -->
+        <div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #000;">
+          <iframe 
+            src="https://www.youtube.com/embed/${VERIFIED_YT_ID}?autoplay=1&amp;rel=0&amp;modestbranding=1" 
+            title="Jantar Mantar Protest News LIVE: इस्तीफा देने पर बोले धर्मेंद्र प्रधान! | Delhi CJP | Big Breaking" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+          <span style="position: absolute; top: 0.85rem; left: 0.85rem; background: var(--signal); color: #fff; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.8rem; border-radius: 999px; pointer-events: none; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+            🚨 BIG BREAKING POPUP · DHARMENDRA PRADHAN
+          </span>
+        </div>
+
+        <div style="padding: 1.85rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--signal); text-transform: uppercase;">
+              🔥 AAJ TAK &amp; CJP BUREAU · NEW DELHI LIVE
+            </span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); font-weight: 700;">
+              25 JULY 2026
+            </span>
+          </div>
+
+          <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.85rem); line-height: 1.25; margin: 0 0 0.85rem; color: var(--ink);">
+            Jantar Mantar Protest News LIVE: <em>इस्तीफा देने पर बोले धर्मेंद्र प्रधान!</em> | Delhi CJP | Big Breaking
+          </h2>
+
+          <div style="background: #fffcf8; border-left: 4px solid var(--signal); padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
+            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: var(--signal); margin-bottom: 0.35rem;">
+              📢 OFFICIAL STATEMENT &amp; PROTEST SUMMARY:
+            </strong>
+            <p style="font-size: 0.95rem; line-height: 1.65; color: var(--ink); margin: 0;">
+              Union Education Minister Dharmendra Pradhan has addressed national press correspondents regarding Opposition and Cockroach Janta Party (CJP) youth demands for his resignation over NEET paper leak scandals. The minister emphasized ongoing Supreme Court directed 3rd-party server audits and NTA structural reforms while investigating paper leak syndicates.
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); margin-bottom: 1.5rem;">
+            Meanwhile, thousands of students led by CJP founder Abhijeet Dipke remain seated at Jantar Mantar, Delhi, confirming that protests will continue until binding exam audit laws are passed in Parliament.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fff5f5; border: 1px solid #fecdd3; color: var(--signal); padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#DharmendraPradhan</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fff5f5; border: 1px solid #fecdd3; color: var(--signal); padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#JantarMantarProtest</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fff5f5; border: 1px solid #fecdd3; color: var(--signal); padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#ResignationStatement</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fff5f5; border: 1px solid #fecdd3; color: var(--signal); padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#DelhiCJP</span>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 1.25rem;">
+            <a href="protests.html" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem;">
+              ✊ View Full Protests &amp; Demand Coverage →
+            </a>
+            <button type="button" id="closeBreakingPopupBtn" class="btn btn-ghost" style="padding: 0.65rem 1rem;">
+              Close Alert ×
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    popup.style.opacity = "1";
+
+    const closePopup = () => {
+      popup.style.opacity = "0";
+      setTimeout(() => popup.remove(), 350);
+    };
+
+    document.getElementById("closeBreakingPopup")?.addEventListener("click", closePopup);
+    document.getElementById("closeBreakingPopupBtn")?.addEventListener("click", closePopup);
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) closePopup();
     });
   };
 
@@ -487,9 +566,22 @@
     const section = document.getElementById("google-news-section");
     if (!section) return;
 
+    // Filter bar & Search bar & Permanent Trigger for Dharmendra Pradhan Resignation Popup
     const filterContainer = document.getElementById("news-filter-tabs");
     if (filterContainer) {
       filterContainer.innerHTML = `
+        <div style="background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%); border: 2px solid var(--signal); border-radius: 14px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; box-shadow: 0 6px 20px rgba(225, 29, 72, 0.12);">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="width: 10px; height: 10px; background: var(--signal); border-radius: 50%; display: inline-block; animation: pulse 1.2s ease infinite;"></span>
+            <strong style="font-family: var(--font-display); font-size: 0.95rem; color: #9f1239;">
+              🚨 BREAKING NEWS POPUP: Jantar Mantar Protest LIVE — इस्तीफा देने पर बोले धर्मेंद्र प्रधान!
+            </strong>
+          </div>
+          <button type="button" id="triggerBreakingPopupBtn" class="btn btn-solid" style="padding: 0.4rem 0.9rem; font-size: 0.78rem; background: var(--signal); white-space: nowrap;">
+            ▶️ Open Breaking News Popup →
+          </button>
+        </div>
+
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; justify-content: space-between;">
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="catTabButtons">
             <button type="button" class="btn btn-solid cat-btn active" data-cat="all">🔥 All News &amp; PM Modi Videos</button>
@@ -501,6 +593,8 @@
           </div>
         </div>
       `;
+
+      document.getElementById("triggerBreakingPopupBtn")?.addEventListener("click", openDharmendraPradhanResignationPopup);
 
       document.querySelectorAll(".cat-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -523,6 +617,12 @@
 
     renderNewsGrid();
     fetchLiveGoogleNews();
+
+    // Auto trigger Breaking News Popup on index page load (once per session)
+    if (!sessionStorage.getItem("cjp_dharmendra_popup_shown")) {
+      sessionStorage.setItem("cjp_dharmendra_popup_shown", "true");
+      setTimeout(openDharmendraPradhanResignationPopup, 1200);
+    }
   };
 
   if (document.readyState === "loading") {
