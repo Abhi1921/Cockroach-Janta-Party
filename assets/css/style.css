@@ -878,15 +878,28 @@ header.nav::-webkit-scrollbar,
 .demand-list p { margin: 0; color: var(--muted); }
 
 /* Clean 3-Column Card Layout System (Desktop 3 per row, Tablet 2, Mobile 1) */
-.cards-3col, .card-grid, .photo-strip, .gallery-grid {
+.cards-3col, .card-grid, .gallery-grid, #google-news-grid, .news-grid-3col, .protest-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
-.card-img-frame {
-  aspect-ratio: 16 / 9;
-  max-height: 170px;
+@media (max-width: 960px) {
+  .cards-3col, .card-grid, .gallery-grid, #google-news-grid, .news-grid-3col, .protest-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+}
+@media (max-width: 600px) {
+  .cards-3col, .card-grid, .gallery-grid, #google-news-grid, .news-grid-3col, .protest-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+.card-img-frame, .cjp-news-card .img-wrap {
+  aspect-ratio: 16 / 10;
+  max-height: 180px;
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
@@ -895,32 +908,34 @@ header.nav::-webkit-scrollbar,
   margin-bottom: 0.85rem;
   box-shadow: 0 6px 18px rgba(28, 16, 16, 0.1);
 }
-.card-img-frame img {
+.card-img-frame img, .cjp-news-card img {
   width: 100%;
   height: 100%;
+  max-height: 180px;
   object-fit: cover;
   transition: transform 0.4s var(--ease);
 }
-.content-card:hover .card-img-frame img {
+.content-card:hover .card-img-frame img, .cjp-news-card:hover img {
   transform: scale(1.06);
 }
 
-.content-card {
+.content-card, .cjp-news-card {
   border: 1px solid var(--line); background: var(--surface);
   padding: 1.25rem; border-radius: var(--radius);
   box-shadow: 0 4px 16px rgba(28,16,16,0.04);
   transition: transform 0.25s var(--ease), box-shadow 0.25s, border-color 0.25s;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
-.content-card:hover {
+.content-card:hover, .cjp-news-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 14px 32px rgba(28,16,16,0.1);
   border-color: rgba(159,18,57,0.35);
 }
-.content-card h3 { font-family: var(--font-display); margin: 0 0 0.45rem; font-size: 1.15rem; }
-.content-card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-.content-card .meta {
+.content-card h3, .cjp-news-card h3 { font-family: var(--font-display); margin: 0 0 0.45rem; font-size: 1.15rem; }
+.content-card p, .cjp-news-card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.content-card .meta, .cjp-news-card .meta {
   font-family: var(--font-mono); font-size: 0.62rem;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal); margin-bottom: 0.45rem;
 }

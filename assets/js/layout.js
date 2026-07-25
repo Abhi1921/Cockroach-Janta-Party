@@ -304,10 +304,10 @@
       🔥 TRENDING POSTER 2026
     </div>
     <div class="widget-body" id="openPosterModalBtn" style="display: flex; gap: 0.75rem; align-items: center; cursor: pointer;">
-      <img src="assets/img/cjp/trending-cjp-poster-1.webp" alt="CJP Trending Campaign Poster 2026" width="70" height="90" style="object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.25); flex-shrink: 0;" loading="eager">
+      <img src="assets/img/cjp/trending-cjp-poster-25july.png" alt="CJP Trending Campaign Poster 2026" width="70" height="90" style="object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.25); flex-shrink: 0;" loading="eager">
       <div class="widget-info">
         <strong style="font-family: var(--font-display); font-size: 0.92rem; color: #fff; line-height: 1.15; display: block;">WE SURVIVE. WE RISE. WE LEAD.</strong>
-        <p style="font-size: 0.72rem; color: rgba(255,255,255,0.85); margin: 0.2rem 0 0.35rem; line-height: 1.25;">Sansad March Poster · Delhi</p>
+        <p style="font-size: 0.72rem; color: rgba(255,255,255,0.85); margin: 0.2rem 0 0.35rem; line-height: 1.25;">25 July Swarm Poster · Delhi</p>
         <span class="btn-mini" style="font-family: var(--font-mono); font-size: 0.62rem; font-weight: 800; color: #fbbf24; text-transform: uppercase;">View Poster Modal →</span>
       </div>
     </div>
@@ -593,7 +593,7 @@
         <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 800; color: var(--signal); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">🔥 OFFICIAL TRENDING CAMPAIGN POSTER</span>
         <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 1rem; color: var(--ink);">Cockroach Janta Party Wale</h2>
         <div style="border-radius: 14px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(0,0,0,0.2); margin-bottom: 1.25rem;">
-          <img src="assets/img/cjp/trending-cjp-poster-1.webp" alt="CJP Official Trending Poster - We Survive We Rise We Lead" style="width: 100%; height: auto; display: block;">
+          <img src="assets/img/cjp/trending-cjp-poster-25july.png" alt="CJP Official Trending Poster - We Survive We Rise We Lead" style="width: 100%; height: auto; display: block;">
         </div>
         <p style="font-size: 0.95rem; line-height: 1.5; color: var(--muted); margin-bottom: 1.25rem;">
           <strong>"Because degrees are temporary, survival is permanent."</strong><br>
@@ -601,7 +601,7 @@
         </p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
           <a href="join" class="btn btn-solid" style="flex: 1; text-align: center;">✊ Join Swarm Free</a>
-          <a href="assets/img/cjp/trending-cjp-poster-1.webp" target="_blank" download class="btn btn-ghost" style="flex: 1; text-align: center;">📥 Download Poster</a>
+          <a href="assets/img/cjp/trending-cjp-poster-25july.png" target="_blank" download class="btn btn-ghost" style="flex: 1; text-align: center;">📥 Download Poster</a>
         </div>
       </div>
     `;
