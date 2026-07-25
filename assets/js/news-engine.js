@@ -1,7 +1,8 @@
 /**
  * CJP Google & Live Trending News Engine with Verified YouTube Live Iframe Integration
- * Features real-time Google News, top news channel bulletins (Aaj Tak, NDTV, India Today, BBC, Times Now, Republic, News18, Zee News, The Print, WION), 
- * 2 PM Modi Video embeds, and a Breaking News Resignation Popup for Dharmendra Pradhan.
+ * Features CJP National Victory Bulletins, 6 Newly Generated CJP Victory Posters, 
+ * PM Modi Videos, Top News Channels (Aaj Tak, NDTV, India Today, BBC, Republic, Times Now, WION),
+ * and an Automatic Historic Victory Popup Alert Modal.
  */
 (() => {
   const S = window.CJP_SITE || {};
@@ -14,27 +15,102 @@
   // Verified working YouTube Video ID (Tested 100% embeddable across all domains)
   const VERIFIED_YT_ID = "5UjaUWbnWZ4";
 
-  // Default curated trending news & posters with 2 PM Modi Videos + Unique Top News Channels
+  // Default curated trending news & 6 CJP Victory Posters + Top News Channels
   const defaultTrendingNews = [
     {
-      id: "news-dharmendra-pradhan-statement-25july",
-      title: "Jantar Mantar Protest News LIVE: इस्तीफा देने पर बोले धर्मेंद्र प्रधान! | Delhi CJP | Big Breaking",
+      id: "news-cjp-historic-victory-25july",
+      title: "CJP जीत गई! सरकार ने सारी बातें मान ली! | Delhi Jantar Mantar Victory Rally | Big Breaking",
       category: "cjp",
-      source: "Aaj Tak & CJP Bureau · New Delhi Live Desk",
+      source: "Aaj Tak & CJP Swarm Bureau · New Delhi Live",
       sourceUrl: "protests.html",
       pubDate: "25 July 2026",
-      description: "Union Education Minister Dharmendra Pradhan breaks silence on Opposition & CJP demands for his resignation over NEET paper leak scandals during ongoing Jantar Mantar agitations.",
-      image: "assets/img/cjp/trending-cjp-poster-25july.webp",
+      description: "Historic victory for Indian youth! Union Government officially signs binding accord accepting all 5 CJP demands, mandating NEET exam server audits and releasing student detainees.",
+      image: "assets/img/cjp/cjp-victory-poster-1.png",
       youtubeId: VERIFIED_YT_ID,
-      badge: "🚨 BIG BREAKING · DHARMENDRA PRADHAN",
-      badgeColor: "var(--signal)",
-      tags: ["#DharmendraPradhan", "#JantarMantarProtest", "#ResignationStatement", "#DelhiCJP", "#BigBreaking"],
-      fullText: "On 25 July 2026, Union Education Minister Dharmendra Pradhan addressed the national media regarding demands for his resignation following widespread youth protests led by Cockroach Janta Party (CJP) at Jantar Mantar. The minister emphasized ongoing Supreme Court mandated third-party server audits and NTA structural reforms."
+      badge: "🏆 CJP HISTORIC VICTORY",
+      badgeColor: "#16a34a",
+      tags: ["#CJPJeetGayi", "#GovtAcceptsDemands", "#NEETServerAudit", "#JantarMantarVictory", "#MainBhiCockroach"],
+      fullText: "On 25 July 2026, the Union Government officially signed a historical accord with Cockroach Janta Party (CJP) delegates accepting all 5 core student demands. Mandatory 3rd-party exam server log audits for NEET were enacted into law, all detained youth coordinators were unconditionally released, and Founder Abhijeet Dipke ended his hunger strike at Jantar Mantar amidst nationwide celebrations."
+    },
+    {
+      id: "news-cjp-victory-poster-2",
+      title: "NEET Exam Server Audit Mandated: Govt Signs Binding Accord with CJP",
+      category: "cjp",
+      source: "NDTV 24x7 & Legal Swarm",
+      sourceUrl: "manifesto.html",
+      pubDate: "25 July 2026",
+      description: "Cabinet approves independent third-party server audits for all future competitive entrance examinations following historic student movement.",
+      image: "assets/img/cjp/cjp-victory-poster-2.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📜 SERVER AUDIT PASSED",
+      badgeColor: "#2563eb",
+      tags: ["#NEETAudit", "#GovtPactSigned", "#StudentJustice", "#TransparencyWin"],
+      fullText: "The Ministry of Education officially gazetted mandatory digital server audit protocols. Independent IT security firms will now cryptographically audit exam question banks and result logs before score publication."
+    },
+    {
+      id: "news-cjp-victory-poster-3",
+      title: "Jantar Mantar Protest Ends in Triumph: Sarkar Jhuki, Chhatra Jeete!",
+      category: "cjp",
+      source: "India Today & CJP Bureau",
+      sourceUrl: "protests.html",
+      pubDate: "25 July 2026",
+      description: "Thousands of students celebrate at Jantar Mantar as central ministers deliver signed copies of the 5-point reform charter.",
+      image: "assets/img/cjp/cjp-victory-poster-3.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "✊ PROTEST TRIUMPH",
+      badgeColor: "#d97706",
+      tags: ["#JantarMantarTriumph", "#SarkarJhukiChhatraJeete", "#YouthPower", "#IndiaTodayLive"],
+      fullText: "Jantar Mantar witnessed golden confetti and victory chants as student representatives held up signed government documents confirming full acceptance of CJP demands."
+    },
+    {
+      id: "news-cjp-victory-poster-4",
+      title: "Parliament Enacts CJP 5 Demands Accord into National Law",
+      category: "cjp",
+      source: "PMO India & Sansad TV Bulletin",
+      sourceUrl: "manifesto.html",
+      pubDate: "25 July 2026",
+      description: "Special parliamentary session ratifies student rights charter, judicial neutrality cooling-off mandates, and anti-leak legislation.",
+      image: "assets/img/cjp/cjp-victory-poster-4.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🏛️ PARLIAMENT ACCORD",
+      badgeColor: "#7c3aed",
+      tags: ["#ParliamentAccord", "#5DemandsPassed", "#LegislativeVictory", "#SansadTV"],
+      fullText: "Both houses of Parliament passed the Examination Integrity & Youth Welfare Act with unanimous bipartisan support following CJP's nationwide peaceful agitation."
+    },
+    {
+      id: "news-cjp-victory-poster-5",
+      title: "Main Bhi Cockroach - We Survived, We Won! Youth Victory Parades Across India",
+      category: "cjp",
+      source: "CJP National Swarm Bureau",
+      sourceUrl: "join.html",
+      pubDate: "25 July 2026",
+      description: "Victory rallies held in Delhi, Mumbai, Kolkata, Bengaluru, and Patna as millions of young voters celebrate systemic educational reforms.",
+      image: "assets/img/cjp/cjp-victory-poster-5.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🎆 WE SURVIVED WE WON",
+      badgeColor: "#16a34a",
+      tags: ["#MainBhiCockroach", "#WeSurvivedWeWon", "#VictoryParade", "#YouthUnity"],
+      fullText: "From university campuses to district headquarters, students marched with golden banners celebrating how a satirical movement turned into India's most successful youth reform movement."
+    },
+    {
+      id: "news-cjp-victory-poster-6",
+      title: "Truth & Reform Prevail: Supreme Court & Government Enforce CJP Reform Charter",
+      category: "cjp",
+      source: "Supreme Court Press & Legal Desk",
+      sourceUrl: "issues.html",
+      pubDate: "25 July 2026",
+      description: "Supreme Court disposes student petitions after government confirms binding execution of 3rd-party exam audit guidelines.",
+      image: "assets/img/cjp/cjp-victory-poster-6.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "⚖️ VERDICT VICTORY",
+      badgeColor: "#9333ea",
+      tags: ["#SupremeCourtVerdict", "#ReformPrevails", "#LegalVictory", "#JudicialIntegrity"],
+      fullText: "The apex court commended the peaceful resolution and mandated a 6-month progress report on exam server audit implementation across all national testing agencies."
     },
     {
       id: "news-pm-modi-video-1",
       title: "PM Narendra Modi Live Address: Prime Minister Speaks on National Student Welfare & Exam Reforms",
-      category: "cjp",
+      category: "google",
       source: "PMO India · Narendra Modi Official Channel",
       sourceUrl: "https://www.youtube.com/@cockroachrevolution2029",
       pubDate: "25 July 2026",
@@ -49,7 +125,7 @@
     {
       id: "news-pm-modi-video-2",
       title: "PM Modi Parliament Address: Government Commitment to Transparent Competitive Exams & Merit",
-      category: "cjp",
+      category: "google",
       source: "PMO India · Sansad TV Bulletin",
       sourceUrl: "https://www.youtube.com/@cockroachrevolution2029",
       pubDate: "24 July 2026",
@@ -63,63 +139,33 @@
     },
     {
       id: "news-aaj-tak-live",
-      title: "Aaj Tak Live Coverage: Jantar Mantar Youth Agitation & Student Demands Surge",
+      title: "Aaj Tak Live Coverage: Jantar Mantar Youth Agitation & Student Victory Surge",
       category: "google",
       source: "Aaj Tak · Special News Desk",
       sourceUrl: "https://news.google.com/search?q=Aaj+Tak+NEET+protest",
-      pubDate: "24 July 2026",
-      description: "Aaj Tak live news bulletin tracking ground developments from Jantar Mantar as thousands of students gather for exam integrity audits.",
+      pubDate: "25 July 2026",
+      description: "Aaj Tak live news bulletin tracking victory celebrations from Jantar Mantar as government signs student reform accord.",
       image: "assets/img/cjp/sansad-march-live.webp",
       youtubeId: VERIFIED_YT_ID,
       badge: "📺 AAJ TAK LIVE",
       badgeColor: "#b91c1c",
-      tags: ["#AajTakLive", "#JantarMantarRally", "#StudentProtest", "#AajTak"],
-      fullText: "Aaj Tak correspondents report live from New Delhi on the growing momentum of student protests demanding third-party NEET exam server audits."
-    },
-    {
-      id: "news-ndtv-24x7",
-      title: "NDTV 24x7 Report: Parliament Session Lockout Over Student Lathicharge & Paper Leak",
-      category: "google",
-      source: "NDTV 24x7 · Press Desk",
-      sourceUrl: "https://news.google.com/search?q=NDTV+CJP+protest",
-      pubDate: "22 July 2026",
-      description: "NDTV 24x7 special report on Lok Sabha and Rajya Sabha disruptions following youth marches near Parliament.",
-      image: "assets/img/cjp/trending-cjp-poster-22july.webp",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "📡 NDTV 24X7",
-      badgeColor: "#2563eb",
-      tags: ["#NDTV24x7", "#ParliamentLockout", "#NEETScandal", "#NDTV"],
-      fullText: "NDTV 24x7 covers the intense debate in Parliament over student detainee releases and examination server security protocols."
-    },
-    {
-      id: "news-india-today",
-      title: "India Today Special: CJP Delegation Meets Central Ministers for High-Stakes Talks",
-      category: "google",
-      source: "India Today · Ground Report",
-      sourceUrl: "https://news.google.com/search?q=India+Today+CJP",
-      pubDate: "22 July 2026",
-      description: "India Today broadcast on high-level government negotiations with student delegates regarding NEET reforms and NTA oversight.",
-      image: "assets/img/cjp/cjp-sc-hearing-victory.webp",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "📰 INDIA TODAY",
-      badgeColor: "#d97706",
-      tags: ["#IndiaToday", "#GovtTalks", "#ExamIntegrity", "#IndiaTodayLive"],
-      fullText: "India Today provides in-depth analysis of government talks with youth leaders seeking binding 3rd-party exam audits."
+      tags: ["#AajTakLive", "#JantarMantarVictory", "#CJPJeetGayi", "#AajTak"],
+      fullText: "Aaj Tak correspondents report live from New Delhi on student celebrations following official government acceptance of all 5 demands."
     },
     {
       id: "news-bbc-india",
-      title: "BBC News India: How 'Cockroach Janta Party' Mobilised 350,000+ Indian Students",
+      title: "BBC News India: How 'Cockroach Janta Party' Mobilised Millions to Win Historic Student Reforms",
       category: "google",
       source: "BBC News India · International Desk",
       sourceUrl: "https://news.google.com/search?q=BBC+Cockroach+Janta+Party",
-      pubDate: "22 July 2026",
-      description: "BBC World Service report on the satirical movement turning courtroom labels into a powerful youth civic front across India.",
+      pubDate: "25 July 2026",
+      description: "BBC World Service report on the satirical movement turning courtroom labels into a triumphant youth civic front in India.",
       image: "assets/img/cjp/hunger-strike.webp",
       youtubeId: VERIFIED_YT_ID,
       badge: "🌐 BBC NEWS",
       badgeColor: "#9333ea",
       tags: ["#BBCNews", "#GenZPolitics", "#MainBhiCockroach", "#BBCIndia"],
-      fullText: "BBC News examines the global impact of Gen-Z satirical political movements in India demanding institutional accountability."
+      fullText: "BBC News examines the global impact of Gen-Z satirical political movements in India achieving major institutional reform victories."
     },
     {
       id: "news-times-now",
@@ -127,7 +173,7 @@
       category: "google",
       source: "Times Now · Special Debate Desk",
       sourceUrl: "https://news.google.com/search?q=Times+Now+NEET+audit",
-      pubDate: "18 July 2026",
+      pubDate: "25 July 2026",
       description: "Times Now prime-time debate on the Supreme Court's historic order directing independent audits for national entrance exams.",
       image: "assets/img/cjp/trending-cjp-poster-3.webp",
       youtubeId: VERIFIED_YT_ID,
@@ -137,64 +183,19 @@
       fullText: "Times Now hosts legal experts and student delegates to discuss apex court guidelines on competitive examination servers."
     },
     {
-      id: "news-republic-tv",
-      title: "Republic TV Live: Thousands Swarm Delhi Streets in Historic Youth Protest March",
-      category: "cjp",
-      source: "Republic TV · National Live Desk",
-      sourceUrl: "https://news.google.com/search?q=Republic+TV+CJP+protest",
-      pubDate: "10 July 2026",
-      description: "Republic TV live stream covering massive student rallies and security barricades across central Delhi.",
-      image: "assets/img/cjp/cjp-campus-audit-squads.webp",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "⚡ REPUBLIC TV",
-      badgeColor: "#b91c1c",
-      tags: ["#RepublicTV", "#SansadMarch", "#StudentSwarm", "#RepublicLive"],
-      fullText: "Republic TV reports live from ground zero as student groups gather to present their 5-point reform manifesto."
-    },
-    {
-      id: "news-news18-india",
-      title: "News18 Special: 50,000+ Campus Auditor Squads Active in University Campuses",
-      category: "cjp",
-      source: "News18 India · State Desk",
-      sourceUrl: "https://news.google.com/search?q=News18+CJP+audit",
-      pubDate: "2 July 2026",
-      description: "News18 report on student squads conducting audit drives at exam centers across 120+ Indian universities.",
-      image: "assets/img/cjp/cjp-news-poster-2.webp",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "📡 NEWS18 LIVE",
-      badgeColor: "#047857",
-      tags: ["#News18", "#CampusAudit", "#StudentRights", "#News18India"],
-      fullText: "News18 highlights decentralized student audit drives verifying exam log records across major Indian campuses."
-    },
-    {
-      id: "news-zee-news",
-      title: "Zee News Bulletin: CJP Releases 5-Point Manifesto for Student Rights & Job Security",
-      category: "cjp",
-      source: "Zee News · National Bulletin",
-      sourceUrl: "https://news.google.com/search?q=Zee+News+CJP+manifesto",
-      pubDate: "20 June 2026",
-      description: "Zee News detailed coverage of the 5-point manifesto advocating judicial neutrality, anti-defection laws, and exam audits.",
-      image: "assets/img/cjp/cjp-demands-manifesto-art.webp",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "📰 ZEE NEWS",
-      badgeColor: "#7c3aed",
-      tags: ["#ZeeNews", "#CJPManifesto", "#5Demands", "#ZeeNewsLive"],
-      fullText: "Zee News analyzes the core demands of the Cockroach Janta Party manifesto and its resonance among young voters."
-    },
-    {
       id: "news-wion-world",
-      title: "WION World News: Indian Youth Civil Movement Draws Global Academic Attention",
+      title: "WION World News: Indian Youth Civil Movement Achieves Landmark Victory for Democratic Transparency",
       category: "google",
       source: "WION News · International Bureau",
       sourceUrl: "https://www.wionews.com",
-      pubDate: "12 June 2026",
-      description: "WION international broadcast examining digital satire, student resilience, and democratic accountability movements.",
+      pubDate: "25 July 2026",
+      description: "WION international broadcast examining digital satire, student resilience, and democratic accountability movement victory.",
       image: "assets/img/cjp/press-conference.webp",
       youtubeId: VERIFIED_YT_ID,
       badge: "🌍 WION WORLD",
       badgeColor: "#059669",
       tags: ["#WIONNews", "#GlobalYouth", "#SatireMovement", "#WION"],
-      fullText: "WION World News reports on how Gen-Z movements in India utilize satire and digital advocacy to pressure institutions for exam transparency."
+      fullText: "WION World News reports on how Gen-Z movements in India utilized satire and digital advocacy to achieve historical exam transparency laws."
     }
   ];
 
@@ -203,30 +204,20 @@
   let searchQuery = "";
 
   const poolImages = [
+    "assets/img/cjp/cjp-victory-poster-1.png",
+    "assets/img/cjp/cjp-victory-poster-2.png",
+    "assets/img/cjp/cjp-victory-poster-3.png",
+    "assets/img/cjp/cjp-victory-poster-4.png",
+    "assets/img/cjp/cjp-victory-poster-5.png",
+    "assets/img/cjp/cjp-victory-poster-6.png",
     "assets/img/cjp/trending-news-24july.webp",
-    "assets/img/cjp/sansad-march-live.webp",
-    "assets/img/cjp/cjp-news-poster-2.webp",
-    "assets/img/cjp/cjp-news-poster-1.webp",
-    "assets/img/cjp/trending-cjp-poster-22july.webp",
-    "assets/img/cjp/cjp-22july-protest-art.webp",
-    "assets/img/cjp/cjp-demands-manifesto-art.webp",
-    "assets/img/cjp/cjp-vision-survive-art.webp",
-    "assets/img/cjp/breaking_news_protest.webp",
-    "assets/img/cjp/protest-crowd.webp",
-    "assets/img/cjp/police-barricades.webp",
-    "assets/img/cjp/student-banners.webp",
-    "assets/img/cjp/hunger-strike.webp",
-    "assets/img/cjp/press-conference.webp",
-    "assets/img/cjp/trending-cjp-poster-1.webp",
-    "assets/img/cjp/trending-cjp-poster-2.webp",
-    "assets/img/cjp/trending-cjp-poster-3.webp",
-    "assets/img/cjp/together-resilient.webp"
+    "assets/img/cjp/sansad-march-live.webp"
   ];
 
-  // Real Google News Live RSS Fetcher
+  // Real Google News Live RSS Fetcher for CJP Victory
   const fetchLiveGoogleNews = async () => {
     try {
-      const rssUrl = encodeURIComponent("https://news.google.com/rss/search?q=Dharmendra+Pradhan+OR+Jantar+Mantar+protest+OR+NEET+paper+leak&hl=en-IN&gl=IN&ceid=IN:en");
+      const rssUrl = encodeURIComponent("https://news.google.com/rss/search?q=CJP+victory+OR+NEET+exam+reform+OR+Jantar+Mantar+protest&hl=en-IN&gl=IN&ceid=IN:en");
       const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
       const res = await fetch(apiUrl);
       if (!res.ok) return;
@@ -244,15 +235,15 @@
           youtubeId: VERIFIED_YT_ID,
           badge: "🌐 GOOGLE LIVE",
           badgeColor: "#2563eb",
-          tags: ["#GoogleNewsLive", "#YouthNews", "#LatestUpdate"],
+          tags: ["#GoogleNewsLive", "#YouthVictory", "#LatestUpdate"],
           fullText: (item.content || item.description || item.title).replace(/<[^>]*>?/gm, '')
         }));
 
-        currentNewsItems = [...fetchedGoogleItems, ...defaultTrendingNews];
+        currentNewsItems = [...defaultTrendingNews, ...fetchedGoogleItems];
         renderNewsGrid();
       }
     } catch (e) {
-      console.log("Using verified news engine data");
+      console.log("Using verified victory news engine data");
     }
   };
 
@@ -270,7 +261,7 @@
     if (filtered.length === 0) {
       container.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);">
-          <p style="font-size: 1.2rem; font-family: var(--font-display); margin-0 0 0.5rem;">No trending news found for "${searchQuery}"</p>
+          <p style="font-size: 1.2rem; font-family: var(--font-display); margin: 0 0 0.5rem;">No trending victory news found for "${searchQuery}"</p>
           <button type="button" id="resetNewsSearch" class="btn btn-solid" style="margin-top: 0.5rem;">Reset News Search</button>
         </div>
       `;
@@ -295,8 +286,8 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen>
             </iframe>
-            <span style="position: absolute; top: 0.5rem; left: 0.5rem; background: var(--signal); color: #fff; font-family: var(--font-mono); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.25rem 0.55rem; border-radius: 999px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); pointer-events: none; z-index: 2;">
-              🔴 LIVE IFRAME (COL 3)
+            <span style="position: absolute; top: 0.5rem; left: 0.5rem; background: #16a34a; color: #fff; font-family: var(--font-mono); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.25rem 0.55rem; border-radius: 999px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); pointer-events: none; z-index: 2;">
+              🏆 LIVE VICTORY IFRAME (COL 3)
             </span>
           </div>`
         : `<div class="card-yt-container" id="card-yt-media-${item.id}" style="position: relative; aspect-ratio: 16/10; overflow: hidden; background: #1c1010; cursor: pointer;">
@@ -307,8 +298,8 @@
             <span style="position: absolute; bottom: 0.5rem; right: 0.75rem; background: rgba(0,0,0,0.75); color: #fbbf24; font-family: var(--font-mono); font-size: 0.62rem; padding: 0.25rem 0.5rem; border-radius: 6px;">
               ${item.pubDate}
             </span>
-            <button type="button" class="quick-play-yt-overlay" data-id="${item.id}" data-yt="${item.youtubeId}" data-title="${item.title}" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(225, 29, 72, 0.95); color: #fff; border: 2px solid #fff; border-radius: 999px; padding: 0.45rem 0.9rem; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; display: flex; align-items: center; gap: 0.35rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
-              ▶️ Play YouTube Video
+            <button type="button" class="quick-play-yt-overlay" data-id="${item.id}" data-yt="${item.youtubeId}" data-title="${item.title}" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(22, 163, 74, 0.95); color: #fff; border: 2px solid #fff; border-radius: 999px; padding: 0.45rem 0.9rem; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; display: flex; align-items: center; gap: 0.35rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
+              ▶️ Play Victory Video
             </button>
           </div>`;
 
@@ -317,11 +308,11 @@
           ${mediaHtml}
           <div style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
-              <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; color: var(--signal); text-transform: uppercase;">
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; color: #16a34a; text-transform: uppercase;">
                 ${item.source}
               </span>
-              <span style="font-family: var(--font-mono); font-size: 0.62rem; color: #9f1239; font-weight: 800; background: #fff5f5; border: 1px solid #fecdd3; padding: 0.15rem 0.45rem; border-radius: 4px;">
-                📺 ${item.badge.includes('MODI') ? 'PM Modi Video' : 'News Channel'}
+              <span style="font-family: var(--font-mono); font-size: 0.62rem; color: #15803d; font-weight: 800; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.15rem 0.45rem; border-radius: 4px;">
+                🏆 ${item.badge.includes('VICTORY') ? 'CJP Victory' : 'News Channel'}
               </span>
             </div>
             <h3 style="font-family: var(--font-display); font-size: 1.15rem; line-height: 1.25; margin: 0 0 0.6rem; color: var(--ink);">
@@ -334,7 +325,7 @@
               ${item.tags.map(t => `<span style="font-family: var(--font-mono); font-size: 0.62rem; background: var(--bg-2); color: var(--ink); padding: 0.2rem 0.45rem; border-radius: 4px; font-weight: 600;">${t}</span>`).join('')}
             </div>
             <div style="display: flex; gap: 0.4rem; align-items: center; border-top: 1px solid var(--line); padding-top: 0.85rem; flex-wrap: wrap;">
-              <button type="button" class="btn btn-solid read-news-btn" data-id="${item.id}" style="padding: 0.45rem 0.75rem; font-size: 0.7rem; flex: 1; min-width: 120px;">
+              <button type="button" class="btn btn-solid read-news-btn" data-id="${item.id}" style="padding: 0.45rem 0.75rem; font-size: 0.7rem; flex: 1; min-width: 120px; background: #16a34a; border-color: #16a34a;">
                 ▶️ Watch Video &amp; Story →
               </button>
               ${!isColumn3 ? `<button type="button" class="btn btn-ghost load-yt-inline-btn" data-id="${item.id}" data-yt="${item.youtubeId}" style="padding: 0.45rem 0.65rem; font-size: 0.7rem;">
@@ -371,8 +362,8 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
           </iframe>
-          <span style="position: absolute; top: 0.5rem; left: 0.5rem; background: var(--signal); color: #fff; font-family: var(--font-mono); font-size: 0.6rem; font-weight: 800; padding: 0.2rem 0.45rem; border-radius: 999px; pointer-events: none; z-index: 2;">
-            🔴 LIVE IFRAME PLAYING
+          <span style="position: absolute; top: 0.5rem; left: 0.5rem; background: #16a34a; color: #fff; font-family: var(--font-mono); font-size: 0.6rem; font-weight: 800; padding: 0.2rem 0.45rem; border-radius: 999px; pointer-events: none; z-index: 2;">
+            🏆 LIVE VICTORY IFRAME PLAYING
           </span>
         `;
       }
@@ -390,15 +381,15 @@
     });
   };
 
-  // Breaking News Popup Alert Function for Dharmendra Pradhan Resignation Statement
-  const openDharmendraPradhanResignationPopup = () => {
+  // Historic Victory Popup Alert Modal for CJP Victory
+  const openCJPVictoryPopup = () => {
     let popup = document.getElementById("cjp-breaking-popup-modal");
     if (!popup) {
       popup = document.createElement("div");
       popup.id = "cjp-breaking-popup-modal";
       popup.style.cssText = `
         position: fixed; inset: 0; z-index: 9999999;
-        background: rgba(18, 8, 8, 0.9); backdrop-filter: blur(14px);
+        background: rgba(10, 24, 15, 0.92); backdrop-filter: blur(14px);
         display: flex; align-items: center; justify-content: center;
         padding: 1rem; opacity: 0; transition: opacity 0.35s ease;
       `;
@@ -406,27 +397,27 @@
     }
 
     popup.innerHTML = `
-      <div style="background: #ffffff; border: 3px solid var(--signal); border-radius: 22px; max-width: 740px; width: 100%; max-height: 92vh; overflow-y: auto; box-shadow: 0 28px 75px rgba(159,18,57,0.4); position: relative; animation: rise 0.35s var(--ease);">
-        <button type="button" id="closeBreakingPopup" style="position: absolute; top: 1rem; right: 1rem; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--signal); color: #fff; font-size: 1.6rem; cursor: pointer; display: grid; place-items: center; z-index: 30; box-shadow: 0 4px 14px rgba(0,0,0,0.3);">×</button>
+      <div style="background: #ffffff; border: 3px solid #16a34a; border-radius: 22px; max-width: 760px; width: 100%; max-height: 92vh; overflow-y: auto; box-shadow: 0 28px 75px rgba(22,163,74,0.4); position: relative; animation: rise 0.35s var(--ease);">
+        <button type="button" id="closeBreakingPopup" style="position: absolute; top: 1rem; right: 1rem; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #16a34a; color: #fff; font-size: 1.6rem; cursor: pointer; display: grid; place-items: center; z-index: 30; box-shadow: 0 4px 14px rgba(0,0,0,0.3);">×</button>
         
         <!-- Live YouTube Video Iframe Embed Header -->
         <div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #000;">
           <iframe 
             src="https://www.youtube.com/embed/${VERIFIED_YT_ID}?autoplay=1&amp;rel=0&amp;modestbranding=1" 
-            title="Jantar Mantar Protest News LIVE: इस्तीफा देने पर बोले धर्मेंद्र प्रधान! | Delhi CJP | Big Breaking" 
+            title="CJP जीत गई! सरकार ने सारी बातें मान ली! | Delhi Jantar Mantar Victory" 
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
           </iframe>
-          <span style="position: absolute; top: 0.85rem; left: 0.85rem; background: var(--signal); color: #fff; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.8rem; border-radius: 999px; pointer-events: none; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
-            🚨 BIG BREAKING POPUP · DHARMENDRA PRADHAN
+          <span style="position: absolute; top: 0.85rem; left: 0.85rem; background: #16a34a; color: #fff; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.8rem; border-radius: 999px; pointer-events: none; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+            🏆 HISTORIC VICTORY POPUP · CJP WINS!
           </span>
         </div>
 
         <div style="padding: 1.85rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--signal); text-transform: uppercase;">
-              🔥 AAJ TAK &amp; CJP BUREAU · NEW DELHI LIVE
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: #16a34a; text-transform: uppercase;">
+              🎉 AAJ TAK &amp; CJP SWARM BUREAU · NEW DELHI LIVE
             </span>
             <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); font-weight: 700;">
               25 JULY 2026
@@ -434,32 +425,35 @@
           </div>
 
           <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.85rem); line-height: 1.25; margin: 0 0 0.85rem; color: var(--ink);">
-            Jantar Mantar Protest News LIVE: <em>इस्तीफा देने पर बोले धर्मेंद्र प्रधान!</em> | Delhi CJP | Big Breaking
+            CJP जीत गई! <em>सरकार ने सारी बातें मान ली!</em> | Delhi Jantar Mantar Victory Rally
           </h2>
 
-          <div style="background: #fffcf8; border-left: 4px solid var(--signal); padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
-            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: var(--signal); margin-bottom: 0.35rem;">
-              📢 OFFICIAL STATEMENT &amp; PROTEST SUMMARY:
+          <div style="background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
+            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #16a34a; margin-bottom: 0.35rem;">
+              📢 HISTORIC ACCORD SIGNED BY GOVERNMENT:
             </strong>
             <p style="font-size: 0.95rem; line-height: 1.65; color: var(--ink); margin: 0;">
-              Union Education Minister Dharmendra Pradhan has addressed national press correspondents regarding Opposition and Cockroach Janta Party (CJP) youth demands for his resignation over NEET paper leak scandals. The minister emphasized ongoing Supreme Court directed 3rd-party server audits and NTA structural reforms while investigating paper leak syndicates.
+              Union Cabinet Representatives have signed an official binding agreement accepting all 5 core demands of Cockroach Janta Party (CJP). Independent third-party server audits for NEET exams are now legally mandated, and all detained student activists have been unconditionally released.
             </p>
           </div>
 
-          <p style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); margin-bottom: 1.5rem;">
-            Meanwhile, thousands of students led by CJP founder Abhijeet Dipke remain seated at Jantar Mantar, Delhi, confirming that protests will continue until binding exam audit laws are passed in Parliament.
-          </p>
+          <!-- Poster Preview Grid in Popup -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 1.25rem;">
+            <img src="assets/img/cjp/cjp-victory-poster-1.png" alt="CJP Victory 1" style="border-radius: 8px; border: 1px solid var(--line); aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-victory-poster-2.png" alt="CJP Victory 2" style="border-radius: 8px; border: 1px solid var(--line); aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-victory-poster-5.png" alt="CJP Victory 5" style="border-radius: 8px; border: 1px solid var(--line); aspect-ratio: 1/1; object-fit: cover;">
+          </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fff5f5; border: 1px solid #fecdd3; color: var(--signal); padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#DharmendraPradhan</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fff5f5; border: 1px solid #fecdd3; color: var(--signal); padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#JantarMantarProtest</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fff5f5; border: 1px solid #fecdd3; color: var(--signal); padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#ResignationStatement</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fff5f5; border: 1px solid #fecdd3; color: var(--signal); padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#DelhiCJP</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#CJPJeetGayi</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#GovtAcceptsDemands</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#NEETServerAudit</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#MainBhiCockroach</span>
           </div>
 
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 1.25rem;">
-            <a href="protests.html" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem;">
-              ✊ View Full Protests &amp; Demand Coverage →
+            <a href="protests.html" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #16a34a; border-color: #16a34a;">
+              🏆 View Full Victory Rallies &amp; Accord →
             </a>
             <button type="button" id="closeBreakingPopupBtn" class="btn btn-ghost" style="padding: 0.65rem 1rem;">
               Close Alert ×
@@ -490,7 +484,7 @@
       modal.id = "cjp-news-modal";
       modal.style.cssText = `
         position: fixed; inset: 0; z-index: 999999;
-        background: rgba(18, 8, 8, 0.88); backdrop-filter: blur(12px);
+        background: rgba(10, 24, 15, 0.9); backdrop-filter: blur(12px);
         display: flex; align-items: center; justify-content: center;
         padding: 1rem; opacity: 0; transition: opacity 0.3s ease;
       `;
@@ -498,8 +492,8 @@
     }
 
     modal.innerHTML = `
-      <div style="background: #ffffff; border: 2px solid var(--signal); border-radius: 20px; max-width: 720px; width: 100%; max-height: 92vh; overflow-y: auto; box-shadow: 0 24px 60px rgba(0,0,0,0.5); position: relative; animation: rise 0.3s var(--ease);">
-        <button type="button" id="closeNewsModal" style="position: absolute; top: 1rem; right: 1rem; width: 38px; height: 38px; border-radius: 50%; border: 0; background: var(--signal); color: #fff; font-size: 1.5rem; cursor: pointer; display: grid; place-items: center; z-index: 20; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">×</button>
+      <div style="background: #ffffff; border: 2px solid #16a34a; border-radius: 20px; max-width: 720px; width: 100%; max-height: 92vh; overflow-y: auto; box-shadow: 0 24px 60px rgba(0,0,0,0.5); position: relative; animation: rise 0.3s var(--ease);">
+        <button type="button" id="closeNewsModal" style="position: absolute; top: 1rem; right: 1rem; width: 38px; height: 38px; border-radius: 50%; border: 0; background: #16a34a; color: #fff; font-size: 1.5rem; cursor: pointer; display: grid; place-items: center; z-index: 20; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">×</button>
         
         <div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #000;">
           <iframe 
@@ -510,26 +504,29 @@
             allowfullscreen>
           </iframe>
           <span style="position: absolute; top: 0.75rem; left: 0.75rem; background: ${item.badgeColor}; color: #fff; font-family: var(--font-mono); font-size: 0.65rem; font-weight: 800; padding: 0.35rem 0.75rem; border-radius: 999px; pointer-events: none; z-index: 5;">
-            🔴 LIVE YOUTUBE IFRAME · ${item.badge}
+            🏆 LIVE VICTORY IFRAME · ${item.badge}
           </span>
         </div>
         
         <div style="padding: 1.75rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; color: var(--signal); text-transform: uppercase;">${item.source}</span>
+            <span style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; color: #16a34a; text-transform: uppercase;">${item.source}</span>
             <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted);">${item.pubDate}</span>
           </div>
           <h2 style="font-family: var(--font-display); font-size: 1.6rem; line-height: 1.25; margin: 0 0 1rem; color: var(--ink);">${item.title}</h2>
           <p style="font-size: 1rem; line-height: 1.7; color: var(--ink); margin-bottom: 1.25rem;">${item.fullText}</p>
+          
+          ${item.image ? `<div style="margin-bottom: 1.25rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--line);"><img src="${item.image}" alt="${item.title}" style="width: 100%; height: auto; display: block;"></div>` : ''}
+
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
-            ${item.tags.map(t => `<span style="font-family: var(--font-mono); font-size: 0.7rem; background: var(--bg-2); color: var(--signal); padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 700;">${t}</span>`).join('')}
+            ${item.tags.map(t => `<span style="font-family: var(--font-mono); font-size: 0.7rem; background: #f0fdf4; color: #16a34a; padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 700;">${t}</span>`).join('')}
           </div>
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 1.25rem;">
-            <a href="${item.sourceUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-solid" style="flex: 1; text-align: center;">
-              Read Original Google News Article →
+            <a href="${item.sourceUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-solid" style="flex: 1; text-align: center; background: #16a34a; border-color: #16a34a;">
+              Read Original Victory News Article →
             </a>
             <button type="button" id="shareNewsBtn" class="btn btn-ghost">
-              📢 Share Trending News
+              📢 Share Victory News
             </button>
           </div>
         </div>
@@ -557,7 +554,7 @@
         }).catch(() => {});
       } else {
         navigator.clipboard?.writeText(`${item.title} - ${item.sourceUrl}`);
-        alert("News link copied to clipboard!");
+        alert("Victory News link copied to clipboard!");
       }
     });
   };
@@ -566,35 +563,35 @@
     const section = document.getElementById("google-news-section");
     if (!section) return;
 
-    // Filter bar & Search bar & Permanent Trigger for Dharmendra Pradhan Resignation Popup
+    // Filter bar & Search bar & Permanent Trigger for CJP Victory Popup
     const filterContainer = document.getElementById("news-filter-tabs");
     if (filterContainer) {
       filterContainer.innerHTML = `
-        <div style="background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%); border: 2px solid var(--signal); border-radius: 14px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; box-shadow: 0 6px 20px rgba(225, 29, 72, 0.12);">
+        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #16a34a; border-radius: 14px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; box-shadow: 0 6px 20px rgba(22, 163, 74, 0.15);">
           <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="width: 10px; height: 10px; background: var(--signal); border-radius: 50%; display: inline-block; animation: pulse 1.2s ease infinite;"></span>
-            <strong style="font-family: var(--font-display); font-size: 0.95rem; color: #9f1239;">
-              🚨 BREAKING NEWS POPUP: Jantar Mantar Protest LIVE — इस्तीफा देने पर बोले धर्मेंद्र प्रधान!
+            <span style="width: 10px; height: 10px; background: #16a34a; border-radius: 50%; display: inline-block; animation: pulse 1.2s ease infinite;"></span>
+            <strong style="font-family: var(--font-display); font-size: 0.95rem; color: #15803d;">
+              🎉 HISTORIC VICTORY POPUP: CJP जीत गई! सरकार ने सारी बातें मान ली!
             </strong>
           </div>
-          <button type="button" id="triggerBreakingPopupBtn" class="btn btn-solid" style="padding: 0.4rem 0.9rem; font-size: 0.78rem; background: var(--signal); white-space: nowrap;">
-            ▶️ Open Breaking News Popup →
+          <button type="button" id="triggerBreakingPopupBtn" class="btn btn-solid" style="padding: 0.4rem 0.9rem; font-size: 0.78rem; background: #16a34a; border-color: #16a34a; white-space: nowrap;">
+            🏆 Open Historic Victory Popup →
           </button>
         </div>
 
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; justify-content: space-between;">
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="catTabButtons">
-            <button type="button" class="btn btn-solid cat-btn active" data-cat="all">🔥 All News &amp; PM Modi Videos</button>
+            <button type="button" class="btn btn-solid cat-btn active" data-cat="all">🏆 All Victory Posters &amp; News</button>
+            <button type="button" class="btn btn-ghost cat-btn" data-cat="cjp">📢 CJP Victory Posters (6)</button>
             <button type="button" class="btn btn-ghost cat-btn" data-cat="google">🌐 Google News Live</button>
-            <button type="button" class="btn btn-ghost cat-btn" data-cat="cjp">📢 CJP Movement &amp; PM Modi</button>
           </div>
           <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; max-width: 320px; min-width: 220px;">
-            <input type="text" id="newsSearchInput" placeholder="🔍 Search news &amp; PM Modi videos..." style="width: 100%; border: 1.5px solid var(--line); border-radius: 999px; padding: 0.45rem 0.9rem; font-size: 0.8rem; background: var(--surface);">
+            <input type="text" id="newsSearchInput" placeholder="🔍 Search CJP victory posters &amp; news..." style="width: 100%; border: 1.5px solid var(--line); border-radius: 999px; padding: 0.45rem 0.9rem; font-size: 0.8rem; background: var(--surface);">
           </div>
         </div>
       `;
 
-      document.getElementById("triggerBreakingPopupBtn")?.addEventListener("click", openDharmendraPradhanResignationPopup);
+      document.getElementById("triggerBreakingPopupBtn")?.addEventListener("click", openCJPVictoryPopup);
 
       document.querySelectorAll(".cat-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -618,10 +615,10 @@
     renderNewsGrid();
     fetchLiveGoogleNews();
 
-    // Auto trigger Breaking News Popup on index page load (once per session)
-    if (!sessionStorage.getItem("cjp_dharmendra_popup_shown")) {
-      sessionStorage.setItem("cjp_dharmendra_popup_shown", "true");
-      setTimeout(openDharmendraPradhanResignationPopup, 1200);
+    // Auto trigger Historic Victory Popup on index page load (once per session)
+    if (!sessionStorage.getItem("cjp_victory_popup_shown")) {
+      sessionStorage.setItem("cjp_victory_popup_shown", "true");
+      setTimeout(openCJPVictoryPopup, 1000);
     }
   };
 
