@@ -9,8 +9,14 @@
   const canonicalUrl = "https://cockroachjantapartywale.com" + window.location.pathname.replace(/\/index\.html$/, "/").replace(/\.html$/, "");
   const todayIso = new Date().toISOString();
 
-  // Comprehensive Union SEO Keywords (Incorporates all terms from thecockroachjantaparty.org.in)
+  // Comprehensive Union SEO Keywords (Incorporates cockroachjantaparty.com & thecockroachjantaparty.org.in)
   const trendingKeywords = [
+    "Cockroach Janta Party Official Website",
+    "cockroachjantaparty.com",
+    "www.cockroachjantaparty.com",
+    "thecockroachjantaparty.org.in",
+    "www.thecockroachjantaparty.org.in",
+    "cockroachjantaparty.org",
     "Cockroach Janta Party",
     "Cockroach Janata Party",
     "The Cockroach Janta Party",
@@ -54,7 +60,6 @@
     "CJP official website",
     "CJP India",
     "cockroachjantapartywale.com",
-    "cockroachjantaparty.com",
     "Abhijeet Dipke",
     "Abhijeet Dipke founder",
     "Abhijeet Dipke CJP",
@@ -102,16 +107,18 @@
   }
   metaKeywords.content = trendingKeywords;
 
-  // Ensure Meta Tags Alignment from thecockroachjantaparty.org.in
+  // Ensure Meta Tags Alignment from cockroachjantaparty.com & thecockroachjantaparty.org.in
   const metaAdditions = [
     { name: "format-detection", content: "telephone=no, address=no, email=no" },
+    { property: "og:see_also", content: "https://www.cockroachjantaparty.com" },
+    { property: "og:see_also", content: "https://www.thecockroachjantaparty.org.in" },
     { property: "og:see_also", content: "https://cockroachjantaparty.org" },
     { property: "og:locale", content: "en_IN" },
-    { property: "og:site_name", content: "The Cockroach Janta Party" }
+    { property: "og:site_name", content: "Cockroach Janta Party Official Movement & Media Network" }
   ];
 
   metaAdditions.forEach(m => {
-    const selector = m.name ? `meta[name="${m.name}"]` : `meta[property="${m.property}"]`;
+    const selector = m.name ? `meta[name="${m.name}"]` : `meta[property="${m.property}"][content="${m.content}"]`;
     let tag = document.querySelector(selector);
     if (!tag) {
       tag = document.createElement('meta');
@@ -142,7 +149,7 @@
           "@type": "WebSite",
           "@id": canonicalUrl + "#website",
           "url": "https://cockroachjantapartywale.com",
-          "name": "The Cockroach Janta Party",
+          "name": "Cockroach Janta Party Official Website",
           "alternateName": ["Cockroach Janta Party", "Cockroach Janta Party Wale", "Cockroach Janata Party", "TCJP", "CJP"],
           "publisher": {
             "@type": "Organization",
@@ -160,8 +167,15 @@
           "@type": "Organization",
           "@id": canonicalUrl + "#organization",
           "name": "The Cockroach Janta Party",
-          "alternateName": ["TCJP", "CJP"],
+          "alternateName": ["TCJP", "CJP", "Cockroach Janta Party Wale"],
           "url": "https://cockroachjantapartywale.com",
+          "sameAs": [
+            "https://www.cockroachjantaparty.com",
+            "https://www.thecockroachjantaparty.org.in",
+            "https://cockroachjantaparty.org",
+            "https://x.com/cjp_official",
+            "https://instagram.com/cjp_official"
+          ],
           "logo": "https://cockroachjantapartywale.com/assets/img/logo.webp",
           "image": "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-25july.png",
           "areaServed": { "@type": "Country", "name": "India" },
