@@ -49,16 +49,16 @@
   const top = `
   <a class="skip-link" href="#main">Skip to content</a>
   
-  <!-- 20 July Peaceful March Announcement Top Strip -->
-  <div class="MarchCampaignStrip-module__x5w8qa__strip" role="region" aria-label="20 July peaceful march announcement">
+  <!-- CJP Historic Victory Announcement Top Strip -->
+  <div class="MarchCampaignStrip-module__x5w8qa__strip" role="region" aria-label="CJP Historic Victory announcement" style="background: linear-gradient(90deg, #15803d 0%, #16a34a 50%, #047857 100%); color: #ffffff;">
     <div class="MarchCampaignStrip-module__x5w8qa__inner">
-      <span class="MarchCampaignStrip-module__x5w8qa__badge">20 July</span>
-      <p class="MarchCampaignStrip-module__x5w8qa__text">
-        <strong>Students have paid with their futures.</strong>
+      <span class="MarchCampaignStrip-module__x5w8qa__badge" style="background: #fbbf24; color: #000; font-weight: 800;">🏆 VICTORY!</span>
+      <p class="MarchCampaignStrip-module__x5w8qa__text" style="color: #ffffff;">
+        <strong style="color: #fef08a;">🎉 CJP जीत गई! सरकार ने मानीं सारी 5 बातें!</strong>
         <span class="MarchCampaignStrip-module__x5w8qa__sep">·</span>
-        Since 20 June at Jantar Mantar our voices went unheard — on 20 July we march toward Parliament for accountability and the resignation of Education Minister Dharmendra Pradhan.
+        Union Cabinet officially signs binding accord mandating NEET 3rd-party exam server audits, releasing student detainees, &amp; enacting CJP 5 demands into law!
       </p>
-      <a class="MarchCampaignStrip-module__x5w8qa__cta" href="protests">I'm coming →</a>
+      <a class="MarchCampaignStrip-module__x5w8qa__cta" href="#breaking-news-section" style="background: #ffffff; color: #15803d; font-weight: 800;">View Victory Accord →</a>
     </div>
   </div>
 
