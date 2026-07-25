@@ -56,6 +56,16 @@
       "Government Meeting &amp; Stand-off": "सरकारी बैठक एवं गतिरोध",
       "Government Meeting & Stand-off": "सरकारी बैठक एवं गतिरोध",
 
+      // CJP Victory & Hero Translations
+      "CJP HISTORIC VICTORY!": "CJP ऐतिहासिक विजय!",
+      "GOVT ACCEPTS ALL 5 DEMANDS!": "सरकार ने मानीं सारी 5 मांगें!",
+      "CJP HISTORIC VICTORY · 25 JULY 2026": "🏆 CJP ऐतिहासिक विजय · 25 जुलाई 2026",
+      "CELEBRATE VICTORY": "🏆 ऐतिहासिक जीत का जश्न मनाएं",
+      "READ 5 ACCEPTED DEMANDS": "📜 स्वीकृत 5 मांगें देखें",
+      "5/5 DEMANDS ACCEPTED": "5/5 मांगें स्वीकृत",
+      "100% YOUTH VICTORY": "100% युवाओं की जीत",
+      "NEET SERVER AUDIT · DETAINEES RELEASED · ACCORD PASSED": "NEET सर्वर ऑडिट · रिहाई कानून लागू · समझौता पास",
+
       // Announcements & Taglines
       "Yes, We Are Cockroaches — We Survive. We Rise. We Lead.": "हाँ, हम कॉकरोच हैं — हम सहते हैं, उठते हैं और नेतृत्व करते हैं।",
       "#MainBhiCockroach — reclaiming the insult as youth power": "#MainBhiCockroach — युवाओं की एकजुटता और संघर्ष का प्रतीक",
