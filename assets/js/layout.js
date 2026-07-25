@@ -2,7 +2,6 @@
   const S = window.CJP_SITE || {};
   const page = (document.body.dataset.page || "").toLowerCase();
   const year = new Date().getFullYear();
-  const active = (href) => (page === href.toLowerCase() ? " active" : "");
 
   // Indian names list for developer support ticker
   const donorNames = [
@@ -45,8 +44,7 @@
     ["contact", "Contact", "📩"],
   ];
 
-  const currentLang = localStorage.getItem("cjp_lang") || "en";
-  const currentLangLabel = currentLang === "hi" ? "हिन्दी" : "ENGLISH";
+  const active = (file) => (page === file.replace(".html", "").replace(/^\//, "") ? " is-active" : "");
 
   const top = `
   <a class="skip-link" href="#main">Skip to content</a>
@@ -108,11 +106,11 @@
       <div class="nav-actions header-actions">
         <div class="lang-select" id="langSelect">
           <button type="button" class="lang-btn" aria-expanded="false" aria-label="Select Language">
-            🌐 <span>${currentLangLabel}</span> ▾
+            🌐 <span>ENGLISH</span> ▾
           </button>
           <div class="lang-menu" hidden role="listbox" aria-label="Languages">
-            <button type="button" class="lang-opt" role="option" data-lang="en" aria-selected="${currentLang === "en" ? "true" : "false"}">🌐 English</button>
-            <button type="button" class="lang-opt" role="option" data-lang="hi" aria-selected="${currentLang === "hi" ? "true" : "false"}">🇮🇳 हिन्दी</button>
+            <button type="button" class="lang-opt" role="option" data-lang="en" aria-selected="true">🌐 English</button>
+            <button type="button" class="lang-opt" role="option" data-lang="hi" aria-selected="false">🇮🇳 हिन्दी</button>
           </div>
         </div>
         <a href="donate" class="btn btn-ghost${active("donate")}">Support site</a>

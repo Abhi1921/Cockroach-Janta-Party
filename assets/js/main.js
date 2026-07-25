@@ -41,35 +41,12 @@
       "Contact": "संपर्क",
       "Support site": "समर्थन दें",
       "Join Free": "मुफ़्त जुड़ें",
-      "Join the Party": "पार्टी से जुड़ें",
-      "JOIN THE PARTY": "पार्टी से जुड़ें",
-      "JOIN THE PARTY →": "पार्टी से जुड़ें →",
-      "READ THE MANIFESTO": "घोषणापत्र पढ़ें",
-      "READ THE CHARTER →": "चार्टर पढ़ें →",
       "Skip to content": "मुख्य सामग्री पर जाएं",
 
       // Headings & Brand
-      "The Cockroach Janta Party —": "द कॉकरोच जनता पार्टी —",
-      "Voice of India's": "भारत के",
-      "Burnt-Out Youth.": "परेशान युवाओं की आवाज़।",
       "Cockroach Janta Party Wale": "कॉकरोच जनता पार्टी वाले",
       "Because degrees are temporary, survival is permanent.": "क्योंकि डिग्रियां अस्थायी हैं, अस्तित्व स्थाई है।",
       "Together. Resilient. Unstoppable.": "एकजुट। सशक्त। अटूट।",
-
-      // July 23-25 News & Tickers
-      "LIVE 23–25 JULY NEWS": "23–25 जुलाई लाइव समाचार",
-      "Constitution Club Negotiations (24 July):": "संविधान क्लब वार्ता (24 जुलाई):",
-      "Govt talks held at neutral venue": "तटस्थ स्थल पर सरकारी वार्ता आयोजित",
-      "Core Demands:": "मुख्य मांगें:",
-      "Resignation of Education Minister Dharmendra Pradhan is non-negotiable": "शिक्षा मंत्री धर्मेंद्र प्रधान का इस्तीफा अपरिहार्य",
-      "Police Update:": "पुलिस अपडेट:",
-      "Delhi Police confirms founder Abhijeet Dipke is safe & healthy.": "दिल्ली पुलिस ने पुष्टि की कि संस्थापक अभिजीत दीपके सुरक्षित हैं।",
-      "OFFICIAL CJP CAMPAIGN POSTERS (JULY 23–25, 2026)": "आधिकारिक CJP अभियान पोस्टर (23–25 जुलाई 2026)",
-      "Posters &amp; Graphics of the Movement": "आंदोलन के पोस्टर एवं ग्राफिक्स",
-      "Posters & Graphics of the Movement": "आंदोलन के पोस्टर एवं ग्राफिक्स",
-      "View Full Poster 🔍": "पूरा पोस्टर देखें 🔍",
-
-      // Headings & Sections
       "CJP Sansad Chalo March &amp; Government Negotiations": "CJP संसद चलो मार्च एवं सरकारी वार्ता",
       "CJP Sansad Chalo March & Government Negotiations": "CJP संसद चलो मार्च एवं सरकारी वार्ता",
       "Ground Images &amp; Media Clips": "ग्राउंड फोटो एवं मीडिया क्लिप्स",
@@ -123,40 +100,25 @@
   const applyLanguage = (targetLang) => {
     localStorage.setItem("cjp_lang", targetLang);
 
-    // Sync Header Selector Button UI
-    const langSelect = document.getElementById("langSelect");
-    if (langSelect) {
-      const btnSpan = langSelect.querySelector(".lang-btn span");
-      if (btnSpan) {
-        btnSpan.textContent = targetLang === "hi" ? "हिन्दी" : "ENGLISH";
-      }
-      const opts = langSelect.querySelectorAll("[data-lang]");
-      opts.forEach((o) => {
-        const isSelected = o.getAttribute("data-lang") === targetLang;
-        o.setAttribute("aria-selected", isSelected ? "true" : "false");
-      });
-    }
+    if (targetLang === "hi") {
+      const dict = i18nDict.hi;
 
-    const dict = i18nDict.hi;
+      const elementsToTranslate = document.querySelectorAll(
+        "h1, h2, h3, h4, p, span, a, button, li, small, figcaption, th, td, label"
+      );
 
-    const elementsToTranslate = document.querySelectorAll(
-      "h1, h2, h3, h4, p, span, a, button, li, small, figcaption, th, td, label"
-    );
+      elementsToTranslate.forEach((el) => {
+        if (el.closest("#langSelect")) return;
 
-    elementsToTranslate.forEach((el) => {
-      if (el.closest("#langSelect")) return;
-
-      // Preserve dataset.en initial state
-      if (!el.dataset.en) {
-        el.dataset.en = el.innerHTML;
-      }
-
-      if (targetLang === "hi") {
         // Special handling for nav links containing nav-label span to preserve nav-icon
         if (el.classList && el.classList.contains("nav-label")) {
+          if (!el.dataset.en) el.dataset.en = el.innerHTML;
           const orig = el.dataset.en.trim();
-          if (dict[orig]) {
-            el.innerHTML = dict[orig];
+          for (const [key, val] of Object.entries(dict)) {
+            if (orig === key) {
+              el.innerHTML = val;
+              break;
+            }
           }
           return;
         }
@@ -164,29 +126,34 @@
         // Skip parent <a> if it contains a nav-label child so we don't wipe inner spans
         if (el.querySelector && el.querySelector(".nav-label")) return;
 
+        if (!el.dataset.en) {
+          el.dataset.en = el.innerHTML;
+        }
         const originalHtml = el.dataset.en;
         const textContent = el.textContent.trim();
-        const normContent = textContent.replace(/\s+/g, ' ');
 
         for (const [key, val] of Object.entries(dict)) {
-          if (textContent === key || normContent === key || originalHtml.trim() === key || originalHtml.replace(/\s+/g, ' ') === key) {
+          if (textContent === key || originalHtml.trim() === key || originalHtml.replace(/\s+/g, ' ') === key) {
             el.innerHTML = val;
             break;
           }
         }
-      } else {
-        // Restore exact English original HTML
-        if (el.dataset.en) {
+      });
+    } else {
+      document.querySelectorAll("[data-en]").forEach((el) => {
+        if (!el.closest("#langSelect")) {
           el.innerHTML = el.dataset.en;
         }
-      }
-    });
+      });
+    }
   };
   window.applyCjpLanguage = applyLanguage;
 
   // Set initial language from storage on page load
   const savedLang = localStorage.getItem("cjp_lang") || "en";
-  setTimeout(() => applyLanguage(savedLang), 80);
+  if (savedLang === "hi") {
+    setTimeout(() => applyLanguage("hi"), 100);
+  }
 
   // Live chat
   const liveChat = $("#liveChat");
