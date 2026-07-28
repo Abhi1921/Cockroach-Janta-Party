@@ -54,7 +54,7 @@
     <div class="MarchCampaignStrip-module__x5w8qa__inner">
       <span class="MarchCampaignStrip-module__x5w8qa__badge" style="background: #fbbf24; color: #000; font-weight: 800;">🏆 VICTORY!</span>
       <p class="MarchCampaignStrip-module__x5w8qa__text" style="color: #ffffff;">
-        <strong style="color: #fef08a;">🎉 CJP जीत गई! सरकार ने मानीं सारी 5 बातें!</strong>
+        <strong style="color: #fef08a;">🎉 CJP Historic Victory Accord Enacted into Law!</strong>
         <span class="MarchCampaignStrip-module__x5w8qa__sep">·</span>
         Union Cabinet officially signs binding accord mandating NEET 3rd-party exam server audits, releasing student detainees, &amp; enacting CJP 5 demands into law!
       </p>
