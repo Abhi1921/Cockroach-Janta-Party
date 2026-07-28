@@ -498,11 +498,18 @@
     el.className = "cjp-pop-badge";
     el.innerHTML = getRandomMsg();
 
-    // Position cleanly at bottom-left corner out of the way of central text & hero images
-    el.style.left = "1.5rem";
-    el.style.bottom = "1.5rem";
-    el.style.top = "auto";
-    el.style.right = "auto";
+    // Alternate randomly across 4 clean positions (Top-Left, Top-Right, Mid-Left, Mid-Right) away from bottom widgets
+    const positions = [
+      { top: "5.5rem", left: "1.25rem", bottom: "auto", right: "auto" },
+      { top: "5.5rem", right: "1.25rem", bottom: "auto", left: "auto" },
+      { top: "14rem", left: "1.25rem", bottom: "auto", right: "auto" },
+      { top: "14rem", right: "1.25rem", bottom: "auto", left: "auto" }
+    ];
+    const pos = positions[Math.floor(Math.random() * positions.length)];
+    el.style.top = pos.top;
+    el.style.bottom = pos.bottom;
+    el.style.left = pos.left;
+    el.style.right = pos.right;
 
     document.body.appendChild(el);
     setTimeout(() => el.remove(), 4950);
