@@ -15,26 +15,26 @@
   // Verified working YouTube Video ID (Tested 100% embeddable across all domains)
   const VERIFIED_YT_ID = "5UjaUWbnWZ4";
 
-  // Default curated trending news & CJP Victory Posters + Aarakshan Hatao Movement
+  // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
       id: "news-cjp-sc-notice-28july",
-      title: "Supreme Court Notice on CJP PIL: Review Caste Reservation in Exams & Merit System | Big Breaking 28 July",
+      title: "Supreme Court Issues Notice on CJP PIL: Review Caste Reservation in Exams & Enforce Pure Meritocracy System",
       category: "cjp",
       source: "Supreme Court Legal Desk & CJP Swarm Bureau · New Delhi",
       sourceUrl: "protests.html",
       pubDate: "28 July 2026",
-      description: "Apex Court hears urgent petition filed by CJP demanding complete removal of caste quotas in competitive entrance exams & replacing them with 100% merit & financial aid.",
+      description: "Apex Court hears urgent petition filed by CJP demanding complete removal of caste quotas in competitive entrance exams & replacing them with 100% merit & economic financial aid.",
       image: "assets/img/cjp/cjp-poster-28july-sc.png",
       youtubeId: VERIFIED_YT_ID,
-      badge: "⚖️ SC NOTICE 28 JULY",
+      badge: "⚖️ SC BENCH NOTICE",
       badgeColor: "#9333ea",
-      tags: ["#AarakshanHatao", "#SCNotice28July", "#YogyataLao", "#CJPNews28July", "#100PercentMerit"],
+      tags: ["#ReservationHatao", "#BringMeritocracy", "#SupremeCourtNotice", "#CJPNews", "#100PercentMerit"],
       fullText: "On 28 July 2026, the Supreme Court of India officially accepted and heard the urgent Public Interest Litigation (PIL) filed by Cockroach Janta Party (CJP) founder Abhijeet Dipke and student delegates. The petition calls for a nationwide transition to a 100% Meritocracy framework for all competitive entrance examinations and public service recruitments, replacing caste-based reservation with economic need-based financial scholarships. The Supreme Court bench issued formal notices to the Union Government and NTA, asking for a constitutional roadmap within 4 weeks."
     },
     {
       id: "news-cjp-govt-commission-27july",
-      title: "Govt Forms Constitutional Reform Panel Following CJP 72-Hr Meritocracy Ultimatum | 27 July News",
+      title: "Government Forms Constitutional Reform Panel Following CJP Meritocracy Ultimatum",
       category: "cjp",
       source: "Sansad TV & Legal Swarm · New Delhi",
       sourceUrl: "manifesto.html",
@@ -42,14 +42,14 @@
       description: "Union Cabinet announces High-Level Reform Panel to evaluate Meritocracy & Reservation structure following CJP's massive youth rallies outside Central Secretariat.",
       image: "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
       youtubeId: VERIFIED_YT_ID,
-      badge: "🏛️ CONSTITUTIONAL PANEL 27 JULY",
+      badge: "🏛️ CONSTITUTIONAL PANEL",
       badgeColor: "#2563eb",
-      tags: ["#MeritocracyPanel", "#GovtJhuki", "#CJPUltimatum", "#YouthPower2026"],
+      tags: ["#MeritocracyPanel", "#ReservationHatao", "#CJPUltimatum", "#YouthPower"],
       fullText: "On 27 July 2026, responding to CJP's 72-hour national ultimatum, the Union Government announced the formation of a 7-member High-Level Constitutional Review Panel headed by retired supreme court justices and education experts to evaluate replacing caste-based seat quotas with economic-only assistance in national entrance examinations."
     },
     {
       id: "news-cjp-aarakshan-hatao-26july",
-      title: "आरक्षण हटाओ, योग्यता लाओ! CJP Mega Rally Spreads to 28 States | 10 Lakh Youth Join Movement",
+      title: "Reservation Hatao, Bring Meritocracy! CJP Mega Rally Spreads to 28 States | 10 Lakh Youth Join Movement",
       category: "cjp",
       source: "Aaj Tak & CJP National Swarm Bureau",
       sourceUrl: "protests.html",
@@ -57,14 +57,14 @@
       description: "Historic youth mobilization across Delhi, Patna, Jaipur, Lucknow, Pune & Kota demanding equal opportunities, removal of reservation barriers, and merit-based jobs.",
       image: "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
       youtubeId: VERIFIED_YT_ID,
-      badge: "✊ 28-STATE RALLY 26 JULY",
+      badge: "✊ NATIONWIDE RALLY",
       badgeColor: "#dc2626",
-      tags: ["#AarakshanHatao", "#YogyataLao", "#26JulyRally", "#MainBhiCockroach", "#MeritFirst"],
-      fullText: "On 26 July 2026, over 1 million students and young job aspirants participated in CJP's 'Aarakshan Hatao, Yogyata Lao' (Remove Reservation, Bring Meritocracy) nationwide march across 28 states. Students peacefully marched with posters and national flags demanding that competitive entrance exams (NEET, JEE, UPSC, SSC) must be evaluated purely on merit without caste-based cutoff disparities."
+      tags: ["#ReservationHatao", "#BringMeritocracy", "#NationwideRally", "#MainBhiCockroach", "#MeritFirst"],
+      fullText: "On 26 July 2026, over 1 million students and young job aspirants participated in CJP's 'Reservation Hatao, Bring Meritocracy' (Aarakshan Hatao, Yogyata Lao) nationwide march across 28 states. Students peacefully marched with posters and national flags demanding that competitive entrance exams (NEET, JEE, UPSC, SSC) must be evaluated purely on merit without caste-based cutoff disparities."
     },
     {
       id: "news-cjp-historic-victory-25july",
-      title: "CJP जीत गई! सरकार ने सारी बातें मान ली! | Delhi Jantar Mantar Victory Rally | Big Breaking",
+      title: "CJP Victorious! Government Signs Binding Agreement Accepting Student Demands | Delhi Jantar Mantar Rally",
       category: "cjp",
       source: "Aaj Tak & CJP Swarm Bureau · New Delhi Live",
       sourceUrl: "protests.html",
@@ -72,9 +72,9 @@
       description: "Historic victory for Indian youth! Union Government officially signs binding accord accepting all 5 CJP demands, mandating NEET exam server audits and releasing student detainees.",
       image: "assets/img/cjp/cjp-victory-poster-1.png",
       youtubeId: VERIFIED_YT_ID,
-      badge: "🏆 CJP HISTORIC VICTORY",
+      badge: "🏆 HISTORIC STUDENT ACCORD",
       badgeColor: "#16a34a",
-      tags: ["#CJPJeetGayi", "#GovtAcceptsDemands", "#NEETServerAudit", "#JantarMantarVictory", "#MainBhiCockroach"],
+      tags: ["#CJPVictory", "#GovtAcceptsDemands", "#NEETServerAudit", "#JantarMantarVictory", "#MainBhiCockroach"],
       fullText: "On 25 July 2026, the Union Government officially signed a historical accord with Cockroach Janta Party (CJP) delegates accepting all 5 core student demands. Mandatory 3rd-party exam server log audits for NEET were enacted into law, all detained youth coordinators were unconditionally released, and Founder Abhijeet Dipke ended his hunger strike at Jantar Mantar amidst nationwide celebrations."
     },
     {
@@ -249,20 +249,20 @@
   let searchQuery = "";
 
   const poolImages = [
+    "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
+    "assets/img/cjp/cjp-poster-28july-sc.png",
     "assets/img/cjp/cjp-victory-poster-1.png",
     "assets/img/cjp/cjp-victory-poster-2.png",
     "assets/img/cjp/cjp-victory-poster-3.png",
-    "assets/img/cjp/cjp-victory-poster-4.png",
     "assets/img/cjp/cjp-victory-poster-5.png",
-    "assets/img/cjp/cjp-victory-poster-6.png",
     "assets/img/cjp/trending-news-24july.webp",
     "assets/img/cjp/sansad-march-live.webp"
   ];
 
-  // Real Google News Live RSS Fetcher for CJP Victory
+  // Real Google News Live RSS Fetcher for Reservation Hatao & CJP Movement
   const fetchLiveGoogleNews = async () => {
     try {
-      const rssUrl = encodeURIComponent("https://news.google.com/rss/search?q=CJP+victory+OR+NEET+exam+reform+OR+Jantar+Mantar+protest&hl=en-IN&gl=IN&ceid=IN:en");
+      const rssUrl = encodeURIComponent("https://news.google.com/rss/search?q=Reservation+Hatao+OR+meritocracy+OR+CJP+protest+OR+NEET+exam+reform&hl=en-IN&gl=IN&ceid=IN:en");
       const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
       const res = await fetch(apiUrl);
       if (!res.ok) return;
@@ -270,7 +270,7 @@
       if (data && data.status === "ok" && Array.isArray(data.items) && data.items.length > 0) {
         const fetchedGoogleItems = data.items.slice(0, 4).map((item, idx) => ({
           id: `gn-live-${idx}`,
-          title: item.title || "Latest Student & Youth News Update",
+          title: item.title || "Latest Student & Meritocracy News Update",
           category: "google",
           source: `Google News · ${item.author || "Press Wire"}`,
           sourceUrl: item.link || "https://news.google.com",
@@ -280,7 +280,7 @@
           youtubeId: VERIFIED_YT_ID,
           badge: "🌐 GOOGLE LIVE",
           badgeColor: "#2563eb",
-          tags: ["#GoogleNewsLive", "#YouthVictory", "#LatestUpdate"],
+          tags: ["#GoogleNewsLive", "#ReservationHatao", "#BringMeritocracy", "#LatestUpdate"],
           fullText: (item.content || item.description || item.title).replace(/<[^>]*>?/gm, '')
         }));
 
@@ -288,7 +288,7 @@
         renderNewsGrid();
       }
     } catch (e) {
-      console.log("Using verified victory news engine data");
+      console.log("Using verified news engine data");
     }
   };
 

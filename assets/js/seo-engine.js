@@ -96,16 +96,20 @@
     "CJP tracker",
     "CJP revolutionaries",
     "Cockroach Janta Party news updates",
-    "Reservation Hatao Andolan CJP",
-    "Aarakshan Hatao Yogyata Lao",
-    "Aarakshan Hatao Movement 2026",
-    "CJP News 25 to 28 July 2026",
-    "Cockroach Janta Party reservation protest",
-    "General category merit rights India 2026",
-    "Supreme Court notice reservation CJP 28 July",
-    "CJP latest news 28 July 2026",
-    "Abhijeet Dipke Aarakshan Hatao Andolan",
-    "100 percent meritocracy entrance exam India"
+    "Reservation Hatao Movement",
+    "Reservation Hatao Bring Meritocracy",
+    "Aarakshan Hatao Yogyata Lao CJP",
+    "Remove Caste Reservation India 2026",
+    "100 Percent Meritocracy Entrance Exams",
+    "NEET Exam Meritocracy CJP",
+    "Cockroach Janta Party Reservation Protest",
+    "Supreme Court Notice Caste Quota CJP",
+    "General Category Merit Rights India 2026",
+    "Supreme Court Notice Meritocracy CJP",
+    "CJP Latest News Updates",
+    "Abhijeet Dipke Reservation Hatao",
+    "Economic Aid Meritocracy Framework India",
+    "Equal Opportunity Student Agitation CJP"
   ].join(", ");
 
   // Ensure Meta Keywords Tag
