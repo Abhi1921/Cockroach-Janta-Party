@@ -18,6 +18,36 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-bbc-cjp-28july",
+      title: "BBC News: Cockroach Janta Party (CJP) & How Abhijeet Dipke Became the Face of India's Gen Z Movement",
+      category: "cjp",
+      source: "BBC News World Service · Special Coverage",
+      sourceUrl: "protests.html",
+      pubDate: "28 July 2026",
+      description: "BBC News world feature story exploring how CJP transformed satire into India's largest youth movement demanding 100% Meritocracy and exam integrity.",
+      image: "assets/img/cjp/cjp-bbc-news-graphic.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🌐 BBC WORLD NEWS",
+      badgeColor: "#dc2626",
+      tags: ["#BBCNews", "#CockroachJantaParty", "#AbhijeetDipke", "#GenZMovement", "#ReservationHatao"],
+      fullText: "On 28 July 2026, BBC News broadcast a world special report on Cockroach Janta Party (CJP) titled 'How Abhijeet Dipke Became the Face of India's Youth Movement'. The report highlighted CJP's nationwide surge, Supreme Court PIL for 100% Meritocracy, and how over 22 million young job aspirants united under the satirical slogan 'Main Bhi Cockroach'."
+    },
+    {
+      id: "news-indiatoday-cjp-28july",
+      title: "India Today Breaking: CJP Sets Deadline for Government & SC Issues Notice on Reservation PIL",
+      category: "cjp",
+      source: "India Today Broadcast Bureau · New Delhi Live",
+      sourceUrl: "protests.html",
+      pubDate: "28 July 2026",
+      description: "India Today breaking broadcast reporting CJP's national ultimatum and Supreme Court notice directing Union Govt to respond on 100% Meritocracy petition.",
+      image: "assets/img/cjp/cjp-indiatoday-news-graphic.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📺 INDIA TODAY BREAKING",
+      badgeColor: "#dc2626",
+      tags: ["#IndiaToday", "#SCNotice", "#CJPDeadline", "#ReservationHatao", "#BringMeritocracy"],
+      fullText: "India Today breaking news coverage reports that the Supreme Court of India has issued formal notices to the Union Education Ministry and NTA on CJP's petition. The bench gave 4 weeks to submit a constitutional merit framework while CJP set a deadline to withdraw all student cases."
+    },
+    {
       id: "news-cjp-sc-notice-28july",
       title: "Supreme Court Issues Notice on CJP PIL: Review Caste Reservation in Exams & Enforce Pure Meritocracy System",
       category: "cjp",
@@ -249,12 +279,13 @@
   let searchQuery = "";
 
   const poolImages = [
+    "assets/img/cjp/cjp-bbc-news-graphic.png",
+    "assets/img/cjp/cjp-indiatoday-news-graphic.png",
     "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
     "assets/img/cjp/cjp-poster-28july-sc.png",
+    "assets/img/cjp/cjp-meritocracy-rally-poster.png",
+    "assets/img/cjp/cjp-youth-power-poster.png",
     "assets/img/cjp/cjp-victory-poster-1.png",
-    "assets/img/cjp/cjp-victory-poster-2.png",
-    "assets/img/cjp/cjp-victory-poster-3.png",
-    "assets/img/cjp/cjp-victory-poster-5.png",
     "assets/img/cjp/trending-news-24july.webp",
     "assets/img/cjp/sansad-march-live.webp"
   ];
