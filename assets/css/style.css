@@ -2332,6 +2332,14 @@ header.nav::-webkit-scrollbar,
   animation: rise 0.5s var(--ease) 0.5s both;
   transition: transform 0.25s var(--ease);
 }
+@media (max-width: 768px) {
+  .protest-mini-widget {
+    bottom: 4.8rem !important;
+    left: 0.75rem !important;
+    width: min(250px, calc(100vw - 1.5rem)) !important;
+    padding: 0.45rem 0.6rem !important;
+  }
+}
 .protest-mini-widget:hover {
   transform: translateY(-3px);
 }
