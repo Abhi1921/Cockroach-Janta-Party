@@ -15,8 +15,53 @@
   // Verified working YouTube Video ID (Tested 100% embeddable across all domains)
   const VERIFIED_YT_ID = "5UjaUWbnWZ4";
 
-  // Default curated trending news & 6 CJP Victory Posters + Top News Channels
+  // Default curated trending news & CJP Victory Posters + Aarakshan Hatao Movement
   const defaultTrendingNews = [
+    {
+      id: "news-cjp-sc-notice-28july",
+      title: "Supreme Court Notice on CJP PIL: Review Caste Reservation in Exams & Merit System | Big Breaking 28 July",
+      category: "cjp",
+      source: "Supreme Court Legal Desk & CJP Swarm Bureau · New Delhi",
+      sourceUrl: "protests.html",
+      pubDate: "28 July 2026",
+      description: "Apex Court hears urgent petition filed by CJP demanding complete removal of caste quotas in competitive entrance exams & replacing them with 100% merit & financial aid.",
+      image: "assets/img/cjp/cjp-poster-28july-sc.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "⚖️ SC NOTICE 28 JULY",
+      badgeColor: "#9333ea",
+      tags: ["#AarakshanHatao", "#SCNotice28July", "#YogyataLao", "#CJPNews28July", "#100PercentMerit"],
+      fullText: "On 28 July 2026, the Supreme Court of India officially accepted and heard the urgent Public Interest Litigation (PIL) filed by Cockroach Janta Party (CJP) founder Abhijeet Dipke and student delegates. The petition calls for a nationwide transition to a 100% Meritocracy framework for all competitive entrance examinations and public service recruitments, replacing caste-based reservation with economic need-based financial scholarships. The Supreme Court bench issued formal notices to the Union Government and NTA, asking for a constitutional roadmap within 4 weeks."
+    },
+    {
+      id: "news-cjp-govt-commission-27july",
+      title: "Govt Forms Constitutional Reform Panel Following CJP 72-Hr Meritocracy Ultimatum | 27 July News",
+      category: "cjp",
+      source: "Sansad TV & Legal Swarm · New Delhi",
+      sourceUrl: "manifesto.html",
+      pubDate: "27 July 2026",
+      description: "Union Cabinet announces High-Level Reform Panel to evaluate Meritocracy & Reservation structure following CJP's massive youth rallies outside Central Secretariat.",
+      image: "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🏛️ CONSTITUTIONAL PANEL 27 JULY",
+      badgeColor: "#2563eb",
+      tags: ["#MeritocracyPanel", "#GovtJhuki", "#CJPUltimatum", "#YouthPower2026"],
+      fullText: "On 27 July 2026, responding to CJP's 72-hour national ultimatum, the Union Government announced the formation of a 7-member High-Level Constitutional Review Panel headed by retired supreme court justices and education experts to evaluate replacing caste-based seat quotas with economic-only assistance in national entrance examinations."
+    },
+    {
+      id: "news-cjp-aarakshan-hatao-26july",
+      title: "आरक्षण हटाओ, योग्यता लाओ! CJP Mega Rally Spreads to 28 States | 10 Lakh Youth Join Movement",
+      category: "cjp",
+      source: "Aaj Tak & CJP National Swarm Bureau",
+      sourceUrl: "protests.html",
+      pubDate: "26 July 2026",
+      description: "Historic youth mobilization across Delhi, Patna, Jaipur, Lucknow, Pune & Kota demanding equal opportunities, removal of reservation barriers, and merit-based jobs.",
+      image: "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "✊ 28-STATE RALLY 26 JULY",
+      badgeColor: "#dc2626",
+      tags: ["#AarakshanHatao", "#YogyataLao", "#26JulyRally", "#MainBhiCockroach", "#MeritFirst"],
+      fullText: "On 26 July 2026, over 1 million students and young job aspirants participated in CJP's 'Aarakshan Hatao, Yogyata Lao' (Remove Reservation, Bring Meritocracy) nationwide march across 28 states. Students peacefully marched with posters and national flags demanding that competitive entrance exams (NEET, JEE, UPSC, SSC) must be evaluated purely on merit without caste-based cutoff disparities."
+    },
     {
       id: "news-cjp-historic-victory-25july",
       title: "CJP जीत गई! सरकार ने सारी बातें मान ली! | Delhi Jantar Mantar Victory Rally | Big Breaking",

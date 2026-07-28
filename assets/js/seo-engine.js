@@ -95,7 +95,17 @@
     "CJP issues",
     "CJP tracker",
     "CJP revolutionaries",
-    "Cockroach Janta Party news updates"
+    "Cockroach Janta Party news updates",
+    "Reservation Hatao Andolan CJP",
+    "Aarakshan Hatao Yogyata Lao",
+    "Aarakshan Hatao Movement 2026",
+    "CJP News 25 to 28 July 2026",
+    "Cockroach Janta Party reservation protest",
+    "General category merit rights India 2026",
+    "Supreme Court notice reservation CJP 28 July",
+    "CJP latest news 28 July 2026",
+    "Abhijeet Dipke Aarakshan Hatao Andolan",
+    "100 percent meritocracy entrance exam India"
   ].join(", ");
 
   // Ensure Meta Keywords Tag
@@ -273,13 +283,13 @@
         {
           "@type": "NewsArticle",
           "@id": canonicalUrl + "#trending-news",
-          "headline": "Cockroach Janta Party Mega Youth Movement & NEET Reform Drive",
-          "description": "Live coverage of Cockroach Janta Party (CJP) protests, Jantar Mantar hunger strike, and student integrity demands.",
+          "headline": "CJP Aarakshan Hatao Andolan & Supreme Court Notice 28 July 2026: 100% Meritocracy Movement",
+          "description": "Live coverage of Cockroach Janta Party (CJP) Reservation Hatao Andolan, Supreme Court PIL notice, and 25-28 July youth protests.",
           "image": [
-            "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-25july.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/sansad-march-live.webp"
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-poster-28july-sc.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-aarakshan-hatao-poster.png"
           ],
-          "datePublished": "2026-07-20T08:00:00+05:30",
+          "datePublished": "2026-07-25T08:00:00+05:30",
           "dateModified": todayIso,
           "author": {
             "@type": "Person",
