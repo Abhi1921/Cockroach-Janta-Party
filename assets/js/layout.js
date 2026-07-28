@@ -301,16 +301,16 @@
   </footer>
   <div class="protest-mini-widget" id="protestMiniWidget">
     <button type="button" class="widget-close" id="protestWidgetClose" aria-label="Close float widget">×</button>
-    <div class="widget-badge" style="font-family: var(--font-mono); font-size: 0.6rem; font-weight: 800; color: #fbbf24; text-transform: uppercase; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
-      <span style="width: 7px; height: 7px; background: var(--signal); border-radius: 50%; display: inline-block; animation: pulse 1.4s ease infinite;"></span>
-      🔥 TRENDING POSTER 2026
+    <div class="widget-badge" style="font-family: var(--font-mono); font-size: 0.6rem; font-weight: 800; color: #dc2626; text-transform: uppercase; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
+      <span style="width: 7px; height: 7px; background: #dc2626; border-radius: 50%; display: inline-block; animation: pulse 1.4s ease infinite;"></span>
+      ✊ RHA MOVEMENT · 100% MERITOCRACY
     </div>
     <div class="widget-body" id="openPosterModalBtn" style="display: flex; gap: 0.75rem; align-items: center; cursor: pointer;">
-      <img src="assets/img/cjp/trending-cjp-poster-25july.png" alt="CJP Trending Campaign Poster 2026" width="70" height="90" style="object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.25); flex-shrink: 0;" loading="eager">
+      <img src="assets/img/cjp/cjp-aarakshan-hatao-poster.png" alt="Reservation Hatao Bring Meritocracy RHA Poster" width="70" height="90" style="object-fit: cover; border-radius: 8px; border: 1px solid rgba(220,38,38,0.5); flex-shrink: 0;" loading="eager">
       <div class="widget-info">
-        <strong style="font-family: var(--font-display); font-size: 0.92rem; color: #fff; line-height: 1.15; display: block;">WE SURVIVE. WE RISE. WE LEAD.</strong>
-        <p style="font-size: 0.72rem; color: rgba(255,255,255,0.85); margin: 0.2rem 0 0.35rem; line-height: 1.25;">25 July Swarm Poster · Delhi</p>
-        <span class="btn-mini" style="font-family: var(--font-mono); font-size: 0.62rem; font-weight: 800; color: #fbbf24; text-transform: uppercase;">View Poster Modal →</span>
+        <strong style="font-family: var(--font-display); font-size: 0.92rem; color: #fff; line-height: 1.15; display: block;">RESERVATION HATAO, BRING MERITOCRACY!</strong>
+        <p style="font-size: 0.72rem; color: rgba(255,255,255,0.85); margin: 0.2rem 0 0.35rem; line-height: 1.25;">RHA 28-State Student March · Delhi</p>
+        <span class="btn-mini" style="font-family: var(--font-mono); font-size: 0.62rem; font-weight: 800; color: #fbbf24; text-transform: uppercase;">View RHA Poster &amp; Portal →</span>
       </div>
     </div>
   </div>
@@ -598,20 +598,20 @@
       document.body.appendChild(modal);
     }
     modal.innerHTML = `
-      <div style="background: #ffffff; border: 2px solid var(--signal); border-radius: 22px; max-width: 520px; width: 100%; max-height: 92vh; overflow-y: auto; box-shadow: 0 24px 60px rgba(0,0,0,0.6); position: relative; padding: 1.5rem; text-align: center; animation: rise 0.3s var(--ease);">
-        <button type="button" id="closePosterModal" style="position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; border-radius: 50%; border: 0; background: var(--signal); color: #fff; font-size: 1.4rem; cursor: pointer; display: grid; place-items: center; z-index: 10;">×</button>
-        <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 800; color: var(--signal); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">🔥 OFFICIAL TRENDING CAMPAIGN POSTER</span>
-        <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 1rem; color: var(--ink);">Cockroach Janta Party Wale</h2>
-        <div style="border-radius: 14px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(0,0,0,0.2); margin-bottom: 1.25rem;">
-          <img src="assets/img/cjp/trending-cjp-poster-25july.png" alt="CJP Official Trending Poster - We Survive We Rise We Lead" style="width: 100%; height: auto; display: block;">
+      <div style="background: #ffffff; border: 2px solid #dc2626; border-radius: 22px; max-width: 520px; width: 100%; max-height: 92vh; overflow-y: auto; box-shadow: 0 24px 60px rgba(0,0,0,0.6); position: relative; padding: 1.5rem; text-align: center; animation: rise 0.3s var(--ease);">
+        <button type="button" id="closePosterModal" style="position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; border-radius: 50%; border: 0; background: #dc2626; color: #fff; font-size: 1.4rem; cursor: pointer; display: grid; place-items: center; z-index: 10;">×</button>
+        <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 800; color: #dc2626; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">✊ OFFICIAL RHA MOVEMENT POSTER</span>
+        <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 0.5rem; color: var(--ink);">Reservation Hatao, Bring Meritocracy!</h2>
+        <div style="border-radius: 14px; overflow: hidden; border: 1.5px solid #dc2626; box-shadow: 0 12px 32px rgba(220,38,38,0.2); margin-bottom: 1.25rem; max-height: 380px;">
+          <img src="assets/img/cjp/cjp-aarakshan-hatao-poster.png" alt="Reservation Hatao Bring Meritocracy Official RHA Poster" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #0f172a;">
         </div>
-        <p style="font-size: 0.95rem; line-height: 1.5; color: var(--muted); margin-bottom: 1.25rem;">
-          <strong>"Because degrees are temporary, survival is permanent."</strong><br>
-          Join India's leading youth movement demanding exam integrity, NEET paper leak audit, and student rights representation.
+        <p style="font-size: 0.92rem; line-height: 1.55; color: var(--muted); margin-bottom: 1.25rem;">
+          <strong>"Remove Reservation, Bring Meritocracy! 100% Meritocracy Movement."</strong><br>
+          Join India's 28-state student movement demanding 100% Merit-Based entrance exams (NEET, JEE, UPSC, SSC) and economic need-based financial aid.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <a href="join" class="btn btn-solid" style="flex: 1; text-align: center;">✊ Join Swarm Free</a>
-          <a href="assets/img/cjp/trending-cjp-poster-25july.png" target="_blank" download class="btn btn-ghost" style="flex: 1; text-align: center;">📥 Download Poster</a>
+          <a href="rha" class="btn btn-solid" style="flex: 1; text-align: center; background: #dc2626; border-color: #dc2626; color: #fff;">✊ Explore RHA Portal</a>
+          <a href="assets/img/cjp/cjp-aarakshan-hatao-poster.png" target="_blank" download class="btn btn-ghost" style="flex: 1; text-align: center;">📥 Download RHA Poster</a>
         </div>
       </div>
     `;
