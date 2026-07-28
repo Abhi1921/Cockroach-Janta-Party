@@ -329,9 +329,13 @@
       <button type="submit">Send</button>
     </form>
   </div>
-  <button type="button" id="statsToggle" aria-label="View Site Statistics" style="position: fixed; right: 7.2rem; bottom: 1.1rem; z-index: 50; display: inline-flex; align-items: center; gap: 0.4rem; background: #1e293b; color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); border-radius: 999px; padding: 0.75rem 1.15rem; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: all 0.2s;" onmouseover="this.style.background='#334155'" onmouseout="this.style.background='#1e293b'">
+  <button type="button" id="statsToggle" aria-label="View Site Statistics" style="position: fixed; right: 9.2rem; bottom: 1.1rem; z-index: 9998; display: inline-flex; align-items: center; gap: 0.4rem; background: #1e293b; color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); border-radius: 999px; padding: 0.65rem 1rem; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: all 0.2s;" onmouseover="this.style.background='#334155'" onmouseout="this.style.background='#1e293b'">
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20V14"/></svg>
     Stats
+  </button>
+  <button type="button" id="cacheClearBtn" aria-label="Clear Cache and Hard Refresh" style="position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 9999; display: inline-flex; align-items: center; gap: 0.4rem; background: #dc2626; color: #ffffff; border: 1.5px solid #fecdd3; border-radius: 999px; padding: 0.65rem 1rem; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; box-shadow: 0 10px 30px rgba(220,38,38,0.35); transition: all 0.2s;" onmouseover="this.style.background='#b91c1c'" onmouseout="this.style.background='#dc2626'">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2M10 11v6M14 11v6"/></svg>
+    🧹 Clear Cache
   </button>
   <div id="statsPanel" style="position: fixed; right: 1.1rem; bottom: 4.5rem; width: min(340px, calc(100vw - 2rem)); background: #0f172a; border: 1.5px solid rgba(251,191,36,0.5); border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); z-index: 9999; display: none; flex-direction: column; padding: 1.25rem; color: #fff; font-family: var(--font-body);">
     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 0.6rem; margin-bottom: 0.85rem;">
@@ -647,6 +651,37 @@
   if (statsClose && statsPanel) {
     statsClose.addEventListener("click", () => {
       statsPanel.style.display = "none";
+    });
+  }
+
+  // Instant Cache Purge & Hard Refresh Event Handler
+  const cacheClearBtn = document.getElementById("cacheClearBtn");
+  if (cacheClearBtn) {
+    cacheClearBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      try {
+        localStorage.clear();
+        sessionStorage.clear();
+        if ('caches' in window) {
+          caches.keys().then(function(names) {
+            names.forEach(function(name) {
+              caches.delete(name);
+            });
+          });
+        }
+        if (navigator.serviceWorker) {
+          navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            registrations.forEach(function(r) { r.unregister(); });
+          });
+        }
+      } catch (err) {
+        console.log("Cache purge error:", err);
+      }
+      cacheClearBtn.innerHTML = "⚡ Hard Refreshing...";
+      cacheClearBtn.style.background = "#16a34a";
+      setTimeout(function () {
+        window.location.href = window.location.pathname + "?cache_buster=" + Date.now();
+      }, 350);
     });
   }
 
