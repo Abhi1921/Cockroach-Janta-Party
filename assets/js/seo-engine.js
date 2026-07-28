@@ -96,6 +96,22 @@
     "CJP tracker",
     "CJP revolutionaries",
     "Cockroach Janta Party news updates",
+    "CJP Official",
+    "CJP Youth Swarm",
+    "CJP Digital ID Card",
+    "CJP Membership",
+    "CJP Manifesto 5 Demands",
+    "CJP Supreme Court Notice",
+    "CJP Abhijeet Dipke",
+    "Cockroach Janta Party",
+    "Cockroach Janata Party",
+    "The Cockroach Janta Party",
+    "Cockroach Janta Party Wale",
+    "cockroachjantaparty.com",
+    "cockroachjantapartywale.com",
+    "thecockroachjantaparty.org.in",
+    "cockroachjantaparty.org",
+    "Cockroach Party India",
     "Reservation Hatao Movement",
     "Reservation Hatao Bring Meritocracy",
     "Aarakshan Hatao Yogyata Lao CJP",
@@ -109,7 +125,11 @@
     "CJP Latest News Updates",
     "Abhijeet Dipke Reservation Hatao",
     "Economic Aid Meritocracy Framework India",
-    "Equal Opportunity Student Agitation CJP"
+    "Equal Opportunity Student Agitation CJP",
+    "Caste Reservation Abolition India",
+    "Meritocracy Student Protest India",
+    "Supreme Court PIL Reservation Reform",
+    "100 Percent Meritocracy System"
   ].join(", ");
 
   // Ensure Meta Keywords Tag

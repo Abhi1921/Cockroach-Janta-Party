@@ -426,7 +426,7 @@
     });
   };
 
-  // Historic Victory Popup Alert Modal for CJP Victory
+  // Breaking Trending News Popup Alert Modal for CJP & Reservation Hatao Movement
   const openCJPVictoryPopup = () => {
     let popup = document.getElementById("cjp-breaking-popup-modal");
     if (!popup) {
@@ -442,63 +442,67 @@
     }
 
     popup.innerHTML = `
-      <div style="background: #ffffff; border: 3px solid #16a34a; border-radius: 22px; max-width: 760px; width: 100%; max-height: 92vh; overflow-y: auto; box-shadow: 0 28px 75px rgba(22,163,74,0.4); position: relative; animation: rise 0.35s var(--ease);">
+      <div style="background: #ffffff; border: 3px solid #16a34a; border-radius: 22px; max-width: 780px; width: 100%; max-height: 92vh; overflow-y: auto; box-shadow: 0 28px 75px rgba(22,163,74,0.4); position: relative; animation: rise 0.35s var(--ease);">
         <button type="button" id="closeBreakingPopup" style="position: absolute; top: 1rem; right: 1rem; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #16a34a; color: #fff; font-size: 1.6rem; cursor: pointer; display: grid; place-items: center; z-index: 30; box-shadow: 0 4px 14px rgba(0,0,0,0.3);">×</button>
         
         <!-- Live YouTube Video Iframe Embed Header -->
         <div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #000;">
           <iframe 
             src="https://www.youtube.com/embed/${VERIFIED_YT_ID}?autoplay=1&amp;rel=0&amp;modestbranding=1" 
-            title="CJP जीत गई! सरकार ने सारी बातें मान ली! | Delhi Jantar Mantar Victory" 
+            title="Supreme Court Notice on CJP PIL: Reservation Hatao &amp; Pure Meritocracy" 
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
           </iframe>
-          <span style="position: absolute; top: 0.85rem; left: 0.85rem; background: #16a34a; color: #fff; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.8rem; border-radius: 999px; pointer-events: none; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
-            🏆 HISTORIC VICTORY POPUP · CJP WINS!
+          <span style="position: absolute; top: 0.85rem; left: 0.85rem; background: #9333ea; color: #fff; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.8rem; border-radius: 999px; pointer-events: none; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+            ⚖️ SC PIL NOTICE · RESERVATION HATAO MOVEMENT
           </span>
         </div>
 
         <div style="padding: 1.85rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: #16a34a; text-transform: uppercase;">
-              🎉 AAJ TAK &amp; CJP SWARM BUREAU · NEW DELHI LIVE
+              🎉 SUPREME COURT &amp; CJP SWARM BUREAU · LIVE NEWS
             </span>
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); font-weight: 700;">
-              25 JULY 2026
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #9333ea; font-weight: 800; background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.2rem 0.6rem; border-radius: 6px;">
+              LIVE TRENDING
             </span>
           </div>
 
           <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.85rem); line-height: 1.25; margin: 0 0 0.85rem; color: var(--ink);">
-            CJP जीत गई! <em>सरकार ने सारी बातें मान ली!</em> | Delhi Jantar Mantar Victory Rally
+            SC Issues Notice on CJP PIL: <em>Reservation Hatao &amp; Enforce 100% Meritocracy</em>
           </h2>
 
-          <div style="background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
-            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #16a34a; margin-bottom: 0.35rem;">
-              📢 HISTORIC ACCORD SIGNED BY GOVERNMENT:
+          <div style="background: #faf5ff; border-left: 4px solid #9333ea; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
+            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #7e22ce; margin-bottom: 0.35rem;">
+              ⚖️ SUPREME COURT PIL HEARING &amp; GOVT DIRECTION:
             </strong>
             <p style="font-size: 0.95rem; line-height: 1.65; color: var(--ink); margin: 0;">
-              Union Cabinet Representatives have signed an official binding agreement accepting all 5 core demands of Cockroach Janta Party (CJP). Independent third-party server audits for NEET exams are now legally mandated, and all detained student activists have been unconditionally released.
+              Supreme Court of India officially accepted CJP's Public Interest Litigation (PIL) demanding total abolition of caste quotas in competitive entrance exams &amp; replacing them with 100% Meritocracy + Economic Need-Based Scholarships.
             </p>
           </div>
 
-          <!-- Poster Preview Grid in Popup -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 1.25rem;">
-            <img src="assets/img/cjp/cjp-victory-poster-1.png" alt="CJP Victory 1" style="border-radius: 8px; border: 1px solid var(--line); aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-victory-poster-2.png" alt="CJP Victory 2" style="border-radius: 8px; border: 1px solid var(--line); aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-victory-poster-5.png" alt="CJP Victory 5" style="border-radius: 8px; border: 1px solid var(--line); aspect-ratio: 1/1; object-fit: cover;">
+          <!-- 4-Poster Preview Grid in Popup -->
+          <strong style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; text-transform: uppercase;">
+            🖼️ CJP Movement &amp; Meritocracy Posters (Official Collection):
+          </strong>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1.25rem;">
+            <img src="assets/img/cjp/cjp-poster-28july-sc.png" alt="SC Notice Poster" style="border-radius: 8px; border: 1.5px solid #9333ea; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-aarakshan-hatao-poster.png" alt="Reservation Hatao Poster" style="border-radius: 8px; border: 1.5px solid #dc2626; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-meritocracy-rally-poster.png" alt="100% Meritocracy Poster" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-youth-power-poster.png" alt="Youth Power Shield Poster" style="border-radius: 8px; border: 1.5px solid var(--gold); aspect-ratio: 1/1; object-fit: cover;">
           </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#CJPJeetGayi</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#GovtAcceptsDemands</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#NEETServerAudit</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#ReservationHatao</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#BringMeritocracy</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#CockroachJantaParty</span>
             <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#MainBhiCockroach</span>
           </div>
 
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 1.25rem;">
-            <a href="protests.html" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #16a34a; border-color: #16a34a;">
-              🏆 View Full Victory Rallies &amp; Accord →
+            <a href="protests.html" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #9333ea; border-color: #9333ea;">
+              ⚖️ View Full SC Notice &amp; Movement Rallies →
             </a>
             <button type="button" id="closeBreakingPopupBtn" class="btn btn-ghost" style="padding: 0.65rem 1rem;">
               Close Alert ×
