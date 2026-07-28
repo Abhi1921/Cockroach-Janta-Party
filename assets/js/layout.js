@@ -36,7 +36,7 @@
     ["manifesto", "5 Demands", "📜"],
     ["articles", "Media", "📰"],
     ["protests", "Actions", "✊"],
-    ["issues", "Issues", "⚠️"],
+    ["rha", "RHA Movement", "✊"],
     ["tracker", "Tracker", "📊"],
     ["members", "Members", "👥"],
     ["gallery", "Gallery", "🖼️"],
