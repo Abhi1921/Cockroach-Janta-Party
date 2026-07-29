@@ -314,11 +314,11 @@
       </div>
     </div>
   </div>
-  <button type="button" class="live-chat" id="liveChat" aria-label="Open Live Chat" style="position: fixed !important; right: 1.1rem !important; bottom: 4.8rem !important; z-index: 9997 !important;">
+  <button type="button" class="live-chat" id="liveChat" aria-label="Open Live Chat" style="position: fixed !important; right: 1.1rem !important; bottom: 1.1rem !important; z-index: 9997 !important;">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     <span>Chat</span>
   </button>
-  <div class="chat-panel" id="chatPanel" hidden style="position: fixed !important; right: 1.1rem !important; bottom: 8.2rem !important; z-index: 9999 !important;">
+  <div class="chat-panel" id="chatPanel" hidden style="position: fixed !important; right: 1.1rem !important; bottom: 4.5rem !important; z-index: 9999 !important;">
     <div class="chat-head"><strong>CJP Chat</strong><button type="button" id="chatClose" aria-label="Close">×</button></div>
     <div class="chat-body">
       <p>Ask about joining, protests, or the manifesto.</p>
@@ -333,54 +333,9 @@
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.008 2.2c-5.448 0-9.879 4.43-9.883 9.879-.001 1.97.513 3.892 1.492 5.59l.327.568-1.073 3.92 4.01-1.053.551.327c1.626.966 3.486 1.477 5.393 1.478 5.451 0 9.883-4.432 9.887-9.885.002-2.64-1.02-5.122-2.879-6.983C17.18 3.22 14.7 2.2 12.008 2.2zm5.424 13.064c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.669.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
     <span>💬 WhatsApp Lead</span>
   </a>
-  <button type="button" id="statsToggle" aria-label="View Site Statistics" class="cjp-stats-floating-btn" style="position: fixed !important; right: 1.1rem !important; bottom: 1.1rem !important; z-index: 9998 !important;">
-    <span class="stats-live-pulse-dot"></span>
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20V14"/></svg>
-    <span>📊 STATS</span>
-  </button>
   <button type="button" id="cacheClearBtn" aria-label="Clear Cache and Hard Refresh" title="Clear Cache &amp; Hard Refresh" style="position: fixed; top: 1.1rem; right: 1.1rem; z-index: 999999; width: 40px; height: 40px; border-radius: 50%; background: #dc2626; color: #ffffff; border: 1.5px solid #fecdd3; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 24px rgba(220,38,38,0.45); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1.0)'">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2M10 11v6M14 11v6"/></svg>
-  </button>
-  <div id="statsPanel">
-    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 0.6rem; margin-bottom: 0.85rem;">
-      <strong style="color: #fbbf24; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem;">
-        <span class="stats-live-pulse-dot"></span>
-        CJP LIVE SITE MONITOR
-      </strong>
-      <button type="button" id="statsClose" aria-label="Close Stats" style="background: transparent; border: 0; color: #b8a29a; font-size: 1.3rem; cursor: pointer; line-height: 1;">×</button>
-    </div>
-    <div style="display: grid; gap: 0.75rem; font-size: 0.82rem;">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="color: #b8a29a;">Total Pageviews:</span>
-        <strong id="hitCount" style="color: #4ade80; font-family: var(--font-mono); font-size: 0.95rem;">248,919+</strong>
-      </div>
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="color: #b8a29a;">Today's Visits:</span>
-        <strong id="todayCount" style="color: #fbbf24; font-family: var(--font-mono); font-size: 0.9rem;">18,490+</strong>
-      </div>
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="color: #b8a29a;">Active Swarm (Live):</span>
-        <strong style="color: #60a5fa; font-family: var(--font-mono); font-size: 0.9rem; display: flex; align-items: center; gap: 0.35rem;" id="liveSwarmCount">
-          <span class="stats-live-pulse-dot"></span>
-          284 online
-        </strong>
-      </div>
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="color: #b8a29a;">Google Index Status:</span>
-        <strong style="color: #4ade80; display: flex; align-items: center; gap: 0.3rem;">
-          <span style="width: 7px; height: 7px; background: #4ade80; border-radius: 50%; display: inline-block;"></span>
-          Indexed (Sitemap Active)
-        </strong>
-      </div>
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="color: #b8a29a;">AdSense Status:</span>
-        <strong style="color: #fbbf24; display: flex; align-items: center; gap: 0.3rem;" title="pub-6925854041247319">
-          <span style="width: 7px; height: 7px; background: #fbbf24; border-radius: 50%; display: inline-block;"></span>
-          Active (pub-6925854041247319)
-        </strong>
-      </div>
-    </div>
-  </div>`;
+  </button>`;
 
   const mountTop = document.getElementById("site-top");
   const mountBottom = document.getElementById("site-bottom");
