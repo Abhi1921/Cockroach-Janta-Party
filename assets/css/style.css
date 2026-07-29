@@ -2863,19 +2863,44 @@ img, iframe, video {
   animation: countHighlight 0.4s ease;
 }
 
+.cjp-wa-floating-btn {
+  position: fixed !important;
+  left: 1.25rem !important;
+  bottom: 1.25rem !important;
+  z-index: 9998 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important;
+  color: #ffffff !important;
+  border: 1.5px solid #86efac !important;
+  border-radius: 999px !important;
+  padding: 0.65rem 1.2rem !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 30px rgba(22, 163, 74, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.cjp-wa-floating-btn:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%) !important;
+  box-shadow: 0 14px 35px rgba(22, 163, 74, 0.6) !important;
+}
+
 @media (max-width: 768px) {
-  #statsToggle {
-    right: 0.75rem !important;
-    left: auto !important;
-    bottom: 0.75rem !important;
-    padding: 0.55rem 0.9rem !important;
-    font-size: 0.7rem !important;
-  }
-  #statsPanel {
-    right: 0.75rem !important;
-    bottom: 4.2rem !important;
-    width: calc(100vw - 1.5rem) !important;
+  .cjp-wa-floating-btn {
+    left: 0.75rem !important;
+    bottom: 3.8rem !important;
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.68rem !important;
   }
 }
+
 
 
