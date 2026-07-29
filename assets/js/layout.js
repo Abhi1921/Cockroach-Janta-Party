@@ -329,25 +329,26 @@
       <button type="submit">Send</button>
     </form>
   </div>
-  <button type="button" id="statsToggle" aria-label="View Site Statistics" style="position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 9998; display: inline-flex; align-items: center; gap: 0.4rem; background: #1e293b; color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); border-radius: 999px; padding: 0.65rem 1rem; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: all 0.2s;" onmouseover="this.style.background='#334155'" onmouseout="this.style.background='#1e293b'">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20V14"/></svg>
-    Stats
+  <button type="button" id="statsToggle" aria-label="View Site Statistics" class="cjp-stats-floating-btn">
+    <span class="stats-live-pulse-dot"></span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20V14"/></svg>
+    <span>📊 STATS</span>
   </button>
   <button type="button" id="cacheClearBtn" aria-label="Clear Cache and Hard Refresh" title="Clear Cache &amp; Hard Refresh" style="position: fixed; top: 1.1rem; right: 1.1rem; z-index: 999999; width: 40px; height: 40px; border-radius: 50%; background: #dc2626; color: #ffffff; border: 1.5px solid #fecdd3; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 24px rgba(220,38,38,0.45); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1.0)'">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2M10 11v6M14 11v6"/></svg>
   </button>
-  <div id="statsPanel" style="position: fixed; right: 1.1rem; bottom: 4.5rem; width: min(340px, calc(100vw - 2rem)); background: #0f172a; border: 1.5px solid rgba(251,191,36,0.5); border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); z-index: 9999; display: none; flex-direction: column; padding: 1.25rem; color: #fff; font-family: var(--font-body);">
+  <div id="statsPanel">
     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 0.6rem; margin-bottom: 0.85rem;">
       <strong style="color: #fbbf24; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem;">
-        <span style="width: 8px; height: 8px; background: #22c55e; border-radius: 50%; display: inline-block; animation: pulse 1.4s ease infinite;"></span>
-        CJP Live Site Monitor
+        <span class="stats-live-pulse-dot"></span>
+        CJP LIVE SITE MONITOR
       </strong>
       <button type="button" id="statsClose" aria-label="Close Stats" style="background: transparent; border: 0; color: #b8a29a; font-size: 1.3rem; cursor: pointer; line-height: 1;">×</button>
     </div>
     <div style="display: grid; gap: 0.75rem; font-size: 0.82rem;">
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span style="color: #b8a29a;">Total Pageviews:</span>
-        <strong id="hitCount" style="color: #4ade80; font-family: var(--font-mono); font-size: 0.95rem;">248,910+</strong>
+        <strong id="hitCount" style="color: #4ade80; font-family: var(--font-mono); font-size: 0.95rem;">248,919+</strong>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span style="color: #b8a29a;">Today's Visits:</span>
@@ -355,18 +356,21 @@
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span style="color: #b8a29a;">Active Swarm (Live):</span>
-        <strong style="color: #60a5fa; font-family: var(--font-mono); font-size: 0.9rem;" id="liveSwarmCount">284 online</strong>
+        <strong style="color: #60a5fa; font-family: var(--font-mono); font-size: 0.9rem; display: flex; align-items: center; gap: 0.35rem;" id="liveSwarmCount">
+          <span class="stats-live-pulse-dot"></span>
+          284 online
+        </strong>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span style="color: #b8a29a;">Google Index Status:</span>
-        <strong style="color: #4ade80; display: flex; align-items: center; gap: 0.25rem;">
+        <strong style="color: #4ade80; display: flex; align-items: center; gap: 0.3rem;">
           <span style="width: 7px; height: 7px; background: #4ade80; border-radius: 50%; display: inline-block;"></span>
           Indexed (Sitemap Active)
         </strong>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span style="color: #b8a29a;">AdSense Status:</span>
-        <strong style="color: #fbbf24; display: flex; align-items: center; gap: 0.25rem;" title="pub-6925854041247319">
+        <strong style="color: #fbbf24; display: flex; align-items: center; gap: 0.3rem;" title="pub-6925854041247319">
           <span style="width: 7px; height: 7px; background: #fbbf24; border-radius: 50%; display: inline-block;"></span>
           Active (pub-6925854041247319)
         </strong>
@@ -638,20 +642,27 @@
   // Prevent FOUC: Reveal page once layout is mounted
   document.body.classList.remove("no-fouc");
 
-  // Stats toggler and API fetching logic
+  // Stats toggler and smooth animation logic
   const statsToggle = document.getElementById("statsToggle");
   const statsPanel = document.getElementById("statsPanel");
   const statsClose = document.getElementById("statsClose");
   if (statsToggle && statsPanel) {
-    statsToggle.addEventListener("click", () => {
-      statsPanel.style.display = statsPanel.style.display === "none" ? "flex" : "none";
+    statsToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      statsPanel.classList.toggle("is-open");
     });
   }
   if (statsClose && statsPanel) {
-    statsClose.addEventListener("click", () => {
-      statsPanel.style.display = "none";
+    statsClose.addEventListener("click", (e) => {
+      e.stopPropagation();
+      statsPanel.classList.remove("is-open");
     });
   }
+  document.addEventListener("click", (e) => {
+    if (statsPanel && statsPanel.classList.contains("is-open") && !statsPanel.contains(e.target) && !statsToggle?.contains(e.target)) {
+      statsPanel.classList.remove("is-open");
+    }
+  });
 
   // Instant Cache Purge & Hard Refresh Event Handler
   const cacheClearBtn = document.getElementById("cacheClearBtn");
@@ -684,26 +695,61 @@
     });
   }
 
-  // Live Stats Engine
+  // Real-Time Live Stats Engine
   const initStatsEngine = () => {
-    let localHits = Number(localStorage.getItem("cjp_total_hits") || "248910");
+    // 1. Total Pageviews counter
+    let localHits = Number(localStorage.getItem("cjp_total_hits") || "248919");
     localHits += 1;
     localStorage.setItem("cjp_total_hits", String(localHits));
+
+    // 2. Today's Visits counter
+    const todayKey = "cjp_today_date";
+    const todayHitsKey = "cjp_today_hits";
+    const currentDate = new Date().toDateString();
+    let todayHits = Number(localStorage.getItem(todayHitsKey) || "18490");
+    if (localStorage.getItem(todayKey) !== currentDate) {
+      localStorage.setItem(todayKey, currentDate);
+      todayHits = 18490;
+    }
+    todayHits += 1;
+    localStorage.setItem(todayHitsKey, String(todayHits));
 
     const hitCountEl = document.getElementById("hitCount");
     const todayCountEl = document.getElementById("todayCount");
     const liveSwarmEl = document.getElementById("liveSwarmCount");
 
-    if (hitCountEl) hitCountEl.innerText = localHits.toLocaleString() + "+";
+    const renderHits = () => {
+      if (hitCountEl) hitCountEl.innerText = localHits.toLocaleString("en-IN") + "+";
+      if (todayCountEl) todayCountEl.innerText = todayHits.toLocaleString("en-IN") + "+";
+    };
+    renderHits();
 
-    // Dynamic Live Active Swarm Fluctuation
+    // 3. Dynamic Real-Time Increment Simulation (every 2.8s)
+    setInterval(() => {
+      const increment = Math.floor(Math.random() * 3) + 1; // +1 to +3
+      localHits += increment;
+      todayHits += increment;
+      localStorage.setItem("cjp_total_hits", String(localHits));
+      localStorage.setItem(todayHitsKey, String(todayHits));
+      
+      renderHits();
+      
+      // Counter pulse highlight animation
+      if (hitCountEl) {
+        hitCountEl.classList.remove("stat-counter-animate");
+        void hitCountEl.offsetWidth; // trigger reflow
+        hitCountEl.classList.add("stat-counter-animate");
+      }
+    }, 2800);
+
+    // 4. Dynamic Live Active Swarm Fluctuation (every 2.2s)
     const updateSwarm = () => {
       if (!liveSwarmEl) return;
-      const base = 250 + Math.floor(Math.random() * 85);
-      liveSwarmEl.innerText = `${base} online`;
+      const base = 265 + Math.floor(Math.random() * 75); // 265 to 340 online
+      liveSwarmEl.innerHTML = `<span class="stats-live-pulse-dot"></span> ${base} online`;
     };
     updateSwarm();
-    setInterval(updateSwarm, 3500);
+    setInterval(updateSwarm, 2200);
   };
   initStatsEngine();
 
