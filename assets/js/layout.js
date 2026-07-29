@@ -314,11 +314,11 @@
       </div>
     </div>
   </div>
-  <button type="button" class="live-chat" id="liveChat" aria-label="Open Live Chat">
+  <button type="button" class="live-chat" id="liveChat" aria-label="Open Live Chat" style="position: fixed !important; right: 1.1rem !important; bottom: 4.8rem !important; z-index: 9997 !important;">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    Chat
+    <span>Chat</span>
   </button>
-  <div class="chat-panel" id="chatPanel" hidden>
+  <div class="chat-panel" id="chatPanel" hidden style="position: fixed !important; right: 1.1rem !important; bottom: 8.2rem !important; z-index: 9999 !important;">
     <div class="chat-head"><strong>CJP Chat</strong><button type="button" id="chatClose" aria-label="Close">×</button></div>
     <div class="chat-body">
       <p>Ask about joining, protests, or the manifesto.</p>
@@ -329,11 +329,11 @@
       <button type="submit">Send</button>
     </form>
   </div>
-  <a href="https://wa.me/?text=Hi%20CJP!%20I%20want%20to%20inquire%20about%20membership%20and%20campus%20coordination%20services." target="_blank" rel="noopener" id="waLeadBtn" aria-label="WhatsApp Inquiry Lead" class="cjp-wa-floating-btn">
+  <a href="https://wa.me/?text=Hi%20CJP!%20I%20want%20to%20inquire%20about%20membership%20and%20campus%20coordination%20services." target="_blank" rel="noopener" id="waLeadBtn" aria-label="WhatsApp Inquiry Lead" class="cjp-wa-floating-btn" style="position: fixed !important; left: 1.1rem !important; bottom: 1.1rem !important; z-index: 9998 !important;">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.008 2.2c-5.448 0-9.879 4.43-9.883 9.879-.001 1.97.513 3.892 1.492 5.59l.327.568-1.073 3.92 4.01-1.053.551.327c1.626.966 3.486 1.477 5.393 1.478 5.451 0 9.883-4.432 9.887-9.885.002-2.64-1.02-5.122-2.879-6.983C17.18 3.22 14.7 2.2 12.008 2.2zm5.424 13.064c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.669.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
     <span>💬 WhatsApp Lead</span>
   </a>
-  <button type="button" id="statsToggle" aria-label="View Site Statistics" class="cjp-stats-floating-btn">
+  <button type="button" id="statsToggle" aria-label="View Site Statistics" class="cjp-stats-floating-btn" style="position: fixed !important; right: 1.1rem !important; bottom: 1.1rem !important; z-index: 9998 !important;">
     <span class="stats-live-pulse-dot"></span>
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20V14"/></svg>
     <span>📊 STATS</span>
