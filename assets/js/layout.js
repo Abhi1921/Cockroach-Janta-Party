@@ -275,9 +275,9 @@
         </div>
         <div>
           <h4>Legal</h4>
-          <a href="terms#privacy">Privacy Policy</a>
+          <a href="privacy">Privacy Policy</a>
           <a href="terms">Terms of Use</a>
-          <a href="terms#cookies">Cookie Policy</a>
+          <a href="privacy#adsense">Cookie Policy</a>
           <a href="terms#editorial">Editorial Policy</a>
           <a href="terms#satire">Disclaimer</a>
           <a href="vision">About</a>

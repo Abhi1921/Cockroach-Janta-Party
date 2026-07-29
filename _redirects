@@ -14,6 +14,7 @@
 /raise-issue.html               /raise-issue                    301!
 /revolutionaries.html           /revolutionaries                301!
 /terms.html                     /terms                          301!
+/privacy.html                   /privacy                        301!
 
 # Internal rewrite rules to map clean URLs back to HTML files
 /vision                         /vision.html                    200
@@ -30,3 +31,4 @@
 /raise-issue                    /raise-issue.html               200
 /revolutionaries                /revolutionaries.html           200
 /terms                          /terms.html                     200
+/privacy                        /privacy.html                   200
