@@ -1237,7 +1237,7 @@ header.nav::-webkit-scrollbar,
 .footer-bottom p { margin: 0; }
 
 .live-chat {
-  position: fixed !important; right: 7.8rem !important; bottom: 1.1rem !important; z-index: 9997 !important;
+  position: fixed !important; right: 1.25rem !important; bottom: 4.5rem !important; z-index: 9997 !important;
   display: inline-flex; align-items: center; gap: 0.4rem;
   background: var(--signal); color: #fff; border: 0; border-radius: 999px;
   padding: 0.65rem 1.1rem; font-size: 0.72rem; font-weight: 800;
@@ -1252,7 +1252,7 @@ header.nav::-webkit-scrollbar,
 .live-chat:hover { animation: none; transform: translateY(-3px); }
 
 .chat-panel {
-  position: fixed !important; right: 7.8rem !important; bottom: 4.5rem !important;
+  position: fixed !important; right: 1.25rem !important; bottom: 8rem !important;
   width: min(340px, calc(100vw - 2rem));
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
   box-shadow: 0 16px 40px rgba(28,16,16,0.18); z-index: 9999;
@@ -2549,7 +2549,7 @@ img, video, iframe, embed, object {
       left: auto !important;
       bottom: auto !important;
       z-index: 9998 !important;
-      max-width: ca    #statsToggle {
+      #statsToggle {
       bottom: 0.6rem !important;
       right: 0.6rem !important;
       left: auto !important;
@@ -2557,8 +2557,8 @@ img, video, iframe, embed, object {
       padding: 0.5rem 0.75rem !important;
     }
     .live-chat {
-      bottom: 0.6rem !important;
-      right: 5.6rem !important;
+      bottom: 3.4rem !important;
+      right: 0.6rem !important;
       left: auto !important;
       font-size: 0.65rem !important;
       padding: 0.5rem 0.75rem !important;
@@ -2611,9 +2611,9 @@ img, video, iframe, embed, object {
     z-index: 9998 !important;
   }
   .live-chat {
-    right: 5.6rem !important;
+    right: 0.6rem !important;
     left: auto !important;
-    bottom: 0.6rem !important;
+    bottom: 3.4rem !important;
     padding: 0.5rem 0.75rem !important;
     font-size: 0.65rem !important;
     z-index: 9997 !important;
