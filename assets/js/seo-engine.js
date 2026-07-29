@@ -148,7 +148,7 @@
     { property: "og:see_also", content: "https://www.thecockroachjantaparty.org.in" },
     { property: "og:see_also", content: "https://cockroachjantaparty.org" },
     { property: "og:locale", content: "en_IN" },
-    { property: "og:site_name", content: "Cockroach Janta Party Official Movement & Media Network" }
+    { property: "og:site_name", content: "Cockroach Janta Party" }
   ];
 
   metaAdditions.forEach(m => {
@@ -183,11 +183,11 @@
           "@type": "WebSite",
           "@id": canonicalUrl + "#website",
           "url": "https://cockroachjantapartywale.com",
-          "name": "Cockroach Janta Party Official Website",
-          "alternateName": ["Cockroach Janta Party", "Cockroach Janta Party Wale", "Cockroach Janata Party", "TCJP", "CJP"],
+          "name": "Cockroach Janta Party",
+          "alternateName": ["CJP", "Cockroach Janta Party Wale", "Cockroach Janata Party", "The Cockroach Janta Party"],
           "publisher": {
             "@type": "Organization",
-            "name": "The Cockroach Janta Party",
+            "name": "Cockroach Janta Party",
             "url": "https://cockroachjantapartywale.com",
             "logo": "https://cockroachjantapartywale.com/assets/img/logo.webp"
           },
