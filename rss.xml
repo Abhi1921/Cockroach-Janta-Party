@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Cockroach Janta Party (CJP) - Official News &amp; Updates</title>
+  <link>https://cockroachjantapartywale.com</link>
+  <description>Official RSS feed of Cockroach Janta Party (CJP) &amp; Cockroach Janta Party Wale. Founded by Abhijeet Dipke. Youth movement, NEET paper leak audit, and student reforms.</description>
+  <language>en-IN</language>
+  <copyright>Copyright 2026 Cockroach Janta Party</copyright>
+  <lastBuildDate>Thu, 30 Jul 2026 06:40:00 +0530</lastBuildDate>
+  <atom:link href="https://cockroachjantapartywale.com/rss.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>CJP Reservation Hatao Andolan &amp; Supreme Court Notice 28 July 2026: 100% Meritocracy Movement</title>
+    <link>https://cockroachjantapartywale.com/articles</link>
+    <guid isPermaLink="true">https://cockroachjantapartywale.com/articles#sc-notice-2026</guid>
+    <pubDate>Tue, 28 Jul 2026 10:00:00 +0530</pubDate>
+    <description>Supreme Court bench hears CJP's urgent PIL demanding 100% Merit-Based entrance examinations and financial scholarships based on economic need instead of caste quotas.</description>
+  </item>
+
+  <item>
+    <title>CJP Official Manifesto: The 5 Non-Negotiable Demands for Exam &amp; Electoral Reform</title>
+    <link>https://cockroachjantapartywale.com/manifesto</link>
+    <guid isPermaLink="true">https://cockroachjantapartywale.com/manifesto</guid>
+    <pubDate>Tue, 21 Jul 2026 12:00:00 +0530</pubDate>
+    <description>Read the full text of the 5 binding demands signed into parliamentary accord after Jantar Mantar youth rallies.</description>
+  </item>
+
+  <item>
+    <title>Join the Swarm: Free CJP Digital Membership Card Registration</title>
+    <link>https://cockroachjantapartywale.com/join</link>
+    <guid isPermaLink="true">https://cockroachjantapartywale.com/join</guid>
+    <pubDate>Mon, 20 Jul 2026 09:00:00 +0530</pubDate>
+    <description>Get your free official Cockroach Janta Party digital membership card and join over 1 million resilient youth demanding exam integrity.</description>
+  </item>
+
+  <item>
+    <title>CJP Vision: Voice of India's Burnt-Out Youth Movement</title>
+    <link>https://cockroachjantapartywale.com/vision</link>
+    <guid isPermaLink="true">https://cockroachjantapartywale.com/vision</guid>
+    <pubDate>Wed, 15 Jul 2026 14:00:00 +0530</pubDate>
+    <description>Why young, unemployed and educated Indians reclaimed the slur and built a national civic movement founded by Abhijeet Dipke.</description>
+  </item>
+</channel>
+</rss>

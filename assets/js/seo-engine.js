@@ -163,6 +163,26 @@
     tag.content = m.content;
   });
 
+  // Ensure Google Site Verification Tag
+  let gscTag = document.querySelector('meta[name="google-site-verification"]');
+  if (!gscTag) {
+    gscTag = document.createElement('meta');
+    gscTag.name = "google-site-verification";
+    gscTag.content = "Lxdnf1IqpXNpOSTlI8OgBvQdM1L0KwgHANOqUZ5_jDc";
+    document.head.appendChild(gscTag);
+  }
+
+  // Ensure RSS Feed Link Tag for Google News Crawlers
+  let rssLink = document.querySelector('link[type="application/rss+xml"]');
+  if (!rssLink) {
+    rssLink = document.createElement('link');
+    rssLink.rel = "alternate";
+    rssLink.type = "application/rss+xml";
+    rssLink.title = "Cockroach Janta Party News Feed";
+    rssLink.href = "https://cockroachjantapartywale.com/rss.xml";
+    document.head.appendChild(rssLink);
+  }
+
   // Ensure Canonical Tag
   let linkCanonical = document.querySelector('link[rel="canonical"]');
   if (!linkCanonical) {
@@ -171,6 +191,52 @@
     document.head.appendChild(linkCanonical);
   }
   linkCanonical.href = canonicalUrl.endsWith('/') ? canonicalUrl : canonicalUrl + "/";
+
+  // Dynamic BreadcrumbList Schema Generator
+  const getBreadcrumbSchema = () => {
+    const rawPath = window.location.pathname.replace(/\/index\.html$/, "/").replace(/\.html$/, "").replace(/^\//, "");
+    const items = [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://cockroachjantapartywale.com/"
+      }
+    ];
+
+    if (rawPath && rawPath !== "/") {
+      const formattedName = rawPath.charAt(0).toUpperCase() + rawPath.slice(1).replace(/-/g, " ");
+      items.push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": formattedName,
+        "item": "https://cockroachjantapartywale.com/" + rawPath
+      });
+    }
+
+    return {
+      "@type": "BreadcrumbList",
+      "@id": canonicalUrl + "#breadcrumb",
+      "itemListElement": items
+    };
+  };
+
+  // Automated IndexNow Ping to Bing/Search Engine Crawlers
+  const pingIndexNow = () => {
+    try {
+      const payload = {
+        host: "cockroachjantapartywale.com",
+        key: "cjp2026indexnow4892701bf4e93012",
+        keyLocation: "https://cockroachjantapartywale.com/cjp2026indexnow4892701bf4e93012.txt",
+        urlList: [canonicalUrl.endsWith('/') ? canonicalUrl : canonicalUrl + "/"]
+      };
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon("https://api.indexnow.org/indexnow", JSON.stringify(payload));
+      }
+    } catch (e) {
+      // Silent catch
+    }
+  };
 
   // Schema.org Live News, FAQPage & Event Structured Data Injection
   const injectStructuredData = () => {
@@ -331,7 +397,8 @@
             "@type": "WebPage",
             "@id": canonicalUrl
           }
-        }
+        },
+        getBreadcrumbSchema()
       ]
     };
 
@@ -340,6 +407,9 @@
     script.type = "application/ld+json";
     script.textContent = JSON.stringify(schemaData);
     document.head.appendChild(script);
+
+    // Trigger instant IndexNow ping to search engines
+    pingIndexNow();
   };
 
   if (document.readyState === "loading") {
