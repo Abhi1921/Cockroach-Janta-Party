@@ -549,6 +549,22 @@
   } else {
     initScannerReveal();
   }
-  setTimeout(initScannerReveal, 100);
-  setTimeout(initScannerReveal, 500);
+  // Automatic Browser Cache & Service Worker Cache Purge Engine
+  const clearStaleCaches = () => {
+    if ("caches" in window) {
+      caches.keys().then((names) => {
+        names.forEach((name) => {
+          caches.delete(name);
+        });
+      });
+    }
+    if ("navigator" in window && "serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        registrations.forEach((registration) => {
+          registration.unregister();
+        });
+      });
+    }
+  };
+  clearStaleCaches();
 })();
