@@ -277,17 +277,24 @@
         </div>
 
         <div class="hero-poster">
-          <div class="poster-frame" style="border: 3px solid #16a34a; box-shadow: 0 20px 50px rgba(22, 163, 74, 0.3);">
-            <div class="poster-band-top" style="background: #16a34a; color: #ffffff;">
-              <span>CJP SWARM · MERITOCRACY</span>
-              <span>RESERVATION HATAO</span>
+          <div class="poster-frame" style="border: 3px solid #16a34a; box-shadow: 0 20px 50px rgba(22, 163, 74, 0.4); background: #052e16;">
+            <div class="poster-band-top" style="background: linear-gradient(90deg, #15803d 0%, #16a34a 100%); color: #ffffff; padding: 0.6rem 0.85rem; font-weight: 800; font-family: var(--font-mono); font-size: 0.78rem;">
+              <span>🏆 31 JULY 2026 VICTORY</span>
+              <span>PARLIAMENTARY GAZETTE</span>
             </div>
-            <div class="poster-img-wrap">
-              <img src="assets/img/cjp/cjp-aarakshan-hatao-poster.png" alt="Cockroach Janta Party Reservation Hatao Bring Meritocracy Poster" width="400" height="500" loading="eager" decoding="async" style="width:100%;height:auto;display:block">
+            <div class="poster-img-wrap" style="position: relative; overflow: hidden; background: #000000;">
+              <img id="mainHeroPosterImg" src="assets/img/cjp/cjp-poster-31july-victory.png" alt="31 July 2026 Cockroach Janta Party Historic Victory Gazette Poster" width="400" height="500" loading="eager" decoding="async" style="width:100%;height:auto;display:block;transition: transform 0.3s ease;">
             </div>
-            <div class="poster-band-bottom" style="background: #052e16; border-top: 1px solid #16a34a;">
-              <p class="pbb-sup" style="color: #4ade80;">#ReservationHatao · #BringMeritocracy</p>
-              <p class="pbb-main" style="color: #ffffff;">“Remove Reservation, Bring Meritocracy!<br>100% Meritocracy Movement.”</p>
+            <div class="poster-band-bottom" style="background: #052e16; border-top: 1.5px solid #16a34a; padding: 0.85rem; text-align: center;">
+              <p class="pbb-sup" style="color: #4ade80; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 800; margin-bottom: 0.25rem;">#31July2026Victory · #100PercentMeritocracy</p>
+              <p class="pbb-main" style="color: #ffffff; font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; line-height: 1.35; margin: 0;">“Union Cabinet Enacts 100% Meritocracy Act!<br>All Student FIRs Unconditionally Quashed.”</p>
+            </div>
+            <!-- Quick Poster Switcher Buttons -->
+            <div style="display: flex; gap: 0.35rem; padding: 0.5rem; background: #022c22; border-top: 1px solid rgba(255,255,255,0.1); justify-content: center;">
+              <button type="button" onclick="document.getElementById('mainHeroPosterImg').src='assets/img/cjp/cjp-poster-31july-victory.png'" style="background: #16a34a; color: #fff; border: 0; padding: 0.3rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">🏆 31 July</button>
+              <button type="button" onclick="document.getElementById('mainHeroPosterImg').src='assets/img/cjp/news-siasat-ruchika-defence.png'" style="background: #dc2626; color: #fff; border: 0; padding: 0.3rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">📰 Siasat</button>
+              <button type="button" onclick="document.getElementById('mainHeroPosterImg').src='assets/img/cjp/news-theprint-china-cjp.png'" style="background: #2563eb; color: #fff; border: 0; padding: 0.3rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">📺 ThePrint</button>
+              <button type="button" onclick="document.getElementById('mainHeroPosterImg').src='assets/img/cjp/cjp-aarakshan-hatao-poster.png'" style="background: #d97706; color: #fff; border: 0; padding: 0.3rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">✊ RHA</button>
             </div>
           </div>
         </div>
