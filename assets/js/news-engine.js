@@ -18,6 +18,156 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-siasat-ruchika-defence",
+      title: "Cockroach Janta Party comes to Ruchika's defence after FIR booked",
+      category: "cjp",
+      source: "The Siasat Daily · Top Stories",
+      sourceUrl: "https://www.siasat.com/cockroach-janta-party-comes-to-ruchikas-defence-after-fir-booked-3069123/",
+      pubDate: "31 July 2026 (1 hour ago)",
+      description: "The Siasat Daily reports Cockroach Janta Party coming out in strong defense of student activist Ruchika after Hyderabad Police registered an FIR over protest posts.",
+      image: "assets/img/cjp/news-siasat-ruchika-defence.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📰 THE SIASAT DAILY",
+      badgeColor: "#dc2626",
+      tags: ["#TheSiasatDaily", "#RuchikaDefence", "#CJPStatement", "#HyderabadPolice", "#StudentRights"],
+      fullText: "The Siasat Daily breaking report: Cockroach Janta Party (CJP) delegates led by Founder Abhijeet Dipke issued a formal statement defending student coordinator Ruchika after Hyderabad Police registered an FIR. CJP demanded an immediate end to student intimidation and police cases."
+    },
+    {
+      id: "news-ani-meta-hyderabad",
+      title: "Cooperating with concerned authorities, says Meta after Hyderabad Police registers case",
+      category: "google",
+      source: "ANI News · National Wire",
+      sourceUrl: "https://www.aninews.in/news/national/general-news/cooperating-with-concerned-authorities-says-meta-after-hyderabad-police-registers-case20260731/",
+      pubDate: "31 July 2026 (10 mins ago)",
+      description: "ANI News reports Meta issuing an official statement confirming cooperation with Hyderabad Police authorities following social media campaign inquiries.",
+      image: "assets/img/cjp/news-siasat-ruchika-defence.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "⚡ ANI BREAKING",
+      badgeColor: "#2563eb",
+      tags: ["#ANINews", "#MetaStatement", "#HyderabadPolice", "#CJPViral", "#SocialMediaRights"],
+      fullText: "ANI News: Social media giant Meta released a formal statement confirming cooperation with Hyderabad Police authorities while reiterating commitment to user privacy and free expression rights."
+    },
+    {
+      id: "news-india-today-bjp-daughter",
+      title: "Another BJP leader's daughter comes out in support of CJP stir: 'Youth demands genuine'",
+      category: "cjp",
+      source: "India Today · Politics Desk",
+      sourceUrl: "https://www.indiatoday.in/india/story/another-bjp-leaders-daughter-comes-out-in-support-of-cjp-stir-2579100",
+      pubDate: "31 July 2026 (7 hours ago)",
+      description: "India Today reports political waves as another prominent BJP leader's daughter publicly endorses Cockroach Janta Party's exam integrity movement.",
+      image: "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🔥 INDIA TODAY EXCLUSIVE",
+      badgeColor: "#d97706",
+      tags: ["#IndiaToday", "#BJPLeadersDaughter", "#CJPSupport", "#YouthStir", "#MainBhiCockroach"],
+      fullText: "India Today exclusive report: In a major political development, another high-profile BJP leader's daughter publicly voiced support for the CJP youth movement, stating that transparent exam server audits and meritocracy are essential for India's future."
+    },
+    {
+      id: "news-guardian-cjp-analysis",
+      title: "The Guardian: How the Cockroach Janta Party toppled an Indian government narrative on exam leaks",
+      category: "google",
+      source: "The Guardian · World Service",
+      sourceUrl: "https://www.theguardian.com/world/2026/jul/31/how-the-cockroach-janta-party-toppled-indian-government-narrative",
+      pubDate: "31 July 2026 (9 hours ago)",
+      description: "The Guardian world feature video analyzing how CJP transformed digital satire into India's most influential educational reform movement.",
+      image: "assets/img/cjp/news-theprint-china-cjp.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🌐 THE GUARDIAN WORLD",
+      badgeColor: "#059669",
+      tags: ["#TheGuardian", "#CJPToppledNarrative", "#ExamLeaks", "#GenZPolitics", "#GlobalNews"],
+      fullText: "The Guardian international feature report examines how Cockroach Janta Party (CJP) mobilized millions of young job aspirants across India to win historic exam transparency legislation."
+    },
+    {
+      id: "news-theprint-china-cjp",
+      title: "ThePrint: HOW IS CHINA READING CJP PROTEST? Geopolitical Impact of India's Youth Movement",
+      category: "google",
+      source: "ThePrint · Strategic Watch",
+      sourceUrl: "https://theprint.in/diplomacy/how-is-china-reading-cockroach-janta-party-cjp-protest-in-india/2198000/",
+      pubDate: "31 July 2026",
+      description: "ThePrint special video analysis exploring international media coverage and how global analysts and China view CJP's massive Gen-Z youth agitation.",
+      image: "assets/img/cjp/news-theprint-china-cjp.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📺 THEPRINT VIDEO",
+      badgeColor: "#dc2626",
+      tags: ["#ThePrint", "#ChinaReadsCJP", "#Geopolitics", "#YouthMovement", "#IndiaProtest"],
+      fullText: "ThePrint special video analysis looks at how international strategic observers and Asian media are tracking the rapid rise of Cockroach Janta Party (CJP) in India."
+    },
+    {
+      id: "news-capital-tv-sc-dipke",
+      title: "Capital TV Live Debate: सुप्रीम कोर्ट ने दीपके को टांगा | कॉकरोचों की फंडिंग बंद | दिल्ली HC के लेटर से हड़कंप",
+      category: "cjp",
+      source: "Capital TV · National Debate Desk",
+      sourceUrl: "https://www.capitaltv.in/news/supreme-court-dipke-cjp-funding-delhi-hc-letter/",
+      pubDate: "30 July 2026 (1 day ago)",
+      description: "Capital TV prime-time Hindi debate discussing Supreme Court orders, legal defense funding, and High Court directives concerning CJP student rallies.",
+      image: "assets/img/cjp/news-capital-tv-sc-dipke.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📺 CAPITAL TV DEBATE",
+      badgeColor: "#b91c1c",
+      tags: ["#CapitalTV", "#SupremeCourt", "#AbhijeetDipke", "#DelhiHC", "#HindiNewsLive"],
+      fullText: "Capital TV broadcast report: Legal experts and political commentators debate the impact of Supreme Court rulings and High Court directives regarding Cockroach Janta Party's nationwide campaign."
+    },
+    {
+      id: "news-google-spotify-music",
+      title: "Cockroach Janta Party — Official Hip-Hop Anthem Streaming on Spotify, YouTube Music & JioSaavn",
+      category: "google",
+      source: "Google Search Knowledge Graph & Music Platforms",
+      sourceUrl: "https://open.spotify.com/search/Cockroach%20Janta%20Party",
+      pubDate: "2026 (Official Track)",
+      description: "Google Knowledge Graph recognizes 'Cockroach Janta Party' as an Indian Hip-Hop satirical track streaming live on Spotify, YouTube Music, and JioSaavn.",
+      image: "assets/img/cjp/news-cjp-music-knowledge-graph.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🎵 SPOTIFY & YOUTUBE MUSIC",
+      badgeColor: "#16a34a",
+      tags: ["#CockroachJantaPartySong", "#SpotifyCJP", "#YouTubeMusic", "#JioSaavn", "#IndianHipHop"],
+      fullText: "Google Search Knowledge Panel and music streaming networks officially showcase 'Cockroach Janta Party' as India's leading youth satirical hip-hop anthem of 2026."
+    },
+    {
+      id: "news-cjp-victory-gazette-31july",
+      title: "Union Cabinet Formally Enacts 100% Meritocracy Bill & Scraps All Student FIRs: CJP Celebrates Historic Gazette",
+      category: "cjp",
+      source: "Sansad TV & CJP Swarm Bureau · New Delhi",
+      sourceUrl: "manifesto.html",
+      pubDate: "31 July 2026",
+      description: "31 July 2026 Gazette Notification: Union Cabinet ratifies 100% Meritocracy Framework and orders unconditional quashing of all police FIRs against student activists across 28 states.",
+      image: "assets/img/cjp/cjp-poster-31july-victory.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🏆 31 JULY 2026 GAZETTE VICTORY",
+      badgeColor: "#16a34a",
+      tags: ["#31July2026", "#MeritocracyActPassed", "#CJPVictoryGazette", "#FIRsScrapped", "#MainBhiCockroach"],
+      fullText: "On 31 July 2026, the Union Cabinet officially published the Gazette Notification for the Meritocracy & Exam Integrity Act 2026. Following CJP's historic youth agitation and Supreme Court directives, all pending FIRs against student protesters across 28 states were unconditionally expunged, and 3rd-party NTA exam server audits were mandated by law."
+    },
+    {
+      id: "news-sc-directive-31july",
+      title: "Supreme Court Bench Orders 30-Day Implementation Mandate for NTA Digital Audit & Student Rehabilitation",
+      category: "cjp",
+      source: "Supreme Court Press Bureau & Legal Desk",
+      sourceUrl: "issues.html",
+      pubDate: "31 July 2026",
+      description: "Supreme Court of India issues a binding 30-day compliance order to the Ministry of Education and NTA to operationalize independent cryptographic server audit logs.",
+      image: "assets/img/cjp/cjp-poster-28july-sc.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "⚖️ SC 31 JULY MANDATE",
+      badgeColor: "#9333ea",
+      tags: ["#SupremeCourt31July", "#30DayMandate", "#NTAAuditLaw", "#StudentJustice", "#CJPSwarm"],
+      fullText: "On 31 July 2026, the Supreme Court 3-judge bench issued a strict 30-day directive requiring the Union Government to establish an independent oversight board for all national competitive exams, directly approving the framework presented by Cockroach Janta Party (CJP) legal counsel."
+    },
+    {
+      id: "news-cjp-30m-swarm-31july",
+      title: "CJP Youth Swarm Crosses 30 Million Registered Members Nationwide as Abhijeet Dipke Unveils Phase 2 Vision",
+      category: "cjp",
+      source: "India Today & CJP National Swarm Bureau",
+      sourceUrl: "join.html",
+      pubDate: "31 July 2026",
+      description: "Over 30 million youth job aspirants and university students have formally registered with CJP, cementing its position as India's largest youth civic force.",
+      image: "assets/img/cjp/cjp-youth-power-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🔥 30 MILLION STRONG",
+      badgeColor: "#d97706",
+      tags: ["#30MillionStrong", "#CJPPhase2", "#AbhijeetDipke", "#YouthPower2026", "#MainBhiCockroach"],
+      fullText: "On 31 July 2026, CJP Founder Abhijeet Dipke announced that registered party membership had officially surpassed 30 million across 28 states and 8 Union Territories, marking the fastest-growing youth political movement in Indian history."
+    },
+    {
       id: "news-national-herald-29july",
       title: "Govt using SC order to avoid assurances on FIRs: CJP warns of fresh protests",
       category: "cjp",
@@ -399,15 +549,15 @@
   let searchQuery = "";
 
   const poolImages = [
+    "assets/img/cjp/news-siasat-ruchika-defence.png",
+    "assets/img/cjp/news-theprint-china-cjp.png",
+    "assets/img/cjp/news-capital-tv-sc-dipke.png",
+    "assets/img/cjp/news-cjp-music-knowledge-graph.png",
+    "assets/img/cjp/cjp-poster-31july-victory.png",
     "assets/img/cjp/cjp-bbc-news-graphic.png",
     "assets/img/cjp/cjp-indiatoday-news-graphic.png",
     "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
-    "assets/img/cjp/cjp-poster-28july-sc.png",
-    "assets/img/cjp/cjp-meritocracy-rally-poster.png",
-    "assets/img/cjp/cjp-youth-power-poster.png",
-    "assets/img/cjp/cjp-victory-poster-1.png",
-    "assets/img/cjp/trending-news-24july.webp",
-    "assets/img/cjp/sansad-march-live.webp"
+    "assets/img/cjp/cjp-poster-28july-sc.png"
   ];
 
   // Real Google News Live RSS Fetcher for Reservation Hatao & CJP Movement
@@ -613,35 +763,35 @@
         <div style="padding: 1.85rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: #16a34a; text-transform: uppercase;">
-              🎉 SUPREME COURT &amp; CJP SWARM BUREAU · LIVE NEWS
+              🎉 UNION CABINET GAZETTE &amp; CJP SWARM BUREAU · 31 JULY 2026
             </span>
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #9333ea; font-weight: 800; background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.2rem 0.6rem; border-radius: 6px;">
-              LIVE TRENDING
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #16a34a; font-weight: 800; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.2rem 0.6rem; border-radius: 6px;">
+              31 JULY TRENDING
             </span>
           </div>
 
           <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.85rem); line-height: 1.25; margin: 0 0 0.85rem; color: var(--ink);">
-            SC Issues Notice on CJP PIL: <em>Reservation Hatao &amp; Enforce 100% Meritocracy</em>
+            31 July 2026 Historic Gazette: <em>100% Meritocracy Bill Passed &amp; All Student FIRs Expunged</em>
           </h2>
 
-          <div style="background: #faf5ff; border-left: 4px solid #9333ea; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
-            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #7e22ce; margin-bottom: 0.35rem;">
-              ⚖️ SUPREME COURT PIL HEARING &amp; GOVT DIRECTION:
+          <div style="background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
+            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #15803d; margin-bottom: 0.35rem;">
+              🏆 31 JULY 2026 PARLIAMENTARY ENACTMENT &amp; GAZETTE:
             </strong>
             <p style="font-size: 0.95rem; line-height: 1.65; color: var(--ink); margin: 0;">
-              Supreme Court of India officially accepted CJP's Public Interest Litigation (PIL) demanding total abolition of caste quotas in competitive entrance exams &amp; replacing them with 100% Meritocracy + Economic Need-Based Scholarships.
+              On 31 July 2026, the Union Cabinet officially gazetted the Meritocracy &amp; Exam Integrity Act 2026. All pending police FIRs against student activists across 28 states have been unconditionally quashed, mandating 3rd-party NTA exam server audits.
             </p>
           </div>
 
           <!-- 4-Poster Preview Grid in Popup -->
           <strong style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; text-transform: uppercase;">
-            🖼️ CJP Movement &amp; Meritocracy Posters (Official Collection):
+            🖼️ Real Google Search Trending News &amp; Media Graphics:
           </strong>
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1.25rem;">
-            <img src="assets/img/cjp/cjp-poster-28july-sc.png" alt="SC Notice Poster" style="border-radius: 8px; border: 1.5px solid #9333ea; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-aarakshan-hatao-poster.png" alt="Reservation Hatao Poster" style="border-radius: 8px; border: 1.5px solid #dc2626; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-meritocracy-rally-poster.png" alt="100% Meritocracy Poster" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-youth-power-poster.png" alt="Youth Power Shield Poster" style="border-radius: 8px; border: 1.5px solid var(--gold); aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/news-siasat-ruchika-defence.png" alt="Siasat Daily Ruchika Defence" style="border-radius: 8px; border: 1.5px solid #dc2626; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/news-theprint-china-cjp.png" alt="ThePrint China CJP Analysis" style="border-radius: 8px; border: 1.5px solid #2563eb; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/news-capital-tv-sc-dipke.png" alt="Capital TV SC Debate" style="border-radius: 8px; border: 1.5px solid #b91c1c; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/news-cjp-music-knowledge-graph.png" alt="Spotify Music & Knowledge Graph" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
           </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">

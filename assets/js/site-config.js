@@ -25,5 +25,20 @@ window.CJP_SITE = {
   sameAs: [
     "https://cockroachjantapartywale.com",
     "https://en.wikipedia.org/wiki/Cockroach_Janta_Party",
+    "https://www.britannica.com/topic/Cockroach-Janta-Party",
+    "https://www.aljazeera.com/news/2026/7/28/india-to-increase-penalties-for-exam-leaks-after-cockroach",
+    "https://www.instagram.com/cockroachjantaparty/",
+    "https://www.thecockroachjantaparty.org.in",
+    "https://www.cockroachjantaparty.org",
+    "https://cpmember.in",
+    "https://cockroachjantaparty.ran.in",
+    "https://cockroachjantaparty.co",
+    "https://cockroachjanataparty.pro",
+    "https://cjpparty.com",
+    "https://cockroachparty.org",
+    "https://www.cockroachjanata.info",
+    "https://cackroachjantaparty.in",
+    "https://cockroachjantaparty.co.in",
+    "https://cockroachjantapartyjoin.in"
   ],
 };

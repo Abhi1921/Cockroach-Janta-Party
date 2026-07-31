@@ -273,8 +273,22 @@
             "https://www.cockroachjantaparty.com",
             "https://www.thecockroachjantaparty.org.in",
             "https://cockroachjantaparty.org",
+            "https://en.wikipedia.org/wiki/Cockroach_Janta_Party",
+            "https://www.britannica.com/topic/Cockroach-Janta-Party",
+            "https://www.aljazeera.com/news/2026/7/28/india-to-increase-penalties-for-exam-leaks-after-cockroach",
+            "https://www.instagram.com/cockroachjantaparty/",
+            "https://cpmember.in",
+            "https://cockroachjantaparty.ran.in",
+            "https://cockroachjantaparty.co",
+            "https://cockroachjanataparty.pro",
+            "https://cjpparty.com",
+            "https://cockroachparty.org",
+            "https://www.cockroachjanata.info",
+            "https://cackroachjantaparty.in",
+            "https://cockroachjantaparty.co.in",
+            "https://cockroachjantapartyjoin.in",
             "https://x.com/cjp_official",
-            "https://instagram.com/cjp_official"
+            "https://x.com/htTweets"
           ],
           "logo": "https://cockroachjantapartywale.com/assets/img/logo.webp",
           "image": "https://cockroachjantapartywale.com/assets/img/cjp/trending-cjp-poster-25july.png",
@@ -373,13 +387,14 @@
         {
           "@type": "NewsArticle",
           "@id": canonicalUrl + "#trending-news",
-          "headline": "CJP Aarakshan Hatao Andolan & Supreme Court Notice 28 July 2026: 100% Meritocracy Movement",
-          "description": "Live coverage of Cockroach Janta Party (CJP) Reservation Hatao Andolan, Supreme Court PIL notice, and 25-28 July youth protests.",
+          "headline": "31 July 2026 Historic Victory Gazette: Union Cabinet Passes 100% Meritocracy Act & Drops Student FIRs",
+          "description": "Live coverage of Cockroach Janta Party (CJP) 31 July Gazette Notification, 100% Meritocracy Act enactment, Supreme Court 30-day mandate, and 30 Million youth victory.",
           "image": [
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-poster-31july-victory.png",
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-poster-28july-sc.png",
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-aarakshan-hatao-poster.png"
           ],
-          "datePublished": "2026-07-25T08:00:00+05:30",
+          "datePublished": "2026-07-31T08:00:00+05:30",
           "dateModified": todayIso,
           "author": {
             "@type": "Person",

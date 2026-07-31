@@ -60,6 +60,8 @@
       "CJP HISTORIC VICTORY!": "CJP ऐतिहासिक विजय!",
       "GOVT ACCEPTS ALL 5 DEMANDS!": "सरकार ने मानीं सारी 5 मांगें!",
       "CJP HISTORIC VICTORY · 25 JULY 2026": "🏆 CJP ऐतिहासिक विजय · 25 जुलाई 2026",
+      "31 JULY 2026 HISTORIC GAZETTE GAZETTED | 100% MERITOCRACY ACT PASSED": "🏆 31 जुलाई 2026 ऐतिहासिक राजपत्र जारी | 100% योग्यता अधिनियम पास",
+      "31 JULY GAZETTE VICTORY!": "31 जुलाई राजपत्र विजय!",
       "CELEBRATE VICTORY": "🏆 ऐतिहासिक जीत का जश्न मनाएं",
       "READ 5 ACCEPTED DEMANDS": "📜 स्वीकृत 5 मांगें देखें",
       "5/5 DEMANDS ACCEPTED": "5/5 मांगें स्वीकृत",

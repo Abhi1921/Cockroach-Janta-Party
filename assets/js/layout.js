@@ -287,11 +287,32 @@
     </div>
     <div class="footer-bottom">
       <p>© ${year} Cockroach Janta Party · cockroachjantapartywale.com · Satirical &amp; Parody Movement</p>
-      <p style="margin-top: 0.35rem; font-size: 0.76rem; color: rgba(255,255,255,0.75);">
-        🌐 <strong>CJP Network Portals:</strong> 
-        <a href="https://www.cockroachjantaparty.com" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin: 0 0.35rem;">cockroachjantaparty.com</a> · 
-        <a href="https://www.thecockroachjantaparty.org.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin: 0 0.35rem;">thecockroachjantaparty.org.in</a> · 
-        <a href="https://cockroachjantaparty.org" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin: 0 0.35rem;">cockroachjantaparty.org</a>
+      <p style="margin-top: 0.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.88); line-height: 1.6;">
+        🌐 <strong>CJP Official Mirror &amp; Network Portals:</strong><br>
+        <a href="https://www.instagram.com/cockroachjantaparty/" target="_blank" rel="noopener" style="color: #e1306c; font-weight: 700; text-decoration: underline; margin-right: 0.5rem;">📸 Instagram (@cockroachjantaparty)</a> · 
+        <a href="https://www.thecockroachjantaparty.org.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">thecockroachjantaparty.org.in</a> · 
+        <a href="https://www.cockroachjantaparty.org" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cockroachjantaparty.org</a> · 
+        <a href="https://cpmember.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cpmember.in</a> · 
+        <a href="https://cockroachjantaparty.ran.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cockroachjantaparty.ran.in</a> · 
+        <a href="https://cockroachjantaparty.co" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cockroachjantaparty.co</a> · 
+        <a href="https://cockroachjanataparty.pro" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cockroachjanataparty.pro</a> · 
+        <a href="https://cjpparty.com" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cjpparty.com</a> · 
+        <a href="https://cockroachparty.org" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cockroachparty.org</a> · 
+        <a href="https://www.cockroachjanata.info" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cockroachjanata.info</a> · 
+        <a href="https://cackroachjantaparty.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cackroachjantaparty.in</a> · 
+        <a href="https://cockroachjantaparty.co.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cockroachjantaparty.co.in</a> · 
+        <a href="https://cockroachjantapartyjoin.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline;">cockroachjantapartyjoin.in</a>
+      </p>
+      <p style="margin-top: 0.5rem; font-size: 0.76rem; color: rgba(255,255,255,0.75);">
+        📚 <strong>Encyclopedias &amp; International Press Coverage:</strong> 
+        <a href="https://en.wikipedia.org/wiki/Cockroach_Janta_Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Wikipedia Article</a> · 
+        <a href="https://www.britannica.com/topic/Cockroach-Janta-Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Encyclopedia Britannica</a> · 
+        <a href="https://www.aljazeera.com/news/2026/7/28/india-to-increase-penalties-for-exam-leaks-after-cockroach" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Al Jazeera</a> · 
+        <a href="https://www.bbc.com/news" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">BBC News</a> · 
+        <a href="https://theprint.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">ThePrint</a> · 
+        <a href="https://www.facebook.com/moneycontrol/" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Moneycontrol</a> · 
+        <a href="https://www.instagram.com/thewirein/" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">The Wire</a> · 
+        <a href="https://x.com/htTweets" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Hindustan Times</a>
       </p>
       <p style="margin-top: 0.35rem;">Sources: public press &amp; Wikipedia · Not an ECI-registered political party · Protected under Art. 19(1)(a)</p>
     </div>
