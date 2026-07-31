@@ -303,16 +303,52 @@
         <a href="https://cockroachjantaparty.co.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">cockroachjantaparty.co.in</a> · 
         <a href="https://cockroachjantapartyjoin.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline;">cockroachjantapartyjoin.in</a>
       </p>
-      <p style="margin-top: 0.5rem; font-size: 0.76rem; color: rgba(255,255,255,0.75);">
-        📚 <strong>Encyclopedias &amp; International Press Coverage:</strong> 
-        <a href="https://en.wikipedia.org/wiki/Cockroach_Janta_Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Wikipedia Article</a> · 
-        <a href="https://www.britannica.com/topic/Cockroach-Janta-Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Encyclopedia Britannica</a> · 
-        <a href="https://www.aljazeera.com/news/2026/7/28/india-to-increase-penalties-for-exam-leaks-after-cockroach" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Al Jazeera</a> · 
-        <a href="https://www.bbc.com/news" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">BBC News</a> · 
-        <a href="https://theprint.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">ThePrint</a> · 
-        <a href="https://www.facebook.com/moneycontrol/" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Moneycontrol</a> · 
-        <a href="https://www.instagram.com/thewirein/" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">The Wire</a> · 
-        <a href="https://x.com/htTweets" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin: 0 0.35rem;">Hindustan Times</a>
+      <p style="margin-top: 0.5rem; font-size: 0.76rem; color: rgba(255,255,255,0.85); line-height: 1.6;">
+        📚 <strong>Top News Channels, Encyclopedias &amp; Global Media Index:</strong><br>
+        <a href="https://en.wikipedia.org/wiki/Cockroach_Janta_Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🌐 Wikipedia Article</a> · 
+        <a href="https://www.britannica.com/topic/Cockroach-Janta-Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📚 Encyclopedia Britannica</a> · 
+        <a href="https://www.bbc.com/news" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 BBC News</a> · 
+        <a href="https://theprint.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 ThePrint</a> · 
+        <a href="https://www.siasat.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 The Siasat Daily</a> · 
+        <a href="https://www.capitaltv.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 Capital TV Hindi</a> · 
+        <a href="https://www.indiatoday.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 India Today</a> · 
+        <a href="https://timesofindia.indiatimes.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 Times of India</a> · 
+        <a href="https://www.thehindu.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 The Hindu</a> · 
+        <a href="https://www.ndtv.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 NDTV News</a> · 
+        <a href="https://www.nationalheraldindia.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 National Herald</a> · 
+        <a href="https://www.aninews.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">⚡ ANI News Wire</a> · 
+        <a href="https://www.wionews.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🌐 WION World News</a> · 
+        <a href="https://thewire.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 The Wire</a> · 
+        <a href="https://www.moneycontrol.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📊 Moneycontrol</a> · 
+        <a href="https://www.livemint.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 Livemint</a> · 
+        <a href="https://www.hindustantimes.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 Hindustan Times</a> · 
+        <a href="https://www.aljazeera.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🌍 Al Jazeera</a> · 
+        <a href="https://www.madhyamam.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📱 Madhyamam</a> · 
+        <a href="https://www.news18.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🚨 News18</a> · 
+        <a href="https://news.abplive.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 ABP News</a> · 
+        <a href="https://sansadtv.nic.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline;">🏛️ Sansad TV</a>
+      </p>
+
+      <p style="margin-top: 0.5rem; font-size: 0.76rem; color: rgba(255,255,255,0.8); line-height: 1.6;">
+        📲 <strong>A to Z Social Handles &amp; Streaming Platforms:</strong><br>
+        <a href="https://discord.gg/cockroach" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">💬 Discord</a> · 
+        <a href="https://www.facebook.com/profile.php?id=61590017357770" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">👤 Facebook</a> · 
+        <a href="https://www.instagram.com/cockroachjantaparty/" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">📸 Instagram (@cockroachjantaparty)</a> · 
+        <a href="https://www.instagram.com/abhijeetdipke/" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">📸 Founder (@abhijeetdipke)</a> · 
+        <a href="https://www.jiosaavn.com/search/Cockroach%20Janta%20Party" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">🎵 JioSaavn</a> · 
+        <a href="https://www.linkedin.com/company/cockroachjantaparty" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">💼 LinkedIn</a> · 
+        <a href="https://medium.com/tag/cockroach-janta-party" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">✍️ Medium</a> · 
+        <a href="https://www.pinterest.com/cockroachjantaparty/" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">📌 Pinterest</a> · 
+        <a href="https://www.reddit.com/r/CockroachJantaParty09/" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">🤖 Reddit (r/CockroachJantaParty09)</a> · 
+        <a href="https://open.spotify.com/search/Cockroach%20Janta%20Party" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">🎵 Spotify Official Track</a> · 
+        <a href="https://t.me/thecockroachchannel" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">✈️ Telegram</a> · 
+        <a href="https://www.threads.net/@cockroachjantaparty" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">🧵 Threads</a> · 
+        <a href="https://www.tumblr.com/tagged/cockroachjantaparty" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">🌀 Tumblr</a> · 
+        <a href="https://whatsapp.com/channel/0029VbBqF7S5fM5Rf1mRV540" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">📲 WhatsApp Channel</a> · 
+        <a href="https://x.com/Cockroachisback" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">𝕏 (@Cockroachisback)</a> · 
+        <a href="https://x.com/abhijeet_dipke" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">𝕏 Founder (@abhijeet_dipke)</a> · 
+        <a href="https://www.youtube.com/@cockroachrevolution2029" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline; margin-right: 0.4rem;">▶️ YouTube Official</a> · 
+        <a href="https://music.youtube.com/search?q=Cockroach+Janta+Party" target="_blank" rel="noopener" style="color: #a78bfa; text-decoration: underline;">🎵 YouTube Music</a>
       </p>
       <p style="margin-top: 0.35rem;">Sources: public press &amp; Wikipedia · Not an ECI-registered political party · Protected under Art. 19(1)(a)</p>
     </div>
