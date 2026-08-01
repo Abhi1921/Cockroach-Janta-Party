@@ -25,7 +25,7 @@
       sourceUrl: "donate.html#assam-flood-relief",
       pubDate: "1 August 2026 (Live Emergency)",
       description: "Over 1.93 lakh people affected across Upper Assam. CJP Youth Swarm mobilizes volunteer relief teams for dry rations, clean drinking water, baby food, and support for Assam CM Relief Fund & NGO channels.",
-      image: "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
+      image: "assets/img/cjp/cjp-assam-flood-poster-1.png",
       youtubeId: VERIFIED_YT_ID,
       badge: "🌧️ ASSAM FLOOD RELIEF 2026",
       badgeColor: "#0284c7",
