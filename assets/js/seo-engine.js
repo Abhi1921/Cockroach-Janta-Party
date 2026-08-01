@@ -97,6 +97,11 @@
     "CJP revolutionaries",
     "Cockroach Janta Party news updates",
     "CJP Official",
+    "1 August 2026 Uddhav Thackeray CJP Support",
+    "1 August 2026 Supreme Court Student Release Order",
+    "1 August 2026 CBI Chargesheet 13 NTA Officials",
+    "1 August 2026 Delhi Govt Drops Student FIRs",
+    "1 August 2026 Abhijeet Dipke Pellet Gun Inquiry",
     "31 July 2026 CJP Victory Gazette",
     "31 July 2026 Meritocracy Act Enacted",
     "CJP Victory Gazette 31 July",
@@ -445,14 +450,14 @@
         {
           "@type": "NewsArticle",
           "@id": canonicalUrl + "#trending-news",
-          "headline": "31 July 2026 Historic Victory Gazette: Union Cabinet Passes 100% Meritocracy Act & Drops Student FIRs",
-          "description": "Live coverage of Cockroach Janta Party (CJP) 31 July Gazette Notification, 100% Meritocracy Act enactment, Supreme Court 30-day mandate, and 30 Million youth victory.",
+          "headline": "1 August 2026 CJP News: Uddhav Thackeray Backs Movement; SC Orders Release of Student Protesters & CBI Charges 13 in NTA Leak",
+          "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 1 August 2026: Uddhav Thackeray invites Abhijeet Dipke to Matoshree, SC directs immediate release of minor student activists, CBI files chargesheet against 13 in NTA leak, and Delhi Govt initiates closure of protest FIRs.",
           "image": [
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-poster-31july-victory.png",
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-poster-28july-sc.png",
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-aarakshan-hatao-poster.png"
           ],
-          "datePublished": "2026-07-31T08:00:00+05:30",
+          "datePublished": "2026-08-01T08:00:00+05:30",
           "dateModified": todayIso,
           "author": {
             "@type": "Person",
