@@ -18,6 +18,21 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-assam-flood-relief-1aug",
+      title: "Assam Flood 2026 Relief: CJP Youth Swarm Launches Flood Relief, Dry Rations & Volunteer Support Across 5 Districts",
+      category: "assam-flood",
+      source: "Assam Tribune & CJP Relief Bureau",
+      sourceUrl: "donate.html#assam-flood-relief",
+      pubDate: "1 August 2026 (Live Emergency)",
+      description: "Over 1.93 lakh people affected across Upper Assam. CJP Youth Swarm mobilizes volunteer relief teams for dry rations, clean drinking water, baby food, and support for Assam CM Relief Fund & NGO channels.",
+      image: "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🌧️ ASSAM FLOOD RELIEF 2026",
+      badgeColor: "#0284c7",
+      tags: ["#AssamFloodRelief", "#StandWithAssam", "#CJPYouthSupport", "#AssamReliefCamp", "#FloodHelp2026"],
+      fullText: "Assam Flood Emergency 2026 Update: With over 1.93 lakh citizens displaced and 82 lives lost across Upper Assam districts, Cockroach Janta Party (CJP) youth volunteers have established emergency flood relief hubs. Volunteers are distributing dry rations, drinking water, hygiene kits, and baby food, while facilitating direct donations to the official Assam Chief Minister's Relief Fund and verified relief organizations like Goonj and Akshaya Patra."
+    },
+    {
       id: "news-uddhav-support-1aug",
       title: "Uddhav Thackeray Extends Full Support to CJP & Abhijeet Dipke, Invites Him to Matoshree",
       category: "cjp",
@@ -1007,6 +1022,7 @@
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; justify-content: space-between;">
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="catTabButtons">
             <button type="button" class="btn btn-solid cat-btn active" data-cat="all">🏆 All Victory Posters &amp; News</button>
+            <button type="button" class="btn btn-ghost cat-btn" data-cat="assam-flood">🌧️ Assam Flood Relief (2026)</button>
             <button type="button" class="btn btn-ghost cat-btn" data-cat="cjp">📢 CJP Victory Posters (6)</button>
             <button type="button" class="btn btn-ghost cat-btn" data-cat="google">🌐 Google News Live</button>
           </div>
