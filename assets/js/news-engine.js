@@ -18,6 +18,51 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-sc-clarification-firs-3aug",
+      title: "SC Clarification on Student FIRs a 'Big Victory' for Youth, Says CJP; Seeks Immediate Withdrawal",
+      category: "cjp",
+      source: "The New Indian Express & India.com · Supreme Court Bureau",
+      sourceUrl: "protests.html#sc-clarification-firs",
+      pubDate: "3 August 2026 (Live Now)",
+      description: "Supreme Court bench grants major relief to CJP student protesters, directing Delhi and state police to immediately drop all protest FIRs without procedural delays.",
+      image: "assets/img/cjp/cjp-poster-28july-sc.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "⚖️ SC FIR CLARIFICATION (3 AUG)",
+      badgeColor: "#9333ea",
+      tags: ["#SupremeCourtVictory", "#FIRsWithdrawal", "#CJPBigVictory", "#StudentJustice", "#AbhijeetDipke"],
+      fullText: "The New Indian Express & India.com breaking coverage (3 August 2026): The Supreme Court of India issued an explicit clarification directing police authorities across Delhi and 28 states to halt procedural delays and unconditionally expunge all pending FIRs against student activists. CJP Founder Abhijeet Dipke hailed the order as a monumental victory for India's Gen Z youth."
+    },
+    {
+      id: "news-dipke-rti-scholarship-3aug",
+      title: "My U.S. Studies Funded by Scholarship & Education Loan: CJP Founder Abhijeet Dipke Responds to RTI Query",
+      category: "cjp",
+      source: "The Hindu & Outlook India · Special Wire",
+      sourceUrl: "articles.html#dipke-scholarship-disclosure",
+      pubDate: "3 August 2026 (Live Today)",
+      description: "Addressing viral RTI inquiries, CJP Founder Abhijeet Dipke releases official financial disclosures proving his U.S. higher education was 100% funded through merit scholarships and bank loans.",
+      image: "assets/img/cjp/cjp-factcheck-3aug-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📜 DIPKE FINANCIAL DISCLOSURE",
+      badgeColor: "#0284c7",
+      tags: ["#AbhijeetDipke", "#TheHindu", "#OutlookIndia", "#ScholarshipProof", "#TransparencyFirst"],
+      fullText: "The Hindu & Outlook India exclusive (3 August 2026): CJP Founder Abhijeet Dipke publicly addressed RTI inquiries regarding his overseas education, stating: 'Those who wish to investigate are free to do so. My U.S. studies were funded entirely by merit scholarships and bank education loans.' Dipke challenged critics to maintain equal transparency regarding public funds."
+    },
+    {
+      id: "news-pm-cares-swipe-3aug",
+      title: "Probe PM CARES Fund, Modi Ji Will Forgive You: CJP Takes Swipe at RTI Activist & Demands Degree Disclosure",
+      category: "cjp",
+      source: "India Today & The Indian Express · Political Wire",
+      sourceUrl: "articles.html#cjp-pm-cares-swipe",
+      pubDate: "3 August 2026 (Live Today)",
+      description: "CJP spokesperson takes a sharp satirical swipe at partisan RTI activists: 'Will the emperor show his degree?' while urging investigators to audit PM CARES fund allocations.",
+      image: "assets/img/cjp/cjp-aarakshan-hatao-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🔥 CJP POLITICAL SATIRE",
+      badgeColor: "#dc2626",
+      tags: ["#IndiaToday", "#PMCARESFund", "#IndianExpress", "#AbhijeetDipke", "#ShowDegree"],
+      fullText: "India Today & The Indian Express (3 August 2026): Responding to selective RTI queries, CJP leaders issued a satirical counter-demand asking political leaders to disclose their educational degrees while advising activists: 'Probe PM CARES Fund audit trails instead; Modi ji will forgive you for seeking real accountability!'"
+    },
+    {
       id: "news-cjp-factcheck-3aug",
       title: "CJP Reaffirms Zero Electoral Ambitions & Issues Fact-Check Clarifying Old Protest Footage",
       category: "cjp",
