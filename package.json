@@ -4,6 +4,8 @@
   "description": "Cockroach Janta Party Official Website with Mailtrap Integration",
   "main": "api/send-email.js",
   "scripts": {
+    "start": "npx http-server ./ -p 8080",
+    "dev": "npx http-server ./ -p 8080",
     "update": "bash auto-update-and-push.sh",
     "push": "bash auto-update-and-push.sh"
   },

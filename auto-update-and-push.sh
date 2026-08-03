@@ -27,6 +27,12 @@ sed -i "s|<lastBuildDate>.*</lastBuildDate>|<lastBuildDate>$(date -R)</lastBuild
 echo "🗺️ Updating sitemap.xml timestamps..."
 sed -i "s|<lastmod>.*</lastmod>|<lastmod>$ISO_DATE</lastmod>|g" sitemap.xml
 
+# 2b. Clear & Bump Asset Cache Buster Versions
+CACHE_VER=$(date +"%s")
+echo "🧹 Bumping asset cache busters across all HTML pages (v=$CACHE_VER)..."
+sed -i "s|\.css?v=[0-9.]*|.css?v=$CACHE_VER|g" *.html 2>/dev/null || true
+sed -i "s|\.js?v=[0-9.]*|.js?v=$CACHE_VER|g" *.html 2>/dev/null || true
+
 # 3. Stage all modified & new files
 echo "📦 Staging files for Git..."
 git add .
