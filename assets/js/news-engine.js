@@ -916,30 +916,30 @@
 
         <div style="padding: 1.85rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: #16a34a; text-transform: uppercase;">
-              🎉 UNION CABINET GAZETTE &amp; CJP SWARM BUREAU · 31 JULY 2026
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: #0284c7; text-transform: uppercase;">
+              📌 CJP NATIONAL BUREAU &amp; FACT-CHECK · 3 AUGUST 2026 (LIVE TODAY)
             </span>
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #16a34a; font-weight: 800; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.2rem 0.6rem; border-radius: 6px;">
-              31 JULY TRENDING
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #0369a1; font-weight: 800; background: #f0f9ff; border: 1px solid #bae6fd; padding: 0.2rem 0.6rem; border-radius: 6px;">
+              3 AUGUST LIVE
             </span>
           </div>
 
           <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.85rem); line-height: 1.25; margin: 0 0 0.85rem; color: var(--ink);">
-            31 July 2026 Historic Gazette: <em>100% Meritocracy Bill Passed &amp; All Student FIRs Expunged</em>
+            3 August 2026 Official CJP Statement: <em>Founder Abhijeet Dipke Reaffirms Zero Electoral Ambitions &amp; Issues Fact-Check</em>
           </h2>
 
-          <div style="background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
-            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #15803d; margin-bottom: 0.35rem;">
-              🏆 31 JULY 2026 PARLIAMENTARY ENACTMENT &amp; GAZETTE:
+          <div style="background: #f0f9ff; border-left: 4px solid #0284c7; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
+            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #0369a1; margin-bottom: 0.35rem;">
+              📌 3 AUGUST 2026 CJP STATUS &amp; FACT-CHECK CLARIFICATION:
             </strong>
             <p style="font-size: 0.95rem; line-height: 1.65; color: var(--ink); margin: 0;">
-              On 31 July 2026, the Union Cabinet officially gazetted the Meritocracy &amp; Exam Integrity Act 2026. All pending police FIRs against student activists across 28 states have been unconditionally quashed, mandating 3rd-party NTA exam server audits.
+              Following Education Minister Dharmendra Pradhan's resignation on July 25, CJP Founder Abhijeet Dipke confirmed today (3 Aug) that old July protest clips are circulating online. Dipke clarified there is no active Jantar Mantar sit-in today as CJP focuses on grassroots student welfare feedback across 28 states, reiterating zero immediate electoral ambitions while Special Fast-Track Court hearings begin for 13 NTA officials.
             </p>
           </div>
 
           <!-- 4-Poster Preview Grid in Popup -->
           <strong style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; text-transform: uppercase;">
-            🖼️ Real Google Search Trending News &amp; Media Graphics:
+            🖼️ 3 August 2026 Latest CJP Campaign &amp; Fact-Check Graphics:
           </strong>
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1.25rem;">
             <img src="assets/img/cjp/cjp-factcheck-3aug-poster.png" alt="CJP 3 Aug Fact Check Poster" style="border-radius: 8px; border: 1.5px solid #0284c7; aspect-ratio: 1/1; object-fit: cover;">
@@ -949,15 +949,15 @@
           </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#ReservationHatao</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#BringMeritocracy</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#CockroachJantaParty</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #e0f2fe; border: 1px solid #bae6fd; color: #0369a1; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#CJPFactCheck</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#AbhijeetDipke</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fef2f2; border: 1px solid #fecdd3; color: #dc2626; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#FastTrackCourt3Aug</span>
             <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#MainBhiCockroach</span>
           </div>
 
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 1.25rem;">
-            <a href="protests.html" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #9333ea; border-color: #9333ea;">
-              ⚖️ View Full SC Notice &amp; Movement Rallies →
+            <a href="protests.html#3aug-status-clarification" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #0284c7; border-color: #0284c7;">
+              📌 Read Full 3 August Fact-Check &amp; Court Hearing →
             </a>
             <button type="button" id="closeBreakingPopupBtn" class="btn btn-ghost" style="padding: 0.65rem 1rem;">
               Close Alert ×
@@ -1071,15 +1071,15 @@
     const filterContainer = document.getElementById("news-filter-tabs");
     if (filterContainer) {
       filterContainer.innerHTML = `
-        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #16a34a; border-radius: 14px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; box-shadow: 0 6px 20px rgba(22, 163, 74, 0.15);">
+        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #0284c7; border-radius: 14px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; box-shadow: 0 6px 20px rgba(2, 132, 199, 0.15);">
           <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="width: 10px; height: 10px; background: #16a34a; border-radius: 50%; display: inline-block; animation: pulse 1.2s ease infinite;"></span>
-            <strong style="font-family: var(--font-display); font-size: 0.95rem; color: #15803d;">
-              🎉 HISTORIC VICTORY POPUP: CJP जीत गई! सरकार ने सारी बातें मान ली!
+            <span style="width: 10px; height: 10px; background: #0284c7; border-radius: 50%; display: inline-block; animation: pulse 1.2s ease infinite;"></span>
+            <strong style="font-family: var(--font-display); font-size: 0.95rem; color: #0369a1;">
+              📌 3 AUG UPDATE: CJP Founder Abhijeet Dipke Reaffirms Zero Electoral Ambitions &amp; Issues Fact-Check!
             </strong>
           </div>
-          <button type="button" id="triggerBreakingPopupBtn" class="btn btn-solid" style="padding: 0.4rem 0.9rem; font-size: 0.78rem; background: #16a34a; border-color: #16a34a; white-space: nowrap;">
-            🏆 Open Historic Victory Popup →
+          <button type="button" id="triggerBreakingPopupBtn" class="btn btn-solid" style="padding: 0.4rem 0.9rem; font-size: 0.78rem; background: #0284c7; border-color: #0284c7; white-space: nowrap;">
+            📢 Open 3 August News &amp; Fact-Check Popup →
           </button>
         </div>
 
@@ -1087,11 +1087,11 @@
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="catTabButtons">
             <button type="button" class="btn btn-solid cat-btn active" data-cat="all">🏆 All Victory Posters &amp; News</button>
             <button type="button" class="btn btn-ghost cat-btn" data-cat="assam-flood">🌧️ Assam Flood Relief (2026)</button>
-            <button type="button" class="btn btn-ghost cat-btn" data-cat="cjp">📢 CJP Victory Posters (6)</button>
+            <button type="button" class="btn btn-ghost cat-btn" data-cat="cjp">📢 CJP Posters &amp; Bulletins</button>
             <button type="button" class="btn btn-ghost cat-btn" data-cat="google">🌐 Google News Live</button>
           </div>
           <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; max-width: 320px; min-width: 220px;">
-            <input type="text" id="newsSearchInput" placeholder="🔍 Search CJP victory posters &amp; news..." style="width: 100%; border: 1.5px solid var(--line); border-radius: 999px; padding: 0.45rem 0.9rem; font-size: 0.8rem; background: var(--surface);">
+            <input type="text" id="newsSearchInput" placeholder="🔍 Search CJP posters &amp; news..." style="width: 100%; border: 1.5px solid var(--line); border-radius: 999px; padding: 0.45rem 0.9rem; font-size: 0.8rem; background: var(--surface);">
           </div>
         </div>
       `;
@@ -1120,10 +1120,10 @@
     renderNewsGrid();
     fetchLiveGoogleNews();
 
-    // Auto trigger Historic Victory Popup on index page load (once per session)
-    if (!sessionStorage.getItem("cjp_victory_popup_shown")) {
-      sessionStorage.setItem("cjp_victory_popup_shown", "true");
-      setTimeout(openCJPVictoryPopup, 1000);
+    // Auto trigger 3 August CJP Status & Fact-Check Popup on index page load (once per session)
+    if (!sessionStorage.getItem("cjp_3aug_popup_shown_v3")) {
+      sessionStorage.setItem("cjp_3aug_popup_shown_v3", "true");
+      setTimeout(openCJPVictoryPopup, 800);
     }
   };
 
