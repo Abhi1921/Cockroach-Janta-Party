@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Cockroach Janta Party Official Website with Mailtrap Integration",
   "main": "api/send-email.js",
+  "scripts": {
+    "update": "bash auto-update-and-push.sh",
+    "push": "bash auto-update-and-push.sh"
+  },
   "dependencies": {
     "nodemailer": "^6.10.1"
   }

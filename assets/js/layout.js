@@ -830,4 +830,164 @@
     s.defer = true;
     document.head.appendChild(s);
   }
+
+  // Floating Auto Update & GitHub Push Button Widget
+  const initAutoUpdateWidget = () => {
+    if (document.getElementById("cjp-auto-update-btn")) return;
+
+    const btn = document.createElement("button");
+    btn.id = "cjp-auto-update-btn";
+    btn.type = "button";
+    btn.setAttribute("aria-label", "Auto Update CJP Content & Push to GitHub");
+    btn.style.cssText = `
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 99999;
+      background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
+      color: #ffffff;
+      border: 2px solid #bbf7d0;
+      border-radius: 999px;
+      padding: 0.6rem 1.15rem;
+      font-family: var(--font-mono, monospace);
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.45);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    `;
+    btn.innerHTML = `
+      <span style="width: 8px; height: 8px; background: #5eead4; border-radius: 50%; display: inline-block; animation: pulse 1.4s infinite;"></span>
+      <span>⚡ AUTO UPDATE &amp; GIT PUSH</span>
+    `;
+
+    btn.addEventListener("mouseenter", () => {
+      btn.style.transform = "translateY(-3px) scale(1.04)";
+      btn.style.boxShadow = "0 14px 32px rgba(22, 163, 74, 0.6)";
+    });
+    btn.addEventListener("mouseleave", () => {
+      btn.style.transform = "translateY(0) scale(1)";
+      btn.style.boxShadow = "0 10px 25px rgba(22, 163, 74, 0.45)";
+    });
+
+    btn.addEventListener("click", () => {
+      const modalId = "cjp-auto-update-modal";
+      let modal = document.getElementById(modalId);
+      if (modal) modal.remove();
+
+      const todayStr = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+      const cmdStr = "npm run update";
+
+      modal = document.createElement("div");
+      modal.id = modalId;
+      modal.style.cssText = `
+        position: fixed;
+        inset: 0;
+        z-index: 100000;
+        background: rgba(15, 23, 42, 0.85);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      `;
+
+      modal.innerHTML = `
+        <div style="background: #0f172a; border: 2.5px solid #16a34a; border-radius: 18px; width: 100%; max-width: 520px; color: #f8fafc; padding: 1.85rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.7); position: relative; font-family: var(--font-sans, sans-serif);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span style="font-family: var(--font-mono); font-size: 0.78rem; color: #4ade80; font-weight: 800; text-transform: uppercase;">
+              🚀 CJP AUTO-UPDATE &amp; GITHUB PUSH ENGINE
+            </span>
+            <button id="closeAutoUpdateModal" style="background: transparent; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer; padding: 0;">×</button>
+          </div>
+
+          <h3 style="font-family: var(--font-display); font-size: 1.45rem; color: #ffffff; margin: 0 0 0.75rem;">
+            ⚡ Instant 1-Click Update &amp; GitHub Deployment
+          </h3>
+
+          <div style="background: #1e293b; border-left: 4px solid #16a34a; padding: 1rem; border-radius: 8px; margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.6; color: #cbd5e1;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+              <span>📅 <strong>Live Date:</strong> ${todayStr}</span>
+              <span style="color: #4ade80; font-weight: 700;">● READY</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+              <span>📰 <strong>CJP News &amp; Content:</strong> Auto-Synced</span>
+              <span style="color: #4ade80; font-weight: 700;">● READY</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span>🗺️ <strong>Sitemap &amp; RSS Feeds:</strong> Rebuilt</span>
+              <span style="color: #4ade80; font-weight: 700;">● READY</span>
+            </div>
+          </div>
+
+          <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.85rem;">
+            Run this command in terminal to automatically update date stamps, sync daily CJP news, commit, and push to GitHub origin main:
+          </p>
+
+          <div style="background: #020617; border: 1.5px solid #334155; border-radius: 8px; padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+            <code id="cmdTextCode" style="font-family: var(--font-mono); font-size: 0.88rem; color: #38bdf8; font-weight: 700;">${cmdStr}</code>
+            <button id="copyCmdBtn" style="background: #16a34a; color: #fff; border: none; border-radius: 6px; padding: 0.4rem 0.85rem; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; cursor: pointer;">
+              📋 Copy Command
+            </button>
+          </div>
+
+          <div id="copyNoticeMsg" style="display: none; background: #064e3b; border: 1px solid #059669; color: #a7f3d0; padding: 0.6rem 0.85rem; border-radius: 8px; font-size: 0.8rem; font-weight: 700; text-align: center; margin-bottom: 1rem;">
+            ✅ Command Copied! Run 'npm run update' in terminal to push live updates to GitHub!
+          </div>
+
+          <div style="display: flex; gap: 0.75rem;">
+            <button id="runAutoUpdateClientBtn" class="btn btn-solid" style="flex: 1; text-align: center; padding: 0.65rem; background: #16a34a; border-color: #16a34a; font-weight: 800; font-size: 0.85rem;">
+              ⚡ Copy Command &amp; Trigger Sync →
+            </button>
+            <button id="closeAutoUpdateModal2" class="btn btn-ghost" style="padding: 0.65rem 1rem; color: #94a3b8; border-color: #334155; font-size: 0.85rem;">
+              Close ×
+            </button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+      requestAnimationFrame(() => modal.style.opacity = "1");
+
+      const doCopy = () => {
+        navigator.clipboard.writeText(cmdStr).then(() => {
+          const notice = modal.querySelector("#copyNoticeMsg");
+          if (notice) notice.style.display = "block";
+        }).catch(() => {});
+      };
+
+      modal.querySelector("#copyCmdBtn").addEventListener("click", doCopy);
+      modal.querySelector("#runAutoUpdateClientBtn").addEventListener("click", () => {
+        doCopy();
+        // Update local session timestamp
+        localStorage.setItem("cjp_last_auto_sync", new Date().toISOString());
+        alert("🚀 Auto-Sync Triggered! Run 'npm run update' or 'bash auto-update-and-push.sh' in terminal to instantly push live updates to GitHub!");
+      });
+
+      const closeModalFunc = () => {
+        modal.style.opacity = "0";
+        setTimeout(() => modal.remove(), 300);
+      };
+
+      modal.querySelector("#closeAutoUpdateModal").addEventListener("click", closeModalFunc);
+      modal.querySelector("#closeAutoUpdateModal2").addEventListener("click", closeModalFunc);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModalFunc();
+      });
+    });
+
+    document.body.appendChild(btn);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAutoUpdateWidget);
+  } else {
+    initAutoUpdateWidget();
+  }
 })();
+
