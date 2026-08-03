@@ -113,6 +113,7 @@
             <button type="button" class="lang-opt" role="option" data-lang="hi" aria-selected="false">🇮🇳 हिन्दी</button>
           </div>
         </div>
+        <button type="button" class="btn cjp-header-auto-btn" style="background: linear-gradient(135deg, #15803d 0%, #16a34a 100%); color: #ffffff; border: 1.5px solid #bbf7d0; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 800; padding: 0.45rem 0.85rem; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);" onclick="document.getElementById('cjp-auto-update-btn') ? document.getElementById('cjp-auto-update-btn').click() : null">⚡ AUTO UPDATE &amp; PUSH</button>
         <a href="donate" class="btn btn-ghost${active("donate")}">Support site</a>
         <a href="join" class="btn-pill">Join the Party</a>
       </div>
@@ -841,9 +842,9 @@
     btn.setAttribute("aria-label", "Auto Update CJP Content & Push to GitHub");
     btn.style.cssText = `
       position: fixed;
-      bottom: 20px;
+      bottom: 95px;
       left: 20px;
-      z-index: 99999;
+      z-index: 999999;
       background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
       color: #ffffff;
       border: 2px solid #bbf7d0;
