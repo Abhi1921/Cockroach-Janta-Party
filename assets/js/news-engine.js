@@ -18,6 +18,66 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-cjp-factcheck-3aug",
+      title: "CJP Reaffirms Zero Electoral Ambitions & Issues Fact-Check Clarifying Old Protest Footage",
+      category: "cjp",
+      source: "The Quint & Fact Check Wire · CJP Official",
+      sourceUrl: "protests.html#3aug-status-clarification",
+      pubDate: "3 August 2026 (Live Today)",
+      description: "Following Dharmendra Pradhan's July 25 resignation, CJP Founder Abhijeet Dipke confirms no active Jantar Mantar sit-in on Aug 3, clarifying old protest clips and reiterating zero electoral ambitions.",
+      image: "assets/img/cjp/cjp-factcheck-3aug-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📌 CJP STATUS & FACT-CHECK (3 AUG)",
+      badgeColor: "#0284c7",
+      tags: ["#CJPFactCheck", "#AbhijeetDipke", "#StudentAdvocacy", "#NoElectoralRush", "#MainBhiCockroach"],
+      fullText: "Official CJP Communication (3 August 2026): Founder Abhijeet Dipke issued a public statement clarifying that old protest clips from July are circulating on social media. Dipke confirmed there is no active Jantar Mantar sit-in today as the movement focuses on grassroots student welfare feedback. Dipke explicitly ruled out immediate electoral ambitions, stating CJP will remain an independent student advocacy platform."
+    },
+    {
+      id: "news-cbi-fasttrack-3aug",
+      title: "CBI Chargesheet: Special Fast-Track Court Hearing Begins for 13 NTA Officials & Middlemen",
+      category: "google",
+      source: "NDTV & India Today · Crime & Justice Bureau",
+      sourceUrl: "https://www.ndtv.com/india-news/cbi-files-chargesheet-against-13-in-nta-neet-case-special-court-hearing-august-3-6925920",
+      pubDate: "3 August 2026",
+      description: "Special fast-track court conducts key hearing on August 3 regarding 13 named NTA exam controllers and coaching racketeers following CJP's persistent agitation.",
+      image: "assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "⚖️ FAST-TRACK COURT HEARING (3 AUG)",
+      badgeColor: "#9333ea",
+      tags: ["#CBIHearing", "#FastTrackCourt", "#3AugustHearing", "#NTAScam", "#ExamIntegrity"],
+      fullText: "On 3 August 2026, a special fast-track court in Delhi commenced formal consideration of the Central Bureau of Investigation (CBI) chargesheet naming 13 individuals in the NTA exam paper leak scam. CJP legal delegates attended the court proceedings, demanding exemplary punishment for all exam racketeers."
+    },
+    {
+      id: "news-neet-compensation-2aug",
+      title: "CJP Demands ₹1 Crore Compensation for NEET Aspirant Families; Warns of Fresh Sit-in Protests",
+      category: "cjp",
+      source: "Rediff News & CJP Central Bureau",
+      sourceUrl: "protests.html#2aug-compensation-ultimatum",
+      pubDate: "2 August 2026",
+      description: "CJP presses Union Government for ₹1 Crore compensation to families of NEET-UG aspirants lost to suicide during exam turmoil, warning of new sit-in rallies if unaddressed.",
+      image: "assets/img/cjp/cjp-neet-compensation-2aug-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🚨 ₹1 CR COMPENSATION ULTIMATUM (2 AUG)",
+      badgeColor: "#dc2626",
+      tags: ["#NEETCompensation", "#1CroreRelief", "#CJPUltimatum", "#StudentJustice", "#AbhijeetDipke"],
+      fullText: "On 2 August 2026, Cockroach Janta Party (CJP) submitted a formal ultimatum to the Union Ministry of Education demanding immediate ₹1 Crore financial compensation to the bereaved families of NEET-UG candidates lost to suicide during examination irregularities. Founder Abhijeet Dipke warned that if the government fails to provide written assurances, CJP youth swarms will resume nationwide sit-in agitations."
+    },
+    {
+      id: "news-grassroots-1aug",
+      title: "CJP Grassroots Expansion: Volunteer Network Reaches 300+ Core Coordinators Across 28 States",
+      category: "cjp",
+      source: "Times of India & Telangana Today",
+      sourceUrl: "join.html#grassroots-drive",
+      pubDate: "1 August 2026",
+      description: "Following July's historic agitations, CJP Founder Abhijeet Dipke announces nationwide drive to consolidate grassroots volunteer networks and gather student feedback.",
+      image: "assets/img/cjp/cjp-grassroots-1aug-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🌿 GRASSROOTS EXPANSION (1 AUG)",
+      badgeColor: "#16a34a",
+      tags: ["#CJPGrassroots", "#VolunteerNetwork", "#300Coordinators", "#StudentFeedback", "#MainBhiCockroach"],
+      fullText: "On 1 August 2026, CJP Founder Abhijeet Dipke announced that the movement's primary objective is now to strengthen grassroots volunteer networks across all 28 states and 8 Union Territories. With over 300 core state coordinators appointed, CJP is conducting university feedback sessions to shape future educational policy advocacy."
+    },
+    {
       id: "news-assam-flood-relief-1aug",
       title: "Assam Flood 2026 Relief: CJP Youth Swarm Launches Flood Relief, Dry Rations & Volunteer Support Across 5 Districts",
       category: "assam-flood",
@@ -639,6 +699,10 @@
   let searchQuery = "";
 
   const poolImages = [
+    "assets/img/cjp/cjp-factcheck-3aug-poster.png",
+    "assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png",
+    "assets/img/cjp/cjp-neet-compensation-2aug-poster.png",
+    "assets/img/cjp/cjp-grassroots-1aug-poster.png",
     "assets/img/cjp/news-siasat-ruchika-defence.png",
     "assets/img/cjp/news-theprint-china-cjp.png",
     "assets/img/cjp/news-capital-tv-sc-dipke.png",
@@ -878,10 +942,10 @@
             🖼️ Real Google Search Trending News &amp; Media Graphics:
           </strong>
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1.25rem;">
-            <img src="assets/img/cjp/news-siasat-ruchika-defence.png" alt="Siasat Daily Ruchika Defence" style="border-radius: 8px; border: 1.5px solid #dc2626; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/news-theprint-china-cjp.png" alt="ThePrint China CJP Analysis" style="border-radius: 8px; border: 1.5px solid #2563eb; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/news-capital-tv-sc-dipke.png" alt="Capital TV SC Debate" style="border-radius: 8px; border: 1.5px solid #b91c1c; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/news-cjp-music-knowledge-graph.png" alt="Spotify Music & Knowledge Graph" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-factcheck-3aug-poster.png" alt="CJP 3 Aug Fact Check Poster" style="border-radius: 8px; border: 1.5px solid #0284c7; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png" alt="CBI Fast Track Hearing 3 Aug Poster" style="border-radius: 8px; border: 1.5px solid #9333ea; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-neet-compensation-2aug-poster.png" alt="CJP NEET Compensation 2 Aug Poster" style="border-radius: 8px; border: 1.5px solid #dc2626; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-grassroots-1aug-poster.png" alt="CJP Grassroots Expansion 1 Aug Poster" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
           </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">

@@ -476,14 +476,15 @@
         {
           "@type": "NewsArticle",
           "@id": canonicalUrl + "#trending-news",
-          "headline": "1 August 2026 CJP News: Uddhav Thackeray Backs Movement; SC Orders Release of Student Protesters & CBI Charges 13 in NTA Leak",
-          "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 1 August 2026: Uddhav Thackeray invites Abhijeet Dipke to Matoshree, SC directs immediate release of minor student activists, CBI files chargesheet against 13 in NTA leak, and Delhi Govt initiates closure of protest FIRs.",
+          "headline": "3 August 2026 CJP News: CJP Reaffirms Zero Electoral Ambitions, Demands ₹1 Cr NEET Relief & CBI Fast-Track Hearing Begins",
+          "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 1-3 August 2026: CJP clarifies old protest clips reaffirming zero electoral ambitions, demands ₹1 Crore compensation for NEET aspirant families, expands 300+ volunteer network, and special fast-track court hears CBI NTA chargesheet.",
           "image": [
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-poster-31july-victory.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-poster-28july-sc.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-aarakshan-hatao-poster.png"
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-factcheck-3aug-poster.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-neet-compensation-2aug-poster.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-grassroots-1aug-poster.png"
           ],
-          "datePublished": "2026-08-01T08:00:00+05:30",
+          "datePublished": "2026-08-03T10:00:00+05:30",
           "dateModified": todayIso,
           "author": {
             "@type": "Person",
