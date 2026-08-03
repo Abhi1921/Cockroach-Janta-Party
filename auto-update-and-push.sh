@@ -1,60 +1,43 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# CJP Auto Update & GitHub Push Automation Script
-# Updates daily CJP content, date badges, news feeds, RSS, and pushes to GitHub main
+# Cockroach Janta Party (CJP) Official Auto-Update & GitHub Sync Engine
+# Automatically updates news engine, RSS feed, sitemap, commits & pushes to main
 # ==============================================================================
 
 set -e
 
-REPO_DIR="/home/abhishekppn/cjp"
-cd "$REPO_DIR"
+CWD="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$CWD"
 
-TODAY_DATE=$(date +"%-d %B %Y")
-ISO_DATE=$(date +"%Y-%m-%d")
-TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+TODAY_DATE=$(date "+%d %B %Y")
+TODAY_ISO=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
-echo "======================================================"
-echo "🚀 CJP AUTO UPDATE & GIT PUSH AUTOMATION ENGINE"
-echo "📅 Date: $TODAY_DATE ($ISO_DATE)"
-echo "⏱️ Time: $TIMESTAMP"
-echo "======================================================"
+echo "============================================================"
+echo "⚡ CJP Auto-Update & Push Script Running for $TODAY_DATE"
+echo "============================================================"
 
-# 1. Update RSS feed lastBuildDate timestamp
-echo "📄 Updating rss.xml build date..."
-sed -i "s|<lastBuildDate>.*</lastBuildDate>|<lastBuildDate>$(date -R)</lastBuildDate>|g" rss.xml
-
-# 2. Update Sitemap lastmod timestamps
-echo "🗺️ Updating sitemap.xml timestamps..."
-sed -i "s|<lastmod>.*</lastmod>|<lastmod>$ISO_DATE</lastmod>|g" sitemap.xml
-
-# 2b. Clear & Bump Asset Cache Buster Versions
-CACHE_VER=$(date +"%s")
-echo "🧹 Bumping asset cache busters across all HTML pages (v=$CACHE_VER)..."
-sed -i "s|\.css?v=[0-9.]*|.css?v=$CACHE_VER|g" *.html 2>/dev/null || true
-sed -i "s|\.js?v=[0-9.]*|.js?v=$CACHE_VER|g" *.html 2>/dev/null || true
-
-# 3. Stage all modified & new files
-echo "📦 Staging files for Git..."
-git add .
-
-# 4. Check if there are changes to commit
-if git diff-index --quiet HEAD --; then
-    echo "ℹ️ No changes detected. Forcing content timestamp bump..."
-    touch assets/js/news-engine.js
-    git add assets/js/news-engine.js
+# 1. Run Node.js helper if present to inject today's news item
+if [ -f "scripts/auto-update-cjp-news.js" ]; then
+  echo "📰 Injecting today's breaking CJP news & RSS items..."
+  node scripts/auto-update-cjp-news.js
 fi
 
-# 5. Commit with timestamp
-COMMIT_MSG="auto: CJP daily content update & news sync ($TODAY_DATE)"
-echo "📝 Committing: '$COMMIT_MSG'"
-git commit -m "$COMMIT_MSG" || echo "Commit already completed."
+# 2. Stage all changed and new files
+echo "📦 Staging changed files..."
+git add .
 
-# 6. Push to remote origin main
-echo "🚀 Pushing changes to GitHub (origin main)..."
+# 3. Check if there are changes to commit
+if git diff-index --quiet HEAD --; then
+  echo "ℹ️ No new changes to commit. Site is already 100% up to date!"
+else
+  echo "✍️ Committing updates..."
+  git commit -m "feat(auto-update): sync CJP news content, RSS & site updates [$TODAY_DATE]"
+fi
+
+# 4. Push to remote origin main
+echo "🚀 Pushing changes to GitHub origin/main..."
 git push origin main
 
-echo ""
-echo "======================================================"
-echo "✅ SUCCESS! Website content updated & pushed to GitHub!"
-echo "🌐 Site URL: https://cockroachjantapartywale.com/"
-echo "======================================================"
+echo "============================================================"
+echo "✅ SUCCESS! Website updated & pushed to GitHub main branch!"
+echo "============================================================"

@@ -1,0 +1,38 @@
+name: CJP News Auto-Update & Push Engine
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight UTC
+
+jobs:
+  auto-update-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Execute Auto-Update Script
+        run: |
+          chmod +x auto-update-and-push.sh
+          node scripts/auto-update-cjp-news.js
+
+      - name: Commit & Push Changes
+        run: |
+          git config --global user.name "CJP Automated News Engine"
+          git config --global user.email "bot@cockroachjantapartywale.com"
+          git add .
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit."
+          else
+            git commit -m "feat(auto-update): sync daily CJP news content & RSS feed [$(date +'%Y-%m-%d')]"
+            git push origin main
+          fi
