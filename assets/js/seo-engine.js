@@ -140,7 +140,7 @@
     "CJP revolutionaries",
     "Cockroach Janta Party news updates",
     "CJP Official",
-    "4 August 2026 CJP A to Z Poster Update",
+    "4 August 2026 CJP National Reform Poster Update",
     "4 August 2026 Supreme Court Legal Compliance Filing",
     "4 August 2026 CJP News Update Abhijeet Dipke",
     "1 August 2026 Uddhav Thackeray CJP Support",
@@ -483,8 +483,8 @@
         {
           "@type": "NewsArticle",
           "@id": canonicalUrl + "#trending-news",
-          "headline": "4 August 2026 CJP News: CJP Releases Official A to Z Poster & Submits Supreme Court Legal Compliance",
-          "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 4 August 2026: CJP releases official A to Z poster update covering 100% Meritocracy advocacy, zero electoral ambitions, Supreme Court FIR drop verification across 28 states, and active Assam flood relief.",
+          "headline": "4 August 2026 CJP News: CJP Releases Official National Reform Poster & Submits Supreme Court Legal Compliance",
+          "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 4 August 2026: CJP releases official National Reform Poster covering 100% Meritocracy advocacy, zero electoral ambitions, Supreme Court FIR drop verification across 28 states, and active Assam flood relief.",
           "image": [
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-4aug-a-to-z-poster.png",
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-4aug-news-poster.png",
