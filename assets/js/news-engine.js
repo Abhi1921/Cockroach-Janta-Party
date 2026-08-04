@@ -18,6 +18,36 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-cjp-4aug-a-to-z-update",
+      title: "4 August 2026: Cockroach Janta Party Releases Official A to Z Poster & Comprehensive News Update",
+      category: "cjp",
+      source: "CJP National Press Bureau & India.com · Live Bulletin",
+      sourceUrl: "articles.html#4aug-a-to-z-update",
+      pubDate: "4 August 2026 (Live Today)",
+      description: "CJP Founder Abhijeet Dipke releases the official 4 August A to Z poster update covering 100% Meritocracy advocacy, zero electoral ambitions, Supreme Court FIR drop verification, and active Assam flood relief.",
+      image: "assets/img/cjp/cjp-4aug-a-to-z-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📌 4 AUG A TO Z POSTER UPDATE",
+      badgeColor: "#0284c7",
+      tags: ["#4August2026", "#CJPAToZPoster", "#AbhijeetDipke", "#StudentRights", "#MeritocracyFirst"],
+      fullText: "CJP National Executive Communication (4 August 2026): Cockroach Janta Party (CJP) founder Abhijeet Dipke today released the official '4 August A to Z Update Poster' across all social platforms. The update confirms CJP's 5 core pillars: non-partisan student welfare advocacy, monitoring Supreme Court directives to expunge student protest FIRs across 28 states, launching 1,000+ campus audit squads, and expanding emergency flood relief in Assam."
+    },
+    {
+      id: "news-cjp-4aug-sc-compliance",
+      title: "4 August 2026: CJP Legal Cell Submits Supreme Court Compliance Report on Student FIR Withdrawals",
+      category: "cjp",
+      source: "The Hindu & Legal Bureau · Supreme Court Desk",
+      sourceUrl: "protests.html#4aug-sc-compliance",
+      pubDate: "4 August 2026 (Live Now)",
+      description: "Legal delegates of Cockroach Janta Party file compliance monitoring report in Apex Court, confirming state police departments have begun expunging cases filed against student protesters.",
+      image: "assets/img/cjp/cjp-4aug-news-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "⚖️ 4 AUG SC LEGAL COMPLIANCE",
+      badgeColor: "#9333ea",
+      tags: ["#SupremeCourt", "#LegalCompliance", "#FIRDropStatus", "#CJPVictory", "#StudentJustice"],
+      fullText: "Supreme Court Desk (4 August 2026): CJP legal team submitted a formal compliance monitoring report before the Supreme Court of India today, confirming that DGP offices across Delhi, Maharashtra, UP, and Bihar have initiated procedural steps to drop all 13 pending FIRs against student activists. The Supreme Court bench directed state governments to file final closure certificates within 14 days."
+    },
+    {
       id: "news-sc-clarification-firs-3aug",
       title: "SC Clarification on Student FIRs a 'Big Victory' for Youth, Says CJP; Seeks Immediate Withdrawal",
       category: "cjp",
@@ -744,6 +774,8 @@
   let searchQuery = "";
 
   const poolImages = [
+    "assets/img/cjp/cjp-4aug-a-to-z-poster.png",
+    "assets/img/cjp/cjp-4aug-news-poster.png",
     "assets/img/cjp/cjp-factcheck-3aug-poster.png",
     "assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png",
     "assets/img/cjp/cjp-neet-compensation-2aug-poster.png",
@@ -975,34 +1007,34 @@
 
           <div style="background: #f0f9ff; border-left: 4px solid #0284c7; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
             <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #0369a1; margin-bottom: 0.35rem;">
-              📌 3 AUGUST 2026 CJP STATUS &amp; FACT-CHECK CLARIFICATION:
+              📌 4 AUGUST 2026 CJP A TO Z POSTER &amp; NEWS UPDATE:
             </strong>
             <p style="font-size: 0.95rem; line-height: 1.65; color: var(--ink); margin: 0;">
-              Following Education Minister Dharmendra Pradhan's resignation on July 25, CJP Founder Abhijeet Dipke confirmed today (3 Aug) that old July protest clips are circulating online. Dipke clarified there is no active Jantar Mantar sit-in today as CJP focuses on grassroots student welfare feedback across 28 states, reiterating zero immediate electoral ambitions while Special Fast-Track Court hearings begin for 13 NTA officials.
+              CJP Founder Abhijeet Dipke today (4 Aug) released the official A to Z poster update across all 28 states. CJP legal cell filed compliance monitoring status in the Supreme Court verifying student FIR drops, while 1,000+ campus auditor squads monitor NTA exam server audit readiness and flood relief teams remain active in Assam.
             </p>
           </div>
 
           <!-- 4-Poster Preview Grid in Popup -->
           <strong style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; text-transform: uppercase;">
-            🖼️ 3 August 2026 Latest CJP Campaign &amp; Fact-Check Graphics:
+            🖼️ 4 August 2026 Official CJP A to Z Campaign &amp; News Graphics:
           </strong>
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1.25rem;">
+            <img src="assets/img/cjp/cjp-4aug-a-to-z-poster.png" alt="CJP 4 Aug A to Z Poster" style="border-radius: 8px; border: 1.5px solid #0284c7; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-4aug-news-poster.png" alt="CJP 4 Aug News Poster" style="border-radius: 8px; border: 1.5px solid #9333ea; aspect-ratio: 1/1; object-fit: cover;">
             <img src="assets/img/cjp/cjp-factcheck-3aug-poster.png" alt="CJP 3 Aug Fact Check Poster" style="border-radius: 8px; border: 1.5px solid #0284c7; aspect-ratio: 1/1; object-fit: cover;">
             <img src="assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png" alt="CBI Fast Track Hearing 3 Aug Poster" style="border-radius: 8px; border: 1.5px solid #9333ea; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-neet-compensation-2aug-poster.png" alt="CJP NEET Compensation 2 Aug Poster" style="border-radius: 8px; border: 1.5px solid #dc2626; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-grassroots-1aug-poster.png" alt="CJP Grassroots Expansion 1 Aug Poster" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
           </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #e0f2fe; border: 1px solid #bae6fd; color: #0369a1; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#CJPFactCheck</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#AbhijeetDipke</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fef2f2; border: 1px solid #fecdd3; color: #dc2626; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#FastTrackCourt3Aug</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #e0f2fe; border: 1px solid #bae6fd; color: #0369a1; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#4August2026</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#CJPAToZPoster</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fef2f2; border: 1px solid #fecdd3; color: #dc2626; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#AbhijeetDipke</span>
             <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#MainBhiCockroach</span>
           </div>
 
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 1.25rem;">
-            <a href="protests.html#3aug-status-clarification" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #0284c7; border-color: #0284c7;">
-              📌 Read Full 3 August Fact-Check &amp; Court Hearing →
+            <a href="articles.html#4aug-a-to-z-update" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #0284c7; border-color: #0284c7;">
+              📌 Read Full 4 August A to Z Release &amp; News →
             </a>
             <button type="button" id="closeBreakingPopupBtn" class="btn btn-ghost" style="padding: 0.65rem 1rem;">
               Close Alert ×
@@ -1120,11 +1152,11 @@
           <div style="display: flex; align-items: center; gap: 0.5rem;">
             <span style="width: 10px; height: 10px; background: #0284c7; border-radius: 50%; display: inline-block; animation: pulse 1.2s ease infinite;"></span>
             <strong style="font-family: var(--font-display); font-size: 0.95rem; color: #0369a1;">
-              📌 3 AUG UPDATE: CJP Founder Abhijeet Dipke Reaffirms Zero Electoral Ambitions &amp; Issues Fact-Check!
+              📌 4 AUG UPDATE: CJP Founder Abhijeet Dipke Releases A to Z Poster &amp; Supreme Court Status!
             </strong>
           </div>
           <button type="button" id="triggerBreakingPopupBtn" class="btn btn-solid" style="padding: 0.4rem 0.9rem; font-size: 0.78rem; background: #0284c7; border-color: #0284c7; white-space: nowrap;">
-            📢 Open 3 August News &amp; Fact-Check Popup →
+            📢 Open 4 August A to Z News Popup →
           </button>
         </div>
 
@@ -1165,9 +1197,9 @@
     renderNewsGrid();
     fetchLiveGoogleNews();
 
-    // Auto trigger 3 August CJP Status & Fact-Check Popup on index page load (once per session)
-    if (!sessionStorage.getItem("cjp_3aug_popup_shown_v3")) {
-      sessionStorage.setItem("cjp_3aug_popup_shown_v3", "true");
+    // Auto trigger 4 August CJP Status & A to Z Popup on index page load (once per session)
+    if (!sessionStorage.getItem("cjp_4aug_popup_shown_v4")) {
+      sessionStorage.setItem("cjp_4aug_popup_shown_v4", "true");
       setTimeout(openCJPVictoryPopup, 800);
     }
   };

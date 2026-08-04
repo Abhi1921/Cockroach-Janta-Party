@@ -140,6 +140,9 @@
     "CJP revolutionaries",
     "Cockroach Janta Party news updates",
     "CJP Official",
+    "4 August 2026 CJP A to Z Poster Update",
+    "4 August 2026 Supreme Court Legal Compliance Filing",
+    "4 August 2026 CJP News Update Abhijeet Dipke",
     "1 August 2026 Uddhav Thackeray CJP Support",
     "1 August 2026 Supreme Court Student Release Order",
     "1 August 2026 CBI Chargesheet 13 NTA Officials",
@@ -480,15 +483,15 @@
         {
           "@type": "NewsArticle",
           "@id": canonicalUrl + "#trending-news",
-          "headline": "3 August 2026 CJP News: CJP Reaffirms Zero Electoral Ambitions, Demands ₹1 Cr NEET Relief & CBI Fast-Track Hearing Begins",
-          "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 1-3 August 2026: CJP clarifies old protest clips reaffirming zero electoral ambitions, demands ₹1 Crore compensation for NEET aspirant families, expands 300+ volunteer network, and special fast-track court hears CBI NTA chargesheet.",
+          "headline": "4 August 2026 CJP News: CJP Releases Official A to Z Poster & Submits Supreme Court Legal Compliance",
+          "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 4 August 2026: CJP releases official A to Z poster update covering 100% Meritocracy advocacy, zero electoral ambitions, Supreme Court FIR drop verification across 28 states, and active Assam flood relief.",
           "image": [
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-4aug-a-to-z-poster.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-4aug-news-poster.png",
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-factcheck-3aug-poster.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-neet-compensation-2aug-poster.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-grassroots-1aug-poster.png"
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png"
           ],
-          "datePublished": "2026-08-03T10:00:00+05:30",
+          "datePublished": "2026-08-04T10:00:00+05:30",
           "dateModified": todayIso,
           "author": {
             "@type": "Person",
