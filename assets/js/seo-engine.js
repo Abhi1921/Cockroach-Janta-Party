@@ -554,6 +554,66 @@
             "validFrom": "2026-05-16T00:00:00+05:30"
           }
         },
+        {
+          "@type": "VideoObject",
+          "@id": canonicalUrl + "#video-ajplus",
+          "name": "The Man Behind India's Cockroach Janta Party — AJ+ Special Report",
+          "description": "AJ+ documentary on Abhijeet Dipke and the Cockroach Janta Party (CJP) youth movement demanding exam integrity and Meritocracy in India.",
+          "thumbnailUrl": "https://cockroachjantapartywale.com/assets/img/cjp/cjp-jharkhand-protest-5aug-poster.png",
+          "uploadDate": "2026-08-01T12:00:00+05:30",
+          "contentUrl": "https://www.youtube.com/watch?v=5UjaUWbnWZ4",
+          "embedUrl": "https://www.youtube.com/embed/5UjaUWbnWZ4",
+          "publisher": {
+            "@type": "Organization",
+            "name": "AJ+",
+            "url": "https://www.youtube.com/@AJPlus"
+          }
+        },
+        {
+          "@type": "VideoObject",
+          "@id": canonicalUrl + "#video-theprint",
+          "name": "How China is reading Cockroach Janta Party (CJP) protest in India — ThePrint",
+          "description": "ThePrint analysis on global geopolitical perspectives regarding the Cockroach Janta Party student protests and judicial reform demands.",
+          "thumbnailUrl": "https://cockroachjantapartywale.com/assets/img/cjp/cjp-4aug-a-to-z-poster.png",
+          "uploadDate": "2026-07-30T10:00:00+05:30",
+          "contentUrl": "https://www.youtube.com/watch?v=Lq20jZ62H0Y",
+          "embedUrl": "https://www.youtube.com/embed/Lq20jZ62H0Y",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ThePrint",
+            "url": "https://theprint.in"
+          }
+        },
+        {
+          "@type": "VideoObject",
+          "@id": canonicalUrl + "#video-bbc",
+          "name": "How India's 'cockroach' party sparked a protest movement — BBC News",
+          "description": "BBC News report explaining how the Cockroach Janta Party (CJP) transformed courtroom insults into India's largest youth movement.",
+          "thumbnailUrl": "https://cockroachjantapartywale.com/assets/img/cjp/cjp-bbc-news-graphic.png",
+          "uploadDate": "2026-07-22T14:00:00+05:30",
+          "contentUrl": "https://www.youtube.com/watch?v=9_d8R6G5fAc",
+          "embedUrl": "https://www.youtube.com/embed/9_d8R6G5fAc",
+          "publisher": {
+            "@type": "Organization",
+            "name": "BBC News",
+            "url": "https://www.bbc.com/news"
+          }
+        },
+        {
+          "@type": "VideoObject",
+          "@id": canonicalUrl + "#video-ankit-inspires",
+          "name": "Why Is the 'Cockroach Janata Party' March Making Headlines? — Ankit Inspires India",
+          "description": "In-depth current affairs analysis by Ankit Inspires India on the Cockroach Janata Party (CJP) Jantar Mantar march and 5 demands.",
+          "thumbnailUrl": "https://cockroachjantapartywale.com/assets/img/cjp/cjp-4aug-news-poster.png",
+          "uploadDate": "2026-07-20T09:00:00+05:30",
+          "contentUrl": "https://www.youtube.com/watch?v=8K30jK6h91g",
+          "embedUrl": "https://www.youtube.com/embed/8K30jK6h91g",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Ankit Inspires India",
+            "url": "https://www.youtube.com/@AnkitInspiresIndia"
+          }
+        },
         getBreadcrumbSchema()
       ]
     };

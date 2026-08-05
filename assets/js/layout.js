@@ -307,8 +307,11 @@
         📚 <strong>Top News Channels, Encyclopedias &amp; Global Media Index:</strong><br>
         <a href="https://en.wikipedia.org/wiki/Cockroach_Janta_Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🌐 Wikipedia Article</a> · 
         <a href="https://www.britannica.com/topic/Cockroach-Janta-Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📚 Encyclopedia Britannica</a> · 
-        <a href="https://www.bbc.com/news" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 BBC News</a> · 
-        <a href="https://theprint.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 ThePrint</a> · 
+        <a href="https://www.youtube.com/watch?v=5UjaUWbnWZ4" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">▶️ AJ+ Special Report</a> · 
+        <a href="https://www.bbc.com/news" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 BBC News World</a> · 
+        <a href="https://theprint.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 ThePrint India</a> · 
+        <a href="https://www.youtube.com/watch?v=8K30jK6h91g" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">▶️ Ankit Inspires India</a> · 
+        <a href="https://www.theguardian.com/world/2026/jul/30/who-are-indias-cockroach-party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🌐 The Guardian Feature</a> · 
         <a href="https://www.siasat.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 The Siasat Daily</a> · 
         <a href="https://www.capitaltv.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 Capital TV Hindi</a> · 
         <a href="https://www.indiatoday.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 India Today</a> · 

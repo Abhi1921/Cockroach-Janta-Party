@@ -18,6 +18,51 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-cjp-ajplus-video",
+      title: "AJ+ Documentary: 'The Man Behind India's Cockroach Janta Party' — Abhijeet Dipke & Gen Z Revolution",
+      category: "cjp",
+      source: "AJ+ World Special · YouTube & Digital Bureau",
+      sourceUrl: "https://www.youtube.com/watch?v=5UjaUWbnWZ4",
+      pubDate: "1 August 2026",
+      description: "AJ+ world feature story on Abhijeet Dipke and how the Cockroach Janta Party (CJP) transformed a judicial insult into India's largest youth movement for 100% Meritocracy.",
+      image: "assets/img/cjp/cjp-jharkhand-protest-5aug-poster.png",
+      youtubeId: "5UjaUWbnWZ4",
+      badge: "▶️ AJ+ SPECIAL DOCUMENTARY",
+      badgeColor: "#dc2626",
+      tags: ["#AJPlus", "#TheManBehindCJP", "#AbhijeetDipke", "#GenZRevolution", "#CockroachJantaParty"],
+      fullText: "AJ+ world documentary feature: International media network AJ+ released a special report titled 'The Man Behind India's Cockroach Janta Party' detailing Abhijeet Dipke's journey, the 5 core demands, and how millions of unemployed young job seekers united under #MainBhiCockroach."
+    },
+    {
+      id: "news-cjp-ankit-inspires-video",
+      title: "Ankit Inspires India: Why Is the 'Cockroach Janata Party' March Making Headlines Across India?",
+      category: "cjp",
+      source: "Ankit Inspires India · Current Affairs Analysis",
+      sourceUrl: "https://www.youtube.com/watch?v=8K30jK6h91g",
+      pubDate: "20 July 2026",
+      description: "Popular current affairs analyst Ankit Avasthi breaks down the origins, 5 demands, legal backing, and national impact of Cockroach Janata Party's Jantar Mantar march.",
+      image: "assets/img/cjp/cjp-4aug-news-poster.png",
+      youtubeId: "8K30jK6h91g",
+      badge: "▶️ ANKIT INSPIRES INDIA",
+      badgeColor: "#d97706",
+      tags: ["#AnkitInspiresIndia", "#AnkitAvasthi", "#CockroachJanataParty", "#JantarMantarMarch", "#CJPDemands"],
+      fullText: "Ankit Inspires India special analysis: Ankit Avasthi explains the legal background, CJI comments, student grievances over NEET paper leaks, and why the Cockroach Janata Party march became a trending national phenomenon."
+    },
+    {
+      id: "news-cjp-guardian-article",
+      title: "The Guardian: Who are India's 'Cockroach' party and why are they marching on Delhi?",
+      category: "google",
+      source: "The Guardian World News · London",
+      sourceUrl: "https://www.theguardian.com/world/2026/jul/30/who-are-indias-cockroach-party",
+      pubDate: "30 July 2026",
+      description: "The Guardian's front-page report on Cockroach Janta Party (CJP), exploring how Gen Z satire is reshaping Indian electoral and judicial accountability.",
+      image: "assets/img/cjp/news-theprint-china-cjp.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🌐 THE GUARDIAN",
+      badgeColor: "#0284c7",
+      tags: ["#TheGuardian", "#CockroachParty", "#DelhiMarch", "#GenZSatire", "#IndianPolitics"],
+      fullText: "The Guardian international feature: British national daily report examining how Cockroach Janta Party (CJP) turned a dismissive judicial remark into a nationwide student rights movement."
+    },
+    {
       id: "news-cjp-jharkhand-5aug-protest",
       title: "5 August 2026: CJP Jharkhand Swarm — 50,000+ Students March in Ranchi & Jamshedpur for JSSC & JPSC Audit",
       category: "cjp",
