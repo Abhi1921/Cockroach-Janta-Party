@@ -540,11 +540,13 @@
             "name": "Cockroach Janta Party",
             "url": "https://cockroachjantapartywale.com"
           },
-          "performer": {
-            "@type": "Person",
-            "name": "Abhijeet Dipke",
-            "url": "https://cockroachjantapartywale.com"
-          },
+          "performer": [
+            {
+              "@type": "Person",
+              "name": "Abhijeet Dipke",
+              "url": "https://cockroachjantapartywale.com"
+            }
+          ],
           "offers": {
             "@type": "Offer",
             "price": "0",
