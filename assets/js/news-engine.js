@@ -18,6 +18,21 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-cjp-jharkhand-5aug-protest",
+      title: "5 August 2026: CJP Jharkhand Swarm — 50,000+ Students March in Ranchi & Jamshedpur for JSSC & JPSC Audit",
+      category: "cjp",
+      source: "CJP Jharkhand Bureau & Press Release · Morabadi Ground",
+      sourceUrl: "protests.html#jharkhand-protest-5aug",
+      pubDate: "5 August 2026 (Live Today)",
+      description: "CJP Founder Abhijeet Dipke and Jharkhand youth coordinators lead massive rallies across Ranchi, Jamshedpur, and Dhanbad demanding independent 3rd-party digital log audits of JSSC & JPSC exam servers and 100% Meritocracy.",
+      image: "assets/img/cjp/cjp-jharkhand-protest-5aug-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🔥 5 AUG JHARKHAND MEGA PROTEST",
+      badgeColor: "#16a34a",
+      tags: ["#5August2026", "#JharkhandYouthProtest", "#RanchiSwarm", "#JSSCPaperLeakAudit", "#AbhijeetDipke"],
+      fullText: "CJP Jharkhand Executive Communication (5 August 2026): Cockroach Janta Party founder Abhijeet Dipke and Jharkhand student leaders today led over 50,000 student job seekers in rallies across Morabadi Ground Ranchi, Jamshedpur, and Dhanbad. The movement demands independent digital log audits of JSSC & JPSC recruitment exam servers, 100% Meritocracy, and immediate FIR withdrawals against peaceful student marchers."
+    },
+    {
       id: "news-cjp-4aug-a-to-z-update",
       title: "4 August 2026: Cockroach Janta Party Releases Official National Reform Poster & Comprehensive News Update",
       category: "cjp",
@@ -986,55 +1001,55 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
           </iframe>
-          <span style="position: absolute; top: 0.85rem; left: 0.85rem; background: #9333ea; color: #fff; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.8rem; border-radius: 999px; pointer-events: none; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
-            ⚖️ SC PIL NOTICE · RESERVATION HATAO MOVEMENT
+          <span style="position: absolute; top: 0.85rem; left: 0.85rem; background: #16a34a; color: #fff; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.8rem; border-radius: 999px; pointer-events: none; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+            ✊ 5 AUG JHARKHAND PROTEST · RANCHI &amp; JAMSHEDPUR SWARM
           </span>
         </div>
 
         <div style="padding: 1.85rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: #0284c7; text-transform: uppercase;">
-              📌 CJP NATIONAL BUREAU &amp; FACT-CHECK · 3 AUGUST 2026 (LIVE TODAY)
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: #16a34a; text-transform: uppercase;">
+              📌 CJP JHARKHAND BUREAU · 5 AUGUST 2026 (LIVE TODAY)
             </span>
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #0369a1; font-weight: 800; background: #f0f9ff; border: 1px solid #bae6fd; padding: 0.2rem 0.6rem; border-radius: 6px;">
-              3 AUGUST LIVE
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #15803d; font-weight: 800; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.2rem 0.6rem; border-radius: 6px;">
+              5 AUGUST LIVE
             </span>
           </div>
 
           <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.85rem); line-height: 1.25; margin: 0 0 0.85rem; color: var(--ink);">
-            3 August 2026 Official CJP Statement: <em>Founder Abhijeet Dipke Reaffirms Zero Electoral Ambitions &amp; Issues Fact-Check</em>
+            5 August 2026 Official CJP Statement: <em>50,000+ Students March in Ranchi &amp; Jamshedpur for JSSC &amp; JPSC Audit</em>
           </h2>
 
-          <div style="background: #f0f9ff; border-left: 4px solid #0284c7; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
-            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #0369a1; margin-bottom: 0.35rem;">
-              📌 4 AUGUST 2026 CJP REFORM POSTER &amp; NEWS UPDATE:
+          <div style="background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
+            <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #15803d; margin-bottom: 0.35rem;">
+              📌 5 AUGUST 2026 JHARKHAND YOUTH PROTEST &amp; NEWS UPDATE:
             </strong>
             <p style="font-size: 0.95rem; line-height: 1.65; color: var(--ink); margin: 0;">
-              CJP Founder Abhijeet Dipke today (4 Aug) released the official National Reform Poster across all 28 states. CJP legal cell filed compliance monitoring status in the Supreme Court verifying student FIR drops, while 1,000+ campus auditor squads monitor NTA exam server audit readiness and flood relief teams remain active in Assam.
+              CJP Founder Abhijeet Dipke and Jharkhand youth coordinators today (5 Aug) launched massive student rallies across Morabadi Ground Ranchi, Jamshedpur, and Dhanbad. Over 50,000 students assembled demanding independent 3rd-party digital log audits of JSSC &amp; JPSC exam servers, 100% Meritocracy, and immediate expunging of police FIRs against student activists.
             </p>
           </div>
 
           <!-- 4-Poster Preview Grid in Popup -->
           <strong style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; text-transform: uppercase;">
-            🖼️ 4 August 2026 Official CJP Campaign &amp; News Graphics:
+            🖼️ 5 August 2026 Official CJP Jharkhand Campaign &amp; News Graphics:
           </strong>
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1.25rem;">
+            <img src="assets/img/cjp/cjp-jharkhand-protest-5aug-poster.png" alt="5 Aug Jharkhand Swarm Poster" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-jharkhand-ranchi-5aug-poster.png" alt="5 Aug Ranchi Rally Poster" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="assets/img/cjp/cjp-jharkhand-jamshedpur-5aug-poster.png" alt="5 Aug Jamshedpur Poster" style="border-radius: 8px; border: 1.5px solid #9333ea; aspect-ratio: 1/1; object-fit: cover;">
             <img src="assets/img/cjp/cjp-4aug-a-to-z-poster.png" alt="CJP 4 Aug Reform Poster" style="border-radius: 8px; border: 1.5px solid #0284c7; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-4aug-news-poster.png" alt="CJP 4 Aug News Poster" style="border-radius: 8px; border: 1.5px solid #9333ea; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-factcheck-3aug-poster.png" alt="CJP 3 Aug Fact Check Poster" style="border-radius: 8px; border: 1.5px solid #0284c7; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png" alt="CBI Fast Track Hearing 3 Aug Poster" style="border-radius: 8px; border: 1.5px solid #9333ea; aspect-ratio: 1/1; object-fit: cover;">
           </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #e0f2fe; border: 1px solid #bae6fd; color: #0369a1; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#4August2026</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#CJPReformPoster</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #fef2f2; border: 1px solid #fecdd3; color: #dc2626; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#AbhijeetDipke</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#MainBhiCockroach</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#5August2026</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#JharkhandYouthProtest</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#JSSCPaperLeakAudit</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #e0f2fe; border: 1px solid #bae6fd; color: #0369a1; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#AbhijeetDipke</span>
           </div>
 
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 1.25rem;">
-            <a href="articles.html#4aug-a-to-z-update" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #0284c7; border-color: #0284c7;">
-              📌 Read Full 4 August Reform Release &amp; News →
+            <a href="protests.html#jharkhand-protest-5aug" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #16a34a; border-color: #16a34a;">
+              ✊ View Jharkhand Rally Details &amp; Posters →
             </a>
             <button type="button" id="closeBreakingPopupBtn" class="btn btn-ghost" style="padding: 0.65rem 1rem;">
               Close Alert ×
