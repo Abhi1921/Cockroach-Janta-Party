@@ -213,7 +213,6 @@
     "Cockroach Janta Party Reservation Protest",
     "Supreme Court Notice Caste Quota CJP",
     "General Category Merit Rights India 2026",
-    "Supreme Court Notice Meritocracy CJP",
     "CJP Latest News Updates",
     "Abhijeet Dipke Reservation Hatao",
     "Economic Aid Meritocracy Framework India",
@@ -221,7 +220,26 @@
     "Caste Reservation Abolition India",
     "Meritocracy Student Protest India",
     "Supreme Court PIL Reservation Reform",
-    "100 Percent Meritocracy System"
+    "100 Percent Meritocracy System",
+    "cocraoch janta party jharkhand protest",
+    "cockroach janta party jharkhand jssc leak",
+    "cockroach janta party jharkhand hunger strike 2026",
+    "jaipal singh munda stadium ranchi hunger strike",
+    "jpsc jssc server log audit cjp",
+    "abhijeet dipke jharkhand protest ranchi",
+    "jlkm jpsc jssc reforms manch cjp",
+    "cjp 100 percent meritocracy act",
+    "cocraoch janta party news today",
+    "cockroch janta party latest news",
+    "cokroach janta party jharkhand",
+    "tilchatta janta party jharkhand",
+    "aarakshan hatao yogyata lao jharkhand",
+    "cjp bihar up jharkhand exam audit",
+    "cjp supreme court fir drop compliance 2026",
+    "cjp sansad march jantar mantar delhi",
+    "jharkhand assembly monsoon session cjp protest",
+    "ranchi morabadi ground cjp rally",
+    "jamshedpur dhanbad student agitation cjp"
   ].join(", ");
 
   // Ensure Meta Keywords Tag
@@ -538,6 +556,51 @@
           "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": canonicalUrl
+          }
+        },
+        {
+          "@type": "Event",
+          "@id": "https://cockroachjantapartywale.com/#jharkhand-hunger-strike-event",
+          "name": "CJP Jharkhand JSSC & JPSC Exam Audit & Hunger Strike",
+          "description": "Student hunger strike & protest rally at Jaipal Singh Munda Stadium Ranchi demanding CBI probe and digital server log audits of JSSC & JPSC exams.",
+          "startDate": "2026-08-06T09:00:00+05:30",
+          "endDate": "2026-08-07T20:00:00+05:30",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Jaipal Singh Munda Stadium",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Stadium Road",
+              "addressLocality": "Ranchi",
+              "addressRegion": "JH",
+              "postalCode": "834001",
+              "addressCountry": "IN"
+            }
+          },
+          "image": [
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-jharkhand-protest-6aug-poster.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-jharkhand-protest-5aug-poster.png"
+          ],
+          "organizer": {
+            "@type": "Organization",
+            "name": "Cockroach Janta Party",
+            "url": "https://cockroachjantapartywale.com"
+          },
+          "performer": [
+            {
+              "@type": "Person",
+              "name": "Abhijeet Dipke",
+              "url": "https://cockroachjantapartywale.com"
+            }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://cockroachjantapartywale.com/protests#jharkhand-protest-6aug"
           }
         },
         {

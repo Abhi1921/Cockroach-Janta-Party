@@ -18,6 +18,21 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-cjp-jharkhand-7aug-protest-update",
+      title: "7 August 2026: CJP Jharkhand Hunger Strike Enters Day 3 — Assembly Deliberates JSSC & JPSC Server Audit Demand",
+      category: "cjp",
+      source: "CJP Jharkhand Bureau & Live News Wire · Ranchi",
+      sourceUrl: "protests.html#jharkhand-protest-6aug",
+      pubDate: "7 August 2026 (Live Breaking)",
+      description: "As the Jharkhand Assembly Monsoon Session continues, the CJP student hunger strike at Jaipal Singh Munda Stadium gains statewide support. CJP Founder Abhijeet Dipke demands 3rd-party cryptographic log auditing for JSSC & JPSC recruitment exams.",
+      image: "assets/img/cjp/cjp-jharkhand-protest-6aug-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🚨 7 AUG JHARKHAND BREAKING NEWS",
+      badgeColor: "#dc2626",
+      tags: ["#7August2026", "#JharkhandHungerStrike", "#JSSCPaperLeak", "#JPSCAudit", "#AbhijeetDipke", "#MainBhiCockroach"],
+      fullText: "CJP Jharkhand Bureau Live Update (7 August 2026): The student hunger strike at Jaipal Singh Munda Stadium, Ranchi enters its third consecutive day amidst the ongoing Assembly Monsoon Session. With over 60,000 students joining peaceful solidarity rallies across Ranchi, Dhanbad, and Jamshedpur, Cockroach Janta Party (CJP) founder Abhijeet Dipke reiterated that the movement will accept nothing less than 3rd-party cryptographic server audits for all JSSC CGL & 14th JPSC recruitment exams, immediate CBI investigation into paper leak syndicates, and 100% Meritocracy."
+    },
+    {
       id: "news-cjp-ajplus-video",
       title: "AJ+ Documentary: 'The Man Behind India's Cockroach Janta Party' — Abhijeet Dipke & Gen Z Revolution",
       category: "cjp",
