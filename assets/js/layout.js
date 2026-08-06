@@ -78,11 +78,13 @@
     </div>
   </div>
 
+  <!-- Developer Support Payment Ticker Bar (Commented out)
   <div class="dev-ticker-bar" role="region" aria-label="Developer Support Ticker">
     <div class="dev-ticker-track">
       ${generateTicker()}
     </div>
   </div>
+  -->
 
   <header class="nav site-header">
     <div class="nav-inner header-inner">
