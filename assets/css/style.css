@@ -2908,5 +2908,17 @@ img, iframe, video {
   }
 }
 
+@keyframes cjpSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cjp-spinning {
+  animation: cjpSpin 0.7s linear infinite !important;
+}
+
+
+
+
 
 

@@ -396,8 +396,8 @@
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.008 2.2c-5.448 0-9.879 4.43-9.883 9.879-.001 1.97.513 3.892 1.492 5.59l.327.568-1.073 3.92 4.01-1.053.551.327c1.626.966 3.486 1.477 5.393 1.478 5.451 0 9.883-4.432 9.887-9.885.002-2.64-1.02-5.122-2.879-6.983C17.18 3.22 14.7 2.2 12.008 2.2zm5.424 13.064c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.669.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
     <span>💬 WhatsApp Lead</span>
   </a>
-  <button type="button" id="cacheClearBtn" aria-label="Clear Cache and Hard Refresh" title="Clear Cache &amp; Hard Refresh" style="position: fixed; top: 1.1rem; right: 1.1rem; z-index: 999999; width: 40px; height: 40px; border-radius: 50%; background: #dc2626; color: #ffffff; border: 1.5px solid #fecdd3; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 24px rgba(220,38,38,0.45); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1.0)'">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2M10 11v6M14 11v6"/></svg>
+  <button type="button" id="cacheClearBtn" aria-label="Clear Cache and Hard Refresh" title="Clear Cache &amp; Hard Refresh" style="position: fixed; top: 1.1rem; right: 1.1rem; z-index: 999999; width: 42px; height: 42px; border-radius: 50%; background: #dc2626; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 24px rgba(220,38,38,0.55); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1.0)'">
+    <svg class="cache-refresh-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
   </button>`;
 
   const mountTop = document.getElementById("site-top");
@@ -702,6 +702,10 @@
   if (cacheClearBtn) {
     cacheClearBtn.addEventListener("click", function (e) {
       e.preventDefault();
+      const icon = cacheClearBtn.querySelector("svg");
+      if (icon) icon.classList.add("cjp-spinning");
+      cacheClearBtn.style.background = "#16a34a";
+      cacheClearBtn.title = "Purging Cache & Hard Refreshing...";
       try {
         localStorage.clear();
         sessionStorage.clear();
@@ -720,8 +724,6 @@
       } catch (err) {
         console.log("Cache purge error:", err);
       }
-      cacheClearBtn.innerHTML = "⚡ Hard Refreshing...";
-      cacheClearBtn.style.background = "#16a34a";
       setTimeout(function () {
         window.location.href = window.location.pathname + "?cache_buster=" + Date.now();
       }, 350);
