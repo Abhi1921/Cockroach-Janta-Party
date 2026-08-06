@@ -290,7 +290,26 @@
     </div>
     <div class="footer-bottom">
       <p>© ${year} Cockroach Janta Party · cockroachjantapartywale.com · Satirical &amp; Parody Movement</p>
-      <p style="margin-top: 0.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.88); line-height: 1.6;">
+      
+      <!-- GOOGLE TRENDING TOPICS DIRECTORY BAND -->
+      <div style="margin-top: 1rem; padding: 1rem 1.25rem; background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.15); border-radius: 14px; text-align: left;">
+        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #fbbf24; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">
+          🔥 GOOGLE TRENDING SEARCHES &amp; QUICK LINKS:
+        </span>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.78rem;">
+          <a href="protests#jharkhand-protest-6aug" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🔥 Jharkhand Protest 6 Aug</a>
+          <a href="issues" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">⚖️ JSSC &amp; JPSC Server Audit</a>
+          <a href="protests#jharkhand-protest-6aug" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🏟️ Jaipal Singh Munda Stadium Strike</a>
+          <a href="manifesto" style="color: #bae6fd; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(2,132,199,0.2); border-radius: 6px; border: 1px solid #0284c7;">🏆 100% Meritocracy Act</a>
+          <a href="protests#4aug-sc-compliance" style="color: #c084fc; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(147,51,234,0.2); border-radius: 6px; border: 1px solid #9333ea;">📜 SC Student FIR Drop Directive</a>
+          <a href="donate#assam-flood-relief" style="color: #7dd3fc; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(3,105,161,0.2); border-radius: 6px; border: 1px solid #0369a1;">🌧️ Assam Flood Relief Drive</a>
+          <a href="vision" style="color: #fde047; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(234,179,8,0.2); border-radius: 6px; border: 1px solid #ca8a04;">👤 Founder Abhijeet Dipke</a>
+          <a href="join" style="color: #fca5a5; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(220,38,38,0.2); border-radius: 6px; border: 1px solid #dc2626;">💳 Free CJP Digital ID Card</a>
+          <a href="https://open.spotify.com/search/Cockroach%20Janta%20Party" target="_blank" rel="noopener" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🎵 CJP Spotify Hip-Hop Anthem</a>
+        </div>
+      </div>
+
+      <p style="margin-top: 0.85rem; font-size: 0.78rem; color: rgba(255,255,255,0.88); line-height: 1.6;">
         🌐 <strong>CJP Official Mirror &amp; Network Portals:</strong><br>
         <a href="https://www.instagram.com/cockroachjantaparty/" target="_blank" rel="noopener" style="color: #e1306c; font-weight: 700; text-decoration: underline; margin-right: 0.5rem;">📸 Instagram (@cockroachjantaparty)</a> · 
         <a href="https://www.thecockroachjantaparty.org.in" target="_blank" rel="noopener" style="color: #fbbf24; text-decoration: underline; margin-right: 0.5rem;">thecockroachjantaparty.org.in</a> · 
