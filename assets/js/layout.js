@@ -13,6 +13,7 @@
     "Dev M.", "Divya K.", "Gaurav S.", "Harish V.", "Jyoti N."
   ];
 
+  /*
   const generateTicker = () => {
     const items = [];
     for (let i = 0; i < 20; i++) {
@@ -29,6 +30,7 @@
     }
     return [...items, ...items].join("");
   };
+  */
 
   // Complete 10 primary navbar links with mobile icons
   const nav = [
@@ -78,10 +80,9 @@
     </div>
   </div>
 
-  <!-- Developer Support Payment Ticker Bar (Commented out)
+  <!-- Developer Support Payment Ticker (Commented Out)
   <div class="dev-ticker-bar" role="region" aria-label="Developer Support Ticker">
     <div class="dev-ticker-track">
-      ${generateTicker()}
     </div>
   </div>
   -->
