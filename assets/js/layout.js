@@ -329,12 +329,26 @@
         📚 <strong>Top News Channels, Encyclopedias &amp; Global Media Index:</strong><br>
         <a href="https://en.wikipedia.org/wiki/Cockroach_Janta_Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🌐 Wikipedia Article</a> · 
         <a href="https://www.britannica.com/topic/Cockroach-Janta-Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📚 Encyclopedia Britannica</a> · 
+        <a href="https://edition.cnn.com/search?q=Cockroach+Janta+Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 CNN World</a> · 
+        <a href="https://www.reuters.com/site-search/?query=Cockroach+Janta+Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 Reuters</a> · 
         <a href="https://www.youtube.com/watch?v=5UjaUWbnWZ4" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">▶️ AJ+ Special Report</a> · 
         <a href="https://www.bbc.com/news" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 BBC News World</a> · 
         <a href="https://theprint.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 ThePrint India</a> · 
+        <a href="https://www.indianexpress.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 The Indian Express</a> · 
         <a href="https://www.youtube.com/watch?v=8K30jK6h91g" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">▶️ Ankit Inspires India</a> · 
+        <a href="https://www.instagram.com/dhruvrathee/" target="_blank" rel="noopener" style="color: #e1306c; text-decoration: underline; margin-right: 0.4rem;">📸 Dhruv Rathee Instagram Feature</a> · 
         <a href="https://www.theguardian.com/world/2026/jul/30/who-are-indias-cockroach-party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🌐 The Guardian Feature</a> · 
+        <a href="https://www.business-standard.com/topic/cockroach-janta-party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📊 Business Standard</a> · 
+        <a href="https://www.thequint.com/search?q=Cockroach+Janta+Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 The Quint</a> · 
+        <a href="https://economictimes.indiatimes.com/topic/cockroach-janta-party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📈 Economic Times</a> · 
+        <a href="https://www.nbcnews.com/search/?q=Cockroach+Janta+Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 NBC News</a> · 
+        <a href="https://www.npr.org/search/?query=Cockroach%20Janta%20Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🎙️ NPR News</a> · 
+        <a href="https://lens.civicus.org/search?q=Cockroach+Janta+Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">🌐 Civicus Lens</a> · 
         <a href="https://www.siasat.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 The Siasat Daily</a> · 
+        <a href="https://www.lokmattimes.com/topics/cockroach-janta-party/" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 Lokmat Times</a> · 
+        <a href="https://marathi.abplive.com/topics/cockroach-janta-party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 ABP Majha (मराठी)</a> · 
+        <a href="https://www.dnaindia.com/search?q=Cockroach+Janta+Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 DNA India</a> · 
+        <a href="https://www.telegraphindia.com/search?q=Cockroach+Janta+Party" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 Telegraph India</a> · 
         <a href="https://www.capitaltv.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 Capital TV Hindi</a> · 
         <a href="https://www.indiatoday.in" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📺 India Today</a> · 
         <a href="https://timesofindia.indiatimes.com" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline; margin-right: 0.4rem;">📰 Times of India</a> · 
