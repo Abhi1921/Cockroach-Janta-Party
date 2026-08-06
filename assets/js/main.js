@@ -105,7 +105,27 @@
       "Scan & pay": "स्कैन करें और भुगतान करें",
       "Stay updated": "अपडेट्स प्राप्त करें",
       "Subscribe": "सब्सक्राइब करें",
-      "🚨 LIVE COVERAGE": "🚨 लाइव कवरेज"
+      "🚨 LIVE COVERAGE": "🚨 लाइव कवरेज",
+
+      // Exam Charter & New Banners
+      "5 Demands to End India's Exam Crisis": "भारत के परीक्षा संकट को समाप्त करने की 5 मांगें",
+      "Read the Charter →": "घोषणापत्र पढ़ें →",
+      "View Victory Accord →": "विजय समझौता देखें →",
+      "Released 15 July 2026": "15 जुलाई 2026 को जारी",
+
+      // Issues & Protests
+      "Public Issues Board": "जनसमस्या बोर्ड",
+      "Tracked Campus &amp; Civic Issues": "ट्रैक किए गए कैंपस और नागरिक मुद्दे",
+      "Tracked Campus & Civic Issues": "ट्रैक किए गए कैंपस और नागरिक मुद्दे",
+      "Jharkhand Recruitment Server Log Audit &amp; CBI Probe": "झारखंड भर्ती सर्वर लॉग ऑडिट एवं सीबीआइ जांच",
+      "Aarakshan Hatao - Yogyata Lao Movement": "आरक्षण हटाओ - योग्यता लाओ आंदोलन",
+      "Arbitrary Campus Fee Hikes": "कैंपस फीस वृद्धि का विरोध",
+      "Research Fellowship Disbursal Backlog": "शोध फेलोशिप और वज़ीफ़ा का भुगतान",
+      "RTI Query Backlog &amp; Obfuscation": "आरटीआई प्रश्नों का निस्तारण",
+      "Read More →": "और पढ़ें →",
+      "View Audit Details →": "ऑडिट विवरण देखें →",
+      "View Campaign Details →": "अभियान विवरण देखें →",
+      "File an issue": "मुद्दा दर्ज करें"
     }
   };
 

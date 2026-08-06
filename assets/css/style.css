@@ -2549,7 +2549,8 @@ img, video, iframe, embed, object {
       left: auto !important;
       bottom: auto !important;
       z-index: 9998 !important;
-      #statsToggle {
+    }
+    #statsToggle {
       bottom: 0.6rem !important;
       right: 0.6rem !important;
       left: auto !important;
@@ -2623,7 +2624,6 @@ img, video, iframe, embed, object {
     right: auto !important;
     bottom: 3.5rem !important;
     width: calc(100vw - 1.2rem) !important;
-  }: calc(100vw - 1.5rem) !important;
     max-width: 320px !important;
     z-index: 85 !important;
   }
