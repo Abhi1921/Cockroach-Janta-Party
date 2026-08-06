@@ -63,6 +63,21 @@
       fullText: "The Guardian international feature: British national daily report examining how Cockroach Janta Party (CJP) turned a dismissive judicial remark into a nationwide student rights movement."
     },
     {
+      id: "news-cjp-jharkhand-6aug-protest",
+      title: "6 August 2026: CJP Jharkhand Protest Update — Indefinite Hunger Strike Intensifies at Jaipal Singh Munda Stadium as Assembly Session Begins",
+      category: "cjp",
+      source: "CJP Jharkhand Bureau & Press Release · Ranchi",
+      sourceUrl: "protests.html#jharkhand-protest-6aug",
+      pubDate: "6 August 2026 (Live Today)",
+      description: "As the Jharkhand Assembly Monsoon Session opens on 6 August, 6 student leaders fast at Jaipal Singh Munda Stadium. CJP & Founder Abhijeet Dipke demand independent CBI exam leak audit, 100% Meritocracy, and open media-covered talks with CM.",
+      image: "assets/img/cjp/cjp-jharkhand-protest-6aug-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🔥 6 AUG JHARKHAND PROTEST & HUNGER STRIKE",
+      badgeColor: "#16a34a",
+      tags: ["#6August2026", "#JharkhandYouthProtest", "#JaipalSinghMundaStadium", "#CJPJharkhand", "#AbhijeetDipke"],
+      fullText: "CJP Jharkhand Bureau Communication (6 August 2026): The student agitation in Ranchi enters its second week as the Monsoon Session of the State Assembly convenes today. At the Jaipal Singh Munda Stadium, six student leaders—including JLKM and JPSC-JSSC Reforms Manch representatives—are on an indefinite hunger strike. Demanding the cancellation of the 14th JPSC exam, an independent CBI / judicial probe into exam paper leaks, and 3rd-party server audits, students reject closed-door meetings and insist on open, media-covered public talks with CM Hemant Soren. CJP Founder Abhijeet Dipke and the CJP Jharkhand Swarm reaffirm full solidarity as a non-partisan pressure group demanding 100% Meritocracy."
+    },
+    {
       id: "news-cjp-jharkhand-5aug-protest",
       title: "5 August 2026: CJP Jharkhand Swarm — 50,000+ Students March in Ranchi & Jamshedpur for JSSC & JPSC Audit",
       category: "cjp",
@@ -1047,53 +1062,53 @@
             allowfullscreen>
           </iframe>
           <span style="position: absolute; top: 0.85rem; left: 0.85rem; background: #16a34a; color: #fff; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.8rem; border-radius: 999px; pointer-events: none; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
-            ✊ 5 AUG JHARKHAND PROTEST · RANCHI &amp; JAMSHEDPUR SWARM
+            ✊ 6 AUG JHARKHAND PROTEST · HUNGER STRIKE &amp; ASSEMBLY DEMAND
           </span>
         </div>
 
         <div style="padding: 1.85rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: #16a34a; text-transform: uppercase;">
-              📌 CJP JHARKHAND BUREAU · 5 AUGUST 2026 (LIVE TODAY)
+              📌 CJP JHARKHAND BUREAU · 6 AUGUST 2026 (LIVE TODAY)
             </span>
             <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #15803d; font-weight: 800; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.2rem 0.6rem; border-radius: 6px;">
-              5 AUGUST LIVE
+              6 AUGUST LIVE
             </span>
           </div>
 
           <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.85rem); line-height: 1.25; margin: 0 0 0.85rem; color: var(--ink);">
-            5 August 2026 Official CJP Statement: <em>50,000+ Students March in Ranchi &amp; Jamshedpur for JSSC &amp; JPSC Audit</em>
+            6 August 2026 Official CJP Update: <em>Jaipal Singh Munda Stadium Hunger Strike Escalates as Assembly Opens</em>
           </h2>
 
           <div style="background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1rem 1.15rem; border-radius: 8px; margin-bottom: 1.25rem;">
             <strong style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #15803d; margin-bottom: 0.35rem;">
-              📌 5 AUGUST 2026 JHARKHAND YOUTH PROTEST &amp; NEWS UPDATE:
+              📌 6 AUGUST 2026 JHARKHAND PROTEST &amp; NEWS UPDATE:
             </strong>
             <p style="font-size: 0.95rem; line-height: 1.65; color: var(--ink); margin: 0;">
-              CJP Founder Abhijeet Dipke and Jharkhand youth coordinators today (5 Aug) launched massive student rallies across Morabadi Ground Ranchi, Jamshedpur, and Dhanbad. Over 50,000 students assembled demanding independent 3rd-party digital log audits of JSSC &amp; JPSC exam servers, 100% Meritocracy, and immediate expunging of police FIRs against student activists.
+              As the Jharkhand Monsoon Assembly Session begins today (6 Aug), the student agitation enters week 2 at Jaipal Singh Munda Stadium, Ranchi. 6 student leaders are on an indefinite hunger strike demanding cancellation of the 14th JPSC exam, an independent CBI audit into exam leaks, 100% Meritocracy, and open media-covered public talks with CM Hemant Soren. CJP Founder Abhijeet Dipke and CJP Jharkhand Swarm extend full solidarity as a non-partisan pressure group.
             </p>
           </div>
 
           <!-- 4-Poster Preview Grid in Popup -->
           <strong style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; text-transform: uppercase;">
-            🖼️ 5 August 2026 Official CJP Jharkhand Campaign &amp; News Graphics:
+            🖼️ 6 August 2026 Official CJP Jharkhand Campaign &amp; News Graphics:
           </strong>
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1.25rem;">
+            <img src="assets/img/cjp/cjp-jharkhand-protest-6aug-poster.png" alt="6 Aug Jharkhand Swarm Poster" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
             <img src="assets/img/cjp/cjp-jharkhand-protest-5aug-poster.png" alt="5 Aug Jharkhand Swarm Poster" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
             <img src="assets/img/cjp/cjp-jharkhand-ranchi-5aug-poster.png" alt="5 Aug Ranchi Rally Poster" style="border-radius: 8px; border: 1.5px solid #16a34a; aspect-ratio: 1/1; object-fit: cover;">
-            <img src="assets/img/cjp/cjp-jharkhand-jamshedpur-5aug-poster.png" alt="5 Aug Jamshedpur Poster" style="border-radius: 8px; border: 1.5px solid #9333ea; aspect-ratio: 1/1; object-fit: cover;">
             <img src="assets/img/cjp/cjp-4aug-a-to-z-poster.png" alt="CJP 4 Aug Reform Poster" style="border-radius: 8px; border: 1.5px solid #0284c7; aspect-ratio: 1/1; object-fit: cover;">
           </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#5August2026</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#6August2026</span>
             <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#JharkhandYouthProtest</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#JSSCPaperLeakAudit</span>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #faf5ff; border: 1px solid #e9d5ff; color: #9333ea; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#JaipalSinghMundaStadium</span>
             <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #e0f2fe; border: 1px solid #bae6fd; color: #0369a1; padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 800;">#AbhijeetDipke</span>
           </div>
 
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 1.25rem;">
-            <a href="protests.html#jharkhand-protest-5aug" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #16a34a; border-color: #16a34a;">
+            <a href="protests.html#jharkhand-protest-6aug" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 0.65rem 1rem; background: #16a34a; border-color: #16a34a;">
               ✊ View Jharkhand Rally Details &amp; Posters →
             </a>
             <button type="button" id="closeBreakingPopupBtn" class="btn btn-ghost" style="padding: 0.65rem 1rem;">
