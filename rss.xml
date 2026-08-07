@@ -6,8 +6,24 @@
   <description>Official RSS feed of Cockroach Janta Party (CJP) &amp; Cockroach Janta Party Wale. Founded by Abhijeet Dipke. Youth movement, NEET paper leak audit, and student reforms.</description>
   <language>en-IN</language>
   <copyright>Copyright 2026 Cockroach Janta Party</copyright>
-  <lastBuildDate>Thu, 06 Aug 2026 05:46:24 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 07 Aug 2026 06:08:24 GMT</lastBuildDate>
   <atom:link href="https://cockroachjantapartywale.com/rss.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>7 August 2026: CJP Jharkhand Hunger Strike Enters Day 3 — Assembly Deliberates JSSC &amp; JPSC Audit Demand</title>
+    <link>https://cockroachjantapartywale.com/protests#jharkhand-protest-7aug</link>
+    <guid isPermaLink="true">https://cockroachjantapartywale.com/protests#jharkhand-protest-7aug</guid>
+    <pubDate>Fri, 07 Aug 2026 10:30:00 +0530</pubDate>
+    <description>As the Jharkhand Assembly Monsoon Session continues, CJP student hunger strike at Jaipal Singh Munda Stadium Ranchi enters Day 3. Founder Abhijeet Dipke demands 3rd-party cryptographic log auditing of JSSC &amp; JPSC exam servers.</description>
+  </item>
+
+  <item>
+    <title>7 August 2026: CJP Releases Official National A-to-Z Reform Poster — Supreme Court Compliance &amp; Assam Relief</title>
+    <link>https://cockroachjantapartywale.com/articles#7aug-a-to-z-update</link>
+    <guid isPermaLink="true">https://cockroachjantapartywale.com/articles#7aug-a-to-z-update</guid>
+    <pubDate>Fri, 07 Aug 2026 09:00:00 +0530</pubDate>
+    <description>CJP Founder Abhijeet Dipke releases official 7 August National Reform Poster detailing 100% Meritocracy status, Supreme Court FIR withdrawal compliance tracking across 28 states, and active Assam flood relief.</description>
+  </item>
 
   <item>
     <title>6 August 2026: CJP Jharkhand Update — Indefinite Hunger Strike Escalates at Jaipal Singh Munda Stadium as Assembly Opens</title>

@@ -531,15 +531,15 @@
         {
           "@type": "NewsArticle",
           "@id": canonicalUrl + "#trending-news",
-          "headline": "4 August 2026 CJP News: CJP Releases Official National Reform Poster & Submits Supreme Court Legal Compliance",
-          "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 4 August 2026: CJP releases official National Reform Poster covering 100% Meritocracy advocacy, zero electoral ambitions, Supreme Court FIR drop verification across 28 states, and active Assam flood relief.",
+          "headline": "7 August 2026 CJP News: Day 3 of CJP Jharkhand Hunger Strike & Official National Reform Poster Release",
+          "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 7 August 2026: Day 3 of student hunger strike at Jaipal Singh Munda Stadium Ranchi, Jharkhand Assembly session deliberations on JSSC/JPSC audits, and release of official 7 August National Reform Poster.",
           "image": [
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-4aug-a-to-z-poster.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-4aug-news-poster.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-factcheck-3aug-poster.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-fasttrack-hearing-3aug-poster.png"
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-7aug-jharkhand-protest-poster.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-7aug-a-to-z-poster.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-jharkhand-protest-6aug-poster.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-4aug-a-to-z-poster.png"
           ],
-          "datePublished": "2026-08-04T10:00:00+05:30",
+          "datePublished": "2026-08-07T08:00:00+05:30",
           "dateModified": todayIso,
           "author": {
             "@type": "Person",
@@ -563,8 +563,8 @@
           "@id": "https://cockroachjantapartywale.com/#jharkhand-hunger-strike-event",
           "name": "CJP Jharkhand JSSC & JPSC Exam Audit & Hunger Strike",
           "description": "Student hunger strike & protest rally at Jaipal Singh Munda Stadium Ranchi demanding CBI probe and digital server log audits of JSSC & JPSC exams.",
-          "startDate": "2026-08-06T09:00:00+05:30",
-          "endDate": "2026-08-07T20:00:00+05:30",
+          "startDate": "2026-08-05T09:00:00+05:30",
+          "endDate": "2026-08-08T20:00:00+05:30",
           "eventStatus": "https://schema.org/EventScheduled",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "location": {
@@ -580,8 +580,8 @@
             }
           },
           "image": [
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-jharkhand-protest-6aug-poster.png",
-            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-jharkhand-protest-5aug-poster.png"
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-7aug-jharkhand-protest-poster.png",
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-jharkhand-protest-6aug-poster.png"
           ],
           "organizer": {
             "@type": "Organization",
