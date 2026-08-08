@@ -58,7 +58,7 @@ body {
   -webkit-user-select: text;
 }
 body.no-fouc {
-  opacity: 0 !important;
+  opacity: 1 !important;
 }
 
 img {
