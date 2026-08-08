@@ -98,8 +98,84 @@
       </a>
       <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="primary-nav main-nav" id="mainNav" aria-label="Primary">
-        <ul class="mobile-nav-list">
-          ${nav.map(([href, label, icon]) => `<li><a href="${href}" class="${active(href).trim()}"><span class="nav-icon">${icon}</span><span class="nav-label">${label}</span></a></li>`).join("")}
+        <ul class="mobile-nav-list" style="display: flex; align-items: center; gap: 1.1rem; list-style: none; margin: 0; padding: 0;">
+          <!-- Dropdown 1: CJP Hub -->
+          <li class="cjp-mega-nav-item">
+            <a href="vision" class="${(active('vision') || active('index')).trim()}">
+              <span class="nav-icon">⚡</span><span class="nav-label">CJP Hub ▾</span>
+            </a>
+            <div class="cjp-mega-dropdown">
+              <a href="/" class="cjp-mega-dropdown-link">🏠 Home Hub <span class="cjp-mega-dropdown-badge" style="background:#e0f2fe;color:#0369a1">Main</span></a>
+              <a href="vision" class="cjp-mega-dropdown-link">👁️ Vision &amp; Ideology</a>
+              <a href="manifesto" class="cjp-mega-dropdown-link">📜 5 Non-Negotiable Demands <span class="cjp-mega-dropdown-badge" style="background:#dcfce7;color:#15803d">Enacted</span></a>
+              <a href="members" class="cjp-mega-dropdown-link">👥 Members (30M+)</a>
+              <a href="revolutionaries" class="cjp-mega-dropdown-link">🔥 Revolutionaries &amp; Founders</a>
+              <a href="tracker" class="cjp-mega-dropdown-link">📊 Movement Tracker</a>
+              <a href="contact" class="cjp-mega-dropdown-link">📩 Press &amp; Contact Bureau</a>
+            </div>
+          </li>
+
+          <!-- Dropdown 2: RHM Movement (Reservation Hatao) -->
+          <li class="cjp-mega-nav-item">
+            <a href="rha" class="${active('rha').trim()}" style="color: #dc2626; font-weight: 800;">
+              <span class="nav-icon">✊</span><span class="nav-label">RHM Movement ▾</span>
+            </a>
+            <div class="cjp-mega-dropdown" style="border-color: #dc2626;">
+              <a href="rha" class="cjp-mega-dropdown-link">✊ RHM Main Portal <span class="cjp-mega-dropdown-badge" style="background:#fee2e2;color:#dc2626">100% Merit</span></a>
+              <a href="manifesto" class="cjp-mega-dropdown-link">💯 100% Meritocracy Charter</a>
+              <a href="protests#sc-notice-pil" class="cjp-mega-dropdown-link">⚖️ Supreme Court PIL Notice</a>
+              <a href="protests#aarakshan-hatao-rally" class="cjp-mega-dropdown-link">📢 28-State Student Rally Timeline</a>
+              <a href="rha#electoral-reforms" class="cjp-mega-dropdown-link">🚫 Anti-Defection 20-Year Ban</a>
+              <a href="rha#economic-aid" class="cjp-mega-dropdown-link">🎓 Economic Need Scholarships</a>
+            </div>
+          </li>
+
+          <!-- Dropdown 3: Jharkhand Agitation Hub -->
+          <li class="cjp-mega-nav-item">
+            <a href="protests#jharkhand-protest-8aug" class="${active('protests').trim()}" style="color: #dc2626; font-weight: 800;">
+              <span class="nav-icon">🚨</span><span class="nav-label">Jharkhand Protests ▾</span>
+            </a>
+            <div class="cjp-mega-dropdown" style="border-color: #dc2626;">
+              <a href="protests#jharkhand-protest-8aug" class="cjp-mega-dropdown-link">🔥 8 Aug Assembly Siege (Day 4 &amp; Bandh) <span class="cjp-mega-dropdown-badge" style="background:#fee2e2;color:#dc2626">Live</span></a>
+              <a href="protests#jharkhand-protest-7aug" class="cjp-mega-dropdown-link">✊ 7 Aug Stadium Hunger Strike (Day 3)</a>
+              <a href="protests#jharkhand-protest-6aug" class="cjp-mega-dropdown-link">🏛️ 6 Aug Assembly Opening &amp; CBI Probe</a>
+              <a href="protests#jharkhand-protest-5aug" class="cjp-mega-dropdown-link"> Morabadi Ground Mega Swarm (50k+)</a>
+              <a href="issues#jssc-audit" class="cjp-mega-dropdown-link">📋 JSSC &amp; JPSC Digital Audit Charter</a>
+            </div>
+          </li>
+
+          <!-- Dropdown 4: News & Media Hub (3 Tabs) -->
+          <li class="cjp-mega-nav-item">
+            <a href="articles" class="${active('articles').trim()}">
+              <span class="nav-icon">📰</span><span class="nav-label">News Desk (3 Tabs) ▾</span>
+            </a>
+            <div class="cjp-mega-dropdown" style="border-color: #0284c7;">
+              <a href="articles#all-news-tab" class="cjp-mega-dropdown-link">🌐 Tab 1: All News / Live Wire <span class="cjp-mega-dropdown-badge" style="background:#e0f2fe;color:#0369a1">Wire</span></a>
+              <a href="articles#cjp-bulletins-tab" class="cjp-mega-dropdown-link">📌 Tab 2: CJP Official Bulletins &amp; Posters</a>
+              <a href="articles#media-coverage-tab" class="cjp-mega-dropdown-link">📺 Tab 3: Google &amp; Live Media Desk (BBC/AJ+)</a>
+              <a href="donate#assam-flood-relief" class="cjp-mega-dropdown-link">🌧️ Assam Flood Relief Drive</a>
+            </div>
+          </li>
+
+          <!-- Dropdown 5: Visual Gallery -->
+          <li class="cjp-mega-nav-item">
+            <a href="gallery" class="${active('gallery').trim()}">
+              <span class="nav-icon">🖼️</span><span class="nav-label">Posters Gallery ▾</span>
+            </a>
+            <div class="cjp-mega-dropdown" style="border-color: #16a34a;">
+              <a href="gallery" class="cjp-mega-dropdown-link">🖼️ Gallery Home (37+ Assets)</a>
+              <a href="gallery#8aug-posters" class="cjp-mega-dropdown-link">✊ 8 Aug Assembly Siege Posters</a>
+              <a href="gallery#7aug-posters" class="cjp-mega-dropdown-link">📌 7 Aug National Reform Posters</a>
+              <a href="gallery#rhm-posters" class="cjp-mega-dropdown-link">💯 RHM Meritocracy Posters</a>
+              <a href="gallery#assam-art" class="cjp-mega-dropdown-link">🌧️ Assam Flood Relief Art</a>
+            </div>
+          </li>
+
+          <li>
+            <a href="join" class="${active('join').trim()}" style="color: #16a34a; font-weight: 800;">
+              <span class="nav-icon">💳</span><span class="nav-label">Digital ID</span>
+            </a>
+          </li>
         </ul>
         <div class="mobile-nav-actions">
           <a href="join" class="btn btn-solid btn-wide mobile-cta-join">✊ Join Swarm Free →</a>
@@ -121,6 +197,19 @@
       </div>
     </div>
   </header>
+
+  <!-- Category Sub-Navbar Bar Below Header (Quick Hubs Access) -->
+  <div class="cjp-sub-navbar-bar">
+    <div class="cjp-sub-navbar-inner">
+      <a href="/" class="cjp-sub-nav-chip ${active('index')}">⚡ CJP Main Hub</a>
+      <a href="rha" class="cjp-sub-nav-chip ${active('rha')}" style="background: rgba(220,38,38,0.2); border-color: #dc2626; color: #fca5a5;">✊ RHM Movement (100% Merit)</a>
+      <a href="protests#jharkhand-protest-8aug" class="cjp-sub-nav-chip" style="background: rgba(220,38,38,0.25); border-color: #dc2626; color: #fee2e2;">🚨 Jharkhand Assembly Siege (8 Aug)</a>
+      <a href="articles" class="cjp-sub-nav-chip ${active('articles')}">📰 News Desk (3 Tabs)</a>
+      <a href="donate#assam-flood-relief" class="cjp-sub-nav-chip" style="background: rgba(2,132,199,0.2); border-color: #0284c7; color: #bae6fd;">🌧️ Assam Relief Drive</a>
+      <a href="gallery" class="cjp-sub-nav-chip ${active('gallery')}">🖼️ Visual Posters Gallery</a>
+      <a href="join" class="cjp-sub-nav-chip ${active('join')}" style="background: rgba(22,163,74,0.2); border-color: #16a34a; color: #86efac;">💳 Digital ID Card</a>
+    </div>
+  </div>
 
   <!-- Exam Crisis Charter Banner Bar -->
   <div class="exam-banner-bar">

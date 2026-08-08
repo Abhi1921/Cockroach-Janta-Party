@@ -534,6 +534,7 @@
           "headline": "8 August 2026 CJP News: Day 4 of CJP Jharkhand Assembly Siege & Official 8 August National Reform Poster Release",
           "description": "Live Google News coverage of Cockroach Janta Party (CJP) developments on 8 August 2026: Day 4 of student hunger strike & Assembly Siege in Ranchi, statewide educational bandh call for JSSC/JPSC audits, and release of official 8 August National Reform Poster.",
           "image": [
+            "https://cockroachjantapartywale.com/assets/img/cjp/cjp-rha-meritocracy-poster.png",
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-8aug-jharkhand-protest-poster.png",
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-8aug-a-to-z-poster.png",
             "https://cockroachjantapartywale.com/assets/img/cjp/cjp-7aug-jharkhand-protest-poster.png",

@@ -18,6 +18,21 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-cjp-rhm-meritocracy-update",
+      title: "8 August 2026: CJP Reservation Hatao Movement (RHM) Releases Official 100% Meritocracy Charter Poster",
+      category: "cjp",
+      source: "CJP RHM National Secretariat & Legal Bureau",
+      sourceUrl: "rha.html#meritocracy-charter",
+      pubDate: "8 August 2026 (RHM Release)",
+      description: "Cockroach Janta Party (CJP) Reservation Hatao Movement (RHM) releases official 100% Meritocracy Charter poster detailing equal opportunity for all Indian youth, Supreme Court PIL notice tracking, and economic need-based scholarship framework.",
+      image: "assets/img/cjp/cjp-rha-meritocracy-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "💯 RHM 100% MERITOCRACY CHARTER",
+      badgeColor: "#dc2626",
+      tags: ["#ReservationHatao", "#BringMeritocracy", "#100PercentYogyata", "#CJPRHM", "#AbhijeetDipke"],
+      fullText: "CJP RHM National Secretariat (8 August 2026): Cockroach Janta Party (CJP) Reservation Hatao Movement (RHM) today released the official '100% Meritocracy Charter Poster' across all 28 states. CJP Founder Abhijeet Dipke reiterated that the movement advocates replacing caste-based entrance exam quotas with pure merit selection, paired with 100% economic need-based financial scholarships for underprivileged students."
+    },
+    {
       id: "news-cjp-jharkhand-8aug-protest-update",
       title: "8 August 2026: CJP Jharkhand Protest Enters Day 4 — Massive Assembly Siege & Statewide Student Bandh Call for JSSC & JPSC Digital Audit",
       category: "cjp",

@@ -587,4 +587,69 @@
     }
   };
   clearStaleCaches();
+
+  // 3 Interactive News Tabs Filter Engine
+  const initNewsTabsEngine = () => {
+    const tabBtns = $$("#newsTabBar .cjp-tab-btn");
+    const container = $("#newsCardsContainer");
+    if (!tabBtns.length || !container) return;
+
+    const filterNewsCards = (targetTab) => {
+      tabBtns.forEach(btn => {
+        if (btn.dataset.newsTab === targetTab) {
+          btn.classList.add("is-active");
+        } else {
+          btn.classList.remove("is-active");
+        }
+      });
+
+      const cards = $$(".content-card", container);
+      cards.forEach(card => {
+        const text = (card.textContent || "").toLowerCase();
+        const id = (card.id || "").toLowerCase();
+
+        if (targetTab === "all") {
+          card.style.display = "";
+        } else if (targetTab === "bulletins") {
+          // Show official bulletins, posters, gazettes, RHM updates
+          if (id.includes("a-to-z") || id.includes("gazette") || id.includes("poster") || text.includes("poster") || text.includes("bulletin") || text.includes("gazette") || text.includes("charter")) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        } else if (targetTab === "media") {
+          // Show external media reporting (BBC, AJ+, ThePrint, India Today, etc.)
+          if (text.includes("bbc") || text.includes("aj+") || text.includes("theprint") || text.includes("india today") || text.includes("siasat") || text.includes("capital tv") || text.includes("news18") || text.includes("national herald") || text.includes("guardian") || text.includes("hindu") || text.includes("times of india")) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        }
+      });
+    };
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const tab = btn.dataset.newsTab || "all";
+        filterNewsCards(tab);
+      });
+    });
+
+    // Check URL hash on page load
+    const hash = (window.location.hash || "").toLowerCase();
+    if (hash.includes("cjp-bulletins")) {
+      filterNewsCards("bulletins");
+    } else if (hash.includes("media-coverage")) {
+      filterNewsCards("media");
+    } else if (hash.includes("all-news")) {
+      filterNewsCards("all");
+    }
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initNewsTabsEngine);
+  } else {
+    initNewsTabsEngine();
+  }
 })();
+
