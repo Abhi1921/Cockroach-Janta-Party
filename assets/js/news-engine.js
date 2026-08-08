@@ -18,6 +18,36 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-cjp-jharkhand-8aug-protest-update",
+      title: "8 August 2026: CJP Jharkhand Protest Enters Day 4 — Massive Assembly Siege & Statewide Student Bandh Call for JSSC & JPSC Digital Audit",
+      category: "cjp",
+      source: "CJP Jharkhand Bureau & Live News Wire · Ranchi Assembly Desk",
+      sourceUrl: "protests.html#jharkhand-protest-8aug",
+      pubDate: "8 August 2026 (Live Breaking)",
+      description: "Massive student agitation surrounds Jharkhand Legislative Assembly in Ranchi as CJP hunger strike enters Day 4. CJP Founder Abhijeet Dipke and student coalition call for statewide educational bandh demanding 3rd-party cryptographic digital server audits for JSSC & JPSC exams.",
+      image: "assets/img/cjp/cjp-8aug-jharkhand-protest-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🚨 8 AUG JHARKHAND ASSEMBLY SIEGE",
+      badgeColor: "#dc2626",
+      tags: ["#8August2026", "#JharkhandAssemblySiege", "#JharkhandStudentBandh", "#JSSCPaperLeakAudit", "#AbhijeetDipke", "#MainBhiCockroach"],
+      fullText: "CJP Jharkhand Bureau Live Update (8 August 2026): The student agitation in Ranchi reaches a climax as thousands of job aspirants surround the Jharkhand Legislative Assembly on Day 4 of the hunger strike at Jaipal Singh Munda Stadium. Demonstrators led by Cockroach Janta Party (CJP) Founder Abhijeet Dipke and student leaders from all 24 districts have announced a peaceful statewide educational bandh. CJP demands immediate 3rd-party cryptographic server audits for all JSSC CGL & JPSC competitive exams, strict CBI prosecution of paper leak syndicates, and 100% Meritocracy."
+    },
+    {
+      id: "news-cjp-8aug-a-to-z-update",
+      title: "8 August 2026: CJP Releases Official 8 August National Reform Poster — SC Compliance & Statewide Agitations",
+      category: "cjp",
+      source: "CJP National Press Bureau & India.com · Live Bulletin",
+      sourceUrl: "articles.html#8aug-a-to-z-update",
+      pubDate: "8 August 2026 (Live Bulletin)",
+      description: "CJP Founder Abhijeet Dipke releases the official 8 August National Reform Poster detailing the Jharkhand Assembly siege, 1,000+ campus audit squads activated across 28 states, and Supreme Court FIR compliance tracking.",
+      image: "assets/img/cjp/cjp-8aug-a-to-z-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📌 8 AUG NATIONAL REFORM POSTER",
+      badgeColor: "#0284c7",
+      tags: ["#8August2026", "#CJPReformPoster", "#AbhijeetDipke", "#StudentRights", "#MeritocracyFirst"],
+      fullText: "CJP National Executive Communication (8 August 2026): Cockroach Janta Party (CJP) founder Abhijeet Dipke today released the official '8 August National Reform Poster' across all media channels. The update confirms CJP's 5 key directives: supporting Jharkhand student agitations, monitoring Supreme Court compliance on dropping student protest FIRs across 28 states, deploying 1,000+ campus audit squads, and maintaining 100% zero electoral ambitions."
+    },
+    {
       id: "news-cjp-jharkhand-7aug-protest-update",
       title: "7 August 2026: CJP Jharkhand Hunger Strike Enters Day 3 — Assembly Deliberates JSSC & JPSC Server Audit Demand",
       category: "cjp",
