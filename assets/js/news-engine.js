@@ -18,6 +18,36 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
+      id: "news-cjp-10aug-jharkhand-clash",
+      title: "Police Fire Tear Gas at Ranchi Vidhan Sabha; Govt Cancels 14th JPSC Prelims Exam",
+      category: "google",
+      source: "BBC / Al Jazeera / Republic World / NDTV",
+      sourceUrl: "https://www.aljazeera.com",
+      pubDate: "10 August 2026 (Live Breaking News)",
+      description: "Police fire tear gas, water cannons & baton charges as student job aspirants storm Vidhan Sabha gates in Ranchi. State Govt concedes late Sunday, agreeing to cancel 14th JPSC prelims exam.",
+      image: "assets/img/cjp/cjp-10aug-jharkhand-assembly-clash.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🚨 10 AUG ASSEMBLY STORM & JPSC CANCELLED",
+      badgeColor: "#dc2626",
+      tags: ["#10August2026", "#JharkhandAssemblyStorm", "#JPSC_Cancelled", "#TearGasRanchi", "#CJP_Solidarity"],
+      fullText: "Ranchi Live Wire (10 August 2026): Tensions escalated near the Jharkhand Vidhan Sabha as police used water cannons, tear gas and baton charges against job aspirants protesting for JSSC-CGL cancellation and a CBI probe. Late Sunday, the state government agreed to cancel the 14th JPSC prelims exam and review key recruitment decisions."
+    },
+    {
+      id: "news-cjp-10aug-cjp-bjp-showdown",
+      title: "JPSC-JSSC Agitation: CJP Founder Abhijeet Dipke Backs Jharkhand Students in Solidarity",
+      category: "cjp",
+      source: "The Times of India / India Today / Lallantop",
+      sourceUrl: "https://timesofindia.indiatimes.com",
+      pubDate: "10 August 2026 (TOI Wire)",
+      description: "CJP Founder Abhijeet Dipke expresses 100% solidarity with protesting students in Jharkhand, demanding an independent CBI probe, server log audits, and dropping of police FIRs.",
+      image: "assets/img/cjp/cjp-10aug-cjp-bjp-showdown.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "✊ ABHIJEET DIPKE SOLIDARITY",
+      badgeColor: "#0284c7",
+      tags: ["#AbhijeetDipke", "#TimesOfIndia", "#IndiaToday", "#CJP_Solidarity", "#JharkhandStudents"],
+      fullText: "The Times of India & Media Wire (10 August 2026): CJP founder Abhijeet Dipke issued a central statement standing firmly with student marchers in Ranchi. As BJP targeted CJP over student protest rallies, LoP Rahul Gandhi and student leaders condemned police violence against peaceful aspirants."
+    },
+    {
       id: "news-cjp-jharkhand-talks-deadlock",
       title: "Jharkhand Student Protest: Govt Talks Fail; Devendra Nath Mahto Hunger Strike Day 16",
       category: "google",
