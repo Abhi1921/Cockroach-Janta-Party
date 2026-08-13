@@ -112,7 +112,7 @@ def create_media_poster(filename, title, channel_name, category_tag, pub_date, b
 posters = [
     {
         "filename": "cjp-13aug-jantar-mantar-season2.png",
-        "title": "'Jantar Mantar Season 2 Soon': CJP Alleges BJP Pressure Forces Delhi Meet to Public Park",
+        "title": "'Jantar Mantar Season 2 Soon': CJP Alleges Political Pressure Forces Delhi Meet to Public Park",
         "channel_name": "Telegraph / TOI / The Wire / Deccan Herald / Amar Ujala",
         "category_tag": "JANTAR MANTAR SEASON 2",
         "pub_date": "13 August 2026",
@@ -124,69 +124,56 @@ posters = [
         "start_color": (220, 38, 38), "end_color": (69, 10, 10), "accent_color": (248, 113, 113)
     },
     {
-        "filename": "cjp-13aug-sc-fake-lawyers-plea.png",
-        "title": "SC Seeks Responses from Centre, BCI & CBI on Plea Alleging Fake Lawyers & CJP Activities",
-        "channel_name": "Daily Pioneer / Legal Desk",
-        "category_tag": "SUPREME COURT NOTICE",
+        "filename": "cjp-13aug-jharkhand-day20-protest.png",
+        "title": "Jharkhand JPSC-JSSC Agitation Day 20: Raghubar Das Threatens Hunger Strike; FIR on 300 Marchers",
+        "channel_name": "New Indian Express / Jammu Links / Indian Express / NewsOnAir",
+        "category_tag": "JHARKHAND AGITATION DAY 20",
         "pub_date": "13 August 2026",
         "bullets": [
-            "Supreme Court issues notices to Centre, Bar Council of India, and CBI.",
-            "PIL alleges fraudulent law degrees, fake advocates, and CJP campaign activities.",
-            "CJP legal cell confirms full compliance and defense submission in Apex Court."
+            "Jharkhand student agitation over JPSC-JSSC exam paper leaks enters Day 20 in Ranchi.",
+            "Former CM Raghubar Das threatens hunger strike if CBI probe isn't ordered in a week.",
+            "FIR lodged against 300 marchers following August 10 Vidhan Sabha gates storming."
         ],
-        "start_color": (185, 28, 28), "end_color": (69, 10, 10), "accent_color": (248, 113, 113)
+        "start_color": (217, 119, 6), "end_color": (120, 53, 15), "accent_color": (251, 191, 36)
     },
     {
-        "filename": "cjp-12aug-hyperpolitics-thehindu.png",
-        "title": "The Hindu Feature: Hyperpolitics — CJP Protests & Its Algorithmic Aftermath",
-        "channel_name": "The Hindu · Special Analysis",
-        "category_tag": "THE HINDU HYPERPOLITICS",
-        "pub_date": "12 August 2026",
+        "filename": "cjp-13aug-parliament-sine-die.png",
+        "title": "Parliament Monsoon Session Adjourned Sine Die After Stormy Debates on NEET Paper Leaks",
+        "channel_name": "The Hindu / PTI Wire / Jagran Josh / Straits Times",
+        "category_tag": "MONSOON SESSION SINE DIE",
+        "pub_date": "13 August 2026",
         "bullets": [
-            "The Hindu in-depth analysis on Gen-Z protests and internalised algorithmic rationality.",
-            "Examines how Instagram & YouTube generated a burgeoning corpus of youth political activism.",
-            "Analyzes CJP's shift from digital satire to nationwide grassroots pressure movement."
-        ],
-        "start_color": (3, 105, 161), "end_color": (12, 74, 110), "accent_color": (56, 189, 248)
-    },
-    {
-        "filename": "cjp-11aug-meet-12-members-toi.png",
-        "title": "From IIT Graduate to CA: Meet the 12 Members Leading the Cockroach Janta Party",
-        "channel_name": "The Times of India",
-        "category_tag": "TOI LEADERSHIP FEATURE",
-        "pub_date": "11 August 2026",
-        "bullets": [
-            "Times of India profiles the 12 core leadership members driving CJP.",
-            "Includes engineers, lawyers, two CAs, an entrepreneur, a journalist, and hotel grad.",
-            "Highlights how professional youth background shapes CJP's data-driven advocacy."
+            "Monsoon Session adjourned sine die on 13 August 2026 following intense Opposition protests.",
+            "Government faces persistent demands for NEET leak accountability & exam server log audits.",
+            "Task force created to overhaul national entrance exams and introduce anti-leak bills."
         ],
         "start_color": (109, 40, 217), "end_color": (46, 16, 101), "accent_color": (192, 132, 252)
     },
     {
-        "filename": "cjp-12aug-ndtv-rural-schools.png",
-        "title": "CJP Launches Nationwide Campaign to Improve Village Schools; Asks Parents to Act",
-        "channel_name": "NDTV / India Today",
-        "category_tag": "NDTV & INDIA TODAY WIRE",
-        "pub_date": "12 August 2026",
+        "filename": "cjp-13aug-maharashtra-school-audit.png",
+        "title": "Maharashtra Govt Orders 90-Day 3rd-Party Audit for 553 Aided Ashramshalas Tribal Schools",
+        "channel_name": "Times of India / Business Standard / PTI Wire",
+        "category_tag": "90-DAY SCHOOL AUDIT MANDATE",
+        "pub_date": "13 August 2026",
         "bullets": [
-            "Abhijeet Dipke announces nationwide drive for primary education in rural villages.",
-            "Urges parents to demand basic amenities, toilet facilities, and teacher recruitment.",
-            "'Village children still forced to walk long distances; basic infrastructure missing'."
+            "Maharashtra government mandates 90-day 3rd-party facility audit for 553 aided Ashramshalas.",
+            "Move aligns with CJP 'School Thik Karo' rural government school infrastructure overhaul drive.",
+            "Schools failing basic safety, drinking water, and toilet standards face immediate closure."
         ],
         "start_color": (16, 185, 129), "end_color": (6, 78, 59), "accent_color": (52, 211, 153)
     },
     {
-        "filename": "cjp-20july-reclaim-jantar-mantar-hindu.png",
-        "title": "The Hindu: CJP Delhi Highlights — Dipke & Protesters Reclaim Jantar Mantar Site",
-        "channel_name": "The Hindu · Delhi Highlights",
-        "category_tag": "JANTAR MANTAR RECLAIM",
-        "pub_date": "20 July 2026 (Highlights Archive)",
+        "filename": "cjp-13aug-sc-fake-lawyers-plea.png",
+        "title": "SC Seeks Responses from Centre, BCI & CBI on Plea Alleging Fake Lawyers & CJP Activities",
+        "channel_name": "Daily Pioneer / Supreme Court Desk / TOI",
+        "category_tag": "SUPREME COURT NOTICE",
+        "pub_date": "13 August 2026",
         "bullets": [
-            "The Hindu documents CJP protesters reclaiming dismantled Jantar Mantar protest site.",
-            "Abhijeet Dipke leads peaceful sit-in awaiting central government response to 5 demands.",
-            "Landmark moment establishing CJP's presence at India's iconic protest grounds."
+            "Supreme Court issues notices to Centre, Bar Council of India, and CBI on fake lawyer plea.",
+            "Petition alleges fraudulent law degrees and digital campaign activities surrounding CJP.",
+            "CJP legal cell welcomes judicial scrutiny and confirms submission of complete defense."
         ],
-        "start_color": (217, 119, 6), "end_color": (120, 53, 15), "accent_color": (251, 191, 36)
+        "start_color": (185, 28, 28), "end_color": (69, 10, 10), "accent_color": (248, 113, 113)
     }
 ]
 
@@ -204,4 +191,4 @@ for p in posters:
         is_dev=p.get("is_dev", False)
     )
 
-print("All 6 new 13 August 2026 posters successfully generated!")
+print("All 5 top Google news trend 13 August 2026 posters successfully generated!")

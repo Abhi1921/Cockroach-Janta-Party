@@ -18,63 +18,78 @@
   // Default curated trending news & CJP Victory Posters + Reservation Hatao Movement
   const defaultTrendingNews = [
     {
-      id: "news-cjp-jantar-mantar-2-official",
-      title: "JANTAR MANTAR 2.0 ANNOUNCED: CJP Founder Abhijeet Dipke Launches Season 2 Youth Movement Following Delhi Venue Snub",
-      category: "cjp",
-      source: "The Wire / Telegraph India / TOI / Deccan Herald / Amar Ujala / India.com / ABP Ananda",
+      id: "news-cjp-13aug-jantar-mantar-season2",
+      title: "GOOGLE TRENDING #1: JANTAR MANTAR 2.0 ANNOUNCED — CJP Founder Abhijeet Dipke Launches Season 2 Movement After Delhi Venue Threats",
+      category: "google",
+      source: "Telegraph India / The Wire / TOI / Amar Ujala / ABP News",
       sourceUrl: "https://thewire.in",
       pubDate: "13 August 2026 (Live Breaking News)",
       description: "Official Announcement: Cockroach Janta Party founder Abhijeet Dipke announces 'Jantar Mantar Season 2' youth movement after hall owners in Delhi were threatened ('उल्टा लटकाने की धमकी') to cancel CJP meeting bookings.",
-      image: "assets/img/cjp/cjp-jantar-mantar-2-poster.png",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "🚨 JANTAR MANTAR 2.0 ANNOUNCEMENT",
-      badgeColor: "#dc2626",
-      tags: ["#JantarMantar2", "#JantarMantarSeason2", "#AbhijeetDipke", "#TheWire", "#TelegraphIndia", "#CJP_Swarm"],
-      fullText: "The Wire, Telegraph India, Amar Ujala & TOI (13 August 2026): Cockroach Janta Party (CJP) founder Abhijeet Dipke officially announced 'Jantar Mantar Season 2' following an attempted crackdown on CJP's Delhi volunteer meeting. Dipke revealed hall owners received threats of coercion ('उल्टा लटकाने की धमकी') from ruling party elements. Volunteers assembled in a public park, declaring that Jantar Mantar 2.0 will mobilize millions across 28 states for exam server audits, 100% Meritocracy, and rural education reforms."
-    },
-    {
-      id: "news-cjp-jantar-mantar-season2-charter",
-      title: "Jantar Mantar 2.0 Demand Charter Released: 5 Binding Youth Demands for Exam Audits & Student Rights",
-      category: "cjp",
-      source: "CJP National Working Executive",
-      sourceUrl: "https://cockroachjantapartywale.com/manifesto",
-      pubDate: "13 August 2026 (Official Charter)",
-      description: "CJP National Working Committee releases the 5 binding youth demands for Jantar Mantar 2.0, focusing on cryptographic server audits for NTA/JSSC/JPSC, 'School Thik Karo', and 100% Meritocracy.",
-      image: "assets/img/cjp/cjp-jantar-mantar-season2-full.png",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "📜 SEASON 2 DEMAND CHARTER",
-      badgeColor: "#d97706",
-      tags: ["#JantarMantar2", "#Season2Charter", "#5Demands", "#ExamAudits", "#100PercentMeritocracy"],
-      fullText: "CJP Official Release (13 August 2026): The CJP National Working Executive released the 5 binding demands for the Jantar Mantar 2.0 movement: 1) Mandatory cryptographic log audits for NTA, JSSC & JPSC exam servers, 2) Nationwide 'School Thik Karo' rural school overhaul, 3) 100% Meritocracy & economic scholarships, 4) Immediate dropping of all student protest FIRs across 28 states, and 5) Absolute protection against digital censorship & shadowbans."
-    },
-    {
-      id: "news-cjp-13aug-jantar-mantar-season2",
-      title: "'Jantar Mantar Season 2 Soon': CJP Alleges BJP Pressure Forces Delhi Meet to Park",
-      category: "cjp",
-      source: "Telegraph India / The Wire / TOI / Deccan Herald / Amar Ujala / ABP Ananda",
-      sourceUrl: "https://thewire.in",
-      pubDate: "13 August 2026 (Live Breaking)",
-      description: "CJP founder Abhijeet Dipke alleges political pressure and threats forced Delhi volunteer meeting venue cancellation, announcing 'Jantar Mantar Season 2' youth protest to launch very soon.",
       image: "assets/img/cjp/cjp-13aug-jantar-mantar-season2.png",
       youtubeId: VERIFIED_YT_ID,
-      badge: "🔥 JANTAR MANTAR SEASON 2",
+      badge: "🚨 GOOGLE #1 TRENDING · JANTAR MANTAR 2.0",
       badgeColor: "#dc2626",
-      tags: ["#JantarMantarSeason2", "#TelegraphIndia", "#TheWire", "#AbhijeetDipke", "#CJP_Protest"],
-      fullText: "Telegraph India & The Wire (13 August 2026): Cockroach Janta Party (CJP) founder Abhijeet Dipke alleged political pressure from the ruling party forced hall owners in Delhi to cancel venue bookings for CJP's volunteer meeting. Dipke revealed hall owners were threatened with coercion ('उल्टा लटकाने की धमकी'). The gathering proceeded in a public park, where Dipke officially announced: 'Jantar Mantar Season 2 is starting very soon.'"
+      tags: ["#GoogleTrending1", "#JantarMantar2", "#JantarMantarSeason2", "#AbhijeetDipke", "#TheWire", "#TelegraphIndia", "#CJP_Swarm"],
+      fullText: "Telegraph India, The Wire, Amar Ujala & TOI (13 August 2026): Cockroach Janta Party (CJP) founder Abhijeet Dipke officially announced 'Jantar Mantar Season 2' following an attempted crackdown on CJP's Delhi volunteer meeting. Dipke revealed hall owners received threats of coercion ('उल्टा लटकाने की धमकी') from ruling party elements. Volunteers assembled in a public park, declaring that Jantar Mantar 2.0 will mobilize millions across 28 states for exam server audits, 100% Meritocracy, and rural education reforms."
+    },
+    {
+      id: "news-cjp-13aug-jharkhand-day20-protest",
+      title: "GOOGLE TRENDING #2: Jharkhand Agitation Day 20 — Raghubar Das Threatens Hunger Strike; FIR Booked on 300 Marchers",
+      category: "google",
+      source: "The New Indian Express / Jammu Links / Indian Express / NewsOnAir",
+      sourceUrl: "https://www.newindianexpress.com",
+      pubDate: "13 August 2026 (Day 20 Live Update)",
+      description: "Jharkhand student agitation over JPSC-JSSC exam paper leaks enters Day 20 in Ranchi. Former CM Raghubar Das threatens hunger strike if CBI probe isn't ordered in a week; FIR registered against 300 assembly marchers.",
+      image: "assets/img/cjp/cjp-13aug-jharkhand-day20-protest.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "⚡ GOOGLE #2 TRENDING · JHARKHAND DAY 20",
+      badgeColor: "#d97706",
+      tags: ["#GoogleTrending2", "#JharkhandProtestDay20", "#RaghubarDas", "#JPSC_JSSC", "#CBIProbe", "#CJP_Solidarity"],
+      fullText: "The New Indian Express & NewsOnAir (13 August 2026): The student agitation in Ranchi over JPSC-JSSC exam paper leaks reached its 20th day. Former Jharkhand Chief Minister Raghubar Das issued a 7-day ultimatum to the state government threatening an indefinite hunger strike unless a CBI probe is ordered. Police registered FIRs against 300 unidentified job aspirants following the August 10 Vidhan Sabha gates storming."
+    },
+    {
+      id: "news-cjp-13aug-parliament-sine-die",
+      title: "GOOGLE TRENDING #3: Parliament Monsoon Session Adjourned Sine Die Following Stormy Debates on NEET Leaks & Audit Task Force",
+      category: "google",
+      source: "The Hindu / PTI Wire / Jagran Josh / Straits Times",
+      sourceUrl: "https://www.thehindu.com",
+      pubDate: "13 August 2026 (Parliament Sine Die)",
+      description: "Monsoon Session of Parliament adjourned sine die on 13 August 2026 following intense Opposition disruptions demanding NEET paper leak accountability, exam server log audits, and minister resignation.",
+      image: "assets/img/cjp/cjp-13aug-parliament-sine-die.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "🏛️ GOOGLE #3 TRENDING · MONSOON SESSION",
+      badgeColor: "#7c3aed",
+      tags: ["#GoogleTrending3", "#MonsoonSessionSineDie", "#ParliamentAdjourned", "#NEETLeaks", "#ExamAuditTaskForce", "#TheHindu"],
+      fullText: "The Hindu & PTI (13 August 2026): The Monsoon Session of the Indian Parliament was officially adjourned sine die on August 13, 2026. The session witnessed widespread disruptions as Opposition MPs pressed the government for accountability over national examination paper leaks. The government introduced measures to penalize exam malpractices and set up a task force to overhaul national entrance test server security."
+    },
+    {
+      id: "news-cjp-13aug-maharashtra-school-audit",
+      title: "GOOGLE TRENDING #4: Maharashtra Govt Mandates 90-Day 3rd-Party Infrastructure Audit for 553 Aided Tribal Ashramshalas",
+      category: "google",
+      source: "Times of India / Business Standard / PTI Wire",
+      sourceUrl: "https://timesofindia.indiatimes.com",
+      pubDate: "13 August 2026 (Govt Gazette Audit)",
+      description: "Maharashtra government sets 90-day deadline for third-party infrastructure and facility audits across 553 aided Ashramshalas (tribal primary schools), echoing CJP 'School Thik Karo' campaign for basic educational amenities.",
+      image: "assets/img/cjp/cjp-13aug-maharashtra-school-audit.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📜 GOOGLE #4 TRENDING · 90-DAY SCHOOL AUDIT",
+      badgeColor: "#10b981",
+      tags: ["#GoogleTrending4", "#MaharashtraSchoolAudit", "#Ashramshalas", "#SchoolThikKaro", "#TimesOfIndia", "#TribalEducation"],
+      fullText: "Times of India & Business Standard (13 August 2026): In a major policy directive matching CJP's 'School Thik Karo' rural school overhaul push, the Maharashtra government issued a 90-day deadline for independent 3rd-party audits of 553 aided Ashramshalas. Schools failing to meet basic facility, drinking water, and safety standards face immediate closure."
     },
     {
       id: "news-cjp-13aug-sc-fake-lawyers-plea",
-      title: "SC Seeks Responses from Centre, BCI & CBI on Plea Alleging Fake Lawyers & 'Cockroach Janta Party'",
+      title: "GOOGLE TRENDING #5: Supreme Court Seeks Responses from Centre, BCI & CBI on Plea Alleging Fake Lawyers & CJP Movement",
       category: "google",
-      source: "Daily Pioneer / Supreme Court Desk",
+      source: "Daily Pioneer / Supreme Court Desk / Deccan Herald",
       sourceUrl: "https://www.dailypioneer.com",
       pubDate: "13 August 2026 (SC Notice)",
-      description: "Supreme Court issues notices to Centre, Bar Council of India (BCI), and CBI on a plea alleging fake advocates, fraudulent law degrees, and CJP campaign activities.",
+      description: "Supreme Court issues notices to Centre, Bar Council of India (BCI), and CBI on a petition raising allegations regarding fake advocates, fraudulent law degrees, and CJP campaign activities.",
       image: "assets/img/cjp/cjp-13aug-sc-fake-lawyers-plea.png",
       youtubeId: VERIFIED_YT_ID,
-      badge: "🏛️ SUPREME COURT NOTICE",
-      badgeColor: "#dc2626",
-      tags: ["#SupremeCourt", "#DailyPioneer", "#FakeLawyersPlea", "#BCI", "#CJP_Legal"],
+      badge: "⚖️ GOOGLE #5 TRENDING · SC NOTICE ON CJP",
+      badgeColor: "#0284c7",
+      tags: ["#GoogleTrending5", "#SupremeCourt", "#DailyPioneer", "#FakeLawyersPlea", "#BCI", "#CJP_Legal"],
       fullText: "Daily Pioneer (13 August 2026): The Supreme Court sought responses from the Union Government, Bar Council of India (BCI), and Central Bureau of Investigation (CBI) on a petition raising allegations regarding fake advocates, fraudulent law degrees, and activities surrounding Cockroach Janta Party. CJP legal wing stated it welcomes judicial scrutiny and will file a detailed compliance response."
     },
     {
@@ -2115,6 +2130,12 @@
     const container = document.getElementById("google-news-grid");
     if (!container) return;
 
+    const isIndexPage = document.body.getAttribute('data-page') === 'index' || 
+                        window.location.pathname.endsWith('/') || 
+                        window.location.pathname.endsWith('/index') || 
+                        window.location.pathname.endsWith('/index.html') ||
+                        (!window.location.pathname.includes('articles') && !window.location.pathname.includes('rha'));
+
     let filtered = currentNewsItems.filter((item) => {
       const matchesCat = activeCategory === "all" || item.category === activeCategory;
       const q = searchQuery.toLowerCase().trim();
@@ -2138,7 +2159,9 @@
       return;
     }
 
-    container.innerHTML = filtered.map((item, idx) => {
+    const itemsToRender = isIndexPage ? filtered.slice(0, 5) : filtered;
+
+    let cardsHtml = itemsToRender.map((item, idx) => {
       const isColumn3 = (idx + 1) % 3 === 0;
 
       const mediaHtml = isColumn3
@@ -2203,6 +2226,27 @@
         </article>
       `;
     }).join('');
+
+    if (isIndexPage && filtered.length > 5) {
+      cardsHtml += `
+        <div style="grid-column: 1 / -1; margin-top: 1.5rem; padding: 1.75rem; background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%); border: 2.5px solid #38bdf8; border-radius: 20px; text-align: center; color: #ffffff; box-shadow: 0 16px 40px rgba(3, 105, 161, 0.25);">
+          <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(56, 189, 248, 0.2); border: 1px solid #38bdf8; color: #7dd3fc; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; padding: 0.25rem 0.75rem; border-radius: 999px; text-transform: uppercase; margin-bottom: 0.6rem;">
+            📌 INDEX PREVIEW · TOP 5 NEWS SHOWN
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: clamp(1.3rem, 3.5vw, 1.8rem); margin: 0 0 0.5rem; color: #ffffff;">
+            Sari News &amp; Articles Dekhne Ke Liye News Tab Par Jayein!
+          </h3>
+          <p style="font-size: 0.95rem; color: rgba(255,255,255,0.85); margin: 0 0 1.25rem; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.5;">
+            Index page par sirf top 5 aaj ki breaking news show ki gayi hain. Baaki sabhi 50+ live news updates, CJP victory bulletins, posters aur media desk articles news tab (articles.html) me dekhein.
+          </p>
+          <a href="articles.html#google-news-section" class="btn btn-solid" style="background: #0284c7; border-color: #38bdf8; padding: 0.8rem 2rem; font-size: 0.95rem; font-weight: 800; border-radius: 999px; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #ffffff; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+            📰 View All News &amp; Movement Articles in News Tab (${filtered.length}+ Items) →
+          </a>
+        </div>
+      `;
+    }
+
+    container.innerHTML = cardsHtml;
 
     document.querySelectorAll(".read-news-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -2431,22 +2475,10 @@
     const section = document.getElementById("google-news-section");
     if (!section) return;
 
-    // Filter bar & Search bar & Permanent Trigger for CJP Victory Popup
+    // Filter bar & Search bar
     const filterContainer = document.getElementById("news-filter-tabs");
     if (filterContainer) {
       filterContainer.innerHTML = `
-        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #0284c7; border-radius: 14px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; box-shadow: 0 6px 20px rgba(2, 132, 199, 0.15);">
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="width: 10px; height: 10px; background: #0284c7; border-radius: 50%; display: inline-block; animation: pulse 1.2s ease infinite;"></span>
-            <strong style="font-family: var(--font-display); font-size: 0.95rem; color: #0369a1;">
-              📌 4 AUG UPDATE: CJP Founder Abhijeet Dipke Releases National Reform Poster &amp; Supreme Court Status!
-            </strong>
-          </div>
-          <button type="button" id="triggerBreakingPopupBtn" class="btn btn-solid" style="padding: 0.4rem 0.9rem; font-size: 0.78rem; background: #0284c7; border-color: #0284c7; white-space: nowrap;">
-            📢 Open 4 August News Popup →
-          </button>
-        </div>
-
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; justify-content: space-between;">
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="catTabButtons">
             <button type="button" class="btn btn-solid cat-btn active" data-cat="all">🏆 All Victory Posters &amp; News</button>
@@ -2483,12 +2515,6 @@
 
     renderNewsGrid();
     fetchLiveGoogleNews();
-
-    // Auto trigger 4 August CJP Status & A to Z Popup on index page load (once per session)
-    if (!sessionStorage.getItem("cjp_4aug_popup_shown_v4")) {
-      sessionStorage.setItem("cjp_4aug_popup_shown_v4", "true");
-      setTimeout(openCJPVictoryPopup, 800);
-    }
   };
 
   if (document.readyState === "loading") {

@@ -34,16 +34,16 @@
 
   // Complete 10 primary navbar links with mobile icons
   const nav = [
-    ["vision", "Vision", "👁️"],
-    ["manifesto", "5 Demands", "📜"],
-    ["articles", "Media", "📰"],
-    ["protests", "Actions", "✊"],
-    ["rha", "RHA Movement", "✊"],
-    ["tracker", "Tracker", "📊"],
-    ["members", "Members", "👥"],
-    ["gallery", "Gallery", "🖼️"],
-    ["join", "Join Us", "💳"],
-    ["contact", "Contact", "📩"],
+    ["vision.html", "Vision", "👁️"],
+    ["manifesto.html", "5 Demands", "📜"],
+    ["articles.html", "Media", "📰"],
+    ["protests.html", "Actions", "✊"],
+    ["rha.html", "RHA Movement", "✊"],
+    ["tracker.html", "Tracker", "📊"],
+    ["members.html", "Members", "👥"],
+    ["gallery.html", "Gallery", "framed_picture"],
+    ["join.html", "Join Us", "💳"],
+    ["contact.html", "Contact", "📩"],
   ];
 
   const active = (file) => (page === file.replace(".html", "").replace(/^\//, "") ? " is-active" : "");
@@ -101,85 +101,86 @@
         <ul class="mobile-nav-list" style="display: flex; align-items: center; gap: 1.1rem; list-style: none; margin: 0; padding: 0;">
           <!-- Dropdown 1: CJP Hub -->
           <li class="cjp-mega-nav-item">
-            <a href="vision" class="${(active('vision') || active('index')).trim()}">
+            <a href="vision.html" class="${(active('vision') || active('index')).trim()}">
               <span class="nav-icon">⚡</span><span class="nav-label">CJP Hub ▾</span>
             </a>
             <div class="cjp-mega-dropdown">
               <a href="/" class="cjp-mega-dropdown-link">🏠 Home Hub <span class="cjp-mega-dropdown-badge" style="background:#e0f2fe;color:#0369a1">Main</span></a>
-              <a href="vision" class="cjp-mega-dropdown-link">👁️ Vision &amp; Ideology</a>
-              <a href="manifesto" class="cjp-mega-dropdown-link">📜 5 Non-Negotiable Demands <span class="cjp-mega-dropdown-badge" style="background:#dcfce7;color:#15803d">Enacted</span></a>
-              <a href="members" class="cjp-mega-dropdown-link">👥 Members (30M+)</a>
-              <a href="revolutionaries" class="cjp-mega-dropdown-link">🔥 Revolutionaries &amp; Founders</a>
-              <a href="tracker" class="cjp-mega-dropdown-link">📊 Movement Tracker</a>
-              <a href="contact" class="cjp-mega-dropdown-link">📩 Press &amp; Contact Bureau</a>
+              <a href="cockroach-janta-party-wale.html" class="cjp-mega-dropdown-link">🪳 Cockroach Janta Party Wale <span class="cjp-mega-dropdown-badge" style="background:#fef3c7;color:#92400e">Official</span></a>
+              <a href="vision.html" class="cjp-mega-dropdown-link">👁️ Vision &amp; Ideology</a>
+              <a href="manifesto.html" class="cjp-mega-dropdown-link">📜 5 Non-Negotiable Demands <span class="cjp-mega-dropdown-badge" style="background:#dcfce7;color:#15803d">Enacted</span></a>
+              <a href="members.html" class="cjp-mega-dropdown-link">👥 Members (30M+)</a>
+              <a href="revolutionaries.html" class="cjp-mega-dropdown-link">🔥 Revolutionaries &amp; Founders</a>
+              <a href="tracker.html" class="cjp-mega-dropdown-link">📊 Movement Tracker</a>
+              <a href="contact.html" class="cjp-mega-dropdown-link">📩 Press &amp; Contact Bureau</a>
             </div>
           </li>
 
           <!-- Dropdown 2: RHM Movement (Reservation Hatao) -->
           <li class="cjp-mega-nav-item">
-            <a href="rha" class="${active('rha').trim()}" style="color: #dc2626; font-weight: 800;">
+            <a href="rha.html" class="${active('rha').trim()}" style="color: #dc2626; font-weight: 800;">
               <span class="nav-icon">✊</span><span class="nav-label">RHM Movement ▾</span>
             </a>
             <div class="cjp-mega-dropdown" style="border-color: #dc2626;">
-              <a href="rha" class="cjp-mega-dropdown-link">✊ RHM Main Portal <span class="cjp-mega-dropdown-badge" style="background:#fee2e2;color:#dc2626">100% Merit</span></a>
-              <a href="manifesto" class="cjp-mega-dropdown-link">💯 100% Meritocracy Charter</a>
-              <a href="protests#sc-notice-pil" class="cjp-mega-dropdown-link">⚖️ Supreme Court PIL Notice</a>
-              <a href="protests#aarakshan-hatao-rally" class="cjp-mega-dropdown-link">📢 28-State Student Rally Timeline</a>
-              <a href="rha#electoral-reforms" class="cjp-mega-dropdown-link">🚫 Anti-Defection 20-Year Ban</a>
-              <a href="rha#economic-aid" class="cjp-mega-dropdown-link">🎓 Economic Need Scholarships</a>
+              <a href="rha.html" class="cjp-mega-dropdown-link">✊ RHM Main Portal <span class="cjp-mega-dropdown-badge" style="background:#fee2e2;color:#dc2626">100% Merit</span></a>
+              <a href="manifesto.html" class="cjp-mega-dropdown-link">💯 100% Meritocracy Charter</a>
+              <a href="protests.html#sc-notice-pil" class="cjp-mega-dropdown-link">⚖️ Supreme Court PIL Notice</a>
+              <a href="protests.html#aarakshan-hatao-rally" class="cjp-mega-dropdown-link">📢 28-State Student Rally Timeline</a>
+              <a href="rha.html#electoral-reforms" class="cjp-mega-dropdown-link">🚫 Anti-Defection 20-Year Ban</a>
+              <a href="rha.html#economic-aid" class="cjp-mega-dropdown-link">🎓 Economic Need Scholarships</a>
             </div>
           </li>
 
           <!-- Dropdown 3: Jharkhand Agitation Hub -->
           <li class="cjp-mega-nav-item">
-            <a href="protests#jharkhand-protest-8aug" class="${active('protests').trim()}" style="color: #dc2626; font-weight: 800;">
+            <a href="protests.html#jharkhand-protest-8aug" class="${active('protests').trim()}" style="color: #dc2626; font-weight: 800;">
               <span class="nav-icon">🚨</span><span class="nav-label">Jharkhand Protests ▾</span>
             </a>
             <div class="cjp-mega-dropdown" style="border-color: #dc2626;">
-              <a href="protests#jharkhand-protest-8aug" class="cjp-mega-dropdown-link">🔥 8 Aug Assembly Siege (Day 4 &amp; Bandh) <span class="cjp-mega-dropdown-badge" style="background:#fee2e2;color:#dc2626">Live</span></a>
-              <a href="protests#jharkhand-protest-7aug" class="cjp-mega-dropdown-link">✊ 7 Aug Stadium Hunger Strike (Day 3)</a>
-              <a href="protests#jharkhand-protest-6aug" class="cjp-mega-dropdown-link">🏛️ 6 Aug Assembly Opening &amp; CBI Probe</a>
-              <a href="protests#jharkhand-protest-5aug" class="cjp-mega-dropdown-link"> Morabadi Ground Mega Swarm (50k+)</a>
-              <a href="issues#jssc-audit" class="cjp-mega-dropdown-link">📋 JSSC &amp; JPSC Digital Audit Charter</a>
+              <a href="protests.html#jharkhand-protest-8aug" class="cjp-mega-dropdown-link">🔥 8 Aug Assembly Siege (Day 4 &amp; Bandh) <span class="cjp-mega-dropdown-badge" style="background:#fee2e2;color:#dc2626">Live</span></a>
+              <a href="protests.html#jharkhand-protest-7aug" class="cjp-mega-dropdown-link">✊ 7 Aug Stadium Hunger Strike (Day 3)</a>
+              <a href="protests.html#jharkhand-protest-6aug" class="cjp-mega-dropdown-link">🏛️ 6 Aug Assembly Opening &amp; CBI Probe</a>
+              <a href="protests.html#jharkhand-protest-5aug" class="cjp-mega-dropdown-link"> Morabadi Ground Mega Swarm (50k+)</a>
+              <a href="issues.html#jssc-audit" class="cjp-mega-dropdown-link">📋 JSSC &amp; JPSC Digital Audit Charter</a>
             </div>
           </li>
 
           <!-- Dropdown 4: News & Media Hub (3 Tabs) -->
           <li class="cjp-mega-nav-item">
-            <a href="articles" class="${active('articles').trim()}">
+            <a href="articles.html" class="${active('articles').trim()}">
               <span class="nav-icon">📰</span><span class="nav-label">News Desk (3 Tabs) ▾</span>
             </a>
             <div class="cjp-mega-dropdown" style="border-color: #0284c7;">
-              <a href="articles#all-news-tab" class="cjp-mega-dropdown-link">🌐 Tab 1: All News / Live Wire <span class="cjp-mega-dropdown-badge" style="background:#e0f2fe;color:#0369a1">Wire</span></a>
-              <a href="articles#cjp-bulletins-tab" class="cjp-mega-dropdown-link">📌 Tab 2: CJP Official Bulletins &amp; Posters</a>
-              <a href="articles#media-coverage-tab" class="cjp-mega-dropdown-link">📺 Tab 3: Google &amp; Live Media Desk (BBC/AJ+)</a>
-              <a href="donate#assam-flood-relief" class="cjp-mega-dropdown-link">🌧️ Assam Flood Relief Drive</a>
+              <a href="articles.html#all-news-tab" class="cjp-mega-dropdown-link">🌐 Tab 1: All News / Live Wire <span class="cjp-mega-dropdown-badge" style="background:#e0f2fe;color:#0369a1">Wire</span></a>
+              <a href="articles.html#cjp-bulletins-tab" class="cjp-mega-dropdown-link">📌 Tab 2: CJP Official Bulletins &amp; Posters</a>
+              <a href="articles.html#media-coverage-tab" class="cjp-mega-dropdown-link">📺 Tab 3: Google &amp; Live Media Desk (BBC/AJ+)</a>
+              <a href="donate.html#assam-flood-relief" class="cjp-mega-dropdown-link">🌧️ Assam Flood Relief Drive</a>
             </div>
           </li>
 
           <!-- Dropdown 5: Visual Gallery -->
           <li class="cjp-mega-nav-item">
-            <a href="gallery" class="${active('gallery').trim()}">
+            <a href="gallery.html" class="${active('gallery').trim()}">
               <span class="nav-icon">🖼️</span><span class="nav-label">Posters Gallery ▾</span>
             </a>
             <div class="cjp-mega-dropdown" style="border-color: #16a34a;">
-              <a href="gallery" class="cjp-mega-dropdown-link">🖼️ Gallery Home (37+ Assets)</a>
-              <a href="gallery#8aug-posters" class="cjp-mega-dropdown-link">✊ 8 Aug Assembly Siege Posters</a>
-              <a href="gallery#7aug-posters" class="cjp-mega-dropdown-link">📌 7 Aug National Reform Posters</a>
-              <a href="gallery#rhm-posters" class="cjp-mega-dropdown-link">💯 RHM Meritocracy Posters</a>
-              <a href="gallery#assam-art" class="cjp-mega-dropdown-link">🌧️ Assam Flood Relief Art</a>
+              <a href="gallery.html" class="cjp-mega-dropdown-link">🖼️ Gallery Home (37+ Assets)</a>
+              <a href="gallery.html#8aug-posters" class="cjp-mega-dropdown-link">✊ 8 Aug Assembly Siege Posters</a>
+              <a href="gallery.html#7aug-posters" class="cjp-mega-dropdown-link">📌 7 Aug National Reform Posters</a>
+              <a href="gallery.html#rhm-posters" class="cjp-mega-dropdown-link">💯 RHM Meritocracy Posters</a>
+              <a href="gallery.html#assam-art" class="cjp-mega-dropdown-link">🌧️ Assam Flood Relief Art</a>
             </div>
           </li>
 
           <li>
-            <a href="join" class="${active('join').trim()}" style="color: #16a34a; font-weight: 800;">
+            <a href="join.html" class="${active('join').trim()}" style="color: #16a34a; font-weight: 800;">
               <span class="nav-icon">💳</span><span class="nav-label">Digital ID</span>
             </a>
           </li>
         </ul>
         <div class="mobile-nav-actions">
-          <a href="join" class="btn btn-solid btn-wide mobile-cta-join">✊ Join Swarm Free →</a>
-          <a href="donate" class="btn btn-ghost btn-wide mobile-cta-donate">💚 Support Developer</a>
+          <a href="join.html" class="btn btn-solid btn-wide mobile-cta-join">✊ Join Swarm Free →</a>
+          <a href="donate.html" class="btn btn-ghost btn-wide mobile-cta-donate">💚 Support Developer</a>
         </div>
       </nav>
       <div class="nav-actions header-actions">
@@ -192,8 +193,8 @@
             <button type="button" class="lang-opt" role="option" data-lang="hi" aria-selected="false">🇮🇳 हिन्दी</button>
           </div>
         </div>
-        <a href="donate" class="btn btn-ghost${active("donate")}">Support site</a>
-        <a href="join" class="btn-pill">Join the Party</a>
+        <a href="donate.html" class="btn btn-ghost${active("donate")}">Support site</a>
+        <a href="join.html" class="btn-pill">Join the Party</a>
       </div>
     </div>
   </header>
@@ -202,12 +203,12 @@
   <div class="cjp-sub-navbar-bar">
     <div class="cjp-sub-navbar-inner">
       <a href="/" class="cjp-sub-nav-chip ${active('index')}">⚡ CJP Main Hub</a>
-      <a href="rha" class="cjp-sub-nav-chip ${active('rha')}" style="background: rgba(220,38,38,0.2); border-color: #dc2626; color: #fca5a5;">✊ RHM Movement (100% Merit)</a>
-      <a href="protests#jharkhand-protest-8aug" class="cjp-sub-nav-chip" style="background: rgba(220,38,38,0.25); border-color: #dc2626; color: #fee2e2;">🚨 Jharkhand Assembly Siege (8 Aug)</a>
-      <a href="articles" class="cjp-sub-nav-chip ${active('articles')}">📰 News Desk (3 Tabs)</a>
-      <a href="donate#assam-flood-relief" class="cjp-sub-nav-chip" style="background: rgba(2,132,199,0.2); border-color: #0284c7; color: #bae6fd;">🌧️ Assam Relief Drive</a>
-      <a href="gallery" class="cjp-sub-nav-chip ${active('gallery')}">🖼️ Visual Posters Gallery</a>
-      <a href="join" class="cjp-sub-nav-chip ${active('join')}" style="background: rgba(22,163,74,0.2); border-color: #16a34a; color: #86efac;">💳 Digital ID Card</a>
+      <a href="rha.html" class="cjp-sub-nav-chip ${active('rha')}" style="background: rgba(220,38,38,0.2); border-color: #dc2626; color: #fca5a5;">✊ RHM Movement (100% Merit)</a>
+      <a href="protests.html#jharkhand-protest-8aug" class="cjp-sub-nav-chip" style="background: rgba(220,38,38,0.25); border-color: #dc2626; color: #fee2e2;">🚨 Jharkhand Assembly Siege (8 Aug)</a>
+      <a href="articles.html" class="cjp-sub-nav-chip ${active('articles')}">📰 News Desk (3 Tabs)</a>
+      <a href="donate.html#assam-flood-relief" class="cjp-sub-nav-chip" style="background: rgba(2,132,199,0.2); border-color: #0284c7; color: #bae6fd;">🌧️ Assam Relief Drive</a>
+      <a href="gallery.html" class="cjp-sub-nav-chip ${active('gallery')}">🖼️ Visual Posters Gallery</a>
+      <a href="join.html" class="cjp-sub-nav-chip ${active('join')}" style="background: rgba(22,163,74,0.2); border-color: #16a34a; color: #86efac;">💳 Digital ID Card</a>
     </div>
   </div>
 
@@ -218,7 +219,7 @@
         <span class="exam-banner-badge">Released 15 July 2026</span>
         <span class="exam-banner-title">5 Demands to End India's Exam Crisis</span>
       </div>
-      <a class="btn-primary" style="flex-shrink:0" href="manifesto">Read the Charter →</a>
+      <a class="btn-primary" style="flex-shrink:0" href="manifesto.html">Read the Charter →</a>
     </div>
   </div>`;
 
@@ -240,7 +241,7 @@
           <li><strong>No tax deduction / 80G</strong> — please treat it as a personal tip</li>
         </ul>
         <p class="support-fine">
-          Read the fine print: <a href="donate">Support page</a> · <a href="terms#payment-policy">Payment policy</a>
+          Read the fine print: <a href="donate.html">Support page</a> · <a href="terms.html#payment-policy">Payment policy</a>
         </p>
       </div>
       <div class="support-qr-card">
@@ -277,7 +278,7 @@
             <p class="form-success payment-alert-msg" hidden style="font-size: 0.75rem; color: var(--green); margin-top: 0.3rem; text-align: center; font-weight: 700;"></p>
           </form>
         </div>
-        <a href="donate" class="btn btn-ghost" style="width:100%;margin-top:0.75rem;font-size:0.8rem;">Full details &amp; policy →</a>
+        <a href="donate.html" class="btn btn-ghost" style="width:100%;margin-top:0.75rem;font-size:0.8rem;">Full details &amp; policy →</a>
       </div>
     </div>
   </section>`;
@@ -344,36 +345,36 @@
       <div class="footer-cols">
         <div>
           <h4>The Manifesto</h4>
-          <a href="manifesto">The Manifesto</a>
-          <a href="articles">Articles</a>
-          <a href="gallery">Gallery</a>
-          <a href="tracker">Tracker</a>
-          <a href="protests">Protests</a>
+          <a href="manifesto.html">The Manifesto</a>
+          <a href="articles.html">Articles</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="tracker.html">Tracker</a>
+          <a href="protests.html">Protests</a>
         </div>
         <div>
           <h4>Issues</h4>
-          <a href="issues">Issues</a>
-          <a href="manifesto">Manifesto</a>
-          <a href="articles">News</a>
-          <a href="vision#quotes">Quotes</a>
+          <a href="issues.html">Issues</a>
+          <a href="manifesto.html">Manifesto</a>
+          <a href="articles.html">News</a>
+          <a href="vision.html#quotes">Quotes</a>
         </div>
         <div>
           <h4>Support the Developer</h4>
-          <a href="donate">Support the Developer</a>
-          <a href="members">Members</a>
-          <a href="join">Get your card</a>
-          <a href="raise-issue">Raise your voice</a>
-          <a href="join">Volunteer</a>
+          <a href="donate.html">Support the Developer</a>
+          <a href="members.html">Members</a>
+          <a href="join.html">Get your card</a>
+          <a href="raise-issue.html">Raise your voice</a>
+          <a href="join.html">Volunteer</a>
         </div>
         <div>
           <h4>Legal</h4>
-          <a href="privacy">Privacy Policy</a>
-          <a href="terms">Terms of Use</a>
-          <a href="privacy#adsense">Cookie Policy</a>
-          <a href="terms#editorial">Editorial Policy</a>
-          <a href="terms#satire">Disclaimer</a>
-          <a href="vision">About</a>
-          <a href="articles#press-kit">Press Kit</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="privacy.html#adsense">Cookie Policy</a>
+          <a href="terms.html#editorial">Editorial Policy</a>
+          <a href="terms.html#satire">Disclaimer</a>
+          <a href="vision.html">About</a>
+          <a href="articles.html#press-kit">Press Kit</a>
         </div>
       </div>
     </div>
@@ -386,14 +387,15 @@
           🔥 GOOGLE TRENDING SEARCHES &amp; QUICK LINKS:
         </span>
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.78rem;">
-          <a href="protests#jharkhand-protest-6aug" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🔥 Jharkhand Protest 6 Aug</a>
-          <a href="issues" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">⚖️ JSSC &amp; JPSC Server Audit</a>
-          <a href="protests#jharkhand-protest-6aug" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🏟️ Jaipal Singh Munda Stadium Strike</a>
-          <a href="manifesto" style="color: #bae6fd; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(2,132,199,0.2); border-radius: 6px; border: 1px solid #0284c7;">🏆 100% Meritocracy Act</a>
-          <a href="protests#4aug-sc-compliance" style="color: #c084fc; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(147,51,234,0.2); border-radius: 6px; border: 1px solid #9333ea;">📜 SC Student FIR Drop Directive</a>
-          <a href="donate#assam-flood-relief" style="color: #7dd3fc; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(3,105,161,0.2); border-radius: 6px; border: 1px solid #0369a1;">🌧️ Assam Flood Relief Drive</a>
-          <a href="vision" style="color: #fde047; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(234,179,8,0.2); border-radius: 6px; border: 1px solid #ca8a04;">👤 Founder Abhijeet Dipke</a>
-          <a href="join" style="color: #fca5a5; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(220,38,38,0.2); border-radius: 6px; border: 1px solid #dc2626;">💳 Free CJP Digital ID Card</a>
+          <a href="cockroach-janta-party-wale.html" style="color: #fef08a; text-decoration: underline; font-weight: 800; padding: 0.2rem 0.55rem; background: rgba(220,38,38,0.25); border-radius: 6px; border: 1px solid #dc2626;">🪳 Cockroach Janta Party Wale</a>
+          <a href="protests.html#jharkhand-protest-6aug" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🔥 Jharkhand Protest 6 Aug</a>
+          <a href="issues.html" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">⚖️ JSSC &amp; JPSC Server Audit</a>
+          <a href="protests.html#jharkhand-protest-6aug" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🏟️ Jaipal Singh Munda Stadium Strike</a>
+          <a href="manifesto.html" style="color: #bae6fd; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(2,132,199,0.2); border-radius: 6px; border: 1px solid #0284c7;">🏆 100% Meritocracy Act</a>
+          <a href="protests.html#4aug-sc-compliance" style="color: #c084fc; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(147,51,234,0.2); border-radius: 6px; border: 1px solid #9333ea;">📜 SC Student FIR Drop Directive</a>
+          <a href="donate.html#assam-flood-relief" style="color: #7dd3fc; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(3,105,161,0.2); border-radius: 6px; border: 1px solid #0369a1;">🌧️ Assam Flood Relief Drive</a>
+          <a href="vision.html" style="color: #fde047; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(234,179,8,0.2); border-radius: 6px; border: 1px solid #ca8a04;">👤 Founder Abhijeet Dipke</a>
+          <a href="join.html" style="color: #fca5a5; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(220,38,38,0.2); border-radius: 6px; border: 1px solid #dc2626;">💳 Free CJP Digital ID Card</a>
           <a href="https://open.spotify.com/search/Cockroach%20Janta%20Party" target="_blank" rel="noopener" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🎵 CJP Spotify Hip-Hop Anthem</a>
         </div>
       </div>
@@ -757,7 +759,7 @@
           Join India's 28-state student movement demanding 100% Merit-Based entrance exams (NEET, JEE, UPSC, SSC) and economic need-based financial aid.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <a href="rha" class="btn btn-solid" style="flex: 1; text-align: center; background: #dc2626; border-color: #dc2626; color: #fff;">✊ Explore RHA Portal</a>
+          <a href="rha.html" class="btn btn-solid" style="flex: 1; text-align: center; background: #dc2626; border-color: #dc2626; color: #fff;">✊ Explore RHA Portal</a>
           <a href="assets/img/cjp/cjp-aarakshan-hatao-poster.png" target="_blank" download class="btn btn-ghost" style="flex: 1; text-align: center;">📥 Download RHA Poster</a>
         </div>
       </div>
