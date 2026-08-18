@@ -16,6 +16,10 @@
 /terms.html                     /terms                          301!
 /privacy.html                   /privacy                        301!
 /rha.html                       /rha                            301!
+/cockroach-janta-party-wale.html /cockroach-janta-party-wale   301!
+/cjp.html                       /cjp                            301!
+/cockroach-janta-party.html     /cockroach-janta-party          301!
+/cocroach-janata-party.html     /cocroach-janata-party          301!
 
 # Internal rewrite rules to map clean URLs back to HTML files
 /vision                         /vision.html                    200
@@ -34,3 +38,8 @@
 /terms                          /terms.html                     200
 /privacy                        /privacy.html                   200
 /rha                            /rha.html                       200
+/cockroach-janta-party-wale     /cockroach-janta-party-wale.html 200
+/cjp                            /cjp.html                       200
+/cockroach-janta-party          /cockroach-janta-party.html     200
+/cocroach-janata-party          /cocroach-janata-party.html     200
+

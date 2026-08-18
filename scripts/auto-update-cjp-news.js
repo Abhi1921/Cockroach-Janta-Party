@@ -43,4 +43,21 @@ if (fs.existsSync(sitemapPath)) {
   console.log('  └─ ✅ sitemap.xml lastmod dates updated');
 }
 
-console.log('[Auto-Update] Content sync completed successfully!');
+// 4. Cache bust assets in HTML files
+const vStamp = now.toISOString().replace(/[-T:]/g, '').slice(0, 8) + '_' + String(now.getHours()).padStart(2, '0') + String(now.getMinutes()).padStart(2, '0');
+const htmlFiles = fs.readdirSync(rootDir).filter(f => f.endsWith('.html'));
+htmlFiles.forEach(hf => {
+  const hp = path.join(rootDir, hf);
+  let hContent = fs.readFileSync(hp, 'utf8');
+  hContent = hContent.replace(/\?v=\d{8}_\d{4}/g, `?v=${vStamp}`);
+  fs.writeFileSync(hp, hContent, 'utf8');
+});
+console.log(`  └─ ✅ Asset cache version bumped to ?v=${vStamp} across all HTML files`);
+
+// 5. Sync index.html to alias landing pages
+const { syncPages } = require('./sync-index-pages');
+console.log('🔄 Syncing index.html to alias landing pages...');
+syncPages();
+
+console.log('[Auto-Update] Content & cache-clear sync completed successfully!');
+

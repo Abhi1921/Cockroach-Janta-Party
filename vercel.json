@@ -40,6 +40,11 @@
     { "source": "/revolutionaries", "destination": "/revolutionaries.html" },
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/rha", "destination": "/rha.html" }
+    { "source": "/rha", "destination": "/rha.html" },
+    { "source": "/cockroach-janta-party-wale", "destination": "/cockroach-janta-party-wale.html" },
+    { "source": "/cjp", "destination": "/cjp.html" },
+    { "source": "/cockroach-janta-party", "destination": "/cockroach-janta-party.html" },
+    { "source": "/cocroach-janata-party", "destination": "/cocroach-janata-party.html" }
   ]
 }
+
