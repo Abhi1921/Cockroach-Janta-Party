@@ -17,6 +17,7 @@ const targets = [
   { file: 'cockroach-janta-party-wale.html', slug: 'cockroach-janta-party-wale' },
   { file: 'cjp.html', slug: 'cjp' },
   { file: 'cockroach-janta-party.html', slug: 'cockroach-janta-party' },
+  { file: 'cockroach-janata-party.html', slug: 'cockroach-janata-party' },
   { file: 'cocroach-janata-party.html', slug: 'cocroach-janata-party' }
 ];
 

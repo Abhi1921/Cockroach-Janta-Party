@@ -44,7 +44,9 @@
     { "source": "/cockroach-janta-party-wale", "destination": "/cockroach-janta-party-wale.html" },
     { "source": "/cjp", "destination": "/cjp.html" },
     { "source": "/cockroach-janta-party", "destination": "/cockroach-janta-party.html" },
+    { "source": "/cockroach-janata-party", "destination": "/cockroach-janata-party.html" },
     { "source": "/cocroach-janata-party", "destination": "/cocroach-janata-party.html" }
   ]
 }
+
 
