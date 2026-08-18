@@ -1353,6 +1353,21 @@
       fullText: "CJP National Executive Communication (8 August 2026): Cockroach Janta Party (CJP) founder Abhijeet Dipke today released the official '8 August National Reform Poster' across all media channels. The update confirms CJP's 5 key directives: supporting Jharkhand student agitations, monitoring Supreme Court compliance on dropping student protest FIRs across 28 states, deploying 1,000+ campus audit squads, and maintaining 100% zero electoral ambitions."
     },
     {
+      id: "news-cjp-7aug-a-to-z-update",
+      title: "7 August 2026: CJP Releases Official National A-to-Z Reform Poster — Apex Court Monitoring",
+      category: "cjp",
+      source: "CJP National Bureau & Press Desk",
+      sourceUrl: "articles.html#7aug-a-to-z-update",
+      pubDate: "7 August 2026 (Official Poster)",
+      description: "CJP Founder Abhijeet Dipke releases the official 7 August National Reform Poster detailing 100% Meritocracy status and Supreme Court FIR withdrawal compliance tracking across 28 states.",
+      image: "assets/img/cjp/cjp-7aug-a-to-z-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📌 7 AUGUST 2026 NATIONAL REFORM POSTER",
+      badgeColor: "#0284c7",
+      tags: ["#7August2026", "#CJPReformPoster", "#SupremeCourtCompliance", "#100PercentMeritocracy", "#AbhijeetDipke"],
+      fullText: "CJP National Executive Communication (7 August 2026): Cockroach Janta Party (CJP) founder Abhijeet Dipke today released the official '7 August National Reform Poster' across all social platforms. The update confirms CJP's 5 core pillars: non-partisan student welfare advocacy, monitoring Supreme Court directives to expunge student protest FIRs across 28 states, launching 1,000+ campus audit squads, and zero electoral ambitions."
+    },
+    {
       id: "news-cjp-jharkhand-7aug-protest-update",
       title: "7 August 2026: CJP Jharkhand Hunger Strike Enters Day 3 — Assembly Deliberates JSSC & JPSC Server Audit Demand",
       category: "cjp",
@@ -1368,66 +1383,6 @@
       fullText: "CJP Jharkhand Bureau Live Update (7 August 2026): The student hunger strike at Jaipal Singh Munda Stadium, Ranchi enters its third consecutive day amidst the ongoing Assembly Monsoon Session. With over 60,000 students joining peaceful solidarity rallies across Ranchi, Dhanbad, and Jamshedpur, Cockroach Janta Party (CJP) founder Abhijeet Dipke reiterated that the movement will accept nothing less than 3rd-party cryptographic server audits for all JSSC CGL & 14th JPSC recruitment exams, immediate CBI investigation into paper leak syndicates, and 100% Meritocracy."
     },
     {
-      id: "news-cjp-7aug-a-to-z-update",
-      title: "7 August 2026: CJP Releases Official National A-to-Z Reform Poster — Apex Court Monitoring & Assam Relief Expansion",
-      category: "cjp",
-      source: "CJP National Press Bureau & India.com · Live Bulletin",
-      sourceUrl: "articles.html#7aug-a-to-z-update",
-      pubDate: "7 August 2026 (Live Bulletin)",
-      description: "CJP Founder Abhijeet Dipke releases the official 7 August National Reform Poster detailing 100% Meritocracy status, Supreme Court FIR withdrawal compliance tracking across 28 states, and expanding Assam flood relief camps.",
-      image: "assets/img/cjp/cjp-7aug-a-to-z-poster.png",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "📌 7 AUG NATIONAL REFORM POSTER",
-      badgeColor: "#0284c7",
-      tags: ["#7August2026", "#CJPReformPoster", "#AbhijeetDipke", "#StudentRights", "#MeritocracyFirst"],
-      fullText: "CJP National Executive Communication (7 August 2026): Cockroach Janta Party (CJP) founder Abhijeet Dipke today released the official '7 August National Reform Poster' across all social platforms. The update confirms CJP's 5 core pillars: non-partisan student welfare advocacy, monitoring Supreme Court directives to expunge student protest FIRs across 28 states, launching 1,000+ campus audit squads, and expanding emergency flood relief in Assam."
-    },
-    {
-      id: "news-cjp-ajplus-video",
-      title: "AJ+ Documentary: 'The Man Behind India's Cockroach Janta Party' — Abhijeet Dipke & Gen Z Revolution",
-      category: "cjp",
-      source: "AJ+ World Special · YouTube & Digital Bureau",
-      sourceUrl: "https://www.youtube.com/watch?v=5UjaUWbnWZ4",
-      pubDate: "1 August 2026",
-      description: "AJ+ world feature story on Abhijeet Dipke and how the Cockroach Janta Party (CJP) transformed a judicial insult into India's largest youth movement for 100% Meritocracy.",
-      image: "assets/img/cjp/cjp-jharkhand-protest-5aug-poster.png",
-      youtubeId: "5UjaUWbnWZ4",
-      badge: "▶️ AJ+ SPECIAL DOCUMENTARY",
-      badgeColor: "#dc2626",
-      tags: ["#AJPlus", "#TheManBehindCJP", "#AbhijeetDipke", "#GenZRevolution", "#CockroachJantaParty"],
-      fullText: "AJ+ world documentary feature: International media network AJ+ released a special report titled 'The Man Behind India's Cockroach Janta Party' detailing Abhijeet Dipke's journey, the 5 core demands, and how millions of unemployed young job seekers united under #MainBhiCockroach."
-    },
-    {
-      id: "news-cjp-ankit-inspires-video",
-      title: "Ankit Inspires India: Why Is the 'Cockroach Janata Party' March Making Headlines Across India?",
-      category: "cjp",
-      source: "Ankit Inspires India · Current Affairs Analysis",
-      sourceUrl: "https://www.youtube.com/watch?v=8K30jK6h91g",
-      pubDate: "20 July 2026",
-      description: "Popular current affairs analyst Ankit Avasthi breaks down the origins, 5 demands, legal backing, and national impact of Cockroach Janata Party's Jantar Mantar march.",
-      image: "assets/img/cjp/cjp-4aug-news-poster.png",
-      youtubeId: "8K30jK6h91g",
-      badge: "▶️ ANKIT INSPIRES INDIA",
-      badgeColor: "#d97706",
-      tags: ["#AnkitInspiresIndia", "#AnkitAvasthi", "#CockroachJanataParty", "#JantarMantarMarch", "#CJPDemands"],
-      fullText: "Ankit Inspires India special analysis: Ankit Avasthi explains the legal background, CJI comments, student grievances over NEET paper leaks, and why the Cockroach Janata Party march became a trending national phenomenon."
-    },
-    {
-      id: "news-cjp-guardian-article",
-      title: "The Guardian: Who are India's 'Cockroach' party and why are they marching on Delhi?",
-      category: "google",
-      source: "The Guardian World News · London",
-      sourceUrl: "https://www.theguardian.com/world/2026/jul/30/who-are-indias-cockroach-party",
-      pubDate: "30 July 2026",
-      description: "The Guardian's front-page report on Cockroach Janta Party (CJP), exploring how Gen Z satire is reshaping Indian electoral and judicial accountability.",
-      image: "assets/img/cjp/news-theprint-china-cjp.png",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "🌐 THE GUARDIAN",
-      badgeColor: "#0284c7",
-      tags: ["#TheGuardian", "#CockroachParty", "#DelhiMarch", "#GenZSatire", "#IndianPolitics"],
-      fullText: "The Guardian international feature: British national daily report examining how Cockroach Janta Party (CJP) turned a dismissive judicial remark into a nationwide student rights movement."
-    },
-    {
       id: "news-cjp-jharkhand-6aug-protest",
       title: "6 August 2026: CJP Jharkhand Protest Update — Indefinite Hunger Strike Intensifies at Jaipal Singh Munda Stadium as Assembly Session Begins",
       category: "cjp",
@@ -1441,6 +1396,21 @@
       badgeColor: "#16a34a",
       tags: ["#6August2026", "#JharkhandYouthProtest", "#JaipalSinghMundaStadium", "#CJPJharkhand", "#AbhijeetDipke"],
       fullText: "CJP Jharkhand Bureau Communication (6 August 2026): The student agitation in Ranchi enters its second week as the Monsoon Session of the State Assembly convenes today. At the Jaipal Singh Munda Stadium, six student leaders—including JLKM and JPSC-JSSC Reforms Manch representatives—are on an indefinite hunger strike. Demanding the cancellation of the 14th JPSC exam, an independent CBI / judicial probe into exam paper leaks, and 3rd-party server audits, students reject closed-door meetings and insist on open, media-covered public talks with CM Hemant Soren. CJP Founder Abhijeet Dipke and the CJP Jharkhand Swarm reaffirm full solidarity as a non-partisan pressure group demanding 100% Meritocracy."
+    },
+    {
+      id: "news-cjp-4aug-a-to-z-update",
+      title: "4 August 2026: Cockroach Janta Party Releases Official National Reform Poster & Comprehensive News Update",
+      category: "cjp",
+      source: "CJP National Press Bureau & India.com · Live Bulletin",
+      sourceUrl: "articles.html#4aug-a-to-z-update",
+      pubDate: "4 August 2026 (Live Today)",
+      description: "CJP Founder Abhijeet Dipke releases the official 4 August National Reform Poster covering 100% Meritocracy advocacy, zero electoral ambitions, and Supreme Court FIR drop verification.",
+      image: "assets/img/cjp/cjp-4aug-a-to-z-poster.png",
+      youtubeId: VERIFIED_YT_ID,
+      badge: "📌 4 AUGUST 2026 CJP REFORM POSTER",
+      badgeColor: "#0284c7",
+      tags: ["#4August2026", "#CJPReformPoster", "#AbhijeetDipke", "#MeritocracyAdvocacy", "#SupremeCourtFIRDrop"],
+      fullText: "CJP National Executive Communication (4 August 2026): Cockroach Janta Party (CJP) founder Abhijeet Dipke today released the official '4 August National Reform Poster' across all social platforms. The update confirms CJP's 5 core pillars: non-partisan student welfare advocacy, monitoring Supreme Court directives to expunge student protest FIRs across 28 states, launching 1,000+ campus audit squads, and zero electoral ambitions."
     },
     {
       id: "news-cjp-jharkhand-5aug-protest",
@@ -1592,21 +1562,7 @@
       tags: ["#CJPGrassroots", "#VolunteerNetwork", "#300Coordinators", "#StudentFeedback", "#MainBhiCockroach"],
       fullText: "On 1 August 2026, CJP Founder Abhijeet Dipke announced that the movement's primary objective is now to strengthen grassroots volunteer networks across all 28 states and 8 Union Territories. With over 300 core state coordinators appointed, CJP is conducting university feedback sessions to shape future educational policy advocacy."
     },
-    {
-      id: "news-assam-flood-relief-1aug",
-      title: "Assam Flood 2026 Relief: CJP Youth Swarm Launches Flood Relief, Dry Rations & Volunteer Support Across 5 Districts",
-      category: "assam-flood",
-      source: "Assam Tribune & CJP Relief Bureau",
-      sourceUrl: "donate.html#assam-flood-relief",
-      pubDate: "1 August 2026 (Live Emergency)",
-      description: "Over 1.93 lakh people affected across Upper Assam. CJP Youth Swarm mobilizes volunteer relief teams for dry rations, clean drinking water, baby food, and support for Assam CM Relief Fund & NGO channels.",
-      image: "assets/img/cjp/cjp-assam-flood-poster-1.png",
-      youtubeId: VERIFIED_YT_ID,
-      badge: "🌧️ ASSAM FLOOD RELIEF 2026",
-      badgeColor: "#0284c7",
-      tags: ["#AssamFloodRelief", "#StandWithAssam", "#CJPYouthSupport", "#AssamReliefCamp", "#FloodHelp2026"],
-      fullText: "Assam Flood Emergency 2026 Update: With over 1.93 lakh citizens displaced and 82 lives lost across Upper Assam districts, Cockroach Janta Party (CJP) youth volunteers have established emergency flood relief hubs. Volunteers are distributing dry rations, drinking water, hygiene kits, and baby food, while facilitating direct donations to the official Assam Chief Minister's Relief Fund and verified relief organizations like Goonj and Akshaya Patra."
-    },
+
     {
       id: "news-uddhav-support-1aug",
       title: "Uddhav Thackeray Extends Full Support to CJP & Abhijeet Dipke, Invites Him to Matoshree",
@@ -2662,7 +2618,6 @@
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; justify-content: space-between;">
           <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="catTabButtons">
             <button type="button" class="btn btn-solid cat-btn active" data-cat="all">🏆 All Victory Posters &amp; News</button>
-            <button type="button" class="btn btn-ghost cat-btn" data-cat="assam-flood">🌧️ Assam Flood Relief (2026)</button>
             <button type="button" class="btn btn-ghost cat-btn" data-cat="cjp">📢 CJP Posters &amp; Bulletins</button>
             <button type="button" class="btn btn-ghost cat-btn" data-cat="google">🌐 Google News Live</button>
           </div>

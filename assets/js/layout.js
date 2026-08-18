@@ -13,24 +13,7 @@
     "Dev M.", "Divya K.", "Gaurav S.", "Harish V.", "Jyoti N."
   ];
 
-  /*
-  const generateTicker = () => {
-    const items = [];
-    for (let i = 0; i < 20; i++) {
-      const name = donorNames[Math.floor(Math.random() * donorNames.length)];
-      const amount = Math.floor(Math.random() * 500) + 1;
-      items.push(`
-        <span class="dev-ticker-item">
-          <span class="dev-heart">💚</span>
-          <strong class="dev-donor-name">${name}</strong> paid
-          <span class="dev-amount-pill">₹${amount.toLocaleString('en-IN')}</span>
-          <span class="dev-sub">for website development</span>
-        </span>
-      `);
-    }
-    return [...items, ...items].join("");
-  };
-  */
+
 
   // Complete 10 primary navbar links with mobile icons
   const nav = [
@@ -60,7 +43,7 @@
         <span class="MarchCampaignStrip-module__x5w8qa__sep">·</span>
         Union Cabinet officially signs binding accord mandating NEET 3rd-party exam server audits, releasing student detainees, &amp; enacting CJP 5 demands into law!
       </p>
-      <a class="MarchCampaignStrip-module__x5w8qa__cta" href="#breaking-news-section" style="background: #ffffff; color: #15803d; font-weight: 800;">View Victory Accord →</a>
+      <a class="MarchCampaignStrip-module__x5w8qa__cta" href="articles.html#breaking-news-section" style="background: #ffffff; color: #15803d; font-weight: 800;">View Victory Accord →</a>
     </div>
   </div>
 
@@ -80,12 +63,7 @@
     </div>
   </div>
 
-  <!-- Developer Support Payment Ticker (Commented Out)
-  <div class="dev-ticker-bar" role="region" aria-label="Developer Support Ticker">
-    <div class="dev-ticker-track">
-    </div>
-  </div>
-  -->
+
 
   <header class="nav site-header">
     <div class="nav-inner header-inner">
@@ -126,8 +104,8 @@
               <a href="manifesto.html" class="cjp-mega-dropdown-link">💯 100% Meritocracy Charter</a>
               <a href="protests.html#sc-notice-pil" class="cjp-mega-dropdown-link">⚖️ Supreme Court PIL Notice</a>
               <a href="protests.html#aarakshan-hatao-rally" class="cjp-mega-dropdown-link">📢 28-State Student Rally Timeline</a>
-              <a href="rha.html#electoral-reforms" class="cjp-mega-dropdown-link">🚫 Anti-Defection 20-Year Ban</a>
-              <a href="rha.html#economic-aid" class="cjp-mega-dropdown-link">🎓 Economic Need Scholarships</a>
+              <a href="rha.html#meritocracy-charter" class="cjp-mega-dropdown-link">🚫 Anti-Defection 20-Year Ban</a>
+              <a href="rha.html#faq" class="cjp-mega-dropdown-link">🎓 Economic Need Scholarships</a>
             </div>
           </li>
 
@@ -141,7 +119,7 @@
               <a href="protests.html#jharkhand-protest-7aug" class="cjp-mega-dropdown-link">✊ 7 Aug Stadium Hunger Strike (Day 3)</a>
               <a href="protests.html#jharkhand-protest-6aug" class="cjp-mega-dropdown-link">🏛️ 6 Aug Assembly Opening &amp; CBI Probe</a>
               <a href="protests.html#jharkhand-protest-5aug" class="cjp-mega-dropdown-link"> Morabadi Ground Mega Swarm (50k+)</a>
-              <a href="issues.html#jssc-audit" class="cjp-mega-dropdown-link">📋 JSSC &amp; JPSC Digital Audit Charter</a>
+              <a href="issues.html" class="cjp-mega-dropdown-link">📋 JSSC &amp; JPSC Digital Audit Charter</a>
             </div>
           </li>
 
@@ -154,7 +132,6 @@
               <a href="articles.html#all-news-tab" class="cjp-mega-dropdown-link">🌐 Tab 1: All News / Live Wire <span class="cjp-mega-dropdown-badge" style="background:#e0f2fe;color:#0369a1">Wire</span></a>
               <a href="articles.html#cjp-bulletins-tab" class="cjp-mega-dropdown-link">📌 Tab 2: CJP Official Bulletins &amp; Posters</a>
               <a href="articles.html#media-coverage-tab" class="cjp-mega-dropdown-link">📺 Tab 3: Google &amp; Live Media Desk (BBC/AJ+)</a>
-              <a href="donate.html#assam-flood-relief" class="cjp-mega-dropdown-link">🌧️ Assam Flood Relief Drive</a>
             </div>
           </li>
 
@@ -165,10 +142,9 @@
             </a>
             <div class="cjp-mega-dropdown" style="border-color: #16a34a;">
               <a href="gallery.html" class="cjp-mega-dropdown-link">🖼️ Gallery Home (37+ Assets)</a>
-              <a href="gallery.html#8aug-posters" class="cjp-mega-dropdown-link">✊ 8 Aug Assembly Siege Posters</a>
-              <a href="gallery.html#7aug-posters" class="cjp-mega-dropdown-link">📌 7 Aug National Reform Posters</a>
+              <a href="gallery.html#live-8aug-jharkhand-bulletin" class="cjp-mega-dropdown-link">✊ 8 Aug Assembly Siege Posters</a>
+              <a href="gallery.html#today-11aug-poster" class="cjp-mega-dropdown-link">📌 7 Aug National Reform Posters</a>
               <a href="gallery.html#rhm-posters" class="cjp-mega-dropdown-link">💯 RHM Meritocracy Posters</a>
-              <a href="gallery.html#assam-art" class="cjp-mega-dropdown-link">🌧️ Assam Flood Relief Art</a>
             </div>
           </li>
 
@@ -206,7 +182,6 @@
       <a href="rha.html" class="cjp-sub-nav-chip ${active('rha')}" style="background: rgba(220,38,38,0.2); border-color: #dc2626; color: #fca5a5;">✊ RHM Movement (100% Merit)</a>
       <a href="protests.html#jharkhand-protest-8aug" class="cjp-sub-nav-chip" style="background: rgba(220,38,38,0.25); border-color: #dc2626; color: #fee2e2;">🚨 Jharkhand Assembly Siege (8 Aug)</a>
       <a href="articles.html" class="cjp-sub-nav-chip ${active('articles')}">📰 News Desk (3 Tabs)</a>
-      <a href="donate.html#assam-flood-relief" class="cjp-sub-nav-chip" style="background: rgba(2,132,199,0.2); border-color: #0284c7; color: #bae6fd;">🌧️ Assam Relief Drive</a>
       <a href="gallery.html" class="cjp-sub-nav-chip ${active('gallery')}">🖼️ Visual Posters Gallery</a>
       <a href="join.html" class="cjp-sub-nav-chip ${active('join')}" style="background: rgba(22,163,74,0.2); border-color: #16a34a; color: #86efac;">💳 Digital ID Card</a>
     </div>
@@ -320,61 +295,45 @@
           <a href="https://youtube.com/@cockroachjantaparty" target="_blank" rel="noopener" aria-label="YouTube">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           </a>
-          <!-- X (Twitter) -->
-          <a href="https://x.com/cjp_official" target="_blank" rel="noopener" aria-label="X">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <!-- Instagram -->
-          <a href="https://instagram.com/cockroachjantaparty" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-          </a>
-          <!-- Telegram -->
-          <a href="https://t.me/CockroachJantaParty" target="_blank" rel="noopener" aria-label="Telegram">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.761-.17.708-.43 1.108-.738 1.138-.67.062-1.18-.444-1.83-1.884-.216-.481-.432-.864-.648-1.248-.37-.658-.74-1.316-1.11-1.974-.126-.222-.252-.444-.378-.666-.34-.598-.68-1.196-1.02-1.794-.09-.158-.18-.316-.27-.474-.2-.35-.4-.7-.6-.1-.132.394-.264.788-.396 1.182-.416 1.238-1.238 3.714-1.654 4.952-.162.482-.324.964-.486 1.446-.118.354-.236.708-.354 1.062-.128.384-.256.768-.384 1.152-.06.182-.12.364-.18.546l-.234-.148c.196-1.57.588-4.71 1.176-9.42.12-.962.24-1.924.36-2.886.09-.728.18-1.456.27-2.184l.324.354c.294.324.588.648.882.972.182.2.364.4.546.6.616.678 1.232 1.356 1.848 2.034.254.278.508.556.762.834z"/></svg>
-          </a>
-          <!-- WhatsApp -->
-          <a href="https://chat.whatsapp.com/CockroachJantaParty" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.46l-6.256 1.648zM12.008 2.2c-5.448 0-9.879 4.43-9.883 9.879-.001 1.97.513 3.892 1.492 5.59l.327.568-1.073 3.92 4.01-1.053.551.327c1.626.966 3.486 1.477 5.393 1.478 5.451 0 9.883-4.432 9.887-9.885.002-2.64-1.02-5.122-2.879-6.983C17.18 3.22 14.7 2.2 12.008 2.2zm5.424 13.064c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.669.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
-          </a>
-          <!-- Reddit -->
-          <a href="https://reddit.com/r/CockroachJantaParty" target="_blank" rel="noopener" aria-label="Reddit">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.85-1.64-6.24-1.72l1.37-4.31 3.81.81c.01.88.74 1.58 1.62 1.58 1.65 0 3-1.35 3-3s-1.35-3-3-3c-.83 0-1.58.34-2.14.88l-4.23-.9c-.18-.04-.38.03-.49.18l-1.61 5.08c-2.45.04-4.71.68-6.38 1.71-.58-.75-1.48-1.23-2.44-1.23-1.65 0-3 1.35-3 3 0 1.2.71 2.23 1.74 2.71-.04.26-.06.52-.06.79 0 3.86 4.49 7 10 7s10-3.14 10-7c0-.27-.02-.53-.06-.79 1.03-.48 1.74-1.51 1.74-2.71zm-18.75 3c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25zm11 2.5c-.9 1-2.49 1.5-4.25 1.5s-3.35-.5-4.25-1.5c-.2-.2-.2-.5 0-.7.2-.2.5-.2.7 0 .7.75 1.9 1.2 3.55 1.2s2.85-.45 3.55-1.2c.2-.2.5-.2.7 0 .2.2.2.5 0 .7zm-.75-3.75c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z"/></svg>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=61590017357770" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
         </div>
       </div>
       <div class="footer-cols">
         <div>
-          <h4>The Manifesto</h4>
-          <a href="manifesto.html">The Manifesto</a>
-          <a href="articles.html">Articles</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="tracker.html">Tracker</a>
-          <a href="protests.html">Protests</a>
+          <h4>Core Navigation</h4>
+          <a href="/">Home Hub</a>
+          <a href="vision.html">Vision &amp; Ideology</a>
+          <a href="manifesto.html">5 Demands Manifesto</a>
+          <a href="articles.html">News &amp; Media Desk</a>
+          <a href="protests.html">Protests &amp; Actions</a>
         </div>
         <div>
-          <h4>Issues</h4>
-          <a href="issues.html">Issues</a>
-          <a href="manifesto.html">Manifesto</a>
-          <a href="articles.html">News</a>
-          <a href="vision.html#quotes">Quotes</a>
+          <h4>Movement &amp; Issues</h4>
+          <a href="rha.html">RHA Merit Movement</a>
+          <a href="issues.html">Public Issues Board</a>
+          <a href="tracker.html">Movement Tracker</a>
+          <a href="gallery.html">Visual Posters Gallery</a>
+          <a href="cockroach-janta-party-wale.html">CJP Wale Official Desk</a>
         </div>
         <div>
-          <h4>Support the Developer</h4>
-          <a href="donate.html">Support the Developer</a>
-          <a href="members.html">Members</a>
-          <a href="join.html">Get your card</a>
-          <a href="raise-issue.html">Raise your voice</a>
-          <a href="join.html">Volunteer</a>
+          <h4>Join &amp; Support</h4>
+          <a href="donate.html">Support Website Dev</a>
+          <a href="members.html">30M+ Members Directory</a>
+          <a href="join.html">Get Digital Member ID</a>
+          <a href="raise-issue.html">Raise Your Voice / Issue</a>
+          <a href="contact.html">Press &amp; Contact Bureau</a>
         </div>
         <div>
-          <h4>Legal</h4>
+          <h4>Legal &amp; Policies</h4>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Use</a>
-          <a href="privacy.html#adsense">Cookie Policy</a>
-          <a href="terms.html#editorial">Editorial Policy</a>
-          <a href="terms.html#satire">Disclaimer</a>
-          <a href="vision.html">About</a>
-          <a href="articles.html#press-kit">Press Kit</a>
+          <a href="privacy.html#adsense">Cookie &amp; Ads Policy</a>
+          <a href="terms.html#copyright">Editorial &amp; IP Policy</a>
+          <a href="terms.html#satire">Satire Disclaimer</a>
+          <a href="revolutionaries.html">Founders &amp; Revolutionaries</a>
         </div>
       </div>
     </div>
@@ -390,13 +349,13 @@
           <a href="cockroach-janta-party-wale.html" style="color: #fef08a; text-decoration: underline; font-weight: 800; padding: 0.2rem 0.55rem; background: rgba(220,38,38,0.25); border-radius: 6px; border: 1px solid #dc2626;">🪳 Cockroach Janta Party Wale</a>
           <a href="protests.html#jharkhand-protest-6aug" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🔥 Jharkhand Protest 6 Aug</a>
           <a href="issues.html" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">⚖️ JSSC &amp; JPSC Server Audit</a>
-          <a href="protests.html#jharkhand-protest-6aug" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🏟️ Jaipal Singh Munda Stadium Strike</a>
+          <a href="protests.html#jharkhand-protest-7aug" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🏟️ Jaipal Singh Munda Stadium Strike</a>
           <a href="manifesto.html" style="color: #bae6fd; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(2,132,199,0.2); border-radius: 6px; border: 1px solid #0284c7;">🏆 100% Meritocracy Act</a>
           <a href="protests.html#4aug-sc-compliance" style="color: #c084fc; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(147,51,234,0.2); border-radius: 6px; border: 1px solid #9333ea;">📜 SC Student FIR Drop Directive</a>
-          <a href="donate.html#assam-flood-relief" style="color: #7dd3fc; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(3,105,161,0.2); border-radius: 6px; border: 1px solid #0369a1;">🌧️ Assam Flood Relief Drive</a>
-          <a href="vision.html" style="color: #fde047; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(234,179,8,0.2); border-radius: 6px; border: 1px solid #ca8a04;">👤 Founder Abhijeet Dipke</a>
+          <a href="protests.html" style="color: #7dd3fc; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(3,105,161,0.2); border-radius: 6px; border: 1px solid #0369a1;">✊ CJP Protests &amp; Actions</a>
+          <a href="revolutionaries.html" style="color: #fde047; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(234,179,8,0.2); border-radius: 6px; border: 1px solid #ca8a04;">👤 Founder Abhijeet Dipke</a>
           <a href="join.html" style="color: #fca5a5; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(220,38,38,0.2); border-radius: 6px; border: 1px solid #dc2626;">💳 Free CJP Digital ID Card</a>
-          <a href="https://open.spotify.com/search/Cockroach%20Janta%20Party" target="_blank" rel="noopener" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🎵 CJP Spotify Hip-Hop Anthem</a>
+          <a href="articles.html#top-3-trending-videos" style="color: #86efac; text-decoration: underline; font-weight: 700; padding: 0.2rem 0.5rem; background: rgba(22,163,74,0.2); border-radius: 6px; border: 1px solid #16a34a;">🎵 CJP Spotify &amp; Hip-Hop Anthem</a>
         </div>
       </div>
 
@@ -436,9 +395,9 @@
       <button type="submit">Send</button>
     </form>
   </div>
-  <a href="https://wa.me/?text=Hi%20CJP!%20I%20want%20to%20inquire%20about%20membership%20and%20campus%20coordination%20services." target="_blank" rel="noopener" id="waLeadBtn" aria-label="WhatsApp Inquiry Lead" class="cjp-wa-floating-btn" style="position: fixed !important; left: 1.1rem !important; bottom: 1.1rem !important; z-index: 9998 !important;">
+  <a href="contact.html" id="waLeadBtn" aria-label="Contact Bureau Lead" class="cjp-wa-floating-btn" style="position: fixed !important; left: 1.1rem !important; bottom: 1.1rem !important; z-index: 9998 !important;">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.008 2.2c-5.448 0-9.879 4.43-9.883 9.879-.001 1.97.513 3.892 1.492 5.59l.327.568-1.073 3.92 4.01-1.053.551.327c1.626.966 3.486 1.477 5.393 1.478 5.451 0 9.883-4.432 9.887-9.885.002-2.64-1.02-5.122-2.879-6.983C17.18 3.22 14.7 2.2 12.008 2.2zm5.424 13.064c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.669.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
-    <span>💬 WhatsApp Lead</span>
+    <span>💬 Contact Bureau</span>
   </a>
   <button type="button" id="cacheClearBtn" aria-label="Clear Cache and Hard Refresh" title="Clear Cache &amp; Hard Refresh" style="position: fixed; top: 1.1rem; right: 1.1rem; z-index: 999999; width: 42px; height: 42px; border-radius: 50%; background: #dc2626; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 24px rgba(220,38,38,0.55); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1.0)'">
     <svg class="cache-refresh-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
@@ -471,6 +430,19 @@
             navToggle.setAttribute("aria-expanded", "false");
           });
         });
+      }
+
+      const siteHeader = document.querySelector(".site-header");
+      if (siteHeader) {
+        const handleScroll = () => {
+          if (window.scrollY > 20) {
+            siteHeader.classList.add("is-scrolled");
+          } else {
+            siteHeader.classList.remove("is-scrolled");
+          }
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        handleScroll();
       }
     }
 

@@ -1501,10 +1501,10 @@ header.nav::-webkit-scrollbar,
   .header-inner.nav-open #mainNav ul,
   .mobile-nav-list {
     grid-template-columns: 1fr !important;
-    gap: 0.55rem !important;
   }
 }
-  
+
+@media (max-width: 900px) {
   .hero-home {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -2918,8 +2918,58 @@ img, iframe, video {
 }
 
 /* ==============================================================================
-   CJP MEGA-NAVBAR & MULTI-TAB CATEGORY SYSTEM STYLES
+   ULTRA-SMOOTH CJP NAVBAR, MEGA-DROPDOWN & SUB-NAVBAR SYSTEM
    ============================================================================== */
+:root {
+  --nav-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --nav-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 253, 247, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1.5px solid rgba(220, 38, 38, 0.15);
+  transition: background 0.3s var(--nav-ease), box-shadow 0.3s var(--nav-ease), border-color 0.3s var(--nav-ease);
+}
+
+.site-header.is-scrolled {
+  background: rgba(255, 253, 247, 0.98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(220, 38, 38, 0.08);
+  border-bottom-color: rgba(220, 38, 38, 0.3);
+}
+
+/* Nav Item Hover Pills */
+.primary-nav a,
+.cjp-mega-nav-item > a {
+  position: relative;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  transition: all 0.25s var(--nav-ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.primary-nav a:hover,
+.cjp-mega-nav-item > a:hover {
+  background: rgba(220, 38, 38, 0.08);
+  color: #dc2626 !important;
+  transform: translateY(-1.5px);
+}
+
+.primary-nav a.is-active,
+.cjp-mega-nav-item > a.is-active {
+  background: rgba(220, 38, 38, 0.12);
+  color: #dc2626 !important;
+  box-shadow: inset 0 0 0 1.5px rgba(220, 38, 38, 0.3);
+}
+
 .cjp-mega-nav-item {
   position: relative;
   display: inline-block;
@@ -2927,23 +2977,38 @@ img, iframe, video {
 
 .cjp-mega-dropdown {
   position: absolute;
-  top: calc(100% + 4px);
+  top: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%) translateY(12px) scale(0.96);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  background: #FFFDF7;
+  background: rgba(255, 253, 247, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 2px solid var(--saffron);
-  border-radius: 14px;
-  padding: 0.85rem;
-  box-shadow: 0 20px 50px rgba(26, 20, 16, 0.25);
-  min-width: 270px;
+  border-radius: 16px;
+  padding: 0.75rem;
+  box-shadow: 0 24px 60px rgba(26, 20, 16, 0.22), 0 4px 16px rgba(220, 38, 38, 0.1);
+  min-width: 285px;
   z-index: 9999;
-  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.25s var(--nav-ease), transform 0.25s var(--nav-ease), visibility 0.25s var(--nav-ease);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+}
+
+.cjp-mega-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #FFFDF7;
+  border-top: 2px solid var(--saffron);
+  border-left: 2px solid var(--saffron);
 }
 
 .cjp-mega-nav-item:hover .cjp-mega-dropdown,
@@ -2951,50 +3016,59 @@ img, iframe, video {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0) scale(1);
 }
 
 .cjp-mega-dropdown-link {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
+  gap: 0.65rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 10px;
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--ink);
   text-decoration: none;
-  transition: background 0.18s, color 0.18s;
+  transition: all 0.2s var(--nav-ease);
   white-space: nowrap;
 }
 
 .cjp-mega-dropdown-link:hover {
-  background: var(--saffron-bg);
-  color: var(--saffron-dark);
+  background: rgba(220, 38, 38, 0.08);
+  color: #dc2626;
+  transform: translateX(4px);
 }
 
 .cjp-mega-dropdown-badge {
   font-family: var(--font-mono);
   font-size: 0.62rem;
   font-weight: 800;
-  padding: 0.15rem 0.45rem;
-  border-radius: 4px;
+  padding: 0.18rem 0.5rem;
+  border-radius: 6px;
   margin-left: auto;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: transform 0.2s var(--nav-ease);
+}
+
+.cjp-mega-dropdown-link:hover .cjp-mega-dropdown-badge {
+  transform: scale(1.05);
 }
 
 /* Category Sub-Navbar Bar Below Header */
 .cjp-sub-navbar-bar {
-  background: #1A1410;
-  border-bottom: 2px solid var(--saffron);
-  padding: 0.45rem var(--gutter);
+  background: #100a07;
+  border-bottom: 2.5px solid #dc2626;
+  padding: 0.5rem var(--gutter);
   overflow-x: auto;
   white-space: nowrap;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 .cjp-sub-navbar-bar::-webkit-scrollbar { display: none; }
+
 .cjp-sub-navbar-inner {
   max-width: var(--max);
   margin: 0 auto;
@@ -3002,26 +3076,36 @@ img, iframe, video {
   align-items: center;
   gap: 0.65rem;
 }
+
 .cjp-sub-nav-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.35rem 0.8rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 800;
   color: #FFFDF7;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.25s var(--nav-ease);
 }
-.cjp-sub-nav-chip:hover, .cjp-sub-nav-chip.is-active {
-  background: var(--saffron);
-  border-color: var(--saffron);
-  color: #FFFDF7;
-  transform: translateY(-1px);
+
+.cjp-sub-nav-chip:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.4);
+}
+
+.cjp-sub-nav-chip.is-active {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
 }
 
 /* 3 News Tabs Switcher Bar */
@@ -3056,17 +3140,17 @@ img, iframe, video {
   font-weight: 800;
   color: var(--muted);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s var(--nav-ease);
   white-space: nowrap;
 }
 .cjp-tab-btn.is-active {
-  background: var(--saffron);
+  background: #dc2626;
   color: #FFFDF7;
-  box-shadow: 0 4px 14px rgba(224, 101, 30, 0.3);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
 }
 .cjp-tab-btn:hover:not(.is-active) {
-  background: rgba(26, 20, 16, 0.06);
-  color: var(--ink);
+  background: rgba(220, 38, 38, 0.08);
+  color: #dc2626;
 }
 
 
