@@ -298,26 +298,30 @@ header.nav, .site-header {
 .nav-actions, .header-actions { display: flex; align-items: center; gap: 0.65rem; position: relative; z-index: 1002; }
 
 .btn-pill {
-  background: var(--saffron);
+  background: #dc2626;
   color: #FFFDF7;
   font-family: var(--font-mono);
   font-weight: 800;
   font-size: 0.82rem;
-  padding: 0.55rem 1.35rem;
+  padding: 0.55rem 1.25rem;
   border-radius: 999px;
   border: 0;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: all 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
 }
 .btn-pill:hover {
-  background: var(--saffron-dark);
+  background: #b91c1c;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(224, 101, 30, 0.35);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.55);
 }
 
 /* Exam Crisis Banner Bar below header */
@@ -2506,19 +2510,26 @@ img, video, iframe, embed, object {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 36px !important;
-    height: 36px !important;
-    border-radius: 8px !important;
+    gap: 0.45rem !important;
+    padding: 0.4rem 0.75rem !important;
+    width: auto !important;
+    height: auto !important;
+    border-radius: 10px !important;
     background: rgba(255, 255, 255, 0.08) !important;
     border: 1px solid rgba(255, 255, 255, 0.18) !important;
     color: #ffffff !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
     flex: 0 0 auto !important;
     transition: all 0.2s ease !important;
   }
 
   .footer-social-strip a:hover {
-    background: var(--signal) !important;
-    border-color: var(--signal) !important;
+    background: #dc2626 !important;
+    border-color: #ef4444 !important;
+    color: #ffffff !important;
     transform: translateY(-2px) !important;
   }
 
@@ -2975,27 +2986,41 @@ img, iframe, video {
   display: inline-block;
 }
 
+/* Invisible Hover Bridge to prevent dropdown disappearing when mouse moves down */
+.cjp-mega-nav-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  right: -30px;
+  height: 25px;
+  background: transparent;
+  z-index: 9998;
+}
+
 .cjp-mega-dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(12px) scale(0.96);
+  margin-top: 6px;
+  transform: translateX(-50%) translateY(10px) scale(0.96);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   background: rgba(255, 253, 247, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 2px solid var(--saffron);
-  border-radius: 16px;
-  padding: 0.75rem;
-  box-shadow: 0 24px 60px rgba(26, 20, 16, 0.22), 0 4px 16px rgba(220, 38, 38, 0.1);
-  min-width: 285px;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 2px solid #dc2626;
+  border-radius: 20px;
+  padding: 0.65rem;
+  box-shadow: 0 30px 80px rgba(26, 20, 16, 0.28), 0 8px 32px rgba(220, 38, 38, 0.18);
+  min-width: 320px;
   z-index: 9999;
-  transition: opacity 0.25s var(--nav-ease), transform 0.25s var(--nav-ease), visibility 0.25s var(--nav-ease);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  overflow: hidden;
 }
 
 .cjp-mega-dropdown::before {
@@ -3006,9 +3031,10 @@ img, iframe, video {
   transform: translateX(-50%) rotate(45deg);
   width: 12px;
   height: 12px;
-  background: #FFFDF7;
-  border-top: 2px solid var(--saffron);
-  border-left: 2px solid var(--saffron);
+  background: #1e1b4b;
+  border-top: 2px solid #dc2626;
+  border-left: 2px solid #dc2626;
+  z-index: 10;
 }
 
 .cjp-mega-nav-item:hover .cjp-mega-dropdown,
@@ -3019,41 +3045,83 @@ img, iframe, video {
   transform: translateX(-50%) translateY(0) scale(1);
 }
 
+.cjp-dropdown-header {
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  margin-bottom: 0.25rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
 .cjp-mega-dropdown-link {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  padding: 0.6rem 0.85rem;
-  border-radius: 10px;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
   font-family: var(--font-body);
-  font-size: 0.84rem;
-  font-weight: 700;
   color: var(--ink);
   text-decoration: none;
-  transition: all 0.2s var(--nav-ease);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
+}
+
+.cjp-dropdown-icon-pill {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(26, 20, 16, 0.05);
+  border: 1px solid rgba(26, 20, 16, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cjp-dropdown-title {
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.cjp-dropdown-sub {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-weight: 600;
+  display: block;
+  margin-top: 0.1rem;
 }
 
 .cjp-mega-dropdown-link:hover {
   background: rgba(220, 38, 38, 0.08);
+  transform: translateX(6px);
+}
+
+.cjp-mega-dropdown-link:hover .cjp-dropdown-title {
   color: #dc2626;
-  transform: translateX(4px);
+}
+
+.cjp-mega-dropdown-link:hover .cjp-dropdown-icon-pill {
+  transform: scale(1.1) rotate(-4deg);
 }
 
 .cjp-mega-dropdown-badge {
   font-family: var(--font-mono);
   font-size: 0.62rem;
   font-weight: 800;
-  padding: 0.18rem 0.5rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 6px;
   margin-left: auto;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  transition: transform 0.2s var(--nav-ease);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
 }
 
 .cjp-mega-dropdown-link:hover .cjp-mega-dropdown-badge {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* Category Sub-Navbar Bar Below Header */
