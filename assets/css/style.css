@@ -221,7 +221,7 @@ button, input, textarea, select {
 
 /* Official Cockroach Janta Party Nav Header */
 header.nav, .site-header {
-  position: sticky; top: 0; z-index: 1000;
+  position: sticky; top: 0; z-index: 999999 !important;
   background: var(--paper);
   border-bottom: 2px solid var(--line);
   box-shadow: 0 4px 20px rgba(26, 20, 16, 0.04);
@@ -1216,16 +1216,67 @@ header.nav::-webkit-scrollbar,
 .form-note { font-size: 0.75rem; color: rgba(245,230,224,0.55); margin: 0.5rem 0 0; }
 .form-success { color: #86efac; font-size: 0.9rem; margin: 0.5rem 0 0; }
 
-.site-footer { background: #120808; color: #b8a29a; padding: 2.5rem 1.25rem 1.4rem; }
 .footer-inner {
   max-width: var(--max); margin: 0 auto;
-  display: grid; grid-template-columns: 1.15fr 2fr; gap: 2.2rem;
+  display: flex !important; flex-direction: column !important; gap: 1.5rem !important; width: 100% !important;
+}
+.footer-top-grid {
+  display: grid !important; grid-template-columns: 1fr 2.2fr !important; gap: 2.2rem !important; align-items: start !important; width: 100% !important;
 }
 .footer-brand { display: flex; gap: 0.85rem; align-items: flex-start; }
 .footer-brand strong {
   display: block; font-family: var(--font-display); font-size: 0.95rem; color: #fff; margin-bottom: 0.35rem;
 }
 .footer-brand p { margin: 0; font-size: 0.88rem; }
+.footer-social-strip {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 0.45rem 0.65rem !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin-top: 0.75rem !important;
+  width: 100% !important;
+}
+.footer-social-strip a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  gap: 0.35rem !important;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  white-space: nowrap !important;
+}
+.footer-social-strip a svg {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+  width: 15px !important;
+  height: 15px !important;
+  line-height: 1 !important;
+}
+.footer-social-strip a span {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  line-height: 1 !important;
+}
+.footer-social-strip a:hover {
+  background: #dc2626 !important;
+  border-color: #ef4444 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35) !important;
+}
 .footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 .footer-cols h4 {
   font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em;
@@ -1968,7 +2019,7 @@ header.nav::-webkit-scrollbar,
 /* Premium Single Screen Notification Card UI (5-second lifecycle) */
 .cjp-pop-badge {
   position: fixed;
-  z-index: 99999;
+  z-index: 9999;
   display: inline-flex;
   align-items: center;
   gap: 0.85rem;
@@ -3220,6 +3271,266 @@ img, iframe, video {
   background: rgba(220, 38, 38, 0.08);
   color: #dc2626;
 }
+
+/* Dynamic Cloudflare Turnstile Widget Styles */
+.cf-turnstile-box {
+  background: #23201b;
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+.cf-turnstile-box:hover {
+  border-color: rgba(249, 115, 22, 0.6);
+  background: #2a2620;
+}
+
+/* ----------------------------------------------------
+   SITE-WIDE ANIMATIONS & INDIAN ARMY TRIBUTE STYLES
+   ---------------------------------------------------- */
+
+/* 1. Global Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes tricolorGlow {
+  0% { box-shadow: 0 0 15px rgba(249, 115, 22, 0.4), 0 0 30px rgba(22, 163, 74, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(249, 115, 22, 0.7), 0 0 45px rgba(255, 255, 255, 0.5); }
+  100% { box-shadow: 0 0 15px rgba(22, 163, 74, 0.4), 0 0 30px rgba(249, 115, 22, 0.2); }
+}
+
+@keyframes btnShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes flagWave {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(3deg) scale(1.03); }
+  75% { transform: rotate(-3deg) scale(1.03); }
+}
+
+/* 2. Scroll Reveal Animations */
+.cjp-animate-reveal {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.cjp-animate-zoom {
+  animation: zoomIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.cjp-float-badge {
+  animation: floatUpDown 3.5s ease-in-out infinite;
+}
+
+/* 3. Universal Card & Image Hover Micro-Animations */
+.content-card, .card, .poster-frame, .hero-poster, article {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease !important;
+}
+
+.content-card:hover, .card:hover {
+  transform: translateY(-6px) scale(1.015) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22), 0 0 25px rgba(220, 38, 38, 0.15) !important;
+}
+
+.content-card img, .card-img-frame img, .poster-img-wrap img {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease !important;
+}
+
+.content-card:hover img, .card-img-frame:hover img, .poster-frame:hover img {
+  transform: scale(1.05) !important;
+  filter: brightness(1.08) !important;
+}
+
+/* 4. Button Shimmer & Micro-Interactions */
+.btn, .btn-solid, .btn-primary, .hero-btn, .cjp-sub-nav-chip {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover, .btn-solid:hover, .btn-primary:hover, .hero-btn:hover {
+  transform: translateY(-3px) scale(1.03) !important;
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.35) !important;
+}
+
+.btn:active, .btn-solid:active {
+  transform: translateY(0) scale(0.97) !important;
+}
+
+/* 5. Indian Army Patriotic Tricolor Card & Badge */
+.army-tribute-card {
+  background: linear-gradient(145deg, #0b130b 0%, #172417 50%, #1e1308 100%);
+  border: 3px solid #f97316;
+  border-image: linear-gradient(135deg, #f97316 0%, #ffffff 50%, #16a34a 100%) 1;
+  border-radius: 24px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  color: #ffffff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(249, 115, 22, 0.2);
+  margin: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.army-tribute-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff9933 0%, #ffffff 50%, #138808 100%);
+}
+
+.army-flag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, rgba(249, 115, 22, 0.2) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(22, 163, 74, 0.2) 100%);
+  border: 1.5px solid #f97316;
+  color: #fef08a;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  animation: tricolorGlow 3s infinite ease-in-out;
+}
+
+.army-flag-badge span.flag-icon {
+  display: inline-block;
+  animation: flagWave 2.5s ease-in-out infinite;
+}
+
+/* Sleek Full-Width Footer Directory Links Band & 5-Column Grid */
+.cjp-footer-directory-band {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: 1.25rem !important;
+  padding: 1.35rem 1.65rem !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 18px !important;
+  text-align: left !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+.cjp-directory-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.65rem;
+}
+
+.cjp-directory-badge {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: #fbbf24;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.cjp-directory-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cjp-footer-directory-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 0.5rem 0.65rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1100px) {
+  .cjp-footer-directory-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cjp-footer-directory-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .cjp-footer-directory-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.cjp-footer-directory-grid a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 0.4rem 0.65rem !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.74rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.cjp-footer-directory-grid a:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #dc2626 !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35) !important;
+}
+
+
+
 
 
 

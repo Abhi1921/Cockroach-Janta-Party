@@ -221,25 +221,8 @@
     "Meritocracy Student Protest India",
     "Supreme Court PIL Reservation Reform",
     "100 Percent Meritocracy System",
-    "cocraoch janta party jharkhand protest",
-    "cockroach janta party jharkhand jssc leak",
-    "cockroach janta party jharkhand hunger strike 2026",
-    "jaipal singh munda stadium ranchi hunger strike",
-    "jpsc jssc server log audit cjp",
-    "abhijeet dipke jharkhand protest ranchi",
-    "jlkm jpsc jssc reforms manch cjp",
-    "cjp 100 percent meritocracy act",
-    "cocraoch janta party news today",
-    "cockroch janta party latest news",
-    "cokroach janta party jharkhand",
-    "tilchatta janta party jharkhand",
-    "aarakshan hatao yogyata lao jharkhand",
-    "cjp bihar up jharkhand exam audit",
     "cjp supreme court fir drop compliance 2026",
-    "cjp sansad march jantar mantar delhi",
-    "jharkhand assembly monsoon session cjp protest",
-    "ranchi morabadi ground cjp rally",
-    "jamshedpur dhanbad student agitation cjp"
+    "cjp sansad march jantar mantar delhi"
   ].join(", ");
 
   // Ensure Meta Keywords Tag

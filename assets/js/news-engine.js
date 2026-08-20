@@ -2324,14 +2324,32 @@
       description: "WION international broadcast examining digital satire, student resilience, and democratic accountability movement victory.",
       image: "assets/img/cjp/press-conference.webp",
       youtubeId: VERIFIED_YT_ID,
-      badge: "🌍 WION WORLD",
-      badgeColor: "#059669",
-      tags: ["#WIONNews", "#GlobalYouth", "#SatireMovement", "#WION"],
       fullText: "WION World News reports on how Gen-Z movements in India utilized satire and digital advocacy to achieve historical exam transparency laws."
     }
   ];
 
-  let currentNewsItems = [...defaultTrendingNews];
+  const filterNewsAfter10Aug = (items) => {
+    return items.filter(item => {
+      const isRhaOrJharkhand = /rha|jharkhand|rhm|aarakshan/i.test((item.title || '') + ' ' + (item.description || '') + ' ' + (item.tags ? item.tags.join(' ') : ''));
+      if (isRhaOrJharkhand) return false;
+
+      const text = ((item.pubDate || '') + " " + (item.title || '') + " " + (item.id || '')).toLowerCase();
+      if (/(july|june|may|april|march|february|january|jul|jun|apr|mar|feb|jan)\b/i.test(text)) {
+        return false;
+      }
+      const augMatch = text.match(/(?<!\d)([1-9]|0[1-9])\s*(august|aug)\b/i);
+      if (augMatch && parseInt(augMatch[1], 10) < 10) {
+        return false;
+      }
+      if (/(1aug|2aug|3aug|4aug|5aug|6aug|7aug|8aug|9aug|01aug|02aug|03aug|04aug|05aug|06aug|07aug|08aug|09aug)\b/i.test(text)) {
+        return false;
+      }
+
+      return true;
+    });
+  };
+
+  let currentNewsItems = filterNewsAfter10Aug(defaultTrendingNews);
   let activeCategory = "all";
   let searchQuery = "";
 
@@ -2420,7 +2438,7 @@
           fullText: (item.content || item.description || item.title).replace(/<[^>]*>?/gm, '')
         }));
 
-        currentNewsItems = [...defaultTrendingNews, ...fetchedGoogleItems];
+        currentNewsItems = filterNewsAfter10Aug([...defaultTrendingNews, ...fetchedGoogleItems]);
         renderNewsGrid();
       }
     } catch (e) {
@@ -2438,7 +2456,7 @@
                         window.location.pathname.endsWith('/index.html') ||
                         (!window.location.pathname.includes('articles') && !window.location.pathname.includes('rha'));
 
-    let filtered = currentNewsItems.filter((item) => {
+    let filtered = filterNewsAfter10Aug(currentNewsItems).filter((item) => {
       const matchesCat = activeCategory === "all" || item.category === activeCategory;
       const q = searchQuery.toLowerCase().trim();
       const matchesQuery = !q || item.title.toLowerCase().includes(q) || item.description.toLowerCase().includes(q) || item.tags.some(t => t.toLowerCase().includes(q));

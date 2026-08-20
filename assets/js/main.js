@@ -520,12 +520,12 @@
     el.className = "cjp-pop-badge";
     el.innerHTML = getRandomMsg();
 
-    // Alternate randomly across 4 clean positions (Top-Left, Top-Right, Mid-Left, Mid-Right) away from bottom widgets
+    // Alternate randomly across 4 clean positions well below top navbar
     const positions = [
-      { top: "5.5rem", left: "1.25rem", bottom: "auto", right: "auto" },
-      { top: "5.5rem", right: "1.25rem", bottom: "auto", left: "auto" },
-      { top: "14rem", left: "1.25rem", bottom: "auto", right: "auto" },
-      { top: "14rem", right: "1.25rem", bottom: "auto", left: "auto" }
+      { top: "9.5rem", left: "1.25rem", bottom: "auto", right: "auto" },
+      { top: "9.5rem", right: "1.25rem", bottom: "auto", left: "auto" },
+      { top: "16rem", left: "1.25rem", bottom: "auto", right: "auto" },
+      { top: "16rem", right: "1.25rem", bottom: "auto", left: "auto" }
     ];
     const pos = positions[Math.floor(Math.random() * positions.length)];
     el.style.top = pos.top;
