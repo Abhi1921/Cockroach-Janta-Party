@@ -435,6 +435,7 @@
         <div>
           <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">About</h4>
           <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
+            <a href="faq.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">FAQ &amp; Help</a>
             <a href="press.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Press</a>
             <a href="contact.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Contact</a>
           </div>

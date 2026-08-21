@@ -15,6 +15,7 @@
 /revolutionaries.html           /revolutionaries                301!
 /terms.html                     /terms                          301!
 /privacy.html                   /privacy                        301!
+/faq.html                       /faq                            301!
 /rha.html                       /protests                       301!
 /jharkhand-protest.html             /protests                       301!
 /rha                            /protests                       301!
@@ -24,6 +25,19 @@
 /cockroach-janta-party.html     /cockroach-janta-party          301!
 /cockroach-janata-party.html    /cockroach-janata-party         301!
 /cocroach-janata-party.html     /cocroach-janata-party          301!
+/cjpmember.html                 /cjpmember                      301!
+/cjp-member.html                /cjp-member                     301!
+/cockroach-janta-part.html      /cockroach-janta-part           301!
+/cockroach-janta-party-join.html /cockroach-janta-party-join    301!
+/cjpofficials.html              /cjpofficials                   301!
+/cackroach-janta-party.html     /cackroach-janta-party          301!
+/the-cockroach-janta-party.html /the-cockroach-janta-party      301!
+/the-cocroach-janta-party.html  /the-cocroach-janta-party       301!
+/cockroach-janta-party-org.html /cockroach-janta-party-org      301!
+/cjp-party.html                 /cjp-party                      301!
+/cjp-join.html                  /cjp-join                       301!
+/cockroach-janta-party-india.html /cockroach-janta-party-india 301!
+/cjp-org.html                   /cjp-org                        301!
 
 # Internal rewrite rules to map clean URLs back to HTML files
 /vision                         /vision.html                    200
@@ -41,10 +55,24 @@
 /revolutionaries                /revolutionaries.html           200
 /terms                          /terms.html                     200
 /privacy                        /privacy.html                   200
+/faq                            /faq.html                       200
 /cockroach-janta-party-wale     /cockroach-janta-party-wale.html 200
 /cjp                            /cjp.html                       200
 /cockroach-janta-party          /cockroach-janta-party.html     200
 /cockroach-janata-party         /cockroach-janata-party.html    200
 /cocroach-janata-party          /cocroach-janata-party.html     200
+/cjpmember                      /cjpmember.html                 200
+/cjp-member                     /cjp-member.html                200
+/cockroach-janta-part           /cockroach-janta-part.html      200
+/cockroach-janta-party-join     /cockroach-janta-party-join.html 200
+/cjpofficials                   /cjpofficials.html              200
+/cackroach-janta-party          /cackroach-janta-party.html     200
+/the-cockroach-janta-party      /the-cockroach-janta-party.html 200
+/the-cocroach-janta-party       /the-cocroach-janta-party.html  200
+/cockroach-janta-party-org      /cockroach-janta-party-org.html 200
+/cjp-party                      /cjp-party.html                 200
+/cjp-join                       /cjp-join.html                  200
+/cockroach-janta-party-india    /cockroach-janta-party-india.html 200
+/cjp-org                        /cjp-org.html                   200
 
 
