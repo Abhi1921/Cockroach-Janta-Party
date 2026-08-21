@@ -24,11 +24,66 @@
     ["tracker.html", "Tracker", "📊"],
     ["members.html", "Members", "👥"],
     ["gallery.html", "Gallery", "framed_picture"],
-    ["join.html", "Join Us", "💳"],
     ["contact.html", "Contact", "📩"],
   ];
 
   const active = (file) => (page === file.replace(".html", "").replace(/^\//, "") ? " is-active" : "");
+
+  // 1,000 Indian Joined Members Generator for Live Marquee Ticker
+  const fnList = [
+    "Parmatam", "Ravindra", "Mangal", "Mahima", "Devendra", "Anoop", "Imran", "Raghuvir", "Chandrashekhar",
+    "Saurav", "Ashutosh", "Ajinkya", "Vaishnavi", "Ratna", "Aafreen", "Yogesh", "Ankit", "Pankaj", "Nilesh",
+    "Kavita", "Preeti", "Alok", "Suraj", "Tushar", "Mayank", "Nitin", "Deepika", "Swati", "Shweta", "Prashant",
+    "Sameer", "Faizan", "Arjun", "Kabir", "Tanvi", "Aarav", "Ananya", "Vihaan", "Aditya", "Ishaan", "Rahul",
+    "Priya", "Amit", "Neha", "Rohan", "Sneha", "Vikram", "Karan", "Siddharth", "Pooja", "Varun", "Riya",
+    "Kunal", "Deepak", "Suresh", "Manish", "Sunita", "Rajesh", "Kiran", "Abhishek", "Dev", "Divya", "Gaurav"
+  ];
+  const lnList = [
+    "Ras", "Pawar", "Chavhan", "Sharma", "Gupta", "Khan", "Sahani", "Badekar", "Das", "Ranka", "Shinde",
+    "Baliyan", "Nawaz", "Mallangi", "Singh", "Gaur", "Deshpande", "Ingale", "Bhardwaj", "Verma", "Patel",
+    "Kumar", "Shah", "Joshi", "Mehta", "Yadav", "Mishra", "Pandey", "Srivastava", "Chaudhary", "Thakur",
+    "Reddy", "Nair", "Rao", "Pillai", "Mukherjee", "Banerjee", "Ghosh", "Dutta", "Kulkarni", "Deshmukh",
+    "Patil", "Gowda", "Hegde", "Tripathi", "Tiwari", "Dubey", "Saxena", "Bhatnagar", "Agrawal"
+  ];
+  const locList = [
+    ["FARIDKOT", "PB"], ["VASAI MUMBAI", "MH"], ["YAVATMAL", "MH"], ["MUMBAI", "MH"], ["NOIDA", "UP"],
+    ["BARABANKI", "UP"], ["LATUR", "MH"], ["BALLIA", "UP"], ["PATNA", "BR"], ["LUCKNOW", "UP"],
+    ["BHOPAL", "MP"], ["JAIPUR", "RJ"], ["BENGALURU", "KA"], ["KOLKATA", "WB"], ["HYDERABAD", "TS"],
+    ["CHANDIGARH", "PB"], ["AHMEDABAD", "GJ"], ["PUNE", "MH"], ["RANCHI", "JH"], ["DEHRADUN", "UK"],
+    ["GUWAHATI", "AS"], ["BHUBANESWAR", "OD"], ["RAIPUR", "CG"], ["SURAT", "GJ"], ["INDORE", "MP"],
+    ["KANPUR", "UP"], ["VARANASI", "UP"], ["AGRA", "UP"], ["GORAKHPUR", "UP"], ["MEERUT", "UP"],
+    ["ALLAHABAD", "UP"], ["GAYA", "BR"], ["MUZAFFARPUR", "BR"], ["BHAGALPUR", "BR"], ["AMRITSAR", "PB"],
+    ["LUDHIANA", "PB"], ["JALANDHAR", "PB"], ["ROHTAK", "HR"], ["HISAR", "HR"], ["GURUGRAM", "HR"],
+    ["FARIDABAD", "HR"], ["NASHIK", "MH"], ["NAGPUR", "MH"], ["AURANGABAD", "MH"], ["SOLAPUR", "MH"],
+    ["KOLHAPUR", "MH"], ["THANE", "MH"], ["UDAIPUR", "RJ"], ["JODHPUR", "RJ"], ["KOTA", "RJ"],
+    ["AJMER", "RJ"], ["GWALIOR", "MP"], ["JABALPUR", "MP"], ["UJJAIN", "MP"], ["VIJAYAWADA", "AP"],
+    ["VISAKHAPATNAM", "AP"], ["COIMBATORE", "TN"], ["MADURAI", "TN"], ["KOCHI", "KL"]
+  ];
+
+  const dummyMembers = [];
+  for (let i = 0; i < 1000; i++) {
+    const fn = fnList[i % fnList.length];
+    const ln = lnList[(i * 7 + 3) % lnList.length];
+    const loc = locList[(i * 13 + 5) % locList.length];
+    const name = `${fn} ${ln}`;
+    const initials = (fn[0] + ln[0]).toUpperCase();
+    dummyMembers.push({ name, initials, city: loc[0], state: loc[1] });
+  }
+
+  const memberPillsHtml = dummyMembers.slice(0, 200).map(m => `
+    <div style="display: inline-flex; align-items: center; gap: 0.45rem; background: linear-gradient(135deg, #241c15 0%, #19130e 100%); border: 1.5px solid #443528; padding: 0.28rem 0.75rem 0.28rem 0.35rem; border-radius: 999px; font-family: var(--font-body); font-size: 0.78rem; box-shadow: 0 4px 10px rgba(0,0,0,0.4); flex-shrink: 0; transition: transform 0.2s, border-color 0.2s;">
+      <div style="width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: #ffffff; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 900; display: flex; align-items: center; justify-content: center; border: 1px solid #fbbf24; text-transform: uppercase; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+        ${m.initials}
+      </div>
+      <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+        <strong style="color: #ffffff; font-size: 0.82rem; font-weight: 700; display: flex; align-items: center; gap: 0.3rem;">
+          <span>${m.name}</span>
+          <span style="font-size: 0.65rem; color: #22c55e;">✔</span>
+        </strong>
+        <span style="font-family: var(--font-mono); font-size: 0.64rem; color: #fbbf24; font-weight: 800; text-transform: uppercase;">${m.city}, ${m.state}</span>
+      </div>
+    </div>
+  `).join('');
 
   const top = `
   <a class="skip-link" href="#main">Skip to content</a>
@@ -62,8 +117,6 @@
     </div>
   </div>
 
-
-
   <header class="nav site-header">
     <div class="nav-inner header-inner">
       <a class="brand" href="/" aria-label="Cockroach Janta Party home">
@@ -75,427 +128,75 @@
       </a>
       <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="primary-nav main-nav" id="mainNav" aria-label="Primary">
-        <ul class="mobile-nav-list" style="display: flex; align-items: center; gap: 0.9rem; list-style: none; margin: 0; padding: 0;">
-          <!-- Dropdown 1: CJP Core & Vision -->
-          <li class="cjp-mega-nav-item">
-            <a href="vision.html" class="${(active('vision') || active('index')).trim()}">
-              <span class="nav-icon">⚡</span><span class="nav-label">CJP Core ▾</span>
-            </a>
-            <div class="cjp-mega-dropdown">
-              <div class="cjp-dropdown-header" style="background: linear-gradient(135deg, #1e1b4b 0%, #311b92 100%); color: #fff;">
-                <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 900; color: #fbbf24; text-transform: uppercase;">⚡ CORE DIRECTORY</span>
-                <strong style="display: block; font-family: var(--font-display); font-size: 0.95rem; margin-top: 0.15rem;">Cockroach Janta Party Hub</strong>
-              </div>
-              <a href="/" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🏠</span>
-                <div>
-                  <div class="cjp-dropdown-title">Home Hub</div>
-                  <span class="cjp-dropdown-sub">Main CJP Movement Portal</span>
-                </div>
-                <span class="cjp-mega-dropdown-badge" style="background:#e0f2fe;color:#0369a1">Main</span>
-              </a>
-              <a href="cockroach-janta-party-wale.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🪳</span>
-                <div>
-                  <div class="cjp-dropdown-title">CJP Wale Desk</div>
-                  <span class="cjp-dropdown-sub">Official Domain &amp; Entity</span>
-                </div>
-                <span class="cjp-mega-dropdown-badge" style="background:#fef3c7;color:#92400e">Official</span>
-              </a>
-              <a href="vision.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">👁️</span>
-                <div>
-                  <div class="cjp-dropdown-title">Vision &amp; Ideology</div>
-                  <span class="cjp-dropdown-sub">Satire, Parody &amp; Youth Rights</span>
-                </div>
-              </a>
-              <a href="manifesto.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📜</span>
-                <div>
-                  <div class="cjp-dropdown-title">5 Demands Manifesto</div>
-                  <span class="cjp-dropdown-sub">Enacted Youth Reform Charter</span>
-                </div>
-                <span class="cjp-mega-dropdown-badge" style="background:#dcfce7;color:#15803d">Enacted</span>
-              </a>
-              <a href="members.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">👥</span>
-                <div>
-                  <div class="cjp-dropdown-title">30M+ Members</div>
-                  <span class="cjp-dropdown-sub">Verified Swarm Directory</span>
-                </div>
-              </a>
-              <a href="revolutionaries.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🔥</span>
-                <div>
-                  <div class="cjp-dropdown-title">Revolutionaries</div>
-                  <span class="cjp-dropdown-sub">Founders &amp; Student Leaders</span>
-                </div>
-              </a>
-              <a href="tracker.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📊</span>
-                <div>
-                  <div class="cjp-dropdown-title">Movement Tracker</div>
-                  <span class="cjp-dropdown-sub">Real-Time Metric Analytics</span>
-                </div>
-              </a>
-              <a href="dimagi-naxal.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill" style="background: #fef2f2; color: #dc2626;">🧠</span>
-                <div>
-                  <div class="cjp-dropdown-title">Dimagi Naxal Explainer</div>
-                  <span class="cjp-dropdown-sub">Media Dossier &amp; OpIndia Feature</span>
-                </div>
-              </a>
-              <a href="parody-history.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📖</span>
-                <div>
-                  <div class="cjp-dropdown-title">Parody History</div>
-                  <span class="cjp-dropdown-sub">Global Political Satire Archive</span>
-                </div>
-              </a>
-              <a href="faq.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">❓</span>
-                <div>
-                  <div class="cjp-dropdown-title">Full CJP FAQ</div>
-                  <span class="cjp-dropdown-sub">Knowledge Base &amp; Q&amp;A</span>
-                </div>
-              </a>
-            </div>
-          </li>
-
-          <!-- Dropdown 2: RHM & Meritocracy -->
-          <li class="cjp-mega-nav-item">
-            <a href="rha.html" class="${active('rha').trim()}" style="color: #dc2626; font-weight: 800;">
-              <span class="nav-icon">✊</span><span class="nav-label">RHM &amp; Merit ▾</span>
-            </a>
-            <div class="cjp-mega-dropdown" style="border-color: #dc2626;">
-              <div class="cjp-dropdown-header" style="background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%); color: #fff;">
-                <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 900; color: #fca5a5; text-transform: uppercase;">✊ MERITOCRACY CAMPAIGNS</span>
-                <strong style="display: block; font-family: var(--font-display); font-size: 0.95rem; margin-top: 0.15rem;">Reservation Hatao Movement</strong>
-              </div>
-              <a href="rha.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill" style="background: #fee2e2; color: #dc2626;">✊</span>
-                <div>
-                  <div class="cjp-dropdown-title">RHM Main Portal</div>
-                  <span class="cjp-dropdown-sub">28-State Student Rallies</span>
-                </div>
-              </a>
-              <a href="school-thik-karo.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill" style="background: #dcfce7; color: #16a34a;">🏫</span>
-                <div>
-                  <div class="cjp-dropdown-title">School Thik Karo</div>
-                  <span class="cjp-dropdown-sub">PM CARES Village School Drive</span>
-                </div>
-              </a>
-              <a href="neet-audit.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill" style="background: #f3e8ff; color: #7c3aed;">💻</span>
-                <div>
-                  <div class="cjp-dropdown-title">NEET Server Audit</div>
-                  <span class="cjp-dropdown-sub">Cryptographic Log Audit</span>
-                </div>
-              </a>
-              <a href="issues.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📋</span>
-                <div>
-                  <div class="cjp-dropdown-title">Public Issues Board</div>
-                  <span class="cjp-dropdown-sub">Exam Paper Leak Registry</span>
-                </div>
-              </a>
-              <a href="raise-issue.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📢</span>
-                <div>
-                  <div class="cjp-dropdown-title">Raise Your Voice</div>
-                  <span class="cjp-dropdown-sub">Submit Student Grievance</span>
-                </div>
-              </a>
-            </div>
-          </li>
-
-          <!-- Dropdown 3: Protests & State Swarms -->
-          <li class="cjp-mega-nav-item">
-            <a href="protests.html" class="${active('protests').trim()}" style="color: #dc2626; font-weight: 800;">
-              <span class="nav-icon">🚨</span><span class="nav-label">Protests &amp; Swarms ▾</span>
-            </a>
-            <div class="cjp-mega-dropdown" style="border-color: #dc2626;">
-              <div class="cjp-dropdown-header" style="background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); color: #fff;">
-                <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 900; color: #fef08a; text-transform: uppercase;">🚨 STATE SWARM CHAPTERS</span>
-                <strong style="display: block; font-family: var(--font-display); font-size: 0.95rem; margin-top: 0.15rem;">Protests &amp; State Swarms</strong>
-              </div>
-              <a href="protests.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill" style="background: #fee2e2; color: #dc2626;">🚨</span>
-                <div>
-                  <div class="cjp-dropdown-title">Protests &amp; Actions Hub</div>
-                  <span class="cjp-dropdown-sub">Nationwide Student Agitations</span>
-                </div>
-              </a>
-              <a href="delhi-chapter.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🏛️</span>
-                <div>
-                  <div class="cjp-dropdown-title">Delhi NCR Swarm</div>
-                  <span class="cjp-dropdown-sub">DU, JNU &amp; SC Campus Chapter</span>
-                </div>
-              </a>
-              <a href="bihar-chapter.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🔥</span>
-                <div>
-                  <div class="cjp-dropdown-title">Bihar BPSC Swarm</div>
-                  <span class="cjp-dropdown-sub">Patna Gandhi Maidan Chapter</span>
-                </div>
-              </a>
-              <a href="maharashtra-chapter.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🚩</span>
-                <div>
-                  <div class="cjp-dropdown-title">Maharashtra Swarm</div>
-                  <span class="cjp-dropdown-sub">Hingoli &amp; Pune MPSC Chapter</span>
-                </div>
-              </a>
-              <a href="bitchat.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🔐</span>
-                <div>
-                  <div class="cjp-dropdown-title">Encrypted BitChat Mesh</div>
-                  <span class="cjp-dropdown-sub">Offline P2P Rally Communication</span>
-                </div>
-              </a>
-              <a href="offline.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📡</span>
-                <div>
-                  <div class="cjp-dropdown-title">Stay Connected Offline</div>
-                  <span class="cjp-dropdown-sub">Internet Shutdown Protocols</span>
-                </div>
-              </a>
-            </div>
-          </li>
-
-          <!-- Dropdown 4: News & Media Desk -->
-          <li class="cjp-mega-nav-item">
-            <a href="articles.html" class="${active('articles').trim()}">
-              <span class="nav-icon">📰</span><span class="nav-label">News &amp; Media ▾</span>
-            </a>
-            <div class="cjp-mega-dropdown" style="border-color: #0284c7;">
-              <div class="cjp-dropdown-header" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%); color: #fff;">
-                <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 900; color: #bae6fd; text-transform: uppercase;">📰 PRESS &amp; WIRE DESK</span>
-                <strong style="display: block; font-family: var(--font-display); font-size: 0.95rem; margin-top: 0.15rem;">CJP News &amp; Media Desk</strong>
-              </div>
-              <a href="articles.html#all-news-tab" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill" style="background: #e0f2fe; color: #0284c7;">🌐</span>
-                <div>
-                  <div class="cjp-dropdown-title">Tab 1: All News Wire</div>
-                  <span class="cjp-dropdown-sub">Real-Time Breaking Bulletins</span>
-                </div>
-              </a>
-              <a href="articles.html#cjp-bulletins-tab" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📌</span>
-                <div>
-                  <div class="cjp-dropdown-title">Tab 2: Official Bulletins</div>
-                  <span class="cjp-dropdown-sub">Campaign Posters &amp; Bulletins</span>
-                </div>
-              </a>
-              <a href="articles.html#media-coverage-tab" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📺</span>
-                <div>
-                  <div class="cjp-dropdown-title">Tab 3: Google &amp; Live Media</div>
-                  <span class="cjp-dropdown-sub">BBC, Reuters &amp; TV News Wire</span>
-                </div>
-              </a>
-              <a href="anthem.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill" style="background: #fee2e2; color: #dc2626;">🎵</span>
-                <div>
-                  <div class="cjp-dropdown-title">CJP Hip-Hop Anthem</div>
-                  <span class="cjp-dropdown-sub">#MainBhiCockroach Spotify Track</span>
-                </div>
-              </a>
-              <a href="press.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📺</span>
-                <div>
-                  <div class="cjp-dropdown-title">Press Kit &amp; Media Bureau</div>
-                  <span class="cjp-dropdown-sub">High-Res Assets &amp; Releases</span>
-                </div>
-              </a>
-              <a href="contact.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📩</span>
-                <div>
-                  <div class="cjp-dropdown-title">Press &amp; Contact Bureau</div>
-                  <span class="cjp-dropdown-sub">Spokesperson Inquiry Desk</span>
-                </div>
-              </a>
-            </div>
-          </li>
-
-          <!-- Dropdown 5: Posters & Memes -->
-          <li class="cjp-mega-nav-item">
-            <a href="gallery.html" class="${(active('gallery') || active('memes')).trim()}">
-              <span class="nav-icon">🖼️</span><span class="nav-label">Posters &amp; Memes ▾</span>
-            </a>
-            <div class="cjp-mega-dropdown" style="border-color: #16a34a;">
-              <div class="cjp-dropdown-header" style="background: linear-gradient(135deg, #052e16 0%, #15803d 100%); color: #fff;">
-                <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 900; color: #86efac; text-transform: uppercase;">🖼️ ASSETS &amp; SATIRE ARCHIVE</span>
-                <strong style="display: block; font-family: var(--font-display); font-size: 0.95rem; margin-top: 0.15rem;">Posters &amp; Memes Vault</strong>
-              </div>
-              <a href="gallery.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill" style="background: #dcfce7; color: #15803d;">🖼️</span>
-                <div>
-                  <div class="cjp-dropdown-title">Visual Gallery (37+ Assets)</div>
-                  <span class="cjp-dropdown-sub">Campaign Posters &amp; Artworks</span>
-                </div>
-              </a>
-              <a href="memes.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill" style="background: #fef9c3; color: #ca8a04;">🪳</span>
-                <div>
-                  <div class="cjp-dropdown-title">Satirical Memes Vault</div>
-                  <span class="cjp-dropdown-sub">Viral Gen-Z Parody Graphics</span>
-                </div>
-              </a>
-              <a href="quotes.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">💬</span>
-                <div>
-                  <div class="cjp-dropdown-title">Iconic Quotes &amp; Statements</div>
-                  <span class="cjp-dropdown-sub">Courtroom Retorts &amp; Speeches</span>
-                </div>
-              </a>
-            </div>
-          </li>
-
-          <!-- Dropdown 6: Policies & Legal -->
-          <li class="cjp-mega-nav-item">
-            <a href="privacy.html" class="${(active('privacy') || active('terms') || active('transparency')).trim()}">
-              <span class="nav-icon">⚖️</span><span class="nav-label">Policies &amp; Legal ▾</span>
-            </a>
-            <div class="cjp-mega-dropdown">
-              <div class="cjp-dropdown-header" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: #fff;">
-                <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 900; color: #94a3b8; text-transform: uppercase;">⚖️ LEGAL &amp; GOVERNANCE</span>
-                <strong style="display: block; font-family: var(--font-display); font-size: 0.95rem; margin-top: 0.15rem;">Policies &amp; Site Standards</strong>
-              </div>
-              <a href="transparency.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">⚖️</span>
-                <div>
-                  <div class="cjp-dropdown-title">Legal &amp; Transparency</div>
-                  <span class="cjp-dropdown-sub">Financial Audit &amp; Disclosures</span>
-                </div>
-              </a>
-              <a href="privacy.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🔒</span>
-                <div>
-                  <div class="cjp-dropdown-title">Privacy Policy</div>
-                  <span class="cjp-dropdown-sub">Data Protection &amp; Zero Tracking</span>
-                </div>
-              </a>
-              <a href="terms.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📜</span>
-                <div>
-                  <div class="cjp-dropdown-title">Terms of Use</div>
-                  <span class="cjp-dropdown-sub">Website Rules &amp; Art 19 Rights</span>
-                </div>
-              </a>
-              <a href="disclaimer.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">⚠️</span>
-                <div>
-                  <div class="cjp-dropdown-title">Satire &amp; Parody Disclaimer</div>
-                  <span class="cjp-dropdown-sub">Non-ECI Party Notice</span>
-                </div>
-              </a>
-              <a href="community-guidelines.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📜</span>
-                <div>
-                  <div class="cjp-dropdown-title">Community Guidelines</div>
-                  <span class="cjp-dropdown-sub">Swarm Conduct &amp; Non-Violence</span>
-                </div>
-              </a>
-              <a href="protest-guidelines.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📢</span>
-                <div>
-                  <div class="cjp-dropdown-title">Protest Guidelines</div>
-                  <span class="cjp-dropdown-sub">Peaceful Assembly Rules</span>
-                </div>
-              </a>
-              <a href="bitchat-guidelines.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🔐</span>
-                <div>
-                  <div class="cjp-dropdown-title">BitChat Rules</div>
-                  <span class="cjp-dropdown-sub">Encrypted Mesh Safety</span>
-                </div>
-              </a>
-              <a href="cookies.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">🍪</span>
-                <div>
-                  <div class="cjp-dropdown-title">Cookie &amp; Ads Policy</div>
-                  <span class="cjp-dropdown-sub">AdSense Cookie Settings</span>
-                </div>
-              </a>
-              <a href="editorial-policy.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">📰</span>
-                <div>
-                  <div class="cjp-dropdown-title">Editorial &amp; IP Policy</div>
-                  <span class="cjp-dropdown-sub">News Verification &amp; Licensing</span>
-                </div>
-              </a>
-              <a href="refund-policy.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">💳</span>
-                <div>
-                  <div class="cjp-dropdown-title">Refund Policy</div>
-                  <span class="cjp-dropdown-sub">Voluntary Tip Dispute Help</span>
-                </div>
-              </a>
-              <a href="support-policy.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">💻</span>
-                <div>
-                  <div class="cjp-dropdown-title">Platform Support SLA</div>
-                  <span class="cjp-dropdown-sub">Server Uptime Commitments</span>
-                </div>
-              </a>
-              <a href="accessibility.html" class="cjp-mega-dropdown-link">
-                <span class="cjp-dropdown-icon-pill">♿</span>
-                <div>
-                  <div class="cjp-dropdown-title">Web Accessibility</div>
-                  <span class="cjp-dropdown-sub">WCAG 2.1 Compliance</span>
-                </div>
-              </a>
-            </div>
-          </li>
+        <ul class="mobile-nav-list" style="display: flex; align-items: center; gap: 0.55rem; list-style: none; margin: 0; padding: 0; flex-wrap: nowrap; white-space: nowrap; overflow-x: auto; scrollbar-width: none;">
+          <li><a href="vision.html" class="${active('vision').trim()}"><span>Vision</span></a></li>
+          <li><a href="manifesto.html" class="${active('manifesto').trim()}"><span>Manifesto</span></a></li>
+          <li><a href="articles.html" class="${active('articles').trim()}"><span>Articles</span></a></li>
+          <li><a href="gallery.html" class="${active('gallery').trim()}"><span>Gallery</span></a></li>
+          <li><a href="members.html" class="${active('members').trim()}"><span>Members</span></a></li>
+          <li><a href="issues.html" class="${active('issues').trim()}"><span>Issues</span></a></li>
+          <li><a href="tracker.html" class="${active('tracker').trim()}"><span>Tracker</span></a></li>
+          <li><a href="protests.html" class="${active('protests').trim()}"><span>Protests</span></a></li>
+          <li><a href="contact.html" class="${active('contact').trim()}"><span>Contact</span></a></li>
         </ul>
         <div class="mobile-nav-actions">
-          <a href="join.html" class="btn btn-solid btn-wide mobile-cta-join">✊ Join Swarm Free →</a>
-          <a href="donate.html" class="btn btn-ghost btn-wide mobile-cta-donate">💚 Support Developer</a>
+          <a href="join.html" onclick="event.preventDefault(); if (typeof window.openCjpJoinModal === 'function') { window.openCjpJoinModal('signup'); } else { window.location.href='join.html'; }" class="btn btn-solid btn-wide mobile-cta-join">JOIN Party →</a>
+          <a href="donate.html" class="btn btn-solid btn-wide mobile-cta-donate" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: #ffffff !important; font-weight: 900; border: 1.5px solid #fbbf24;">☕ SUPPORT THE DEV →</a>
         </div>
       </nav>
-      <div class="nav-actions header-actions">
+      <div class="nav-actions header-actions" style="display: flex; align-items: center; gap: 0.35rem; flex-shrink: 0;">
         <div class="lang-select" id="langSelect">
-          <button type="button" class="lang-btn" aria-expanded="false" aria-label="Select Language">
-            🌐 <span>ENGLISH</span> ▾
+          <button type="button" class="lang-btn" aria-expanded="false" aria-label="Select Language" style="padding: 0.45rem 0.65rem; font-size: 0.75rem;">
+            <span>ENGLISH</span> ▾
           </button>
           <div class="lang-menu" hidden role="listbox" aria-label="Languages">
-            <button type="button" class="lang-opt" role="option" data-lang="en" aria-selected="true">🌐 English</button>
-            <button type="button" class="lang-opt" role="option" data-lang="hi" aria-selected="false">🇮🇳 हिन्दी</button>
+            <button type="button" class="lang-opt" role="option" data-lang="en" aria-selected="true">English</button>
+            <button type="button" class="lang-opt" role="option" data-lang="hi" aria-selected="false">हिन्दी</button>
           </div>
         </div>
-        <a href="donate.html" class="btn btn-ghost${active("donate")}">Support site</a>
-        <a href="join.html" class="btn-pill" style="background: #dc2626; color: #ffffff; font-weight: 800; padding: 0.55rem 1.2rem; border-radius: 999px; white-space: nowrap; font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4); flex-shrink: 0;">✊ Join The Party</a>
+        <a href="donate.html" class="btn-support-header${active("donate")}" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: #ffffff !important; font-weight: 900; padding: 0.45rem 0.8rem; border-radius: 999px; white-space: nowrap; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; text-decoration: none; box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4); border: 1.5px solid #fbbf24; flex-shrink: 0; display: inline-flex; align-items: center; gap: 0.35rem;">☕ SUPPORT THE DEV →</a>
+        <a href="join.html" onclick="event.preventDefault(); if (typeof window.openCjpJoinModal === 'function') { window.openCjpJoinModal('signup'); } else { window.location.href='join.html'; }" class="btn-pill" style="background: #dc2626; color: #ffffff; font-weight: 800; padding: 0.5rem 0.85rem; border-radius: 999px; white-space: nowrap; font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; text-decoration: none; box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4); flex-shrink: 0;">JOIN Party →</a>
+        <a href="raise-issue.html" class="btn btn-solid" style="background: #ea580c; color: #ffffff; font-weight: 800; padding: 0.5rem 0.85rem; border-radius: 999px; white-space: nowrap; font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; text-decoration: none; flex-shrink: 0;">RAISE AN ISSUE →</a>
       </div>
     </div>
   </header>
 
-  <!-- Category Sub-Navbar Bar Below Header (Quick Hubs Access) -->
-  <div class="cjp-sub-navbar-bar">
-    <div class="cjp-sub-navbar-inner">
-      <a href="/" class="cjp-sub-nav-chip ${active('index')}">⚡ CJP Main Hub</a>
-      <a href="school-thik-karo.html" class="cjp-sub-nav-chip ${active('school-thik-karo')}" style="background: rgba(22,163,74,0.2); border-color: #16a34a; color: #86efac;">🏫 School Thik Karo</a>
-      <a href="neet-audit.html" class="cjp-sub-nav-chip ${active('neet-audit')}" style="background: rgba(147,51,234,0.2); border-color: #9333ea; color: #c084fc;">💻 NEET Server Audit</a>
-      <a href="dimagi-naxal.html" class="cjp-sub-nav-chip ${active('dimagi-naxal')}" style="background: rgba(220,38,38,0.25); border-color: #dc2626; color: #fca5a5;">🧠 Dimagi Naxal</a>
-      <a href="articles.html" class="cjp-sub-nav-chip ${active('articles')}">📰 News Desk (3 Tabs)</a>
-      <a href="gallery.html" class="cjp-sub-nav-chip ${active('gallery')}">🖼️ Posters Gallery</a>
-      <a href="anthem.html" class="cjp-sub-nav-chip ${active('anthem')}" style="background: rgba(220,38,38,0.2); border-color: #dc2626; color: #fee2e2;">🎵 CJP Anthem</a>
-      <a href="card.html" class="cjp-sub-nav-chip ${active('card')}">💳 Member Card</a>
-      <a href="faq.html" class="cjp-sub-nav-chip ${active('faq')}">❓ Full FAQ</a>
-      <a href="join.html" class="cjp-sub-nav-chip ${active('join')}" style="background: rgba(220,38,38,0.2); border-color: #dc2626; color: #fee2e2;">✊ Join Party</a>
-    </div>
-  </div>
-
-  <!-- Exam Crisis Charter Banner Bar -->
-  <div class="exam-banner-bar">
-    <div class="exam-banner-inner">
-      <div style="display:flex;flex-direction:column;gap:6px">
-        <span class="exam-banner-badge">Released 15 July 2026</span>
-        <span class="exam-banner-title">5 Demands to End India's Exam Crisis</span>
+  <!-- Live Swarm Members Joined Marquee Ticker Bar (Ultra Premium Dark Glassmorphism) -->
+  <div class="cjp-live-members-strip" style="background: linear-gradient(135deg, #18120c 0%, #0e0a07 100%); border-bottom: 2px solid #ca8a04; padding: 0.4rem 0.75rem; overflow: hidden; display: flex; align-items: center; gap: 0.85rem; user-select: none; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+    <!-- Counter Stats Badge Box -->
+    <div style="background: linear-gradient(135deg, #241b14 0%, #17120c 100%); color: #FFFDF7; border-radius: 10px; border: 1.5px solid #d97706; padding: 0.35rem 0.75rem; display: flex; align-items: center; gap: 0.85rem; flex-shrink: 0; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; box-shadow: 0 4px 16px rgba(217, 119, 6, 0.25);">
+      <div style="display: flex; align-items: center; gap: 0.35rem; margin-right: 0.15rem;">
+        <span style="width: 7px; height: 7px; background: #22c55e; border-radius: 50%; display: inline-block; animation: pulse 1.4s ease infinite; box-shadow: 0 0 8px #22c55e;"></span>
+        <span style="font-size: 0.62rem; color: #fbbf24; text-transform: uppercase; font-weight: 900; letter-spacing: 0.05em;">LIVE SWARM</span>
       </div>
-      <a class="btn-primary" style="flex-shrink:0" href="manifesto.html">Read the Charter →</a>
+      <div style="width: 1px; height: 18px; background: rgba(255,255,255,0.18);"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; line-height: 1;">
+        <span style="color: #fbbf24; font-size: 0.95rem; font-weight: 900;" id="tickerTodayCount">219</span>
+        <span style="font-size: 0.55rem; color: #a8a29e; text-transform: uppercase; margin-top: 0.15rem;">TODAY</span>
+      </div>
+      <div style="width: 1px; height: 18px; background: rgba(255,255,255,0.18);"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; line-height: 1;">
+        <span style="color: #ffffff; font-size: 0.95rem; font-weight: 900;" id="tickerWeekCount">14.7k</span>
+        <span style="font-size: 0.55rem; color: #a8a29e; text-transform: uppercase; margin-top: 0.15rem;">WEEK</span>
+      </div>
+      <div style="width: 1px; height: 18px; background: rgba(255,255,255,0.18);"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; line-height: 1;">
+        <span style="color: #ffffff; font-size: 0.95rem; font-weight: 900;" id="tickerMonthCount">68.0k</span>
+        <span style="font-size: 0.55rem; color: #a8a29e; text-transform: uppercase; margin-top: 0.15rem;">MONTH</span>
+      </div>
+      <div style="width: 1px; height: 18px; background: rgba(255,255,255,0.18);"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; line-height: 1;">
+        <span style="color: #fbbf24; font-size: 0.95rem; font-weight: 900;" id="tickerTotalCount">68.0k</span>
+        <span style="font-size: 0.55rem; color: #a8a29e; text-transform: uppercase; margin-top: 0.15rem;">TOTAL</span>
+      </div>
+    </div>
+
+    <!-- Infinite Marquee Track (Slow Motion: 280s duration) -->
+    <div style="flex: 1; overflow: hidden; position: relative; white-space: nowrap; mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);">
+      <div class="cjp-member-marquee-track" style="display: inline-flex; align-items: center; gap: 0.75rem; animation: cjpMarqueeScroll 280s linear infinite;">
+        ${memberPillsHtml}
+        ${memberPillsHtml}
+      </div>
     </div>
   </div>`;
 
@@ -564,22 +265,31 @@
 
   const bottom = `
   ${page === "index" || page === "" ? scannerBoxHtml : ""}
-  <section class="dispatch" id="dispatch">
-    <div class="dispatch-inner">
+  <section class="dispatch" id="dispatch" style="background: linear-gradient(135deg, #18120c 0%, #0d0a07 100%); color: #f5e6e0; padding: 3rem 1.25rem; border-top: 2px solid var(--line);">
+    <div class="dispatch-inner" style="max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: start;">
       <div class="dispatch-copy">
-        <p class="eyebrow">Stay updated</p>
-        <h2 id="dispatch-title">Campus alerts. <em>When it counts.</em></h2>
-        <p>Protest updates and manifesto notes — no spam.</p>
+        <p class="eyebrow" style="font-family: var(--font-mono); font-size: 0.75rem; color: #d97706; text-transform: uppercase; font-weight: 800; letter-spacing: 0.08em; margin-bottom: 0.5rem;">THE DISPATCH</p>
+        <h2 id="dispatch-title" style="font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin: 0 0 0.75rem; color: #ffffff; line-height: 1.15;">
+          One email. <em style="font-style: italic; color: #d97706; font-family: serif;">When it matters.</em>
+        </h2>
+        <p style="color: rgba(245,230,224,0.8); font-size: 0.95rem; line-height: 1.6; max-width: 45ch; margin: 0;">
+          New essays, manifesto updates, and the occasional open letter. No spam, no corporate drip sequence.
+        </p>
       </div>
-      <form class="dispatch-form" id="subscribeForm">
-        <div class="dispatch-row">
+      <form class="dispatch-form" id="subscribeForm" style="display: flex; flex-direction: column; gap: 0.65rem;">
+        <div class="dispatch-row" style="display: flex; gap: 0.5rem;">
           <label class="visually-hidden" for="subEmail" style="position:absolute;left:-9999px">Email</label>
-          <input type="email" id="subEmail" name="email" placeholder="you@example.in" required autocomplete="email">
-          <button type="submit" class="btn btn-accent">Subscribe</button>
+          <input type="email" id="subEmail" name="email" placeholder="you@example.in" required autocomplete="email" style="flex: 1; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); padding: 0.75rem 1rem; color: #fff; border-radius: 8px; font-size: 0.9rem;">
+          <button type="submit" class="btn btn-accent" style="background: #d97706; color: #1a1410; font-weight: 900; font-family: var(--font-mono); text-transform: uppercase; padding: 0.75rem 1.25rem; border: 0; border-radius: 8px; font-size: 0.85rem; cursor: pointer; letter-spacing: 0.04em;">SUBSCRIBE</button>
         </div>
 
+        <label style="display: flex; align-items: flex-start; gap: 0.55rem; margin: 0.4rem 0 0.2rem; font-size: 0.76rem; color: rgba(255,255,255,0.8); line-height: 1.45; text-align: left; cursor: pointer;">
+          <input type="checkbox" required style="margin-top: 0.18rem; accent-color: #d97706; flex-shrink: 0;">
+          <span>I understand my personal data may be processed by infrastructure providers <strong>outside India</strong> (hosting, database, email, analytics, captcha) as described in the <a href="privacy.html" style="color: #fbbf24; text-decoration: underline;" onclick="event.stopPropagation()">Privacy Policy</a>. *</span>
+        </label>
+
         <!-- Cloudflare Turnstile Captcha Widget -->
-        <div class="cf-turnstile-box" id="cfTurnstileBox" onclick="toggleTurnstileCaptcha()" style="background: #23201b; border: 1.5px solid rgba(255,255,255,0.22); border-radius: 10px; padding: 0.65rem 0.9rem; margin: 0.75rem 0; display: flex; align-items: center; justify-content: space-between; cursor: pointer; transition: all 0.25s ease; user-select: none;">
+        <div class="cf-turnstile-box" id="cfTurnstileBox" onclick="toggleTurnstileCaptcha()" style="background: #23201b; border: 1.5px solid rgba(255,255,255,0.22); border-radius: 8px; padding: 0.65rem 0.9rem; margin: 0.25rem 0; display: flex; align-items: center; justify-content: space-between; cursor: pointer; transition: all 0.25s ease; user-select: none;">
           <div style="display: flex; align-items: center; gap: 0.65rem;">
             <div id="cfCheckBadge" style="width: 24px; height: 24px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.45); background: #ffffff; display: flex; align-items: center; justify-content: center; transition: all 0.25s ease; flex-shrink: 0;">
             </div>
@@ -596,172 +306,163 @@
           </div>
         </div>
 
-        <p class="form-note">One email, when there's something to say. Unsubscribe anytime.</p>
+        <p class="form-note" style="font-size: 0.75rem; color: rgba(245,230,224,0.65); margin: 0.25rem 0 0;">One email, when there's something to say. Unsubscribe anytime.</p>
         <p class="form-success" id="subscribeMsg" hidden></p>
       </form>
     </div>
   </section>
-  <footer class="site-footer">
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-top-grid">
-        <div style="display: flex; flex-direction: column; gap: 1rem;">
-          <a href="/" class="footer-brand" style="text-decoration: none; color: inherit;">
-            <img src="assets/img/logo.webp" alt="Cockroach Janta Party logo" width="44" height="44" decoding="async">
-            <div>
-              <strong>Cockroach Janta Party</strong>
-              <p style="margin: 0.5rem 0 0; font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.75);">
-                A political party for the lazy, the unemployed, and the chronically correct. Headquartered wherever the wifi works.
-              </p>
-            </div>
+  <footer class="site-footer" style="background: #130f0a !important; color: #FFFDF7 !important; border-top: 3.5px solid #dc2626 !important; padding: 2.75rem 1.25rem 3.5rem !important; box-shadow: inset 0 20px 40px rgba(0,0,0,0.8) !important;">
+    <div style="max-width: var(--max); margin: 0 auto;">
+      
+      <!-- Top Row: Brand Header & 8 Social Links Pills -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; border-bottom: 1.5px solid rgba(255,255,255,0.12); padding-bottom: 1.75rem; margin-bottom: 2rem;">
+        <a href="/" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none; color: #fff;">
+          <img src="assets/img/logo.webp" alt="Cockroach Janta Party logo" width="48" height="48" style="border-radius: 50%; border: 2px solid #e0651e;">
+          <div>
+            <strong style="font-family: var(--font-display); font-size: 1.3rem; color: #ffffff; display: block; line-height: 1.1;">COCKROACH JANTA PARTY</strong>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #fbbf24; font-weight: 800;">कॉकरोच जनता पार्टी Est. 2026</span>
+          </div>
+        </a>
+
+        <!-- 8 Official Social Links Pills -->
+        <div class="footer-social-strip" style="display: flex; flex-wrap: wrap; gap: 0.55rem;">
+          <a href="https://x.com/AbhijeetDipke" target="_blank" rel="noopener" aria-label="X Abhijeet Dipke" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 0.45rem 0.85rem; border-radius: 999px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>𝕏 Abhijeet Dipke</span>
           </a>
-          <div class="footer-social-strip">
-            <a href="https://youtube.com/@cockroachjantaparty" target="_blank" rel="noopener" aria-label="YouTube">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              <span>YouTube</span>
-            </a>
-            <a href="https://instagram.com/cockroachjantaparty" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              <span>Instagram</span>
-            </a>
-            <a href="https://x.com/cjp_official" target="_blank" rel="noopener" aria-label="X Twitter">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              <span>X (Twitter)</span>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61590017357770" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              <span>Facebook</span>
-            </a>
-            <a href="https://t.me/cockroachjantaparty" target="_blank" rel="noopener" aria-label="Telegram">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-1.97 9.28c-.15.68-.55.84-1.12.52l-3.01-2.22-1.45 1.4c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.22-.05-.34-.37-.13l-6.87 4.33-2.96-.92c-.64-.2-.65-.64.13-.95l11.57-4.46c.54-.2 1.01.13.89.92z"/></svg>
-              <span>Telegram</span>
-            </a>
-            <a href="https://whatsapp.com/channel/cockroachjantaparty" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-              <span>WhatsApp</span>
-            </a>
-            <a href="https://open.spotify.com/artist/cjp" target="_blank" rel="noopener" aria-label="Spotify">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 4.38-1.38 9.841-.719 13.56 1.56.36.24.54.84.18 1.261zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
-              <span>Spotify</span>
-            </a>
-            <a href="vision.html#wikipedia-archive" aria-label="Wikipedia Entry">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.93 8zM12 4.04c.83 1.2 1.48 2.59 1.91 3.96h-3.82c.43-1.37 1.08-2.76 1.91-3.96zM4.26 14a7.82 7.82 0 010-4h3.38a17.8 17.8 0 000 4H4.26zm.81 2h2.95c.37 1.3.85 2.5 1.38 3.56A8.03 8.03 0 015.07 16zm2.95-8H5.07a8.03 8.03 0 013.33-3.56A15.65 15.65 0 007.02 8zM12 19.96c-.83-1.2-1.48-2.59-1.91-3.96h3.82c-.43 1.37-1.08 2.76-1.91 3.96zM9.64 14a15.8 15.8 0 010-4h4.72a15.8 15.8 0 010 4H9.64zm4.98 5.56c.53-1.06 1.01-2.26 1.38-3.56h2.95a8.03 8.03 0 01-3.33 3.56zM16.36 14a17.8 17.8 0 000-4h3.38a7.82 7.82 0 010 4h-3.38z"/></svg>
-              <span>Wikipedia Entry</span>
-            </a>
-          </div>
-        </div>
-        <div class="footer-cols">
-          <div>
-            <h4>Vision &amp; Content</h4>
-            <a href="vision.html">Vision &amp; Ideology</a>
-            <a href="manifesto.html">The Manifesto (5 Demands)</a>
-            <a href="articles.html">Articles &amp; News Desk</a>
-            <a href="gallery.html">Visual Posters Gallery</a>
-            <a href="tracker.html">Movement Tracker</a>
-            <a href="protests.html">Protests &amp; Actions</a>
-            <a href="topics.html">Hot Topics &amp; Policy Debates</a>
-            <a href="memes.html">Satirical Memes Vault</a>
-            <a href="issues.html">Public Issues Board</a>
-            <a href="quotes.html">Iconic Quotes &amp; Statements</a>
-            <a href="dimagi-naxal.html">Dimagi Naxal Explainer</a>
-            <a href="vision.html#wikipedia-archive">Wikipedia Archive Entry</a>
-          </div>
-          <div>
-            <h4>Participate &amp; Join</h4>
-            <a href="join.html">Join the Swarm</a>
-            <a href="members.html">30M+ Members Directory</a>
-            <a href="card.html">Get Your Member Card</a>
-            <a href="raise-issue.html">Raise Your Voice / Issue</a>
-            <a href="leave.html">Leave the Swarm (Opt-Out)</a>
-            <a href="donate.html">Support the Developer</a>
-            <a href="cockroach-janta-party-wale.html">CJP Wale Official Desk</a>
-            <a href="revolutionaries.html">Founders &amp; Revolutionaries</a>
-          </div>
-          <div>
-            <h4>Community &amp; Guidelines</h4>
-            <a href="community-guidelines.html">Community Guidelines</a>
-            <a href="protest-guidelines.html">Protest Guidelines</a>
-            <a href="bitchat-guidelines.html">Responsible BitChat Use</a>
-            <a href="offline.html">Stay Connected Offline</a>
-            <a href="press.html">Press Kit &amp; Media Bureau</a>
-            <a href="contact.html">Press &amp; Contact Bureau</a>
-          </div>
-          <div>
-            <h4>Legal &amp; Transparency</h4>
-            <a href="transparency.html">Legal &amp; Transparency</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Use</a>
-            <a href="disclaimer.html">Satire &amp; Parody Disclaimer</a>
-            <a href="cookies.html">Cookie &amp; Advertising Policy</a>
-            <a href="editorial-policy.html">Editorial &amp; IP Policy</a>
-            <a href="refund-policy.html">Refund Policy</a>
-            <a href="support-policy.html">Platform Support SLA</a>
-            <a href="accessibility.html">Web Accessibility</a>
-          </div>
+          <a href="https://www.instagram.com/abhijeetdipke/" target="_blank" rel="noopener" aria-label="Instagram Abhijeet Dipke" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 0.45rem 0.85rem; border-radius: 999px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram (Abhijeet Dipke)</span>
+          </a>
+          <a href="https://x.com/cjp_official" target="_blank" rel="noopener" aria-label="X Official" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 0.45rem 0.85rem; border-radius: 999px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>𝕏 X (Official)</span>
+          </a>
+          <a href="https://www.instagram.com/cockroachjantaparty/" target="_blank" rel="noopener" aria-label="Instagram Official" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 0.45rem 0.85rem; border-radius: 999px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram (Official)</span>
+          </a>
+          <a href="https://youtube.com/@cockroachjantaparty" target="_blank" rel="noopener" aria-label="YouTube" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 0.45rem 0.85rem; border-radius: 999px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span>YouTube</span>
+          </a>
+          <a href="https://www.reddit.com/r/cockroachjantaparty" target="_blank" rel="noopener" aria-label="Reddit" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 0.45rem 0.85rem; border-radius: 999px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.056 1.601a5.362 5.362 0 0 1 .057.739c0 3.655-4.225 6.618-9.438 6.618-5.213 0-9.438-2.963-9.438-6.618 0-.256.027-.506.076-.75-.601-.274-1.018-.883-1.018-1.59 0-.968.786-1.754 1.754-1.754.463 0 .88.18 1.185.474 1.196-.867 2.868-1.437 4.71-1.503l.972-4.555a.401.401 0 0 1 .472-.309l3.076.65a1.247 1.247 0 0 1 1.257-.991z"/></svg>
+            <span>Reddit</span>
+          </a>
+          <a href="https://whatsapp.com/channel/cockroachjantaparty" target="_blank" rel="noopener" aria-label="WhatsApp" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 0.45rem 0.85rem; border-radius: 999px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://t.me/cockroachjantaparty" target="_blank" rel="noopener" aria-label="Telegram" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 0.45rem 0.85rem; border-radius: 999px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-1.97 9.28c-.15.68-.55.84-1.12.52l-3.01-2.22-1.45 1.4c-.16.16-.3.3-.61.3l.21-3.05 5.56-5.02c.24-.22-.05-.34-.37-.13l-6.87 4.33-2.96-.92c-.64-.2-.65-.64.13-.95l11.57-4.46c.54-.2 1.01.13.89.92z"/></svg>
+            <span>Telegram</span>
+          </a>
         </div>
       </div>
 
-      <!-- ALL COCKROACH JANTA PARTY WALE PAGES & ALIASES DIRECTORY BAND -->
-      <div class="cjp-footer-directory-band">
-        <div class="cjp-directory-header">
-          <span class="cjp-directory-badge">🪳 COCKROACH JANTA PARTY WALE · OFFICIAL DIRECTORY</span>
-          <span class="cjp-directory-sub">Full Index of 45+ Movement Pages &amp; Aliases</span>
+      <!-- Footer Multi-Column Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.75rem; margin-bottom: 2.5rem; text-align: left;">
+        
+        <!-- Column 1: The Party -->
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">The Party</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
+            <a href="vision.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Vision</a>
+            <a href="manifesto.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">The Manifesto</a>
+            <a href="articles.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Articles</a>
+            <a href="gallery.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Gallery</a>
+            <a href="tracker.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Tracker</a>
+            <a href="protests.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Protests</a>
+            <a href="topics.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Topics</a>
+            <a href="memes.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Memes</a>
+            <a href="issues.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Issues</a>
+            <a href="manifesto.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Manifesto</a>
+            <a href="articles.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">News</a>
+            <a href="quotes.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Quotes</a>
+          </div>
         </div>
-        <div class="cjp-footer-directory-grid">
-          <a href="cockroach-janta-party-wale.html">🪳 Party Wale Desk</a>
-          <a href="cockroach-janta-party.html">⚡ CJP Official</a>
-          <a href="cockroach-janata-party.html">🔥 CJP Janata Portal</a>
-          <a href="cocroach-janata-party.html">🌐 CJP Archive</a>
-          <a href="cjp.html">📌 Main Hub</a>
-          <a href="dimagi-naxal.html">🧠 Dimagi Naxal</a>
-          <a href="vision.html">👁️ Vision</a>
-          <a href="manifesto.html">📜 Manifesto</a>
-          <a href="articles.html">📰 Articles</a>
-          <a href="gallery.html">🖼️ Gallery</a>
-          <a href="tracker.html">📊 Tracker</a>
-          <a href="protests.html">🚨 Protests</a>
-          <a href="topics.html">🔥 Topics</a>
-          <a href="memes.html">🪳 Memes</a>
-          <a href="issues.html">📋 Issues</a>
-          <a href="quotes.html">💬 Quotes</a>
-          <a href="join.html">✊ Join Swarm</a>
-          <a href="members.html">👥 Members</a>
-          <a href="card.html">💳 Member Card</a>
-          <a href="raise-issue.html">📢 Raise Voice</a>
-          <a href="leave.html">⚙️ Leave Swarm</a>
-          <a href="donate.html">💚 Support Dev</a>
-          <a href="community-guidelines.html">📜 Rules</a>
-          <a href="protest-guidelines.html">📢 Protest Rules</a>
-          <a href="bitchat-guidelines.html">🔐 BitChat Rules</a>
-          <a href="offline.html">📡 Offline Mesh</a>
-          <a href="transparency.html">⚖️ Transparency</a>
-          <a href="privacy.html">🔒 Privacy</a>
-          <a href="terms.html">⚖️ Terms</a>
-          <a href="disclaimer.html">⚠️ Disclaimer</a>
-          <a href="cookies.html">🍪 Cookies</a>
-          <a href="editorial-policy.html">📰 Editorial IP</a>
-          <a href="refund-policy.html">💳 Refunds</a>
-          <a href="support-policy.html">💻 Dev SLA</a>
-          <a href="accessibility.html">♿ Accessibility</a>
-          <a href="jharkhand-protest.html">🔥 Jharkhand Siege</a>
-          <a href="school-thik-karo.html">🏫 School Thik Karo</a>
-          <a href="neet-audit.html">💻 NEET Server Audit</a>
-          <a href="faq.html">❓ FAQ</a>
-          <a href="delhi-chapter.html">🏛️ Delhi</a>
-          <a href="bihar-chapter.html">🔥 Bihar</a>
-          <a href="maharashtra-chapter.html">🚩 Maharashtra</a>
-          <a href="bitchat.html">🔐 BitChat P2P</a>
-          <a href="parody-history.html">📖 Parody History</a>
-          <a href="anthem.html">🎵 CJP Anthem</a>
-          <a href="press.html">📺 Press Kit</a>
-          <a href="contact.html">📩 Contact Bureau</a>
+
+        <!-- Column 2: Participate -->
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">Participate</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
+            <a href="join.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Join the swarm</a>
+            <a href="members.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Members</a>
+            <a href="card.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Get your card</a>
+            <a href="raise-issue.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Raise your voice</a>
+            <a href="leave.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Leave the swarm</a>
+            <a href="donate.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Support the Developer</a>
+          </div>
+        </div>
+
+        <!-- Column 3: Community -->
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">Community</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
+            <a href="community-guidelines.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Community Guidelines</a>
+            <a href="protest-guidelines.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Protest Guidelines</a>
+            <a href="bitchat-guidelines.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Responsible BitChat use</a>
+            <a href="offline.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Stay connected offline</a>
+          </div>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">Legal</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
+            <a href="transparency.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Legal &amp; Transparency</a>
+            <a href="privacy.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Privacy Policy</a>
+            <a href="terms.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Terms of Use</a>
+            <a href="disclaimer.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Disclaimer</a>
+            <a href="cookies.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Cookie Policy</a>
+            <a href="editorial-policy.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Editorial Policy</a>
+          </div>
+        </div>
+
+        <!-- Column 5: Policies & site -->
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">Policies &amp; site</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
+            <a href="transparency.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Transparency</a>
+            <a href="refund-policy.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Refund Policy</a>
+            <a href="support-policy.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Support Policy</a>
+            <a href="accessibility.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Accessibility</a>
+          </div>
+        </div>
+
+        <!-- Column 6: About -->
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">About</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
+            <a href="press.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Press</a>
+            <a href="contact.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Contact</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div style="border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.7); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+        <div>
+          <div>© 2026 The Cockroach Janta Party · All rights reserved.</div>
+          <div style="color: #fbbf24; font-weight: 700; margin-top: 0.2rem;">⚠ A work of satire</div>
+        </div>
+        <div style="display: flex; gap: 0.75rem; font-size: 0.78rem;">
+          <a href="terms.html" style="color: rgba(255,255,255,0.85); text-decoration: none;">Legal</a>
+          <span>·</span>
+          <a href="privacy.html" style="color: rgba(255,255,255,0.85); text-decoration: none;">Privacy</a>
+          <span>·</span>
+          <a href="terms.html" style="color: rgba(255,255,255,0.85); text-decoration: none;">Terms</a>
+          <span>·</span>
+          <a href="vision.html" style="color: rgba(255,255,255,0.85); text-decoration: none;">About</a>
+          <span>·</span>
+          <a href="press.html" style="color: rgba(255,255,255,0.85); text-decoration: none;">Press</a>
+          <span>·</span>
+          <a href="contact.html" style="color: rgba(255,255,255,0.85); text-decoration: none;">Contact</a>
         </div>
       </div>
 
-      <p style="margin-top: 1rem; font-size: 0.76rem; color: rgba(255,255,255,0.65);">Sources: public press &amp; Wikipedia · Not an ECI-registered political party · Protected under Art. 19(1)(a)</p>
-    </div>
-    <div style="background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.08); padding: 0.85rem 1.25rem 5.5rem; font-size: 0.72rem; color: rgba(255,255,255,0.65); text-align: center; line-height: 1.5; font-family: var(--font-body);">
-      <strong>Legal Notice &amp; Disclaimer:</strong> Cockroach Janta Party Wale (CJP) is a satirical political parody and civic youth movement. It is NOT an ECI-registered political party, does not field election candidates, and does not collect electoral funds. All content is protected under Article 19(1)(a) of the Constitution of India. Voluntary tips are for website development &amp; server hosting only.
     </div>
   </footer>
   <button type="button" class="live-chat swarm-chat-btn" id="liveChat" aria-label="Open CJP Swarm Chat" style="position: fixed !important; right: 1.1rem !important; bottom: 1.1rem !important; z-index: 9997 !important; background: #17120c !important; border: 2px solid #ca8a04 !important; border-radius: 999px !important; padding: 0.55rem 1.15rem !important; display: inline-flex !important; align-items: center !important; gap: 0.55rem !important; color: #fbbf24 !important; font-family: var(--font-mono) !important; font-size: 0.85rem !important; font-weight: 900 !important; letter-spacing: 0.05em !important; box-shadow: 0 10px 30px rgba(202, 138, 4, 0.45), 0 0 20px rgba(220, 38, 38, 0.25) !important; cursor: pointer !important;">
@@ -817,10 +518,7 @@
   <a href="contact.html" id="waLeadBtn" aria-label="Contact Bureau Lead" class="cjp-wa-floating-btn" style="position: fixed !important; left: 1.1rem !important; bottom: 1.1rem !important; z-index: 9998 !important;">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.008 2.2c-5.448 0-9.879 4.43-9.883 9.879-.001 1.97.513 3.892 1.492 5.59l.327.568-1.073 3.92 4.01-1.053.551.327c1.626.966 3.486 1.477 5.393 1.478 5.451 0 9.883-4.432 9.887-9.885.002-2.64-1.02-5.122-2.879-6.983C17.18 3.22 14.7 2.2 12.008 2.2zm5.424 13.064c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.669.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
     <span>💬 Contact Bureau</span>
-  </a>
-  <button type="button" id="cacheClearBtn" aria-label="Clear Cache and Hard Refresh" title="Clear Cache &amp; Hard Refresh" style="position: fixed; top: 4.8rem; right: 1.1rem; z-index: 9999; width: 42px; height: 42px; border-radius: 50%; background: #dc2626; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 24px rgba(220,38,38,0.55); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1.0)'">
-    <svg class="cache-refresh-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-  </button>`;
+  </a>`;
 
   const mountTop = document.getElementById("site-top");
   const mountBottom = document.getElementById("site-bottom");
@@ -1033,6 +731,35 @@
     fh.src = "assets/js/form-handler.js";
     fh.defer = true;
     document.head.appendChild(fh);
+  }
+
+  // Inject Join Modal Controller on all pages
+  if (!document.getElementById("cjp-join-modal-script")) {
+    const ms = document.createElement("script");
+    ms.id = "cjp-join-modal-script";
+    ms.src = "assets/js/join-modal.js?v=20260820_1228";
+    ms.defer = true;
+    document.head.appendChild(ms);
+  }
+
+  // Universal Join Modal Fallback Handler
+  if (typeof window.openCjpJoinModal !== "function") {
+    window.openCjpJoinModal = function (mode = 'signup') {
+      const triggerModal = () => {
+        if (typeof window.openCjpJoinModal === "function" && window.openCjpJoinModal !== arguments.callee) {
+          window.openCjpJoinModal(mode);
+        }
+      };
+      if (!document.getElementById("cjp-join-modal-script")) {
+        const s = document.createElement("script");
+        s.id = "cjp-join-modal-script";
+        s.src = "assets/js/join-modal.js?v=20260820_1228";
+        s.onload = triggerModal;
+        document.head.appendChild(s);
+      } else {
+        setTimeout(triggerModal, 150);
+      }
+    };
   }
 
   // Inject Section 2 Scanner Band on Every Page
@@ -1292,38 +1019,7 @@
   }
 
 
-  // Instant Cache Purge & Hard Refresh Event Handler
-  const cacheClearBtn = document.getElementById("cacheClearBtn");
-  if (cacheClearBtn) {
-    cacheClearBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      const icon = cacheClearBtn.querySelector("svg");
-      if (icon) icon.classList.add("cjp-spinning");
-      cacheClearBtn.style.background = "#16a34a";
-      cacheClearBtn.title = "Purging Cache & Hard Refreshing...";
-      try {
-        localStorage.clear();
-        sessionStorage.clear();
-        if ('caches' in window) {
-          caches.keys().then(function(names) {
-            names.forEach(function(name) {
-              caches.delete(name);
-            });
-          });
-        }
-        if (navigator.serviceWorker) {
-          navigator.serviceWorker.getRegistrations().then(function(registrations) {
-            registrations.forEach(function(r) { r.unregister(); });
-          });
-        }
-      } catch (err) {
-        console.log("Cache purge error:", err);
-      }
-      setTimeout(function () {
-        window.location.href = window.location.pathname + "?cache_buster=" + Date.now();
-      }, 350);
-    });
-  }
+
 
   // Real-Time Live Stats Engine
   const initStatsEngine = () => {

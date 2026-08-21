@@ -472,76 +472,7 @@
     go(0);
   });
 
-  // Random screen popups with boys and girls names joining Cockroach Janta Party
-  const boysNames = ["Aman", "Rahul", "Rohan", "Aditya", "Vikram", "Dev", "Farhan", "Kunal", "Sameer", "Yash", "Arjun", "Kabir", "Shivam", "Prateek", "Ayush", "Varun", "Abhinav", "Gaurav", "Nitin", "Deepak"];
-  const girlsNames = ["Priya", "Ananya", "Neha", "Sneha", "Riya", "Zoya", "Meera", "Ishita", "Kavya", "Pooja", "Shreya", "Divya", "Anjali", "Simran", "Tanvi", "Sanya", "Bhumika", "Kriti", "Aditi", "Muskan"];
-  const indianCities = ["Delhi", "Mumbai", "Pune", "Jaipur", "Lucknow", "Patna", "Indore", "Surat", "Bengaluru", "Kolkata", "Bhopal", "Chandigarh", "Ahmedabad", "Nagpur"];
 
-  const getRandomMsg = () => {
-    const isGirl = Math.random() > 0.5;
-    const nameList = isGirl ? girlsNames : boysNames;
-    const name = nameList[Math.floor(Math.random() * nameList.length)];
-    const city = indianCities[Math.floor(Math.random() * indianCities.length)];
-    const id = 29700 + Math.floor(Math.random() * 600);
-    const avatar = isGirl ? "👩" : "👨";
-
-    const actions = [
-      `joined Cockroach Janta Party`,
-      `took free CJP membership`,
-      `joined #MainBhiCockroach`,
-      `registered as Member #${id}`,
-      `joined the youth movement`
-    ];
-    const action = actions[Math.floor(Math.random() * actions.length)];
-
-    return `
-      <div class="cjp-pop-avatar">${avatar}</div>
-      <div class="cjp-pop-body">
-        <span class="cjp-pop-meta">🔴 LIVE · ${city}</span>
-        <span class="cjp-pop-msg"><strong>${name}</strong> ${action}</span>
-      </div>
-      <div class="cjp-pop-cta">Join →</div>
-    `;
-  };
-
-  const checkIsIndexPage = () => {
-    const p = (document.body?.dataset?.page || "").toLowerCase();
-    const loc = (window.location.pathname || "").toLowerCase();
-    return p === "index" || p === "" || loc.endsWith("index.html") || loc.endsWith("/") || document.querySelector(".hero-home") !== null;
-  };
-
-  const spawnRandomPop = () => {
-    if (!checkIsIndexPage()) return;
-    // Strictly ONLY 1 active popup on screen at any time
-    if (document.querySelectorAll(".cjp-pop-badge").length > 0) return;
-
-    const el = document.createElement("a");
-    el.href = "join.html";
-    el.className = "cjp-pop-badge";
-    el.innerHTML = getRandomMsg();
-
-    // Alternate randomly across 4 clean positions well below top navbar
-    const positions = [
-      { top: "9.5rem", left: "1.25rem", bottom: "auto", right: "auto" },
-      { top: "9.5rem", right: "1.25rem", bottom: "auto", left: "auto" },
-      { top: "16rem", left: "1.25rem", bottom: "auto", right: "auto" },
-      { top: "16rem", right: "1.25rem", bottom: "auto", left: "auto" }
-    ];
-    const pos = positions[Math.floor(Math.random() * positions.length)];
-    el.style.top = pos.top;
-    el.style.bottom = pos.bottom;
-    el.style.left = pos.left;
-    el.style.right = pos.right;
-
-    document.body.appendChild(el);
-    setTimeout(() => el.remove(), 4950);
-  };
-
-  // Run popups strictly on index.html
-  if (checkIsIndexPage()) {
-    setTimeout(spawnRandomPop, 400);
-    setInterval(spawnRandomPop, 5200);
-  }
 
   // Tap & Pay scanner blur reveal handler with auto GPay / UPI Note: CJP
   const initScannerReveal = () => {

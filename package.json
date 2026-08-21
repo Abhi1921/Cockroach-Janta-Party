@@ -1,13 +1,15 @@
 {
   "name": "cockroach-janta-party",
   "version": "1.0.0",
-  "description": "Cockroach Janta Party Official Website with Mailtrap Integration",
-  "main": "api/send-email.js",
+  "description": "Cockroach Janta Party Official Website with Express API & Mailtrap Integration",
+  "main": "server.js",
   "scripts": {
-    "start": "npx -y serve . -l 3001",
-    "dev": "npx -y serve . -l 3001"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "dependencies": {
+    "express": "^4.19.2",
     "nodemailer": "^6.10.1"
   }
 }
+

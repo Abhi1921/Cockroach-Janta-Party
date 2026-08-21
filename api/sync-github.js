@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
     return res.status(200).end();
   }
 
-  const scriptPath = path.resolve(__dirname, '..', 'auto-update-and-push.sh');
+  const scriptPath = path.resolve(__dirname, '..', 'scripts', 'auto-update-and-push.sh');
 
   exec(`bash "${scriptPath}"`, (error, stdout, stderr) => {
     if (error) {
