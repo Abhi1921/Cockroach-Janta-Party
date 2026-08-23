@@ -41,7 +41,16 @@
     { "source": "/cjp-member(.*)", "destination": "/members", "permanent": true },
     { "source": "/cjpofficials(.*)", "destination": "/members", "permanent": true },
     { "source": "/cjp-join(.*)", "destination": "/join", "permanent": true },
-    { "source": "/cockroach-janta-party-join(.*)", "destination": "/join", "permanent": true }
+    { "source": "/cockroach-janta-party-join(.*)", "destination": "/join", "permanent": true },
+    { "source": "/parody-history(.*)", "destination": "/about", "permanent": true },
+    { "source": "/rha(.*)", "destination": "/", "permanent": true },
+    { "source": "/dimagi-naxal(.*)", "destination": "/", "permanent": true },
+    { "source": "/school-thik-karo(.*)", "destination": "/campaigns", "permanent": true },
+    { "source": "/jharkhand-protest(.*)", "destination": "/protests", "permanent": true },
+    { "source": "/anthem(.*)", "destination": "/", "permanent": true },
+    { "source": "/bihar-chapter(.*)", "destination": "/members", "permanent": true },
+    { "source": "/delhi-chapter(.*)", "destination": "/members", "permanent": true },
+    { "source": "/bitchat", "destination": "/bitchat-guidelines", "permanent": true }
   ],
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
