@@ -129,14 +129,13 @@
       <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="primary-nav main-nav" id="mainNav" aria-label="Primary">
         <ul class="mobile-nav-list" style="display: flex; align-items: center; gap: 0.55rem; list-style: none; margin: 0; padding: 0; flex-wrap: nowrap; white-space: nowrap; overflow-x: auto; scrollbar-width: none;">
-          <li><a href="vision.html" class="${active('vision').trim()}"><span>Vision</span></a></li>
+          <li><a href="about.html" class="${active('about').trim()}"><span>About</span></a></li>
           <li><a href="manifesto.html" class="${active('manifesto').trim()}"><span>Manifesto</span></a></li>
-          <li><a href="articles.html" class="${active('articles').trim()}"><span>Articles</span></a></li>
-          <li><a href="gallery.html" class="${active('gallery').trim()}"><span>Gallery</span></a></li>
-          <li><a href="members.html" class="${active('members').trim()}"><span>Members</span></a></li>
-          <li><a href="issues.html" class="${active('issues').trim()}"><span>Issues</span></a></li>
-          <li><a href="tracker.html" class="${active('tracker').trim()}"><span>Tracker</span></a></li>
-          <li><a href="protests.html" class="${active('protests').trim()}"><span>Protests</span></a></li>
+          <li><a href="founder.html" class="${active('founder').trim()}"><span>Founder</span></a></li>
+          <li><a href="news.html" class="${active('news').trim()}"><span>News</span></a></li>
+          <li><a href="campaigns.html" class="${active('campaigns').trim()}"><span>Campaigns</span></a></li>
+          <li><a href="membership.html" class="${active('membership').trim()}"><span>Membership</span></a></li>
+          <li><a href="faq.html" class="${active('faq').trim()}"><span>FAQ</span></a></li>
           <li><a href="contact.html" class="${active('contact').trim()}"><span>Contact</span></a></li>
         </ul>
         <div class="mobile-nav-actions">
@@ -368,18 +367,15 @@
         <div>
           <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">The Party</h4>
           <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
-            <a href="vision.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Vision</a>
+            <a href="about.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">About CJP</a>
             <a href="manifesto.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">The Manifesto</a>
-            <a href="articles.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Articles</a>
-            <a href="gallery.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Gallery</a>
-            <a href="tracker.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Tracker</a>
-            <a href="protests.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Protests</a>
-            <a href="topics.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Topics</a>
-            <a href="memes.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Memes</a>
-            <a href="issues.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Issues</a>
-            <a href="manifesto.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Manifesto</a>
-            <a href="articles.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">News</a>
-            <a href="quotes.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Quotes</a>
+            <a href="founder.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Founder Abhijeet Dipke</a>
+            <a href="news.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">News &amp; Bulletins</a>
+            <a href="campaigns.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Youth Campaigns</a>
+            <a href="membership.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Digital Membership</a>
+            <a href="articles.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Articles &amp; Media</a>
+            <a href="gallery.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Poster Gallery</a>
+            <a href="tracker.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Demand Tracker</a>
           </div>
         </div>
 
@@ -388,8 +384,8 @@
           <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">Participate</h4>
           <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
             <a href="join.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Join the swarm</a>
-            <a href="members.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Members</a>
-            <a href="card.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Get your card</a>
+            <a href="membership.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Get your digital card</a>
+            <a href="members.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Members directory</a>
             <a href="raise-issue.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Raise your voice</a>
             <a href="leave.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Leave the swarm</a>
             <a href="donate.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Support the Developer</a>
@@ -433,11 +429,13 @@
 
         <!-- Column 6: About -->
         <div>
-          <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">About</h4>
+          <h4 style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 900; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.85rem;">About &amp; Info</h4>
           <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
+            <a href="about.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">About CJP Entity</a>
+            <a href="founder.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Founder Profile</a>
             <a href="faq.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">FAQ &amp; Help</a>
-            <a href="press.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Press</a>
-            <a href="contact.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Contact</a>
+            <a href="press.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Press Media Kit</a>
+            <a href="contact.html" style="color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s;">Contact Desk</a>
           </div>
         </div>
 

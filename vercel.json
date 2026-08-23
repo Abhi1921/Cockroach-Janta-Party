@@ -16,51 +16,53 @@
       ]
     },
     {
-      "source": "/ads.txt",
+      "source": "/robots.txt",
       "headers": [
         { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
   ],
+  "redirects": [
+    { "source": "/cockroach-janta-party-wale(.*)", "destination": "/", "permanent": true },
+    { "source": "/cockroach-janta-party(.*)", "destination": "/", "permanent": true },
+    { "source": "/cockroach-janata-party(.*)", "destination": "/", "permanent": true },
+    { "source": "/cocroach-janata-party(.*)", "destination": "/", "permanent": true },
+    { "source": "/cjp", "destination": "/", "permanent": true },
+    { "source": "/cackroach-janta-party(.*)", "destination": "/", "permanent": true },
+    { "source": "/the-cockroach-janta-party(.*)", "destination": "/", "permanent": true },
+    { "source": "/the-cocroach-janta-party(.*)", "destination": "/", "permanent": true },
+    { "source": "/cockroach-janta-part(.*)", "destination": "/", "permanent": true },
+    { "source": "/cockroach-janta-party-india(.*)", "destination": "/", "permanent": true },
+    { "source": "/cockroach-janta-party-org(.*)", "destination": "/", "permanent": true },
+    { "source": "/cjp-party(.*)", "destination": "/", "permanent": true },
+    { "source": "/cjp-org(.*)", "destination": "/", "permanent": true },
+    { "source": "/cjpmember(.*)", "destination": "/members", "permanent": true },
+    { "source": "/cjp-member(.*)", "destination": "/members", "permanent": true },
+    { "source": "/cjpofficials(.*)", "destination": "/members", "permanent": true },
+    { "source": "/cjp-join(.*)", "destination": "/join", "permanent": true },
+    { "source": "/cockroach-janta-party-join(.*)", "destination": "/join", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/vision", "destination": "/vision.html" },
+    { "source": "/about", "destination": "/about.html" },
     { "source": "/manifesto", "destination": "/manifesto.html" },
+    { "source": "/founder", "destination": "/founder.html" },
+    { "source": "/news", "destination": "/news.html" },
+    { "source": "/campaigns", "destination": "/campaigns.html" },
+    { "source": "/membership", "destination": "/membership.html" },
     { "source": "/articles", "destination": "/articles.html" },
     { "source": "/protests", "destination": "/protests.html" },
     { "source": "/join", "destination": "/join.html" },
     { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/press", "destination": "/press.html" },
     { "source": "/donate", "destination": "/donate.html" },
     { "source": "/gallery", "destination": "/gallery.html" },
     { "source": "/members", "destination": "/members.html" },
     { "source": "/issues", "destination": "/issues.html" },
     { "source": "/tracker", "destination": "/tracker.html" },
-    { "source": "/raise-issue", "destination": "/raise-issue.html" },
-    { "source": "/revolutionaries", "destination": "/revolutionaries.html" },
-    { "source": "/terms", "destination": "/terms.html" },
-    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/vision", "destination": "/vision.html" },
     { "source": "/faq", "destination": "/faq.html" },
-    { "source": "/rha", "destination": "/rha.html" },
-    { "source": "/cockroach-janta-party-wale", "destination": "/cockroach-janta-party-wale.html" },
-    { "source": "/cjp", "destination": "/cjp.html" },
-    { "source": "/cockroach-janta-party", "destination": "/cockroach-janta-party.html" },
-    { "source": "/cockroach-janata-party", "destination": "/cockroach-janata-party.html" },
-    { "source": "/cocroach-janata-party", "destination": "/cocroach-janata-party.html" },
-    { "source": "/cjpmember", "destination": "/cjpmember.html" },
-    { "source": "/cjp-member", "destination": "/cjp-member.html" },
-    { "source": "/cockroach-janta-part", "destination": "/cockroach-janta-part.html" },
-    { "source": "/cockroach-janta-party-join", "destination": "/cockroach-janta-party-join.html" },
-    { "source": "/cjpofficials", "destination": "/cjpofficials.html" },
-    { "source": "/cackroach-janta-party", "destination": "/cackroach-janta-party.html" },
-    { "source": "/the-cockroach-janta-party", "destination": "/the-cockroach-janta-party.html" },
-    { "source": "/the-cocroach-janta-party", "destination": "/the-cocroach-janta-party.html" },
-    { "source": "/cockroach-janta-party-org", "destination": "/cockroach-janta-party-org.html" },
-    { "source": "/cjp-party", "destination": "/cjp-party.html" },
-    { "source": "/cjp-join", "destination": "/cjp-join.html" },
-    { "source": "/cockroach-janta-party-india", "destination": "/cockroach-janta-party-india.html" },
-    { "source": "/cjp-org", "destination": "/cjp-org.html" }
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/privacy", "destination": "/privacy.html" }
   ]
 }
-
-
