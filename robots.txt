@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /api/
-
-# XML Sitemap Location
-Sitemap: https://cockroachjantapartywale.com/sitemap.xml
-
-User-agent: AhrefsBot
-Crawl-delay: 10
