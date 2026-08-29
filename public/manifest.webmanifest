@@ -1,0 +1,21 @@
+{
+  "name": "Cockroach Janta Party Wale",
+  "short_name": "CJP Wale",
+  "description": "Official public information portal for Cockroach Janta Party Wale.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#D96B27",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
