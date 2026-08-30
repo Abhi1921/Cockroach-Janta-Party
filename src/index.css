@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --cjp-canvas: #EADBCE;
+  --cjp-dark-text: #16120D;
+  --cjp-dark-charcoal: #231F1A;
+  --cjp-card-bg: #F5EFE6;
+  --cjp-accent-red: #D9572B;
+  --cjp-border-dark: rgba(22, 18, 13, 0.18);
+
+  /* Typography Variables */
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-editorial: "DM Serif Display", serif;
+  --font-hindi: "Noto Sans Devanagari", sans-serif;
+  --font-hindi-serif: "Noto Serif Devanagari", serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--cjp-canvas);
+  color: var(--cjp-dark-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Accessibility Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #16120D;
+  color: #F5EFE6;
+  padding: 8px 16px;
+  z-index: 100;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Typography Utility Classes */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+
+.font-sans {
+  font-family: var(--font-body);
+}
+
+.font-serif {
+  font-family: var(--font-editorial);
+}
+
+.font-hindi {
+  font-family: var(--font-hindi);
+}
+
+.font-hindi-serif {
+  font-family: var(--font-hindi-serif);
+}
+
+/* Ticker Animation */
+@keyframes continuousTicker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: flex;
+  white-space: nowrap;
+  animation: continuousTicker 30s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar for Observer/Chip Strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
