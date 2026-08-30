@@ -521,7 +521,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. COMMUNITY REPRESENTATIVES & OBSERVERS STRIP (REAL LEADER PORTRAIT CARDS) */}
+      {/* 4. COMMUNITY REPRESENTATIVES & OBSERVERS STRIP (REAL LEADER PORTRAIT CARDS & MOJO STORY TEAM PHOTO) */}
       <section className="py-14 bg-[#F5EFE6] border-b-2 border-[#16120D]">
         <div className="max-w-[1440px] mx-auto px-4">
           <div className="flex justify-between items-end flex-wrap gap-4 mb-8">
@@ -536,7 +536,7 @@ export const HomePage: React.FC = () => {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {communityMembers.map((m, idx) => (
               <div
                 key={idx}
@@ -564,6 +564,28 @@ export const HomePage: React.FC = () => {
               </div>
             ))}
           </div>
+
+          {/* REAL MOJO STORY TEAM PHOTO FEATURE CARD */}
+          <div className="bg-[#16120D] text-[#F5EFE6] p-6 md:p-8 border-4 border-[#16120D] shadow-2xl grid md:grid-cols-12 gap-6 items-center">
+            <div className="md:col-span-5 overflow-hidden border-2 border-[#EADBCE] bg-[#16120D]">
+              <img src="/cjp_mo_team_photo.jpg" alt="Mojo Story CJP Team Feature" className="w-full h-auto object-contain mx-auto" />
+            </div>
+            <div className="md:col-span-7 space-y-3">
+              <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block">
+                MOJO STORY SPECIAL FEATURE
+              </span>
+              <h3 className="font-display text-3xl md:text-4xl text-[#F5EFE6] uppercase leading-tight">
+                IF THE CJP CONTESTED ELECTIONS, WOULD GEN Z VOTE FOR IT?
+              </h3>
+              <p className="text-xs text-[#EADBCE] font-medium leading-relaxed">
+                National media spotlight on Cockroach Janta Party's growing resonance among Gen Z youth, students, and ward observers demanding municipal accountability.
+              </p>
+              <div className="pt-2 text-[10px] font-extrabold text-[#D9572B] uppercase tracking-wider flex items-center gap-2">
+                <span>FOUNDING SECRETARIAT</span> · <span>NATIONAL WORKING COMMITTEE</span> · <span>ZONAL OBSERVERS</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 

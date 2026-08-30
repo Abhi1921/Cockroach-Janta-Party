@@ -48,6 +48,38 @@ export const GalleryPage: React.FC = () => {
       sub: 'For those who refuse to stay silent. Symbolizing subterranean resilience and public transparency.',
       tag: 'OFFICIAL LOGO EMBLEM',
       imgSrc: '/cjp_banner.png'
+    },
+    {
+      id: 'p6',
+      num: 'MEDIA CLIP #06 · TOI SPECIAL DISPATCH',
+      headline: "TOI CLIPPING: 'IT DOESN'T END HERE' — CJP CLAIMS STATES HAD TO BOW DOWN TO GEN Z",
+      sub: "Times of India news commentary on youth civic agitation, student FIR quashings, and municipal accountability.",
+      tag: 'TOI MEDIA DISPATCH',
+      imgSrc: '/cjp_toi_genz_news.jpg'
+    },
+    {
+      id: 'p7',
+      num: 'MEDIA PHOTO #07 · CJP WORKING TEAM',
+      headline: 'MOJO STORY: IF CJP CONTESTED ELECTIONS, WOULD GEN Z VOTE FOR IT?',
+      sub: 'Zonal convenors, legal advocacy desk, and working committee members assembly photograph.',
+      tag: 'MOJO STORY TEAM PHOTO',
+      imgSrc: '/cjp_mo_team_photo.jpg'
+    },
+    {
+      id: 'p8',
+      num: 'MEDIA PHOTO #08 · PRESS CONFERENCE',
+      headline: 'CJP PRESS CONFERENCE AT CONSTITUTION CLUB OF INDIA',
+      sub: 'Founding secretariat and policy spokespersons addressing national media on youth demands.',
+      tag: 'PRESS CONFERENCE PHOTO',
+      imgSrc: '/cjp_press_conference_photo.jpg'
+    },
+    {
+      id: 'p9',
+      num: 'DISPATCH STATEMENT #09 · VOICE OF YOUTH',
+      headline: "'पूरा सिस्टम ही चेंज करना होगा' — ABHIJEET DIPKE (CJP FOUNDER)",
+      sub: 'Voice of Youth quote graphic calling for systemic public education and municipal audit reform.',
+      tag: 'VOICE OF YOUTH STATEMENT',
+      imgSrc: '/cjp_system_change_quote.jpg'
     }
   ];
 
@@ -58,10 +90,10 @@ export const GalleryPage: React.FC = () => {
   };
 
   return (
-    <div className="gallery-page py-16 bg-[#EADBCE] text-[#16120D] font-sans">
+    <div className="gallery-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
-        title="CJP Gallery | Official Campaign Posters Archive"
-        description="Official graphic posters of Cockroach Janta Party: 5 September Delhi March, School Thik Karo Campaign, Featured Dispatch, Black Monday, and CJP Emblem."
+        title="CJP Gallery | Official Campaign Posters & Media Archive"
+        description="Official graphic posters and media photo archive of Cockroach Janta Party: TOI news dispatches, Mojo Story team photo, Presser photos, and campaign artwork."
         canonicalUrl="http://localhost:3000/gallery"
       />
 
@@ -70,19 +102,19 @@ export const GalleryPage: React.FC = () => {
         {/* Header Hero */}
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
-            {lang === 'hi' ? 'विजुअल आर्काइव' : 'OFFICIAL CAMPAIGN GALLERY'}
+            {lang === 'hi' ? 'विजुअल आर्काइव' : 'OFFICIAL CAMPAIGN & MEDIA GALLERY'}
           </span>
           <h1 className="font-serif font-black text-4xl md:text-6xl text-[#16120D] mb-4">
             {lang === 'hi' ? 'द विजुअल स्वार्म (गैलरी)' : 'THE VISUAL GALLERY'}
           </h1>
           <p className="text-[#3A332B] text-base leading-relaxed font-medium">
             {lang === 'hi'
-              ? "कॉकरोच जनता पार्टी के मुख्य 5 अभियान पोस्टर - 5 सितंबर दिल्ली मार्च, स्कूल ठीक करो, फ़ीचर्ड डिस्पैच, ब्लैक मंडे और सीजेपी लोगो।"
-              : "Official graphic posters for Cockroach Janta Party dispatches: 5 September Delhi March, School Thik Karo Campaign, Featured Dispatch, Black Monday, and CJP Brand Emblem."}
+              ? "कॉकरोच जनता पार्टी के पोस्टर, प्रेस कॉन्फ्रेंस तस्वीरें, टीओआई मीडिया डिस्पैच और वर्किंग कमेटी तस्वीरें।"
+              : "Official graphic posters, press conference coverage, Times of India media clippings, Mojo Story team photos, and CJP campaign artwork."}
           </p>
         </div>
 
-        {/* 5 Poster System */}
+        {/* 9 Item Gallery Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {posters.map((p) => (
             <div
@@ -96,8 +128,8 @@ export const GalleryPage: React.FC = () => {
                   <span className="bg-[#16120D] text-[#F5EFE6] px-2 py-0.5 uppercase tracking-wider">{p.tag}</span>
                 </div>
 
-                <div className="overflow-hidden border border-[#16120D] bg-[#16120D] mb-4 aspect-square relative">
-                  <img src={p.imgSrc} alt={p.headline} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="overflow-hidden border border-[#16120D] bg-[#16120D] mb-4 aspect-square relative flex items-center justify-center">
+                  <img src={p.imgSrc} alt={p.headline} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
                     <ZoomIn size={28} className="text-[#D9572B]" />
                   </div>
@@ -129,7 +161,7 @@ export const GalleryPage: React.FC = () => {
         {/* Fullscreen Lightbox Preview Modal */}
         {activePoster && (
           <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onClick={() => setActivePoster(null)}>
-            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 max-w-2xl w-full shadow-2xl relative" onClick={(e) => e.stopPropagation()}>
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 max-w-2xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
               <button
                 onClick={() => setActivePoster(null)}
                 className="absolute top-4 right-4 text-[#16120D] hover:text-[#D9572B] p-1 bg-[#EADBCE] border border-[#16120D]"
@@ -138,8 +170,8 @@ export const GalleryPage: React.FC = () => {
                 <X size={20} />
               </button>
 
-              <div className="overflow-hidden border-2 border-[#16120D] bg-[#16120D] mb-4 aspect-square max-h-[50vh] flex items-center justify-center">
-                <img src={activePoster.imgSrc} alt={activePoster.headline} className="max-w-full max-h-full object-contain" />
+              <div className="overflow-hidden border-2 border-[#16120D] bg-[#16120D] mb-4 aspect-square max-h-[50vh] flex items-center justify-center p-2">
+                <img src={activePoster.imgSrc} alt={activePoster.headline} className="max-w-full max-h-full object-contain mx-auto" />
               </div>
 
               <div className="flex justify-between items-center text-xs font-extrabold text-[#D9572B] mb-2">
@@ -157,7 +189,7 @@ export const GalleryPage: React.FC = () => {
 
               <div className="flex justify-end gap-3">
                 <a href={activePoster.imgSrc} download={`${activePoster.id}.png`} className="bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase px-5 py-2.5 flex items-center gap-1.5">
-                  <Download size={14} /> DOWNLOAD POSTER
+                  <Download size={14} /> DOWNLOAD PHOTO / POSTER
                 </a>
               </div>
             </div>
