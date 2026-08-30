@@ -394,6 +394,16 @@ const translations: Translations = {
   finalCtaSupporting: {
     en: 'Join thousands of student observers, RTI advocates, and neighborhood residents across 45 metro sectors.',
     hi: '45 मेट्रो क्षेत्रों के हजारों छात्र पर्यवेक्षकों और आरटीआई कार्यकर्ताओं के साथ जुड़ें।'
+  },
+
+  // Footer & Miscellaneous
+  footerDesc: {
+    en: 'An independent youth-focused civic movement advocating for transparent municipal governance, drain desilting audits, contractor road warranties, and open RTI disclosures.',
+    hi: 'पारदर्शी नगरपालिका शासन, सीवर सफाई ऑडिट, 3-वर्षीय ठेकेदार वारंटी और खुले आरटीआई खुलासे की वकालत करने वाला एक स्वतंत्र युवा नागरिक आंदोलन।'
+  },
+  footerCopyright: {
+    en: '© 2026 COCKROACH JANTA PARTY (CJP) · ALL RIGHTS RESERVED · SATIRE & CIVIC COMMENTARY',
+    hi: '© 2026 कॉकरोच जनता पार्टी (CJP) · सर्वाधिकार सुरक्षित · स्वतंत्र व्यंग्य व नागरिक टिप्पणी'
   }
 };
 

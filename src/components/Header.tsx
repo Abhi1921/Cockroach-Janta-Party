@@ -8,7 +8,6 @@ import {
   Menu,
   X,
   ArrowRight,
-  ShieldCheck,
   Heart,
   ShieldAlert
 } from 'lucide-react';
@@ -90,10 +89,10 @@ export const Header: React.FC = () => {
       <header className={`bg-[#EADBCE] text-[#16120D] border-b-2 border-[#16120D] sticky top-0 z-50 transition-all duration-200 ${scrolled ? 'shadow-lg bg-[#E2D2BF]' : ''}`}>
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 h-[76px] flex items-center justify-between gap-4">
           
-          {/* Brand & Logo */}
+          {/* Brand & Logo Emblem */}
           <Link to="/" className="flex items-center gap-3 select-none flex-shrink-0 group">
-            <div className="w-10 h-10 rounded-full bg-[#16120D] text-[#EADBCE] border-2 border-[#16120D] flex items-center justify-center font-display text-2xl shadow-sm group-hover:scale-105 transition-transform">
-              🪳
+            <div className="w-11 h-11 rounded-full bg-[#16120D] text-[#EADBCE] border-2 border-[#16120D] flex items-center justify-center font-display text-2xl shadow-sm group-hover:scale-105 transition-transform overflow-hidden p-0.5">
+              <img src="/cjp_logo_emblem.svg" alt="Cockroach Janta Party Official Logo Emblem" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col justify-center leading-none">
               <span className={`font-display text-2xl sm:text-3xl tracking-wider text-[#16120D] leading-none mb-1 ${lang === 'hi' ? 'font-hindi font-extrabold text-lg' : ''}`}>
@@ -150,177 +149,181 @@ export const Header: React.FC = () => {
                 <ChevronDown size={12} className={`transition-transform ${langDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
+              {/* Language Dropdown Menu */}
               {langDropdownOpen && (
-                <div className="absolute right-0 mt-1 w-32 bg-[#16120D] border-2 border-[#16120D] shadow-xl z-50 text-xs font-bold text-[#F5EFE6] py-1">
+                <div className="absolute right-0 mt-1.5 w-36 bg-[#F5EFE6] border-2 border-[#16120D] shadow-xl py-1 z-50">
                   <button
                     onClick={() => handleLanguageSelect('en')}
-                    className={`w-full text-left px-3 py-2 flex items-center justify-between hover:bg-[#D9572B] ${lang === 'en' ? 'bg-[#D9572B]/30 text-[#EADBCE]' : ''}`}
+                    className={`w-full text-left px-3 py-1.5 text-xs font-bold flex items-center justify-between hover:bg-[#D9572B] hover:text-white transition-colors ${
+                      lang === 'en' ? 'bg-[#16120D] text-[#F5EFE6]' : 'text-[#16120D]'
+                    }`}
                   >
                     <span>English</span>
-                    {lang === 'en' && <ShieldCheck size={14} className="text-[#EADBCE]" />}
+                    {lang === 'en' && <span>✓</span>}
                   </button>
                   <button
                     onClick={() => handleLanguageSelect('hi')}
-                    className={`w-full text-left px-3 py-2 flex items-center justify-between hover:bg-[#D9572B] ${lang === 'hi' ? 'bg-[#D9572B]/30 text-[#EADBCE]' : ''}`}
+                    className={`w-full text-left px-3 py-1.5 text-xs font-bold font-hindi flex items-center justify-between hover:bg-[#D9572B] hover:text-white transition-colors ${
+                      lang === 'hi' ? 'bg-[#16120D] text-[#F5EFE6]' : 'text-[#16120D]'
+                    }`}
                   >
                     <span>हिंदी (Hindi)</span>
-                    {lang === 'hi' && <ShieldCheck size={14} className="text-[#EADBCE]" />}
+                    {lang === 'hi' && <span>✓</span>}
                   </button>
                 </div>
               )}
             </div>
 
-            {/* Primary CTA */}
+            {/* JOIN THE SWARM DIRECT CTA */}
             <Link
               to="/join"
-              className="hidden xl:inline-flex text-[11px] font-extrabold bg-[#16120D] text-[#F5EFE6] px-4 py-2 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all shadow-md"
+              className="hidden xl:inline-flex text-[11px] font-extrabold bg-[#16120D] text-[#F5EFE6] px-3.5 py-2 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all shadow-md items-center gap-1.5"
             >
-              {t('navJoinSwarm')}
+              <span>{t('navJoinSwarm')}</span>
+              <ArrowRight size={13} />
             </Link>
 
-            {/* Mobile Hamburger Trigger */}
+            {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-1.5 text-[#16120D] border-2 border-[#16120D] hover:bg-[#16120D] hover:text-[#F5EFE6] transition-all ml-1"
-              aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
+              className="lg:hidden p-2 text-[#16120D] border-2 border-[#16120D] bg-[#F5EFE6] hover:bg-[#16120D] hover:text-[#F5EFE6] transition-colors"
+              aria-label="Toggle Mobile Menu"
+              aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
+
         </div>
 
-        {/* Mobile Fullscreen Slide Drawer */}
+        {/* MOBILE NAVIGATION DRAWER */}
         {mobileMenuOpen && (
-          <div className="lg:hidden fixed top-[115px] left-0 right-0 bottom-0 bg-[#EADBCE] text-[#16120D] z-50 p-6 overflow-y-auto">
-            <div className="mb-4 pb-3 border-b border-[#16120D] flex justify-between items-center">
-              <span className="text-xs font-bold text-[#16120D] uppercase tracking-widest">{t('brandName')}</span>
-              <button
-                onClick={() => setSupportModalOpen(true)}
-                className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1 border border-[#16120D] uppercase"
-              >
-                SUPPORT THE DEV →
-              </button>
-            </div>
-
-            <ul className="flex flex-col gap-2">
+          <div className="lg:hidden bg-[#EADBCE] border-t-2 border-[#16120D] px-4 py-6 shadow-2xl space-y-3">
+            <nav className="flex flex-col space-y-2 font-extrabold uppercase text-sm">
               {navLinks.map((link) => {
+                const isActive = location.pathname === link.href;
                 const linkText = link.titleCustom || t(link.titleKey);
                 return (
-                  <li key={link.href}>
-                    <Link
-                      to={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-between p-3.5 border font-extrabold text-sm uppercase tracking-wider bg-[#F5EFE6] border-[#16120D] text-[#16120D] ${
-                        location.pathname === link.href ? 'text-[#D9572B] border-[#D9572B]' : ''
-                      }`}
-                    >
-                      <span>{linkText}</span>
-                      <ArrowRight size={16} className="text-[#D9572B]" />
-                    </Link>
-                  </li>
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className={`py-2.5 px-3 border border-[#16120D] transition-colors flex items-center justify-between ${
+                      isActive ? 'bg-[#16120D] text-[#F5EFE6]' : 'bg-[#F5EFE6] text-[#16120D] hover:bg-[#D9572B] hover:text-white'
+                    }`}
+                  >
+                    <span>{linkText}</span>
+                    <ArrowRight size={14} />
+                  </Link>
                 );
               })}
-            </ul>
+            </nav>
 
-            <div className="mt-8 pt-6 border-t border-[#16120D] space-y-3">
+            <div className="pt-3 border-t border-[#16120D] flex flex-col gap-2.5">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   setSupportModalOpen(true);
                 }}
-                className="w-full text-center bg-[#D9572B] text-white font-extrabold text-sm uppercase tracking-wider py-3.5 border-2 border-[#16120D] flex items-center justify-center gap-2"
+                className="w-full bg-[#D9572B] text-white font-extrabold text-xs uppercase py-3 border-2 border-[#16120D] flex items-center justify-center gap-2 shadow-sm"
               >
-                <Heart size={14} className="fill-current" /> SUPPORT THE DEVELOPER (GPAY SCANNER)
+                <Heart size={14} className="fill-current text-white" />
+                <span>SUPPORT THE DEVELOPER</span>
               </button>
+
               <Link
                 to="/join"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-center bg-[#16120D] text-[#F5EFE6] font-extrabold text-sm uppercase tracking-wider py-4 border-2 border-[#16120D]"
+                className="w-full bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase py-3 border-2 border-[#16120D] flex items-center justify-center gap-2"
               >
-                {t('navJoinSwarm')}
+                <span>{t('navJoinSwarm')}</span>
+                <ArrowRight size={14} />
               </Link>
             </div>
           </div>
         )}
       </header>
 
-      {/* SUPPORT THE DEVELOPER GOOGLE PAY SCANNER & LEGAL DONATION TIERS MODAL */}
+      {/* SUPPORT THE DEV MODAL */}
       {supportModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4" onClick={() => setSupportModalOpen(false)}>
-          <div className="bg-[#F5EFE6] text-[#16120D] border-2 border-[#16120D] p-6 sm:p-8 max-w-lg w-full shadow-2xl relative max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onClick={() => setSupportModalOpen(false)}>
+          <div className="bg-[#F5EFE6] border-4 border-[#16120D] p-6 sm:p-8 max-w-md w-full shadow-2xl relative text-[#16120D]" onClick={(e) => e.stopPropagation()}>
             
             <button
               onClick={() => setSupportModalOpen(false)}
               className="absolute top-4 right-4 text-[#16120D] hover:text-[#D9572B] p-1 bg-[#EADBCE] border border-[#16120D]"
-              aria-label="Close support modal"
+              aria-label="Close modal"
             >
               <X size={20} />
             </button>
 
-            <div className="text-center mb-4">
-              <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">
-                VOLUNTARY DEVELOPER SUPPORT · CHAI / COFFEE / LUNCH / DINNER TIERS
-              </span>
-
-              <h2 className="font-display text-3xl text-[#16120D] uppercase mb-1">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center gap-1.5 bg-[#D9572B] text-white px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest mb-2">
+                <Heart size={12} className="fill-current text-white" /> VOLUNTARY SOFTWARE SUPPORT
+              </div>
+              <h3 className="font-display text-3xl text-[#16120D] uppercase leading-none mb-1">
                 SUPPORT THE DEVELOPER
-              </h2>
-
-              <p className="text-xs text-[#3A332B] font-medium leading-relaxed">
-                Choose a voluntary support tier or scan with Google Pay, PhonePe, Paytm or any UPI App to keep server hosting and civic software tools active.
+              </h3>
+              <p className="text-xs text-[#3A332B] font-semibold">
+                Sponsor server bandwidth &amp; open-source software maintenance.
               </p>
             </div>
 
-            {/* Selectable Support Tiers (Chai, Coffee, Lunch, Dinner, Server) */}
-            <div className="mb-6">
-              <span className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-2">
-                CHOOSE VOLUNTARY CONTRIBUTION TIER:
-              </span>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {/* Tier Options Selector */}
+            <div className="space-y-2 mb-6">
+              <span className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block">SELECT CONTRIBUTION TIER:</span>
+              <div className="grid grid-cols-2 gap-2">
                 {supportTiers.map((tier) => (
                   <button
                     key={tier.id}
-                    onClick={() => setSelectedTier(tier as any)}
-                    className={`p-2.5 text-left border-2 transition-all ${
+                    onClick={() => setSelectedTier(tier)}
+                    className={`p-2.5 border-2 text-left transition-all ${
                       selectedTier.id === tier.id
-                        ? 'bg-[#16120D] text-[#F5EFE6] border-[#16120D]'
+                        ? 'bg-[#16120D] text-[#F5EFE6] border-[#16120D] shadow-md'
                         : 'bg-[#EADBCE] text-[#16120D] border-[#16120D] hover:bg-[#D9572B] hover:text-white'
                     }`}
                   >
-                    <span className="font-extrabold text-xs block uppercase">{tier.label}</span>
-                    <span className="text-[10px] font-extrabold text-[#D9572B] block">₹{tier.amount}</span>
+                    <div className="flex justify-between items-center text-xs font-black">
+                      <span>{tier.label}</span>
+                      <span className="text-[#D9572B] font-extrabold">₹{tier.amount}</span>
+                    </div>
+                    <div className="text-[9px] opacity-80 mt-0.5">{tier.desc}</div>
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Authentic Google Pay Standee Poster Image */}
-            <div className="bg-[#16120D] border-2 border-[#16120D] p-3 mb-4 shadow-xl overflow-hidden rounded text-center">
-              <img
-                src="/gpay_scanner.png"
-                alt="Google Pay Scan to Pay Cockroach Janta Party"
-                className="w-full max-h-[360px] object-contain mx-auto"
-              />
-              <div className="text-[11px] font-extrabold text-[#EADBCE] mt-2">
-                SELECTED TIER: <span className="text-[#D9572B] uppercase">{selectedTier.label} (₹{selectedTier.amount})</span>
+            {/* Google Pay Scanner Box */}
+            <div className="bg-[#16120D] border-2 border-[#16120D] p-4 text-center text-[#F5EFE6] mb-6">
+              <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-2">
+                SCAN WITH GOOGLE PAY / ANY UPI APP
+              </span>
+              
+              <div className="bg-white p-3 border-2 border-[#EADBCE] max-w-[200px] mx-auto mb-3 shadow-inner">
+                <img
+                  src="/gpay_scanner.png"
+                  alt="Google Pay Scanner QR Code"
+                  className="w-full h-auto object-contain mx-auto"
+                />
+              </div>
+
+              <div className="text-xs font-black text-[#F5EFE6] bg-[#D9572B] py-1 px-3 inline-block uppercase tracking-wider mb-1">
+                TIER AMOUNT: ₹{selectedTier.amount} ({selectedTier.label})
+              </div>
+
+              <div className="text-[10px] text-[#EADBCE] font-mono mt-1">
+                Scan QR Code with GPay, PhonePe, Paytm, or BHIM
               </div>
             </div>
 
-            {/* LEGAL DISCLAIMER & VOLUNTARY DEVELOPER POLICY BOX */}
-            <div className="bg-[#EADBCE] border border-[#16120D] p-3 text-left mb-6 flex items-start gap-2">
-              <ShieldAlert size={20} className="text-[#D9572B] flex-shrink-0 mt-0.5" />
-              <div className="text-[10px] text-[#3A332B] font-medium leading-relaxed">
-                <strong className="text-[#16120D] block uppercase mb-0.5">LEGAL &amp; VOLUNTARY CONTRIBUTION POLICY</strong>
-                This payment is a 100% voluntary personal software tip to support independent web server hosting, domain fees, and open-source civic tools. It is <strong>NOT a political donation</strong>, not affiliated with any registered political party or election candidate, and not eligible for Section 80G tax deductions.
+            {/* Mandatory Non-Political Disclaimer Policy */}
+            <div className="bg-[#EADBCE] border border-[#16120D] p-3 text-[10px] text-[#3A332B] font-semibold space-y-1">
+              <div className="flex items-center gap-1 text-[#D9572B] font-black uppercase">
+                <ShieldAlert size={14} /> NON-POLITICAL VOLUNTARY DONATION POLICY:
               </div>
+              <p className="leading-tight">
+                All contributions are strictly personal voluntary software tips for web hosting, domain maintenance, and independent developer server costs. This portal does NOT collect political party funds or contest elections.
+              </p>
             </div>
 
-            <button
-              onClick={() => setSupportModalOpen(false)}
-              className="w-full bg-[#16120D] text-[#F5EFE6] text-xs font-extrabold uppercase py-3 border-2 border-[#16120D] hover:bg-[#D9572B] transition-all"
-            >
-              CLOSE WINDOW
-            </button>
           </div>
         </div>
       )}
