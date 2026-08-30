@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
-import { ShieldAlert, CheckCircle, ExternalLink } from 'lucide-react';
+import { ShieldAlert, CheckCircle, ExternalLink, FileText } from 'lucide-react';
 
 export const ManifestoPage: React.FC = () => {
   const { lang, t } = useLanguage();
@@ -71,7 +71,7 @@ export const ManifestoPage: React.FC = () => {
   ];
 
   return (
-    <div className="manifesto-page py-16 bg-[#EADBCE] text-[#16120D] font-sans">
+    <div className="manifesto-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
         title="CJP Manifesto | Cockroach Janta Party"
         description="Read the official 5-point civic manifesto of Cockroach Janta Party: Subterranean sewer desilting, 3-year contractor road warranties, drinking water testing, and open RTI transparency."
@@ -81,7 +81,7 @@ export const ManifestoPage: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4">
         
         {/* Header Hero */}
-        <div className="mb-16 text-center max-w-3xl mx-auto">
+        <div className="mb-12 text-center max-w-3xl mx-auto">
           <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
             {lang === 'hi' ? 'नागरिक घोषणापत्र' : 'CIVIC MANIFESTO'}
           </span>
@@ -93,6 +93,36 @@ export const ManifestoPage: React.FC = () => {
               ? "कम समारोह। अधिक जवाबदेही। कम नारे। बेहतर सवाल।"
               : "Less ceremony. More accountability. Fewer slogans. Better questions."}
           </p>
+        </div>
+
+        {/* DEDICATED MANIFESTO POSTER CARD */}
+        <div className="my-10 max-w-xl mx-auto bg-[#16120D] border-4 border-[#16120D] p-4 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+          <div className="flex justify-between items-center text-[10px] font-extrabold text-[#EADBCE] border-b border-white/20 pb-2 mb-3 uppercase tracking-wider">
+            <span className="flex items-center gap-1.5 text-[#D9572B]">
+              <FileText size={14} /> OFFICIAL MANIFESTO POSTER
+            </span>
+            <span>POSTER #02 · SCHOOL THIK KARO &amp; MANIFESTO</span>
+          </div>
+
+          <div className="bg-[#16120D] border border-white/10 p-2 overflow-hidden flex items-center justify-center">
+            <img
+              src="/cjp_school_thik_karo_poster.png"
+              alt="CJP Official Manifesto Campaign Poster"
+              className="w-full h-auto object-contain mx-auto rounded"
+            />
+          </div>
+
+          <div className="text-center pt-3">
+            <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block mb-1">
+              THE 5 CIVIC MANIFESTO DEMANDS
+            </span>
+            <h3 className="font-display text-2xl text-white uppercase tracking-wide">
+              SCHOOL THIK KARO &amp; CONTRACTOR WARRANTIES
+            </h3>
+            <p className="text-[11px] text-[#EADBCE] font-bold uppercase tracking-wider mt-1">
+              "WE DEMAND BETTER SCHOOLS &amp; PUBLIC LIBRARIES NOW!"
+            </p>
+          </div>
         </div>
 
         {/* Legal / Editorial Disclaimer */}

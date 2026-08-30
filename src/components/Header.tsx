@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
   ];
 
   const tickerItems = [
-    '✦ LATEST NEWS: CJP ANNOUNCES SEPT 5 DELHI POLICE HQ MARCH',
+    '✦ URGENT: 5 SEP DELHI MARCH · CHALO POLICE HQ & INDIA GATE',
     '✦ SPECIAL REPORT: 20 JULY BLACK MONDAY TIMELINE',
     '✦ #JAWAABDIJIYE · ELEVEN UNANSWERED QUESTIONS',
     '✦ INDEPENDENT SATIRE · CIVIC COMMENTARY',
@@ -88,30 +88,25 @@ export const Header: React.FC = () => {
 
       {/* MAIN STICKY PARCHMENT NAVBAR (#EADBCE) */}
       <header className={`bg-[#EADBCE] text-[#16120D] border-b-2 border-[#16120D] sticky top-0 z-50 transition-all duration-200 ${scrolled ? 'shadow-lg bg-[#E2D2BF]' : ''}`}>
-        <div className="max-w-[1440px] mx-auto px-4 h-[76px] flex items-center justify-between gap-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 h-[76px] flex items-center justify-between gap-4">
           
           {/* Brand & Logo */}
-          <Link to="/" className="flex items-center gap-3 select-none flex-shrink-0">
-            <div className="w-10 h-10 rounded-full bg-[#16120D] text-[#EADBCE] border-2 border-[#16120D] flex items-center justify-center font-display text-2xl shadow-sm">
+          <Link to="/" className="flex items-center gap-3 select-none flex-shrink-0 group">
+            <div className="w-10 h-10 rounded-full bg-[#16120D] text-[#EADBCE] border-2 border-[#16120D] flex items-center justify-center font-display text-2xl shadow-sm group-hover:scale-105 transition-transform">
               🪳
             </div>
-            <div className="flex flex-col leading-none">
-              <span className={`font-display text-2xl tracking-wide text-[#16120D] ${lang === 'hi' ? 'font-hindi font-extrabold text-lg' : ''}`}>
-                {lang === 'hi' ? 'कॉकरोच जनता पार्टी' : 'COCKROACH'}
+            <div className="flex flex-col justify-center leading-none">
+              <span className={`font-display text-2xl sm:text-3xl tracking-wider text-[#16120D] leading-none mb-1 ${lang === 'hi' ? 'font-hindi font-extrabold text-lg' : ''}`}>
+                {lang === 'hi' ? 'कॉकरोच जनता पार्टी' : 'COCKROACH JANTA PARTY'}
               </span>
-              {lang !== 'hi' && (
-                <span className="font-display text-lg tracking-wider text-[#16120D] -mt-1">
-                  JANTA PARTY
-                </span>
-              )}
-              <span className="text-[9px] font-extrabold text-[#D9572B] uppercase tracking-widest">
+              <span className="text-[9.5px] font-extrabold text-[#D9572B] uppercase tracking-widest leading-none block">
                 {t('subLabel')}
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-5 font-extrabold tracking-wider uppercase text-[12px] lg:text-[13px]" aria-label="Main Navigation">
+          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-5 font-extrabold tracking-wider uppercase text-[12px] lg:text-[12.5px]" aria-label="Main Navigation">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
               const linkText = link.titleCustom || t(link.titleKey);
@@ -135,7 +130,7 @@ export const Header: React.FC = () => {
             {/* SUPPORT THE DEV CTA BUTTON */}
             <button
               onClick={() => setSupportModalOpen(true)}
-              className="text-[11px] font-extrabold bg-[#D9572B] text-white px-3 py-1.5 border-2 border-[#16120D] hover:bg-[#16120D] transition-all shadow-md flex items-center gap-1.5"
+              className="text-[11px] font-extrabold bg-[#D9572B] text-white px-3 py-2 border-2 border-[#16120D] hover:bg-[#16120D] transition-all shadow-md flex items-center gap-1.5"
             >
               <Heart size={12} className="fill-current text-white" />
               <span className="hidden sm:inline">SUPPORT THE DEV →</span>
@@ -146,7 +141,7 @@ export const Header: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-                className="flex items-center gap-1.5 text-[11px] font-extrabold border-2 border-[#16120D] px-2.5 py-1.5 bg-[#F5EFE6] text-[#16120D] hover:bg-[#16120D] hover:text-[#F5EFE6] transition-all"
+                className="flex items-center gap-1.5 text-[11px] font-extrabold border-2 border-[#16120D] px-2.5 py-2 bg-[#F5EFE6] text-[#16120D] hover:bg-[#16120D] hover:text-[#F5EFE6] transition-all"
                 aria-label="Language Selector"
                 aria-expanded={langDropdownOpen}
               >
@@ -178,7 +173,7 @@ export const Header: React.FC = () => {
             {/* Primary CTA */}
             <Link
               to="/join"
-              className="hidden xl:inline-flex text-[11px] font-extrabold bg-[#16120D] text-[#F5EFE6] px-3.5 py-1.5 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all shadow-md"
+              className="hidden xl:inline-flex text-[11px] font-extrabold bg-[#16120D] text-[#F5EFE6] px-4 py-2 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all shadow-md"
             >
               {t('navJoinSwarm')}
             </Link>

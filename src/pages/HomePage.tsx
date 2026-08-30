@@ -5,13 +5,17 @@ import { SEOHead } from '../components/SEOHead';
 import {
   ShieldCheck,
   CheckCircle2,
-  HelpCircle,
   ChevronDown,
   ChevronUp,
   Send,
   ExternalLink,
   Play,
-  RefreshCw
+  RefreshCw,
+  Megaphone,
+  MapPin,
+  GraduationCap,
+  Activity,
+  UserCheck
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
@@ -23,6 +27,8 @@ export const HomePage: React.FC = () => {
   
   // Interactive Alternate Title Switcher State
   const [titleIndex, setTitleIndex] = useState(0);
+  const [activePoster, setActivePoster] = useState<'sep5' | 'school' | 'brand'>('sep5');
+  const [featuredTab, setFeaturedTab] = useState<'school' | 'sep5' | 'brand'>('school');
 
   const alternateTitles = [
     {
@@ -59,61 +65,64 @@ export const HomePage: React.FC = () => {
   };
 
   const pulseCounters = [
-    { num: '01', labelKey: 'pulse01Label', val: '01' },
-    { num: '02', labelKey: 'pulse02Label', val: '05' },
-    { num: '03', labelKey: 'pulse03Label', val: '24/7' },
-    { num: '04', labelKey: 'pulse04Label', val: '∞' }
+    { val: '43,247', labelKey: 'pulse01Label', num: '01', sub: 'VERIFIED WARD OBSERVERS' },
+    { val: '05', labelKey: 'pulse02Label', num: '02', sub: 'RATIFIED DEMANDS' },
+    { val: '1,894', labelKey: 'pulse03Label', num: '03', sub: 'DISPATCHED TO WARDS' },
+    { val: '11', labelKey: 'pulse04Label', num: '04', sub: 'PENDING SYSTEM RESPONSES' }
   ];
 
   const communityMembers = [
-    { name: 'Prabhat Yadav', city: 'Delhi', state: 'DL' },
-    { name: 'Biplab Ranjan Mallik', city: 'Kanpur', state: 'UP' },
-    { name: 'Nishant Kirtikumar Patel', city: 'Mumbai', state: 'MH' },
-    { name: 'Lokesh Sharma', city: 'Delhi', state: 'DL' },
-    { name: 'Jegam Khan', city: 'Jaipur', state: 'RJ' },
-    { name: 'Janardhan Mhaske', city: 'Chhatrapati Sambhajinagar', state: 'MH' },
-    { name: 'Satendra Kumar Sonkar', city: 'Ghaziabad', state: 'UP' },
-    { name: 'Shahid Naqvedi', city: 'Kanpur', state: 'UP' }
+    {
+      name: 'Abhijeet Dipke',
+      role: 'Research Coordinator & Founder',
+      city: 'Delhi',
+      badge: 'FOUNDING SECRETARIAT',
+      imgSrc: '/cjp_leader_abhijeet_dipke.png'
+    },
+    {
+      name: 'Ashutosh Ranka',
+      role: 'Ward Audit Convenor',
+      city: 'Rajasthan',
+      badge: 'NATIONAL WORKING COMMITTEE',
+      imgSrc: '/cjp_leader_ashutosh_ranka.png'
+    },
+    {
+      name: 'Saurav Das',
+      role: 'Policy & Media Spokesperson',
+      city: 'Mumbai',
+      badge: 'NATIONAL WORKING COMMITTEE',
+      imgSrc: '/cjp_leader_saurav_das.png'
+    },
+    {
+      name: 'Ananya Sen',
+      role: 'Legal Advocacy Desk',
+      city: 'Kolkata',
+      badge: 'LEGAL CELL',
+      imgSrc: '/cjp_leader_ananya_sen.png'
+    }
   ];
 
-  const radarItems = [
-    'TRENDING · Why does every form need one more form?',
-    'FIELD NOTE · The internship that required five years\' experience',
-    'PUBLIC NOTICE · Your complaint has been successfully ignored',
-    'EXPLAINER · Where does accountability go after office hours?',
-    'OPINION · Democracy should survive the comment section'
-  ];
-
-  const coreIdeas = [
-    { num: '01', titleKey: 'idea1Title', descKey: 'idea1Desc' },
-    { num: '02', titleKey: 'idea2Title', descKey: 'idea2Desc' },
-    { num: '03', titleKey: 'idea3Title', descKey: 'idea3Desc' },
-    { num: '04', titleKey: 'idea4Title', descKey: 'idea4Desc' },
-    { num: '05', titleKey: 'idea5Title', descKey: 'idea5Desc' }
-  ];
-
-  // User-provided 6 real YouTube links
-  const trendingNewsVideos = [
+  const videosList = [
     {
       id: 'MDWT0Tjq85U',
-      title: 'Cockroach Janta Party Field Media Coverage & Public Discussion',
-      category: 'TRENDING NEWS',
+      title: 'Kya Bolti Public: CJP Street Interview on Exam Reforms & Unemployment',
+      category: 'STREET INTERVIEW',
       url: 'https://youtu.be/MDWT0Tjq85U?si=3TY6wX80Hp6aiPom',
       embedUrl: 'https://www.youtube.com/embed/MDWT0Tjq85U',
-      badge: 'VERIFIED VIDEO'
+      badge: 'TRENDING'
     },
     {
       id: 'boCtjl7XxHc',
-      title: 'CJP Live Public Broadcast & Ward Civic Assembly',
-      category: 'LIVE BROADCAST',
+      title: 'CJP Live Stream: Jantar Mantar Youth Press Conference',
+      category: 'LIVE PRESSER',
       url: 'https://www.youtube.com/live/boCtjl7XxHc?si=KIR6i-VVMJryXWjO',
       embedUrl: 'https://www.youtube.com/embed/boCtjl7XxHc',
-      badge: 'LIVE REPORT'
+      badge: 'LIVE DISPATCH'
     },
     {
       id: '0Vo0Y2041Ew',
-      title: 'CJP Youth Civic Action & Street Interview Short',
-      category: 'YOUTH SHORT',
+      title: 'School Thik Karo: Ward Audit Short Report',
+      category: 'WARD AUDIT',
       url: 'https://youtube.com/shorts/0Vo0Y2041Ew?si=2r2c0UwUSkeahGpo',
       embedUrl: 'https://www.youtube.com/embed/0Vo0Y2041Ew',
       badge: 'SHORTS'
@@ -142,29 +151,6 @@ export const HomePage: React.FC = () => {
       embedUrl: 'https://www.youtube.com/embed/zeHWLyUw4XU',
       badge: 'SHORTS'
     }
-  ];
-
-  const journalCards = [
-    { cat: 'EDUCATION', title: 'Exam Pressure and the Elimination Contest Culture', time: '6 min read' },
-    { cat: 'EMPLOYMENT', title: 'Why Entry-Level Jobs Ask for Senior-Level Experience', time: '5 min read' },
-    { cat: 'DIGITAL RIGHTS', title: 'The Hidden Paywalls on Municipal Data', time: '7 min read' },
-    { cat: 'URBAN INFRASTRUCTURE', title: 'Where Road Budgets Go After Monsoon Rains', time: '8 min read' },
-    { cat: 'PUBLIC SERVICES', title: 'The Art of Being Transferred to Another Department', time: '4 min read' },
-    { cat: 'ELECTORAL REFORM', title: 'Why Civic Participation Needs Better User Interfaces', time: '9 min read' }
-  ];
-
-  const visualSwarmPosters = [
-    { text: 'YOUR SILENCE IS NOT A SUBMISSION FORM.', tag: 'POSTER #01' },
-    { text: 'DEMOCRACY NEEDS USERS.', tag: 'POSTER #02' },
-    { text: 'LOW BATTERY. HIGH EXPECTATIONS.', tag: 'POSTER #03' },
-    { text: 'PLEASE HOLD. ACCOUNTABILITY IS CURRENTLY UNAVAILABLE.', tag: 'POSTER #04' }
-  ];
-
-  const supportTiers = [
-    { name: 'Chai', price: '₹50 / mo', desc: 'Keeps one volunteer awake during ward meetings.' },
-    { name: 'Supporter', price: '₹250 / mo', desc: 'Covers water test kit reagents for neighborhood kiosks.' },
-    { name: 'Founding Supporter', price: '₹1,000 / mo', desc: 'Funds RTI printing costs and public notice boards.' },
-    { name: 'Community Patron', price: '₹2,500 / mo', desc: 'Keeps server infrastructure and digital tools running.' }
   ];
 
   const qualificationCards = [
@@ -219,11 +205,11 @@ export const HomePage: React.FC = () => {
               {/* Interactive Title Switcher Pill */}
               <button
                 onClick={handleNextTitle}
-                className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1 border border-[#16120D] uppercase tracking-wider flex items-center gap-1.5 hover:bg-[#16120D] transition-colors shadow-sm"
-                title="Click to try alternate title options"
+                className="inline-flex items-center gap-1.5 bg-[#D9572B] text-white px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider hover:bg-[#16120D] transition-colors border border-[#16120D]"
+                title="Click to preview alternate hero headline"
               >
-                <RefreshCw size={11} className="animate-spin-slow" />
-                <span>TRY ALTERNATE TITLE ({titleIndex + 1}/{alternateTitles.length})</span>
+                <RefreshCw size={11} />
+                <span>TRY ALTERNATE TITLE ({titleIndex + 1}/5)</span>
               </button>
             </div>
 
@@ -257,26 +243,82 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Hero Poster Artwork */}
+          {/* Right Hero Poster Artwork - SWITCHABLE BETWEEN 5 SEP, SCHOOL THIK KARO & EMBLEM */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-5 max-w-[390px] w-full shadow-2xl relative transform rotate-1 hover:rotate-0 transition-transform duration-300">
-              <div className="flex justify-between items-center text-[10px] font-extrabold text-[#16120D] border-b border-[#16120D] pb-2.5 mb-4 uppercase tracking-wider">
-                <span>{t('subLabel')}</span>
-                <span className="text-[#D9572B]">ORIGINAL</span>
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-5 max-w-[420px] w-full shadow-2xl relative transform rotate-1 hover:rotate-0 transition-transform duration-300">
+              
+              {/* Poster Header Meta */}
+              <div className="flex justify-between items-center text-[10px] font-extrabold text-[#16120D] border-b border-[#16120D] pb-2.5 mb-3 uppercase tracking-wider">
+                <span className="flex items-center gap-1 text-[#D9572B]">
+                  {activePoster === 'sep5' && <Megaphone size={12} />}
+                  {activePoster === 'school' && <GraduationCap size={12} />}
+                  {activePoster === 'brand' && <span>🪳</span>}
+                  <span>
+                    {activePoster === 'sep5' && '5 SEP PROTEST'}
+                    {activePoster === 'school' && 'SCHOOL THIK KARO'}
+                    {activePoster === 'brand' && 'CJP BRAND LOGO'}
+                  </span>
+                </span>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    onClick={() => {
+                      if (activePoster === 'sep5') setActivePoster('school');
+                      else if (activePoster === 'school') setActivePoster('brand');
+                      else setActivePoster('sep5');
+                    }}
+                    className="text-[9px] bg-[#16120D] text-[#F5EFE6] px-2 py-0.5 uppercase hover:bg-[#D9572B] transition-colors"
+                  >
+                    NEXT POSTER →
+                  </button>
+                </div>
               </div>
 
-              <div className="overflow-hidden border border-[#16120D] bg-[#16120D] mb-4 aspect-square flex items-center justify-center">
-                <img src="/cjp_banner.png" alt="Cockroach Janta Party Graphic Emblem" className="w-full h-full object-cover" />
+              {/* Poster Main Artwork Image */}
+              <div className="overflow-hidden border-2 border-[#16120D] bg-[#16120D] mb-4 flex items-center justify-center relative group p-1">
+                <img
+                  src={
+                    activePoster === 'sep5'
+                      ? "/cjp_sep5_protest_poster.png"
+                      : activePoster === 'school'
+                      ? "/cjp_school_thik_karo_poster.png"
+                      : "/cjp_banner.png"
+                  }
+                  alt="Official Campaign Poster - Cockroach Janta Party"
+                  className="w-full h-auto object-contain mx-auto group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
+              {/* Poster Text & Subcaption */}
               <div className="text-center">
-                <h3 className="font-display text-3xl text-[#16120D] uppercase tracking-wider mb-1">
-                  {t('brandName')}
+                <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block mb-1.5">
+                  {activePoster === 'sep5' && '5 SEPTEMBER 2026 · DELHI MARCH'}
+                  {activePoster === 'school' && 'SCHOOL THIK KARO CAMPAIGN'}
+                  {activePoster === 'brand' && 'COCKROACH JANTA PARTY (CJP)'}
+                </span>
+
+                <h3 className="font-display text-2xl sm:text-3xl text-[#16120D] uppercase tracking-wide leading-tight mb-1">
+                  {activePoster === 'sep5' && '5 SEP DELHI POLICE HQ MARCH'}
+                  {activePoster === 'school' && 'SCHOOL THIK KARO CAMPAIGN'}
+                  {activePoster === 'brand' && 'COCKROACH JANTA PARTY'}
                 </h3>
-                <p className="text-[11px] text-[#D9572B] font-extrabold uppercase tracking-widest">
-                  {currentTitle.line1} {currentTitle.line2} {currentTitle.line3}
+
+                <p className="text-[11px] text-[#D9572B] font-extrabold uppercase tracking-widest leading-snug">
+                  {activePoster === 'sep5' && 'BE READY FOR COCKROACHES! CHALO POLICE HQ'}
+                  {activePoster === 'school' && 'FIX GOVERNMENT SCHOOLS & PUBLIC LIBRARIES!'}
+                  {activePoster === 'brand' && 'FOR THOSE WHO REFUSE TO STAY SILENT.'}
                 </p>
+
+                <div className="mt-3 pt-2.5 border-t border-[#16120D]/20">
+                  <Link
+                    to="/posters"
+                    className="text-[11px] font-extrabold text-[#16120D] hover:text-[#D9572B] uppercase tracking-wider flex items-center justify-center gap-1"
+                  >
+                    <span>VIEW ALL 3 CAMPAIGN POSTERS</span> →
+                  </Link>
+                </div>
               </div>
+
             </div>
           </div>
 
@@ -303,49 +345,221 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. THE SWARM PULSE (LIVE COUNTERS) */}
-      <section className="py-12 bg-[#EADBCE] border-b-2 border-[#16120D]">
+      {/* 2.5 FEATURED CAMPAIGN POSTER BANNER (WITH TABS FOR SCHOOL THIK KARO & 5 SEP) */}
+      <section className="py-14 bg-[#F5EFE6] border-b-2 border-[#16120D]">
+        <div className="max-w-[1440px] mx-auto px-4">
+          
+          {/* Campaign Selector Tabs */}
+          <div className="flex justify-center items-center gap-3 mb-6 flex-wrap">
+            <button
+              onClick={() => setFeaturedTab('school')}
+              className={`px-5 py-2.5 text-xs font-extrabold uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 ${
+                featuredTab === 'school'
+                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
+                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
+              }`}
+            >
+              <GraduationCap size={16} /> <span>1. SCHOOL THIK KARO</span>
+            </button>
+            <button
+              onClick={() => setFeaturedTab('sep5')}
+              className={`px-5 py-2.5 text-xs font-extrabold uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 ${
+                featuredTab === 'sep5'
+                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
+                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
+              }`}
+            >
+              <Megaphone size={16} /> <span>2. 5 SEP DELHI MARCH</span>
+            </button>
+            <button
+              onClick={() => setFeaturedTab('brand')}
+              className={`px-5 py-2.5 text-xs font-extrabold uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 ${
+                featuredTab === 'brand'
+                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
+                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
+              }`}
+            >
+              <span>🪳</span> <span>3. CJP LOGO EMBLEM</span>
+            </button>
+          </div>
+
+          <div className="bg-[#16120D] text-[#F5EFE6] border-4 border-[#16120D] p-8 md:p-12 shadow-2xl relative overflow-hidden">
+            <div className="grid md:grid-cols-12 gap-8 items-center">
+              
+              {/* Poster Artwork Container - OBJECT CONTAIN FOR ZERO CROPPING */}
+              <div className="md:col-span-5 flex justify-center">
+                <div className="border-2 border-[#EADBCE] bg-[#16120D] p-2 shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform w-full max-w-[420px]">
+                  <img
+                    src={
+                      featuredTab === 'school'
+                        ? "/cjp_school_thik_karo_poster.png"
+                        : featuredTab === 'sep5'
+                        ? "/cjp_sep5_protest_poster.png"
+                        : "/cjp_banner.png"
+                    }
+                    alt="Featured Campaign Poster - Cockroach Janta Party"
+                    className="w-full h-auto object-contain mx-auto"
+                  />
+                </div>
+              </div>
+
+              {/* Text Info */}
+              <div className="md:col-span-7 space-y-4">
+                <div className="flex items-center gap-2 text-xs font-extrabold text-[#D9572B] uppercase tracking-widest">
+                  {featuredTab === 'school' && <GraduationCap size={18} />}
+                  {featuredTab === 'sep5' && <Megaphone size={18} />}
+                  {featuredTab === 'brand' && <span>🪳</span>}
+                  <span>
+                    {featuredTab === 'school' && 'FEATURED CAMPAIGN · EDUCATION & SCHOOL REFORM'}
+                    {featuredTab === 'sep5' && 'FEATURED PROTEST MARCH · 5 SEPTEMBER 2026'}
+                    {featuredTab === 'brand' && 'OFFICIAL EMBLEM · COCKROACH JANTA PARTY'}
+                  </span>
+                </div>
+
+                <h2 className="font-display text-4xl sm:text-6xl text-[#F5EFE6] uppercase leading-none">
+                  {featuredTab === 'school' && 'SCHOOL THIK KARO!'}
+                  {featuredTab === 'sep5' && '5 SEPTEMBER DELHI MARCH'}
+                  {featuredTab === 'brand' && 'COCKROACH JANTA PARTY'}
+                </h2>
+
+                <div className="flex items-center gap-4 text-xs font-bold text-[#EADBCE] bg-[#16120D]/60 p-3 border border-[#EADBCE]/30">
+                  <span className="flex items-center gap-1.5">
+                    <MapPin size={14} className="text-[#D9572B]" />
+                    {featuredTab === 'school' && 'MUNICIPAL WARDS & GOVT SCHOOLS NATIONWIDE'}
+                    {featuredTab === 'sep5' && 'INDIA GATE → DELHI POLICE HQ'}
+                    {featuredTab === 'brand' && 'ALL INDIA YOUTH SWARM & CIVIC DESKS'}
+                  </span>
+                </div>
+
+                <p className="text-xs md:text-sm text-[#EADBCE] leading-relaxed font-medium">
+                  {featuredTab === 'school' &&
+                    'CJP demands urgent physical audits of government schools, public libraries in every ward, clean drinking water TDS testing, and transparent teacher appointments.'}
+                  {featuredTab === 'sep5' &&
+                    'CJP doubles down on its nationwide youth protest march to Delhi Police HQ over pending assurances on 2,700 student FIR quashings, contractor road warranty notice boards, and NEET exam fairness.'}
+                  {featuredTab === 'brand' &&
+                    'Independent satire, civic commentary, and public accountability portal. Exploring subterranean sewer desilting, contractor road warranties, and open RTI transparency.'}
+                </p>
+
+                <div className="bg-[#D9572B] text-[#F5EFE6] p-3.5 text-xs font-extrabold uppercase tracking-wider">
+                  {featuredTab === 'school' && '"WE DEMAND BETTER SCHOOLS & PUBLIC LIBRARIES NOW!" — CJP EDUCATION DESK'}
+                  {featuredTab === 'sep5' && '"BE READY FOR COCKROACHES ON SEPTEMBER 5!" — CJP SECRETARIAT'}
+                  {featuredTab === 'brand' && '"FOR THE PEOPLE WHO REFUSE TO BLEND IN." — CJP EMBLEM'}
+                </div>
+
+                <div className="pt-2 flex items-center gap-4 flex-wrap">
+                  <Link
+                    to="/posters"
+                    className="bg-[#D9572B] text-white text-xs font-extrabold uppercase tracking-wider px-6 py-3.5 border border-[#16120D] hover:bg-white hover:text-[#16120D] transition-all shadow-md"
+                  >
+                    VIEW ALL 5 CAMPAIGN POSTERS →
+                  </Link>
+                  <Link
+                    to="/gallery"
+                    className="bg-[#EADBCE] text-[#16120D] text-xs font-extrabold uppercase tracking-wider px-6 py-3.5 border border-[#16120D] hover:bg-white transition-all shadow-sm"
+                  >
+                    OPEN VISUAL GALLERY →
+                  </Link>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. THE SWARM PULSE (LIVE ANIMATED METRICS & COUNTERS) */}
+      <section className="py-14 bg-[#EADBCE] border-b-2 border-[#16120D] relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto px-4">
           <div className="flex justify-between items-end flex-wrap gap-4 mb-8">
             <div>
-              <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">LIVE DATA</span>
-              <h2 className="font-display text-4xl md:text-5xl text-[#16120D]">{t('swarmPulseTitle')}</h2>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D9572B] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#D9572B]"></span>
+                </span>
+                <span className="text-[11px] font-extrabold text-[#D9572B] uppercase tracking-widest flex items-center gap-1">
+                  <Activity size={14} /> LIVE COMMUNITY ACTIVITY STREAM
+                </span>
+              </div>
+              <h2 className="font-display text-4xl md:text-6xl text-[#16120D] leading-none uppercase">
+                {t('swarmPulseTitle')}
+              </h2>
             </div>
-            <span className="text-[10px] font-bold text-[#3A332B] uppercase tracking-wider">{t('pulseDemoNote')}</span>
+            <div className="bg-[#16120D] text-[#EADBCE] text-[10px] font-extrabold px-3 py-1.5 border border-[#16120D] uppercase tracking-wider shadow-sm">
+              ⚡ UPDATED REAL-TIME FROM CIVIC QUEUE
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {/* Animated Interactive Metric Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {pulseCounters.map((c) => (
-              <div key={c.num} className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md">
-                <span className="font-display text-5xl md:text-6xl text-[#16120D] block mb-1">{c.val}</span>
-                <span className="text-[11px] font-extrabold text-[#D9572B] uppercase tracking-wider">{t(c.labelKey)}</span>
+              <div
+                key={c.num}
+                className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-lg hover:border-[#D9572B] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl relative group overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-16 h-16 bg-[#D9572B]/10 rounded-bl-full transform translate-x-4 -translate-y-4 group-hover:scale-150 transition-transform duration-500"></div>
+                
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-wider">{c.num} · REALTIME</span>
+                  <span className="w-2 h-2 rounded-full bg-[#D9572B] animate-pulse"></span>
+                </div>
+
+                <span className="font-display text-5xl md:text-6xl text-[#16120D] block mb-1 group-hover:text-[#D9572B] transition-colors">
+                  {c.val}
+                </span>
+
+                <span className="text-[11px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-1">
+                  {t(c.labelKey)}
+                </span>
+
+                <span className="text-[9px] font-extrabold text-[#3A332B] uppercase tracking-widest block border-t border-[#16120D]/15 pt-2 mt-2">
+                  {c.sub}
+                </span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4. COMMUNITY / MEMBERS STRIP */}
-      <section className="py-12 bg-[#E2D2BF] border-b-2 border-[#16120D]">
+      {/* 4. COMMUNITY REPRESENTATIVES & OBSERVERS STRIP (REAL LEADER PORTRAIT CARDS) */}
+      <section className="py-14 bg-[#F5EFE6] border-b-2 border-[#16120D]">
         <div className="max-w-[1440px] mx-auto px-4">
-          <div className="flex justify-between items-center flex-wrap gap-4 mb-6">
-            <span className="bg-[#16120D] text-[#F5EFE6] text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest">
-              {t('communityBadge')}
+          <div className="flex justify-between items-end flex-wrap gap-4 mb-8">
+            <div>
+              <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1 flex items-center gap-1">
+                <UserCheck size={14} /> PUBLIC OBSERVERS &amp; COMMUNITY LEADS
+              </span>
+              <h2 className="font-display text-4xl md:text-5xl text-[#16120D] uppercase">{t('communityTitle')}</h2>
+            </div>
+            <span className="text-[10px] font-extrabold bg-[#EADBCE] text-[#16120D] px-3 py-1.5 border border-[#16120D] uppercase tracking-wider">
+              FOUNDING SECRETARIAT &amp; WORKING COMMITTEE
             </span>
-            <h3 className="font-display text-2xl text-[#16120D] uppercase">
-              {t('communityTitle')}
-            </h3>
           </div>
 
-          <div className="flex items-center gap-3 overflow-x-auto no-scrollbar py-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {communityMembers.map((m, idx) => (
-              <div key={idx} className="bg-[#F5EFE6] border-2 border-[#16120D] px-4 py-2 flex items-center gap-3 flex-shrink-0">
-                <div className="w-7 h-7 rounded-full bg-[#16120D] text-[#F5EFE6] font-extrabold flex items-center justify-center text-xs">
-                  {m.name.charAt(0)}
-                </div>
+              <div
+                key={idx}
+                className="bg-[#EADBCE] border-2 border-[#16120D] p-5 shadow-lg hover:border-[#D9572B] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl relative group overflow-hidden flex flex-col justify-between"
+              >
                 <div>
-                  <span className="font-bold text-xs text-[#16120D] block">{m.name}</span>
-                  <span className="text-[9px] text-[#D9572B] font-extrabold">{m.city}, {m.state}</span>
+                  {/* Leader Real Portrait Graphic Image */}
+                  <div className="w-24 h-24 rounded-full border-2 border-[#16120D] bg-[#16120D] overflow-hidden mb-4 mx-auto group-hover:scale-105 group-hover:border-[#D9572B] transition-all duration-300 shadow-md flex items-center justify-center">
+                    <img src={m.imgSrc} alt={m.name} className="w-full h-full object-cover" />
+                  </div>
+
+                  <h3 className="font-display text-2xl text-[#16120D] uppercase mb-1 text-center group-hover:text-[#D9572B] transition-colors">
+                    {m.name}
+                  </h3>
+
+                  <span className="text-xs font-extrabold text-[#D9572B] block text-center mb-1">{m.role}</span>
+                  <span className="text-[10px] font-extrabold text-[#3A332B] uppercase tracking-wider block text-center mb-4">{m.city}</span>
+                </div>
+
+                <div className="text-center pt-2">
+                  <span className="inline-block bg-[#16120D] text-[#F5EFE6] text-[9px] font-extrabold px-3 py-1 uppercase tracking-widest group-hover:bg-[#D9572B] transition-colors border border-[#16120D]">
+                    {m.badge}
+                  </span>
                 </div>
               </div>
             ))}
@@ -353,128 +567,146 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. FEATURED STORY / LATEST DISPATCH */}
+      {/* 5. FEATURED DISPATCH STORY (UNCROPPED FULL POSTER DISPLAY) */}
       <section className="py-16 bg-[#EADBCE] border-b-2 border-[#16120D]">
         <div className="max-w-[1440px] mx-auto px-4">
-          <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 md:p-12 shadow-xl grid md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-8">
-              <div className="flex items-center gap-3 mb-3 text-[11px] font-extrabold">
-                <span className="bg-[#D9572B] text-white px-2.5 py-0.5 uppercase tracking-widest">{t('featuredLabel')}</span>
-                <span className="text-[#16120D]">{t('featuredDate')}</span>
+          <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 md:p-12 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div className="lg:col-span-7 space-y-4">
+              <div className="flex items-center gap-3">
+                <span className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest">
+                  {t('featuredLabel')}
+                </span>
+                <span className="text-xs font-bold text-[#3A332B]">{t('featuredDate')}</span>
               </div>
-              <h2 className="font-display text-3xl md:text-5xl text-[#16120D] mb-4 leading-tight">
-                {t('featuredTitle')}
+
+              <h2 className="font-serif font-black text-3xl md:text-5xl text-[#16120D] leading-tight">
+                WHEN THE SYSTEM DISCOVERS THE PEOPLE ARE PAYING ATTENTION
               </h2>
-              <p className="text-[#3A332B] text-sm leading-relaxed mb-6 font-medium">
-                {t('featuredSummary')}
+
+              <p className="text-xs sm:text-sm text-[#3A332B] leading-relaxed font-medium">
+                An empirical investigation into what happens when citizens start reading Section 4 RTI filings, auditing subterranean sewer clearance depths, and checking contractor road warranty notice boards.
               </p>
-              <div className="flex gap-4 flex-wrap">
-                <Link to="/updates" className="bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase px-6 py-3.5 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all">
+
+              <div className="pt-4 flex items-center gap-4 flex-wrap">
+                <Link
+                  to="/updates"
+                  className="bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 border-2 border-[#16120D] hover:bg-[#D9572B] transition-all"
+                >
                   {t('btnReadDispatch')}
                 </Link>
-                <Link to="/updates" className="bg-transparent text-[#16120D] font-extrabold text-xs uppercase px-6 py-3.5 border-2 border-[#16120D] hover:bg-[#16120D] hover:text-[#F5EFE6] transition-all">
-                  {t('btnViewAllStories')}
+                <Link
+                  to="/updates"
+                  className="text-xs font-extrabold text-[#16120D] hover:text-[#D9572B] uppercase tracking-wider"
+                >
+                  {t('btnViewAllStories')} →
                 </Link>
               </div>
             </div>
 
-            <div className="md:col-span-4 overflow-hidden border-2 border-[#16120D]">
-              <img src="/cjp_poster_sanitation.png" alt="Featured Story Artwork" className="w-full h-full object-cover" />
+            {/* Poster Card Container with ZERO Cropping */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="bg-[#16120D] border-2 border-[#16120D] p-3 shadow-xl transform rotate-1 hover:rotate-0 transition-transform w-full max-w-[440px]">
+                <img
+                  src="/cjp_dispatch_paying_attention_poster.png"
+                  alt="When The System Discovers The People Are Paying Attention Poster"
+                  className="w-full h-auto object-contain mx-auto rounded-sm"
+                />
+                <div className="text-[10px] font-extrabold text-[#EADBCE] text-center mt-2.5 uppercase tracking-widest">
+                  FEATURED DISPATCH POSTER · PUBLIC DISCLOSURE &amp; RTI AUDIT
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* 6. ON THE RADAR TICKER */}
-      <div className="bg-[#16120D] text-[#F5EFE6] py-2 overflow-hidden text-[11px] font-extrabold uppercase tracking-wider border-b-2 border-[#16120D]">
-        <div className="animate-ticker flex items-center gap-8">
-          {radarItems.concat(radarItems).map((item, idx) => (
-            <span key={idx} className="flex items-center gap-3 whitespace-nowrap">
-              <span className="text-[#D9572B]">★</span> {item}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* 7. BIG TYPOGRAPHY STATEMENT (BEBAS NEUE) */}
-      <section className="py-24 bg-[#EADBCE] text-center border-b-2 border-[#16120D]">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-display text-5xl sm:text-7xl lg:text-9xl text-[#16120D] leading-none uppercase mb-4">
+      {/* 6. BIG STATEMENT TYPOGRAPHY */}
+      <section className="py-20 bg-[#16120D] text-[#F5EFE6] border-b-2 border-[#16120D] text-center">
+        <div className="max-w-[1440px] mx-auto px-4">
+          <h2 className="font-display text-5xl sm:text-7xl lg:text-9xl tracking-wider uppercase leading-none mb-4">
             {t('bigStatementLine1')}
           </h2>
-          <h2 className="font-display text-5xl sm:text-7xl lg:text-9xl text-[#D9572B] leading-none uppercase">
+          <h2 className="font-display text-5xl sm:text-7xl lg:text-9xl tracking-wider text-[#D9572B] uppercase leading-none">
             {t('bigStatementLine2')}
           </h2>
         </div>
       </section>
 
-      {/* 8. THE FIVE THINGS WE KEEP ASKING (CORE IDEAS) */}
-      <section className="py-20 bg-[#E2D2BF] border-b-2 border-[#16120D]">
+      {/* 7. THE FIVE CIVIC PILLARS (5 IDEAS) */}
+      <section className="py-16 bg-[#EADBCE] border-b-2 border-[#16120D]">
         <div className="max-w-[1440px] mx-auto px-4">
           <div className="mb-12 text-center max-w-2xl mx-auto">
-            <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-3">
-              CIVIC PILLARS
-            </span>
-            <h2 className="font-display text-4xl md:text-5xl text-[#16120D]">{t('fiveIdeasTitle')}</h2>
+            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">POLICY CORE</span>
+            <h2 className="font-display text-4xl md:text-6xl text-[#16120D] mb-3">{t('fiveIdeasTitle')}</h2>
           </div>
 
-          <div className="space-y-6 max-w-4xl mx-auto mb-10">
-            {coreIdeas.map((idea) => (
-              <div key={idea.num} className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 shadow-md hover:border-[#D9572B] transition-all">
-                <div className="flex justify-between items-start flex-wrap gap-4 mb-3">
-                  <span className="font-display text-5xl text-[#D9572B]">{idea.num}</span>
-                  <h3 className="font-display text-3xl text-[#16120D] uppercase">{t(idea.titleKey)}</h3>
-                </div>
-                <p className="text-[#3A332B] text-xs leading-relaxed font-medium">{t(idea.descKey)}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md">
+              <span className="font-display text-4xl text-[#D9572B] block mb-2">01</span>
+              <h3 className="font-display text-2xl text-[#16120D] uppercase mb-2">{t('idea1Title')}</h3>
+              <p className="text-xs text-[#3A332B] font-medium leading-relaxed">{t('idea1Desc')}</p>
+            </div>
+
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md">
+              <span className="font-display text-4xl text-[#D9572B] block mb-2">02</span>
+              <h3 className="font-display text-2xl text-[#16120D] uppercase mb-2">{t('idea2Title')}</h3>
+              <p className="text-xs text-[#3A332B] font-medium leading-relaxed">{t('idea2Desc')}</p>
+            </div>
+
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md">
+              <span className="font-display text-4xl text-[#D9572B] block mb-2">03</span>
+              <h3 className="font-display text-2xl text-[#16120D] uppercase mb-2">{t('idea3Title')}</h3>
+              <p className="text-xs text-[#3A332B] font-medium leading-relaxed">{t('idea3Desc')}</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md">
+              <span className="font-display text-4xl text-[#D9572B] block mb-2">04</span>
+              <h3 className="font-display text-2xl text-[#16120D] uppercase mb-2">{t('idea4Title')}</h3>
+              <p className="text-xs text-[#3A332B] font-medium leading-relaxed">{t('idea4Desc')}</p>
+            </div>
+
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md">
+              <span className="font-display text-4xl text-[#D9572B] block mb-2">05</span>
+              <h3 className="font-display text-2xl text-[#16120D] uppercase mb-2">{t('idea5Title')}</h3>
+              <p className="text-xs text-[#3A332B] font-medium leading-relaxed">{t('idea5Desc')}</p>
+            </div>
           </div>
 
           <div className="text-center">
-            <Link to="/manifesto" className="inline-block bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase px-8 py-4 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all">
+            <Link
+              to="/manifesto"
+              className="inline-block bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase tracking-wider px-8 py-4 border-2 border-[#16120D] hover:bg-[#D9572B] transition-all shadow-lg"
+            >
               {t('btnReadFullManifesto')}
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 9. MANIFESTO PREVIEW (SPLIT SCREEN) */}
-      <section className="py-20 bg-[#EADBCE] border-b-2 border-[#16120D]">
-        <div className="max-w-[1440px] mx-auto px-4 grid md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-5 bg-[#16120D] text-[#F5EFE6] p-10">
-            <span className="text-xs font-extrabold text-[#D9572B] uppercase tracking-widest block mb-2">CIVIC CHARTER</span>
-            <h2 className="font-display text-5xl md:text-7xl uppercase">{t('manifestoSplitLeft')}</h2>
-          </div>
-
-          <div className="md:col-span-7 bg-[#F5EFE6] border-2 border-[#16120D] p-10 shadow-xl">
-            <h3 className="font-serif text-2xl md:text-3xl text-[#D9572B] mb-4 font-bold">
-              {t('manifestoStatement')}
-            </h3>
-            <p className="text-[#3A332B] text-xs leading-relaxed font-medium mb-6">
-              {t('manifestoPara')}
-            </p>
-            <Link to="/manifesto" className="inline-block bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase px-6 py-3.5 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all">
-              {t('btnOpenManifesto')}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 10. TRENDING MEDIA & VIDEO DISPATCHES (6 REAL YOUTUBE EMBEDS/LINKS) */}
-      <section className="py-20 bg-[#E2D2BF] border-b-2 border-[#16120D]">
+      {/* 8. VIDEOS SECTION (ALL 6 YOUTUBE VIDEOS GRID) */}
+      <section className="py-16 bg-[#F5EFE6] border-b-2 border-[#16120D]">
         <div className="max-w-[1440px] mx-auto px-4">
-          <div className="mb-12 text-center max-w-2xl mx-auto">
-            <span className="text-[11px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-2">TRENDING COVERAGE</span>
-            <h2 className="font-display text-4xl md:text-5xl text-[#16120D]">TRENDING MEDIA &amp; VIDEO DISPATCHES</h2>
-            <p className="text-[#3A332B] text-xs font-medium mt-2">Real video broadcasts, street interviews, and civic dispatches collected live.</p>
+          <div className="flex justify-between items-end flex-wrap gap-4 mb-10 border-b-2 border-[#16120D] pb-6">
+            <div>
+              <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">ALL 6 MEDIA BROADCASTS</span>
+              <h2 className="font-display text-4xl md:text-6xl text-[#16120D] uppercase">{t('videoTitle')}</h2>
+              <p className="text-xs text-[#3A332B] font-medium mt-1">{t('videoSubtitle')}</p>
+            </div>
+            <span className="bg-[#16120D] text-[#EADBCE] text-[10px] font-extrabold px-3 py-1.5 border border-[#16120D] uppercase tracking-wider">
+              SHOWING ALL 6 VERIFIED VIDEO DISPATCHES
+            </span>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trendingNewsVideos.map((v) => (
-              <div key={v.id} className="bg-[#F5EFE6] border-2 border-[#16120D] p-5 shadow-md flex flex-col justify-between hover:border-[#D9572B] transition-all">
+          {/* 3x2 Grid for ALL 6 Videos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {videosList.map((v) => (
+              <div key={v.id} className="bg-[#EADBCE] border-2 border-[#16120D] p-5 shadow-xl flex flex-col justify-between hover:border-[#D9572B] transition-all duration-300 group">
                 <div>
-                  {/* Embedded Working YouTube iFrame */}
-                  <div className="aspect-video bg-[#16120D] border-2 border-[#16120D] mb-4 overflow-hidden shadow-inner">
+                  <div className="relative aspect-video bg-[#16120D] mb-4 border-2 border-[#16120D] overflow-hidden">
                     <iframe
                       src={v.embedUrl}
                       title={v.title}
@@ -483,22 +715,24 @@ export const HomePage: React.FC = () => {
                       allowFullScreen
                     ></iframe>
                   </div>
-
-                  <div className="flex justify-between items-center text-[10px] font-extrabold mb-2">
-                    <span className="text-[#D9572B]">{v.category}</span>
-                    <span className="bg-[#16120D] text-[#F5EFE6] px-2 py-0.5 uppercase tracking-wider">{v.badge}</span>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-wider">{v.category}</span>
+                    <span className="bg-[#16120D] text-[#F5EFE6] text-[9px] font-extrabold px-2 py-0.5 uppercase tracking-widest">{v.badge}</span>
                   </div>
-
-                  <h3 className="font-bold text-sm text-[#16120D] uppercase mb-3 leading-snug">{v.title}</h3>
+                  <h3 className="font-display text-xl text-[#16120D] uppercase leading-tight mb-4 group-hover:text-[#D9572B] transition-colors">
+                    {v.title}
+                  </h3>
                 </div>
 
                 <a
                   href={v.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#16120D] text-[#F5EFE6] text-[10px] font-extrabold uppercase py-2.5 border border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all flex items-center justify-center gap-1.5"
+                  className="bg-[#16120D] text-[#F5EFE6] text-[11px] font-extrabold uppercase py-3 px-4 text-center border border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all flex items-center justify-center gap-1.5 shadow-md"
                 >
-                  <Play size={12} className="text-[#D9572B]" /> WATCH ON YOUTUBE <ExternalLink size={12} />
+                  <Play size={13} className="fill-current text-[#D9572B]" />
+                  <span>WATCH ON YOUTUBE</span>
+                  <ExternalLink size={13} />
                 </a>
               </div>
             ))}
@@ -506,232 +740,116 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 11. THE JOURNAL SECTION */}
-      <section className="py-20 bg-[#EADBCE] border-b-2 border-[#16120D]">
+      {/* 9. QUALIFICATION CARDS */}
+      <section className="py-16 bg-[#EADBCE] border-b-2 border-[#16120D]">
         <div className="max-w-[1440px] mx-auto px-4">
           <div className="mb-12 text-center max-w-2xl mx-auto">
-            <span className="text-[11px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-2">PUBLICATIONS</span>
-            <h2 className="font-display text-4xl md:text-5xl text-[#16120D]">{t('journalTitle')}</h2>
-            <p className="text-[#3A332B] text-xs font-medium mt-2">{t('journalSubtitle')}</p>
+            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">PARTICIPATION</span>
+            <h2 className="font-display text-4xl md:text-6xl text-[#16120D] mb-3">{t('qualifyTitle')}</h2>
+            <p className="text-xs text-[#3A332B] font-medium">{t('qualifyIntro')}</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {journalCards.map((j, idx) => (
-              <div key={idx} className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md flex flex-col justify-between hover:border-[#D9572B] transition-all">
-                <div>
-                  <div className="flex justify-between items-center text-[10px] font-extrabold text-[#D9572B] uppercase mb-2">
-                    <span>{j.cat}</span>
-                    <span>{j.time}</span>
-                  </div>
-                  <h3 className="font-serif font-bold text-lg text-[#16120D] leading-snug mb-4">{j.title}</h3>
-                </div>
-                <Link to="/updates" className="font-extrabold text-xs text-[#16120D] hover:text-[#D9572B] flex items-center gap-1 pt-4 border-t border-[rgba(22,18,13,0.1)]">
-                  READ ARTICLE →
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 12. THE SWARM SPIRIT (DM SERIF DISPLAY) */}
-      <section className="py-20 bg-[#16120D] text-[#F5EFE6] text-center border-b-2 border-[#16120D]">
-        <div className="max-w-3xl mx-auto px-4">
-          <span className="inline-block bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest mb-6">
-            {t('quoteLabel')}
-          </span>
-          <blockquote className="font-serif italic text-3xl md:text-5xl leading-tight mb-8">
-            {t('quoteText')}
-          </blockquote>
-          <Link to="/vision" className="inline-block bg-[#EADBCE] text-[#16120D] font-extrabold text-xs uppercase px-8 py-4 border-2 border-[#EADBCE] hover:bg-[#D9572B] hover:border-[#D9572B] hover:text-white transition-all">
-            {t('btnExploreSpirit')}
-          </Link>
-        </div>
-      </section>
-
-      {/* 13. KEEP THE SERVER ALIVE (SUPPORT SECTION) */}
-      <section id="support-section" className="py-20 bg-[#E2D2BF] border-b-2 border-[#16120D]">
-        <div className="max-w-[1440px] mx-auto px-4">
-          <div className="mb-12 text-center max-w-2xl mx-auto">
-            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-2">{t('demoTiersLabel')}</span>
-            <h2 className="font-display text-4xl md:text-5xl text-[#16120D]">{t('serverAliveTitle')}</h2>
-            <p className="text-[#3A332B] text-xs font-medium mt-2">{t('serverAliveCopy')}</p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-10">
-            {supportTiers.map((t, idx) => (
-              <div key={idx} className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md text-center flex flex-col justify-between">
-                <div>
-                  <h3 className="font-serif font-bold text-xl text-[#16120D] mb-1">{t.name}</h3>
-                  <span className="font-display text-3xl text-[#D9572B] block mb-3">{t.price}</span>
-                  <p className="text-[11px] text-[#3A332B] font-medium leading-relaxed mb-4">{t.desc}</p>
-                </div>
-                <button
-                  onClick={() => alert(`Demo supporter tier: ${t.name}. Payment integration can be added later.`)}
-                  className="bg-[#16120D] text-[#F5EFE6] text-[10px] font-extrabold uppercase py-2.5 border border-[#16120D] hover:bg-[#D9572B] transition-all"
-                >
-                  SELECT TIER
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 14. WHY THIS EXISTS (VISION SECTION) */}
-      <section className="py-20 bg-[#EADBCE] border-b-2 border-[#16120D]">
-        <div className="max-w-4xl mx-auto px-4 bg-[#F5EFE6] border-2 border-[#16120D] p-8 md:p-12 shadow-xl">
-          <h2 className="font-display text-4xl text-[#16120D] mb-6 border-b border-[rgba(22,18,13,0.18)] pb-4">
-            {t('whyExistsTitle')}
-          </h2>
-
-          <div className="space-y-6 text-xs md:text-sm text-[#3A332B] leading-relaxed font-medium">
-            <p>
-              Navigating urban administration often feels like being lost in a maze of endless forms, rubber stamps, and transferred phone calls. Cockroach Janta Party was created as a humorous yet sharp civic project to give voice to frustrated citizens who refuse to normalize broken systems.
-            </p>
-            <p>
-              We use satire not as an escape from reality, but as a lens to examine public issues — from subterranean sewer desilting to 3-year contractor road warranties and open RTI disclosures.
-            </p>
-            <p>
-              Our goal is simple: encourage ordinary citizens to ask better questions, inspect public works ledgers, and actively participate in neighborhood governance.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 15. DO YOU QUALIFY FOR THE SWARM? (MEMBERSHIP SECTION) */}
-      <section className="py-20 bg-[#E2D2BF] border-b-2 border-[#16120D]">
-        <div className="max-w-[1440px] mx-auto px-4">
-          <div className="mb-12 text-center max-w-2xl mx-auto">
-            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-2">COMMUNITY ELIGIBILITY</span>
-            <h2 className="font-display text-4xl md:text-5xl text-[#16120D]">{t('qualifyTitle')}</h2>
-            <p className="text-[#3A332B] text-xs font-medium mt-2">{t('qualifyIntro')}</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-10">
-            {qualificationCards.map((q) => (
-              <div key={q.num} className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md text-center">
-                <span className="font-display text-4xl text-[#D9572B] block mb-2">{q.num}</span>
-                <h3 className="font-display text-2xl text-[#16120D] uppercase mb-2">{t(q.titleKey)}</h3>
-                <p className="text-xs text-[#3A332B] font-medium">{t(q.descKey)}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            {qualificationCards.map((c) => (
+              <div key={c.num} className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md">
+                <span className="font-display text-4xl text-[#D9572B] block mb-2">{c.num}</span>
+                <h3 className="font-display text-xl text-[#16120D] uppercase mb-2">{t(c.titleKey)}</h3>
+                <p className="text-xs text-[#3A332B] font-medium leading-relaxed">{t(c.descKey)}</p>
               </div>
             ))}
           </div>
 
           <div className="text-center">
-            <Link to="/join" className="inline-block bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase px-8 py-4 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all">
+            <Link
+              to="/join"
+              className="inline-block bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase tracking-wider px-8 py-4 border-2 border-[#16120D] hover:bg-[#D9572B] transition-all shadow-lg"
+            >
               {t('btnJoinCommunity')}
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 16. THE VISUAL SWARM (GALLERY & POSTERS) */}
-      <section className="py-20 bg-[#EADBCE] border-b-2 border-[#16120D]">
-        <div className="max-w-[1440px] mx-auto px-4">
-          <div className="mb-12 text-center max-w-2xl mx-auto">
-            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-2">GRAPHIC ARTWORK</span>
-            <h2 className="font-display text-4xl md:text-5xl text-[#16120D]">{t('visualSwarmTitle')}</h2>
-            <p className="text-[#3A332B] text-xs font-medium mt-2">{t('visualSwarmSubtitle')}</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            {visualSwarmPosters.map((p, idx) => (
-              <div key={idx} className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md flex flex-col justify-between min-h-[260px]">
-                <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-4">{p.tag}</span>
-                <h3 className="font-display text-3xl text-[#16120D] uppercase leading-tight my-auto">{p.text}</h3>
-                <div className="pt-4 border-t border-[rgba(22,18,13,0.18)] text-[9px] font-bold text-[#3A332B] uppercase tracking-wider">
-                  CJP POSTER ARTWORK
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link to="/posters" className="inline-block bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase px-8 py-4 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all">
-              EXPLORE ALL POSTERS →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 17. THE COMPLAINT DESK (ISSUE TRACKER & FORM) */}
-      <section className="py-20 bg-[#E2D2BF] border-b-2 border-[#16120D]">
-        <div className="max-w-3xl mx-auto px-4 bg-[#F5EFE6] border-2 border-[#16120D] p-8 md:p-12 shadow-xl">
-          <div className="text-center mb-8">
-            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-2">CIVIC INTAKE</span>
-            <h2 className="font-display text-4xl text-[#16120D]">{t('complaintDeskTitle')}</h2>
-            <p className="text-[#3A332B] text-xs font-medium mt-2">{t('complaintDeskSubtitle')}</p>
-          </div>
-
-          {issueSubmitted ? (
-            <div className="bg-[#EADBCE] border-2 border-[#16120D] p-8 text-center text-[#16120D]">
-              <CheckCircle2 size={40} className="mx-auto mb-3 text-[#D9572B]" />
-              <h3 className="font-display text-3xl mb-2">ISSUE LOGGED!</h3>
-              <p className="text-xs font-medium">Your complaint has been submitted to the community intake queue.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleIssueSubmit} className="space-y-4">
-              <div>
-                <label className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-1">CATEGORY</label>
-                <select
-                  value={issueCategory}
-                  onChange={(e) => setIssueCategory(e.target.value)}
-                  className="w-full bg-[#EADBCE] border border-[#16120D] px-3 py-2 text-xs text-[#16120D] font-bold outline-none"
-                >
-                  <option>Education</option>
-                  <option>Jobs &amp; Skills</option>
-                  <option>Public Services</option>
-                  <option>Infrastructure &amp; Roads</option>
-                  <option>Digital Rights &amp; RTI</option>
-                  <option>Environment &amp; Drains</option>
-                  <option>Other Civic Issue</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-1">DETAILS OF ISSUE</label>
-                <textarea
-                  rows={4}
-                  required
-                  value={issueText}
-                  onChange={(e) => setIssueText(e.target.value)}
-                  placeholder="Describe what is broken or confusing..."
-                  className="w-full bg-[#EADBCE] border border-[#16120D] px-3 py-2 text-xs text-[#16120D] outline-none resize-none font-medium"
-                />
-              </div>
-
-              <button type="submit" className="w-full bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase py-3.5 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all flex items-center justify-center gap-2">
-                <Send size={14} /> LOG ISSUE WITH THE SWARM →
-              </button>
-            </form>
-          )}
-        </div>
-      </section>
-
-      {/* 18. QUESTIONS PEOPLE KEEP ASKING (FAQ ACCORDION) */}
-      <section className="py-20 bg-[#EADBCE] border-b-2 border-[#16120D]">
+      {/* 10. COMPLAINT DESK FORM */}
+      <section className="py-16 bg-[#F5EFE6] border-b-2 border-[#16120D]">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="font-display text-4xl md:text-5xl text-center text-[#16120D] mb-10">
-            {t('faqTitle')}
-          </h2>
+          <div className="bg-[#EADBCE] border-2 border-[#16120D] p-8 md:p-12 shadow-2xl">
+            <div className="text-center mb-8">
+              <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">WARD INTAKE</span>
+              <h2 className="font-display text-4xl text-[#16120D] uppercase mb-2">{t('complaintDeskTitle')}</h2>
+              <p className="text-xs text-[#3A332B] font-medium">{t('complaintDeskSubtitle')}</p>
+            </div>
+
+            {issueSubmitted ? (
+              <div className="bg-[#F5EFE6] border border-[#16120D] p-6 text-center">
+                <CheckCircle2 size={36} className="text-[#D9572B] mx-auto mb-2" />
+                <h4 className="font-display text-2xl text-[#16120D] uppercase mb-1">ISSUE LOGGED IN QUEUE</h4>
+                <p className="text-xs text-[#3A332B] font-medium">
+                  Thank you. Your ward report has been recorded in the public community intake database.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleIssueSubmit} className="space-y-4">
+                <div>
+                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">ISSUE CATEGORY:</label>
+                  <select
+                    value={issueCategory}
+                    onChange={(e) => setIssueCategory(e.target.value)}
+                    className="w-full bg-[#F5EFE6] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none"
+                  >
+                    <option value="Education">Public School Infrastructure (School Thik Karo)</option>
+                    <option value="Sewer">Subterranean Sewer Clearance &amp; Desilting</option>
+                    <option value="Road">Road Paving Warranty Notice Board</option>
+                    <option value="Water">Drinking Water Quality &amp; TDS Testing</option>
+                    <option value="RTI">Section 4 RTI Paywall Violation</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">DESCRIBE WARD ISSUE:</label>
+                  <textarea
+                    required
+                    rows={4}
+                    value={issueText}
+                    onChange={(e) => setIssueText(e.target.value)}
+                    placeholder="Provide ward location, contractor name, or specific public complaint details..."
+                    className="w-full bg-[#F5EFE6] border border-[#16120D] p-3.5 text-xs text-[#16120D] font-medium outline-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase tracking-wider py-4 border border-[#16120D] hover:bg-[#D9572B] transition-all flex items-center justify-center gap-2"
+                >
+                  <Send size={16} />
+                  <span>LOG ISSUE IN PUBLIC QUEUE →</span>
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* 11. FAQ ACCORDION */}
+      <section className="py-16 bg-[#EADBCE] border-b-2 border-[#16120D]">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="mb-12 text-center">
+            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">HELP &amp; INFORMATION</span>
+            <h2 className="font-display text-4xl md:text-5xl text-[#16120D]">{t('faqTitle')}</h2>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-[#F5EFE6] border-2 border-[#16120D]">
+              <div key={idx} className="bg-[#F5EFE6] border-2 border-[#16120D] shadow-sm">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full p-5 text-left flex justify-between items-center gap-4 hover:bg-[#E2D2BF] transition-colors"
+                  className="w-full text-left p-5 font-display text-xl text-[#16120D] uppercase flex justify-between items-center gap-4 hover:text-[#D9572B] transition-colors"
                 >
-                  <span className="font-bold text-base text-[#16120D] flex items-center gap-2">
-                    <HelpCircle size={18} className="text-[#D9572B]" />
-                    {faq.q}
-                  </span>
-                  {openFaq === idx ? <ChevronUp size={18} className="text-[#D9572B]" /> : <ChevronDown size={18} className="text-[#16120D]" />}
+                  <span>{faq.q}</span>
+                  {openFaq === idx ? <ChevronUp size={20} className="text-[#D9572B]" /> : <ChevronDown size={20} />}
                 </button>
-
                 {openFaq === idx && (
-                  <div className="p-5 pt-0 border-t border-[rgba(22,18,13,0.18)] text-xs text-[#3A332B] leading-relaxed font-medium">
+                  <div className="p-5 pt-0 text-xs text-[#3A332B] font-medium leading-relaxed border-t border-[#16120D]/10 mt-2">
                     {faq.a}
                   </div>
                 )}
@@ -741,27 +859,21 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 19. ENORMOUS CLOSING CTA (BEBAS NEUE) */}
-      <section className="py-24 bg-[#16120D] text-[#F5EFE6] text-center border-b-2 border-[#16120D]">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-display text-5xl sm:text-7xl lg:text-9xl leading-none uppercase mb-6">
+      {/* 12. FINAL CALL TO ACTION */}
+      <section className="py-20 bg-[#16120D] text-[#F5EFE6] text-center">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="font-display text-4xl sm:text-6xl uppercase tracking-wider mb-4">
             {t('finalCtaHeadline')}
           </h2>
-          <p className="text-base sm:text-lg text-[#EADBCE] max-w-lg mx-auto mb-10 font-medium">
+          <p className="text-xs sm:text-sm text-[#EADBCE] font-medium leading-relaxed max-w-xl mx-auto mb-8">
             {t('finalCtaSupporting')}
           </p>
-
-          <div className="flex justify-center gap-4 flex-wrap">
-            <Link to="/manifesto" className="bg-[#D9572B] text-white font-extrabold text-xs uppercase px-8 py-4 border-2 border-[#D9572B] hover:bg-[#EADBCE] hover:border-[#EADBCE] hover:text-[#16120D] transition-all shadow-lg">
-              {t('btnEnterManifesto')}
-            </Link>
-            <Link to="/contact" className="bg-transparent text-[#F5EFE6] font-extrabold text-xs uppercase px-8 py-4 border-2 border-[#F5EFE6] hover:bg-[#F5EFE6] hover:text-[#16120D] transition-all">
-              {t('btnRaiseIssue')}
-            </Link>
-            <Link to="/join" className="bg-[#EADBCE] text-[#16120D] font-extrabold text-xs uppercase px-8 py-4 border-2 border-[#EADBCE] hover:bg-[#D9572B] hover:border-[#D9572B] hover:text-white transition-all">
-              {t('navJoinSwarm')}
-            </Link>
-          </div>
+          <Link
+            to="/join"
+            className="inline-block bg-[#D9572B] text-white font-extrabold text-xs uppercase tracking-widest px-10 py-5 border-2 border-white hover:bg-white hover:text-[#16120D] transition-all shadow-2xl"
+          >
+            {t('navJoinSwarm')}
+          </Link>
         </div>
       </section>
 

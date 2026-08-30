@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
-import { CheckCircle, ShieldAlert } from 'lucide-react';
+import { CheckCircle, ShieldAlert, Megaphone } from 'lucide-react';
 
 export const IssuesPage: React.FC = () => {
   const { lang } = useLanguage();
@@ -82,7 +82,7 @@ export const IssuesPage: React.FC = () => {
   ];
 
   return (
-    <div className="issues-page py-16 bg-[#EADBCE] text-[#16120D] font-sans">
+    <div className="issues-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
         title="CJP Issues | Public Issues & Civic Commentary"
         description="Explore 8+ verified public civic issues championed by Cockroach Janta Party: Drainage, contractor warranties, water purity, RTI, and youth employment."
@@ -92,7 +92,7 @@ export const IssuesPage: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4">
         
         {/* Header Hero */}
-        <div className="mb-16 text-center max-w-3xl mx-auto">
+        <div className="mb-12 text-center max-w-3xl mx-auto">
           <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
             {lang === 'hi' ? 'मुद्दा खोजकर्ता' : 'CIVIC ISSUE EXPLORER'}
           </span>
@@ -102,6 +102,36 @@ export const IssuesPage: React.FC = () => {
           <p className="text-[#3A332B] text-base leading-relaxed font-medium">
             Clear distinction between factual background, CJP's stated civic positions, and neutral context.
           </p>
+        </div>
+
+        {/* DEDICATED ISSUES CAMPAIGN POSTER CARD */}
+        <div className="my-10 max-w-xl mx-auto bg-[#16120D] border-4 border-[#16120D] p-4 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+          <div className="flex justify-between items-center text-[10px] font-extrabold text-[#EADBCE] border-b border-white/20 pb-2 mb-3 uppercase tracking-wider">
+            <span className="flex items-center gap-1.5 text-[#D9572B]">
+              <Megaphone size={14} /> OFFICIAL ISSUES CAMPAIGN POSTER
+            </span>
+            <span>POSTER #01 · 5 SEP MARCH</span>
+          </div>
+
+          <div className="bg-[#16120D] border border-white/10 p-2 overflow-hidden flex items-center justify-center">
+            <img
+              src="/cjp_sep5_protest_poster.png"
+              alt="CJP Public Issues Official Campaign Poster"
+              className="w-full h-auto object-contain mx-auto rounded"
+            />
+          </div>
+
+          <div className="text-center pt-3">
+            <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block mb-1">
+              RAISE YOUR VOICE FOR PUBLIC ISSUES
+            </span>
+            <h3 className="font-display text-2xl text-white uppercase tracking-wide">
+              SUBTERRANEAN DRAIN &amp; SCHOOL INFRASTRUCTURE AUDIT
+            </h3>
+            <p className="text-[11px] text-[#EADBCE] font-bold uppercase tracking-wider mt-1">
+              "CHALO POLICE HQ &amp; INDIA GATE · DEMAND ACCOUNTABILITY!"
+            </p>
+          </div>
         </div>
 
         {/* Editorial Disclaimer */}

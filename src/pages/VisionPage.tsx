@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Eye } from 'lucide-react';
 
 export const VisionPage: React.FC = () => {
   const { lang, t } = useLanguage();
@@ -47,7 +47,7 @@ export const VisionPage: React.FC = () => {
   ];
 
   return (
-    <div className="vision-page py-16 bg-[#EADBCE] text-[#16120D] font-sans">
+    <div className="vision-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
         title="CJP Vision | Cockroach Janta Party"
         description="Explore the vision, core philosophy, and conversation drivers of Cockroach Janta Party: A different kind of public voice."
@@ -57,7 +57,7 @@ export const VisionPage: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4">
         
         {/* Header Hero */}
-        <div className="mb-16 text-center max-w-3xl mx-auto">
+        <div className="mb-12 text-center max-w-3xl mx-auto">
           <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
             {lang === 'hi' ? 'भविष्य का खाका' : 'CIVIC VISION'}
           </span>
@@ -67,6 +67,36 @@ export const VisionPage: React.FC = () => {
           <p className="text-[#3A332B] text-base md:text-lg leading-relaxed font-medium">
             {t('tagline')}
           </p>
+        </div>
+
+        {/* DEDICATED VISION POSTER CARD */}
+        <div className="my-10 max-w-xl mx-auto bg-[#16120D] border-4 border-[#16120D] p-4 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+          <div className="flex justify-between items-center text-[10px] font-extrabold text-[#EADBCE] border-b border-white/20 pb-2 mb-3 uppercase tracking-wider">
+            <span className="flex items-center gap-1.5 text-[#D9572B]">
+              <Eye size={14} /> OFFICIAL VISION POSTER
+            </span>
+            <span>POSTER #05 · CIVIC VISION</span>
+          </div>
+
+          <div className="bg-[#16120D] border border-white/10 p-2 overflow-hidden flex items-center justify-center">
+            <img
+              src="/cjp_dispatch_paying_attention_poster.png"
+              alt="CJP Civic Vision Official Poster"
+              className="w-full h-auto object-contain mx-auto rounded"
+            />
+          </div>
+
+          <div className="text-center pt-3">
+            <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block mb-1">
+              FOR THOSE WHO REFUSE TO STAY SILENT
+            </span>
+            <h3 className="font-display text-2xl text-white uppercase tracking-wide">
+              CIVIC VIGILANCE &amp; SUBTERRANEAN AUDIT
+            </h3>
+            <p className="text-[11px] text-[#EADBCE] font-bold uppercase tracking-wider mt-1">
+              "WE DON'T NEED SPEECHES. WE NEED BETTER QUESTIONS."
+            </p>
+          </div>
         </div>
 
         {/* OUR IDEA Section (Substantial Paragraphs) */}

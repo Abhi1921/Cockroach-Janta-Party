@@ -126,7 +126,19 @@ export const BlackMondayPage: React.FC = () => {
             A stubborn swarm of cockroaches walked toward Parliament. The Government decided that lathis were the answer.
           </p>
 
-          <div className="inline-flex items-center gap-2 bg-[#EADBCE] text-[#16120D] px-6 py-2.5 font-extrabold text-xs uppercase tracking-widest border border-white">
+          {/* DEDICATED BLACK MONDAY POSTER */}
+          <div className="my-8 max-w-md mx-auto bg-[#231F1A] border-4 border-[#D9572B] p-3 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+            <img
+              src="/cjp_black_monday_poster.png"
+              alt="20 July Black Monday Special Report Poster - Cockroach Janta Party"
+              className="w-full h-auto object-contain rounded"
+            />
+            <div className="text-[10px] font-extrabold text-[#D9572B] text-center mt-2.5 uppercase tracking-widest">
+              OFFICIAL BLACK MONDAY SPECIAL REPORT POSTER
+            </div>
+          </div>
+
+          <div className="inline-flex items-center gap-2 bg-[#EADBCE] text-[#16120D] px-6 py-2.5 font-extrabold text-xs uppercase tracking-widest border border-white mt-4">
             <span>HASHTAGS: #JawaabDo · #BlackMonday</span>
           </div>
         </div>

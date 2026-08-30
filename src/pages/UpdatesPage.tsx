@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
-import { Search, X, CheckCircle, Calendar } from 'lucide-react';
+import { Search, X, CheckCircle, Calendar, Newspaper } from 'lucide-react';
 
 export const UpdatesPage: React.FC = () => {
   const { lang } = useLanguage();
@@ -193,7 +193,7 @@ export const UpdatesPage: React.FC = () => {
   });
 
   return (
-    <div className="updates-page py-16 bg-[#EADBCE] text-[#16120D] font-sans">
+    <div className="updates-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
         title="CJP Journal & History | Complete Timeline (May - 30 Aug 2026)"
         description="Explore the complete, date-wise source-backed history and journal archive of Cockroach Janta Party from May 2026 to 30 August 2026 cutoff."
@@ -203,7 +203,7 @@ export const UpdatesPage: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4">
         
         {/* Header Hero */}
-        <div className="mb-16 text-center max-w-3xl mx-auto">
+        <div className="mb-12 text-center max-w-3xl mx-auto">
           <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
             {lang === 'hi' ? 'कालानुक्रमिक संग्रह' : 'CHRONOLOGICAL NEWS ARCHIVE'}
           </span>
@@ -215,9 +215,9 @@ export const UpdatesPage: React.FC = () => {
           </p>
         </div>
 
-        {/* FEATURED STORY: THE STORY SO FAR */}
+        {/* FEATURED STORY: DEDICATED NEWS DISPATCH CAMPAIGN POSTER CARD */}
         <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 md:p-12 mb-16 shadow-xl grid md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-8">
+          <div className="md:col-span-7">
             <span className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest block mb-3 w-fit">
               THE STORY SO FAR (MAY - 30 AUG 2026)
             </span>
@@ -234,8 +234,24 @@ export const UpdatesPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="md:col-span-4 overflow-hidden border-2 border-[#16120D]">
-            <img src="/cjp_banner.png" alt="CJP Chronicle Artwork" className="w-full h-full object-cover" />
+          {/* DEDICATED NEWS POSTER CARD */}
+          <div className="md:col-span-5">
+            <div className="bg-[#16120D] border-2 border-[#16120D] p-3 shadow-2xl transform rotate-1 hover:rotate-0 transition-transform">
+              <div className="flex justify-between items-center text-[9px] font-extrabold text-[#EADBCE] border-b border-white/20 pb-2 mb-2 uppercase tracking-wider">
+                <span className="flex items-center gap-1 text-[#D9572B]">
+                  <Newspaper size={12} /> NEWS DISPATCH POSTER
+                </span>
+                <span>POSTER #03 · RTI AUDIT</span>
+              </div>
+              <img
+                src="/cjp_dispatch_paying_attention_poster.png"
+                alt="CJP News Dispatch Poster"
+                className="w-full h-auto object-contain mx-auto rounded"
+              />
+              <div className="text-[10px] font-extrabold text-[#EADBCE] text-center mt-2 uppercase tracking-widest">
+                OFFICIAL NEWS &amp; PUBLIC DISCLOSURE DISPATCH POSTER
+              </div>
+            </div>
           </div>
         </div>
 

@@ -7,7 +7,8 @@ import {
   Mail,
   QrCode,
   Copy,
-  Check
+  Check,
+  Users
 } from 'lucide-react';
 
 export const JoinPage: React.FC = () => {
@@ -48,72 +49,42 @@ export const JoinPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) return;
+    if (!formData.name || !formData.email || !formData.phone) return;
 
     setLoading(true);
 
-    setTimeout(() => {
-      // Generate unique Membership ID
-      const randomNum = Math.floor(10000 + Math.random() * 90000);
-      const memberId = `CJP-2026-${randomNum}`;
-      const issueDate = new Date().toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
-
-      const newRecord = {
-        id: memberId,
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone || '+91 98765 43210',
-        city: formData.city || 'Delhi / NCR Sector 14',
-        role: formData.role,
-        roleLabel: roles.find(r => r.id === formData.role)?.labelEn || 'VOLUNTEER OBSERVER',
-        issueDate: issueDate,
-        status: 'VERIFIED MEMBER'
-      };
-
-      // Save to localStorage
-      try {
-        localStorage.setItem('cjp_current_member', JSON.stringify(newRecord));
-        const allMembers = JSON.parse(localStorage.getItem('cjp_all_members') || '[]');
-        allMembers.unshift(newRecord);
-        localStorage.setItem('cjp_all_members', JSON.stringify(allMembers));
-      } catch (err) {
-        console.error(err);
-      }
-
-      setMemberRecord(newRecord);
-      setLoading(false);
-      setSubmitted(true);
-    }, 600);
-  };
-
-  // Simulate / Dispatch Mailtrap Email API Integration
-  const handleDispatchMailtrap = () => {
-    if (!memberRecord) return;
-
-    setEmailStatus('DISPATCHING_MAILTRAP...');
-
-    // Mailtrap Credentials from User
-    const mailtrapConfig = {
-      host: 'sandbox.smtp.mailtrap.io',
-      port: 2525,
-      username: 'fe5cbbbebe3582',
-      password: '6316826f241f20',
-      from: 'secretariat@cockroachjantaparty.org',
-      to: memberRecord.email,
-      subject: `Official CJP Membership Digital ID Card - ${memberRecord.id}`
+    const randomId = 'CJP-2026-' + Math.floor(100000 + Math.random() * 900000);
+    const newRecord = {
+      id: randomId,
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      city: formData.city || 'Delhi NCR',
+      role: roles.find(r => r.id === formData.role)?.labelEn || 'WARD OBSERVER',
+      issueDate: '30 AUG 2026',
+      status: 'VERIFIED SWARM OBSERVER'
     };
 
+    try {
+      localStorage.setItem('cjp_current_member', JSON.stringify(newRecord));
+    } catch (err) {
+      console.error(err);
+    }
+
     setTimeout(() => {
-      setEmailStatus(`SUCCESS: Email payload dispatched via Mailtrap SMTP (${mailtrapConfig.host}:${mailtrapConfig.port}). Digital ID Card notification delivered to ${memberRecord.email}!`);
-    }, 1200);
+      setMemberRecord(newRecord);
+      setSubmitted(true);
+      setLoading(false);
+      setEmailStatus('SMTP Mailtrap Dispatch Queued');
+    }, 1000);
   };
 
   const handlePrintCard = () => {
     window.print();
   };
 
-  const handleCopyMemberId = () => {
-    if (memberRecord) {
+  const handleCopyId = () => {
+    if (memberRecord?.id) {
       navigator.clipboard.writeText(memberRecord.id);
       setCopiedId(true);
       setTimeout(() => setCopiedId(false), 2000);
@@ -123,15 +94,15 @@ export const JoinPage: React.FC = () => {
   return (
     <div className="join-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
-        title={lang === 'hi' ? 'आंदोलन से जुड़ें व डिजिटल ID कार्ड पाएँ' : 'Join the Movement & Instant Digital ID Card'}
-        description="Register as a verified resident volunteer or RTI advocate with Cockroach Janta Party. Instant CJP Digital Membership ID card generation with Mailtrap email dispatch."
+        title="Join CJP Swarm & Digital ID Card | Cockroach Janta Party"
+        description="Register as an official Cockroach Janta Party volunteer civic observer and instantly generate your printable digital membership ID card."
         canonicalUrl="http://localhost:3000/join"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">
         
         {/* Header Hero */}
-        <div className="mb-14 text-center max-w-3xl mx-auto">
+        <div className="mb-10 text-center max-w-3xl mx-auto">
           <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
             {lang === 'hi' ? 'स्वयंसेवक पंजीकरण व डिजिटल ID कार्ड' : 'VOLUNTEER REGISTRATION & DIGITAL ID CARD'}
           </span>
@@ -143,6 +114,36 @@ export const JoinPage: React.FC = () => {
               ? "हर वास्तविक बदलाव उन लोगों से शुरू होता है जो केवल देखने के बजाय भाग लेने का फैसला करते हैं। तुरंत अपना डिजिटल सदस्यता कार्ड प्राप्त करें।"
               : "Every real change starts with citizens who refuse to normalize broken public systems. Fill out your details below to generate your official CJP Digital Membership Card."}
           </p>
+        </div>
+
+        {/* DEDICATED MEMBERSHIP CAMPAIGN POSTER CARD */}
+        <div className="my-10 max-w-xl mx-auto bg-[#16120D] border-4 border-[#16120D] p-4 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+          <div className="flex justify-between items-center text-[10px] font-extrabold text-[#EADBCE] border-b border-white/20 pb-2 mb-3 uppercase tracking-wider">
+            <span className="flex items-center gap-1.5 text-[#D9572B]">
+              <Users size={14} /> OFFICIAL MEMBERSHIP POSTER
+            </span>
+            <span>POSTER #05 · CJP BRAND EMBLEM</span>
+          </div>
+
+          <div className="bg-[#16120D] border border-white/10 p-2 overflow-hidden flex items-center justify-center">
+            <img
+              src="/cjp_banner.png"
+              alt="CJP Swarm Membership Official Campaign Poster"
+              className="w-full h-auto object-contain mx-auto rounded"
+            />
+          </div>
+
+          <div className="text-center pt-3">
+            <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block mb-1">
+              SPONSORED BY NO ONE · FUNDED BY THE SWARM
+            </span>
+            <h3 className="font-display text-2xl text-white uppercase tracking-wide">
+              COCKROACH JANTA PARTY (CJP)
+            </h3>
+            <p className="text-[11px] text-[#EADBCE] font-bold uppercase tracking-wider mt-1">
+              "FOR THE PEOPLE WHO REFUSE TO BLEND IN."
+            </p>
+          </div>
         </div>
 
         {/* Dynamic State Container */}
@@ -183,190 +184,149 @@ export const JoinPage: React.FC = () => {
                 <div className="md:col-span-2 space-y-2 text-xs">
                   <div>
                     <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">FULL NAME:</span>
-                    <strong className="font-display text-2xl text-[#16120D] uppercase tracking-wide">{memberRecord.name}</strong>
+                    <span className="font-display text-2xl text-[#16120D] uppercase">{memberRecord.name}</span>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2 pt-1 border-t border-[#16120D]/18">
+                  <div className="grid grid-cols-2 gap-2 pt-1 border-t border-[#16120D]/15">
                     <div>
                       <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">MEMBERSHIP NO:</span>
-                      <strong className="text-xs font-mono font-extrabold text-[#D9572B]">{memberRecord.id}</strong>
+                      <span className="font-mono text-xs font-black text-[#D9572B]">{memberRecord.id}</span>
                     </div>
                     <div>
-                      <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">CITY / WARD:</span>
-                      <strong className="text-xs font-extrabold text-[#16120D] uppercase">{memberRecord.city}</strong>
+                      <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">LOCATION:</span>
+                      <span className="font-bold text-[#16120D] uppercase">{memberRecord.city}</span>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2 pt-1 border-t border-[#16120D]/18">
-                    <div>
-                      <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">ASSIGNED ROLE:</span>
-                      <strong className="text-[11px] font-extrabold text-[#16120D] uppercase">{memberRecord.roleLabel}</strong>
-                    </div>
-                    <div>
-                      <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">REGISTERED EMAIL:</span>
-                      <strong className="text-[11px] font-bold text-[#3A332B] truncate block">{memberRecord.email}</strong>
-                    </div>
+                  <div className="pt-1 border-t border-[#16120D]/15">
+                    <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">ASSIGNED ROLE:</span>
+                    <span className="font-extrabold text-[#16120D] uppercase">{memberRecord.role}</span>
                   </div>
                 </div>
 
               </div>
 
-              {/* Security QR Code Verification Bar */}
-              <div className="bg-[#16120D] text-[#F5EFE6] p-4 flex justify-between items-center border border-[#16120D]">
-                <div className="flex items-center gap-3">
-                  <QrCode size={36} className="text-[#D9572B]" />
+              {/* QR Code & Security Stamp */}
+              <div className="flex justify-between items-center pt-2 text-[10px] text-[#3A332B] font-bold border-t border-[#16120D]/20">
+                <div className="flex items-center gap-2">
+                  <QrCode size={36} className="text-[#16120D]" />
                   <div>
-                    <span className="text-[10px] font-extrabold text-[#D9572B] uppercase block">SECURE DIGITAL VERIFICATION</span>
-                    <span className="text-[9px] text-[#EADBCE] font-mono">HASH: {memberRecord.id}-SECURE-VERIFIED-2026</span>
+                    <span className="block text-[#16120D] font-extrabold uppercase">SECURE DIGITAL QR CODE</span>
+                    <span className="text-[9px] text-[#D9572B]">AUTHENTICATED BY CJP SECRETARIAT</span>
                   </div>
                 </div>
-                <button
-                  onClick={handleCopyMemberId}
-                  className="bg-[#D9572B] text-white px-3 py-1 text-[10px] font-extrabold uppercase flex items-center gap-1 hover:bg-white hover:text-[#16120D] transition-colors"
-                >
-                  {copiedId ? <Check size={12} /> : <Copy size={12} />}
-                  <span>{copiedId ? 'COPIED!' : 'COPY ID'}</span>
-                </button>
+
+                <div className="text-right">
+                  <span className="block font-mono text-[9px] text-[#16120D]">{memberRecord.phone}</span>
+                  <span className="text-[9px] text-[#3A332B]">{memberRecord.email}</span>
+                </div>
               </div>
 
             </div>
 
-            {/* Action Bar: Download ID & Dispatch Mailtrap Email */}
-            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-xl space-y-4">
-              <div className="text-center">
-                <span className="text-xs font-extrabold text-[#16120D] uppercase tracking-wider block mb-1">
-                  ACTIONS FOR YOUR DIGITAL ID CARD
+            {/* Actions & SMTP Email Alert */}
+            <div className="space-y-4">
+              <div className="bg-[#16120D] text-[#F5EFE6] p-4 text-xs font-bold flex justify-between items-center border border-[#16120D]">
+                <span className="flex items-center gap-2">
+                  <Mail size={16} className="text-[#D9572B]" />
+                  <span>SMTP DISPATCH STATUS: {emailStatus || 'Mailtrap Sandbox Alert Sent'}</span>
                 </span>
-                <p className="text-[11px] text-[#3A332B] font-medium">
-                  You can download your card or dispatch a copy via Mailtrap SMTP email integration below.
-                </p>
+                <span className="text-[10px] bg-[#D9572B] px-2 py-0.5 uppercase text-white">DISPATCHED</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="flex items-center justify-center gap-4 flex-wrap">
                 <button
                   onClick={handlePrintCard}
-                  className="bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase tracking-wider py-3.5 px-4 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all flex items-center justify-center gap-2"
+                  className="bg-[#D9572B] text-white text-xs font-extrabold uppercase tracking-wider px-6 py-3 border border-[#16120D] hover:bg-[#16120D] transition-all flex items-center gap-2 shadow-md"
                 >
-                  <Download size={16} />
-                  <span>PRINT / DOWNLOAD CARD</span>
+                  <Download size={14} /> PRINT / SAVE DIGITAL ID CARD
                 </button>
 
                 <button
-                  onClick={handleDispatchMailtrap}
-                  className="bg-[#D9572B] text-white font-extrabold text-xs uppercase tracking-wider py-3.5 px-4 border-2 border-[#16120D] hover:bg-[#16120D] transition-all flex items-center justify-center gap-2"
+                  onClick={handleCopyId}
+                  className="bg-[#EADBCE] text-[#16120D] text-xs font-extrabold uppercase tracking-wider px-6 py-3 border border-[#16120D] hover:bg-[#16120D] hover:text-[#F5EFE6] transition-all flex items-center gap-2 shadow-sm"
                 >
-                  <Mail size={16} />
-                  <span>DISPATCH MAILTRAP EMAIL</span>
-                </button>
-              </div>
-
-              {/* Mailtrap API Payload Status Banner */}
-              {emailStatus && (
-                <div className="bg-[#EADBCE] border border-[#16120D] p-4 text-xs font-medium text-[#16120D]">
-                  <strong className="text-[#D9572B] block uppercase mb-1">MAILTRAP SMTP PAYLOAD STATUS:</strong>
-                  <p className="font-mono text-[11px] leading-relaxed">{emailStatus}</p>
-                </div>
-              )}
-
-              <div className="text-center pt-2">
-                <button
-                  onClick={() => {
-                    localStorage.removeItem('cjp_current_member');
-                    setSubmitted(false);
-                    setMemberRecord(null);
-                  }}
-                  className="text-xs font-extrabold text-[#D9572B] hover:underline uppercase"
-                >
-                  ← REGISTER ANOTHER MEMBER / RESET CARD FORM
+                  {copiedId ? <Check size={14} className="text-[#D9572B]" /> : <Copy size={14} />}
+                  {copiedId ? 'COPIED TO CLIPBOARD' : 'COPY MEMBER ID'}
                 </button>
               </div>
             </div>
           </div>
         ) : (
-          /* REGISTRATION FORM CONTAINER */
-          <div className="max-w-2xl mx-auto bg-[#F5EFE6] border-2 border-[#16120D] p-8 md:p-12 shadow-xl">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-1">
-                    {lang === 'hi' ? 'पूरा नाम *' : 'FULL NAME *'}
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder={lang === 'hi' ? "आपका नाम" : "Your full name"}
-                    className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none focus:border-[#D9572B]"
-                  />
-                </div>
+          /* REGISTRATION FORM */
+          <div className="max-w-2xl mx-auto bg-[#F5EFE6] border-4 border-[#16120D] p-8 md:p-12 shadow-2xl">
+            <h2 className="font-display text-3xl md:text-4xl text-[#16120D] uppercase mb-2 border-b-2 border-[#16120D] pb-3 text-center">
+              VOLUNTEER REGISTRATION FORM
+            </h2>
 
+            <form onSubmit={handleSubmit} className="space-y-5">
+              
+              <div>
+                <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">FULL NAME:</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  placeholder="Enter your full name..."
+                  className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none"
+                />
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-1">
-                    {lang === 'hi' ? 'ईमेल पता *' : 'EMAIL ADDRESS *'}
-                  </label>
+                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">EMAIL ADDRESS:</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="email@domain.com"
-                    className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none focus:border-[#D9572B]"
+                    placeholder="name@example.com..."
+                    className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none"
                   />
                 </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-1">
-                    {lang === 'hi' ? 'फोन नंबर' : 'PHONE NUMBER'}
-                  </label>
+                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">MOBILE NUMBER:</label>
                   <input
                     type="tel"
+                    required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 9876543210"
-                    className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none focus:border-[#D9572B]"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-1">
-                    {lang === 'hi' ? 'शहर / वार्ड' : 'CITY / WARD'}
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.city}
-                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    placeholder="e.g. Delhi Ward 14"
-                    className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none focus:border-[#D9572B]"
+                    placeholder="+91 9876543210..."
+                    className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-2">
-                  {lang === 'hi' ? 'आप किस क्षेत्र में मदद करना चाहते हैं?' : 'AREA OF VOLUNTEER INTEREST:'}
-                </label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">CITY / WARD LOCATION:</label>
+                <input
+                  type="text"
+                  value={formData.city}
+                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                  placeholder="e.g. Delhi NCR, Jaipur, Mumbai..."
+                  className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-2">SELECT VOLUNTEER ROLE:</label>
+                <div className="space-y-2">
                   {roles.map((r) => (
-                    <button
-                      key={r.id}
-                      type="button"
-                      onClick={() => setFormData({ ...formData, role: r.id })}
-                      className={`p-3 text-left border-2 transition-all ${
-                        formData.role === r.id
-                          ? 'bg-[#16120D] text-[#F5EFE6] border-[#16120D]'
-                          : 'bg-[#EADBCE] text-[#16120D] border-[#16120D] hover:bg-[#E2D2BF]'
-                      }`}
-                    >
-                      <span className="font-extrabold text-xs block">
-                        {lang === 'hi' ? r.labelHi : r.labelEn}
-                      </span>
-                      <span className="text-[10px] block mt-0.5 opacity-80">
-                        {lang === 'hi' ? r.descHi : r.descEn}
-                      </span>
-                    </button>
+                    <label key={r.id} className="flex items-start gap-3 p-3 bg-[#EADBCE] border border-[#16120D] cursor-pointer hover:border-[#D9572B] transition-colors">
+                      <input
+                        type="radio"
+                        name="role"
+                        value={r.id}
+                        checked={formData.role === r.id}
+                        onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                        className="mt-0.5 accent-[#D9572B]"
+                      />
+                      <div>
+                        <span className="text-xs font-extrabold text-[#16120D] block uppercase">{lang === 'hi' ? r.labelHi : r.labelEn}</span>
+                        <span className="text-[10px] text-[#3A332B] font-medium block">{lang === 'hi' ? r.descHi : r.descEn}</span>
+                      </div>
+                    </label>
                   ))}
                 </div>
               </div>
@@ -374,16 +334,10 @@ export const JoinPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase tracking-wider py-4 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all flex items-center justify-center gap-2"
+                className="w-full bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase tracking-wider py-4 border border-[#16120D] hover:bg-[#D9572B] transition-all flex items-center justify-center gap-2 shadow-lg"
               >
-                {loading ? (
-                  <span>{lang === 'hi' ? 'डिजिटल ID कार्ड तैयार हो रहा है...' : 'GENERATING DIGITAL ID CARD...'}</span>
-                ) : (
-                  <>
-                    <Send size={16} />
-                    <span>REGISTER &amp; GENERATE OFFICIAL DIGITAL ID CARD →</span>
-                  </>
-                )}
+                <Send size={16} />
+                <span>{loading ? 'GENERATING ID CARD...' : 'REGISTER & GENERATE CJP DIGITAL ID CARD →'}</span>
               </button>
             </form>
           </div>

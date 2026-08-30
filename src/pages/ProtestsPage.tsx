@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import { SEOHead } from '../components/SEOHead';
-import { Calendar, ShieldAlert, Search } from 'lucide-react';
+import { Calendar, ShieldAlert, Search, MapPin, Megaphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const ProtestsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const protestEntries = [
+    {
+      date: '5 September 2026 (UPCOMING)',
+      title: '5 September Delhi March: Chalo Police HQ & India Gate',
+      desc: 'CJP doubles down on its nationwide youth protest march to Delhi Police HQ over pending assurances on FIR quashing and compensation. "Be ready for cockroaches!"',
+      location: 'India Gate / Delhi Police HQ'
+    },
     {
       date: '29 August 2026 at 09:30 pm',
       title: 'When the Parent Organization Gets Sent to the Kids\' Table',
@@ -578,6 +585,58 @@ export const ProtestsPage: React.FC = () => {
           </p>
         </div>
 
+        {/* UPCOMING FEATURED PROTEST BANNER: 5 SEPTEMBER DELHI MARCH */}
+        <div className="bg-[#16120D] text-[#F5EFE6] border-4 border-[#16120D] p-8 md:p-10 max-w-5xl mx-auto mb-16 shadow-2xl relative overflow-hidden">
+          <div className="grid md:grid-cols-12 gap-8 items-center">
+            
+            {/* Left Poster Image */}
+            <div className="md:col-span-5 flex justify-center">
+              <div className="border-2 border-[#EADBCE] bg-[#16120D] p-2 shadow-xl">
+                <img
+                  src="/cjp_sep5_protest_poster.png"
+                  alt="5 September Delhi March Protest Poster - Cockroach Janta Party"
+                  className="w-full max-h-[380px] object-contain mx-auto"
+                />
+              </div>
+            </div>
+
+            {/* Right Protest Details */}
+            <div className="md:col-span-7 space-y-4">
+              <div className="flex items-center gap-2 text-xs font-extrabold text-[#D9572B] uppercase tracking-widest">
+                <Megaphone size={16} /> <span>UPCOMING MAJOR PROTEST MARCH · 5 SEPTEMBER 2026</span>
+              </div>
+
+              <h2 className="font-display text-4xl md:text-6xl text-[#F5EFE6] uppercase leading-tight">
+                5 SEPTEMBER DELHI MARCH
+              </h2>
+
+              <div className="flex items-center gap-4 text-xs font-bold text-[#EADBCE] bg-[#16120D]/60 p-3 border border-[#EADBCE]/30">
+                <span className="flex items-center gap-1.5"><MapPin size={14} className="text-[#D9572B]" /> INDIA GATE → DELHI POLICE HQ</span>
+                <span>·</span>
+                <span>TIME: 09:00 AM IST</span>
+              </div>
+
+              <p className="text-xs md:text-sm text-[#EADBCE] leading-relaxed font-medium">
+                CJP doubles down on its nationwide youth protest march to Delhi Police HQ over pending commitments regarding 2,700 student FIR quashings, contractor road warranty boards, and NEET exam fairness.
+              </p>
+
+              <div className="bg-[#D9572B] text-white p-3 text-xs font-extrabold uppercase tracking-wider">
+                "BE READY FOR COCKROACHES ON SEPTEMBER 5!" — CJP SECRETARIAT
+              </div>
+
+              <div className="pt-2">
+                <Link
+                  to="/join"
+                  className="inline-block bg-[#F5EFE6] text-[#16120D] text-xs font-extrabold uppercase tracking-wider px-6 py-3 border border-[#16120D] hover:bg-[#D9572B] hover:text-white transition-all shadow-md"
+                >
+                  REGISTER AS MARCH OBSERVER →
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
         {/* Disclaimer */}
         <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 max-w-4xl mx-auto mb-12 shadow-md flex items-start gap-4">
           <ShieldAlert size={24} className="text-[#D9572B] flex-shrink-0 mt-0.5" />
@@ -604,7 +663,7 @@ export const ProtestsPage: React.FC = () => {
           <span className="text-[#16120D] flex items-center gap-2">
             <Calendar size={14} className="text-[#D9572B]" /> SHOWING {filtered.length} PROTEST TIMELINE ENTRIES
           </span>
-          <span className="text-[#D9572B]">JUNE 2026 – 29 AUG 2026</span>
+          <span className="text-[#D9572B]">JUNE 2026 – 5 SEPT 2026</span>
         </div>
 
         {/* Timeline List */}
