@@ -10,8 +10,6 @@ import {
   ArrowRight,
   ShieldCheck,
   Heart,
-  Copy,
-  Check,
   ShieldAlert
 } from 'lucide-react';
 
@@ -21,7 +19,6 @@ export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [supportModalOpen, setSupportModalOpen] = useState(false);
-  const [copiedUpi, setCopiedUpi] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [selectedTier, setSelectedTier] = useState({ id: 'coffee', label: 'Buy a Coffee', amount: '50' });
 
@@ -69,12 +66,6 @@ export const Header: React.FC = () => {
   const handleLanguageSelect = (newLang: Language) => {
     setLang(newLang);
     setLangDropdownOpen(false);
-  };
-
-  const handleCopyUpi = () => {
-    navigator.clipboard.writeText(`cjp.swarm@upi`);
-    setCopiedUpi(true);
-    setTimeout(() => setCopiedUpi(false), 2000);
   };
 
   return (
@@ -313,26 +304,11 @@ export const Header: React.FC = () => {
               <img
                 src="/gpay_scanner.png"
                 alt="Google Pay Scan to Pay Cockroach Janta Party"
-                className="w-full max-h-[340px] object-contain mx-auto"
+                className="w-full max-h-[360px] object-contain mx-auto"
               />
               <div className="text-[11px] font-extrabold text-[#EADBCE] mt-2">
                 SELECTED TIER: <span className="text-[#D9572B] uppercase">{selectedTier.label} (₹{selectedTier.amount})</span>
               </div>
-            </div>
-
-            {/* UPI ID & One-Click Copy */}
-            <div className="bg-[#EADBCE] border border-[#16120D] p-3 flex justify-between items-center mb-4">
-              <div className="text-left">
-                <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">UPI ID (MERCHANT: CJP DEVELOPER):</span>
-                <span className="text-xs font-extrabold text-[#16120D]">cjp.swarm@upi</span>
-              </div>
-              <button
-                onClick={handleCopyUpi}
-                className="bg-[#16120D] text-[#F5EFE6] px-3 py-1.5 text-[10px] font-extrabold uppercase flex items-center gap-1 hover:bg-[#D9572B] transition-colors"
-              >
-                {copiedUpi ? <Check size={12} className="text-green-400" /> : <Copy size={12} />}
-                <span>{copiedUpi ? 'COPIED!' : 'COPY UPI'}</span>
-              </button>
             </div>
 
             {/* LEGAL DISCLAIMER & VOLUNTARY DEVELOPER POLICY BOX */}
