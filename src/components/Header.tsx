@@ -11,7 +11,8 @@ import {
   ShieldCheck,
   Heart,
   Copy,
-  Check
+  Check,
+  ShieldAlert
 } from 'lucide-react';
 
 export const Header: React.FC = () => {
@@ -22,6 +23,15 @@ export const Header: React.FC = () => {
   const [supportModalOpen, setSupportModalOpen] = useState(false);
   const [copiedUpi, setCopiedUpi] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [selectedTier, setSelectedTier] = useState({ id: 'coffee', label: 'Buy a Coffee', amount: '50' });
+
+  const supportTiers = [
+    { id: 'chai', label: 'Chai ☕', amount: '20', desc: 'Buy a hot cutting chai' },
+    { id: 'coffee', label: 'Coffee ☕', amount: '50', desc: 'Buy a cold coffee' },
+    { id: 'lunch', label: 'Lunch 🍱', amount: '150', desc: 'Sponsor a developer thali' },
+    { id: 'dinner', label: 'Dinner 🍽️', amount: '300', desc: 'Sponsor a full meal' },
+    { id: 'server', label: 'Server 💻', amount: '500', desc: 'Host 1 month server bandwidth' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -62,7 +72,7 @@ export const Header: React.FC = () => {
   };
 
   const handleCopyUpi = () => {
-    navigator.clipboard.writeText('cjp.swarm@upi');
+    navigator.clipboard.writeText(`cjp.swarm@upi`);
     setCopiedUpi(true);
     setTimeout(() => setCopiedUpi(false), 2000);
   };
@@ -248,10 +258,10 @@ export const Header: React.FC = () => {
         )}
       </header>
 
-      {/* SUPPORT THE DEVELOPER GOOGLE PAY SCANNER MODAL */}
+      {/* SUPPORT THE DEVELOPER GOOGLE PAY SCANNER & LEGAL DONATION TIERS MODAL */}
       {supportModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4" onClick={() => setSupportModalOpen(false)}>
-          <div className="bg-[#F5EFE6] text-[#16120D] border-2 border-[#16120D] p-6 sm:p-8 max-w-md w-full shadow-2xl relative text-center max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-[#F5EFE6] text-[#16120D] border-2 border-[#16120D] p-6 sm:p-8 max-w-lg w-full shadow-2xl relative max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             
             <button
               onClick={() => setSupportModalOpen(false)}
@@ -261,31 +271,59 @@ export const Header: React.FC = () => {
               <X size={20} />
             </button>
 
-            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">
-              GOOGLE PAY · VOLUNTARY CONTRIBUTION
-            </span>
+            <div className="text-center mb-4">
+              <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">
+                VOLUNTARY DEVELOPER SUPPORT · CHAI / COFFEE / LUNCH / DINNER TIERS
+              </span>
 
-            <h2 className="font-display text-3xl text-[#16120D] uppercase mb-1">
-              SUPPORT THE DEVELOPER
-            </h2>
+              <h2 className="font-display text-3xl text-[#16120D] uppercase mb-1">
+                SUPPORT THE DEVELOPER
+              </h2>
 
-            <p className="text-xs text-[#3A332B] font-medium mb-4 leading-relaxed">
-              Scan with Google Pay, PhonePe, Paytm or any UPI App to support website developer infrastructure.
-            </p>
+              <p className="text-xs text-[#3A332B] font-medium leading-relaxed">
+                Choose a voluntary support tier or scan with Google Pay, PhonePe, Paytm or any UPI App to keep server hosting and civic software tools active.
+              </p>
+            </div>
+
+            {/* Selectable Support Tiers (Chai, Coffee, Lunch, Dinner, Server) */}
+            <div className="mb-6">
+              <span className="text-[10px] font-extrabold text-[#16120D] uppercase tracking-wider block mb-2">
+                CHOOSE VOLUNTARY CONTRIBUTION TIER:
+              </span>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                {supportTiers.map((tier) => (
+                  <button
+                    key={tier.id}
+                    onClick={() => setSelectedTier(tier as any)}
+                    className={`p-2.5 text-left border-2 transition-all ${
+                      selectedTier.id === tier.id
+                        ? 'bg-[#16120D] text-[#F5EFE6] border-[#16120D]'
+                        : 'bg-[#EADBCE] text-[#16120D] border-[#16120D] hover:bg-[#D9572B] hover:text-white'
+                    }`}
+                  >
+                    <span className="font-extrabold text-xs block uppercase">{tier.label}</span>
+                    <span className="text-[10px] font-extrabold text-[#D9572B] block">₹{tier.amount}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
 
             {/* Authentic Google Pay Standee Poster Image */}
-            <div className="bg-[#16120D] border-2 border-[#16120D] p-2 mb-4 shadow-xl overflow-hidden rounded">
+            <div className="bg-[#16120D] border-2 border-[#16120D] p-3 mb-4 shadow-xl overflow-hidden rounded text-center">
               <img
                 src="/gpay_scanner.png"
                 alt="Google Pay Scan to Pay Cockroach Janta Party"
-                className="w-full max-h-[380px] object-contain mx-auto"
+                className="w-full max-h-[340px] object-contain mx-auto"
               />
+              <div className="text-[11px] font-extrabold text-[#EADBCE] mt-2">
+                SELECTED TIER: <span className="text-[#D9572B] uppercase">{selectedTier.label} (₹{selectedTier.amount})</span>
+              </div>
             </div>
 
-            {/* UPI ID Copy Field */}
+            {/* UPI ID & One-Click Copy */}
             <div className="bg-[#EADBCE] border border-[#16120D] p-3 flex justify-between items-center mb-4">
               <div className="text-left">
-                <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">UPI ID:</span>
+                <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">UPI ID (MERCHANT: CJP DEVELOPER):</span>
                 <span className="text-xs font-extrabold text-[#16120D]">cjp.swarm@upi</span>
               </div>
               <button
@@ -293,8 +331,17 @@ export const Header: React.FC = () => {
                 className="bg-[#16120D] text-[#F5EFE6] px-3 py-1.5 text-[10px] font-extrabold uppercase flex items-center gap-1 hover:bg-[#D9572B] transition-colors"
               >
                 {copiedUpi ? <Check size={12} className="text-green-400" /> : <Copy size={12} />}
-                <span>{copiedUpi ? 'COPIED!' : 'COPY'}</span>
+                <span>{copiedUpi ? 'COPIED!' : 'COPY UPI'}</span>
               </button>
+            </div>
+
+            {/* LEGAL DISCLAIMER & VOLUNTARY DEVELOPER POLICY BOX */}
+            <div className="bg-[#EADBCE] border border-[#16120D] p-3 text-left mb-6 flex items-start gap-2">
+              <ShieldAlert size={20} className="text-[#D9572B] flex-shrink-0 mt-0.5" />
+              <div className="text-[10px] text-[#3A332B] font-medium leading-relaxed">
+                <strong className="text-[#16120D] block uppercase mb-0.5">LEGAL &amp; VOLUNTARY CONTRIBUTION POLICY</strong>
+                This payment is a 100% voluntary personal software tip to support independent web server hosting, domain fees, and open-source civic tools. It is <strong>NOT a political donation</strong>, not affiliated with any registered political party or election candidate, and not eligible for Section 80G tax deductions.
+              </div>
             </div>
 
             <button
