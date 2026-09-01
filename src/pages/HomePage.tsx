@@ -27,8 +27,9 @@ export const HomePage: React.FC = () => {
   const [issueCategory, setIssueCategory] = useState('Education');
   const [issueText, setIssueText] = useState('');
   
-  // Interactive Alternate Title Switcher State
   const [titleIndex, setTitleIndex] = useState(0);
+  const [videoPage, setVideoPage] = useState(1);
+  const videosPerPage = 6;
   const [activePoster, setActivePoster] = useState<'sep5' | 'school' | 'brand'>('sep5');
   const [featuredTab, setFeaturedTab] = useState<'school' | 'sep5' | 'brand'>('school');
 
@@ -152,8 +153,19 @@ export const HomePage: React.FC = () => {
       url: 'https://youtu.be/nlDLIt_Fr9g?si=Th-e4XGlSAKRHMzs',
       embedUrl: 'https://www.youtube.com/embed/nlDLIt_Fr9g',
       badge: 'VERIFIED VIDEO'
+    },
+    {
+      id: 'zeHWLyUw4XU',
+      title: 'School Thik Karo & Public Library Demand Short',
+      category: 'EDUCATION SHORT',
+      url: 'https://youtube.com/shorts/zeHWLyUw4XU?si=U8hFaxmn6C-PH9UY',
+      embedUrl: 'https://www.youtube.com/embed/zeHWLyUw4XU',
+      badge: 'SHORTS'
     }
   ];
+
+  const totalVideoPages = Math.ceil(videosList.length / videosPerPage);
+  const paginatedVideos = videosList.slice((videoPage - 1) * videosPerPage, videoPage * videosPerPage);
 
   const qualificationCards = [
     { num: '01', titleKey: 'qual1Title', descKey: 'qual1Desc' },
@@ -711,23 +723,34 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 8. VIDEOS SECTION (ALL 6 YOUTUBE VIDEOS GRID) */}
+      {/* 8. VIDEOS SECTION: THE SWARM ON CAMERA (PAGINATED 6 PER PAGE) */}
       <section className="py-16 bg-[#F5EFE6] border-b-2 border-[#16120D]">
         <div className="max-w-[1440px] mx-auto px-4">
+          
+          {/* Header */}
           <div className="flex justify-between items-end flex-wrap gap-4 mb-10 border-b-2 border-[#16120D] pb-6">
             <div>
-              <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">ALL 6 MEDIA BROADCASTS</span>
-              <h2 className="font-display text-4xl md:text-6xl text-[#16120D] uppercase">{t('videoTitle')}</h2>
-              <p className="text-xs text-[#3A332B] font-medium mt-1">{t('videoSubtitle')}</p>
+              <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-1">
+                MEDIA &amp; VIDEO DISPATCHES
+              </span>
+              <h2 className="font-display text-4xl md:text-6xl text-[#16120D] uppercase">
+                THE SWARM ON CAMERA
+              </h2>
+              <p className="text-xs text-[#3A332B] font-medium mt-1">
+                7 verified video dispatches, street interviews, and press broadcasts. (6 videos per page)
+              </p>
             </div>
-            <span className="bg-[#16120D] text-[#EADBCE] text-[10px] font-extrabold px-3 py-1.5 border border-[#16120D] uppercase tracking-wider">
-              SHOWING ALL 6 VERIFIED VIDEO DISPATCHES
-            </span>
+
+            <div className="flex items-center gap-3">
+              <span className="bg-[#16120D] text-[#EADBCE] text-[10px] font-extrabold px-3.5 py-2 border border-[#16120D] uppercase tracking-wider">
+                PAGE {videoPage} OF {totalVideoPages} · {videosList.length} TOTAL VIDEOS
+              </span>
+            </div>
           </div>
 
-          {/* 3x2 Grid for ALL 6 Videos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {videosList.map((v) => (
+          {/* 3x2 Grid for Paginated Videos (6 Per Page) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {paginatedVideos.map((v) => (
               <div key={v.id} className="bg-[#EADBCE] border-2 border-[#16120D] p-5 shadow-xl flex flex-col justify-between hover:border-[#D9572B] transition-all duration-300 group">
                 <div>
                   <div className="relative aspect-video bg-[#16120D] mb-4 border-2 border-[#16120D] overflow-hidden">
@@ -755,11 +778,50 @@ export const HomePage: React.FC = () => {
                   className="bg-[#16120D] text-[#F5EFE6] text-[11px] font-extrabold uppercase py-3 px-4 text-center border border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all flex items-center justify-center gap-1.5 shadow-md"
                 >
                   <Play size={13} className="fill-current text-[#D9572B]" />
-                  <span>WATCH ON YOUTUBE</span>
+                  <span>WATCH VIDEO DISPATCH</span>
                   <ExternalLink size={13} />
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* Pagination Controls (6 Per Page) */}
+          <div className="flex justify-between items-center border-t-2 border-[#16120D] pt-6 flex-wrap gap-4">
+            <div className="text-xs font-bold text-[#16120D] uppercase tracking-wider">
+              SHOWING VIDEOS {(videoPage - 1) * videosPerPage + 1}–{Math.min(videoPage * videosPerPage, videosList.length)} OF {videosList.length}
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                disabled={videoPage === 1}
+                onClick={() => setVideoPage((prev) => Math.max(prev - 1, 1))}
+                className="px-4 py-2 bg-[#16120D] text-[#F5EFE6] text-xs font-extrabold uppercase border border-[#16120D] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#D9572B] transition-colors"
+              >
+                ← PREVIOUS
+              </button>
+
+              {Array.from({ length: totalVideoPages }, (_, idx) => idx + 1).map((p) => (
+                <button
+                  key={p}
+                  onClick={() => setVideoPage(p)}
+                  className={`w-9 h-9 text-xs font-extrabold border transition-all ${
+                    videoPage === p
+                      ? 'bg-[#D9572B] text-white border-[#D9572B]'
+                      : 'bg-[#EADBCE] text-[#16120D] border-[#16120D] hover:bg-[#16120D] hover:text-white'
+                  }`}
+                >
+                  {p}
+                </button>
+              ))}
+
+              <button
+                disabled={videoPage === totalVideoPages}
+                onClick={() => setVideoPage((prev) => Math.min(prev + 1, totalVideoPages))}
+                className="px-4 py-2 bg-[#16120D] text-[#F5EFE6] text-xs font-extrabold uppercase border border-[#16120D] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#D9572B] transition-colors"
+              >
+                NEXT →
+              </button>
+            </div>
           </div>
 
           {/* Twitter / X Video Dispatches Strip */}
