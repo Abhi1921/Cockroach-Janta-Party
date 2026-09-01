@@ -2,25 +2,25 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
 import { TopPatronsSection } from '../components/TopPatronsSection';
-import { ShieldAlert, Code } from 'lucide-react';
+import { ShieldAlert, Code, ShieldCheck, Info, CheckCircle } from 'lucide-react';
 
 export const SupportDevPage: React.FC = () => {
   const { lang } = useLanguage();
   const [selectedTier, setSelectedTier] = useState({ id: 'coffee', label: 'Buy a Coffee ☕', amount: '50', desc: 'Sponsor a cold coffee for midnight coding sessions' });
 
   const tiers = [
-    { id: 'chai', label: 'Cutting Chai ☕', amount: '20', desc: 'Buy a quick hot chai' },
-    { id: 'coffee', label: 'Cold Coffee ☕', amount: '50', desc: 'Sponsor a coffee during coding' },
-    { id: 'lunch', label: 'Developer Thali 🍱', amount: '150', desc: 'Sponsor a hearty lunch meal' },
-    { id: 'dinner', label: 'Full Dinner 🍽️', amount: '300', desc: 'Sponsor a late night dinner' },
-    { id: 'server', label: 'Server Hosting 💻', amount: '500', desc: 'Host 1 month of cloud server bandwidth' }
+    { id: 'chai', label: 'Cutting Chai ☕', amount: '20', desc: 'Buy a quick hot chai for dev coding breaks' },
+    { id: 'coffee', label: 'Cold Coffee ☕', amount: '50', desc: 'Sponsor a coffee during late night development' },
+    { id: 'lunch', label: 'Developer Thali 🍱', amount: '150', desc: 'Sponsor a hearty lunch meal during build sprints' },
+    { id: 'dinner', label: 'Full Dinner 🍽️', amount: '300', desc: 'Sponsor a late night coding dinner session' },
+    { id: 'server', label: 'Server Hosting 💻', amount: '500', desc: 'Host 1 month of cloud server & CDN bandwidth' }
   ];
 
   return (
-    <div className="support-dev-page py-16 bg-[#EADBCE] text-[#16120D] font-sans">
+    <div className="support-dev-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
-        title={lang === 'hi' ? 'डेवलपर को सपोर्ट करें | कॉकरोच जनता पार्टी' : 'Support Website Developer | Cockroach Janta Party Wale'}
-        description="Support the independent developer behind Cockroach Janta Party portal. Scan UPI GPay QR code for voluntary hosting & software tips."
+        title={lang === 'hi' ? 'डेवलपर को सपोर्ट करें | कॉकरोच जनता पार्टी' : 'Support Website Developer | Voluntary Software Tips'}
+        description="Support the independent software developer behind the Cockroach Janta Party portal. Scan UPI GPay QR code for voluntary hosting, server & software tips."
         canonicalUrl="https://cockroachjantapartywale.com/support-dev"
       />
 
@@ -28,14 +28,14 @@ export const SupportDevPage: React.FC = () => {
         
         {/* Header Hero */}
         <div className="mb-12 text-center">
-          <span className="inline-block bg-[#D9572B] text-white px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
+          <span className="inline-block bg-[#D9572B] text-white px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4 border border-[#16120D]">
             INDEPENDENT OPEN-SOURCE DEVELOPER SUPPORT
           </span>
           <h1 className="font-serif font-black text-4xl md:text-5xl text-[#16120D] mb-3 uppercase tracking-tight">
             SUPPORT THE WEBSITE DEVELOPER
           </h1>
-          <p className="text-xs text-[#3A332B] font-extrabold uppercase tracking-wider max-w-xl mx-auto">
-            Direct voluntary tips for server bandwidth, domain registration, and open-source maintenance.
+          <p className="text-xs md:text-sm text-[#3A332B] font-extrabold uppercase tracking-wider max-w-2xl mx-auto leading-relaxed">
+            DIRECT VOLUNTARY PERSONAL TIPS FOR CLOUD SERVER BANDWIDTH, DOMAIN FEES, AND OPEN-SOURCE SOFTWARE MAINTENANCE.
           </p>
         </div>
 
@@ -45,20 +45,23 @@ export const SupportDevPage: React.FC = () => {
             <Code size={28} className="text-[#D9572B]" />
             <div>
               <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block">
-                DEVELOPER NOTE
+                DEVELOPER DISCLOSURE STATEMENT
               </span>
               <h2 className="font-serif font-black text-xl text-[#16120D] uppercase">
-                &ldquo;MAIN INDEPENDENTLY YE WEBSITE CODE PAR RAHON HOON&rdquo;
+                &ldquo;INDEPENDENT OPEN-SOURCE SOFTWARE ENGINEERING &amp; MAINTENANCE&rdquo;
               </h2>
             </div>
           </div>
 
-          <div className="space-y-4 text-xs text-[#3A332B] font-medium leading-relaxed">
+          <div className="space-y-4 text-xs md:text-sm text-[#3A332B] font-medium leading-relaxed">
             <p>
-              Ye page Cockroach Janta Party ka election ya political party fund nahi hai. Main independently is website ko code, design, host aur maintain kar raha hoon — din-raat.
+              This page is maintained exclusively by an independent software developer who single-handedly codes, designs, hosts, and maintains this entire web platform.
             </p>
             <p>
-              Website hosting, domain costs, image generation, aur server bandwidth maintenance ke liye voluntary software tip help karti hai. Agar aapko mera kaam pasand aaya, toh aap chai, coffee ya server tier choose karke scan support kar sakte hain.
+              <strong>IMPORTANT LEGAL NOTICE:</strong> This page and all contributions submitted here are <strong>100% personal, voluntary software developer tips/gratuities</strong>. They have <strong>ZERO connection, ZERO affiliation, and NO association</strong> with any political party, political campaign, election trust, or electoral fund contribution pool.
+            </p>
+            <p>
+              Running a high-traffic web platform involves recurring expenses such as cloud hosting servers, domain registration renewals, security certificates, and open-source code maintenance. If you appreciate the software engineering, UI design, and satirical civic media platform created here, you can voluntarily choose a tier below to scan and support the developer directly.
             </p>
           </div>
         </div>
@@ -121,19 +124,54 @@ export const SupportDevPage: React.FC = () => {
         </div>
 
         {/* Legal Disclaimer Box */}
-        <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-lg flex items-start gap-3 mb-12">
-          <ShieldAlert size={24} className="text-[#D9572B] flex-shrink-0 mt-0.5" />
-          <div className="text-xs text-[#3A332B] space-y-1">
-            <h4 className="font-serif font-black text-sm text-[#16120D] uppercase">
-              NON-POLITICAL VOLUNTARY SOFTWARE TIP POLICY
+        <div className="bg-[#F5EFE6] border-4 border-[#16120D] p-6 md:p-8 shadow-xl space-y-4 mb-12">
+          <div className="flex items-center gap-3 border-b-2 border-[#16120D]/20 pb-3">
+            <ShieldAlert size={26} className="text-[#D9572B] flex-shrink-0" />
+            <h4 className="font-serif font-black text-base text-[#16120D] uppercase tracking-wide">
+              COMPREHENSIVE DEVELOPER TIP LEGAL DISCLAIMER &amp; POLICY
             </h4>
-            <p className="leading-relaxed font-medium">
-              All payments made via this page are voluntary personal gifts/tips to the web developer to cover server and maintenance costs. They do not constitute political party donations, subscription fees, or electoral fund contributions.
-            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-[#3A332B] font-medium leading-relaxed">
+            <div className="bg-[#EADBCE] p-4 border border-[#16120D] space-y-1.5">
+              <span className="font-bold text-[#16120D] uppercase block flex items-center gap-1">
+                <CheckCircle size={14} className="text-emerald-600" /> 1. NON-POLITICAL PERSONAL GRATUITY
+              </span>
+              <p className="text-[11px]">
+                All transactions completed via this page are voluntary personal gifts/tips given to an individual web developer. They do not constitute political party donations, electoral trust funds, subscription fees, or political campaign funds under Indian electoral laws (including the Representation of the People Act, 1951).
+              </p>
+            </div>
+
+            <div className="bg-[#EADBCE] p-4 border border-[#16120D] space-y-1.5">
+              <span className="font-bold text-[#16120D] uppercase block flex items-center gap-1">
+                <Info size={14} className="text-[#D9572B]" /> 2. NO COMMERCIAL OBLIGATION
+              </span>
+              <p className="text-[11px]">
+                Submitting a voluntary tip does not entitle the donor to any commercial contract, equity, membership rights, organizational voting power, or paid service delivery. Tips are given out of personal goodwill to support server upkeep.
+              </p>
+            </div>
+
+            <div className="bg-[#EADBCE] p-4 border border-[#16120D] space-y-1.5">
+              <span className="font-bold text-[#16120D] uppercase block flex items-center gap-1">
+                <ShieldCheck size={14} className="text-[#D9A02B]" /> 3. 7-DAY REFUND WINDOW
+              </span>
+              <p className="text-[11px]">
+                If a contribution was transferred by mistake or in error, we offer a 100% 7-day refund window. Please refer to our official Refund Policy page or contact our developer support desk for immediate processing.
+              </p>
+            </div>
+
+            <div className="bg-[#EADBCE] p-4 border border-[#16120D] space-y-1.5">
+              <span className="font-bold text-[#16120D] uppercase block flex items-center gap-1">
+                <Code size={14} className="text-[#16120D]" /> 4. SATIRE &amp; FAIR USE COMPLIANCE
+              </span>
+              <p className="text-[11px]">
+                This web platform functions as an independent satirical and public-interest civic media project under Article 19(1)(a) of the Constitution of India and Section 52 of the Indian Copyright Act, 1957 (Fair Dealing).
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* TOP PATRONS SECTION matching Image 2 */}
+        {/* TOP PATRONS SECTION */}
         <TopPatronsSection />
 
       </div>

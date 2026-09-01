@@ -65,6 +65,13 @@ export const DisclaimerPage: React.FC = () => {
             </p>
           </div>
 
+          <div>
+            <h3 className="font-serif font-bold text-base text-[#16120D] uppercase mb-2">4. Financial &amp; Developer Tip Disclaimers</h3>
+            <p>
+              All contributions submitted on the Support Developer page are 100% personal, voluntary software gratuities to cover cloud server hosting and maintenance. They do NOT constitute political party donations, electoral trust funds, subscription fees, or commercial transactions.
+            </p>
+          </div>
+
           <div className="pt-6 border-t border-[rgba(22,18,13,0.18)] text-[10px] font-extrabold text-[#D9572B] uppercase tracking-wider">
             COCKROACH JANTA PARTY LEGAL SECRETARIAT · NEW DELHI, INDIA
           </div>
