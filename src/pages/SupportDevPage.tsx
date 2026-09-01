@@ -113,17 +113,8 @@ export const SupportDevPage: React.FC = () => {
               TIER: ₹{selectedTier.amount} ({selectedTier.label})
             </div>
 
-            <a
-              href="https://razorpay.me/@skabdulhafij"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-[#D9572B] text-white font-extrabold text-xs uppercase py-3 px-4 border-2 border-white hover:bg-white hover:text-[#16120D] transition-all flex items-center justify-center gap-1.5 tracking-wider shadow-lg mb-3"
-            >
-              <span>PAY ONLINE VIA RAZORPAY 💳</span>
-            </a>
-
-            <p className="text-[10px] text-[#EADBCE] font-mono">
-              Scan with Google Pay, PhonePe, Paytm, BHIM, or use Cards on Razorpay
+            <p className="text-[10px] text-[#EADBCE] font-mono leading-tight">
+              Scan with Google Pay, PhonePe, Paytm, BHIM, or any UPI App
             </p>
           </div>
 
