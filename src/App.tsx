@@ -57,6 +57,7 @@ import { CommunityGuidelinesPage } from './pages/CommunityGuidelinesPage';
 import { MemesPage } from './pages/MemesPage';
 import { RaiseVoicePage } from './pages/RaiseVoicePage';
 import { LeaveSwarmPage } from './pages/LeaveSwarmPage';
+import { DonateAbdulPage } from './pages/DonateAbdulPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -105,6 +106,8 @@ export default function App() {
               {/* Campaigns, News & Issues */}
               <Route path="/issues" element={<IssuesPage />} />
               <Route path="/campaigns" element={<CampaignsPage />} />
+              <Route path="/campaign/donate-to-abdul" element={<DonateAbdulPage />} />
+              <Route path="/donate-to-abdul" element={<DonateAbdulPage />} />
               <Route path="/posters" element={<PostersPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/updates" element={<UpdatesPage />} />

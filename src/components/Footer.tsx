@@ -123,6 +123,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 uppercase text-[11px]">
               <li><Link to="/memes" className="hover:text-[#D9572B] transition-colors">Memes</Link></li>
               <li><Link to="/issues" className="hover:text-[#D9572B] transition-colors">Issues</Link></li>
+              <li><Link to="/campaign/donate-to-abdul" className="hover:text-[#D9572B] transition-colors text-[#D9572B] flex items-center gap-1">Donate to Abdul</Link></li>
               <li><Link to="/manifesto" className="hover:text-[#D9572B] transition-colors">Manifesto</Link></li>
               <li><Link to="/news" className="hover:text-[#D9572B] transition-colors">News</Link></li>
               <li><Link to="/quotes" className="hover:text-[#D9572B] transition-colors">Quotes</Link></li>
