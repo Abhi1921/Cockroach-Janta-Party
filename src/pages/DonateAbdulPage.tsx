@@ -143,7 +143,7 @@ export const DonateAbdulPage: React.FC = () => {
               ))}
             </div>
 
-            <div className="bg-[#231F1A] border border-white/10 p-4 space-y-2">
+            <div className="bg-[#231F1A] border border-white/10 p-4 space-y-3">
               <div className="flex justify-between items-center text-xs text-[#EADBCE]">
                 <span>UPI ID: <strong className="text-white font-mono">cjpindia@upi</strong></span>
                 <button
@@ -154,8 +154,20 @@ export const DonateAbdulPage: React.FC = () => {
                   <span>{copied ? 'COPIED!' : 'COPY UPI'}</span>
                 </button>
               </div>
+
+              {/* DIRECT RAZORPAY PAYMENT LINK BUTTON */}
+              <a
+                href="https://razorpay.me/@skabdulhafij"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-[#D9572B] text-white font-extrabold text-xs uppercase py-3.5 px-4 border-2 border-white hover:bg-white hover:text-[#16120D] transition-all flex items-center justify-center gap-2 tracking-wider shadow-lg"
+              >
+                <span>PAY DIRECTLY VIA RAZORPAY (CARDS / NETBANKING / UPI)</span>
+                <ExternalLink size={14} />
+              </a>
+
               <p className="text-[10px] text-[#EADBCE]/70">
-                Direct UPI transfers go 100% to the verified defense escrow account.
+                Direct transfers go 100% to Abdul&apos;s verified defense escrow account.
               </p>
             </div>
           </div>
