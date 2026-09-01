@@ -32,6 +32,71 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Official Social Channels Strip */}
+        <div className="bg-[#231F1A] border-2 border-white/10 p-4 mb-12 flex flex-wrap items-center justify-between gap-4">
+          <span className="text-xs font-extrabold text-[#F5EFE6] uppercase tracking-wider">
+            OFFICIAL SOCIAL CHANNELS &amp; MEDIA:
+          </span>
+          <div className="flex flex-wrap items-center gap-2 text-[10px] font-extrabold">
+            <a
+              href="https://x.com/cjpindia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
+            >
+              𝕏 TWITTER / X (@CJPINDIA)
+            </a>
+            <a
+              href="https://instagram.com/cjpindia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
+            >
+              📸 INSTAGRAM (@CJPINDIA)
+            </a>
+            <a
+              href="https://youtube.com/@cjpindia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
+            >
+              ▶️ YOUTUBE (@CJPINDIA)
+            </a>
+            <a
+              href="https://t.me/cjpindia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
+            >
+              ✈️ TELEGRAM (CJPINDIA)
+            </a>
+            <a
+              href="https://www.facebook.com/watch/?v=2054290928526389"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
+            >
+              📘 FACEBOOK WATCH
+            </a>
+            <a
+              href="https://whatsapp.com/channel/cjpindia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
+            >
+              💬 WHATSAPP CHANNEL
+            </a>
+            <a
+              href="https://github.com/Abhi1921/Cockroach-Janta-Party"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
+            >
+              💻 GITHUB REPO
+            </a>
+          </div>
+        </div>
+
         {/* Master Navigation & Content Grid matching Image 3 */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mb-16 border-b border-white/10 pb-16 text-xs font-bold text-[#EADBCE]">
           
