@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
+import { TopPatronsSection } from '../components/TopPatronsSection';
 import { ShieldAlert, Code } from 'lucide-react';
 
 export const SupportDevPage: React.FC = () => {
@@ -120,7 +121,7 @@ export const SupportDevPage: React.FC = () => {
         </div>
 
         {/* Legal Disclaimer Box */}
-        <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-lg flex items-start gap-3">
+        <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-lg flex items-start gap-3 mb-12">
           <ShieldAlert size={24} className="text-[#D9572B] flex-shrink-0 mt-0.5" />
           <div className="text-xs text-[#3A332B] space-y-1">
             <h4 className="font-serif font-black text-sm text-[#16120D] uppercase">
@@ -131,6 +132,9 @@ export const SupportDevPage: React.FC = () => {
             </p>
           </div>
         </div>
+
+        {/* TOP PATRONS SECTION matching Image 2 */}
+        <TopPatronsSection />
 
       </div>
     </div>

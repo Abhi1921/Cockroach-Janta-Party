@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
+import { TopPatronsSection } from '../components/TopPatronsSection';
+import { NewsletterSection } from '../components/NewsletterSection';
 import {
   ShieldCheck,
   CheckCircle2,
@@ -104,6 +106,14 @@ export const HomePage: React.FC = () => {
 
   const videosList = [
     {
+      id: 'fb-noida-fir',
+      title: 'Report: 15-Year-Old Noida Student FIR Case — PM Modi Jantar Mantar Rally',
+      category: 'FACEBOOK WATCH',
+      url: 'https://www.facebook.com/watch/?v=2054290928526389',
+      embedUrl: 'https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D2054290928526389',
+      badge: 'SPECIAL REPORT'
+    },
+    {
       id: 'MDWT0Tjq85U',
       title: 'Kya Bolti Public: CJP Street Interview on Exam Reforms & Unemployment',
       category: 'STREET INTERVIEW',
@@ -142,14 +152,6 @@ export const HomePage: React.FC = () => {
       url: 'https://youtu.be/nlDLIt_Fr9g?si=Th-e4XGlSAKRHMzs',
       embedUrl: 'https://www.youtube.com/embed/nlDLIt_Fr9g',
       badge: 'VERIFIED VIDEO'
-    },
-    {
-      id: 'zeHWLyUw4XU',
-      title: 'School Thik Karo & Public Library Demand Short',
-      category: 'EDUCATION SHORT',
-      url: 'https://youtube.com/shorts/zeHWLyUw4XU?si=U8hFaxmn6C-PH9UY',
-      embedUrl: 'https://www.youtube.com/embed/zeHWLyUw4XU',
-      badge: 'SHORTS'
     }
   ];
 
@@ -929,6 +931,12 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* TOP PATRONS SECTION matching Image 2 */}
+      <TopPatronsSection />
+
+      {/* NEWSLETTER CAPTCHA SECTION matching Image 3 */}
+      <NewsletterSection />
 
       {/* 11. FAQ ACCORDION */}
       <section className="py-16 bg-[#EADBCE] border-b-2 border-[#16120D]">

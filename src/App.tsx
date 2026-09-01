@@ -31,6 +31,8 @@ import { FAQPage } from './pages/FAQPage';
 import { ResourcesPage } from './pages/ResourcesPage';
 import { TrackerPage } from './pages/TrackerPage';
 
+import { FloatingWidgets } from './components/FloatingWidgets';
+
 // New Missing Pages from Google Index
 import { FounderPage } from './pages/FounderPage';
 import { BitChatPage } from './pages/BitChatPage';
@@ -46,6 +48,15 @@ import { MemberPortalPage } from './pages/MemberPortalPage';
 import { DisclaimerPage } from './pages/DisclaimerPage';
 import { RefundPolicyPage } from './pages/RefundPolicyPage';
 import { PrivacyPage } from './pages/PrivacyPage';
+
+// Additional Policy & Community Pages
+import { CookiePolicyPage } from './pages/CookiePolicyPage';
+import { EditorialPolicyPage } from './pages/EditorialPolicyPage';
+import { AccessibilityPage } from './pages/AccessibilityPage';
+import { CommunityGuidelinesPage } from './pages/CommunityGuidelinesPage';
+import { MemesPage } from './pages/MemesPage';
+import { RaiseVoicePage } from './pages/RaiseVoicePage';
+import { LeaveSwarmPage } from './pages/LeaveSwarmPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -118,12 +129,20 @@ export default function App() {
               <Route path="/disclaimer" element={<DisclaimerPage />} />
               <Route path="/refund-policy" element={<RefundPolicyPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+              <Route path="/editorial-policy" element={<EditorialPolicyPage />} />
+              <Route path="/accessibility" element={<AccessibilityPage />} />
+              <Route path="/community-guidelines" element={<CommunityGuidelinesPage />} />
+              <Route path="/memes" element={<MemesPage />} />
+              <Route path="/raise-voice" element={<RaiseVoicePage />} />
+              <Route path="/leave-swarm" element={<LeaveSwarmPage />} />
 
               {/* 404 Fallback */}
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
           <Footer />
+          <FloatingWidgets />
         </div>
       </BrowserRouter>
     </LanguageProvider>
