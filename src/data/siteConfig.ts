@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "The Cockroach Janta Party",
+  name: "Cockroach Janta Party",
   shortName: "CJP",
   contact: {
     address: "CJP Movement Secretariat, Sector 14, New Delhi - 110001",

@@ -13,16 +13,16 @@ export const NewsPage: React.FC = () => {
 
   // 1,000 - 1,500 Word Flagship Historical Feature
   const flagshipFeature = {
-    title: "From Viral Satire to National Youth Movement: The Story of the Cockroach Janta Party, 2026",
+    title: "From Viral Satire to National Youth Movement: Story of Cockroach Janta Party, 2026",
     subtitle: "A documentary investigation into how a satirical emblem evolved into a youth-driven civic watchdog across 45 metro sectors (May 2026 – 30 August 2026 Archive Cutoff).",
     author: "CJP Editorial Research Secretariat",
     publishedDate: "30 August 2026",
     heroImage: "/cjp_news_hero_poster.png",
-    heroCaption: "Symbolic illustration of youth activism, protest and political satire surrounding the Cockroach Janta Party.",
+    heroCaption: "Symbolic illustration of youth activism, protest and political satire surrounding Cockroach Janta Party.",
     heroLabel: "AI-generated symbolic illustration.",
     contentParagraphs: [
       "In May 2026, an unusual digital symbol began circulating across Indian university forums and urban social media circles: a stark, stylized silhouette of a subterranean cockroach paired with bold newspaper-style typography reading 'Cockroach Janta Party'. What started as a sharp satirical critique of urban municipal administration, broken drain desilting schedules, and transferred bureaucratic phone calls rapidly grew into one of the most talked-about youth civic movements of the year.",
-      "Founded by research coordinator Abhijeet Dipke, the Cockroach Janta Party (CJP) adopted its mascot not out of reverence for pests, but as an empirical metaphor for subterranean survival, persistence, and resilience. Dipke argued that ordinary citizens navigating broken municipal services often feel like subterranean creatures surviving under low visibility. Satire was deployed not to diminish public issues, but as an accessible lens to challenge official apathy.",
+      "Founded by research coordinator Abhijeet Dipke, Cockroach Janta Party (CJP) adopted its mascot not out of reverence for pests, but as an empirical metaphor for subterranean survival, persistence, and resilience. Dipke argued that ordinary citizens navigating broken municipal services often feel like subterranean creatures surviving under low visibility. Satire was deployed not to diminish public issues, but as an accessible lens to challenge official apathy.",
       "By June 2026, CJP moved beyond digital commentary by launching its flagship 5-point civic manifesto. The charter demanded mandatory bi-weekly mechanized sewer desilting, 3-year physical contractor road warranty notice boards, mobile drinking water TDS testing kiosks, direct municipal bank wage transfers for sanitation workers, and zero-paywall digital publishing of ward budgets under Section 4 of the Right to Information (RTI) Act 2005.",
       "Concurrently, CJP initiated the 'School Thik Karo' campaign across municipal schools, documenting structural maintenance needs, study room access, and library resources. In street broadcasts titled 'Kya Bolti Public', volunteer interviewers recorded unfiltered youth commentary on competitive examination delays, paper-leak controversies, and entry-level employment barriers.",
       "The movement reached national media prominence in July 2026 when student observers and CJP volunteers assembled at Jantar Mantar in New Delhi for a peaceful demonstration. Carrying placards demanding 3-year contractor paving liability boards and open RTI tender ledgers, the demonstration coincided with broader student solidarity actions regarding NEET and UGC-NET examination reforms.",
@@ -350,7 +350,7 @@ export const NewsPage: React.FC = () => {
             {lang === 'hi' ? 'नागरिक समाचार व पुरालेख' : 'THE CJP NEWS & HISTORICAL ARCHIVE'}
           </span>
           <h1 className="font-display text-6xl md:text-8xl text-[#16120D] mb-4 uppercase leading-none">
-            THE COCKROACH JANTA PARTY
+            COCKROACH JANTA PARTY
           </h1>
           <p className="text-xs md:text-sm font-serif italic text-[#D9572B] max-w-2xl mx-auto mb-3 font-bold">
             "Where protest meets politics, satire meets accountability, and the swarm keeps crawling."

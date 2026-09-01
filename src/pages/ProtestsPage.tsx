@@ -27,7 +27,7 @@ export const ProtestsPage: React.FC = () => {
     },
     {
       date: '25 August 2026 at 12:52 pm',
-      title: 'Will The Cockroach Janta Party Actually Move The Needle?',
+      title: 'Will Cockroach Janta Party Actually Move The Needle?',
       desc: 'The IISS asks if our protests will produce change. We ask if the system can survive its own refusal to listen.',
       location: 'National'
     },
@@ -40,7 +40,7 @@ export const ProtestsPage: React.FC = () => {
     {
       date: '24 August 2026 at 11:31 am',
       title: 'The NDA Invite: When Your Identity Becomes a Strategic Asset',
-      desc: 'A Union Minister has extended an offer for the Cockroach Janta Party to join the NDA. We examine the absurdity of this political courtship.',
+      desc: 'A Union Minister has extended an offer for Cockroach Janta Party to join the NDA. We examine the absurdity of this political courtship.',
       location: 'New Delhi'
     },
     {
@@ -82,7 +82,7 @@ export const ProtestsPage: React.FC = () => {
     {
       date: '17 August 2026 at 11:37 am',
       title: 'Abhijeet Dipke Picks Up a Broom: A Lesson in Radical Housekeeping',
-      desc: 'When the system refuses to provide basic infrastructure, the Cockroach Janta Party decides to do the janitorial work themselves.',
+      desc: 'When the system refuses to provide basic infrastructure, Cockroach Janta Party decides to do the janitorial work themselves.',
       location: 'Delhi'
     },
     {
@@ -99,7 +99,7 @@ export const ProtestsPage: React.FC = () => {
     },
     {
       date: '14 August 2026 at 09:21 pm',
-      title: '37 Days at Jantar Mantar: The Cockroach Janta Party Isn\'t Done Yet',
+      title: '37 Days at Jantar Mantar: Cockroach Janta Party Isn\'t Done Yet',
       desc: 'Abhijeet Dipke confirms the next chapter is brewing after a 37-day stint at Jantar Mantar. We aren\'t going anywhere.',
       location: 'Jantar Mantar, Delhi'
     },
@@ -111,7 +111,7 @@ export const ProtestsPage: React.FC = () => {
     },
     {
       date: '14 August 2026 at 09:21 pm',
-      title: 'The IIT-CA Takeover: Why the Cockroach Janta Party is Overqualified',
+      title: 'The IIT-CA Takeover: Why Cockroach Janta Party is Overqualified',
       desc: 'A dozen professionals from IIT and CA backgrounds are leading the CJP. Overqualified activists choosing satire over boardrooms.',
       location: 'National'
     },
@@ -190,12 +190,12 @@ export const ProtestsPage: React.FC = () => {
     {
       date: '6 August 2026 at 11:05 am',
       title: 'The Long March to Ranchi: Cockroaches Take the Streets',
-      desc: 'As the Cockroach Janta Party pivots toward Jharkhand, the real test of movement-building begins.',
+      desc: 'As Cockroach Janta Party pivots toward Jharkhand, the real test of movement-building begins.',
       location: 'Ranchi, JH'
     },
     {
       date: '6 August 2026 at 11:04 am',
-      title: 'The Cockroach Janta Party: From Ballot Box to Pressure Cooker',
+      title: 'Cockroach Janta Party: From Ballot Box to Pressure Cooker',
       desc: 'Trading electoral ambitions for the art of the nudge, proving that the best way to change the system is to be the bug in it.',
       location: 'National'
     },
@@ -219,13 +219,13 @@ export const ProtestsPage: React.FC = () => {
     },
     {
       date: '4 August 2026 at 11:40 am',
-      title: 'Beyond the Paper: Why the Cockroach Janta Party Keeps Crawling',
+      title: 'Beyond the Paper: Why Cockroach Janta Party Keeps Crawling',
       desc: 'The paper leaks are just the tip of the iceberg; CJP reminds us that the system is broken from the floor up.',
       location: 'National'
     },
     {
       date: '4 August 2026 at 11:40 am',
-      title: 'The Cockroach Janta Party: Will They Finally Crawl into the Ballot',
+      title: 'Cockroach Janta Party: Will They Finally Crawl into the Ballot',
       desc: 'Facing the classic existential crisis of every grassroots movement: keep protesting or join the circus.',
       location: 'New Delhi'
     },
@@ -255,7 +255,7 @@ export const ProtestsPage: React.FC = () => {
     },
     {
       date: '3 August 2026 at 09:56 am',
-      title: 'Three Faces, One Revolt: The Architects of the Cockroach Janta Party',
+      title: 'Three Faces, One Revolt: Architects of Cockroach Janta Party',
       desc: 'Meet the men behind the screen: Abhijeet Dipke, Ashutosh Ranka, and Saurav Das — unlikely architects of viral rage.',
       location: 'Delhi / Mumbai'
     },
@@ -267,7 +267,7 @@ export const ProtestsPage: React.FC = () => {
     },
     {
       date: '1 August 2026 at 03:23 pm',
-      title: 'The Cockroach Janta Party: Why Critics Fear the Floor',
+      title: 'Cockroach Janta Party: Why Critics Fear the Floor',
       desc: 'Critics are busy counting legs while we are busy building a movement. Here is why the CJP protest is more than a nuisance.',
       location: 'National'
     },
@@ -327,7 +327,7 @@ export const ProtestsPage: React.FC = () => {
     },
     {
       date: '25 July 2026 at 11:42 am',
-      title: 'The BJP\'s Playbook: Why They Are Rattled by the Cockroach Janta Party',
+      title: 'The BJP\'s Playbook: Why They Are Rattled by Cockroach Janta Party',
       desc: 'When the establishment gets rattled by a few cockroaches, they reach for the agitprop handbook.',
       location: 'New Delhi'
     },
@@ -538,7 +538,7 @@ export const ProtestsPage: React.FC = () => {
     {
       date: '17 June 2026 at 11:27 pm',
       title: 'Satire: Protests Erupt as Youth Demand More Than Survival',
-      desc: 'CJP Dispatch desk: The Cockroach Janta Party initiates a new wave of organized protests across major urban centers.',
+      desc: 'CJP Dispatch desk: Cockroach Janta Party initiates a new wave of organized protests across major urban centers.',
       location: 'National'
     },
     {

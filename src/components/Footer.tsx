@@ -194,7 +194,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar & Copyright matching Image 3 */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-[#EADBCE] font-extrabold uppercase tracking-wider pt-2">
           <div className="flex items-center gap-2">
-            <span>© 2026 The Cockroach Janta Party · All rights reserved.</span>
+            <span>© 2026 Cockroach Janta Party · All rights reserved.</span>
           </div>
 
           <div className="flex items-center gap-2 text-[#D9572B]">

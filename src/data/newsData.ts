@@ -37,7 +37,7 @@ export const newsData: NewsArticle[] = [
     content: [
       {
         heading: "Overview of Municipal Sanitation Auditing",
-        text: "The Cockroach Janta Party research wing published its quarterly recommendations on urban civic hygiene. The report advocates for mandatory public disclosure of drain cleaning schedules, subterranean sewer desilting depth measurements, and contractor service level agreements (SLAs)."
+        text: "Cockroach Janta Party research wing published its quarterly recommendations on urban civic hygiene. The report advocates for mandatory public disclosure of drain cleaning schedules, subterranean sewer desilting depth measurements, and contractor service level agreements (SLAs)."
       },
       {
         heading: "Key Recommendations for Wards",
