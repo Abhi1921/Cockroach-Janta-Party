@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
+import { Link } from 'react-router-dom';
 import { ShieldAlert, Users, MapPin, Search } from 'lucide-react';
 
 export const MembersPage: React.FC = () => {
@@ -264,9 +265,9 @@ export const MembersPage: React.FC = () => {
           <p className="text-xs text-[#EADBCE] font-medium max-w-xl mx-auto leading-relaxed mb-6">
             Free. Lifelong. Revocable only by you. No fees. No selfies with the leader.
           </p>
-          <a href="/join" className="inline-block bg-[#D9572B] text-white font-extrabold text-xs uppercase tracking-wider px-8 py-3.5 border-2 border-[#D9572B] hover:bg-[#EADBCE] hover:text-[#16120D] transition-all">
+          <Link to="/join" className="inline-block bg-[#D9572B] text-white font-extrabold text-xs uppercase tracking-wider px-8 py-3.5 border-2 border-[#D9572B] hover:bg-[#EADBCE] hover:text-[#16120D] transition-all">
             {t('navJoinSwarm')}
-          </a>
+          </Link>
         </div>
 
       </div>
