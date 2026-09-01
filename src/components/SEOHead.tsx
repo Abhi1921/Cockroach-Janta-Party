@@ -16,8 +16,12 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   canonicalUrl
 }) => {
   useEffect(() => {
-    // 1. Page Title
-    const fullTitle = `${title} | Cockroach Janta Party (CJP)`;
+    // 1. Page Title: Strictly "Cockroach Janta Party" when specified, or append cleanly
+    const fullTitle = title === "Cockroach Janta Party"
+      ? "Cockroach Janta Party"
+      : title.includes("Cockroach Janta Party")
+        ? title
+        : `${title} | Cockroach Janta Party`;
     document.title = fullTitle;
 
     // Helper to set meta attributes
@@ -31,15 +35,17 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       element.setAttribute('content', contentValue);
     };
 
-    // 2. Standard Meta Tags
+    // 2. Standard Meta Tags & Site Name
     setMeta('name', 'description', description);
     setMeta('name', 'keywords', keywords);
+    setMeta('name', 'application-name', 'Cockroach Janta Party Official Website');
 
     // 3. Open Graph Tags
     setMeta('property', 'og:title', fullTitle);
     setMeta('property', 'og:description', description);
     setMeta('property', 'og:image', ogImage);
     setMeta('property', 'og:type', 'website');
+    setMeta('property', 'og:site_name', 'Cockroach Janta Party Official Website');
 
     // 4. Twitter Card Tags
     setMeta('name', 'twitter:card', 'summary_large_image');
@@ -48,15 +54,42 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     setMeta('name', 'twitter:image', ogImage);
 
     // 5. Canonical Link
-    if (canonicalUrl) {
-      let link: HTMLLinkElement | null = document.querySelector('link[rel="canonical"]');
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'canonical');
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', canonicalUrl);
+    const targetCanonical = canonicalUrl || 'https://cockroachjantapartywale.com/';
+    let link: HTMLLinkElement | null = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
     }
+    link.setAttribute('href', targetCanonical);
+
+    // 6. Dynamic BreadcrumbList Schema.org JSON-LD for Google Search Console
+    let breadcrumbScript = document.querySelector('#seo-breadcrumb-schema');
+    if (!breadcrumbScript) {
+      breadcrumbScript = document.createElement('script');
+      breadcrumbScript.id = 'seo-breadcrumb-schema';
+      breadcrumbScript.setAttribute('type', 'application/ld+json');
+      document.head.appendChild(breadcrumbScript);
+    }
+    const breadcrumbData = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Cockroach Janta Party Official Website",
+          "item": "https://cockroachjantapartywale.com/"
+        },
+        ...(targetCanonical !== "https://cockroachjantapartywale.com/" ? [{
+          "@type": "ListItem",
+          "position": 2,
+          "name": title.replace(" | Cockroach Janta Party", ""),
+          "item": targetCanonical
+        }] : [])
+      ]
+    };
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbData);
   }, [title, description, keywords, ogImage, canonicalUrl]);
 
   return null;

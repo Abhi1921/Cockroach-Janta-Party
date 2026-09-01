@@ -197,7 +197,7 @@ export const UpdatesPage: React.FC = () => {
       <SEOHead
         title="CJP Journal & History | Complete Timeline (May - 30 Aug 2026)"
         description="Explore the complete, date-wise source-backed history and journal archive of Cockroach Janta Party from May 2026 to 30 August 2026 cutoff."
-        canonicalUrl="http://localhost:3000/updates"
+        canonicalUrl="https://cockroachjantapartywale.com/updates"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

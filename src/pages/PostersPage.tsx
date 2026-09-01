@@ -75,7 +75,7 @@ export const PostersPage: React.FC = () => {
       <SEOHead
         title={lang === 'hi' ? 'सीजेपी पोस्टर' : 'Original Brand Posters'}
         description="Download and share original visual posters of Cockroach Janta Party: 5 September Delhi March, School Thik Karo Campaign, Featured Dispatch, Black Monday, and CJP Emblem."
-        canonicalUrl="http://localhost:3000/posters"
+        canonicalUrl="https://cockroachjantapartywale.com/posters"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

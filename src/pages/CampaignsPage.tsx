@@ -51,7 +51,7 @@ export const CampaignsPage: React.FC = () => {
       <SEOHead
         title={lang === 'hi' ? 'अभियान व पहल' : 'Civic Campaigns & Initiatives'}
         description="Explore active volunteer campaigns of Cockroach Janta Party: Subterranean sewer audits, contractor warranty board verifications, and rapid water testing kiosks."
-        canonicalUrl="http://localhost:3000/campaigns"
+        canonicalUrl="https://cockroachjantapartywale.com/campaigns"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

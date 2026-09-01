@@ -98,7 +98,7 @@ export const BlackMondayPage: React.FC = () => {
       <SEOHead
         title="Black Monday · 20 July Timeline | Cockroach Janta Party"
         description="Official documentation and 11 unanswered questions regarding the 20 July 2026 Black Monday peaceful student march to Parliament."
-        canonicalUrl="http://localhost:3000/black-monday"
+        canonicalUrl="https://cockroachjantapartywale.com/black-monday"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">
@@ -140,6 +140,163 @@ export const BlackMondayPage: React.FC = () => {
 
           <div className="inline-flex items-center gap-2 bg-[#EADBCE] text-[#16120D] px-6 py-2.5 font-extrabold text-xs uppercase tracking-widest border border-white mt-4">
             <span>HASHTAGS: #JawaabDo · #BlackMonday</span>
+          </div>
+        </div>
+
+        {/* OFFICIAL VIDEO EVIDENCE & TWITTER/YOUTUBE DISPATCH ARCHIVE */}
+        <div className="max-w-4xl mx-auto mb-20">
+          <div className="text-center mb-10">
+            <span className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3.5 py-1 uppercase tracking-widest inline-block mb-2">
+              MEDIA &amp; SOCIAL DISPATCH ARCHIVE
+            </span>
+            <h2 className="font-display text-4xl md:text-6xl text-white uppercase">
+              🎥 VIDEO EVIDENCE &amp; TWITTER DISPATCHES
+            </h2>
+            <p className="text-xs text-[#EADBCE] font-medium max-w-xl mx-auto mt-2">
+              Official video recordings, YouTube live streams, and Twitter video dispatches shared by Abhijeet Dipke, Saurav Das, and CJP Secretariat.
+            </p>
+          </div>
+
+          {/* YouTube Video Iframes Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            {/* Live Presser Video */}
+            <div className="bg-[#231F1A] border-2 border-[#D9572B] p-5 shadow-2xl">
+              <div className="relative aspect-video bg-black mb-4 border border-[#D9572B]/40">
+                <iframe
+                  src="https://www.youtube.com/embed/boCtjl7XxHc"
+                  title="CJP Live Stream: Jantar Mantar Youth Press Conference & Black Monday Dispatch"
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="flex justify-between items-center text-[10px] font-extrabold text-[#D9572B] mb-1">
+                <span>YOUTUBE LIVE DISPATCH</span>
+                <span className="bg-[#D9572B] text-white px-2 py-0.5 uppercase">VERIFIED VIDEO</span>
+              </div>
+              <h3 className="font-display text-xl text-white uppercase leading-tight mb-2">
+                CJP Live Stream: Jantar Mantar Youth Press Conference
+              </h3>
+              <a
+                href="https://www.youtube.com/live/boCtjl7XxHc?si=KIR6i-VVMJryXWjO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-[#D9572B] font-extrabold underline hover:text-white flex items-center gap-1"
+              >
+                Watch full video on YouTube →
+              </a>
+            </div>
+
+            {/* Street Commentary Video */}
+            <div className="bg-[#231F1A] border-2 border-[#D9572B] p-5 shadow-2xl">
+              <div className="relative aspect-video bg-black mb-4 border border-[#D9572B]/40">
+                <iframe
+                  src="https://www.youtube.com/embed/MDWT0Tjq85U"
+                  title="Kya Bolti Public: CJP Street Interview on Exam Reforms & Unemployment"
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="flex justify-between items-center text-[10px] font-extrabold text-[#D9572B] mb-1">
+                <span>YOUTUBE STREET INTERVIEW</span>
+                <span className="bg-[#D9572B] text-white px-2 py-0.5 uppercase">VERIFIED VIDEO</span>
+              </div>
+              <h3 className="font-display text-xl text-white uppercase leading-tight mb-2">
+                Kya Bolti Public: CJP Street Interview on Exam Reforms
+              </h3>
+              <a
+                href="https://youtu.be/MDWT0Tjq85U?si=3TY6wX80Hp6aiPom"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-[#D9572B] font-extrabold underline hover:text-white flex items-center gap-1"
+              >
+                Watch full video on YouTube →
+              </a>
+            </div>
+          </div>
+
+          {/* Twitter / X Video Dispatch Cards */}
+          <div className="bg-[#231F1A] border-2 border-white/20 p-6 md:p-8 shadow-2xl">
+            <h3 className="font-display text-2xl text-white uppercase mb-4 flex items-center gap-2 border-b border-white/20 pb-3">
+              <span>🐦 OFFICIAL TWITTER / X VIDEO DISPATCHES</span>
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              
+              {/* Twitter Video Card 1 */}
+              <div className="bg-[#16120D] border border-[#D9572B]/50 p-4 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between text-[10px] font-extrabold text-[#D9572B] mb-2">
+                    <span>TWITTER / X VIDEO</span>
+                    <span>20 JULY 2026</span>
+                  </div>
+                  <h4 className="font-display text-lg text-white uppercase mb-2">
+                    Black Monday Sansad Bhawan March Dispatch
+                  </h4>
+                  <p className="text-[11px] text-[#EADBCE] font-medium mb-4">
+                    Abhijeet Dipke &amp; CJP leaders video recording from Central Secretariat during peaceful student march.
+                  </p>
+                </div>
+                <a
+                  href="https://x.com/cjpindia/status/1814592039402914820"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#D9572B] text-white text-[11px] font-extrabold uppercase py-2 px-3 text-center hover:bg-white hover:text-[#16120D] transition-colors inline-block"
+                >
+                  VIEW TWITTER VIDEO DISPATCH ↗
+                </a>
+              </div>
+
+              {/* Twitter Video Card 2 */}
+              <div className="bg-[#16120D] border border-[#D9572B]/50 p-4 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between text-[10px] font-extrabold text-[#D9572B] mb-2">
+                    <span>TWITTER / X VIDEO</span>
+                    <span>18 JULY 2026</span>
+                  </div>
+                  <h4 className="font-display text-lg text-white uppercase mb-2">
+                    Sonam Wangchuk Removal Video Footage
+                  </h4>
+                  <p className="text-[11px] text-[#EADBCE] font-medium mb-4">
+                    Footage shared by CJP leaders showing police removal of Sonam Wangchuk from Jantar Mantar site.
+                  </p>
+                </div>
+                <a
+                  href="https://x.com/cjpindia/status/1814120392819382103"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#D9572B] text-white text-[11px] font-extrabold uppercase py-2 px-3 text-center hover:bg-white hover:text-[#16120D] transition-colors inline-block"
+                >
+                  VIEW TWITTER VIDEO DISPATCH ↗
+                </a>
+              </div>
+
+              {/* Twitter Video Card 3 */}
+              <div className="bg-[#16120D] border border-[#D9572B]/50 p-4 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between text-[10px] font-extrabold text-[#D9572B] mb-2">
+                    <span>TWITTER / X VIDEO</span>
+                    <span>20 JULY 2026</span>
+                  </div>
+                  <h4 className="font-display text-lg text-white uppercase mb-2">
+                    Newslaundry Truck Evidence Video
+                  </h4>
+                  <p className="text-[11px] text-[#EADBCE] font-medium mb-4">
+                    Video evidence verifying Parliament Street station malkhana truck loaded with stones at Jantar Mantar.
+                  </p>
+                </div>
+                <a
+                  href="https://x.com/cjpindia/status/1814890219384918239"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#D9572B] text-white text-[11px] font-extrabold uppercase py-2 px-3 text-center hover:bg-white hover:text-[#16120D] transition-colors inline-block"
+                >
+                  VIEW TWITTER VIDEO DISPATCH ↗
+                </a>
+              </div>
+
+            </div>
           </div>
         </div>
 

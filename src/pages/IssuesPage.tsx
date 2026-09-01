@@ -86,7 +86,7 @@ export const IssuesPage: React.FC = () => {
       <SEOHead
         title="CJP Issues | Public Issues & Civic Commentary"
         description="Explore 8+ verified public civic issues championed by Cockroach Janta Party: Drainage, contractor warranties, water purity, RTI, and youth employment."
-        canonicalUrl="http://localhost:3000/issues"
+        canonicalUrl="https://cockroachjantapartywale.com/issues"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

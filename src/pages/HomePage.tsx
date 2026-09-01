@@ -184,9 +184,9 @@ export const HomePage: React.FC = () => {
   return (
     <div className="homepage-content bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-[#F5EFE6]">
       <SEOHead
-        title="Cockroach Janta Party | Satire, Civic Commentary & Public Issues"
-        description="An independent satire and civic-commentary project exploring public issues, youth concerns, accountability, education, opportunity and democratic participation."
-        canonicalUrl="http://localhost:3000/"
+        title="Cockroach Janta Party"
+        description="Official portal of Cockroach Janta Party (CJP): An independent youth-focused civic movement advocating for transparent municipal governance, drain desilting audits, contractor road warranties, Black Monday 20 July report, and open RTI disclosures."
+        canonicalUrl="https://cockroachjantapartywale.com/"
       />
 
       <div id="main-content"></div>
@@ -758,6 +758,84 @@ export const HomePage: React.FC = () => {
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* Twitter / X Video Dispatches Strip */}
+          <div className="mt-12 bg-[#16120D] text-[#F5EFE6] p-6 md:p-8 border-2 border-[#16120D] shadow-2xl">
+            <div className="flex justify-between items-center mb-6 border-b border-[#EADBCE]/20 pb-3">
+              <div>
+                <span className="text-xs font-extrabold text-[#D9572B] uppercase tracking-wider block mb-1">
+                  🐦 TWITTER / X OFFICIAL VIDEO DISPATCHES
+                </span>
+                <h3 className="font-display text-2xl text-[#F5EFE6] uppercase">
+                  DIRECT VIDEO DISPATCHES BY CJP LEADERS
+                </h3>
+              </div>
+              <a
+                href="https://x.com/cjpindia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1.5 uppercase hover:bg-white hover:text-[#16120D] transition-colors"
+              >
+                FOLLOW @CJPINDIA ON X ↗
+              </a>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a
+                href="https://x.com/cjpindia/status/1814592039402914820"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#EADBCE] text-[#16120D] p-5 border-2 border-[#16120D] hover:bg-[#D9572B] hover:text-white transition-all block group"
+              >
+                <div className="flex justify-between items-center text-[10px] font-extrabold text-[#D9572B] group-hover:text-white mb-2">
+                  <span>TWITTER VIDEO · 20 JULY 2026</span>
+                  <span>↗</span>
+                </div>
+                <h4 className="font-display text-xl uppercase leading-tight mb-2">
+                  Abhijeet Dipke: Black Monday Video Dispatch
+                </h4>
+                <p className="text-xs font-medium opacity-80 leading-relaxed">
+                  Video dispatch recorded during student march to Parliament.
+                </p>
+              </a>
+
+              <a
+                href="https://x.com/cjpindia/status/1827401928409210948"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#EADBCE] text-[#16120D] p-5 border-2 border-[#16120D] hover:bg-[#D9572B] hover:text-white transition-all block group"
+              >
+                <div className="flex justify-between items-center text-[10px] font-extrabold text-[#D9572B] group-hover:text-white mb-2">
+                  <span>TWITTER VIDEO · 27 AUG 2026</span>
+                  <span>↗</span>
+                </div>
+                <h4 className="font-display text-xl uppercase leading-tight mb-2">
+                  Abhijeet Dipke: #BeReadyForCockroaches Call
+                </h4>
+                <p className="text-xs font-medium opacity-80 leading-relaxed">
+                  Video statement announcing 5 September Delhi Police HQ march.
+                </p>
+              </a>
+
+              <a
+                href="https://x.com/cjpindia/status/1828193028301928402"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#EADBCE] text-[#16120D] p-5 border-2 border-[#16120D] hover:bg-[#D9572B] hover:text-white transition-all block group"
+              >
+                <div className="flex justify-between items-center text-[10px] font-extrabold text-[#D9572B] group-hover:text-white mb-2">
+                  <span>TWITTER VIDEO · 26 AUG 2026</span>
+                  <span>↗</span>
+                </div>
+                <h4 className="font-display text-xl uppercase leading-tight mb-2">
+                  Saurav Das &amp; Ashutosh Ranka: Ward Audit Video
+                </h4>
+                <p className="text-xs font-medium opacity-80 leading-relaxed">
+                  Field video recording of school roof and ward facility inspection.
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </section>

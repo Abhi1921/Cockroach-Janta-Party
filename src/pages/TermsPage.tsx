@@ -11,7 +11,7 @@ export const TermsPage: React.FC = () => {
       <SEOHead
         title={lang === 'hi' ? 'शर्तें व कानूनी अस्वीकरण' : 'Terms of Use & Legal Disclaimer'}
         description="Read the official legal disclaimers, satirical commentary terms, and privacy disclosures for Cockroach Janta Party portal."
-        canonicalUrl="http://localhost:3000/terms"
+        canonicalUrl="https://cockroachjantapartywale.com/terms"
       />
 
       <div className="max-w-4xl mx-auto px-4">

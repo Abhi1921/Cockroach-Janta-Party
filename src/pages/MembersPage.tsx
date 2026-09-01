@@ -144,7 +144,7 @@ export const MembersPage: React.FC = () => {
       <SEOHead
         title="The Swarm Members | Cockroach Janta Party (43,247 Strong)"
         description="Explore the live directory of members of Cockroach Janta Party across 36 states and 43,247 registered applicants."
-        canonicalUrl="http://localhost:3000/members"
+        canonicalUrl="https://cockroachjantapartywale.com/members"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

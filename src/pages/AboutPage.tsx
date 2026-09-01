@@ -12,7 +12,7 @@ export const AboutPage: React.FC = () => {
       <SEOHead
         title={lang === 'hi' ? 'हमारे बारे में' : 'About Us'}
         description="Learn about Cockroach Janta Party - an independent youth civic initiative dedicated to municipal transparency, subterranean drain audits, and public accountability."
-        canonicalUrl="http://localhost:3000/about"
+        canonicalUrl="https://cockroachjantapartywale.com/about"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

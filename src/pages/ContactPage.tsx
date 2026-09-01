@@ -20,7 +20,7 @@ export const ContactPage: React.FC = () => {
       <SEOHead
         title="Contact CJP | Official Information & Website Queries"
         description="Reach out to Cockroach Janta Party secretariat for website queries, press inquiries, legal advocacy assistance, or volunteer coordination."
-        canonicalUrl="http://localhost:3000/contact"
+        canonicalUrl="https://cockroachjantapartywale.com/contact"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

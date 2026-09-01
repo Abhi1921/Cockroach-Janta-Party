@@ -567,7 +567,7 @@ export const ProtestsPage: React.FC = () => {
       <SEOHead
         title="CJP Protest News Timeline | Independent Satirical Coverage"
         description="Comprehensive date-wise protest timeline and satirical news coverage of Cockroach Janta Party from June 2026 to 29 August 2026."
-        canonicalUrl="http://localhost:3000/protests"
+        canonicalUrl="https://cockroachjantapartywale.com/protests"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">
@@ -634,6 +634,169 @@ export const ProtestsPage: React.FC = () => {
               </div>
             </div>
 
+          </div>
+        </div>
+
+        {/* PROTEST VIDEO DISPATCHES & TWITTER MEDIA ARCHIVE */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <div className="text-center mb-8">
+            <span className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest inline-block mb-2">
+              PROTEST VIDEO DISPATCHES
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl text-[#16120D] uppercase">
+              📹 YOUTUBE IFRAMES &amp; TWITTER VIDEO LINKS
+            </h2>
+            <p className="text-xs text-[#3A332B] font-medium max-w-xl mx-auto mt-1">
+              Watch official speeches, ground dispatches, and Twitter video updates shared by Abhijeet Dipke, Ashutosh Ranka, and Saurav Das.
+            </p>
+          </div>
+
+          {/* YouTube Video Iframes 3-Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-4 shadow-xl flex flex-col justify-between">
+              <div>
+                <div className="relative aspect-video bg-black mb-3 border border-[#16120D]">
+                  <iframe
+                    src="https://www.youtube.com/embed/boCtjl7XxHc"
+                    title="Jantar Mantar Presser"
+                    className="w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <span className="text-[10px] font-extrabold text-[#D9572B] uppercase block mb-1">LIVE PRESSER</span>
+                <h3 className="font-display text-lg text-[#16120D] uppercase leading-tight mb-2">
+                  Jantar Mantar Press Conference
+                </h3>
+              </div>
+              <a
+                href="https://www.youtube.com/live/boCtjl7XxHc?si=KIR6i-VVMJryXWjO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#16120D] text-[#F5EFE6] text-[10px] font-extrabold uppercase py-2 px-3 text-center hover:bg-[#D9572B] transition-colors"
+              >
+                OPEN ON YOUTUBE ↗
+              </a>
+            </div>
+
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-4 shadow-xl flex flex-col justify-between">
+              <div>
+                <div className="relative aspect-video bg-black mb-3 border border-[#16120D]">
+                  <iframe
+                    src="https://www.youtube.com/embed/MDWT0Tjq85U"
+                    title="Kya Bolti Public Street Interview"
+                    className="w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <span className="text-[10px] font-extrabold text-[#D9572B] uppercase block mb-1">STREET INTERVIEW</span>
+                <h3 className="font-display text-lg text-[#16120D] uppercase leading-tight mb-2">
+                  Kya Bolti Public: Youth Interview
+                </h3>
+              </div>
+              <a
+                href="https://youtu.be/MDWT0Tjq85U?si=3TY6wX80Hp6aiPom"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#16120D] text-[#F5EFE6] text-[10px] font-extrabold uppercase py-2 px-3 text-center hover:bg-[#D9572B] transition-colors"
+              >
+                OPEN ON YOUTUBE ↗
+              </a>
+            </div>
+
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-4 shadow-xl flex flex-col justify-between">
+              <div>
+                <div className="relative aspect-video bg-black mb-3 border border-[#16120D]">
+                  <iframe
+                    src="https://www.youtube.com/embed/nlDLIt_Fr9g"
+                    title="CJP Youth Commentary"
+                    className="w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <span className="text-[10px] font-extrabold text-[#D9572B] uppercase block mb-1">CIVIC ANALYSIS</span>
+                <h3 className="font-display text-lg text-[#16120D] uppercase leading-tight mb-2">
+                  CJP Youth Commentary &amp; Analysis
+                </h3>
+              </div>
+              <a
+                href="https://youtu.be/nlDLIt_Fr9g?si=Th-e4XGlSAKRHMzs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#16120D] text-[#F5EFE6] text-[10px] font-extrabold uppercase py-2 px-3 text-center hover:bg-[#D9572B] transition-colors"
+              >
+                OPEN ON YOUTUBE ↗
+              </a>
+            </div>
+
+          </div>
+
+          {/* Twitter Video Link Cards Bar */}
+          <div className="bg-[#16120D] text-[#F5EFE6] p-6 border-2 border-[#16120D] shadow-2xl">
+            <div className="flex justify-between items-center mb-4 border-b border-[#EADBCE]/20 pb-3">
+              <span className="text-xs font-extrabold text-[#D9572B] uppercase tracking-wider flex items-center gap-1.5">
+                <span>🐦 OFFICIAL TWITTER / X PROTEST VIDEO DISPATCHES</span>
+              </span>
+              <span className="text-[10px] font-extrabold bg-[#D9572B] text-white px-2 py-0.5 uppercase">
+                VERIFIED LINKS
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <a
+                href="https://x.com/cjpindia/status/1827401928409210948"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#EADBCE] text-[#16120D] p-3.5 border border-[#16120D] hover:bg-[#D9572B] hover:text-white transition-all block group"
+              >
+                <div className="text-[10px] font-extrabold uppercase tracking-wider text-[#D9572B] group-hover:text-white mb-1">
+                  TWITTER VIDEO · 27 AUG 2026
+                </div>
+                <div className="font-extrabold text-xs uppercase leading-tight mb-2">
+                  Abhijeet Dipke: #BeReadyForCockroaches Sep 5 Video Call ↗
+                </div>
+                <div className="text-[10px] font-medium opacity-80">
+                  Official video message on 5 September Delhi Police HQ march.
+                </div>
+              </a>
+
+              <a
+                href="https://x.com/cjpindia/status/1828193028301928402"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#EADBCE] text-[#16120D] p-3.5 border border-[#16120D] hover:bg-[#D9572B] hover:text-white transition-all block group"
+              >
+                <div className="text-[10px] font-extrabold uppercase tracking-wider text-[#D9572B] group-hover:text-white mb-1">
+                  TWITTER VIDEO · 26 AUG 2026
+                </div>
+                <div className="font-extrabold text-xs uppercase leading-tight mb-2">
+                  Saurav Das &amp; Ashutosh Ranka: School Audit Video ↗
+                </div>
+                <div className="text-[10px] font-medium opacity-80">
+                  Field video recording of school roofs &amp; library space audit.
+                </div>
+              </a>
+
+              <a
+                href="https://x.com/cjpindia/status/1826019382910398201"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#EADBCE] text-[#16120D] p-3.5 border border-[#16120D] hover:bg-[#D9572B] hover:text-white transition-all block group"
+              >
+                <div className="text-[10px] font-extrabold uppercase tracking-wider text-[#D9572B] group-hover:text-white mb-1">
+                  TWITTER VIDEO · 25 AUG 2026
+                </div>
+                <div className="font-extrabold text-xs uppercase leading-tight mb-2">
+                  CJI Supreme Court Hearing Video Dispatch ↗
+                </div>
+                <div className="text-[10px] font-medium opacity-80">
+                  Court proceedings video summary regarding student protest FIRs.
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 

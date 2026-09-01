@@ -17,7 +17,7 @@ export const NewsPage: React.FC = () => {
     subtitle: "A documentary investigation into how a satirical emblem evolved into a youth-driven civic watchdog across 45 metro sectors (May 2026 – 30 August 2026 Archive Cutoff).",
     author: "CJP Editorial Research Secretariat",
     publishedDate: "30 August 2026",
-    heroImage: "/cjp_hero_banner.png",
+    heroImage: "/cjp_news_hero_poster.png",
     heroCaption: "Symbolic illustration of youth activism, protest and political satire surrounding the Cockroach Janta Party.",
     heroLabel: "AI-generated symbolic illustration.",
     contentParagraphs: [
@@ -40,6 +40,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'AUG 29, 2026',
       month: 'AUGUST 2026',
       category: 'BREAKING',
+      image: '/cjp_toi_genz_news.jpg',
       headline: 'From Exam Fairness to Youth Employability: Gen Z Views on CJP in Mood of the Nation Poll',
       subheadline: 'India Today / CVoter survey highlights massive Gen Z support for CJP as a pressure group.',
       location: 'National / New Delhi',
@@ -61,6 +62,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'AUG 28, 2026',
       month: 'AUGUST 2026',
       category: 'LEGAL & COURT',
+      image: '/cjp_system_change_quote.jpg',
       headline: 'Won\'t Be Surprised If CJP Captures Power in One or Two States: P. Chidambaram',
       subheadline: 'Former Union Minister P. Chidambaram reflects on CJP\'s rapid momentum.',
       location: 'New Delhi, DL',
@@ -81,6 +83,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'AUG 27, 2026',
       month: 'AUGUST 2026',
       category: 'PROTEST REPORT',
+      image: '/cjp_sep5_protest_poster.png',
       headline: 'Be Ready for Cockroaches! CJP Doubly Down on September 5 Delhi HQ Protest March',
       subheadline: 'CJP warns Modi Govt over 3 pending demands, announces march from India Gate to Delhi Police HQ.',
       location: 'India Gate / Delhi Police HQ',
@@ -102,6 +105,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'AUG 27, 2026',
       month: 'AUGUST 2026',
       category: 'EDUCATION',
+      image: '/cjp_school_thik_karo_poster.png',
       headline: 'Tamil Nadu Vijay Govt Bars Students From Left & CJP Protests, Reverses Order in 48 Hours',
       subheadline: 'Massive backlash forces Tamil Nadu government to revoke ban on student participation.',
       location: 'Chennai, TN',
@@ -123,6 +127,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'AUG 26, 2026',
       month: 'AUGUST 2026',
       category: 'ORGANISATION',
+      image: '/cjp_press_conference_photo.jpg',
       headline: 'CJP Expands Organisational Footprint Across 3 Zones, Appoints National Spokespersons',
       subheadline: 'New office bearers announced ahead of September 5 march.',
       location: 'National / New Delhi',
@@ -144,6 +149,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'AUG 25, 2026',
       month: 'AUGUST 2026',
       category: 'LEGAL & COURT',
+      image: '/cjp_black_monday_poster.png',
       headline: 'Supreme Court Mulls Panel with Ex-Judge & Former CBI Chief over July 20 Police Action',
       subheadline: 'Apex court clarifies states free to quash student FIRs under Article 142.',
       location: 'Supreme Court, New Delhi',
@@ -165,6 +171,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'AUG 24, 2026',
       month: 'AUGUST 2026',
       category: 'PUBLIC ISSUES',
+      image: '/cjp_poster_sanitation.png',
       headline: 'Clashes Erupt During CJP "School Thik Karo" Inspection in Rajasthan',
       subheadline: 'Ashutosh Ranka alleges BJP worker involvement as CJP team faces opposition.',
       location: 'Jaipur, RJ',
@@ -186,6 +193,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'MAY 15, 2026',
       month: 'MAY 2026',
       category: 'ORGANISATION',
+      image: '/cjp_dispatch_paying_attention_poster.png',
       headline: 'Abhijeet Dipke Formally Announces Cockroach Janta Party Formation',
       subheadline: 'Initial public emergence of CJP as an independent youth-focused civic satire and audit project.',
       location: 'New Delhi, DL',
@@ -207,6 +215,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'MAY 29, 2026',
       month: 'MAY 2026',
       category: 'EDUCATION',
+      image: '/cjp_school_thik_karo_poster.png',
       headline: 'Launch of "School Thik Karo" Ward Education Campaign',
       subheadline: 'Volunteers begin documenting municipal school infrastructure and study room availability.',
       location: 'Delhi / NCR',
@@ -228,6 +237,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'JUNE 11, 2026',
       month: 'JUNE 2026',
       category: 'MANIFESTO',
+      image: '/cjp_banner.png',
       headline: 'CJP Releases 5-Point Civic Demands Charter',
       subheadline: 'Manifesto outlines sewer desilting, 3-year road warranties, water testing, direct wages, and RTI access.',
       location: 'New Delhi, DL',
@@ -249,6 +259,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'JUNE 23, 2026',
       month: 'JUNE 2026',
       category: 'SOCIAL MEDIA',
+      image: '/cjp_mo_team_photo.jpg',
       headline: 'Broadcast of "Kya Bolti Public" Street Interview Series Begins',
       subheadline: 'Digital media wing publishes street interviews documenting youth opinions on employment and governance.',
       location: 'Mumbai / Delhi',
@@ -269,6 +280,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'JULY 15, 2026',
       month: 'JULY 2026',
       category: 'PROTEST REPORT',
+      image: '/cjp_black_monday_poster.png',
       headline: 'Jantar Mantar Youth Civic Demonstration & Student Rally',
       subheadline: 'Students assemble demanding open RTI tender ledgers and 3-year contractor warranty notice boards.',
       location: 'Jantar Mantar, New Delhi',
@@ -290,6 +302,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'JULY 30, 2026',
       month: 'JULY 2026',
       category: 'LEGAL & COURT',
+      image: '/cjp_dispatch_paying_attention_poster.png',
       headline: 'Section 4 RTI Compliance Petition Filed Before Information Commission',
       subheadline: 'Legal advocacy desk files representation for zero-paywall digital publishing of contractor bill-of-quantities.',
       location: 'New Delhi, DL',
@@ -326,7 +339,7 @@ export const NewsPage: React.FC = () => {
       <SEOHead
         title="CJP News & Archive | Complete Source-Backed Chronicle (May - 30 Aug 2026)"
         description="Comprehensive date-wise source-linked news archive of Cockroach Janta Party covering origins, student protests, RTI filings, and August 2026 roadmap."
-        canonicalUrl="http://localhost:3000/news"
+        canonicalUrl="https://cockroachjantapartywale.com/news"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">
@@ -491,18 +504,37 @@ export const NewsPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Title & Subtitle */}
-              <h3 className="font-display text-3xl md:text-4xl text-[#16120D] uppercase mb-2 leading-tight">
-                {item.headline}
-              </h3>
+              {/* Poster Image + Headline Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start mb-6">
+                {item.image && (
+                  <div className="lg:col-span-4">
+                    <div className="bg-[#16120D] border-2 border-[#16120D] p-2 shadow-lg group relative">
+                      <img
+                        src={item.image}
+                        alt={item.headline}
+                        className="w-full h-auto object-contain max-h-[280px] mx-auto rounded-sm group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="text-[9px] font-extrabold text-[#EADBCE] text-center mt-2 uppercase tracking-widest bg-[#16120D] py-1 border-t border-[#EADBCE]/20">
+                        CJP OFFICIAL NEWS POSTER
+                      </div>
+                    </div>
+                  </div>
+                )}
 
-              <p className="text-xs font-serif text-[#D9572B] italic font-bold mb-4">
-                {item.subheadline}
-              </p>
+                <div className={item.image ? "lg:col-span-8" : "lg:col-span-12"}>
+                  <h3 className="font-display text-3xl md:text-4xl text-[#16120D] uppercase mb-2 leading-tight">
+                    {item.headline}
+                  </h3>
 
-              <p className="text-xs text-[#3A332B] font-bold mb-6">
-                {item.summary}
-              </p>
+                  <p className="text-xs font-serif text-[#D9572B] italic font-bold mb-4">
+                    {item.subheadline}
+                  </p>
+
+                  <p className="text-xs text-[#3A332B] font-bold">
+                    {item.summary}
+                  </p>
+                </div>
+              </div>
 
               {/* Structured Breakdown Blocks */}
               <div className="space-y-3 text-xs text-[#3A332B] font-medium leading-relaxed mb-6">
@@ -564,6 +596,19 @@ export const NewsPage: React.FC = () => {
               <h3 className="font-display text-3xl text-[#16120D] uppercase mb-2">
                 {selectedNews.headline}
               </h3>
+
+              {selectedNews.image && (
+                <div className="bg-[#16120D] border-2 border-[#16120D] p-2 shadow-lg mb-4 text-center">
+                  <img
+                    src={selectedNews.image}
+                    alt={selectedNews.headline}
+                    className="w-full h-auto object-contain max-h-[320px] mx-auto rounded-sm"
+                  />
+                  <div className="text-[9px] font-extrabold text-[#EADBCE] mt-1.5 uppercase tracking-wider">
+                    FEATURED STORY POSTER
+                  </div>
+                </div>
+              )}
 
               <div className="text-xs font-bold text-[#16120D] mb-4 bg-[#EADBCE] border border-[#16120D] p-3 flex justify-between">
                 <span>VERIFICATION BADGE: <strong className="text-[#D9572B]">{selectedNews.verificationStatus}</strong></span>

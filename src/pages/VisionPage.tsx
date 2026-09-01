@@ -51,7 +51,7 @@ export const VisionPage: React.FC = () => {
       <SEOHead
         title="CJP Vision | Cockroach Janta Party"
         description="Explore the vision, core philosophy, and conversation drivers of Cockroach Janta Party: A different kind of public voice."
-        canonicalUrl="http://localhost:3000/vision"
+        canonicalUrl="https://cockroachjantapartywale.com/vision"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

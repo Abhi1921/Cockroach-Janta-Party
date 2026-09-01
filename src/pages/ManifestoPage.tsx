@@ -75,7 +75,7 @@ export const ManifestoPage: React.FC = () => {
       <SEOHead
         title="CJP Manifesto | Cockroach Janta Party"
         description="Read the official 5-point civic manifesto of Cockroach Janta Party: Subterranean sewer desilting, 3-year contractor road warranties, drinking water testing, and open RTI transparency."
-        canonicalUrl="http://localhost:3000/manifesto"
+        canonicalUrl="https://cockroachjantapartywale.com/manifesto"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

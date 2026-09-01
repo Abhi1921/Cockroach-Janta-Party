@@ -96,7 +96,7 @@ export const JoinPage: React.FC = () => {
       <SEOHead
         title="Join CJP Swarm & Digital ID Card | Cockroach Janta Party"
         description="Register as an official Cockroach Janta Party volunteer civic observer and instantly generate your printable digital membership ID card."
-        canonicalUrl="http://localhost:3000/join"
+        canonicalUrl="https://cockroachjantapartywale.com/join"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">

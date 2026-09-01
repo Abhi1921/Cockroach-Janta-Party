@@ -94,7 +94,7 @@ export const GalleryPage: React.FC = () => {
       <SEOHead
         title="CJP Gallery | Official Campaign Posters & Media Archive"
         description="Official graphic posters and media photo archive of Cockroach Janta Party: TOI news dispatches, Mojo Story team photo, Presser photos, and campaign artwork."
-        canonicalUrl="http://localhost:3000/gallery"
+        canonicalUrl="https://cockroachjantapartywale.com/gallery"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">
