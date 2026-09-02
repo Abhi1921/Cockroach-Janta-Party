@@ -24,7 +24,7 @@ export const NewsletterSection: React.FC = () => {
               SWARM DISPATCHES &amp; ESSAYS
             </span>
             <h3 className="font-serif font-black text-3xl md:text-4xl text-[#F5EFE6] uppercase">
-              STAY INFORMED WITH CJP
+              STAY INFORMED WITH COCKROACH JANTA PARTY
             </h3>
             <p className="text-xs md:text-sm text-[#EADBCE] font-medium leading-relaxed">
               New essays, manifesto updates, and the occasional open letter. No spam, no corporate drip sequence.

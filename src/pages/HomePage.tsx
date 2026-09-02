@@ -294,8 +294,8 @@ export const HomePage: React.FC = () => {
   return (
     <div className="homepage-content bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-[#F5EFE6]">
       <SEOHead
-        title="Cockroach Janta Party"
-        description="Official portal of Cockroach Janta Party (CJP): An independent youth-focused civic movement advocating for transparent municipal governance, drain desilting audits, contractor road warranties, Black Monday 20 July report, and open RTI disclosures."
+        title="Cockroach Janta Party (CJP) — Official Website & Civic Commentary"
+        description="Official website of Cockroach Janta Party (CJP) & Cockroach Janta Partywale: An independent youth-focused civic movement advocating for transparent municipal governance, drain desilting audits, contractor road warranties, School Thik Karo campaign, and open RTI disclosures."
         canonicalUrl="https://cockroachjantapartywale.com/"
       />
 

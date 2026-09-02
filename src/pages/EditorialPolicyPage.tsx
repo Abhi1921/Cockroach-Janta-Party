@@ -32,25 +32,32 @@ export const EditorialPolicyPage: React.FC = () => {
             <FileText size={24} className="text-[#D9572B] flex-shrink-0 mt-0.5" />
             <div>
               <h3 className="font-serif font-black text-sm text-[#16120D] uppercase mb-1">
-                CIVIC SATIRE &amp; FACTUAL INTEGRITY
+                CIVIC SATIRE &amp; FACTUAL INTEGRITY AT COCKROACH JANTA PARTYWALE
               </h3>
               <p className="text-xs text-[#3A332B]">
-                CJP combines dark humor and political parody with verifiable municipal RTI data. Satire targets official apathy, contractor corruption, and public infrastructure failures.
+                Cockroach Janta Partywale (cockroachjantapartywale.com) is the official publication and digital community portal for Cockroach Janta Party (CJP). It combines sharp political satire and dark humor with empirical Section 4 RTI ward audit data.
               </p>
             </div>
           </div>
 
           <div>
-            <h3 className="font-serif font-bold text-base text-[#16120D] uppercase mb-2">1. Verification Standard</h3>
+            <h3 className="font-serif font-bold text-base text-[#16120D] uppercase mb-2">1. Publication Purpose &amp; Ownership</h3>
             <p>
-              All published ward audit dispatches and contractor warranty claims must be grounded in verified RTI applications, public procurement notices, or direct student observer inspections.
+              This website is published independently by the Cockroach Janta Party youth secretariat led by founder Abhijeet Dipke, Ashutosh Ranka, and Saurav Das. It serves as an open-access archive for public dispatches, contractor warranty ledgers, primary school audit reports, and student advocacy charters.
             </p>
           </div>
 
           <div>
-            <h3 className="font-serif font-bold text-base text-[#16120D] uppercase mb-2">2. Non-Defamatory Humorous Critique</h3>
+            <h3 className="font-serif font-bold text-base text-[#16120D] uppercase mb-2">2. Verification Standard</h3>
             <p>
-              Satirical artwork and caricature commentary target public offices, policy decisions, and municipal contracts — never private individuals or protected personal attributes.
+              All published ward audit dispatches and contractor warranty claims must be grounded in verified Section 4 RTI applications, public procurement notices, or direct student observer inspections.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-serif font-bold text-base text-[#16120D] uppercase mb-2">3. Non-Defamatory Humorous Critique</h3>
+            <p>
+              Satirical artwork, meme dispatches, and caricature commentary target municipal office apathy, contractor warranty failures, and policy decisions — never private individuals or protected personal attributes.
             </p>
           </div>
         </div>

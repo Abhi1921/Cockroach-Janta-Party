@@ -25,7 +25,7 @@ export const FloatingWidgets: React.FC = () => {
 
         {/* SWARM CHAT BUTTON matching Image 3 */}
         <a
-          href="https://t.me/cjpindia"
+          href="https://t.me/thecockroachchannel"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#16120D] text-[#F5EFE6] text-xs font-black px-4 py-2.5 border-2 border-[#16120D] shadow-[4px_4px_0px_0px_#D9572B] hover:bg-[#D9572B] hover:text-white transition-all flex items-center gap-2 uppercase tracking-wider rounded-full"

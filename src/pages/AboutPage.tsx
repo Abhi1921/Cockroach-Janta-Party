@@ -10,8 +10,8 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="about-page py-16 bg-[#EADBCE] text-[#16120D] font-sans">
       <SEOHead
-        title={lang === 'hi' ? 'हमारे बारे में' : 'About Us'}
-        description="Learn about Cockroach Janta Party - an independent youth civic initiative dedicated to municipal transparency, subterranean drain audits, and public accountability."
+        title={lang === 'hi' ? 'कॉकरोच जनता पार्टी के बारे में | CJP' : 'About Cockroach Janta Party | CJP & Cockroach Janta Partywale'}
+        description="Learn about Cockroach Janta Party (CJP) and Cockroach Janta Partywale — an independent youth civic movement dedicated to municipal transparency, subterranean drain audits, and public accountability."
         canonicalUrl="https://cockroachjantapartywale.com/about"
       />
 
@@ -20,28 +20,31 @@ export const AboutPage: React.FC = () => {
         {/* Header Hero */}
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
-            {lang === 'hi' ? 'नागरिक आंदोलन' : 'INDEPENDENT CIVIC INITIATIVE'}
+            {lang === 'hi' ? 'नागरिक आंदोलन' : 'INDEPENDENT CIVIC INITIATIVE & PUBLICATION'}
           </span>
           <h1 className="font-serif font-black text-4xl md:text-6xl text-[#16120D] mb-4">
-            {lang === 'hi' ? 'हम कौन हैं' : 'WHO WE ARE'}
+            ABOUT COCKROACH JANTA PARTY (CJP)
           </h1>
           <p className="text-[#3A332B] text-base md:text-lg leading-relaxed font-medium">
             {t('tagline')}
           </p>
         </div>
 
-        {/* Story Section */}
+        {/* Story & Entity Definition Section */}
         <div className="grid md:grid-cols-12 gap-8 mb-16 items-center">
           <div className="md:col-span-7 bg-[#F5EFE6] border-2 border-[#16120D] p-8 md:p-12 shadow-xl">
             <h2 className="font-serif font-black text-3xl text-[#16120D] mb-4 uppercase">
-              {lang === 'hi' ? 'हमारा उद्देश्य और दर्शन' : 'OUR PURPOSE & PHILOSOPHY'}
+              {lang === 'hi' ? 'हमारा उद्देश्य और दर्शन' : 'OUR PURPOSE & ENTITY POSITIONING'}
             </h2>
             <div className="space-y-4 text-xs md:text-sm text-[#3A332B] leading-relaxed font-medium">
               <p>
-                Cockroach Janta Party (CJP) is an independent civic movement founded by energetic young observers. We examine daily municipal concerns—from subterranean sewer maintenance to contractor paving warranties—using satire, empirical audit data, and proactive Section 4 RTI public disclosures.
+                <strong className="text-[#16120D]">Cockroach Janta Party (CJP)</strong> is an independent youth-driven civic movement and political satire initiative founded in 2026 by student researcher <strong className="text-[#16120D]">Abhijeet Dipke</strong> alongside co-founders <strong className="text-[#16120D]">Ashutosh Ranka</strong> and <strong className="text-[#16120D]">Saurav Das</strong>. We examine daily municipal concerns—from subterranean sewer clearance depths to 3-year contractor road warranties—using political satire, empirical RTI data, and open public records.
               </p>
               <p>
-                We do not contest political elections, seek government office, or hold party registrations. Our objective is strictly non-partisan: empowering ordinary citizens to question bureaucracy and participate in neighborhood governance.
+                <strong className="text-[#16120D]">Cockroach Janta Partywale (cockroachjantapartywale.com)</strong> serves as the official web publication, news dispatch center, and digital repository for the movement. It provides zero-paywall public access to ward audit files, manifesto declarations, student protest guidelines, and civic explainers.
+              </p>
+              <p>
+                We do not contest political elections, seek government office, or hold political party registration with the Election Commission of India. Our objective is strictly non-partisan: empowering ordinary citizens to ask sharp questions and hold municipal authorities accountable.
               </p>
             </div>
           </div>

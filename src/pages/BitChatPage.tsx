@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
-import { ShieldCheck, WifiOff, Lock, Radio, Cpu, AlertTriangle, Terminal } from 'lucide-react';
+import { ShieldCheck, WifiOff, Lock, Radio, AlertTriangle, Terminal } from 'lucide-react';
 
 export const BitChatPage: React.FC = () => {
   const { lang } = useLanguage();
@@ -52,7 +52,7 @@ export const BitChatPage: React.FC = () => {
             OPEN SOURCE P2P MESH PROTOCOL · SPEC V1.4
           </span>
           <h1 className="font-serif font-black text-4xl md:text-6xl text-[#16120D] mb-3 uppercase tracking-tight">
-            CJP BITCHAT P2P MESH
+            COCKROACH JANTA PARTY BITCHAT P2P MESH
           </h1>
           <p className="text-sm text-[#3A332B] font-extrabold uppercase tracking-wider max-w-2xl mx-auto">
             {lang === 'hi'
@@ -76,18 +76,6 @@ export const BitChatPage: React.FC = () => {
             <p className="text-xs text-[#EADBCE] max-w-xl font-medium">
               Designed specifically for multi-thousand student gatherings during Delhi marches where network congestion disables standard messaging apps.
             </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a
-              href="https://github.com/Abhi1921/Cockroach-Janta-Party"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#D9572B] text-white text-xs font-extrabold px-6 py-3 border border-white hover:bg-white hover:text-[#16120D] transition-all flex items-center justify-center gap-2 uppercase tracking-wider"
-            >
-              <Cpu size={16} />
-              <span>GITHUB SOURCE CODE</span>
-            </a>
           </div>
         </div>
 

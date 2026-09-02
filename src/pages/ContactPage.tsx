@@ -18,7 +18,7 @@ export const ContactPage: React.FC = () => {
   return (
     <div className="contact-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
-        title="Contact CJP | Official Information & Website Queries"
+        title="Contact Cockroach Janta Party | Official Information & Website Queries"
         description="Reach out to Cockroach Janta Party secretariat for website queries, press inquiries, legal advocacy assistance, or volunteer coordination."
         canonicalUrl="https://cockroachjantapartywale.com/contact"
       />
@@ -172,7 +172,7 @@ export const ContactPage: React.FC = () => {
         <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 max-w-2xl mx-auto shadow-md flex items-start gap-3">
           <ShieldAlert size={20} className="text-[#D9572B] flex-shrink-0 mt-0.5" />
           <p className="text-[11px] text-[#3A332B] font-medium">
-            Contact addresses provided above represent official CJP communications. Fake or unauthorized email domain inquiries will be ignored.
+            Contact addresses provided above represent official Cockroach Janta Party communications. Fake or unauthorized email domain inquiries will be ignored.
           </p>
         </div>
 

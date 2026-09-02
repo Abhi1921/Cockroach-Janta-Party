@@ -114,23 +114,33 @@ export const FounderPage: React.FC = () => {
               Under his convenorship, CJP transformed from an online parody campaign into a nationwide student movement with over 20,000 registered delegates, conducting ward-level road warranty audits, primary school cleanups, and non-violent peaceful protest rallies.
             </p>
 
-            <div className="pt-4 border-t border-[#16120D]/20 flex flex-wrap gap-4 items-center">
+            <div className="pt-4 border-t border-[#16120D]/20 flex flex-wrap gap-3 items-center">
               <a
-                href="https://x.com/cjpindia"
+                href="https://x.com/abhijeet_dipke"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#16120D] text-[#F5EFE6] text-xs font-extrabold px-5 py-2.5 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all flex items-center gap-2 uppercase tracking-wider"
+                className="bg-[#16120D] text-[#F5EFE6] text-xs font-extrabold px-4 py-2 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all flex items-center gap-1.5 uppercase tracking-wider"
               >
-                <span>Follow @cjpindia</span>
-                <ExternalLink size={14} />
+                <span>𝕏 @abhijeet_dipke</span>
+                <ExternalLink size={13} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/abhijeetdipke/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#16120D] text-[#F5EFE6] text-xs font-extrabold px-4 py-2 border-2 border-[#16120D] hover:bg-[#D9572B] hover:border-[#D9572B] transition-all flex items-center gap-1.5 uppercase tracking-wider"
+              >
+                <span>📸 @abhijeetdipke</span>
+                <ExternalLink size={13} />
               </a>
 
               <Link
                 to="/join"
-                className="bg-[#D9572B] text-white text-xs font-extrabold px-5 py-2.5 border-2 border-[#16120D] hover:bg-[#16120D] transition-all flex items-center gap-2 uppercase tracking-wider"
+                className="bg-[#D9572B] text-white text-xs font-extrabold px-4 py-2 border-2 border-[#16120D] hover:bg-[#16120D] transition-all flex items-center gap-1.5 uppercase tracking-wider"
               >
                 <span>Join Dipke&apos;s Swarm</span>
-                <ArrowRight size={14} />
+                <ArrowRight size={13} />
               </Link>
             </div>
           </div>

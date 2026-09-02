@@ -16,8 +16,8 @@ export const MemesPage: React.FC = () => {
   return (
     <div className="memes-page py-16 bg-[#EADBCE] text-[#16120D] font-sans">
       <SEOHead
-        title={lang === 'hi' ? 'राजनीतिक मीम्स व व्यंग्य | कॉकरोच जनता पार्टी' : 'CJP Political Memes & Satire Gallery | Cockroach Janta Party'}
-        description="Explore downloadable CJP satirical memes, dark humor visual posters, and student commentary artwork."
+        title={lang === 'hi' ? 'राजनीतिक मीम्स व व्यंग्य | कॉकरोच जनता पार्टी' : 'Cockroach Janta Party Political Memes & Satire Gallery'}
+        description="Explore downloadable Cockroach Janta Party satirical memes, dark humor visual posters, and student commentary artwork."
         canonicalUrl="https://cockroachjantapartywale.com/memes"
       />
 
@@ -27,7 +27,7 @@ export const MemesPage: React.FC = () => {
             CIVIC HUMOR &amp; SATIRE HUB
           </span>
           <h1 className="font-serif font-black text-4xl md:text-6xl text-[#16120D] mb-3 uppercase tracking-tight">
-            OFFICIAL CJP MEMES &amp; SATIRE
+            OFFICIAL COCKROACH JANTA PARTY MEMES &amp; SATIRE
           </h1>
           <p className="text-sm text-[#3A332B] font-extrabold uppercase tracking-wider max-w-2xl mx-auto">
             {lang === 'hi'

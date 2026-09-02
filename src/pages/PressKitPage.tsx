@@ -80,10 +80,10 @@ export const PressKitPage: React.FC = () => {
               PRESS INQUIRIES &amp; INTERVIEW REQUESTS
             </span>
             <h2 className="font-serif font-black text-3xl uppercase text-[#F5EFE6]">
-              CJP PRESS RELATIONS DESK
+              COCKROACH JANTA PARTY PRESS RELATIONS DESK
             </h2>
             <p className="text-xs text-[#EADBCE] font-medium leading-relaxed">
-              For journalist inquiries, TV panel availability, founder interview requests, and official photo/video permissions, reach out directly to the CJP Secretariat Press Desk.
+              For journalist inquiries, TV panel availability, founder interview requests, and official photo/video permissions, reach out directly to the Cockroach Janta Party Secretariat Press Desk.
             </p>
             <div className="pt-2 flex flex-wrap gap-4 text-xs font-bold text-[#F5EFE6]">
               <div className="flex items-center gap-2 bg-[#231F1A] px-3 py-2 border border-white/20">

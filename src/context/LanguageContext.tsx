@@ -272,8 +272,8 @@ const translations: Translations = {
 
   // Journal
   journalTitle: {
-    en: 'THE CJP JOURNAL',
-    hi: 'सीजेपी जर्नल व पत्रिका'
+    en: 'THE COCKROACH JANTA PARTY JOURNAL',
+    hi: 'कॉकरोच जनता पार्टी जर्नल व पत्रिका'
   },
   journalSubtitle: {
     en: 'Long reads for people who still have questions after the headline disappears.',
@@ -300,8 +300,8 @@ const translations: Translations = {
     hi: 'सर्वर और कियोस्क को सक्रिय रखें'
   },
   serverAliveCopy: {
-    en: 'CJP runs on zero corporate backing. Volunteer initiatives are supported by micro-contributions from awake citizens.',
-    hi: 'सीजेपी बिना किसी कॉर्पोरेट बैकअप के चलती है। स्वयंसेवी पहल जागरूक नागरिकों द्वारा समर्थित हैं।'
+    en: 'Cockroach Janta Party runs on zero corporate backing. Volunteer initiatives are supported by micro-contributions from awake citizens.',
+    hi: 'कॉकरोच जनता पार्टी बिना किसी कॉर्पोरेट बैकअप के चलती है। स्वयंसेवी पहल जागरूक नागरिकों द्वारा समर्थित हैं।'
   },
   demoTiersLabel: {
     en: 'VOLUNTEER SUPPORT TIERS',

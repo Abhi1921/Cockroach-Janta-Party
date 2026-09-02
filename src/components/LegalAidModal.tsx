@@ -26,7 +26,7 @@ export const LegalAidModal: React.FC<LegalAidModalProps> = ({ isOpen, onClose })
         {/* Top Header Bar */}
         <div className="bg-[#EADBCE] border-b-2 border-[#16120D] px-5 py-3 flex items-center justify-between">
           <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#16120D]">
-            FREE LEGAL AID, 24/7 (OFFICIAL CJP)
+            FREE LEGAL AID, 24/7 (OFFICIAL COCKROACH JANTA PARTY)
           </span>
           <button
             onClick={onClose}

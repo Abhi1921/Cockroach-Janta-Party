@@ -39,47 +39,39 @@ export const Footer: React.FC = () => {
           </span>
           <div className="flex flex-wrap items-center gap-2 text-[10px] font-extrabold">
             <a
-              href="https://x.com/cjpindia"
+              href="https://x.com/Cockroachisback"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
             >
-              𝕏 TWITTER / X (@CJPINDIA)
+              𝕏 TWITTER / X (@Cockroachisback)
             </a>
             <a
-              href="https://instagram.com/cjpindia"
+              href="https://www.instagram.com/cockroachjantaparty/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
             >
-              📸 INSTAGRAM (@CJPINDIA)
+              📸 INSTAGRAM (@cockroachjantaparty)
             </a>
             <a
-              href="https://youtube.com/@cjpindia"
+              href="https://www.youtube.com/channel/UCCdhqGkJVJb8Y2IesdnxKHQ"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
             >
-              ▶️ YOUTUBE (@CJPINDIA)
+              ▶️ YOUTUBE CHANNEL
             </a>
             <a
-              href="https://t.me/cjpindia"
+              href="https://www.reddit.com/r/CockroachJantaParty09/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
             >
-              ✈️ TELEGRAM (CJPINDIA)
+              👽 REDDIT (r/CockroachJantaParty09)
             </a>
             <a
-              href="https://www.facebook.com/watch/?v=2054290928526389"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
-            >
-              📘 FACEBOOK WATCH
-            </a>
-            <a
-              href="https://whatsapp.com/channel/cjpindia"
+              href="https://whatsapp.com/channel/0029VbBqF7S5fM5Rf1mRV540"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
@@ -87,12 +79,28 @@ export const Footer: React.FC = () => {
               💬 WHATSAPP CHANNEL
             </a>
             <a
-              href="https://github.com/Abhi1921/Cockroach-Janta-Party"
+              href="https://t.me/thecockroachchannel"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
             >
-              💻 GITHUB REPO
+              ✈️ TELEGRAM (@thecockroachchannel)
+            </a>
+            <a
+              href="https://x.com/abhijeet_dipke"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
+            >
+              𝕏 ABHIJEET DIPKE
+            </a>
+            <a
+              href="https://www.instagram.com/abhijeetdipke/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#16120D] text-[#EADBCE] px-3 py-1.5 border border-white/20 hover:text-white hover:border-[#D9572B] transition-colors"
+            >
+              📸 ABHIJEET DIPKE (INSTAGRAM)
             </a>
           </div>
         </div>

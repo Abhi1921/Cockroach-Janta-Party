@@ -42,7 +42,7 @@ export const DimagiNaxalPage: React.FC = () => {
             SATIRICAL EXPLAINER &amp; CIVIC DOSSIER
           </span>
           <h1 className="font-serif font-black text-4xl md:text-5xl text-[#16120D] mb-3 uppercase tracking-tight">
-            EXPLAINED: &lsquo;DIMAGI NAXAL&rsquo; &amp; CJP
+            EXPLAINED: &lsquo;DIMAGI NAXAL&rsquo; &amp; COCKROACH JANTA PARTY
           </h1>
           <p className="text-xs text-[#3A332B] font-extrabold uppercase tracking-wider max-w-xl mx-auto">
             Deconstructing television label politics, student activism, and the fight for uncorrupted public services in 2026.
@@ -104,7 +104,7 @@ export const DimagiNaxalPage: React.FC = () => {
         {/* Action Bottom Callout */}
         <div className="bg-[#16120D] text-[#F5EFE6] p-8 border-4 border-[#16120D] shadow-xl text-center space-y-4">
           <h3 className="font-serif font-black text-2xl uppercase text-[#F5EFE6]">
-            READ THE CJP 5-POINT MANIFESTO
+            READ THE COCKROACH JANTA PARTY 5-POINT MANIFESTO
           </h3>
           <p className="text-xs text-[#EADBCE] max-w-lg mx-auto">
             Discover our concrete demand charter for contractor warranties, public audit portals, and rural primary school funding.
