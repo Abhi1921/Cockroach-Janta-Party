@@ -78,6 +78,9 @@ export default function App() {
             <Routes>
               {/* Core & Vision */}
               <Route path="/" element={<HomePage />} />
+              <Route path="/cocroach-janata-party" element={<HomePage />} />
+              <Route path="/cockroach-janata-party" element={<HomePage />} />
+              <Route path="/cockroach-janta-party" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/vision" element={<VisionPage />} />
               <Route path="/manifesto" element={<ManifestoPage />} />
