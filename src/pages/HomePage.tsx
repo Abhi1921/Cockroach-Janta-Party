@@ -107,6 +107,102 @@ export const HomePage: React.FC = () => {
 
   const videosList = [
     {
+      id: 'fb-cjp-watch-911189544963956',
+      title: 'NDTV Report: CJP Calls Off Sept 5 Delhi Protest After SC Orders FIRs Quashed',
+      category: 'FACEBOOK WATCH',
+      url: 'https://www.facebook.com/watch/?v=911189544963956',
+      embedUrl: 'https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D911189544963956',
+      badge: 'BREAKING NEWS'
+    },
+    {
+      id: 'wjpWvd6vLrs',
+      title: 'CJP Youth Broadcast: Student Protesters Demand NEET Case Withdrawals',
+      category: 'YOUTH VOICE',
+      url: 'https://youtu.be/wjpWvd6vLrs?si=NPogL-EaWDds50zh',
+      embedUrl: 'https://www.youtube.com/embed/wjpWvd6vLrs',
+      badge: 'TRENDING'
+    },
+    {
+      id: 'Y8ZsDEn3JOM',
+      title: 'Supreme Court Article 142 Order Analysis: CJP Legal Cell Presser',
+      category: 'LEGAL DISPATCH',
+      url: 'https://youtu.be/Y8ZsDEn3JOM?si=rDfvbzF5I2EQhAjh',
+      embedUrl: 'https://www.youtube.com/embed/Y8ZsDEn3JOM',
+      badge: 'SC VERDICT'
+    },
+    {
+      id: 'C9MRKiKs06o',
+      title: 'CJP Ground Dispatch: Youth Press Conference on Exam Reforms',
+      category: 'LIVE PRESSER',
+      url: 'https://youtu.be/C9MRKiKs06o?si=Lz5zwyAQhWPv_iYi',
+      embedUrl: 'https://www.youtube.com/embed/C9MRKiKs06o',
+      badge: 'GROUND REPORT'
+    },
+    {
+      id: 'x4gxwhRQdMI',
+      title: 'CJP Live Stream: Supreme Court Proceedings & September 5 Update',
+      category: 'LIVE STREAM',
+      url: 'https://www.youtube.com/live/x4gxwhRQdMI?si=KhKNyyZePkpXcE-_',
+      embedUrl: 'https://www.youtube.com/embed/x4gxwhRQdMI',
+      badge: 'LIVE BROADCAST'
+    },
+    {
+      id: 'G9VZrhJkQkQ',
+      title: 'Kya Bolti Public: CJP Special Coverage on Student Rights & FIR Quashing',
+      category: 'CIVIC COVERAGE',
+      url: 'https://youtu.be/G9VZrhJkQkQ?si=Kt0f7DKE31g-uiOS',
+      embedUrl: 'https://www.youtube.com/embed/G9VZrhJkQkQ',
+      badge: 'FEATURED'
+    },
+    {
+      id: '5yDi6qd16SE',
+      title: 'School Thik Karo: Physical Inspection of Municipal School Classrooms',
+      category: 'WARD AUDIT',
+      url: 'https://youtu.be/5yDi6qd16SE?si=zXeGUf4fjkTIOhi0',
+      embedUrl: 'https://www.youtube.com/embed/5yDi6qd16SE',
+      badge: 'EDUCATION'
+    },
+    {
+      id: 'u1Gu5kl8IIA',
+      title: 'Subterranean Drain Audit & Public RTI Transparency Report',
+      category: 'SANITATION REPORT',
+      url: 'https://youtu.be/u1Gu5kl8IIA?si=X6uYjHRsAwiRy8Ji',
+      embedUrl: 'https://www.youtube.com/embed/u1Gu5kl8IIA',
+      badge: 'CIVIC AUDIT'
+    },
+    {
+      id: 'TfoNzZEXy0c',
+      title: 'CJP Youth Swarm Assembly: Voices from University Campuses',
+      category: 'STREET INTERVIEW',
+      url: 'https://youtu.be/TfoNzZEXy0c?si=Nl4u2V4bu-ZbJMo3',
+      embedUrl: 'https://www.youtube.com/embed/TfoNzZEXy0c',
+      badge: 'YOUTH VOICE'
+    },
+    {
+      id: 'ixONTJgLuS4',
+      title: 'Road Paving Warranty Notice Board Audit: On-Site Video Verification',
+      category: 'PUBLIC AUDIT',
+      url: 'https://youtu.be/ixONTJgLuS4?si=CTb1diTx0yaH0Dn0',
+      embedUrl: 'https://www.youtube.com/embed/ixONTJgLuS4',
+      badge: 'RTI AUDIT'
+    },
+    {
+      id: 'Tcqkuk60hLI',
+      title: 'CJP Youth Street Rally: Demanding Municipal Transparency & Education Reform',
+      category: 'PROTEST DISPATCH',
+      url: 'https://youtu.be/Tcqkuk60hLI?si=2-B2gMAfw0DazA4e',
+      embedUrl: 'https://www.youtube.com/embed/Tcqkuk60hLI',
+      badge: 'TRENDING'
+    },
+    {
+      id: '4MKIOz8SqnQ',
+      title: 'Cockroach Janta Party Official Anthem & Movement Documentary',
+      category: 'OFFICIAL MEDIA',
+      url: 'https://youtu.be/4MKIOz8SqnQ?si=LoEd_0EqkeeJCSXr',
+      embedUrl: 'https://www.youtube.com/embed/4MKIOz8SqnQ',
+      badge: 'MOVEMENT ANTHEM'
+    },
+    {
       id: 'fb-noida-fir',
       title: 'Report: 15-Year-Old Noida Student FIR Case — PM Modi Jantar Mantar Rally',
       category: 'FACEBOOK WATCH',
@@ -737,7 +833,7 @@ export const HomePage: React.FC = () => {
                 THE SWARM ON CAMERA
               </h2>
               <p className="text-xs text-[#3A332B] font-medium mt-1">
-                7 verified video dispatches, street interviews, and press broadcasts. (6 videos per page)
+                {videosList.length} verified video dispatches, street interviews, and press broadcasts. (6 videos per page)
               </p>
             </div>
 

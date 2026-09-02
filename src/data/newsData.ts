@@ -21,6 +21,31 @@ export interface NewsArticle {
 
 export const newsData: NewsArticle[] = [
   {
+    slug: "sc-quashes-firs-against-cjp-protesters-2026",
+    title: "Supreme Court Cancels All FIRs Against CJP Protesters Under Article 142",
+    summary: "In a landmark order, the Supreme Court of India invoked Article 142 to quash all police cases registered against student protesters across Delhi and other states.",
+    category: "LEGAL & COURT",
+    publishDate: "SEP 01, 2026",
+    author: {
+      name: "Saurav Das",
+      role: "Policy & Media Spokesperson"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_sc_fir_quash_poster.png",
+    imageAlt: "Supreme Court quashes FIRs against student protesters poster graphic",
+    tags: ["Supreme Court", "Article 142", "CJP Protests", "Student Immunity"],
+    content: [
+      {
+        heading: "Landmark Verdict Protects Student Protesters",
+        text: "The Supreme Court invoked its extraordinary powers under Article 142 of the Constitution to cancel all FIRs registered against NEET and youth protesters in New Delhi, Rajasthan, and UP."
+      },
+      {
+        heading: "Withdrawal of September 5 Protest March",
+        text: "Following government assurances and the apex court order, Cockroach Janta Party (CJP) formally called off its planned September 5 march to Delhi Police HQ."
+      }
+    ]
+  },
+  {
     slug: "public-audit-subterranean-drainage-2026",
     title: "Public Audit Demands Standardized Inspection of Urban Subterranean Sewer Systems",
     summary: "Independent audit of municipal sanitation budgets highlights key areas where open data and quarterly public reporting can improve drainage maintenance across urban zones.",
