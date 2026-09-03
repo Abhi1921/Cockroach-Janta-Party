@@ -117,6 +117,48 @@ export const PressKitPage: React.FC = () => {
           </div>
         </div>
 
+        {/* Copyable Boilerplate Descriptions */}
+        <div className="mb-16 bg-[#F5EFE6] border-4 border-[#16120D] p-8 shadow-[8px_8px_0px_0px_#16120D] space-y-6">
+          <div className="border-b-2 border-[#16120D] pb-3">
+            <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-widest block">MEDIA BOILERPLATE DESCRIPTIONS</span>
+            <h2 className="font-display text-3xl text-[#16120D] uppercase font-black">OFFICIAL CJP DESCRIPTIONS</h2>
+          </div>
+
+          <div className="space-y-6">
+            {/* 50 Words */}
+            <div className="bg-[#EADBCE] border-2 border-[#16120D] p-5 space-y-2">
+              <div className="flex justify-between items-center text-xs font-black">
+                <span className="text-[#D9572B] uppercase">SHORT DESCRIPTION (50 WORDS)</span>
+                <button
+                  onClick={() => navigator.clipboard.writeText("Cockroach Janata Party (CJP) is an independent fictional political satire movement and civic commentary portal in India. Founded in 2026 by student researcher Abhijeet Dipke, CJP highlights urban infrastructure accountability, road warranties, drain desilting transparency, and RTI rights using creative humor, digital posters, and public dispatches.")}
+                  className="btn-brutal px-3 py-1 bg-[#16120D] text-white hover:bg-[#D9572B] text-[10px] font-black uppercase cursor-pointer"
+                >
+                  COPY TEXT
+                </button>
+              </div>
+              <p className="text-xs text-[#3A332B] font-medium leading-relaxed">
+                Cockroach Janata Party (CJP) is an independent fictional political satire movement and civic commentary portal in India. Founded in 2026 by student researcher Abhijeet Dipke, CJP highlights urban infrastructure accountability, road warranties, drain desilting transparency, and RTI rights using creative humor, digital posters, and public dispatches.
+              </p>
+            </div>
+
+            {/* 100 Words */}
+            <div className="bg-[#EADBCE] border-2 border-[#16120D] p-5 space-y-2">
+              <div className="flex justify-between items-center text-xs font-black">
+                <span className="text-[#D9572B] uppercase">MEDIUM DESCRIPTION (100 WORDS)</span>
+                <button
+                  onClick={() => navigator.clipboard.writeText("Cockroach Janata Party (CJP) is India's premier digital political satire initiative and youth civic commentary platform. Conceptualized in 2026 by student researcher Abhijeet Dipke alongside co-founders Ashutosh Ranka and Saurav Das, CJP uses dark humor, satirical posters, and empirical RTI data to examine municipal governance. CJP champions 3-year contractor road repair warranties, subterranean sewer desilting audits, primary school infrastructure reforms (School Thik Karo campaign), and piped drinking water quality diagnostics. CJP maintains complete independence, does not contest political elections, and operates as a non-partisan civic watchdog.")}
+                  className="btn-brutal px-3 py-1 bg-[#16120D] text-white hover:bg-[#D9572B] text-[10px] font-black uppercase cursor-pointer"
+                >
+                  COPY TEXT
+                </button>
+              </div>
+              <p className="text-xs text-[#3A332B] font-medium leading-relaxed">
+                Cockroach Janata Party (CJP) is India's premier digital political satire initiative and youth civic commentary platform. Conceptualized in 2026 by student researcher Abhijeet Dipke alongside co-founders Ashutosh Ranka and Saurav Das, CJP uses dark humor, satirical posters, and empirical RTI data to examine municipal governance. CJP champions 3-year contractor road repair warranties, subterranean sewer desilting audits, primary school infrastructure reforms (School Thik Karo campaign), and piped drinking water quality diagnostics. CJP maintains complete independence, does not contest political elections, and operates as a non-partisan civic watchdog.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Brand Assets Grid */}
         <div className="mb-16">
           <h2 className="font-serif font-black text-2xl md:text-3xl text-[#16120D] uppercase border-b-4 border-[#16120D] pb-2 mb-6">

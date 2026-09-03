@@ -1,347 +1,907 @@
-import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import React, { useState, useEffect, useRef } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import {
-  Send,
   Download,
-  Mail,
+  Printer,
+  UserPlus,
   QrCode,
   Copy,
   Check,
-  Users
+  Sparkles,
+  Award,
+  Upload,
+  CheckCircle2,
+  AlertCircle
 } from 'lucide-react';
 
+interface MemberData {
+  id: string;
+  name: string;
+  dob: string;
+  city: string;
+  state: string;
+  email: string;
+  mobile: string;
+  occupation: string;
+  reason: string;
+  photoUrl: string | null;
+  joinDate: string;
+}
+
 export const JoinPage: React.FC = () => {
-  const { lang } = useLanguage();
+  const formRef = useRef<HTMLDivElement>(null);
+
+  
+  // Form input state
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    phone: '',
+    dob: '',
     city: '',
-    role: 'RTI'
+    state: '',
+    email: '',
+    mobile: '',
+    occupation: '',
+    reason: '',
+    agreedParody: false
   });
-  const [submitted, setSubmitted] = useState(false);
+
+  const [photoPreview, setPhotoPreview] = useState<string | null>(null);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [loading, setLoading] = useState(false);
-  const [memberRecord, setMemberRecord] = useState<any | null>(null);
-  const [emailStatus, setEmailStatus] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [memberData, setMemberData] = useState<MemberData | null>(null);
   const [copiedId, setCopiedId] = useState(false);
 
-  const roles = [
-    { id: 'REPORT', labelEn: 'FIELD DRAINAGE AUDITOR', labelHi: 'सीवर व जल निकासी ऑडिट', descEn: 'Audit subterranean drain clearance & contractor warranty boards', descHi: 'सीवर सफाई गहराई और वारंटी बोर्ड जांचना' },
-    { id: 'WRITE', labelEn: 'RESEARCH & DISPATCH WRITER', labelHi: 'अनुसंधान व लेखनी', descEn: 'Draft field reports & open ledger dispatches', descHi: 'नागरिक रिपोर्ट व सार्वजनिक बजट विश्लेषण तैयार करना' },
-    { id: 'WATER', labelEn: 'WATER QUALITY TEST KIOSK', labelHi: 'पेयजल शुद्धता कियोस्क', descEn: 'Organize rapid TDS & chlorine test hubs in transit sectors', descHi: 'घरेलू टीडीएस पानी परीक्षण कियोस्क चलाना' },
-    { id: 'RTI', labelEn: 'RTI SECTION 4 ADVOCATE', labelHi: 'आरटीआई धारा 4 अधिवक्ता', descEn: 'File Section 4 RTI petitions for zero-paywall tender records', descHi: 'धारा 4 आरटीआई याचिकाएं दायर करना' }
-  ];
-
-  // Load existing member record if available in localStorage
+  // Load existing member record from localStorage if available
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('cjp_current_member');
+      const saved = localStorage.getItem('cjp_membership_data');
       if (saved) {
         const parsed = JSON.parse(saved);
-        setMemberRecord(parsed);
+        setMemberData(parsed);
         setSubmitted(true);
       }
     } catch (e) {
-      console.error("LocalStorage read error", e);
+      console.error("LocalStorage error", e);
     }
   }, []);
 
+  // Photo Upload Handler
+  const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) {
+        setErrors((prev) => ({ ...prev, photo: 'File size should be under 5MB' }));
+        return;
+      }
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPhotoPreview(reader.result as string);
+        setErrors((prev) => ({ ...prev, photo: '' }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  // Form Validation
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+
+    if (!formData.name.trim()) newErrors.name = 'Full Name is required';
+    if (!formData.dob.trim()) newErrors.dob = 'Date of Birth / Age is required';
+    if (!formData.city.trim()) newErrors.city = 'City is required';
+    if (!formData.state.trim()) newErrors.state = 'State is required';
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email address is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Enter a valid email address';
+    }
+
+    if (!formData.mobile.trim()) {
+      newErrors.mobile = 'Mobile number is required';
+    } else if (formData.mobile.trim().length < 8) {
+      newErrors.mobile = 'Enter a valid mobile number';
+    }
+
+    if (!formData.occupation.trim()) newErrors.occupation = 'Occupation is required';
+    if (!formData.reason.trim()) newErrors.reason = 'Please share why you wish to join';
+    if (!formData.agreedParody) newErrors.agreedParody = 'You must acknowledge the parody notice';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Form Submit Handler
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.phone) return;
+    if (!validateForm()) return;
 
     setLoading(true);
 
-    const randomId = 'CJP-2026-' + Math.floor(100000 + Math.random() * 900000);
-    const newRecord = {
-      id: randomId,
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone,
-      city: formData.city || 'Delhi NCR',
-      role: roles.find(r => r.id === formData.role)?.labelEn || 'WARD OBSERVER',
-      issueDate: '30 AUG 2026',
-      status: 'VERIFIED SWARM OBSERVER'
+    const randomDigits = Math.floor(100000 + Math.random() * 900000);
+    const generatedId = `CJP-2026-${randomDigits}`;
+    
+    const today = new Date();
+    const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    const formattedDate = `${String(today.getDate()).padStart(2, '0')} ${months[today.getMonth()]} ${today.getFullYear()}`;
+
+    const newMember: MemberData = {
+      id: generatedId,
+      name: formData.name.trim(),
+      dob: formData.dob.trim(),
+      city: formData.city.trim(),
+      state: formData.state.trim(),
+      email: formData.email.trim(),
+      mobile: formData.mobile.trim(),
+      occupation: formData.occupation.trim(),
+      reason: formData.reason.trim(),
+      photoUrl: photoPreview,
+      joinDate: formattedDate
     };
 
-    try {
-      localStorage.setItem('cjp_current_member', JSON.stringify(newRecord));
-    } catch (err) {
-      console.error(err);
-    }
-
     setTimeout(() => {
-      setMemberRecord(newRecord);
+      try {
+        localStorage.setItem('cjp_membership_data', JSON.stringify(newMember));
+      } catch (err) {
+        console.error("LocalStorage write error", err);
+      }
+      setMemberData(newMember);
       setSubmitted(true);
       setLoading(false);
-      setEmailStatus('SMTP Mailtrap Dispatch Queued');
-    }, 1000);
+    }, 800);
   };
 
+  // Scroll to Form CTA action
+  const scrollToForm = () => {
+    if (submitted) {
+      handleJoinAnother();
+    } else {
+      formRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Print Card Handler
   const handlePrintCard = () => {
     window.print();
   };
 
+  // Download Card as PNG Image via Canvas
+  const handleDownloadCard = () => {
+    if (!memberData) return;
+
+    const canvas = document.createElement('canvas');
+    canvas.width = 1200;
+    canvas.height = 760;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Background gradient & border
+    ctx.fillStyle = '#16120D';
+    ctx.fillRect(0, 0, 1200, 760);
+
+    // Inner Parchment Box
+    ctx.fillStyle = '#F5EFE6';
+    ctx.fillRect(30, 30, 1140, 700);
+
+    // Gold Accent Top Bar
+    ctx.fillStyle = '#D9572B';
+    ctx.fillRect(30, 30, 1140, 24);
+
+    // Header Background
+    ctx.fillStyle = '#16120D';
+    ctx.fillRect(30, 54, 1140, 130);
+
+    // Header Text
+    ctx.fillStyle = '#F5EFE6';
+    ctx.font = '900 52px "Bebas Neue", sans-serif';
+    ctx.fillText('COCKROACH JANTA PARTY', 180, 120);
+
+    ctx.fillStyle = '#EAB308';
+    ctx.font = 'bold 22px "Inter", sans-serif';
+    ctx.fillText('OFFICIAL MEMBERSHIP CARD · EST. 2026', 180, 155);
+
+    // Mascot Emoji / Circle
+    ctx.beginPath();
+    ctx.arc(100, 118, 48, 0, Math.PI * 2);
+    ctx.fillStyle = '#EADBCE';
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = '#EAB308';
+    ctx.stroke();
+
+    ctx.font = '54px serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('🪳', 100, 138);
+
+    // Photo Box Background
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#16120D';
+    ctx.fillRect(70, 220, 220, 260);
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = '#EAB308';
+    ctx.strokeRect(70, 220, 220, 260);
+
+    const renderTextContent = () => {
+      // Member Info Details
+      ctx.fillStyle = '#16120D';
+      ctx.font = 'bold 18px "Inter", sans-serif';
+      ctx.fillText('MEMBER NAME:', 330, 245);
+
+      ctx.fillStyle = '#D9572B';
+      ctx.font = '900 38px "Bebas Neue", sans-serif';
+      ctx.fillText(memberData.name.toUpperCase(), 330, 285);
+
+      ctx.fillStyle = '#16120D';
+      ctx.font = 'bold 16px "Inter", sans-serif';
+      ctx.fillText(`MEMBERSHIP ID: ${memberData.id}`, 330, 330);
+      ctx.fillText(`CITY / STATE: ${memberData.city.toUpperCase()}, ${memberData.state.toUpperCase()}`, 330, 370);
+      ctx.fillText(`OCCUPATION: ${memberData.occupation.toUpperCase()}`, 330, 410);
+      ctx.fillText(`JOINING DATE: ${memberData.joinDate}`, 330, 450);
+
+      // Slogan Box
+      ctx.fillStyle = '#16120D';
+      ctx.fillRect(70, 510, 1060, 80);
+
+      ctx.fillStyle = '#EAB308';
+      ctx.font = '900 40px "Bebas Neue", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('HAR GHAR KI SARKAR! 🪳', 600, 562);
+
+      // Signature & Disclaimer
+      ctx.fillStyle = '#16120D';
+      ctx.font = 'italic 16px serif';
+      ctx.textAlign = 'left';
+      ctx.fillText('National Swarm Convener Signature', 70, 630);
+
+      ctx.fillStyle = '#3A332B';
+      ctx.font = 'bold 14px "Inter", sans-serif';
+      ctx.textAlign = 'right';
+      ctx.fillText('FICTIONAL PARODY MEMBERSHIP CARD · CJP OFFICIAL', 1130, 630);
+
+      // Trigger PNG download
+      const imageURI = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.download = `CJP_Membership_Card_${memberData.id}.png`;
+      link.href = imageURI;
+      link.click();
+    };
+
+    if (memberData.photoUrl) {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        ctx.drawImage(img, 70, 220, 220, 260);
+        renderTextContent();
+      };
+      img.onerror = () => {
+        ctx.fillStyle = '#EAB308';
+        ctx.font = '80px serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('🪳', 180, 370);
+        renderTextContent();
+      };
+      img.src = memberData.photoUrl;
+    } else {
+      ctx.fillStyle = '#EAB308';
+      ctx.font = '80px serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('🪳', 180, 370);
+      renderTextContent();
+    }
+  };
+
+  // Copy ID Handler
   const handleCopyId = () => {
-    if (memberRecord?.id) {
-      navigator.clipboard.writeText(memberRecord.id);
+    if (memberData?.id) {
+      navigator.clipboard.writeText(memberData.id);
       setCopiedId(true);
       setTimeout(() => setCopiedId(false), 2000);
     }
   };
 
+  // Join Another Member (Reset Form)
+  const handleJoinAnother = () => {
+    try {
+      localStorage.removeItem('cjp_membership_data');
+    } catch (e) {
+      console.error(e);
+    }
+    setMemberData(null);
+    setSubmitted(false);
+    setPhotoPreview(null);
+    setFormData({
+      name: '',
+      dob: '',
+      city: '',
+      state: '',
+      email: '',
+      mobile: '',
+      occupation: '',
+      reason: '',
+      agreedParody: false
+    });
+    setErrors({});
+  };
+
+  // Party Highlights Data
+  const partyHighlights = [
+    {
+      icon: '🪳',
+      title: 'Survival First',
+      tagline: 'Mushkil waqt mein bhi tikke rehna.',
+      desc: 'Tested through millennia of pest sprays, rolled newspapers, and harsh winters. CJP members never back down.'
+    },
+    {
+      icon: '🍕',
+      title: 'Food For All',
+      tagline: 'Kitchen ho ya midnight snack, sabke liye equal opportunity.',
+      desc: 'No crumb left behind! We guarantee equal access to every kitchen counter and midnight snack raid across the nation.'
+    },
+    {
+      icon: '🏠',
+      title: 'Har Ghar Representation',
+      tagline: 'Har corner ki awaaz Assembly tak.',
+      desc: 'From basement pipes to penthouse ceiling fans, every corner has a voice in the CJP Swarm Assembly.'
+    },
+    {
+      icon: '💪',
+      title: 'Never Give Up',
+      tagline: 'Jitni baar bhagao, utni baar wapas.',
+      desc: 'Switch on the light, and we multiply! Resilient, unstoppable, and always returning stronger than before.'
+    }
+  ];
+
   return (
-    <div className="join-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
+    <div className="join-page bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white pb-20">
       <SEOHead
-        title="Join CJP Swarm & Digital ID Card | Cockroach Janta Party"
-        description="Register as an official Cockroach Janta Party volunteer civic observer and instantly generate your printable digital membership ID card."
+        title="Join Cockroach Janta Party (CJP) | Har Ghar Ki Sarkar 🪳"
+        description="Become an official member of Cockroach Janta Party (CJP). Generate your custom digital CJP Membership Card instantly!"
         canonicalUrl="https://cockroachjantapartywale.com/join"
       />
 
-      <div className="max-w-[1440px] mx-auto px-4">
-        
-        {/* Header Hero */}
-        <div className="mb-10 text-center max-w-3xl mx-auto">
-          <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
-            {lang === 'hi' ? 'स्वयंसेवक पंजीकरण व डिजिटल ID कार्ड' : 'VOLUNTEER REGISTRATION & DIGITAL ID CARD'}
-          </span>
-          <h1 className="font-display text-5xl md:text-7xl text-[#16120D] mb-4 uppercase leading-none">
-            {lang === 'hi' ? 'केवल देखें नहीं। आंदोलन से जुड़ें।' : 'DON\'T JUST WATCH. JOIN THE SWARM.'}
+      {/* HERO SECTION */}
+      <section className="join-hero-section relative bg-[#16120D] text-[#F5EFE6] pt-14 pb-16 px-4 border-b-4 border-[#D9572B]">
+        <div className="max-w-5xl mx-auto text-center space-y-5">
+          
+          <div className="inline-flex items-center gap-2 bg-[#D9572B] text-white px-4 py-1.5 text-xs font-black uppercase tracking-widest border border-white/20 shadow-md">
+            <Sparkles size={14} className="animate-pulse" />
+            <span>OFFICIAL CAMPAIGN JOIN PORTAL</span>
+          </div>
+
+          <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl tracking-wide uppercase leading-none text-[#F5EFE6]">
+            COCKROACH JANTA PARTY
           </h1>
-          <p className="text-[#3A332B] text-xs md:text-sm leading-relaxed font-medium">
-            {lang === 'hi'
-              ? "हर वास्तविक बदलाव उन लोगों से शुरू होता है जो केवल देखने के बजाय भाग लेने का फैसला करते हैं। तुरंत अपना डिजिटल सदस्यता कार्ड प्राप्त करें।"
-              : "Every real change starts with citizens who refuse to normalize broken public systems. Fill out your details below to generate your official CJP Digital Membership Card."}
+
+          <div className="inline-block bg-[#EAB308] text-[#16120D] font-display text-3xl sm:text-5xl px-6 py-1 tracking-wider uppercase shadow-[4px_4px_0px_0px_#D9572B] transform -rotate-1">
+            “HAR GHAR KI SARKAR!” 🪳
+          </div>
+
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#EADBCE] font-semibold leading-relaxed pt-2">
+            Jahan hausla ho, wahan cockroach ho. CJP join kijiye aur naye yug ki shuruaat kijiye.
           </p>
+
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+            <button
+              onClick={scrollToForm}
+              className="btn-brutal h-12 px-8 text-sm sm:text-base bg-[#D9572B] text-white hover:bg-[#EAB308] hover:text-[#16120D] cursor-pointer shadow-[4px_4px_0px_0px_#F5EFE6]"
+            >
+              <UserPlus size={18} />
+              <span>JOIN CJP NOW 🪳</span>
+            </button>
+          </div>
+
         </div>
+      </section>
 
-        {/* DEDICATED MEMBERSHIP CAMPAIGN POSTER CARD */}
-        <div className="my-10 max-w-xl mx-auto bg-[#16120D] border-4 border-[#16120D] p-4 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
-          <div className="flex justify-between items-center text-[10px] font-extrabold text-[#EADBCE] border-b border-white/20 pb-2 mb-3 uppercase tracking-wider">
-            <span className="flex items-center gap-1.5 text-[#D9572B]">
-              <Users size={14} /> OFFICIAL MEMBERSHIP POSTER
+      <div className="max-w-6xl mx-auto px-4 pt-12 space-y-16">
+
+        {/* PARTY HIGHLIGHTS SECTION */}
+        <section className="join-highlights-section">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-widest block mb-1">
+              THE FOUR PILLARS OF CJP
             </span>
-            <span>POSTER #05 · CJP BRAND EMBLEM</span>
-          </div>
-
-          <div className="bg-[#16120D] border border-white/10 p-2 overflow-hidden flex items-center justify-center">
-            <img
-              src="/cjp_banner.png"
-              alt="CJP Swarm Membership Official Campaign Poster"
-              className="w-full h-auto object-contain mx-auto rounded"
-            />
-          </div>
-
-          <div className="text-center pt-3">
-            <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block mb-1">
-              SPONSORED BY NO ONE · FUNDED BY THE SWARM
-            </span>
-            <h3 className="font-display text-2xl text-white uppercase tracking-wide">
-              COCKROACH JANTA PARTY (CJP)
-            </h3>
-            <p className="text-[11px] text-[#EADBCE] font-bold uppercase tracking-wider mt-1">
-              "FOR THE PEOPLE WHO REFUSE TO BLEND IN."
+            <h2 className="font-display text-4xl sm:text-5xl text-[#16120D] uppercase leading-none">
+              WHY JOIN THE COCKROACH SWARM?
+            </h2>
+            <p className="text-xs sm:text-sm text-[#3A332B] font-extrabold mt-2">
+              Satirical civic commentary backed by unmatched survival resilience.
             </p>
           </div>
-        </div>
 
-        {/* Dynamic State Container */}
-        {submitted && memberRecord ? (
-          /* OFFICIAL CJP DIGITAL ID CARD CONTAINER */
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-[#F5EFE6] border-4 border-[#16120D] p-8 md:p-10 shadow-2xl relative mb-8">
-              
-              {/* Card Header Badge */}
-              <div className="flex justify-between items-center border-b-2 border-[#16120D] pb-4 mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-[#16120D] text-[#EADBCE] border-2 border-[#16120D] flex items-center justify-center font-display text-3xl">
-                    🪳
-                  </div>
-                  <div>
-                    <span className="font-display text-2xl text-[#16120D] block leading-none">COCKROACH JANTA PARTY</span>
-                    <span className="text-[9px] font-extrabold text-[#D9572B] uppercase tracking-widest">OFFICIAL DIGITAL MEMBERSHIP CARD · EST. 2026</span>
-                  </div>
-                </div>
-                <div className="bg-[#16120D] text-[#F5EFE6] text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest border border-[#16120D]">
-                  {memberRecord.status}
-                </div>
-              </div>
-
-              {/* ID Card Main Body Layout */}
-              <div className="grid md:grid-cols-3 gap-6 items-center mb-6 bg-[#EADBCE] border-2 border-[#16120D] p-6">
-                
-                {/* Member Avatar Box */}
-                <div className="text-center md:border-r border-[#16120D]/20 pr-0 md:pr-4">
-                  <div className="w-24 h-24 mx-auto rounded-full bg-[#16120D] border-2 border-[#16120D] flex items-center justify-center text-4xl mb-2 text-[#F5EFE6]">
-                    🪳
-                  </div>
-                  <span className="text-[9px] font-extrabold text-[#D9572B] uppercase tracking-wider block">CIVIC OBSERVER</span>
-                  <span className="text-[10px] font-bold text-[#16120D]">{memberRecord.issueDate}</span>
-                </div>
-
-                {/* Member Details */}
-                <div className="md:col-span-2 space-y-2 text-xs">
-                  <div>
-                    <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">FULL NAME:</span>
-                    <span className="font-display text-2xl text-[#16120D] uppercase">{memberRecord.name}</span>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2 pt-1 border-t border-[#16120D]/15">
-                    <div>
-                      <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">MEMBERSHIP NO:</span>
-                      <span className="font-mono text-xs font-black text-[#D9572B]">{memberRecord.id}</span>
-                    </div>
-                    <div>
-                      <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">LOCATION:</span>
-                      <span className="font-bold text-[#16120D] uppercase">{memberRecord.city}</span>
-                    </div>
-                  </div>
-
-                  <div className="pt-1 border-t border-[#16120D]/15">
-                    <span className="text-[9px] font-extrabold text-[#3A332B] uppercase block">ASSIGNED ROLE:</span>
-                    <span className="font-extrabold text-[#16120D] uppercase">{memberRecord.role}</span>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* QR Code & Security Stamp */}
-              <div className="flex justify-between items-center pt-2 text-[10px] text-[#3A332B] font-bold border-t border-[#16120D]/20">
-                <div className="flex items-center gap-2">
-                  <QrCode size={36} className="text-[#16120D]" />
-                  <div>
-                    <span className="block text-[#16120D] font-extrabold uppercase">SECURE DIGITAL QR CODE</span>
-                    <span className="text-[9px] text-[#D9572B]">AUTHENTICATED BY CJP SECRETARIAT</span>
-                  </div>
-                </div>
-
-                <div className="text-right">
-                  <span className="block font-mono text-[9px] text-[#16120D]">{memberRecord.phone}</span>
-                  <span className="text-[9px] text-[#3A332B]">{memberRecord.email}</span>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Actions & SMTP Email Alert */}
-            <div className="space-y-4">
-              <div className="bg-[#16120D] text-[#F5EFE6] p-4 text-xs font-bold flex justify-between items-center border border-[#16120D]">
-                <span className="flex items-center gap-2">
-                  <Mail size={16} className="text-[#D9572B]" />
-                  <span>SMTP DISPATCH STATUS: {emailStatus || 'Mailtrap Sandbox Alert Sent'}</span>
-                </span>
-                <span className="text-[10px] bg-[#D9572B] px-2 py-0.5 uppercase text-white">DISPATCHED</span>
-              </div>
-
-              <div className="flex items-center justify-center gap-4 flex-wrap">
-                <button
-                  onClick={handlePrintCard}
-                  className="bg-[#D9572B] text-white text-xs font-extrabold uppercase tracking-wider px-6 py-3 border border-[#16120D] hover:bg-[#16120D] transition-all flex items-center gap-2 shadow-md"
-                >
-                  <Download size={14} /> PRINT / SAVE DIGITAL ID CARD
-                </button>
-
-                <button
-                  onClick={handleCopyId}
-                  className="bg-[#EADBCE] text-[#16120D] text-xs font-extrabold uppercase tracking-wider px-6 py-3 border border-[#16120D] hover:bg-[#16120D] hover:text-[#F5EFE6] transition-all flex items-center gap-2 shadow-sm"
-                >
-                  {copiedId ? <Check size={14} className="text-[#D9572B]" /> : <Copy size={14} />}
-                  {copiedId ? 'COPIED TO CLIPBOARD' : 'COPY MEMBER ID'}
-                </button>
-              </div>
-            </div>
-          </div>
-        ) : (
-          /* REGISTRATION FORM */
-          <div className="max-w-2xl mx-auto bg-[#F5EFE6] border-4 border-[#16120D] p-8 md:p-12 shadow-2xl">
-            <h2 className="font-display text-3xl md:text-4xl text-[#16120D] uppercase mb-2 border-b-2 border-[#16120D] pb-3 text-center">
-              VOLUNTEER REGISTRATION FORM
-            </h2>
-
-            <form onSubmit={handleSubmit} className="space-y-5">
-              
-              <div>
-                <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">FULL NAME:</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Enter your full name..."
-                  className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">EMAIL ADDRESS:</label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="name@example.com..."
-                    className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none"
-                  />
-                </div>
-                <div>
-                  <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">MOBILE NUMBER:</label>
-                  <input
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 9876543210..."
-                    className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-1">CITY / WARD LOCATION:</label>
-                <input
-                  type="text"
-                  value={formData.city}
-                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                  placeholder="e.g. Delhi NCR, Jaipur, Mumbai..."
-                  className="w-full bg-[#EADBCE] border border-[#16120D] px-3.5 py-2.5 text-xs text-[#16120D] font-bold outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="text-[10px] font-extrabold text-[#16120D] uppercase block mb-2">SELECT VOLUNTEER ROLE:</label>
-                <div className="space-y-2">
-                  {roles.map((r) => (
-                    <label key={r.id} className="flex items-start gap-3 p-3 bg-[#EADBCE] border border-[#16120D] cursor-pointer hover:border-[#D9572B] transition-colors">
-                      <input
-                        type="radio"
-                        name="role"
-                        value={r.id}
-                        checked={formData.role === r.id}
-                        onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                        className="mt-0.5 accent-[#D9572B]"
-                      />
-                      <div>
-                        <span className="text-xs font-extrabold text-[#16120D] block uppercase">{lang === 'hi' ? r.labelHi : r.labelEn}</span>
-                        <span className="text-[10px] text-[#3A332B] font-medium block">{lang === 'hi' ? r.descHi : r.descEn}</span>
-                      </div>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase tracking-wider py-4 border border-[#16120D] hover:bg-[#D9572B] transition-all flex items-center justify-center gap-2 shadow-lg"
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {partyHighlights.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#F5EFE6] border-3 border-[#16120D] p-6 shadow-[4px_4px_0px_0px_#16120D] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#D9572B] transition-all flex flex-col justify-between"
               >
-                <Send size={16} />
-                <span>{loading ? 'GENERATING ID CARD...' : 'REGISTER & GENERATE CJP DIGITAL ID CARD →'}</span>
-              </button>
-            </form>
+                <div>
+                  <div className="w-14 h-14 rounded-full bg-[#16120D] text-3xl flex items-center justify-center mb-4 border-2 border-[#16120D] shadow-sm">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-display text-2xl text-[#16120D] uppercase mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs font-black text-[#D9572B] italic mb-3">
+                    "{item.tagline}"
+                  </p>
+                  <p className="text-xs text-[#3A332B] font-semibold leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-[#16120D]/20 text-[10px] font-black text-[#16120D] uppercase tracking-widest flex items-center justify-between">
+                  <span>CJP PILLAR #{idx + 1}</span>
+                  <Award size={14} className="text-[#D9572B]" />
+                </div>
+              </div>
+            ))}
           </div>
-        )}
+        </section>
+
+        {/* DYNAMIC CONTENT: MEMBERSHIP CARD DISPLAY OR FORM */}
+        <div ref={formRef} className="scroll-mt-24">
+          
+          {submitted && memberData ? (
+            /* GENERATED MEMBERSHIP CARD & ACTIONS DISPLAY */
+            <div className="max-w-3xl mx-auto space-y-8 animate-dropdown">
+              
+              {/* Success Banner */}
+              <div className="bg-[#16120D] border-4 border-[#EAB308] p-5 text-center text-[#F5EFE6] shadow-[6px_6px_0px_0px_#D9572B]">
+                <div className="inline-flex items-center gap-2 text-[#EAB308] font-black text-sm uppercase tracking-wider mb-1">
+                  <CheckCircle2 size={18} /> SUCCESSFUL REGISTRATION
+                </div>
+                <h2 className="font-display text-3xl sm:text-4xl text-white uppercase">
+                  Congratulations! You are officially a CJP member! 🪳
+                </h2>
+                <p className="text-xs text-[#EADBCE] font-bold mt-1">
+                  Your official digital CJP Membership Card has been generated below.
+                </p>
+              </div>
+
+              {/* THE OFFICIAL CJP MEMBERSHIP CARD (ISOLATED FOR PRINTING) */}
+              <div
+                id="cjp-membership-card"
+                className="bg-[#F5EFE6] border-4 border-[#16120D] shadow-[8px_8px_0px_0px_#16120D] overflow-hidden relative"
+              >
+                {/* Gold Accent Top Bar */}
+                <div className="h-3 bg-[#D9572B] w-full" />
+
+                {/* Card Header */}
+                <div className="bg-[#16120D] text-[#F5EFE6] p-6 border-b-4 border-[#EAB308] flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-14 h-14 rounded-full bg-[#EADBCE] text-[#16120D] border-2 border-[#EAB308] flex items-center justify-center text-3xl font-bold flex-shrink-0 shadow-md">
+                      🪳
+                    </div>
+                    <div>
+                      <h3 className="font-display text-3xl sm:text-4xl text-[#F5EFE6] leading-none uppercase tracking-wide">
+                        COCKROACH JANTA PARTY
+                      </h3>
+                      <span className="text-xs font-black text-[#EAB308] uppercase tracking-widest block mt-0.5">
+                        OFFICIAL MEMBERSHIP CARD · EST. 2026
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#EAB308] text-[#16120D] px-3.5 py-1 text-xs font-black uppercase tracking-wider border-2 border-[#16120D] shadow-sm">
+                    VERIFIED MEMBER
+                  </div>
+                </div>
+
+                {/* Card Body */}
+                <div className="p-6 sm:p-8 space-y-6">
+                  
+                  <div className="grid sm:grid-cols-3 gap-6 items-center bg-[#EADBCE] border-2 border-[#16120D] p-5">
+                    
+                    {/* Photo / Avatar Box */}
+                    <div className="text-center sm:border-r-2 border-[#16120D]/30 pr-0 sm:pr-4 flex flex-col items-center justify-center">
+                      <div className="w-28 h-32 bg-[#16120D] border-2 border-[#EAB308] overflow-hidden flex items-center justify-center shadow-md relative">
+                        {memberData.photoUrl ? (
+                          <img
+                            src={memberData.photoUrl}
+                            alt={memberData.name}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="text-center p-2">
+                            <span className="text-5xl block mb-1">🪳</span>
+                            <span className="text-[9px] text-[#EAB308] font-black uppercase tracking-tighter">OFFICIAL AVATAR</span>
+                          </div>
+                        )}
+                      </div>
+                      <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-widest mt-2 block">
+                        CJP CARD HOLDER
+                      </span>
+                    </div>
+
+                    {/* Member Details */}
+                    <div className="sm:col-span-2 space-y-2.5 text-xs font-bold text-[#16120D]">
+                      <div>
+                        <span className="text-[10px] font-black text-[#3A332B] uppercase block">FULL NAME:</span>
+                        <span className="font-display text-3xl text-[#16120D] uppercase leading-none block">
+                          {memberData.name}
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-3 pt-2 border-t border-[#16120D]/20">
+                        <div>
+                          <span className="text-[10px] font-black text-[#3A332B] uppercase block">MEMBERSHIP ID:</span>
+                          <span className="font-mono text-sm font-black text-[#D9572B] block">
+                            {memberData.id}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] font-black text-[#3A332B] uppercase block">AGE / DOB:</span>
+                          <span className="font-extrabold uppercase">{memberData.dob}</span>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-3 pt-2 border-t border-[#16120D]/20">
+                        <div>
+                          <span className="text-[10px] font-black text-[#3A332B] uppercase block">CITY &amp; STATE:</span>
+                          <span className="font-extrabold uppercase">{memberData.city}, {memberData.state}</span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] font-black text-[#3A332B] uppercase block">OCCUPATION:</span>
+                          <span className="font-extrabold uppercase">{memberData.occupation}</span>
+                        </div>
+                      </div>
+
+                      <div className="pt-2 border-t border-[#16120D]/20">
+                        <span className="text-[10px] font-black text-[#3A332B] uppercase block">JOINING DATE:</span>
+                        <span className="font-extrabold">{memberData.joinDate}</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Slogan Banner */}
+                  <div className="bg-[#16120D] text-[#EAB308] p-3 text-center border-2 border-[#16120D] shadow-sm">
+                    <span className="font-display text-2xl tracking-wider uppercase block">
+                      HAR GHAR KI SARKAR! 🪳
+                    </span>
+                  </div>
+
+                  {/* Footer & QR Graphic */}
+                  <div className="flex flex-wrap justify-between items-end gap-4 pt-2 border-t-2 border-[#16120D]/30 text-[10px] font-bold text-[#3A332B]">
+                    <div className="flex items-center gap-2">
+                      <QrCode size={38} className="text-[#16120D] flex-shrink-0" />
+                      <div>
+                        <span className="block text-[#16120D] font-black uppercase">AUTHENTIC CJP DIGITAL QR CODE</span>
+                        <span className="text-[9px] text-[#D9572B] font-extrabold">VERIFIED BY CENTRAL SWARM COUNCIL</span>
+                      </div>
+                    </div>
+
+                    <div className="text-right">
+                      <div className="font-serif italic text-xs font-black text-[#16120D] border-b border-[#16120D] pb-0.5 mb-0.5">
+                        National Swarm Convener
+                      </div>
+                      <span className="text-[9px] text-[#3A332B] uppercase font-semibold">
+                        FICTIONAL PARODY MEMBERSHIP CARD
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              {/* CARD ACTIONS: PRINT / DOWNLOAD / JOIN ANOTHER */}
+              <div className="no-print bg-[#F5EFE6] border-4 border-[#16120D] p-6 shadow-[6px_6px_0px_0px_#16120D] space-y-4">
+                <h4 className="font-display text-2xl text-[#16120D] uppercase text-center border-b-2 border-[#16120D] pb-2">
+                  CARD ACTION OPTIONS
+                </h4>
+
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  {/* PRINT BUTTON */}
+                  <button
+                    onClick={handlePrintCard}
+                    className="btn-brutal h-11 px-5 text-xs sm:text-sm bg-[#16120D] text-[#F5EFE6] hover:bg-[#D9572B] hover:text-white cursor-pointer"
+                  >
+                    <Printer size={16} />
+                    <span>PRINT CARD</span>
+                  </button>
+
+                  {/* DOWNLOAD BUTTON */}
+                  <button
+                    onClick={handleDownloadCard}
+                    className="btn-brutal h-11 px-5 text-xs sm:text-sm bg-[#D9572B] text-white hover:bg-[#EAB308] hover:text-[#16120D] cursor-pointer"
+                  >
+                    <Download size={16} />
+                    <span>DOWNLOAD CARD (.PNG)</span>
+                  </button>
+
+                  {/* COPY ID */}
+                  <button
+                    onClick={handleCopyId}
+                    className="btn-brutal h-11 px-4 text-xs bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white cursor-pointer"
+                  >
+                    {copiedId ? <Check size={16} className="text-[#D9572B]" /> : <Copy size={16} />}
+                    <span>{copiedId ? 'COPIED!' : 'COPY ID'}</span>
+                  </button>
+
+                  {/* JOIN ANOTHER MEMBER */}
+                  <button
+                    onClick={handleJoinAnother}
+                    className="btn-brutal h-11 px-5 text-xs sm:text-sm bg-[#EAB308] text-[#16120D] hover:bg-[#16120D] hover:text-white cursor-pointer"
+                  >
+                    <UserPlus size={16} />
+                    <span>JOIN ANOTHER MEMBER</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          ) : (
+            /* MEMBERSHIP FORM */
+            <div className="join-form-section max-w-3xl mx-auto bg-[#F5EFE6] border-4 border-[#16120D] p-6 sm:p-10 md:p-12 shadow-[8px_8px_0px_0px_#16120D]">
+              
+              <div className="text-center mb-8 border-b-2 border-[#16120D] pb-5">
+                <span className="bg-[#D9572B] text-white text-[10px] font-black px-3 py-1 uppercase tracking-widest inline-block mb-2">
+                  OFFICIAL ONLINE REGISTRATION
+                </span>
+                <h2 className="font-display text-4xl sm:text-5xl text-[#16120D] uppercase leading-none">
+                  Become a Proud CJP Member
+                </h2>
+                <p className="text-xs sm:text-sm text-[#3A332B] font-extrabold mt-1">
+                  Fill out the form below to receive your digital membership card instantly.
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+                
+                {/* Full Name */}
+                <div>
+                  <label className="text-xs font-black text-[#16120D] uppercase block mb-1">
+                    FULL NAME <span className="text-[#D9572B]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder="Enter your full name (e.g. Ramesh Kumar)..."
+                    className={`w-full bg-[#EADBCE] border-2 ${
+                      errors.name ? 'border-red-600 bg-red-50' : 'border-[#16120D]'
+                    } px-4 py-3 text-xs sm:text-sm text-[#16120D] font-bold outline-none focus:border-[#D9572B] transition-colors`}
+                  />
+                  {errors.name && (
+                    <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1">
+                      <AlertCircle size={12} /> {errors.name}
+                    </p>
+                  )}
+                </div>
+
+                {/* DOB & City */}
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="text-xs font-black text-[#16120D] uppercase block mb-1">
+                      DATE OF BIRTH / AGE <span className="text-[#D9572B]">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.dob}
+                      onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
+                      placeholder="e.g. 15 Aug 1998 or 26 Years..."
+                      className={`w-full bg-[#EADBCE] border-2 ${
+                        errors.dob ? 'border-red-600 bg-red-50' : 'border-[#16120D]'
+                      } px-4 py-3 text-xs sm:text-sm text-[#16120D] font-bold outline-none focus:border-[#D9572B] transition-colors`}
+                    />
+                    {errors.dob && (
+                      <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1">
+                        <AlertCircle size={12} /> {errors.dob}
+                      </p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-black text-[#16120D] uppercase block mb-1">
+                      CITY <span className="text-[#D9572B]">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.city}
+                      onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                      placeholder="e.g. New Delhi, Mumbai, Jaipur..."
+                      className={`w-full bg-[#EADBCE] border-2 ${
+                        errors.city ? 'border-red-600 bg-red-50' : 'border-[#16120D]'
+                      } px-4 py-3 text-xs sm:text-sm text-[#16120D] font-bold outline-none focus:border-[#D9572B] transition-colors`}
+                    />
+                    {errors.city && (
+                      <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1">
+                        <AlertCircle size={12} /> {errors.city}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                {/* State & Occupation */}
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="text-xs font-black text-[#16120D] uppercase block mb-1">
+                      STATE <span className="text-[#D9572B]">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.state}
+                      onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                      placeholder="e.g. Delhi, Maharashtra, Rajasthan..."
+                      className={`w-full bg-[#EADBCE] border-2 ${
+                        errors.state ? 'border-red-600 bg-red-50' : 'border-[#16120D]'
+                      } px-4 py-3 text-xs sm:text-sm text-[#16120D] font-bold outline-none focus:border-[#D9572B] transition-colors`}
+                    />
+                    {errors.state && (
+                      <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1">
+                        <AlertCircle size={12} /> {errors.state}
+                      </p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-black text-[#16120D] uppercase block mb-1">
+                      OCCUPATION <span className="text-[#D9572B]">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.occupation}
+                      onChange={(e) => setFormData({ ...formData, occupation: e.target.value })}
+                      placeholder="e.g. Student, Software Engineer, Advocate..."
+                      className={`w-full bg-[#EADBCE] border-2 ${
+                        errors.occupation ? 'border-red-600 bg-red-50' : 'border-[#16120D]'
+                      } px-4 py-3 text-xs sm:text-sm text-[#16120D] font-bold outline-none focus:border-[#D9572B] transition-colors`}
+                    />
+                    {errors.occupation && (
+                      <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1">
+                        <AlertCircle size={12} /> {errors.occupation}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Email & Mobile */}
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="text-xs font-black text-[#16120D] uppercase block mb-1">
+                      EMAIL ADDRESS <span className="text-[#D9572B]">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="name@example.com..."
+                      className={`w-full bg-[#EADBCE] border-2 ${
+                        errors.email ? 'border-red-600 bg-red-50' : 'border-[#16120D]'
+                      } px-4 py-3 text-xs sm:text-sm text-[#16120D] font-bold outline-none focus:border-[#D9572B] transition-colors`}
+                    />
+                    {errors.email && (
+                      <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1">
+                        <AlertCircle size={12} /> {errors.email}
+                      </p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-black text-[#16120D] uppercase block mb-1">
+                      MOBILE NUMBER <span className="text-[#D9572B]">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      value={formData.mobile}
+                      onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                      placeholder="+91 9876543210..."
+                      className={`w-full bg-[#EADBCE] border-2 ${
+                        errors.mobile ? 'border-red-600 bg-red-50' : 'border-[#16120D]'
+                      } px-4 py-3 text-xs sm:text-sm text-[#16120D] font-bold outline-none focus:border-[#D9572B] transition-colors`}
+                    />
+                    {errors.mobile && (
+                      <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1">
+                        <AlertCircle size={12} /> {errors.mobile}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Why join CJP */}
+                <div>
+                  <label className="text-xs font-black text-[#16120D] uppercase block mb-1">
+                    WHY DO YOU WANT TO JOIN CJP? <span className="text-[#D9572B]">*</span>
+                  </label>
+                  <textarea
+                    rows={3}
+                    value={formData.reason}
+                    onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
+                    placeholder="Tell us why you want to be part of the Cockroach Janta Party..."
+                    className={`w-full bg-[#EADBCE] border-2 ${
+                      errors.reason ? 'border-red-600 bg-red-50' : 'border-[#16120D]'
+                    } px-4 py-3 text-xs sm:text-sm text-[#16120D] font-bold outline-none focus:border-[#D9572B] transition-colors`}
+                  />
+                  {errors.reason && (
+                    <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1">
+                      <AlertCircle size={12} /> {errors.reason}
+                    </p>
+                  )}
+                </div>
+
+                {/* Upload Photo (Optional) */}
+                <div>
+                  <label className="text-xs font-black text-[#16120D] uppercase block mb-1">
+                    UPLOAD PHOTO <span className="text-[10px] text-[#3A332B] font-bold">(OPTIONAL)</span>
+                  </label>
+                  <div className="flex items-center gap-4 bg-[#EADBCE] border-2 border-[#16120D] p-3">
+                    {photoPreview ? (
+                      <div className="w-16 h-16 bg-[#16120D] border-2 border-[#D9572B] overflow-hidden flex-shrink-0 relative">
+                        <img src={photoPreview} alt="Preview" className="w-full h-full object-cover" />
+                      </div>
+                    ) : (
+                      <div className="w-16 h-16 bg-[#16120D] text-2xl flex items-center justify-center flex-shrink-0 text-white">
+                        🪳
+                      </div>
+                    )}
+                    
+                    <div className="flex-1">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handlePhotoUpload}
+                        id="photo-upload"
+                        className="hidden"
+                      />
+                      <label
+                        htmlFor="photo-upload"
+                        className="btn-brutal px-3 py-1.5 text-xs bg-[#16120D] text-[#F5EFE6] hover:bg-[#D9572B] cursor-pointer inline-flex items-center gap-1.5"
+                      >
+                        <Upload size={14} />
+                        <span>{photoPreview ? 'CHANGE PHOTO' : 'CHOOSE PHOTO FILE'}</span>
+                      </label>
+                      <span className="text-[10px] text-[#3A332B] font-bold block mt-1">
+                        JPG, PNG or WEBP (Max 5MB). If left empty, official cockroach mascot avatar will be used.
+                      </span>
+                    </div>
+                  </div>
+                  {errors.photo && (
+                    <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1">
+                      <AlertCircle size={12} /> {errors.photo}
+                    </p>
+                  )}
+                </div>
+
+                {/* Parody Agreement Checkbox */}
+                <div className="bg-[#EADBCE] border-2 border-[#16120D] p-4 space-y-1">
+                  <label className="flex items-start gap-3 cursor-pointer select-none">
+                    <input
+                      type="checkbox"
+                      checked={formData.agreedParody}
+                      onChange={(e) => setFormData({ ...formData, agreedParody: e.target.checked })}
+                      className="mt-0.5 w-4 h-4 accent-[#D9572B] cursor-pointer flex-shrink-0"
+                    />
+                    <span className="text-xs font-black text-[#16120D] leading-tight">
+                      I understand that CJP is a fictional/parody organization created for entertainment &amp; civic satire purposes. <span className="text-[#D9572B]">*</span>
+                    </span>
+                  </label>
+                  {errors.agreedParody && (
+                    <p className="text-xs font-bold text-red-600 mt-1 flex items-center gap-1 pl-7">
+                      <AlertCircle size={12} /> {errors.agreedParody}
+                    </p>
+                  )}
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full btn-brutal py-4 text-sm sm:text-base bg-[#D9572B] text-white hover:bg-[#16120D] hover:text-[#F5EFE6] shadow-[4px_4px_0px_0px_#16120D] cursor-pointer"
+                >
+                  {loading ? (
+                    <span className="animate-pulse">GENERATING CJP MEMBERSHIP CARD...</span>
+                  ) : (
+                    <span>JOIN CJP 🪳</span>
+                  )}
+                </button>
+
+              </form>
+
+            </div>
+          )}
+
+        </div>
 
       </div>
     </div>

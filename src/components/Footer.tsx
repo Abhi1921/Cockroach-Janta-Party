@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Heart } from 'lucide-react';
+import { SupportDevBanner } from './SupportDevBanner';
 
 export const Footer: React.FC = () => {
 
   return (
-    <footer className="bg-[#16120D] text-[#F5EFE6] border-t-4 border-[#D9572B] pt-16 pb-12 font-sans selection:bg-[#D9572B] selection:text-white">
+    <>
+      <SupportDevBanner />
+      <footer className="bg-[#16120D] text-[#F5EFE6] border-t-4 border-[#D9572B] pt-16 pb-12 font-sans selection:bg-[#D9572B] selection:text-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
         
         {/* Top CTA Banner in Footer */}
@@ -116,6 +119,8 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 uppercase text-[11px]">
               <li><Link to="/vision" className="hover:text-[#D9572B] transition-colors">Vision</Link></li>
               <li><Link to="/manifesto" className="hover:text-[#D9572B] transition-colors">The Manifesto</Link></li>
+              <li><Link to="/campaigns" className="hover:text-[#D9572B] transition-colors font-bold text-[#E6A100]">Campaigns</Link></li>
+              <li><Link to="/black-monday" className="hover:text-[#D9572B] transition-colors font-bold text-[#D9572B]">Black Monday</Link></li>
               <li><Link to="/articles" className="hover:text-[#D9572B] transition-colors">Articles</Link></li>
               <li><Link to="/gallery" className="hover:text-[#D9572B] transition-colors">Gallery</Link></li>
               <li><Link to="/tracker" className="hover:text-[#D9572B] transition-colors">Tracker</Link></li>
@@ -129,10 +134,11 @@ export const Footer: React.FC = () => {
               TOPICS
             </h4>
             <ul className="space-y-2 uppercase text-[11px]">
+              <li><Link to="/black-monday" className="hover:text-[#D9572B] transition-colors font-bold text-[#D9572B]">Black Monday</Link></li>
+              <li><Link to="/school-thik-karo" className="hover:text-[#D9572B] transition-colors">School Thik Karo</Link></li>
               <li><Link to="/memes" className="hover:text-[#D9572B] transition-colors">Memes</Link></li>
               <li><Link to="/issues" className="hover:text-[#D9572B] transition-colors">Issues</Link></li>
               <li><Link to="/campaign/donate-to-abdul" className="hover:text-[#D9572B] transition-colors text-[#D9572B] flex items-center gap-1">Donate to Abdul</Link></li>
-              <li><Link to="/manifesto" className="hover:text-[#D9572B] transition-colors">Manifesto</Link></li>
               <li><Link to="/news" className="hover:text-[#D9572B] transition-colors">News</Link></li>
               <li><Link to="/quotes" className="hover:text-[#D9572B] transition-colors">Quotes</Link></li>
             </ul>
@@ -199,33 +205,27 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom Bar & Copyright matching Image 3 */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-[#EADBCE] font-extrabold uppercase tracking-wider pt-2">
-          <div className="flex items-center gap-2">
-            <span>© 2026 Cockroach Janta Party · All rights reserved.</span>
+        {/* Bottom Bar & Copyright matching requirements */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-[#EADBCE] font-extrabold tracking-wider pt-4 border-t border-white/10">
+          <div className="flex items-center gap-2 text-center md:text-left">
+            <span className="font-display text-lg text-[#F5EFE6] tracking-wide">
+              Cockroach Janta Party (CJP) — Har Ghar Ki Sarkar! 🪳
+            </span>
           </div>
 
-          <div className="flex items-center gap-2 text-[#D9572B]">
-            <ShieldCheck size={14} />
-            <span>⚠ A WORK OF SATIRE</span>
-          </div>
-
-          <div className="flex flex-wrap gap-x-3 gap-y-1 text-[#EADBCE]">
-            <Link to="/transparency" className="hover:text-[#D9572B]">Legal</Link>
-            <span>·</span>
-            <Link to="/privacy" className="hover:text-[#D9572B]">Privacy</Link>
-            <span>·</span>
-            <Link to="/terms" className="hover:text-[#D9572B]">Terms</Link>
-            <span>·</span>
-            <Link to="/about" className="hover:text-[#D9572B]">About</Link>
-            <span>·</span>
-            <Link to="/press-kit" className="hover:text-[#D9572B]">Press</Link>
-            <span>·</span>
-            <Link to="/contact" className="hover:text-[#D9572B]">Contact</Link>
+          <div className="max-w-2xl text-center md:text-right text-[10px] text-white/70 font-semibold leading-snug">
+            <div className="flex items-center justify-center md:justify-end gap-1.5 text-[#D9572B] font-bold uppercase mb-1">
+              <ShieldCheck size={14} /> OFFICIAL FICTIONAL PARODY NOTICE
+            </div>
+            <p>
+              CJP is a fictional parody organization created for entertainment purposes. This website is not affiliated with any real political party or government organization.
+            </p>
           </div>
         </div>
 
       </div>
     </footer>
+    </>
   );
 };
+

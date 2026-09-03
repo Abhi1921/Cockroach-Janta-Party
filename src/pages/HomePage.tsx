@@ -30,8 +30,8 @@ export const HomePage: React.FC = () => {
   const [titleIndex, setTitleIndex] = useState(0);
   const [videoPage, setVideoPage] = useState(1);
   const videosPerPage = 6;
-  const [activePoster, setActivePoster] = useState<'sep5' | 'school' | 'brand'>('sep5');
-  const [featuredTab, setFeaturedTab] = useState<'school' | 'sep5' | 'brand'>('school');
+  const [activePoster, setActivePoster] = useState<'sc_verdict' | 'sep5' | 'ward_centers' | 'school' | 'black_monday'>('sc_verdict');
+  const [featuredTab, setFeaturedTab] = useState<'sc_verdict' | 'sep5' | 'ward_centers' | 'school' | 'black_monday'>('sc_verdict');
 
   const alternateTitles = [
     {
@@ -353,31 +353,33 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Hero Poster Artwork - SWITCHABLE BETWEEN 5 SEP, SCHOOL THIK KARO & EMBLEM */}
+          {/* Right Hero Poster Artwork - TRENDING POSTERS SHOWCASE */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-5 max-w-[420px] w-full shadow-2xl relative transform rotate-1 hover:rotate-0 transition-transform duration-300">
               
               {/* Poster Header Meta */}
               <div className="flex justify-between items-center text-[10px] font-extrabold text-[#16120D] border-b border-[#16120D] pb-2.5 mb-3 uppercase tracking-wider">
                 <span className="flex items-center gap-1 text-[#D9572B]">
-                  {activePoster === 'sep5' && <Megaphone size={12} />}
-                  {activePoster === 'school' && <GraduationCap size={12} />}
-                  {activePoster === 'brand' && <span>🪳</span>}
+                  <span className="w-2 h-2 rounded-full bg-[#D9572B] animate-ping" />
                   <span>
-                    {activePoster === 'sep5' && '5 SEP PROTEST'}
+                    {activePoster === 'sc_verdict' && '🔥 #1 TRENDING: SC VERDICT'}
+                    {activePoster === 'sep5' && '5 SEP DELHI MARCH'}
+                    {activePoster === 'ward_centers' && '84 WARD COMMAND HUBS'}
                     {activePoster === 'school' && 'SCHOOL THIK KARO'}
-                    {activePoster === 'brand' && 'CJP BRAND LOGO'}
+                    {activePoster === 'black_monday' && '10M BLACK MONDAY'}
                   </span>
                 </span>
 
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => {
-                      if (activePoster === 'sep5') setActivePoster('school');
-                      else if (activePoster === 'school') setActivePoster('brand');
-                      else setActivePoster('sep5');
+                      if (activePoster === 'sc_verdict') setActivePoster('sep5');
+                      else if (activePoster === 'sep5') setActivePoster('ward_centers');
+                      else if (activePoster === 'ward_centers') setActivePoster('school');
+                      else if (activePoster === 'school') setActivePoster('black_monday');
+                      else setActivePoster('sc_verdict');
                     }}
-                    className="text-[9px] bg-[#16120D] text-[#F5EFE6] px-2 py-0.5 uppercase hover:bg-[#D9572B] transition-colors"
+                    className="text-[9px] bg-[#16120D] text-[#F5EFE6] px-2 py-1 uppercase font-black hover:bg-[#D9572B] transition-colors rounded cursor-pointer"
                   >
                     NEXT POSTER →
                   </button>
@@ -385,38 +387,48 @@ export const HomePage: React.FC = () => {
               </div>
 
               {/* Poster Main Artwork Image */}
-              <div className="overflow-hidden border-2 border-[#16120D] bg-[#16120D] mb-4 flex items-center justify-center relative group p-1">
+              <div className="overflow-hidden border-2 border-[#16120D] bg-[#16120D] mb-4 flex items-center justify-center relative group p-1 min-h-[300px]">
                 <img
                   src={
-                    activePoster === 'sep5'
+                    activePoster === 'sc_verdict'
+                      ? "/cjp_sep3_sc_verdict_poster.svg"
+                      : activePoster === 'sep5'
                       ? "/cjp_sep5_protest_poster.png"
+                      : activePoster === 'ward_centers'
+                      ? "/cjp_sep3_ward_centers_poster.svg"
                       : activePoster === 'school'
-                      ? "/cjp_school_thik_karo_poster.png"
-                      : "/cjp_banner.png"
+                      ? "/cjp_sep3_school_phase2_poster.svg"
+                      : "/cjp_sep3_black_monday_accord.svg"
                   }
-                  alt="Official Campaign Poster - Cockroach Janta Party"
+                  alt="Trending Campaign Poster - Cockroach Janta Party"
                   className="w-full h-auto object-contain mx-auto group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
               {/* Poster Text & Subcaption */}
               <div className="text-center">
-                <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block mb-1.5">
+                <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block mb-1.5 rounded">
+                  {activePoster === 'sc_verdict' && '🔥 TRENDING POSTER · 3 SEP 2026'}
                   {activePoster === 'sep5' && '5 SEPTEMBER 2026 · DELHI MARCH'}
-                  {activePoster === 'school' && 'SCHOOL THIK KARO CAMPAIGN'}
-                  {activePoster === 'brand' && 'COCKROACH JANTA PARTY (CJP)'}
+                  {activePoster === 'ward_centers' && 'CIVIC WATCHDOG NETWORK · 84 CITIES'}
+                  {activePoster === 'school' && 'EDUCATION REFORM · PHASE 2'}
+                  {activePoster === 'black_monday' && 'BLACK MONDAY MOVEMENT ACCORD'}
                 </span>
 
                 <h3 className="font-display text-2xl sm:text-3xl text-[#16120D] uppercase tracking-wide leading-tight mb-1">
+                  {activePoster === 'sc_verdict' && 'SUPREME COURT ARTICLE 142 DECREE'}
                   {activePoster === 'sep5' && '5 SEP DELHI POLICE HQ MARCH'}
-                  {activePoster === 'school' && 'SCHOOL THIK KARO CAMPAIGN'}
-                  {activePoster === 'brand' && 'COCKROACH JANTA PARTY'}
+                  {activePoster === 'ward_centers' && '84 METRO WARD COMMAND CENTERS'}
+                  {activePoster === 'school' && 'SCHOOL THIK KARO PHASE 2'}
+                  {activePoster === 'black_monday' && 'BLACK MONDAY MOVEMENT ACCORD'}
                 </h3>
 
                 <p className="text-[11px] text-[#D9572B] font-extrabold uppercase tracking-widest leading-snug">
+                  {activePoster === 'sc_verdict' && '2,700 STUDENT FIRS EXPUNGED NATIONWIDE!'}
                   {activePoster === 'sep5' && 'BE READY FOR COCKROACHES! CHALO POLICE HQ'}
-                  {activePoster === 'school' && 'FIX GOVERNMENT SCHOOLS & PUBLIC LIBRARIES!'}
-                  {activePoster === 'brand' && 'FOR THOSE WHO REFUSE TO STAY SILENT.'}
+                  {activePoster === 'ward_centers' && 'FROM STREET MARCHES TO 24/7 MUNICIPAL AUDITS'}
+                  {activePoster === 'school' && 'DESKS BEFORE SPEECHES, SCIENCE LABS BEFORE RIBBON CUTTINGS'}
+                  {activePoster === 'black_monday' && 'WEAR BLACK EVERY MONDAY · DEMAND ASPHALT WARRANTIES'}
                 </p>
 
                 <div className="mt-3 pt-2.5 border-t border-[#16120D]/20">
@@ -424,7 +436,7 @@ export const HomePage: React.FC = () => {
                     to="/posters"
                     className="text-[11px] font-extrabold text-[#16120D] hover:text-[#D9572B] uppercase tracking-wider flex items-center justify-center gap-1"
                   >
-                    <span>VIEW ALL 3 CAMPAIGN POSTERS</span> →
+                    <span>VIEW ALL TRENDING POSTERS</span> →
                   </Link>
                 </div>
               </div>
@@ -460,20 +472,20 @@ export const HomePage: React.FC = () => {
         <div className="max-w-[1440px] mx-auto px-4">
           
           {/* Campaign Selector Tabs */}
-          <div className="flex justify-center items-center gap-3 mb-6 flex-wrap">
+          <div className="flex justify-center items-center gap-2.5 mb-6 flex-wrap">
             <button
-              onClick={() => setFeaturedTab('school')}
-              className={`px-5 py-2.5 text-xs font-extrabold uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 ${
-                featuredTab === 'school'
+              onClick={() => setFeaturedTab('sc_verdict')}
+              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
+                featuredTab === 'sc_verdict'
                   ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
                   : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
               }`}
             >
-              <GraduationCap size={16} /> <span>1. SCHOOL THIK KARO</span>
+              <span>⚖️</span> <span>1. SC 142 VERDICT</span>
             </button>
             <button
               onClick={() => setFeaturedTab('sep5')}
-              className={`px-5 py-2.5 text-xs font-extrabold uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 ${
+              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
                 featuredTab === 'sep5'
                   ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
                   : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
@@ -482,14 +494,34 @@ export const HomePage: React.FC = () => {
               <Megaphone size={16} /> <span>2. 5 SEP DELHI MARCH</span>
             </button>
             <button
-              onClick={() => setFeaturedTab('brand')}
-              className={`px-5 py-2.5 text-xs font-extrabold uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 ${
-                featuredTab === 'brand'
+              onClick={() => setFeaturedTab('ward_centers')}
+              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
+                featuredTab === 'ward_centers'
                   ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
                   : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
               }`}
             >
-              <span>🪳</span> <span>3. CJP LOGO EMBLEM</span>
+              <span>🏢</span> <span>3. 84 WARD CENTERS</span>
+            </button>
+            <button
+              onClick={() => setFeaturedTab('school')}
+              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
+                featuredTab === 'school'
+                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
+                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
+              }`}
+            >
+              <GraduationCap size={16} /> <span>4. SCHOOL THIK KARO</span>
+            </button>
+            <button
+              onClick={() => setFeaturedTab('black_monday')}
+              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
+                featuredTab === 'black_monday'
+                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
+                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
+              }`}
+            >
+              <span>🖤</span> <span>5. BLACK MONDAY</span>
             </button>
           </div>
 
@@ -498,14 +530,18 @@ export const HomePage: React.FC = () => {
               
               {/* Poster Artwork Container - OBJECT CONTAIN FOR ZERO CROPPING */}
               <div className="md:col-span-5 flex justify-center">
-                <div className="border-2 border-[#EADBCE] bg-[#16120D] p-2 shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform w-full max-w-[420px]">
+                <div className="border-2 border-[#EADBCE] bg-[#16120D] p-2 shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform w-full max-w-[420px] min-h-[320px]">
                   <img
                     src={
-                      featuredTab === 'school'
-                        ? "/cjp_school_thik_karo_poster.png"
+                      featuredTab === 'sc_verdict'
+                        ? "/cjp_sep3_sc_verdict_poster.svg"
                         : featuredTab === 'sep5'
                         ? "/cjp_sep5_protest_poster.png"
-                        : "/cjp_banner.png"
+                        : featuredTab === 'ward_centers'
+                        ? "/cjp_sep3_ward_centers_poster.svg"
+                        : featuredTab === 'school'
+                        ? "/cjp_sep3_school_phase2_poster.svg"
+                        : "/cjp_sep3_black_monday_accord.svg"
                     }
                     alt="Featured Campaign Poster - Cockroach Janta Party"
                     className="w-full h-auto object-contain mx-auto"
@@ -516,44 +552,53 @@ export const HomePage: React.FC = () => {
               {/* Text Info */}
               <div className="md:col-span-7 space-y-4">
                 <div className="flex items-center gap-2 text-xs font-extrabold text-[#D9572B] uppercase tracking-widest">
-                  {featuredTab === 'school' && <GraduationCap size={18} />}
-                  {featuredTab === 'sep5' && <Megaphone size={18} />}
-                  {featuredTab === 'brand' && <span>🪳</span>}
                   <span>
-                    {featuredTab === 'school' && 'FEATURED CAMPAIGN · EDUCATION & SCHOOL REFORM'}
+                    {featuredTab === 'sc_verdict' && '🔥 #1 TRENDING STORY · SUPREME COURT ARTICLE 142 DECREE'}
                     {featuredTab === 'sep5' && 'FEATURED PROTEST MARCH · 5 SEPTEMBER 2026'}
-                    {featuredTab === 'brand' && 'OFFICIAL EMBLEM · COCKROACH JANTA PARTY'}
+                    {featuredTab === 'ward_centers' && 'FEATURED CIVIC INITIATIVE · 84 METRO WARD AUDIT HUBS'}
+                    {featuredTab === 'school' && 'FEATURED CAMPAIGN · EDUCATION & SCHOOL REFORM'}
+                    {featuredTab === 'black_monday' && 'FEATURED MOVEMENT · 10 MILLION BLACK MONDAY ACCORD'}
                   </span>
                 </div>
 
                 <h2 className="font-display text-4xl sm:text-6xl text-[#F5EFE6] uppercase leading-none">
-                  {featuredTab === 'school' && 'SCHOOL THIK KARO!'}
+                  {featuredTab === 'sc_verdict' && 'SC ARTICLE 142 VERDICT!'}
                   {featuredTab === 'sep5' && '5 SEPTEMBER DELHI MARCH'}
-                  {featuredTab === 'brand' && 'COCKROACH JANTA PARTY'}
+                  {featuredTab === 'ward_centers' && '84 WARD COMMAND CENTERS'}
+                  {featuredTab === 'school' && 'SCHOOL THIK KARO PHASE 2'}
+                  {featuredTab === 'black_monday' && '10M BLACK MONDAY ACCORD'}
                 </h2>
 
                 <div className="flex items-center gap-4 text-xs font-bold text-[#EADBCE] bg-[#16120D]/60 p-3 border border-[#EADBCE]/30">
                   <span className="flex items-center gap-1.5">
                     <MapPin size={14} className="text-[#D9572B]" />
-                    {featuredTab === 'school' && 'MUNICIPAL WARDS & GOVT SCHOOLS NATIONWIDE'}
+                    {featuredTab === 'sc_verdict' && 'SUPREME COURT OF INDIA · ALL STATE HIGH COURTS'}
                     {featuredTab === 'sep5' && 'INDIA GATE → DELHI POLICE HQ'}
-                    {featuredTab === 'brand' && 'ALL INDIA YOUTH SWARM & CIVIC DESKS'}
+                    {featuredTab === 'ward_centers' && '84 METROPOLITAN CITIES NATIONWIDE'}
+                    {featuredTab === 'school' && '500 MUNICIPAL PRIMARY SCHOOLS NATIONWIDE'}
+                    {featuredTab === 'black_monday' && '45 METRO SECTORS & MUNICIPAL WARDS'}
                   </span>
                 </div>
 
                 <p className="text-xs md:text-sm text-[#EADBCE] leading-relaxed font-medium">
-                  {featuredTab === 'school' &&
-                    'CJP demands urgent physical audits of government schools, public libraries in every ward, clean drinking water TDS testing, and transparent teacher appointments.'}
+                  {featuredTab === 'sc_verdict' &&
+                    'The Supreme Court invoked Article 142 to expunge all 2,700 student protest FIRs nationwide, ordering state DGP offices to issue clean criminal record certificates.'}
                   {featuredTab === 'sep5' &&
-                    'CJP doubles down on its nationwide youth protest march to Delhi Police HQ over pending assurances on 2,700 student FIR quashings, contractor road warranty notice boards, and NEET exam fairness.'}
-                  {featuredTab === 'brand' &&
-                    'Independent satire, civic commentary, and public accountability portal. Exploring subterranean sewer desilting, contractor road warranties, and open RTI transparency.'}
+                    'CJP doubles down on its nationwide youth protest march to Delhi Police HQ over pending assurances on student FIR quashings, contractor road warranty notice boards, and NEET exam fairness.'}
+                  {featuredTab === 'ward_centers' &&
+                    'CJP launched 84 permanent municipal ward audit command centers to inspect public works, water purity, and drain desilting schedules 24 hours a day.'}
+                  {featuredTab === 'school' &&
+                    'CJP launched Phase 2 of its school improvement initiative, adopting 500 municipal primary schools for library and science laboratory upgrades.'}
+                  {featuredTab === 'black_monday' &&
+                    'Over 10 million citizens across 45 metro sectors wore black armbands every Monday to demand mandatory 3-year paving warranties and transparent municipal ledgers.'}
                 </p>
 
                 <div className="bg-[#D9572B] text-[#F5EFE6] p-3.5 text-xs font-extrabold uppercase tracking-wider">
-                  {featuredTab === 'school' && '"WE DEMAND BETTER SCHOOLS & PUBLIC LIBRARIES NOW!" — CJP EDUCATION DESK'}
+                  {featuredTab === 'sc_verdict' && '"NO STUDENT SHALL CARRY A CRIMINAL RECORD FOR ASKING CIVIC QUESTIONS!" — CJP LEGAL CELL'}
                   {featuredTab === 'sep5' && '"BE READY FOR COCKROACHES ON SEPTEMBER 5!" — CJP SECRETARIAT'}
-                  {featuredTab === 'brand' && '"FOR THE PEOPLE WHO REFUSE TO BLEND IN." — CJP EMBLEM'}
+                  {featuredTab === 'ward_centers' && '"FROM STREET MARCHES TO 24/7 MUNICIPAL WARD AUDITS." — CJP TASK FORCE'}
+                  {featuredTab === 'school' && '"DESKS BEFORE SPEECHES, SCIENCE LABS BEFORE RIBBON CUTTINGS." — CJP EDUCATION DESK'}
+                  {featuredTab === 'black_monday' && '"WEAR BLACK, DEMAND ASPHALT WARRANTIES, STOP REPAYING FOR RE-PAVING." — CJP COUNCIL'}
                 </div>
 
                 <div className="pt-2 flex items-center gap-4 flex-wrap">

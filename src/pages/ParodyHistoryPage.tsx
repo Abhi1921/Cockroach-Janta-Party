@@ -1,10 +1,11 @@
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
-import { Globe } from 'lucide-react';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { TimelineView } from '../components/TimelineView';
+import { timelineData } from '../data/timelineData';
+import { Calendar, Sparkles } from 'lucide-react';
 
 export const ParodyHistoryPage: React.FC = () => {
-  const { lang } = useLanguage();
 
   const globalMovements = [
     {
@@ -40,63 +41,65 @@ export const ParodyHistoryPage: React.FC = () => {
   ];
 
   return (
-    <div className="parody-history-page py-16 bg-[#EADBCE] text-[#16120D] font-sans">
+    <div className="parody-history-page py-14 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
-        title={lang === 'hi' ? 'राजनीतिक व्यंग्य का इतिहास | कॉकरोच जनता पार्टी' : 'History of Political Satire & Parody Movements | CJP'}
-        description="Educational explainer comparing Cockroach Janta Party (CJP) with global satirical movements (Rhinoceros Party, Monster Raving Loony Party, Vermin Supreme, Die PARTEI)."
+        title="Master Timeline & History of Political Satire | CJP"
+        description="Explore the master CJP timeline (2020-2026) and global political satire history comparing CJP with Rhinoceros Party, Monster Raving Loony Party, Vermin Supreme, and Die PARTEI."
         canonicalUrl="https://cockroachjantapartywale.com/parody-history"
       />
 
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-[1440px] mx-auto px-4">
         
+        <Breadcrumbs items={[{ label: 'MASTER TIMELINE & SATIRE HISTORY' }]} />
+
         {/* Header Hero */}
-        <div className="mb-12 text-center">
-          <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
-            GLOBAL CIVIC DOSSIER &amp; HISTORY
+        <div className="mb-12 text-center max-w-3xl mx-auto space-y-4">
+          <span className="inline-flex items-center gap-2 bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest">
+            <Calendar size={14} className="text-[#D9572B]" /> CJP MASTER CHRONOLOGY 2020-2026
           </span>
-          <h1 className="font-serif font-black text-4xl md:text-6xl text-[#16120D] mb-3 uppercase tracking-tight">
-            HISTORY OF POLITICAL SATIRE
+          <h1 className="font-display text-4xl sm:text-6xl text-[#16120D] uppercase leading-none font-black">
+            CJP MASTER TIMELINE &amp; HISTORY
           </h1>
-          <p className="text-sm text-[#3A332B] font-extrabold uppercase tracking-wider max-w-2xl mx-auto">
-            {lang === 'hi'
-              ? 'विश्व भर में राजनीतिक व्यंग्य और पैरोडी आंदोलनों का इतिहास और लोकतंत्र में उनकी भूमिका।'
-              : 'How satirical movements across the globe use dark humor, hyperbole, and civic performance to hold power accountable.'}
+          <p className="text-sm sm:text-base text-[#3A332B] font-medium leading-relaxed">
+            Chronological milestone archive of CJP civic audits, manifesto releases, court decisions, and global political satire movements.
           </p>
         </div>
 
-        {/* Intro Manifesto Box */}
-        <div className="bg-[#F5EFE6] border-4 border-[#16120D] p-8 shadow-2xl mb-16 space-y-4">
-          <div className="flex items-center gap-3">
-            <Globe size={28} className="text-[#D9572B]" />
-            <h2 className="font-serif font-black text-2xl text-[#16120D] uppercase">
-              SATIRE AS A DEMOCRATIC IMMUNE SYSTEM
+        {/* CJP Master Interactive Timeline */}
+        <div className="bg-[#F5EFE6] border-4 border-[#16120D] p-6 sm:p-10 shadow-[8px_8px_0px_0px_#16120D] mb-16 space-y-6">
+          <div className="flex items-center justify-between border-b-2 border-[#16120D] pb-4">
+            <span className="text-xs font-black text-[#16120D] uppercase tracking-widest flex items-center gap-2">
+              <Sparkles size={16} className="text-[#D9572B]" /> COCKROACH JANTA PARTY MILESTONES (2020 - 2026)
+            </span>
+            <span className="text-[10px] font-mono font-bold bg-[#D9572B] text-white px-2.5 py-1 uppercase">VERIFIED TIMELINE</span>
+          </div>
+
+          <TimelineView events={timelineData} />
+        </div>
+
+        {/* Global Movements Comparison */}
+        <div className="space-y-6 mb-16 max-w-5xl mx-auto">
+          <div className="border-b-4 border-[#16120D] pb-3 mb-6">
+            <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-widest block">GLOBAL COMPARATIVE DOSSIER</span>
+            <h2 className="font-display text-3xl sm:text-4xl text-[#16120D] uppercase font-black">
+              GLOBAL SATIRE MOVEMENTS IN HISTORY
             </h2>
           </div>
-          <p className="text-xs text-[#3A332B] font-medium leading-relaxed">
-            Satire is not mere entertainment; historically, it acts as a democratic immune system. When formal institutions become rigid, pompous, or unresponsive, satire strips away official ceremony and forces uncomfortable truths into public view.
-          </p>
-        </div>
-
-        {/* Movement Timeline Cards */}
-        <div className="space-y-6 mb-16">
-          <h2 className="font-serif font-black text-2xl md:text-3xl text-[#16120D] uppercase border-b-4 border-[#16120D] pb-2">
-            GLOBAL SATIRE MOVEMENTS TIMELINE
-          </h2>
 
           <div className="grid grid-cols-1 gap-6">
             {globalMovements.map((m, idx) => (
-              <div key={idx} className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-lg space-y-3">
-                <div className="flex flex-wrap justify-between items-start gap-2 border-b border-[#16120D]/20 pb-2">
+              <div key={idx} className="bg-[#F5EFE6] border-4 border-[#16120D] p-6 shadow-[5px_5px_0px_0px_#16120D] space-y-3">
+                <div className="flex flex-wrap justify-between items-start gap-2 border-b-2 border-[#16120D] pb-2">
                   <div>
-                    <h3 className="font-serif font-bold text-xl text-[#16120D] uppercase">{m.name}</h3>
-                    <span className="text-[11px] font-extrabold text-[#D9572B] uppercase">{m.country}</span>
+                    <h3 className="font-display text-2xl text-[#16120D] uppercase font-black">{m.name}</h3>
+                    <span className="text-xs font-black text-[#D9572B] uppercase">{m.country}</span>
                   </div>
-                  <span className="bg-[#16120D] text-[#F5EFE6] text-[10px] font-extrabold px-2.5 py-1 uppercase">
+                  <span className="bg-[#16120D] text-[#F5EFE6] text-[10px] font-black px-2.5 py-1 uppercase">
                     CHAPTER #{idx + 1}
                   </span>
                 </div>
-                <p className="text-xs text-[#3A332B] font-medium leading-relaxed">{m.desc}</p>
-                <div className="pt-2 text-[10px] font-extrabold text-[#D9572B] uppercase tracking-wider">
+                <p className="text-xs sm:text-sm text-[#3A332B] font-medium leading-relaxed">{m.desc}</p>
+                <div className="pt-2 text-[10px] font-black text-[#D9572B] uppercase tracking-wider">
                   HISTORIC IMPACT: {m.impact}
                 </div>
               </div>

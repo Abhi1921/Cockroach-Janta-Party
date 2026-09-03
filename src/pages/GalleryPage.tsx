@@ -1,195 +1,190 @@
 import React, { useState } from 'react';
-import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
-import { X, ZoomIn, Download, Share2, Check } from 'lucide-react';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { PosterCard } from '../components/PosterCard';
+import { MemeCard } from '../components/MemeCard';
+import { VideoCard } from '../components/VideoCard';
+import { postersData } from '../data/postersData';
+import { memesData } from '../data/memesData';
+import { videosData } from '../data/videosData';
+import { Image, X, Download } from 'lucide-react';
 
 export const GalleryPage: React.FC = () => {
-  const { lang } = useLanguage();
-  const [activePoster, setActivePoster] = useState<any | null>(null);
-  const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<'all' | 'posters' | 'memes' | 'videos' | 'photos'>('all');
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
-  const posters = [
-    {
-      id: 'p1',
-      num: 'POSTER #01 · 5 SEP PROTEST',
-      headline: '5 SEPTEMBER DELHI MARCH: CHALO POLICE HQ & INDIA GATE',
-      sub: 'Nationwide youth protest march over 2,700 student FIR quashings, contractor road warranties, and exam fairness.',
-      tag: 'FEATURED MARCH POSTER',
-      imgSrc: '/cjp_sep5_protest_poster.png'
-    },
-    {
-      id: 'p2',
-      num: 'POSTER #02 · SCHOOL THIK KARO',
-      headline: 'SCHOOL THIK KARO: FIX GOVERNMENT SCHOOLS & LIBRARIES',
-      sub: 'Demanding state education infrastructure audit, public libraries, and student safety.',
-      tag: 'FEATURED CAMPAIGN POSTER',
-      imgSrc: '/cjp_school_thik_karo_poster.png'
-    },
-    {
-      id: 'p3',
-      num: 'POSTER #03 · FEATURED DISPATCH',
-      headline: 'WHEN THE SYSTEM DISCOVERS THE PEOPLE ARE PAYING ATTENTION',
-      sub: 'Empirical investigation into public Section 4 RTI filings, subterranean sewer audits, and contractor warranty boards.',
-      tag: 'FEATURED DISPATCH POSTER',
-      imgSrc: '/cjp_dispatch_paying_attention_poster.png'
-    },
-    {
-      id: 'p4',
-      num: 'POSTER #04 · BLACK MONDAY REPORT',
-      headline: '20 JULY BLACK MONDAY · NEVER FORGET',
-      sub: 'Official evidence documentation and 11 unanswered questions regarding the peaceful student march to Parliament.',
-      tag: 'MEMORIAL TIMELINE POSTER',
-      imgSrc: '/cjp_black_monday_poster.png'
-    },
-    {
-      id: 'p5',
-      num: 'POSTER #05 · BRAND EMBLEM',
-      headline: 'COCKROACH JANTA PARTY (CJP) OFFICIAL EMBLEM',
-      sub: 'For those who refuse to stay silent. Symbolizing subterranean resilience and public transparency.',
-      tag: 'OFFICIAL LOGO EMBLEM',
-      imgSrc: '/cjp_banner.png'
-    },
-    {
-      id: 'p6',
-      num: 'MEDIA CLIP #06 · TOI SPECIAL DISPATCH',
-      headline: "TOI CLIPPING: 'IT DOESN'T END HERE' — CJP CLAIMS STATES HAD TO BOW DOWN TO GEN Z",
-      sub: "Times of India news commentary on youth civic agitation, student FIR quashings, and municipal accountability.",
-      tag: 'TOI MEDIA DISPATCH',
-      imgSrc: '/cjp_toi_genz_news.jpg'
-    },
-    {
-      id: 'p7',
-      num: 'MEDIA PHOTO #07 · CJP WORKING TEAM',
-      headline: 'MOJO STORY: IF CJP CONTESTED ELECTIONS, WOULD GEN Z VOTE FOR IT?',
-      sub: 'Zonal convenors, legal advocacy desk, and working committee members assembly photograph.',
-      tag: 'MOJO STORY TEAM PHOTO',
-      imgSrc: '/cjp_mo_team_photo.jpg'
-    },
-    {
-      id: 'p8',
-      num: 'MEDIA PHOTO #08 · PRESS CONFERENCE',
-      headline: 'CJP PRESS CONFERENCE AT CONSTITUTION CLUB OF INDIA',
-      sub: 'Founding secretariat and policy spokespersons addressing national media on youth demands.',
-      tag: 'PRESS CONFERENCE PHOTO',
-      imgSrc: '/cjp_press_conference_photo.jpg'
-    },
-    {
-      id: 'p9',
-      num: 'DISPATCH STATEMENT #09 · VOICE OF YOUTH',
-      headline: "'पूरा सिस्टम ही चेंज करना होगा' — ABHIJEET DIPKE (CJP FOUNDER)",
-      sub: 'Voice of Youth quote graphic calling for systemic public education and municipal audit reform.',
-      tag: 'VOICE OF YOUTH STATEMENT',
-      imgSrc: '/cjp_system_change_quote.jpg'
-    }
+  const mediaPhotos = [
+    { title: 'MOJO STORY SPECIAL TEAM COVERAGE', tag: 'MEDIA FEATURE', src: '/cjp_mo_team_photo.jpg', desc: 'Gen Z student delegates and secretariat convenors assembled during media interview.' },
+    { title: 'CONSTITUTION CLUB PRESS CONFERENCE', tag: 'PRESSER PHOTO', src: '/cjp_press_conference_photo.jpg', desc: 'Founding convenor Abhijeet Dipke addressing national press correspondents.' },
+    { title: 'TOI DISPATCH: GEN Z CIVIC AGITATION', tag: 'NEWSPAPER CLIPPING', src: '/cjp_toi_genz_news.jpg', desc: 'Times of India news commentary on youth ward audit agitation.' },
+    { title: 'SYSTEM CHANGE DECLARATION', tag: 'STATEMENT PHOTO', src: '/cjp_system_change_quote.jpg', desc: 'Voice of Youth quote graphic calling for transparent municipal water & road contracts.' }
   ];
 
-  const handleShare = (id: string) => {
-    navigator.clipboard.writeText(window.location.href);
-    setCopiedId(id);
-    setTimeout(() => setCopiedId(null), 2000);
-  };
-
   return (
-    <div className="gallery-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
+    <div className="gallery-page py-14 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
-        title="CJP Gallery | Official Campaign Posters & Media Archive"
-        description="Official graphic posters and media photo archive of Cockroach Janta Party: TOI news dispatches, Mojo Story team photo, Presser photos, and campaign artwork."
+        title="CJP Master Media Gallery | Posters, Memes, Videos & Photos"
+        description="Explore the Cockroach Janata Party (CJP) official visual gallery: campaign posters, satirical memes, video dispatches, press coverage, and photo archives."
         canonicalUrl="https://cockroachjantapartywale.com/gallery"
       />
 
       <div className="max-w-[1440px] mx-auto px-4">
         
+        <Breadcrumbs items={[{ label: 'MASTER MEDIA GALLERY' }]} />
+
         {/* Header Hero */}
-        <div className="mb-16 text-center max-w-3xl mx-auto">
-          <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
-            {lang === 'hi' ? 'विजुअल आर्काइव' : 'OFFICIAL CAMPAIGN & MEDIA GALLERY'}
+        <div className="mb-12 text-center max-w-3xl mx-auto space-y-4">
+          <span className="inline-flex items-center gap-2 bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest">
+            <Image size={14} className="text-[#D9572B]" /> OFFICIAL MEDIA ARCHIVE
           </span>
-          <h1 className="font-serif font-black text-4xl md:text-6xl text-[#16120D] mb-4">
-            {lang === 'hi' ? 'द विजुअल स्वार्म (गैलरी)' : 'THE VISUAL GALLERY'}
+          <h1 className="font-display text-4xl sm:text-6xl text-[#16120D] uppercase leading-none font-black">
+            CJP MASTER MEDIA GALLERY
           </h1>
-          <p className="text-[#3A332B] text-base leading-relaxed font-medium">
-            {lang === 'hi'
-              ? "कॉकरोच जनता पार्टी के पोस्टर, प्रेस कॉन्फ्रेंस तस्वीरें, टीओआई मीडिया डिस्पैच और वर्किंग कमेटी तस्वीरें।"
-              : "Official graphic posters, press conference coverage, Times of India media clippings, Mojo Story team photos, and CJP campaign artwork."}
+          <p className="text-sm sm:text-base text-[#3A332B] font-medium leading-relaxed">
+            Filter through original graphic posters, satirical memes, video broadcasts, press photos, and campaign media.
           </p>
         </div>
 
-        {/* 9 Item Gallery Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {posters.map((p) => (
-            <div
-              key={p.id}
-              className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 shadow-md hover:border-[#D9572B] transition-all flex flex-col justify-between group cursor-pointer"
-              onClick={() => setActivePoster(p)}
-            >
-              <div>
-                <div className="flex justify-between items-center text-[10px] font-extrabold mb-3">
-                  <span className="text-[#D9572B]">{p.num}</span>
-                  <span className="bg-[#16120D] text-[#F5EFE6] px-2 py-0.5 uppercase tracking-wider">{p.tag}</span>
-                </div>
-
-                <div className="overflow-hidden border border-[#16120D] bg-[#16120D] mb-4 aspect-square relative flex items-center justify-center">
-                  <img src={p.imgSrc} alt={p.headline} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
-                    <ZoomIn size={28} className="text-[#D9572B]" />
-                  </div>
-                </div>
-
-                <h3 className="font-serif font-black text-lg text-[#16120D] uppercase leading-tight mb-2">
-                  {p.headline}
-                </h3>
-                <p className="text-xs text-[#3A332B] font-medium leading-relaxed mb-4">
-                  {p.sub}
-                </p>
-              </div>
-
-              <div className="pt-3 border-t border-[rgba(22,18,13,0.18)] flex justify-between items-center text-[10px] font-bold text-[#3A332B]" onClick={(e) => e.stopPropagation()}>
-                <span>CLICK TO PREVIEW</span>
-                <div className="flex items-center gap-2">
-                  <button onClick={() => handleShare(p.id)} className="p-1 bg-[#EADBCE] border border-[#16120D]">
-                    {copiedId === p.id ? <Check size={12} className="text-[#D9572B]" /> : <Share2 size={12} />}
-                  </button>
-                  <a href={p.imgSrc} download={`${p.id}.png`} className="bg-[#16120D] text-[#F5EFE6] px-2.5 py-1 flex items-center gap-1">
-                    <Download size={10} /> SAVE
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Category Tabs */}
+        <div className="flex items-center justify-center gap-2 sm:gap-3 mb-12 flex-wrap">
+          <button
+            onClick={() => setActiveTab('all')}
+            className={`btn-brutal h-9 px-4 text-xs font-black uppercase cursor-pointer ${
+              activeTab === 'all' ? 'bg-[#D9572B] text-white shadow-[3px_3px_0px_0px_#16120D]' : 'bg-[#F5EFE6] text-[#16120D] hover:bg-[#16120D] hover:text-white shadow-[2px_2px_0px_0px_#16120D]'
+            }`}
+          >
+            ALL MEDIA
+          </button>
+          <button
+            onClick={() => setActiveTab('posters')}
+            className={`btn-brutal h-9 px-4 text-xs font-black uppercase cursor-pointer ${
+              activeTab === 'posters' ? 'bg-[#D9572B] text-white shadow-[3px_3px_0px_0px_#16120D]' : 'bg-[#F5EFE6] text-[#16120D] hover:bg-[#16120D] hover:text-white shadow-[2px_2px_0px_0px_#16120D]'
+            }`}
+          >
+            🪧 POSTERS ({postersData.length})
+          </button>
+          <button
+            onClick={() => setActiveTab('memes')}
+            className={`btn-brutal h-9 px-4 text-xs font-black uppercase cursor-pointer ${
+              activeTab === 'memes' ? 'bg-[#D9572B] text-white shadow-[3px_3px_0px_0px_#16120D]' : 'bg-[#F5EFE6] text-[#16120D] hover:bg-[#16120D] hover:text-white shadow-[2px_2px_0px_0px_#16120D]'
+            }`}
+          >
+            😂 MEMES ({memesData.length})
+          </button>
+          <button
+            onClick={() => setActiveTab('videos')}
+            className={`btn-brutal h-9 px-4 text-xs font-black uppercase cursor-pointer ${
+              activeTab === 'videos' ? 'bg-[#D9572B] text-white shadow-[3px_3px_0px_0px_#16120D]' : 'bg-[#F5EFE6] text-[#16120D] hover:bg-[#16120D] hover:text-white shadow-[2px_2px_0px_0px_#16120D]'
+            }`}
+          >
+            📺 VIDEOS ({videosData.length})
+          </button>
+          <button
+            onClick={() => setActiveTab('photos')}
+            className={`btn-brutal h-9 px-4 text-xs font-black uppercase cursor-pointer ${
+              activeTab === 'photos' ? 'bg-[#D9572B] text-white shadow-[3px_3px_0px_0px_#16120D]' : 'bg-[#F5EFE6] text-[#16120D] hover:bg-[#16120D] hover:text-white shadow-[2px_2px_0px_0px_#16120D]'
+            }`}
+          >
+            📸 PRESS PHOTOS ({mediaPhotos.length})
+          </button>
         </div>
 
-        {/* Fullscreen Lightbox Preview Modal */}
-        {activePoster && (
-          <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onClick={() => setActivePoster(null)}>
-            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 max-w-2xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+        {/* Media Grids */}
+        {(activeTab === 'all' || activeTab === 'photos') && (
+          <div className="space-y-6 mb-16">
+            <div className="border-b-4 border-[#16120D] pb-3">
+              <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-widest block">PRESS &amp; EVENTS ARCHIVE</span>
+              <h2 className="font-display text-3xl text-[#16120D] uppercase font-black">DOCUMENTARY PHOTOS</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {mediaPhotos.map((photo, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => setLightboxImage(photo.src)}
+                  className="bg-[#F5EFE6] border-4 border-[#16120D] p-4 shadow-[5px_5px_0px_0px_#16120D] hover:border-[#D9572B] transition-all cursor-pointer flex flex-col justify-between"
+                >
+                  <div className="aspect-video bg-[#16120D] border-2 border-[#16120D] overflow-hidden mb-3">
+                    <img src={photo.src} alt={photo.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <div>
+                    <span className="bg-[#D9572B] text-white text-[9px] font-black px-2 py-0.5 uppercase tracking-widest block w-fit mb-1">{photo.tag}</span>
+                    <h3 className="font-display text-lg text-[#16120D] uppercase font-black leading-tight mb-1">{photo.title}</h3>
+                    <p className="text-[11px] text-[#3A332B] font-medium leading-snug">{photo.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {(activeTab === 'all' || activeTab === 'videos') && (
+          <div className="space-y-6 mb-16">
+            <div className="border-b-4 border-[#16120D] pb-3">
+              <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-widest block">VIDEO DISPATCHES &amp; EXPLAINERS</span>
+              <h2 className="font-display text-3xl text-[#16120D] uppercase font-black">VIDEO MEDIA HUB</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {videosData.map((vid) => (
+                <VideoCard key={vid.id} video={vid} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {(activeTab === 'all' || activeTab === 'posters') && (
+          <div className="space-y-6 mb-16">
+            <div className="border-b-4 border-[#16120D] pb-3">
+              <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-widest block">CAMPAIGN &amp; PROTEST POSTERS</span>
+              <h2 className="font-display text-3xl text-[#16120D] uppercase font-black">GRAPHIC POSTER GALLERY</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {postersData.slice(0, 8).map((post) => (
+                <PosterCard key={post.id} poster={post} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {(activeTab === 'all' || activeTab === 'memes') && (
+          <div className="space-y-6 mb-16">
+            <div className="border-b-4 border-[#16120D] pb-3">
+              <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-widest block">CIVIC SATIRE &amp; HUMOR</span>
+              <h2 className="font-display text-3xl text-[#16120D] uppercase font-black">MEME GALLERY</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {memesData.slice(0, 6).map((meme) => (
+                <MemeCard key={meme.id} meme={meme} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Lightbox Image Preview Modal */}
+        {lightboxImage && (
+          <div
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+            onClick={() => setLightboxImage(null)}
+          >
+            <div
+              className="bg-[#F5EFE6] border-4 border-[#16120D] p-6 max-w-3xl w-full shadow-[12px_12px_0px_0px_#16120D] relative animate-dropdown text-[#16120D]"
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
-                onClick={() => setActivePoster(null)}
-                className="absolute top-4 right-4 text-[#16120D] hover:text-[#D9572B] p-1 bg-[#EADBCE] border border-[#16120D]"
-                aria-label="Close modal"
+                onClick={() => setLightboxImage(null)}
+                className="absolute top-4 right-4 btn-brutal p-2 bg-[#EADBCE] text-[#16120D] hover:bg-[#D9572B] hover:text-white"
               >
                 <X size={20} />
               </button>
-
-              <div className="overflow-hidden border-2 border-[#16120D] bg-[#16120D] mb-4 aspect-square max-h-[50vh] flex items-center justify-center p-2">
-                <img src={activePoster.imgSrc} alt={activePoster.headline} className="max-w-full max-h-full object-contain mx-auto" />
+              <div className="aspect-video bg-black border-2 border-[#16120D] overflow-hidden mb-4 flex items-center justify-center">
+                <img src={lightboxImage} alt="Fullscreen Media Preview" className="max-w-full max-h-full object-contain mx-auto" />
               </div>
-
-              <div className="flex justify-between items-center text-xs font-extrabold text-[#D9572B] mb-2">
-                <span>{activePoster.num}</span>
-                <span className="bg-[#16120D] text-[#F5EFE6] px-2.5 py-0.5 text-[10px] uppercase">{activePoster.tag}</span>
-              </div>
-
-              <h2 className="font-serif font-black text-2xl text-[#16120D] uppercase mb-2 leading-tight">
-                {activePoster.headline}
-              </h2>
-
-              <p className="text-xs text-[#3A332B] font-medium mb-6">
-                {activePoster.sub}
-              </p>
-
-              <div className="flex justify-end gap-3">
-                <a href={activePoster.imgSrc} download={`${activePoster.id}.png`} className="bg-[#16120D] text-[#F5EFE6] font-extrabold text-xs uppercase px-5 py-2.5 flex items-center gap-1.5">
-                  <Download size={14} /> DOWNLOAD PHOTO / POSTER
+              <div className="flex justify-end">
+                <a
+                  href={lightboxImage}
+                  download="cjp_media_photo.jpg"
+                  className="btn-brutal py-2 px-4 bg-[#D9572B] text-white hover:bg-[#16120D] text-xs font-black uppercase flex items-center gap-2"
+                >
+                  <Download size={14} /> DOWNLOAD PHOTO
                 </a>
               </div>
             </div>

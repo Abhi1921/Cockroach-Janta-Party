@@ -1,49 +1,126 @@
-import React from 'react';
-import { Download } from 'lucide-react';
+import React, { useState } from 'react';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { GlossaryCard } from '../components/GlossaryCard';
+import { glossaryData } from '../data/glossaryData';
+import { resourcesData } from '../data/resourcesData';
+import { Download, BookOpen, Search, Sparkles } from 'lucide-react';
 
 export const ResourcesPage: React.FC = () => {
-  const docs = [
-    { title: 'Section 4 RTI Proactive Tender Disclosure Application Format', category: 'RTI TEMPLATE', format: 'PDF', size: '1.2 MB' },
-    { title: 'Subterranean Drain Desilting Depth Verification Manual', category: 'FIELD GUIDE', format: 'PDF', size: '2.4 MB' },
-    { title: 'Contractor 3-Year Repair Warranty Notice Board Legal Guide', category: 'LEGAL GUIDE', format: 'PDF', size: '850 KB' },
-    { title: 'Household Water Quality TDS & Chlorine Field Testing Guide', category: 'HEALTH GUIDE', format: 'PDF', size: '1.8 MB' }
-  ];
+  const [selectedLetter, setSelectedLetter] = useState<string>('ALL');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+
+  const alphabet = ['ALL', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')];
+
+  const filteredGlossary = glossaryData.filter(g => {
+    const matchesLetter = selectedLetter === 'ALL' || g.letter.toUpperCase() === selectedLetter;
+    const matchesSearch = !searchTerm || g.term.toLowerCase().includes(searchTerm.toLowerCase()) || g.definition.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesLetter && matchesSearch;
+  });
 
   return (
-    <div className="resources-page py-12 bg-[#0d0a07] text-[#f1e8d2] font-sans">
+    <div className="resources-page py-14 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
+      <SEOHead
+        title="CJP Encyclopedia & Public Resource Hub"
+        description="Explore the Cockroach Janta Party (CJP) Encyclopedia, A-Z glossary of satire concepts, civic RTI templates, manifesto PDFs, and brand media kits."
+        canonicalUrl="https://cockroachjantapartywale.com/resources"
+      />
+
       <div className="max-w-[1440px] mx-auto px-4">
         
-        <div className="mb-12 text-center max-w-3xl mx-auto">
-          <span className="inline-block bg-[#c09a25]/10 text-[#c09a25] border border-[#c09a25] px-3 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-3">
-            PUBLIC DOMAIN DOCUMENTS
+        <Breadcrumbs items={[{ label: 'RESOURCES & ENCYCLOPEDIA' }]} />
+
+        {/* Header Hero */}
+        <div className="mb-12 text-center max-w-3xl mx-auto space-y-4">
+          <span className="inline-flex items-center gap-2 bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest">
+            <BookOpen size={14} className="text-[#D9572B]" /> CJP ENCYCLOPEDIA &amp; CIVIC ARCHIVE
           </span>
-          <h1 className="font-serif font-black text-4xl md:text-6xl text-[#f1e8d2] mb-4">
-            PUBLIC RESOURCE ROOM
+          <h1 className="font-display text-4xl sm:text-6xl text-[#16120D] uppercase leading-none font-black">
+            CJP SWARM ENCYCLOPEDIA
           </h1>
-          <p className="text-[#9e917c] text-base leading-relaxed font-medium">
-            Download free RTI query templates, subterranean drainage manuals, public notices, and civic audit guides.
+          <p className="text-[#3A332B] text-sm sm:text-base leading-relaxed font-medium">
+            Explore our A-to-Z dictionary of CJP satire concepts, civic terms, RTI frameworks, and downloadable campaign resources.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {docs.map((doc, idx) => (
-            <div key={idx} className="bg-[#140f0a] border border-[rgba(241,232,210,0.18)] p-6 hover:border-[#c09a25] transition-all flex flex-col justify-between">
-              <div>
-                <span className="text-[10px] font-extrabold text-[#c09a25] uppercase tracking-widest block mb-2">{doc.category}</span>
-                <h3 className="font-serif font-black text-lg text-[#f1e8d2] mb-4 leading-snug">{doc.title}</h3>
-              </div>
+        {/* A-Z Alphabetical Navigation Bar */}
+        <div className="bg-[#F5EFE6] border-4 border-[#16120D] p-5 shadow-[6px_6px_0px_0px_#16120D] mb-12 space-y-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b-2 border-[#16120D] pb-4">
+            <span className="text-xs font-black text-[#16120D] uppercase tracking-wider flex items-center gap-1.5">
+              <Sparkles size={14} className="text-[#D9572B]" /> A-TO-Z GLOSSARY INDEX ({filteredGlossary.length} ENTRIES)
+            </span>
 
-              <div className="flex justify-between items-center pt-4 border-t border-[rgba(241,232,210,0.1)]">
-                <span className="text-xs text-[#9e917c] font-bold">{doc.format} · {doc.size}</span>
-                <button
-                  onClick={() => alert(`Downloading ${doc.title}...`)}
-                  className="bg-[#0d0a07] text-[#f1e8d2] font-extrabold text-xs uppercase tracking-wider px-4 py-2 border border-[rgba(241,232,210,0.2)] hover:border-[#d9572b] hover:text-[#d9572b] inline-flex items-center gap-1.5"
-                >
-                  <Download size={14} /> DOWNLOAD
-                </button>
-              </div>
+            {/* Search Input */}
+            <div className="relative w-full sm:w-72">
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search glossary terms..."
+                className="w-full bg-[#EADBCE] border-2 border-[#16120D] px-3 py-1.5 text-xs font-extrabold text-[#16120D] outline-none focus:border-[#D9572B]"
+              />
+              <Search size={14} className="absolute right-3 top-2.5 text-[#D9572B]" />
             </div>
+          </div>
+
+          {/* Letter Buttons Strip */}
+          <div className="flex items-center justify-center gap-1.5 flex-wrap">
+            {alphabet.map((letter) => (
+              <button
+                key={letter}
+                onClick={() => setSelectedLetter(letter)}
+                className={`btn-brutal h-8 w-8 text-xs font-black uppercase flex items-center justify-center cursor-pointer ${
+                  selectedLetter === letter
+                    ? 'bg-[#D9572B] text-white shadow-[2px_2px_0px_0px_#16120D]'
+                    : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white shadow-[1.5px_1.5px_0px_0px_#16120D]'
+                }`}
+              >
+                {letter}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Glossary Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {filteredGlossary.map((entry, idx) => (
+            <GlossaryCard key={idx} entry={entry} />
           ))}
+        </div>
+
+        {/* Downloadable Public Resource Documents Section */}
+        <div className="bg-[#16120D] text-[#F5EFE6] border-4 border-[#16120D] p-8 sm:p-10 shadow-[8px_8px_0px_0px_#16120D] mb-16">
+          <div className="mb-8 border-b-2 border-white/20 pb-4">
+            <span className="bg-[#D9572B] text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 inline-block mb-2">
+              DOWNLOADABLE ASSET ROOM
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl text-white uppercase leading-none font-black">
+              CIVIC GUIDES &amp; RTI TEMPLATES
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {resourcesData.map((res) => (
+              <div key={res.id} className="bg-[#231F1A] border-2 border-white/10 p-6 flex flex-col justify-between hover:border-[#D9572B] transition-all">
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-wider">{res.category}</span>
+                    <span className="text-[10px] font-mono text-[#EADBCE]">{res.format} • {res.fileSize}</span>
+                  </div>
+                  <h3 className="font-display text-xl uppercase text-white mb-2 leading-tight font-black">{res.title}</h3>
+                  <p className="text-xs text-[#EADBCE] font-medium leading-relaxed mb-4">{res.description}</p>
+                </div>
+
+                <a
+                  href={`data:text/plain;charset=utf-8,${encodeURIComponent(`CJP RESOURCE DOCUMENT\nTitle: ${res.title}\nCategory: ${res.category}\nOfficial Public Domain Asset - Cockroach Janata Party`)}`}
+                  download={`${res.title.toLowerCase().replace(/\s+/g, '_')}.txt`}
+                  className="btn-brutal py-2 px-4 bg-[#D9572B] text-white hover:bg-[#EADBCE] hover:text-[#16120D] text-xs font-black uppercase flex items-center justify-center gap-2"
+                >
+                  <Download size={14} /> DOWNLOAD ASSET
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

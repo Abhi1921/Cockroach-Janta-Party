@@ -116,5 +116,89 @@ export const newsData: NewsArticle[] = [
         text: "Access to uncontaminated piped drinking water is a non-negotiable fundamental civic right. CJP volunteer kiosks empower households with immediate water quality diagnostics."
       }
     ]
+  },
+  {
+    slug: "school-thik-karo-pan-india-launch",
+    title: "School Thik Karo Campaign Launches Across 12 States to Audit Classroom Infrastructure",
+    summary: "CJP launches nation-wide citizen audit of government school desks, roofs, and sanitation blocks using standardized RTI scorecards.",
+    category: "SOCIETY",
+    publishDate: "AUG 05, 2026",
+    author: {
+      name: "Meera Iyer",
+      role: "Education Reform Observer"
+    },
+    readingTime: "4 min read",
+    featuredImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Students sitting in a classroom during an educational audit",
+    tags: ["Education", "School Thik Karo", "RTI", "Public Schools"],
+    content: [
+      {
+        heading: "Audit Charter Launched",
+        text: "The School Thik Karo initiative urges citizens to report leaking classroom roofs, missing desks, and broken water filters. Initial RTI findings indicate over 30% of audited schools operate with overdue maintenance tenders."
+      }
+    ]
+  },
+  {
+    slug: "dimagi-naxal-satire-manifesto-release",
+    title: "Why Asking Questions About Road Tenders Does Not Make You a 'Dimagi Naxal'",
+    summary: "A satirical essay breaking down the political rhetoric surrounding civic activism, RTI inquiries, and urban citizen rights.",
+    category: "POLITICS SATIRE",
+    publishDate: "JUL 28, 2026",
+    author: {
+      name: "Abhijeet Dipke",
+      role: "Chief Secretariat Observer"
+    },
+    readingTime: "7 min read",
+    featuredImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Editorial writing setup with fountain pen and newsprint notebook",
+    tags: ["Dimagi Naxal", "Satire", "RTI", "Civil Liberties"],
+    content: [
+      {
+        heading: "The Satire Behind the Label",
+        text: "When asking why a road melted in three days gets labeled as 'subversive thinking', humor becomes the sharpest tool for democracy. CJP breaks down why civic curiosity is the ultimate form of nation-building."
+      }
+    ]
+  },
+  {
+    slug: "bitchat-decentralized-mesh-for-civic-alerts",
+    title: "BitChat Mesh: Testing Offline Peer-to-Peer Civic Ticker Technology",
+    summary: "Exploring CJP's experimental lightweight BitChat protocol designed for neighborhood civic updates and offline rally safety coordination.",
+    category: "TECHNOLOGY",
+    publishDate: "JUL 20, 2026",
+    author: {
+      name: "Tech Swarm Guild",
+      role: "Open Source Tech Collective"
+    },
+    readingTime: "5 min read",
+    featuredImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Cyberpunk digital matrix code stream representing mesh technology",
+    tags: ["BitChat", "Technology", "Mesh Network", "Privacy"],
+    content: [
+      {
+        heading: "Decentralized Civic Communication",
+        text: "BitChat allows citizens to relay emergency traffic blockages, pothole warnings, and RTI meeting locations over Bluetooth mesh without relying on centralized servers."
+      }
+    ]
+  },
+  {
+    slug: "black-monday-20-july-recap-report",
+    title: "Black Monday Recap: 45,000 Citizens Wear Black Attire Demanding 3-Year Asphalt Guarantees",
+    summary: "Field report from Black Monday demonstrations across New Delhi, Bengaluru, and Pune documenting pothole maps and contractor liability petitions.",
+    category: "CJP COMMENTARY",
+    publishDate: "JUL 21, 2026",
+    author: {
+      name: "Rohan Verma",
+      role: "Road Safety Inspector"
+    },
+    readingTime: "5 min read",
+    featuredImage: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Citizens meeting in dark attire discussing civic priorities",
+    tags: ["Black Monday", "Roads", "Protests", "Contractor Warranty"],
+    content: [
+      {
+        heading: "Nationwide Civic Action",
+        text: "Thousands of residents wore black clothing to work and posted photos cataloging pothole coordinates to demonstrate solidarity for durable public road standards."
+      }
+    ]
   }
 ];

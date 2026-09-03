@@ -112,8 +112,12 @@ export const SupportDevPage: React.FC = () => {
               />
             </div>
 
-            <div className="bg-[#D9572B] text-white text-xs font-black py-1.5 px-3 uppercase tracking-wider inline-block mb-3">
+            <div className="bg-[#D9572B] text-white text-xs font-black py-1.5 px-3 uppercase tracking-wider inline-block mb-3 rounded">
               TIER: ₹{selectedTier.amount} ({selectedTier.label})
+            </div>
+
+            <div className="bg-[#16120D] border border-white/20 p-2 text-xs font-mono text-[#EADBCE] rounded flex items-center justify-between mb-2">
+              <span className="font-bold">UPI ID: abhishekrajput62394-1@oksbi</span>
             </div>
 
             <p className="text-[10px] text-[#EADBCE] font-mono leading-tight">
