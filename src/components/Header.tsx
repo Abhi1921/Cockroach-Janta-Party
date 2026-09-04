@@ -191,16 +191,6 @@ export const Header: React.FC = () => {
               <kbd className="hidden 2xl:inline-block text-[8.5px] bg-[#16120D] text-white px-1 py-0.5 rounded font-mono font-bold">/</kbd>
             </button>
 
-            {/* VIRAL SHARE BUTTON */}
-            <button
-              onClick={() => setShareModalOpen(true)}
-              className="btn-brutal h-8 sm:h-9 px-2 sm:px-2.5 text-[10.5px] sm:text-[11px] bg-[#F59E0B] text-black hover:bg-[#D97706] hover:text-white flex items-center justify-center gap-1 whitespace-nowrap cursor-pointer"
-              title="Share website on Twitter, WhatsApp, Reddit, Facebook"
-              aria-label="Promote Website"
-            >
-              <Share2 size={13} className="text-black group-hover:text-white" />
-              <span className="font-extrabold hidden sm:inline">SHARE</span>
-            </button>
             
             {/* SUPPORT THE DEV CTA BUTTON */}
             <button
