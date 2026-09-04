@@ -11,17 +11,17 @@ interface SEOHeadProps {
 export const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
-  keywords = "Cockroach Janta Party, CJP, CJP Party, Abhijeet Dipke, Ashutosh Ranka, Saurav Das, School Thik Karo, Black Monday 20 July, youth civic movement, public accountability, RTI transparency, urban governance, ward audit",
+  keywords = "Cockroach Janta Party, Cockroach Janta Party Wale, cockroachjanatapartywale.com, CJP, CJP Party, Abhijeet Dipke, Ashutosh Ranka, Saurav Das, School Thik Karo, Supreme Court FIR quash archive, Black Monday 20 July, youth civic movement, public accountability, RTI transparency, urban governance, ward audit",
   ogImage = "/cjp_banner.png",
   canonicalUrl
 }) => {
   useEffect(() => {
-    // 1. Page Title: Strictly "Cockroach Janta Party" when specified, or append cleanly
-    const fullTitle = title === "Cockroach Janta Party"
-      ? "Cockroach Janta Party"
+    // 1. Page Title: Ensure high ranking brand keyword "Cockroach Janta Party Wale"
+    const fullTitle = title === "Cockroach Janta Party" || title === "Cockroach Janta Party Wale"
+      ? "Cockroach Janta Party Wale — Independent Commentary & Updates"
       : title.includes("Cockroach Janta Party")
         ? title
-        : `${title} | Cockroach Janta Party`;
+        : `${title} | Cockroach Janta Party Wale`;
     document.title = fullTitle;
 
     // Helper to set meta attributes
@@ -52,6 +52,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     setMeta('name', 'twitter:title', fullTitle);
     setMeta('name', 'twitter:description', description);
     setMeta('name', 'twitter:image', ogImage);
+    setMeta('name', 'twitter:site', '@Cockroachisback');
 
     // 5. Canonical Link
     const targetCanonical = canonicalUrl || 'https://cockroachjantapartywale.com/';
@@ -84,7 +85,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         ...(targetCanonical !== "https://cockroachjantapartywale.com/" ? [{
           "@type": "ListItem",
           "position": 2,
-          "name": title.replace(" | Cockroach Janta Party", ""),
+          "name": title.replace(" | Cockroach Janta Party", "").replace(" | Cockroach Janta Party Wale", ""),
           "item": targetCanonical
         }] : [])
       ]

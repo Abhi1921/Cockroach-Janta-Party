@@ -12,9 +12,11 @@ import {
   ShieldAlert,
   Radio,
   Check,
-  Search
+  Search,
+  Share2
 } from 'lucide-react';
 import { GlobalSearchModal } from './GlobalSearchModal';
+import { SocialShareModal } from './SocialShareModal';
 
 export const Header: React.FC = () => {
   const { lang, setLang, t } = useLanguage();
@@ -22,6 +24,7 @@ export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [supportModalOpen, setSupportModalOpen] = useState(false);
+  const [shareModalOpen, setShareModalOpen] = useState(false);
   const [modalQrRevealed, setModalQrRevealed] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [selectedTier, setSelectedTier] = useState({ id: 'coffee', label: 'Buy a Coffee', amount: '50' });
@@ -186,6 +189,17 @@ export const Header: React.FC = () => {
               <Search size={13} className="text-[#D9572B]" />
               <span className="font-extrabold hidden sm:inline">SEARCH</span>
               <kbd className="hidden 2xl:inline-block text-[8.5px] bg-[#16120D] text-white px-1 py-0.5 rounded font-mono font-bold">/</kbd>
+            </button>
+
+            {/* VIRAL SHARE BUTTON */}
+            <button
+              onClick={() => setShareModalOpen(true)}
+              className="btn-brutal h-8 sm:h-9 px-2 sm:px-2.5 text-[10.5px] sm:text-[11px] bg-[#F59E0B] text-black hover:bg-[#D97706] hover:text-white flex items-center justify-center gap-1 whitespace-nowrap cursor-pointer"
+              title="Share website on Twitter, WhatsApp, Reddit, Facebook"
+              aria-label="Promote Website"
+            >
+              <Share2 size={13} className="text-black group-hover:text-white" />
+              <span className="font-extrabold hidden sm:inline">SHARE</span>
             </button>
             
             {/* SUPPORT THE DEV CTA BUTTON */}
@@ -406,6 +420,9 @@ export const Header: React.FC = () => {
 
       {/* Global Search Modal */}
       <GlobalSearchModal isOpen={searchModalOpen} onClose={() => setSearchModalOpen(false)} />
+
+      {/* Social Share Modal */}
+      <SocialShareModal isOpen={shareModalOpen} onClose={() => setShareModalOpen(false)} />
     </>
   );
 };
