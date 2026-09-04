@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useState } from 'react';
 
-export type Language = 'en' | 'hi';
+export type Language = 'en' | 'hi' | 'mr';
 
 interface Translations {
   [key: string]: {
     en: string;
     hi: string;
+    mr?: string;
   };
 }
 
@@ -13,15 +14,18 @@ const translations: Translations = {
   // Navigation & Core Labels
   brandName: {
     en: 'Cockroach Janta Party',
-    hi: 'कॉकरोच जनता पार्टी'
+    hi: 'कॉकरोच जनता पार्टी',
+    mr: 'कॉकरोच जनता पार्टी'
   },
   subLabel: {
     en: 'INDEPENDENT SATIRE · EST. 2026',
-    hi: 'स्वतंत्र व्यंग्य · स्था. 2026'
+    hi: 'स्वतंत्र व्यंग्य · स्था. 2026',
+    mr: 'स्वतंत्र उपहास · स्था. २०२६'
   },
   tagline: {
     en: 'Young Minds. Real Issues. A Better Tomorrow.',
-    hi: 'युवा सोच। असली मुद्दे। एक बेहतर कल।'
+    hi: 'युवा सोच। असली मुद्दे। एक बेहतर कल।',
+    mr: 'युवा विचार। खरे प्रश्न। उज्ज्वल उद्या.'
   },
   navVision: {
     en: 'Vision',

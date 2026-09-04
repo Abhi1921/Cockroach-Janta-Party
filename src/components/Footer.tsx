@@ -140,12 +140,12 @@ export const Footer: React.FC = () => {
               <ul className="space-y-2 uppercase text-[11px]">
                 <li><Link to="/vision" className="hover:text-[#D9572B] transition-colors">Vision</Link></li>
                 <li><Link to="/manifesto" className="hover:text-[#D9572B] transition-colors">The Manifesto</Link></li>
-                <li><Link to="/campaigns" className="hover:text-[#D9572B] transition-colors font-bold text-[#E6A100]">Campaigns</Link></li>
-                <li><Link to="/black-monday" className="hover:text-[#D9572B] transition-colors font-bold text-[#D9572B]">Black Monday</Link></li>
-                <li><Link to="/articles" className="hover:text-[#D9572B] transition-colors">Articles</Link></li>
-                <li><Link to="/gallery" className="hover:text-[#D9572B] transition-colors">Gallery</Link></li>
-                <li><Link to="/tracker" className="hover:text-[#D9572B] transition-colors">Tracker</Link></li>
-                <li><Link to="/protests" className="hover:text-[#D9572B] transition-colors">Protests</Link></li>
+                <li><Link to="/archive" className="hover:text-[#D9572B] transition-colors font-bold text-[#D9572B]">Digital Archive</Link></li>
+                <li><Link to="/fact-check" className="hover:text-emerald-400 transition-colors font-bold text-emerald-400">Fact Check Matrix</Link></li>
+                <li><Link to="/internal-disputes" className="hover:text-amber-400 transition-colors font-bold text-amber-400">Internal Disputes</Link></li>
+                <li><Link to="/domains" className="hover:text-[#D9572B] transition-colors">Domain Map</Link></li>
+                <li><Link to="/youtube" className="hover:text-red-400 transition-colors">YouTube Archive</Link></li>
+                <li><Link to="/documents" className="hover:text-[#D9572B] transition-colors">Documents & Court Orders</Link></li>
               </ul>
             </div>
 

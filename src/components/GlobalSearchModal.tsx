@@ -10,6 +10,7 @@ import { glossaryData } from '../data/glossaryData';
 import { videosData } from '../data/videosData';
 import { membersData } from '../data/membersData';
 import { faqsData } from '../data/faqsData';
+import { SPELLING_ALIASES_CLUSTER } from '../data/masterArchiveData';
 
 interface GlobalSearchModalProps {
   isOpen: boolean;
@@ -44,8 +45,9 @@ export const GlobalSearchModal: React.FC<GlobalSearchModalProps> = ({ isOpen, on
   const matchingVideos = q ? videosData.filter(v => v.title.toLowerCase().includes(q) || v.description.toLowerCase().includes(q)) : [];
   const matchingMembers = q ? membersData.filter(m => m.name.toLowerCase().includes(q) || m.city.toLowerCase().includes(q)) : [];
   const matchingFaqs = q ? faqsData.filter(f => f.question.toLowerCase().includes(q) || f.answer.toLowerCase().includes(q)) : [];
+  const matchingAliases = q ? SPELLING_ALIASES_CLUSTER.filter(a => a.variant.toLowerCase().includes(q) || a.notes.toLowerCase().includes(q)) : [];
 
-  const totalResults = matchingArticles.length + matchingCampaigns.length + matchingIssues.length + matchingPosters.length + matchingMemes.length + matchingGlossary.length + matchingVideos.length + matchingMembers.length + matchingFaqs.length;
+  const totalResults = matchingArticles.length + matchingCampaigns.length + matchingIssues.length + matchingPosters.length + matchingMemes.length + matchingGlossary.length + matchingVideos.length + matchingMembers.length + matchingFaqs.length + matchingAliases.length;
 
   const handleSelect = (path: string) => {
     onClose();
@@ -112,6 +114,28 @@ export const GlobalSearchModal: React.FC<GlobalSearchModalProps> = ({ isOpen, on
         ) : (
           <div className="space-y-6 max-h-[60vh] overflow-y-auto pr-2 no-scrollbar">
             
+            {/* Spelling Aliases / Variations */}
+            {matchingAliases.length > 0 && (
+              <div className="space-y-2">
+                <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-widest block flex items-center gap-1">
+                  <BookOpen size={12} /> SPELLING VARIATIONS &amp; TRANSLITERATIONS ({matchingAliases.length})
+                </span>
+                {matchingAliases.slice(0, 3).map((alias, idx) => (
+                  <div
+                    key={idx}
+                    onClick={() => handleSelect('/cockroach-janta-party')}
+                    className="p-3 bg-[#EADBCE] border-2 border-[#16120D] hover:bg-[#16120D] hover:text-white transition-colors cursor-pointer flex justify-between items-center"
+                  >
+                    <div>
+                      <div className="text-xs font-black uppercase font-mono">{alias.variant} → {alias.canonicalEntity}</div>
+                      <div className="text-[10px] opacity-80">{alias.type} ({alias.language}) • {alias.notes}</div>
+                    </div>
+                    <ArrowRight size={14} />
+                  </div>
+                ))}
+              </div>
+            )}
+
             {/* Articles */}
             {matchingArticles.length > 0 && (
               <div className="space-y-2">

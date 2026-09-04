@@ -58,6 +58,16 @@ import { MemesPage } from './pages/MemesPage';
 import { RaiseVoicePage } from './pages/RaiseVoicePage';
 import { LeaveSwarmPage } from './pages/LeaveSwarmPage';
 import { DonateAbdulPage } from './pages/DonateAbdulPage';
+import { MasterArchivePage } from './pages/MasterArchivePage';
+import { InternalDisputesPage } from './pages/InternalDisputesPage';
+import { FactCheckPage } from './pages/FactCheckPage';
+import { DomainsPage } from './pages/DomainsPage';
+import { YouTubeDirectoryPage } from './pages/YouTubeDirectoryPage';
+import { SocialDirectoryPage } from './pages/SocialDirectoryPage';
+import { DocumentArchivePage } from './pages/DocumentArchivePage';
+import { PersonDetailPage } from './pages/PersonDetailPage';
+import { ResearchDashboardPage } from './pages/ResearchDashboardPage';
+import { CanonicalSpellingPage } from './pages/CanonicalSpellingPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -125,7 +135,32 @@ export default function App() {
               <Route path="/join" element={<JoinPage />} />
               <Route path="/contact" element={<ContactPage />} />
 
-              {/* Information & Resources */}
+              {/* Information & Research Archive */}
+              <Route path="/archive" element={<MasterArchivePage />} />
+              <Route path="/master-archive" element={<MasterArchivePage />} />
+              <Route path="/digital-archive" element={<MasterArchivePage />} />
+              <Route path="/sources" element={<MasterArchivePage />} />
+              <Route path="/cockroach-janta-party" element={<CanonicalSpellingPage />} />
+              <Route path="/cockroach-janata-party" element={<CanonicalSpellingPage />} />
+              <Route path="/what-is-cjp" element={<CanonicalSpellingPage />} />
+              <Route path="/internal-disputes" element={<InternalDisputesPage />} />
+              <Route path="/fact-check" element={<FactCheckPage />} />
+              <Route path="/domains" element={<DomainsPage />} />
+              <Route path="/youtube" element={<YouTubeDirectoryPage />} />
+              <Route path="/videos" element={<YouTubeDirectoryPage />} />
+              <Route path="/social" element={<SocialDirectoryPage />} />
+              <Route path="/x-twitter" element={<SocialDirectoryPage />} />
+              <Route path="/instagram" element={<SocialDirectoryPage />} />
+              <Route path="/facebook" element={<SocialDirectoryPage />} />
+              <Route path="/telegram" element={<SocialDirectoryPage />} />
+              <Route path="/documents" element={<DocumentArchivePage />} />
+              <Route path="/people/:personId" element={<PersonDetailPage />} />
+              <Route path="/people/abhijeet-dipke" element={<PersonDetailPage />} />
+              <Route path="/people/ashutosh-ranka" element={<PersonDetailPage />} />
+              <Route path="/people/saurav-das" element={<PersonDetailPage />} />
+              <Route path="/people/manish-brahmbhatt" element={<PersonDetailPage />} />
+              <Route path="/admin" element={<ResearchDashboardPage />} />
+              <Route path="/research-dashboard" element={<ResearchDashboardPage />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/resources" element={<ResourcesPage />} />
               <Route path="/tracker" element={<TrackerPage />} />

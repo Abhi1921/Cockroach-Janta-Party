@@ -12,8 +12,7 @@ import {
   ShieldAlert,
   Radio,
   Check,
-  Search,
-  Share2
+  Search
 } from 'lucide-react';
 import { GlobalSearchModal } from './GlobalSearchModal';
 import { SocialShareModal } from './SocialShareModal';
@@ -66,6 +65,7 @@ export const Header: React.FC = () => {
     { titleCustom: 'ABOUT', href: '/about' },
     { titleCustom: 'VISION', href: '/vision' },
     { titleCustom: 'MANIFESTO', href: '/manifesto' },
+    { titleCustom: 'ARCHIVE', href: '/archive' },
     { titleCustom: 'CAMPAIGNS', href: '/campaigns' },
     { titleCustom: 'ISSUES', href: '/issues' },
     { titleCustom: 'NEWS', href: '/news' },
@@ -212,7 +212,7 @@ export const Header: React.FC = () => {
                 aria-expanded={langDropdownOpen}
               >
                 <Globe size={13} className="text-[#D9572B] flex-shrink-0" />
-                <span className="font-extrabold">{lang === 'hi' ? 'हिंदी' : 'EN'}</span>
+                <span className="font-extrabold">{lang === 'hi' ? 'हिंदी' : lang === 'mr' ? 'मराठी' : 'EN'}</span>
                 <ChevronDown size={12} className={`transition-transform duration-200 flex-shrink-0 ${langDropdownOpen ? 'rotate-180 text-[#D9572B]' : ''}`} />
               </button>
 
@@ -236,6 +236,15 @@ export const Header: React.FC = () => {
                   >
                     <span>हिंदी (Hindi)</span>
                     {lang === 'hi' && <Check size={14} className="text-[#D9572B]" />}
+                  </button>
+                  <button
+                    onClick={() => handleLanguageSelect('mr')}
+                    className={`w-full text-left px-3.5 py-2 text-xs font-extrabold font-hindi flex items-center justify-between hover:bg-[#D9572B] hover:text-white transition-colors cursor-pointer ${
+                      lang === 'mr' ? 'bg-[#16120D] text-[#F5EFE6]' : 'text-[#16120D]'
+                    }`}
+                  >
+                    <span>मराठी (Marathi)</span>
+                    {lang === 'mr' && <Check size={14} className="text-[#D9572B]" />}
                   </button>
                 </div>
               )}
