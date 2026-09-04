@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Heart, Share2, TrendingUp } from 'lucide-react';
+import { ShieldCheck, Heart, Mail, CheckCircle, Shield, Share2, TrendingUp } from 'lucide-react';
 import { SupportDevBanner } from './SupportDevBanner';
 import { SocialShareModal } from './SocialShareModal';
 import { SEOAdsGuideModal } from './SEOAdsGuideModal';
@@ -8,6 +8,16 @@ import { SEOAdsGuideModal } from './SEOAdsGuideModal';
 export const Footer: React.FC = () => {
   const [shareModalOpen, setShareModalOpen] = useState(false);
   const [seoGuideOpen, setSeoGuideOpen] = useState(false);
+  const [email, setEmail] = useState('');
+  const [consentChecked, setConsentChecked] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email && consentChecked) {
+      setSubmitted(true);
+    }
+  };
 
   return (
     <>
@@ -18,42 +28,67 @@ export const Footer: React.FC = () => {
       <footer className="bg-[#16120D] text-[#F5EFE6] border-t-4 border-[#D9572B] pt-16 pb-12 font-sans selection:bg-[#D9572B] selection:text-white">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
           
-          {/* Top CTA Banner in Footer */}
-          <div className="bg-[#231F1A] border-2 border-white/10 p-8 md:p-10 mb-16 shadow-2xl flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="space-y-2 text-center md:text-left">
-              <span className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest inline-block">
-                CIVIC ACTION MOVEMENT · EST. 2026
+          {/* The Dispatch Newsletter Section (Replacing old CTA banner) */}
+          <div className="bg-[#1C1712] border border-white/10 p-8 md:p-10 mb-16 shadow-2xl flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 rounded-xl">
+            <div className="space-y-3 max-w-xl">
+              <span className="text-[#E5B82A] text-[11px] font-black uppercase tracking-widest block">
+                THE DISPATCH
               </span>
-              <h3 className="font-display text-3xl sm:text-4xl text-[#F5EFE6] uppercase leading-tight">
-                TURN APATHY INTO CIVIC ACTION
+              <h3 className="font-serif text-3xl sm:text-4xl text-[#F5EFE6] font-extrabold leading-tight">
+                One email. <span className="italic font-serif font-normal text-[#E5B82A]">When it matters.</span>
               </h3>
-              <p className="text-xs text-[#EADBCE] font-medium max-w-xl">
-                Join thousands of student observers, RTI advocates, and neighborhood residents demanding transparent road warranties, clean tap water, and open public records.
+              <p className="text-xs sm:text-sm text-[#EADBCE]/80 font-medium leading-relaxed">
+                New essays, manifesto updates, and the occasional open letter. No spam, no corporate drip sequence.
               </p>
             </div>
 
-            <div className="flex items-center gap-3 flex-wrap">
-              <button
-                onClick={() => setShareModalOpen(true)}
-                className="bg-[#F59E0B] text-black font-extrabold text-xs uppercase tracking-wider px-5 py-3.5 border border-white hover:bg-amber-600 hover:text-white transition-all flex items-center gap-2"
-              >
-                <Share2 size={15} />
-                <span>📢 SHARE &amp; PROMOTE</span>
-              </button>
-              <button
-                onClick={() => setSeoGuideOpen(true)}
-                className="bg-emerald-600 text-white font-extrabold text-xs uppercase tracking-wider px-5 py-3.5 border border-white hover:bg-emerald-700 transition-all flex items-center gap-2"
-              >
-                <TrendingUp size={15} />
-                <span>📈 FREE SEO &amp; ADS GUIDE</span>
-              </button>
-              <Link
-                to="/join"
-                className="bg-[#D9572B] text-white text-xs font-extrabold uppercase tracking-wider px-7 py-3.5 border border-white hover:bg-white hover:text-[#16120D] transition-all shadow-lg flex items-center gap-2"
-              >
-                <span>JOIN THE SWARM NOW</span> →
-              </Link>
-            </div>
+            <form onSubmit={handleNewsletterSubmit} className="w-full lg:max-w-md space-y-3">
+              <div className="flex items-center bg-[#110D09] border border-white/20 rounded-lg overflow-hidden focus-within:border-[#E5B82A] transition">
+                <Mail size={16} className="text-[#EADBCE]/50 ml-3.5 shrink-0" />
+                <input
+                  type="email"
+                  placeholder="you@example.in"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="bg-transparent px-3 py-3 text-xs text-white placeholder-[#EADBCE]/40 focus:outline-none w-full font-mono"
+                />
+                <button
+                  type="submit"
+                  className="bg-[#E5B82A] hover:bg-amber-400 text-[#16120D] font-extrabold text-xs uppercase px-6 py-3 transition cursor-pointer shrink-0"
+                >
+                  {submitted ? 'JOINED!' : 'SUBSCRIBE'}
+                </button>
+              </div>
+
+              <label className="flex items-start gap-2 text-[10.5px] text-[#EADBCE]/80 cursor-pointer select-none">
+                <input
+                  type="checkbox"
+                  checked={consentChecked}
+                  onChange={(e) => setConsentChecked(e.target.checked)}
+                  required
+                  className="mt-0.5 rounded border-white/20 text-[#E5B82A] focus:ring-0 cursor-pointer shrink-0"
+                />
+                <span>
+                  I understand my personal data may be processed by infrastructure providers outside India (hosting, database, email, analytics, captcha) as described in the <Link to="/privacy" className="underline hover:text-[#E5B82A]">Privacy Policy</Link>. *
+                </span>
+              </label>
+
+              <div className="bg-[#110D09] border border-white/10 p-2.5 rounded-lg flex items-center justify-between text-xs">
+                <div className="flex items-center gap-2 text-emerald-400 font-bold">
+                  <CheckCircle size={15} className="text-emerald-400 shrink-0" />
+                  <span>{submitted ? 'Subscription Confirmed!' : 'Success!'}</span>
+                </div>
+                <div className="text-[10px] text-white/50 flex items-center gap-1">
+                  <Shield size={12} className="text-amber-500 shrink-0" />
+                  <span>CLOUDFLARE Privacy • Help</span>
+                </div>
+              </div>
+
+              <p className="text-[10px] text-[#EADBCE]/60">
+                One email, when there's something to say. Unsubscribe anytime.
+              </p>
+            </form>
           </div>
 
           {/* Official Social Channels Strip */}
