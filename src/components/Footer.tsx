@@ -221,7 +221,7 @@ export const Footer: React.FC = () => {
                 <li><Link to="/refund-policy" className="hover:text-[#D9572B] transition-colors">Support Policy</Link></li>
                 <li><Link to="/accessibility" className="hover:text-[#D9572B] transition-colors">Accessibility</Link></li>
                 <li><Link to="/about" className="hover:text-[#D9572B] transition-colors">About</Link></li>
-                <li><Link to="/press-kit" className="hover:text-[#D9572B] transition-colors">Press</Link></li>
+                <li><Link to="/press-kit" className="hover:text-[#D9572B] transition-colors font-bold text-[#E6A100]">Media & Press Kit</Link></li>
                 <li><Link to="/contact" className="hover:text-[#D9572B] transition-colors">Contact</Link></li>
               </ul>
             </div>

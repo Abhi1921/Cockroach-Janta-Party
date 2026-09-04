@@ -69,7 +69,6 @@ export const Header: React.FC = () => {
     { titleCustom: 'CAMPAIGNS', href: '/campaigns' },
     { titleCustom: 'ISSUES', href: '/issues' },
     { titleCustom: 'NEWS', href: '/news' },
-    { titleCustom: 'MEDIA', href: '/press-kit' },
     { titleCustom: 'MEMBERS', href: '/members' }
   ];
 
