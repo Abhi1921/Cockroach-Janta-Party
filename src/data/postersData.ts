@@ -15,6 +15,146 @@ export interface Poster {
 
 export const postersData: Poster[] = [
   {
+    id: 'poster-scst-pocso-invoked',
+    title: 'SC/ST & POCSO Acts Invoked against Bhardwaj',
+    slogan: 'DELHI POLICE ADD SEC 307 ATTEMPT TO MURDER & SC/ST SECTIONS',
+    category: 'protest',
+    style: 'placard',
+    accentColor: '#C0392B',
+    bgColor: '#1A0D0D',
+    textColor: '#F5EFE6',
+    date: '2026-09-05',
+    downloads: 8940,
+    featured: true,
+    image: '/cjp_poster_scst_pocso.png'
+  },
+  {
+    id: 'poster-ljp-complaint-bullet',
+    title: 'Chirag Paswan LJP Complaint & Bullet Flight',
+    slogan: 'LJP DENIES POLITICAL PROTECTIVE COVER AS POLICE TRACK BULANDSHAHR ESCAPE',
+    category: 'editorial',
+    style: 'newspaper',
+    accentColor: '#D9572B',
+    bgColor: '#181410',
+    textColor: '#F5EFE6',
+    date: '2026-09-05',
+    downloads: 8120,
+    featured: true,
+    image: '/cjp_poster_ljp_bullet.png'
+  },
+  {
+    id: 'poster-swatantra-bhardwaj-arrested',
+    title: 'Swatantra Bhardwaj Arrested in Bulandshahr',
+    slogan: 'NO INFLUENCER IS ABOVE THE LAW — JUSTICE FOR SANJAY KUMAR',
+    category: 'protest',
+    style: 'placard',
+    accentColor: '#C0392B',
+    bgColor: '#16120D',
+    textColor: '#F5EFE6',
+    date: '2026-09-05',
+    downloads: 7850,
+    featured: true,
+    image: '/cjp_poster_swatantra_arrest.png'
+  },
+  {
+    id: 'poster-sc-judge-slams-police',
+    title: 'Supreme Court Slams Jantar Mantar Crackdown',
+    slogan: 'VERY DISTRESSING TO SEE POLICE HIGH-HANDEDNESS — JUSTICE UJJAL BHUYAN',
+    category: 'editorial',
+    style: 'editorial',
+    accentColor: '#2980B9',
+    bgColor: '#0E1726',
+    textColor: '#F5EFE6',
+    date: '2026-09-05',
+    downloads: 6920,
+    featured: true,
+    image: '/cjp_poster_sc_judge_slams_police.png'
+  },
+  {
+    id: 'poster-cjp-congress-table',
+    title: 'Rahul Gandhi "I\'m With You" & Joint Police HQ Visit',
+    slogan: 'CROSS-PARTY SOLIDARITY FOR CJP YOUTH OBSERVERS & TEEN ACTIVIST',
+    category: 'campaign',
+    style: 'banner',
+    accentColor: '#D9572B',
+    bgColor: '#16120D',
+    textColor: '#F5EFE6',
+    date: '2026-09-05',
+    downloads: 6410,
+    featured: true,
+    image: '/cjp_poster_cjp_congress_table.png'
+  },
+  {
+    id: 'poster-cjp-d-splinter',
+    title: 'Rebel Floats Splinter CJP-Democratic (CJP-D)',
+    slogan: 'CJP REMAINS 100% NON-PARTISAN — SUBTERRANEAN MOVEMENT CANNOT BE SPLIT',
+    category: 'satire',
+    style: 'newspaper',
+    accentColor: '#E6A100',
+    bgColor: '#1C1814',
+    textColor: '#F5EFE6',
+    date: '2026-09-04',
+    downloads: 5320,
+    featured: true,
+    image: '/cjp_poster_cjp_congress_table.png'
+  },
+  {
+    id: 'poster-akhilesh-cjp-meeting',
+    title: 'Akhilesh Yadav & CJP Lucknow Dialogue',
+    slogan: 'YOUTH CIVIC DEMANDS RESONATE ACROSS POLITICAL SPECTRUM IN UP',
+    category: 'editorial',
+    style: 'editorial',
+    accentColor: '#27AE60',
+    bgColor: '#0F1B14',
+    textColor: '#F5EFE6',
+    date: '2026-09-05',
+    downloads: 4980,
+    featured: true,
+    image: '/cjp_poster_cjp_congress_table.png'
+  },
+  {
+    id: 'poster-ips-sachin-sharma-radar',
+    title: 'CJP Targets IPS Sachin Sharma Over Inaction',
+    slogan: 'ACCOUNTABILITY FOR POLICE INACTION IS NON-NEGOTIABLE',
+    category: 'protest',
+    style: 'placard',
+    accentColor: '#C0392B',
+    bgColor: '#1C1013',
+    textColor: '#F5EFE6',
+    date: '2026-09-04',
+    downloads: 4610,
+    featured: true,
+    image: '/cjp_poster_parliament_dharna.png'
+  },
+  {
+    id: 'poster-ashramshala-audit',
+    title: 'Abhijeet Dipke Letter to Fadnavis on Ashramshalas',
+    slogan: 'SAFETY, NUTRITION & DIGNITY FOR TRIBAL STUDENTS IN MAHARASHTRA',
+    category: 'campaign',
+    style: 'vintage',
+    accentColor: '#27AE60',
+    bgColor: '#141B10',
+    textColor: '#F5EFE6',
+    date: '2026-09-05',
+    downloads: 4230,
+    featured: true,
+    image: '/cjp_school_thik_karo_poster.png'
+  },
+  {
+    id: 'poster-meta-ai-takedown',
+    title: 'Alt News Impact: Meta Wipes AI Deepfakes',
+    slogan: 'TRUTH OVER DIGITAL HARASSMENT — PROTECTING FEMALE CJP PROTESTERS',
+    category: 'editorial',
+    style: 'minimal',
+    accentColor: '#2980B9',
+    bgColor: '#0D161F',
+    textColor: '#F5EFE6',
+    date: '2026-09-04',
+    downloads: 5890,
+    featured: true,
+    image: '/cjp_poster_sc_judge_slams_police.png'
+  },
+  {
     id: 'poster-parliament-street-dharna',
     title: 'Parliament Street Police Station Dharna',
     slogan: 'ARREST THE INFLUENCER WHO BOASTS OF VIOLENCE — NO BULLIES ABOVE THE LAW',
@@ -26,7 +166,7 @@ export const postersData: Poster[] = [
     date: '2026-09-04',
     downloads: 5120,
     featured: true,
-    image: '/cjp_poster_parliament_street_dharna.svg'
+    image: '/cjp_poster_parliament_dharna.png'
   },
   {
     id: 'poster-influencer-assault-fir',
@@ -40,7 +180,7 @@ export const postersData: Poster[] = [
     date: '2026-09-04',
     downloads: 4890,
     featured: true,
-    image: '/cjp_poster_influencer_assault_fir.svg'
+    image: '/cjp_poster_swatantra_arrest.png'
   },
   {
     id: 'poster-facial-recognition-jail',
@@ -54,7 +194,7 @@ export const postersData: Poster[] = [
     date: '2026-09-04',
     downloads: 4320,
     featured: true,
-    image: '/cjp_poster_facial_recognition_jail.svg'
+    image: '/cjp_poster_facial_rec_jail.png'
   },
   {
     id: 'poster-sc-quash-firs',
@@ -68,7 +208,7 @@ export const postersData: Poster[] = [
     date: '2026-09-02',
     downloads: 6240,
     featured: true,
-    image: '/cjp_poster_sc_quash_firs.svg'
+    image: '/cjp_poster_sc_quash_firs.png'
   },
   {
     id: 'poster-pradhan-resignation',
@@ -82,7 +222,7 @@ export const postersData: Poster[] = [
     date: '2026-09-03',
     downloads: 5780,
     featured: true,
-    image: '/cjp_poster_pradhan_resignation.svg'
+    image: '/cjp_poster_scst_pocso.png'
   },
   {
     id: 'poster-sep3-sc',
@@ -96,7 +236,7 @@ export const postersData: Poster[] = [
     date: '2026-09-03',
     downloads: 3450,
     featured: true,
-    image: '/cjp_sep3_sc_verdict_poster.svg'
+    image: '/cjp_poster_sc_quash_firs.png'
   },
   {
     id: 'poster-sep3-ward',
@@ -110,7 +250,7 @@ export const postersData: Poster[] = [
     date: '2026-09-03',
     downloads: 2890,
     featured: true,
-    image: '/cjp_sep3_ward_centers_poster.svg'
+    image: '/cjp_poster_ljp_bullet.png'
   },
   {
     id: 'poster-sep3-warranty',
@@ -124,7 +264,7 @@ export const postersData: Poster[] = [
     date: '2026-09-03',
     downloads: 3120,
     featured: true,
-    image: '/cjp_sep3_road_warranty_poster.svg'
+    image: '/cjp_black_monday_poster.png'
   },
   {
     id: 'poster-sep3-school',
@@ -138,7 +278,7 @@ export const postersData: Poster[] = [
     date: '2026-09-03',
     downloads: 2450,
     featured: true,
-    image: '/cjp_sep3_school_phase2_poster.svg'
+    image: '/cjp_school_thik_karo_poster.png'
   },
   {
     id: 'poster-sep3-blackmonday',
@@ -152,7 +292,7 @@ export const postersData: Poster[] = [
     date: '2026-09-03',
     downloads: 4190,
     featured: true,
-    image: '/cjp_sep3_black_monday_accord.svg'
+    image: '/cjp_black_monday_poster.png'
   },
   {
     id: 'poster-1',

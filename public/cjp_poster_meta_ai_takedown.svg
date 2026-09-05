@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <!-- Background Layer -->
+  <rect width="800" height="1000" fill="#0D161F"/>
+  <rect x="20" y="20" width="760" height="960" fill="none" stroke="#2980B9" stroke-width="8"/>
+  <rect x="35" y="35" width="730" height="930" fill="none" stroke="#E6A100" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <!-- Top Header Tag -->
+  <rect x="140" y="60" width="520" height="40" rx="20" fill="#2980B9"/>
+  <text x="400" y="86" fill="#FFFFFF" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="14" letter-spacing="3" text-anchor="middle">ALT NEWS IMPACT · META TAKEDOWN DISPATCH</text>
+
+  <!-- Main Headline -->
+  <text x="400" y="165" fill="#F5EFE6" font-family="'Georgia', serif" font-weight="900" font-size="38" text-anchor="middle" letter-spacing="1">META REMOVES FAKE AI MEDIA</text>
+  <text x="400" y="220" fill="#E6A100" font-family="'Georgia', serif" font-weight="900" font-size="36" text-anchor="middle" letter-spacing="1">TARGETING FEMALE CJP PROTESTERS</text>
+
+  <!-- Subheadline Ribbon -->
+  <rect x="50" y="260" width="700" height="55" fill="#152636" stroke="#2980B9" stroke-width="2"/>
+  <text x="400" y="295" fill="#F5EFE6" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="16" letter-spacing="1" text-anchor="middle">COORDINATED HARASSMENT ACCOUNTS WIPED FROM IG &amp; FACEBOOK</text>
+
+  <!-- Central Emblem & Graphic Symbol -->
+  <g transform="translate(400, 470)">
+    <circle r="115" fill="#152636" stroke="#2980B9" stroke-width="6"/>
+    <circle r="100" fill="none" stroke="#E6A100" stroke-width="2"/>
+    <text x="0" y="15" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="52" text-anchor="middle">🛡️💻</text>
+  </g>
+
+  <!-- Slogan Banner Box -->
+  <rect x="60" y="640" width="680" height="150" fill="#152636" stroke="#E6A100" stroke-width="3"/>
+  <text x="400" y="685" fill="#3498DB" font-family="'Georgia', serif" font-weight="900" font-size="22" text-anchor="middle">"CYBER HARASSMENT CANNOT SILENCE CITIZEN VOICES"</text>
+  <text x="400" y="720" fill="#F5EFE6" font-family="'Georgia', serif" font-weight="900" font-size="18" text-anchor="middle">ALT NEWS INVESTIGATION DEFEATS FAKE DEEPFAKE SLEAR CAMPAIGN</text>
+  <text x="400" y="760" fill="#EADBCE" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" letter-spacing="1" text-anchor="middle">— CJP TECH &amp; CYBER CELL DISPATCH</text>
+
+  <!-- Key Metrics -->
+  <g transform="translate(80, 815)">
+    <rect x="0" y="0" width="200" height="75" fill="#0D161F" stroke="#2980B9" stroke-width="2"/>
+    <text x="100" y="35" fill="#E6A100" font-family="Georgia" font-weight="900" font-size="22" text-anchor="middle">ALT NEWS</text>
+    <text x="100" y="58" fill="#EADBCE" font-family="sans-serif" font-weight="800" font-size="11" text-anchor="middle">FACT-CHECK IMPACT</text>
+  </g>
+
+  <g transform="translate(300, 815)">
+    <rect x="0" y="0" width="200" height="75" fill="#0D161F" stroke="#2980B9" stroke-width="2"/>
+    <text x="100" y="35" fill="#27AE60" font-family="Georgia" font-weight="900" font-size="22" text-anchor="middle">META TAKEDOWN</text>
+    <text x="100" y="58" fill="#EADBCE" font-family="sans-serif" font-weight="800" font-size="11" text-anchor="middle">FB &amp; IG ACCOUNTS WIPED</text>
+  </g>
+
+  <g transform="translate(520, 815)">
+    <rect x="0" y="0" width="200" height="75" fill="#0D161F" stroke="#2980B9" stroke-width="2"/>
+    <text x="100" y="35" fill="#E74C3C" font-family="Georgia" font-weight="900" font-size="22" text-anchor="middle">AI DEEPFAKES</text>
+    <text x="100" y="58" fill="#EADBCE" font-family="sans-serif" font-weight="800" font-size="11" text-anchor="middle">EXPOSED &amp; DEFEATED</text>
+  </g>
+
+  <!-- Footer Seal -->
+  <text x="400" y="940" fill="#EADBCE" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="12" letter-spacing="3" text-anchor="middle">COCKROACH JANTA PARTY · TECH &amp; MEDIA DISPATCH · 2026</text>
+</svg>

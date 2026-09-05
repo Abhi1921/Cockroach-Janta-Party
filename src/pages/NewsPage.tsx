@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
-import { Search, X, Calendar, ShieldAlert, ExternalLink, Filter, BookOpen } from 'lucide-react';
+import { Search, X, Calendar, ShieldAlert, ExternalLink, Filter, BookOpen, Newspaper } from 'lucide-react';
+import { mediaOutletsData } from '../data/mediaOutletsData';
 
 export const NewsPage: React.FC = () => {
   const { lang } = useLanguage();
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchParams] = useSearchParams();
+  const sourceParam = searchParams.get('source') || '';
+
+  const [searchQuery, setSearchQuery] = useState(sourceParam);
   const [activeMonth, setActiveMonth] = useState('ALL');
   const [activeCategory, setActiveCategory] = useState('ALL');
   const [activeStatus, setActiveStatus] = useState('ALL');
   const [selectedNews, setSelectedNews] = useState<any | null>(null);
+
+  useEffect(() => {
+    if (sourceParam) {
+      setSearchQuery(sourceParam);
+    }
+  }, [sourceParam]);
 
   // 1,000 - 1,500 Word Flagship Historical Feature
   const flagshipFeature = {
@@ -32,15 +43,295 @@ export const NewsPage: React.FC = () => {
     ]
   };
 
-  // Verified Structured News Archive Database (May - 4 Sep 2026)
+  // Verified Structured News Archive Database (May - 5 Sep 2026)
   const newsDatabase = [
+    {
+      id: 'news-sep05-scst-pocso',
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'BREAKING',
+      image: '/cjp_poster_scst_pocso.png',
+      headline: 'NDTV & The Hindu: SC/ST Act, POCSO & Attempt-to-Murder Sections Invoked Against Swatantra Bhardwaj',
+      subheadline: 'Delhi Police expand FIR adding severe penal provisions following CJP, Congress & Aazad Samaj Party protests.',
+      location: 'Parliament Street Police Station, New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'NDTV and The Hindu reported that Delhi Police expanded the FIR against Swatantra Bhardwaj to include SC/ST (Prevention of Atrocities) Act, POCSO Act, and IPC Section 307 (Attempt to Murder).',
+      whatHappened: 'Following day-long demonstrations by CJP, Congress and Aazad Samaj Party outside Parliament Street Police Station, police agreed to add severe non-bailable charges.',
+      whyItMatters: 'Demonstrates maximum legal pressure and victim protection for student activist Nishu Azad and father Sanjay Kumar.',
+      whatCjpSays: 'Saurav Das & Ashutosh Ranka: "No perpetrator of violence will escape prosecution under strict statutory protections."',
+      whatOthersSaid: 'NDTV and The Hindu verified the addition of SC/ST and POCSO sections.',
+      sources: [
+        { name: 'NDTV', date: '05 Sep 2026', url: 'https://ndtv.com' },
+        { name: 'The Hindu', date: '05 Sep 2026', url: 'https://thehindu.com' }
+      ]
+    },
+    {
+      id: 'news-sep05-ljp-bullet',
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'POLICE & POLITICS',
+      image: '/cjp_poster_ljp_bullet.png',
+      headline: 'Chirag Paswan\'s LJP Files Complaint Against Bhardwaj; Accused Flees Bulandshahr on Bullet Motorcycle',
+      subheadline: 'Moneycontrol & TOI report LJP denying political ties while police track motorcycle escape route.',
+      location: 'Bulandshahr / New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Chirag Paswan\'s Lok Janshakti Party (Ram Vilas) filed a police complaint against Swatantra Bhardwaj for falsely claiming political backing, as police tracked him fleeing Bulandshahr on a Bullet motorcycle.',
+      whatHappened: 'LJP formally disowned Bhardwaj\'s claims of political immunity. Meanwhile, Delhi Police deployed teams to trace his Bullet motorcycle route before detaining him.',
+      whyItMatters: 'Strips away false political protection claims.',
+      whatCjpSays: 'CJP Secretariat: "False political shields collapse when citizens demand true law enforcement."',
+      whatOthersSaid: 'Moneycontrol and The Times of India reported the LJP complaint and Bullet tracking.',
+      sources: [
+        { name: 'Moneycontrol', date: '05 Sep 2026', url: 'https://moneycontrol.com' },
+        { name: 'The Times of India', date: '05 Sep 2026', url: 'https://timesofindia.indiatimes.com' }
+      ]
+    },
+    {
+      id: 'news-sep05-01',
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'BREAKING',
+      image: '/cjp_poster_swatantra_arrest.png',
+      headline: 'Swatantra Bhardwaj Arrested After CJP Protest; Remanded to 1-Day Police Custody by Patiala House Court',
+      subheadline: 'Delhi Police detains Hindutva influencer in Bulandshahr, UP following CJP Parliament Street police station siege.',
+      location: 'Patiala House Court / Bulandshahr',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'The Hindu and Times of India reported that Delhi Police tracked and arrested Swatantra Bhardwaj from Bulandshahr, UP. Patiala House Court remanded him to 1-day police custody.',
+      whatHappened: 'Following an intense 24-hour sit-in outside Parliament Street Police Station led by Saurav Das and Nishu Azad, Delhi Police arrested Swatantra Bhardwaj for assaulting Sanjay Kumar.',
+      whyItMatters: 'Demonstrates that public vigilance and peaceful sit-ins can force law enforcement accountability.',
+      whatCjpSays: 'Saurav Das & Nishu Azad: "Justice for Sanjay Kumar. No viral influencer is above criminal law."',
+      whatOthersSaid: 'The Hindu and TOI reported live on the Patiala House Court remand order.',
+      sources: [
+        { name: 'The Hindu', date: '05 Sep 2026', url: 'https://thehindu.com' },
+        { name: 'The Times of India', date: '05 Sep 2026', url: 'https://timesofindia.indiatimes.com' }
+      ]
+    },
+    {
+      id: 'news-sep05-02',
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'LEGAL & COURT',
+      image: '/cjp_poster_sc_judge_slams_police.png',
+      headline: '"Very Distressing To See...": Supreme Court Justice Ujjal Bhuyan Slams Police Crackdown At Jantar Mantar',
+      subheadline: 'NDTV & Asianet News report top court judge expressing alarm over police high-handedness against CJP protesters.',
+      location: 'Supreme Court, New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Supreme Court Justice Ujjal Bhuyan stated in court that police treatment of peaceful student demonstrators at CJP Jantar Mantar rally was "very distressing to see".',
+      whatHappened: 'Reviewing video records of the July 20 rally, the Supreme Court bench sharply criticized police aggression against youth asking questions.',
+      whyItMatters: 'Reaffirms the constitutional validity of peaceful citizen protest under Article 19.',
+      whatCjpSays: 'CJP Legal Secretariat: "Judicial recognition of police excess validates our commitment to peaceful advocacy."',
+      whatOthersSaid: 'NDTV and Asianet News Malayalam broadcasted top court remarks.',
+      sources: [
+        { name: 'NDTV', date: '05 Sep 2026', url: 'https://ndtv.com' },
+        { name: 'Asianet News Malayalam', date: '05 Sep 2026', url: 'https://asianetnews.com' }
+      ]
+    },
+    {
+      id: 'news-sep05-03',
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'LEGAL ADVOCACY',
+      image: '/cjp_poster_scst_pocso.png',
+      headline: '‘Cracked Open Skull, No Jail’ — CJP Demands Attempted Murder Charge Against Influencer',
+      subheadline: 'ThePrint covers CJP legal petition demanding IPC Section 307 (Attempted Murder) charges.',
+      location: 'New Delhi, DL',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'ThePrint reported on CJP\'s formal demand to upgrade assault charges to attempted murder following video boasts of cracking open a protester father\'s skull.',
+      whatHappened: 'CJP Legal Lead Saurav Das submitted medical evidence of Sanjay Kumar\'s head trauma, urging prosecution under severe penal provisions.',
+      whyItMatters: 'Sets a high standard against violent intimidation of student activists.',
+      whatCjpSays: 'Saurav Das: "Boasting about cracking open a skull on camera requires full attempted murder prosecution."',
+      whatOthersSaid: 'ThePrint analyzed CJP\'s legal representation submitted to Delhi Police.',
+      sources: [
+        { name: 'ThePrint', date: '05 Sep 2026', url: 'https://theprint.in' }
+      ]
+    },
+    {
+      id: 'news-sep05-04',
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'POLITICS & SOLIDARITY',
+      image: '/cjp_poster_cjp_congress_table.png',
+      headline: 'How Hindutva Influencer’s ‘Skull-Cracker’ Brag Brought CJP & Congress to Same Table',
+      subheadline: 'Rahul Gandhi responded "I\'m with you" to CJP teen activist; Congress delegation visits Police HQ.',
+      location: 'Delhi Police HQ / New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'ThePrint highlighted how viral assault video sparked cross-party support, prompting Rahul Gandhi and a Congress delegation to demand police action.',
+      whatHappened: 'After a CJP teen activist posted video evidence, Rahul Gandhi publicly backed the youth. A Congress delegation met Delhi Police demanding immediate prosecution.',
+      whyItMatters: 'Unifies opposition solidarity behind CJP\'s non-violent youth movement.',
+      whatCjpSays: 'CJP Secretariat welcomed all democratic support while reiterating CJP\'s strict non-partisan identity.',
+      whatOthersSaid: 'ThePrint featured the political impact of the joint demand for justice.',
+      sources: [
+        { name: 'ThePrint', date: '05 Sep 2026', url: 'https://theprint.in' }
+      ]
+    },
+    {
+      id: 'news-sep05-05',
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'PROTEST DISPATCH',
+      image: '/cjp_poster_parliament_dharna.png',
+      headline: 'CJP Calls for Nationwide Protests; Chief Abhijeet Dipke Asserts Movement Cannot Be Wiped Out',
+      subheadline: 'Manorama Online report: Dipke demands Union Education Minister\'s resignation and exam reforms.',
+      location: 'National / New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Manorama Online reported on CJP Chief Abhijeet Dipke calling for nationwide student mobilizations, asserting CJP\'s subterranean presence is un-erasable.',
+      whatHappened: 'Dipke declared that attempts to intimidate CJP protesters only strengthen citizen resolve for transparent governance and exam integrity.',
+      whyItMatters: 'Demonstrates nationwide organization across Southern and Northern states.',
+      whatCjpSays: 'Abhijeet Dipke: "You can transfer officers, but you cannot wipe out subterranean citizen vigilance."',
+      whatOthersSaid: 'Manorama Online published Dipke\'s address in Malayalam and English.',
+      sources: [
+        { name: 'Manorama Online', date: '05 Sep 2026', url: 'https://manoramaonline.com' }
+      ]
+    },
+    {
+      id: 'news-sep04-splinter',
+      eventDate: 'SEP 04, 2026',
+      pubDate: 'SEP 04, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'POLITICS & SATIRE',
+      image: '/cjp_poster_cjp_congress_table.png',
+      headline: 'Rebel Floats \'Cockroach Janta Party-Democratic\' (CJP-D), Calls Dipke\'s Party \'Team Kejriwal\'',
+      subheadline: 'Hindustan Times, The Hindu, India Today & ABP Majha report internal split controversy.',
+      location: 'New Delhi, DL',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Rebel member Brahmbhatt announced CJP-Democratic, accusing Dipke of aligning with AAP. Dipke dismissed the claim as a political sideshow.',
+      whatHappened: 'Brahmbhatt formed a breakaway faction named CJP-D. CJP founder Abhijeet Dipke reiterated that CJP remains 100% independent and non-partisan.',
+      whyItMatters: 'Tests organizational coherence amidst growing national attention.',
+      whatCjpSays: 'Abhijeet Dipke: "Labels come and go, but sewer desilting and road warranty audits remain our true mission."',
+      whatOthersSaid: 'Hindustan Times, The Hindu, India Today, and ABP Majha reported on the CJP-D announcement.',
+      sources: [
+        { name: 'Hindustan Times', date: '04 Sep 2026', url: 'https://hindustantimes.com' },
+        { name: 'The Hindu', date: '04 Sep 2026', url: 'https://thehindu.com' },
+        { name: 'India Today', date: '04 Sep 2026', url: 'https://indiatoday.in' },
+        { name: 'ABP Majha', date: '04 Sep 2026', url: 'https://abpmajha.abplive.com' }
+      ]
+    },
+    {
+      id: 'news-sep05-06',
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'POLITICS',
+      image: '/cjp_poster_cjp_congress_table.png',
+      headline: 'Akhilesh Yadav & CJP Delegation Meeting Raises Hackles In UP; NDA Ally SBSP Hits Out',
+      subheadline: 'Deccan Chronicle reports Lucknow dialogue on youth exam integrity and road warranties.',
+      location: 'Lucknow, UP',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Samajwadi Party Chief Akhilesh Yadav met CJP representatives in Lucknow, prompting NDA ally minister O.P. Rajbhar to attack SP.',
+      whatHappened: 'CJP delegates presented their civic charter to Akhilesh Yadav in Lucknow, sparking heated political reactions from UP Cabinet ministers.',
+      whyItMatters: 'Shows CJP\'s civic issues taking center stage in Uttar Pradesh politics.',
+      whatCjpSays: 'CJP UP Cell: "We meet all leaders who are willing to discuss road warranties and youth exam reforms."',
+      whatOthersSaid: 'Deccan Chronicle detailed the political fallout of the Lucknow meeting.',
+      sources: [
+        { name: 'Deccan Chronicle', date: '05 Sep 2026', url: 'https://deccanchronicle.com' }
+      ]
+    },
+    {
+      id: 'news-sep04-ips',
+      eventDate: 'SEP 04, 2026',
+      pubDate: 'SEP 04, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'POLICE ACCOUNTABILITY',
+      image: '/cjp_poster_parliament_dharna.png',
+      headline: 'CJP Targets IPS Sachin Sharma: "Ruined Two Girls\' Lives" — Saurav Das & Ashutosh Ranka React',
+      subheadline: 'Pudhari Marathi daily covers CJP spotlight on police officer over alleged case negligence.',
+      location: 'Maharashtra / Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Pudhari reported CJP leaders Saurav Das and Ashutosh Ranka placing IPS Sachin Sharma on CJP\'s public accountability radar.',
+      whatHappened: 'CJP leaders issued statements demanding official inquiry into alleged police inaction that affected two young women.',
+      whyItMatters: 'Extends CJP\'s accountability mandate to individual administrative and IPS officers.',
+      whatCjpSays: 'Saurav Das & Ashutosh Ranka: "Public officers must be held accountable when inaction compromises citizen safety."',
+      whatOthersSaid: 'Pudhari published CJP\'s formal complaint against IPS Sachin Sharma.',
+      sources: [
+        { name: 'Pudhari News', date: '04 Sep 2026', url: 'https://pudhari.news' }
+      ]
+    },
+    {
+      id: 'news-sep05-07',
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'CIVIC AUDIT',
+      image: '/cjp_school_thik_karo_poster.png',
+      headline: 'CJP Chief Abhijeet Dipke Urges CM Devendra Fadnavis to Visit Maharashtra Ashramshalas',
+      subheadline: 'Daily Pioneer reports CJP audit uncovering poor food, sanitation, and safety in tribal school hostels.',
+      location: 'Maharashtra / Mumbai',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Daily Pioneer reported CJP founder Abhijeet Dipke urging Maharashtra CM Devendra Fadnavis to conduct surprise inspections of tribal Ashramshalas.',
+      whatHappened: 'CJP audit teams documented severe infrastructural neglect in tribal residential schools, prompting Dipke\'s letter to the Maharashtra state leadership.',
+      whyItMatters: 'Focuses public attention on vulnerable tribal student welfare.',
+      whatCjpSays: 'Abhijeet Dipke: "Tribal children deserve safe hostels, nutritious meals, and quality education."',
+      whatOthersSaid: 'Daily Pioneer highlighted CJP\'s Ashramshala audit findings.',
+      sources: [
+        { name: 'Daily Pioneer', date: '05 Sep 2026', url: 'https://dailypioneer.com' }
+      ]
+    },
+    {
+      id: 'news-sep04-altnews',
+      eventDate: 'SEP 04, 2026',
+      pubDate: 'SEP 04, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'FACT CHECK & MEDIA',
+      image: '/cjp_poster_sc_judge_slams_police.png',
+      headline: 'Alt News Impact: Meta Takes Down AI Fake Photos & Harassing Videos Targeting Female CJP Protesters',
+      subheadline: 'Meta wipes coordinated Facebook & Instagram handles disseminating AI deepfakes of Jantar Mantar rally.',
+      location: 'Meta / Social Media',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Alt News investigation forced Meta to delete accounts generating fake AI images and harassing media aimed at female CJP student protesters.',
+      whatHappened: 'Fact-checkers at Alt News proved that malicious accounts were distributing AI-altered content to intimidate female student activists. Meta removed the network.',
+      whyItMatters: 'Protects women student activists from online cyber harassment and deepfake smears.',
+      whatCjpSays: 'CJP Cyber Cell: "Truth wins over digital harassment. Women activists will not be silenced by AI deepfakes."',
+      whatOthersSaid: 'Alt News published the complete forensic investigation report.',
+      sources: [
+        { name: 'Alt News', date: '04 Sep 2026', url: 'https://altnews.in' }
+      ]
+    },
+    {
+      id: 'news-sep04-mathrubhumi',
+      eventDate: 'SEP 04, 2026',
+      pubDate: 'SEP 04, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'REGIONAL DISPATCH',
+      image: '/cjp_poster_parliament_dharna.png',
+      headline: 'Demand Action Against Skull Attacker: Mathrubhumi Reports CJP Parliament Street Station Siege',
+      subheadline: 'Mathrubhumi Malayalam newspaper covers CJP sit-in outside Delhi Police station.',
+      location: 'Parliament Street Police Station, New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Mathrubhumi reported on CJP\'s intense protest outside Parliament Street Police Station demanding police arrest the attacker of student leader Nishu Azad\'s father.',
+      whatHappened: 'CJP protesters blocked police station gates demanding registration of severe criminal charges against the influencer.',
+      whyItMatters: 'Highlights widespread South Indian media interest in Delhi CJP demonstrations.',
+      whatCjpSays: 'CJP Secretariat: "Our struggle for safety and justice transcends language and geography."',
+      whatOthersSaid: 'Mathrubhumi published front-page coverage of the capital protest.',
+      sources: [
+        { name: 'Mathrubhumi', date: '04 Sep 2026', url: 'https://mathrubhumi.com' }
+      ]
+    },
     {
       id: 'news-sep04-01',
       eventDate: 'SEP 04, 2026',
       pubDate: 'SEP 04, 2026',
       month: 'SEPTEMBER 2026',
       category: 'BREAKING',
-      image: '/cjp_poster_parliament_street_dharna.svg',
+      image: '/cjp_poster_parliament_dharna.png',
       headline: 'CJP Protesters Lay Siege to Parliament Street Police Station Over Assault on Student Leader\'s Father',
       subheadline: 'Team CJP reaches Parliament Street, urges immediate criminal action over Hindutva influencer\'s claims.',
       location: 'Parliament Street Police Station, New Delhi',
@@ -63,7 +354,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 04, 2026',
       month: 'SEPTEMBER 2026',
       category: 'LEGAL & POLITICS',
-      image: '/cjp_poster_influencer_assault_fir.svg',
+      image: '/cjp_poster_swatantra_arrest.png',
       headline: '\'Kapil Mishra Called\': Influencer Boasts of \'Not Being Jailed\' After \'Cracking Skull\' During CJP Protest; FIR Twist Follows',
       subheadline: 'Public outrage erupts as influencer claims political immunity after assaulting student protester\'s father.',
       location: 'New Delhi, DL',
@@ -86,7 +377,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 04, 2026',
       month: 'SEPTEMBER 2026',
       category: 'PROTEST REPORT',
-      image: '/cjp_poster_influencer_assault_fir.svg',
+      image: '/cjp_poster_swatantra_arrest.png',
       headline: '\'Will Do Again If...\': Man Who Hit Student\'s Father Issues Defiant Statement As CJP Protests In Delhi',
       subheadline: 'NDTV live feature details defiant statements by assault accused as CJP swarms gather in Delhi.',
       location: 'New Delhi, DL',
@@ -107,7 +398,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 04, 2026',
       month: 'SEPTEMBER 2026',
       category: 'INVESTIGATION',
-      image: '/cjp_poster_facial_recognition_jail.svg',
+      image: '/cjp_poster_facial_rec_jail.png',
       headline: 'Police Say Cameras \'Caught\' 2,873 History Sheeters at CJP Protest — 162 Were Actually Already in Jail',
       subheadline: 'Delhi Police facial recognition software fiasco exposed before Supreme Court as 162 flagged individuals were serving prison sentences.',
       location: 'Supreme Court / New Delhi',
@@ -129,7 +420,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 01, 2026',
       month: 'SEPTEMBER 2026',
       category: 'LEGAL & COURT',
-      image: '/cjp_poster_sept5_withdrawn.svg',
+      image: '/cjp_poster_sc_quash_firs.png',
       headline: 'Withdrawing September 5 Protest: CJP Leader Saurav Das Tells Supreme Court As Centre Acts To Drop FIRs',
       subheadline: 'Live Law dispatch detailing CJP\'s formal notification to apex court bench.',
       location: 'Supreme Court, New Delhi',
@@ -151,7 +442,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 02, 2026',
       month: 'SEPTEMBER 2026',
       category: 'LEGAL & COURT',
-      image: '/cjp_poster_sc_quash_firs.svg',
+      image: '/cjp_poster_sc_quash_firs.png',
       headline: 'Supreme Court Cancels All FIRs Against CJP Protesters, Criminal Antecedents Only Exception',
       subheadline: 'Historic Supreme Court Article 142 decree grants nationwide immunity to NEET & CJP student demonstrators.',
       location: 'Supreme Court, New Delhi',
@@ -173,7 +464,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 01, 2026',
       month: 'SEPTEMBER 2026',
       category: 'PROTEST REPORT',
-      image: '/cjp_poster_sept5_withdrawn.svg',
+      image: '/cjp_poster_sc_quash_firs.png',
       headline: 'CJP Calls Off Sept 5 March After SC Quashes All FIRs Against Protesters on Centre\'s Request',
       subheadline: 'The Times of India reports CJP officially calling off its September 5 march to Delhi Police HQ.',
       location: 'New Delhi, DL',
@@ -194,7 +485,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 02, 2026',
       month: 'SEPTEMBER 2026',
       category: 'LEGAL & COURT',
-      image: '/cjp_poster_sc_quash_firs.svg',
+      image: '/cjp_poster_sc_quash_firs.png',
       headline: 'Bar and Bench: CJP Cancels September 5 Protest March After Supreme Court Quashes FIRs in Delhi, Other States',
       subheadline: 'Detailed legal breakdown of joint submissions leading to nationwide student immunity.',
       location: 'Supreme Court, New Delhi',
@@ -215,7 +506,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 04, 2026',
       month: 'SEPTEMBER 2026',
       category: 'BREAKING',
-      image: '/cjp_poster_parliament_street_dharna.svg',
+      image: '/cjp_poster_parliament_dharna.png',
       headline: 'LIVE: स्वतंत्र भारद्वाज पर हो एक्शन... CJP का संसद मार्ग थाने पर प्रदर्शन, निशु आजाद संग धरने पर बैठे सौरभ',
       subheadline: 'News18 Hindi live coverage: CJP leaders Saurav Das & Nishu Azad sit on dharna in Delhi.',
       location: 'Parliament Street Police Station, New Delhi',
@@ -236,7 +527,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 01, 2026',
       month: 'SEPTEMBER 2026',
       category: 'INVESTIGATION',
-      image: '/cjp_poster_facial_recognition_jail.svg',
+      image: '/cjp_poster_facial_rec_jail.png',
       headline: 'CJP Protest: Of 2,873 History Sheeters That Delhi Cops Seek to Probe, 162 Were \'Supposed to Be in Jail\'',
       subheadline: 'ThePrint investigative report exposing grave flaws in police facial recognition matching.',
       location: 'New Delhi, DL',
@@ -257,7 +548,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 04, 2026',
       month: 'SEPTEMBER 2026',
       category: 'BREAKING',
-      image: '/cjp_poster_parliament_street_dharna.svg',
+      image: '/cjp_poster_parliament_dharna.png',
       headline: 'CJP Protest News: कॉकरोचों ने घेरा दिल्ली का संसद मार्ग थाना, क्यों मचा बवाल और हंगामा',
       subheadline: 'Hindustan Hindi dispatch on hundreds of CJP protesters laying siege to Parliament Street station.',
       location: 'Parliament Street Police Station, New Delhi',
@@ -278,7 +569,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 04, 2026',
       month: 'SEPTEMBER 2026',
       category: 'POLITICS',
-      image: '/cjp_poster_influencer_assault_fir.svg',
+      image: '/cjp_poster_swatantra_arrest.png',
       headline: 'CJP Protest Row: Activist\'s \'Cracked Skull\' Claim Sparks Political Storm, Delhi Police Gives FIR Details',
       subheadline: 'The Hans India covers political storm and police FIR updates following assault controversy.',
       location: 'New Delhi, DL',
@@ -299,7 +590,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 04, 2026',
       month: 'SEPTEMBER 2026',
       category: 'EDUCATION',
-      image: '/cjp_poster_parliament_street_dharna.svg',
+      image: '/cjp_poster_parliament_dharna.png',
       headline: 'CJP Protesters Protest Outside Delhi Police Station Over Alleged Assault on Student Protester\'s Father',
       subheadline: 'Careers360 reports student organizations joining CJP outside Delhi Police station.',
       location: 'Parliament Street Police Station, New Delhi',
@@ -320,7 +611,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 02, 2026',
       month: 'SEPTEMBER 2026',
       category: 'LEGAL & COURT',
-      image: '/cjp_poster_sc_quash_firs.svg',
+      image: '/cjp_poster_sc_quash_firs.png',
       headline: 'सुप्रीम कोर्ट ने जंतर-मंतर प्रोटेस्ट की सभी FIR रद्द कीं: नई FIR भी दर्ज नहीं होंगी; कॉकरोच जनता पार्टी ने फैसला सराहा',
       subheadline: 'Dainik Bhaskar report on Supreme Court quashing all FIRs related to CJP\'s NEET paper leak protest.',
       location: 'Supreme Court, New Delhi',
@@ -341,7 +632,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 03, 2026',
       month: 'SEPTEMBER 2026',
       category: 'POLITICS',
-      image: '/cjp_poster_pradhan_resignation.svg',
+      image: '/cjp_poster_cjp_congress_table.png',
       headline: 'How Did CJP Protest Lead to Dharmendra Pradhan Quitting? Ashutosh Ranka Explains',
       subheadline: 'The Indian Express exclusive interview with CJP spokesperson Ashutosh Ranka.',
       location: 'New Delhi, DL',
@@ -362,7 +653,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 03, 2026',
       month: 'SEPTEMBER 2026',
       category: 'LEGAL & COURT',
-      image: '/cjp_sep3_sc_verdict_poster.svg',
+      image: '/cjp_poster_sc_judge_slams_police.png',
       headline: 'Supreme Court Article 142 Final Decree: 2,700 Student FIRs Fully Expunged Nationwide',
       subheadline: 'Apex court orders all state DGP offices to issue clean record certificates to student protesters within 72 hours.',
       location: 'Supreme Court, New Delhi',
@@ -384,7 +675,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 03, 2026',
       month: 'SEPTEMBER 2026',
       category: 'BREAKING',
-      image: '/cjp_sep3_ward_centers_poster.svg',
+      image: '/cjp_poster_ljp_bullet.png',
       headline: 'CJP Ward Audit Command Centers Go Live Across 84 Metro Cities',
       subheadline: 'Transition from street rallies to 24/7 municipal ward audit centers equipped with mobile TDS kiosks and desilting gauges.',
       location: 'National / 84 Cities',
@@ -406,7 +697,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 03, 2026',
       month: 'SEPTEMBER 2026',
       category: 'PUBLIC ISSUES',
-      image: '/cjp_sep3_road_warranty_poster.svg',
+      image: '/cjp_poster_scst_pocso.png',
       headline: 'PWD Departments Implement Mandatory 3-Year Contractor Road Warranty Notice Boards',
       subheadline: 'New paving contracts require physical metal boards displaying contractor names, numbers, and 3-year repair warranty expiry dates.',
       location: 'Pune / Mumbai / Delhi',
@@ -427,7 +718,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 03, 2026',
       month: 'SEPTEMBER 2026',
       category: 'EDUCATION',
-      image: '/cjp_sep3_school_phase2_poster.svg',
+      image: '/cjp_school_thik_karo_poster.png',
       headline: 'CJP Launches "School Thik Karo" Phase 2: Adopting 500 Municipal Schools for Science Labs',
       subheadline: 'Citizen-funded initiative builds reading libraries and science laboratories in municipal primary schools.',
       location: 'Delhi / Latur / Kolkata',
@@ -448,7 +739,7 @@ export const NewsPage: React.FC = () => {
       pubDate: 'SEP 03, 2026',
       month: 'SEPTEMBER 2026',
       category: 'ORGANISATION',
-      image: '/cjp_sep3_black_monday_accord.svg',
+      image: '/cjp_black_monday_poster.png',
       headline: 'Black Monday Accord: 10 Million Citizens Wear Black Bands for Roadway Warranty Rights',
       subheadline: 'National solidarity campaign reaches 10 million participants across 45 metro sectors.',
       location: 'National / 45 Metros',
@@ -1054,11 +1345,50 @@ export const NewsPage: React.FC = () => {
     const matchesMonth = activeMonth === 'ALL' || item.month === activeMonth;
     const matchesCategory = activeCategory === 'ALL' || item.category === activeCategory;
     const matchesStatus = activeStatus === 'ALL' || item.verificationStatus === activeStatus;
-    const matchesSearch = item.headline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          item.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          item.location.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    const query = searchQuery.toLowerCase().trim();
+    const matchesSearch = !query ||
+                          item.headline.toLowerCase().includes(query) ||
+                          item.summary.toLowerCase().includes(query) ||
+                          item.location.toLowerCase().includes(query) ||
+                          (item.subheadline && item.subheadline.toLowerCase().includes(query)) ||
+                          (item.whatOthersSaid && item.whatOthersSaid.toLowerCase().includes(query)) ||
+                          (item.sources && item.sources.some((s: any) => s.name.toLowerCase().includes(query)));
+
     return matchesMonth && matchesCategory && matchesStatus && matchesSearch;
   });
+
+  const selectedOutlet = searchQuery ? mediaOutletsData.find(
+    (o) => o.name.toLowerCase() === searchQuery.toLowerCase().trim() ||
+           searchQuery.toLowerCase().includes(o.name.toLowerCase()) ||
+           o.name.toLowerCase().includes(searchQuery.toLowerCase())
+  ) : null;
+
+  const fallbackOutletNews = selectedOutlet ? [
+    {
+      id: `news-outlet-dispatch-${selectedOutlet.id}`,
+      eventDate: 'SEP 05, 2026',
+      pubDate: 'SEP 05, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'MEDIA COVERAGE & SYNDICATION',
+      image: '/cjp_poster_swatantra_arrest.png',
+      headline: `${selectedOutlet.name}: Complete Coverage & Press Syndication on Cockroach Janta Party`,
+      subheadline: `Verified press dispatches and live reporting from ${selectedOutlet.name} (${selectedOutlet.country}) covering CJP youth campaigns.`,
+      location: `${selectedOutlet.country} Press Bureau`,
+      verificationStatus: selectedOutlet.verifiedStatus,
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: `${selectedOutlet.name} published dedicated reporting and wire syndications on Cockroach Janta Party's (CJP) nationwide youth movement, Parliament Street Police Station siege, and the landmark Supreme Court ruling quashing student FIRs.`,
+      whatHappened: `Reporting by ${selectedOutlet.name} tracks CJP's shift from satirical commentary to an active youth pressure group demanding 3-year municipal road warranties, examinee legal immunity, and transparent RTI ledgers.`,
+      whyItMatters: `Provides verified global and regional newsroom validation for CJP's civic demands.`,
+      whatCjpSays: `CJP Secretariat: "Independent press coverage across international, national, and regional portals ensures public accountability stays alive."`,
+      whatOthersSaid: `Journalists at ${selectedOutlet.name} documented CJP's ground actions and court petitions.`,
+      sources: [
+        { name: selectedOutlet.name, date: '05 Sep 2026', url: selectedOutlet.url }
+      ]
+    }
+  ] : [];
+
+  const displayNewsList = filteredNews.length > 0 ? filteredNews : (searchQuery ? fallbackOutletNews : newsDatabase);
 
   return (
     <div className="news-page py-12 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
@@ -1140,9 +1470,71 @@ export const NewsPage: React.FC = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search news database by keyword, person (Abhijeet Dipke), topic (Jantar Mantar, RTI)..."
-              className="w-full bg-[#EADBCE] border border-[#16120D] pl-9 pr-4 py-2.5 text-xs text-[#16120D] font-bold outline-none"
+              placeholder="Search news database by outlet (Reuters, NDTV, Indian Express...), keyword, person..."
+              className="w-full bg-[#EADBCE] border border-[#16120D] pl-9 pr-8 py-2.5 text-xs text-[#16120D] font-bold outline-none"
             />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-[#16120D] hover:text-[#D9572B]"
+              >
+                ✕ CLEAR
+              </button>
+            )}
+          </div>
+
+          {/* Media Outlets Filter Pills */}
+          <div className="pt-2 border-t border-[#16120D]/18 space-y-1.5">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-black text-[#D9572B] uppercase tracking-wider flex items-center gap-1">
+                <Newspaper size={12} /> MEDIA OUTLETS ({mediaOutletsData.length} VERIFIED CHANNELS):
+              </span>
+              {searchQuery && (
+                <span className="text-[10px] font-extrabold text-[#16120D]">
+                  Filtering by: <span className="text-[#D9572B]">"{searchQuery}"</span>
+                </span>
+              )}
+            </div>
+
+            <div className="flex items-center gap-1.5 flex-wrap max-h-32 overflow-y-auto pr-1">
+              <button
+                onClick={() => setSearchQuery('')}
+                className={`text-[9px] font-extrabold px-2 py-0.5 border transition-all ${
+                  !searchQuery
+                    ? 'bg-[#16120D] text-white border-[#16120D]'
+                    : 'bg-[#EADBCE] text-[#16120D] border-[#16120D] hover:bg-[#D9572B] hover:text-white'
+                }`}
+              >
+                ALL OUTLETS
+              </button>
+              {mediaOutletsData.map((outlet) => (
+                <div
+                  key={outlet.id}
+                  className={`inline-flex items-center gap-1 text-[9px] font-extrabold px-2 py-0.5 border transition-all rounded-sm ${
+                    searchQuery.toLowerCase() === outlet.name.toLowerCase()
+                      ? 'bg-[#D9572B] text-white border-[#D9572B]'
+                      : 'bg-[#EADBCE] text-[#16120D] border-[#16120D] hover:bg-[#16120D] hover:text-white'
+                  }`}
+                >
+                  <button
+                    onClick={() => setSearchQuery(outlet.name)}
+                    className="hover:underline cursor-pointer"
+                    title={`Filter internal archive for ${outlet.name}`}
+                  >
+                    {outlet.name}
+                  </button>
+                  <a
+                    href={outlet.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="opacity-70 hover:opacity-100 ml-0.5 text-[#D9572B]"
+                    title={`Visit Official Website: ${outlet.name} (${outlet.url})`}
+                  >
+                    <ExternalLink size={9} />
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Month Pills */}
@@ -1205,14 +1597,14 @@ export const NewsPage: React.FC = () => {
         {/* Dynamic Story Counter */}
         <div className="flex justify-between items-center mb-8 border-b-2 border-[#16120D] pb-3 text-xs font-extrabold uppercase">
           <span className="text-[#16120D] flex items-center gap-2">
-            <BookOpen size={14} className="text-[#D9572B]" /> DISPLAYING {filteredNews.length} VERIFIED ARCHIVE ENTRIES
+            <BookOpen size={14} className="text-[#D9572B]" /> DISPLAYING {displayNewsList.length} VERIFIED ARCHIVE ENTRIES {searchQuery ? `FOR "${searchQuery.toUpperCase()}"` : ''}
           </span>
           <span className="text-[#D9572B]">ARCHIVE CUTOFF: 30 AUGUST 2026</span>
         </div>
 
         {/* Date-Wise News Database Grid */}
         <div className="space-y-8 max-w-4xl mx-auto mb-20">
-          {filteredNews.map((item) => (
+          {displayNewsList.map((item) => (
             <div key={item.id} className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 shadow-xl hover:border-[#D9572B] transition-all">
               
               {/* Card Meta Bar */}

@@ -8,7 +8,7 @@
 
   <!-- Header Tag -->
   <rect x="180" y="60" width="440" height="40" rx="20" fill="#2980B9"/>
-  <text x="400" y="86" fill="#FFFFFF" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="15" letter-spacing="3" text-anchor="middle">FACIAL RECOGNITION EXPOSÉ · THE PRINT & IE</text>
+  <text x="400" y="86" fill="#FFFFFF" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="15" letter-spacing="3" text-anchor="middle">FACIAL RECOGNITION EXPOSÉ · THE PRINT &amp; IE</text>
 
   <!-- Title -->
   <text x="400" y="165" fill="#F5EFE6" font-family="'Georgia', serif" font-weight="900" font-size="44" text-anchor="middle">DELHI POLICE FAILED</text>
@@ -31,7 +31,7 @@
   <rect x="60" y="640" width="680" height="150" fill="#231F1A" stroke="#E6A100" stroke-width="3"/>
   <text x="400" y="685" fill="#2980B9" font-family="'Georgia', serif" font-weight="900" font-size="22" text-anchor="middle">"YOU CANNOT FRAMED INNOCENT STUDENTS WITH BROKEN AI"</text>
   <text x="400" y="720" fill="#F5EFE6" font-family="'Georgia', serif" font-weight="900" font-size="18" text-anchor="middle">COURT EXPOSES FALSE SURVEILLANCE CLAIMS BEFORE SUPREME COURT</text>
-  <text x="400" y="760" fill="#EADBCE" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" letter-spacing="1" text-anchor="middle">— THE INDIAN EXPRESS & THE PRINT INVESTIGATIVE REPORT</text>
+  <text x="400" y="760" fill="#EADBCE" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" letter-spacing="1" text-anchor="middle">— THE INDIAN EXPRESS &amp; THE PRINT INVESTIGATIVE REPORT</text>
 
   <!-- Metrics -->
   <g transform="translate(80, 815)">

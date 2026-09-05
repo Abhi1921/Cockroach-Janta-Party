@@ -13,9 +13,7 @@ import {
   ExternalLink,
   Play,
   RefreshCw,
-  Megaphone,
   MapPin,
-  GraduationCap,
   Activity,
   UserCheck
 } from 'lucide-react';
@@ -30,8 +28,8 @@ export const HomePage: React.FC = () => {
   const [titleIndex, setTitleIndex] = useState(0);
   const [videoPage, setVideoPage] = useState(1);
   const videosPerPage = 6;
-  const [activePoster, setActivePoster] = useState<'sc_verdict' | 'sep5' | 'ward_centers' | 'school' | 'black_monday'>('sc_verdict');
-  const [featuredTab, setFeaturedTab] = useState<'sc_verdict' | 'sep5' | 'ward_centers' | 'school' | 'black_monday'>('sc_verdict');
+  const [activePoster, setActivePoster] = useState<string>('swatantra_arrest');
+  const [featuredTab, setFeaturedTab] = useState<string>('swatantra_arrest');
 
   const alternateTitles = [
     {
@@ -106,6 +104,14 @@ export const HomePage: React.FC = () => {
   ];
 
   const videosList = [
+    {
+      id: 'LcQsEWUHOjM',
+      title: 'CJP Live Broadcast: Special Live Coverage & Youth Movement Update',
+      category: 'LIVE STREAM',
+      url: 'https://www.youtube.com/live/LcQsEWUHOjM?si=ZzSuUzAw8xCLtuMO',
+      embedUrl: 'https://www.youtube.com/embed/LcQsEWUHOjM',
+      badge: 'LIVE NOW'
+    },
     {
       id: 'fb-cjp-watch-911189544963956',
       title: 'NDTV Report: CJP Calls Off Sept 5 Delhi Protest After SC Orders FIRs Quashed',
@@ -362,22 +368,40 @@ export const HomePage: React.FC = () => {
                 <span className="flex items-center gap-1 text-[#D9572B]">
                   <span className="w-2 h-2 rounded-full bg-[#D9572B] animate-ping" />
                   <span>
-                    {activePoster === 'sc_verdict' && '🔥 #1 TRENDING: SC VERDICT'}
-                    {activePoster === 'sep5' && '5 SEP DELHI MARCH'}
-                    {activePoster === 'ward_centers' && '84 WARD COMMAND HUBS'}
-                    {activePoster === 'school' && 'SCHOOL THIK KARO'}
-                    {activePoster === 'black_monday' && '10M BLACK MONDAY'}
+                    {activePoster === 'scst_pocso' && '⚖️ SC/ST & POCSO INVOKED'}
+                    {activePoster === 'ljp_bullet' && '🏍️ LJP COMPLAINT & BULLET ESCAPE'}
+                    {activePoster === 'swatantra_arrest' && '🚨 BREAKING: SWATANTRA ARRESTED'}
+                    {activePoster === 'sc_slams_police' && '⚖️ SC JUDGE SLAMS POLICE'}
+                    {activePoster === 'cjp_congress' && '🤝 RAHUL GANDHI & CJP'}
+                    {activePoster === 'cjp_d_splinter' && '🪳 CJP-D SPLINTER DISPUTE'}
+                    {activePoster === 'akhilesh_meet' && '🏛️ AKHILESH & CJP LUCKNOW'}
+                    {activePoster === 'ips_radar' && '🎯 IPS SACHIN SHARMA RADAR'}
+                    {activePoster === 'ashramshala' && '🏫 ASHRAMSHALA AUDIT'}
+                    {activePoster === 'meta_takedown' && '🛡️ META TAKES DOWN AI FAKES'}
+                    {activePoster === 'dharna' && '🔥 PARLIAMENT ST SIEGE'}
+                    {activePoster === 'sc_verdict' && '⚖️ SC ARTICLE 142 DECREE'}
                   </span>
                 </span>
 
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => {
-                      if (activePoster === 'sc_verdict') setActivePoster('sep5');
-                      else if (activePoster === 'sep5') setActivePoster('ward_centers');
-                      else if (activePoster === 'ward_centers') setActivePoster('school');
-                      else if (activePoster === 'school') setActivePoster('black_monday');
-                      else setActivePoster('sc_verdict');
+                      const posters = [
+                        'scst_pocso',
+                        'ljp_bullet',
+                        'swatantra_arrest',
+                        'sc_slams_police',
+                        'cjp_congress',
+                        'cjp_d_splinter',
+                        'akhilesh_meet',
+                        'ips_radar',
+                        'ashramshala',
+                        'meta_takedown',
+                        'dharna',
+                        'sc_verdict'
+                      ];
+                      const idx = posters.indexOf(activePoster);
+                      setActivePoster(posters[(idx + 1) % posters.length]);
                     }}
                     className="text-[9px] bg-[#16120D] text-[#F5EFE6] px-2 py-1 uppercase font-black hover:bg-[#D9572B] transition-colors rounded cursor-pointer"
                   >
@@ -390,15 +414,29 @@ export const HomePage: React.FC = () => {
               <div className="overflow-hidden border-2 border-[#16120D] bg-[#16120D] mb-4 flex items-center justify-center relative group p-1 min-h-[300px]">
                 <img
                   src={
-                    activePoster === 'sc_verdict'
-                      ? "/cjp_sep3_sc_verdict_poster.svg"
-                      : activePoster === 'sep5'
-                      ? "/cjp_sep5_protest_poster.png"
-                      : activePoster === 'ward_centers'
-                      ? "/cjp_sep3_ward_centers_poster.svg"
-                      : activePoster === 'school'
-                      ? "/cjp_sep3_school_phase2_poster.svg"
-                      : "/cjp_sep3_black_monday_accord.svg"
+                    activePoster === 'scst_pocso'
+                      ? "/cjp_poster_scst_pocso.png"
+                      : activePoster === 'ljp_bullet'
+                      ? "/cjp_poster_ljp_bullet.png"
+                      : activePoster === 'swatantra_arrest'
+                      ? "/cjp_poster_swatantra_arrest.png"
+                      : activePoster === 'sc_slams_police'
+                      ? "/cjp_poster_sc_judge_slams_police.png"
+                      : activePoster === 'cjp_congress'
+                      ? "/cjp_poster_cjp_congress_table.png"
+                      : activePoster === 'cjp_d_splinter'
+                      ? "/cjp_poster_cjp_congress_table.png"
+                      : activePoster === 'akhilesh_meet'
+                      ? "/cjp_poster_cjp_congress_table.png"
+                      : activePoster === 'ips_radar'
+                      ? "/cjp_poster_parliament_dharna.png"
+                      : activePoster === 'ashramshala'
+                      ? "/cjp_school_thik_karo_poster.png"
+                      : activePoster === 'meta_takedown'
+                      ? "/cjp_poster_sc_judge_slams_police.png"
+                      : activePoster === 'dharna'
+                      ? "/cjp_poster_parliament_dharna.png"
+                      : "/cjp_poster_sc_quash_firs.png"
                   }
                   alt="Trending Campaign Poster - Cockroach Janta Party"
                   className="w-full h-auto object-contain mx-auto group-hover:scale-105 transition-transform duration-300"
@@ -408,27 +446,48 @@ export const HomePage: React.FC = () => {
               {/* Poster Text & Subcaption */}
               <div className="text-center">
                 <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2.5 py-0.5 uppercase tracking-widest inline-block mb-1.5 rounded">
-                  {activePoster === 'sc_verdict' && '🔥 TRENDING POSTER · 3 SEP 2026'}
-                  {activePoster === 'sep5' && '5 SEPTEMBER 2026 · DELHI MARCH'}
-                  {activePoster === 'ward_centers' && 'CIVIC WATCHDOG NETWORK · 84 CITIES'}
-                  {activePoster === 'school' && 'EDUCATION REFORM · PHASE 2'}
-                  {activePoster === 'black_monday' && 'BLACK MONDAY MOVEMENT ACCORD'}
+                  {activePoster === 'scst_pocso' && '⚖️ FIR EXPANDED · 5 SEP 2026'}
+                  {activePoster === 'ljp_bullet' && '🏍️ LJP COMPLAINT · 5 SEP 2026'}
+                  {activePoster === 'swatantra_arrest' && '🚨 BREAKING NEWS · 5 SEP 2026'}
+                  {activePoster === 'sc_slams_police' && '⚖️ SUPREME COURT · 5 SEP 2026'}
+                  {activePoster === 'cjp_congress' && '🤝 POLITICAL SOLIDARITY · 5 SEP 2026'}
+                  {activePoster === 'cjp_d_splinter' && '🪳 INTERNAL DISPUTE · 4 SEP 2026'}
+                  {activePoster === 'akhilesh_meet' && '🏛️ LUCKNOW DIALOGUE · 5 SEP 2026'}
+                  {activePoster === 'ips_radar' && '🎯 POLICE ACCOUNTABILITY · 4 SEP 2026'}
+                  {activePoster === 'ashramshala' && '🏫 TRIBAL SCHOOL AUDIT · 5 SEP 2026'}
+                  {activePoster === 'meta_takedown' && '🛡️ ALT NEWS IMPACT · 4 SEP 2026'}
+                  {activePoster === 'dharna' && '🔥 CAPITAL SIEGE · 4 SEP 2026'}
+                  {activePoster === 'sc_verdict' && '⚖️ SC ARTICLE 142 · 3 SEP 2026'}
                 </span>
 
                 <h3 className="font-display text-2xl sm:text-3xl text-[#16120D] uppercase tracking-wide leading-tight mb-1">
+                  {activePoster === 'scst_pocso' && 'SC/ST & POCSO ACTS INVOKED'}
+                  {activePoster === 'ljp_bullet' && 'LJP COMPLAINT & BULLET ESCAPE'}
+                  {activePoster === 'swatantra_arrest' && 'SWATANTRA BHARDWAJ ARRESTED'}
+                  {activePoster === 'sc_slams_police' && 'SC JUDGE SLAMS POLICE ACTION'}
+                  {activePoster === 'cjp_congress' && 'RAHUL GANDHI & CJP HQ VISIT'}
+                  {activePoster === 'cjp_d_splinter' && 'REBEL FLOATS CJP-DEMOCRATIC'}
+                  {activePoster === 'akhilesh_meet' && 'AKHILESH YADAV & CJP MEET'}
+                  {activePoster === 'ips_radar' && 'CJP TARGETS IPS SACHIN SHARMA'}
+                  {activePoster === 'ashramshala' && 'DIPKE URGES FADNAVIS ON ASHRAMSHALAS'}
+                  {activePoster === 'meta_takedown' && 'META TAKES DOWN AI DEEPFAKES'}
+                  {activePoster === 'dharna' && 'PARLIAMENT STREET THANA SIEGE'}
                   {activePoster === 'sc_verdict' && 'SUPREME COURT ARTICLE 142 DECREE'}
-                  {activePoster === 'sep5' && '5 SEP DELHI POLICE HQ MARCH'}
-                  {activePoster === 'ward_centers' && '84 METRO WARD COMMAND CENTERS'}
-                  {activePoster === 'school' && 'SCHOOL THIK KARO PHASE 2'}
-                  {activePoster === 'black_monday' && 'BLACK MONDAY MOVEMENT ACCORD'}
                 </h3>
 
                 <p className="text-[11px] text-[#D9572B] font-extrabold uppercase tracking-widest leading-snug">
+                  {activePoster === 'scst_pocso' && 'POLICE ADD SEC 307 ATTEMPT TO MURDER & SC/ST SECTIONS AFTER CJP SIEGE!'}
+                  {activePoster === 'ljp_bullet' && 'CHIRAG PASWAN LJP DENIES TIES WHILE POLICE TRACK BULLET MOTORCYCLE!'}
+                  {activePoster === 'swatantra_arrest' && 'REMANDED TO 1-DAY POLICE CUSTODY BY PATIALA HOUSE COURT!'}
+                  {activePoster === 'sc_slams_police' && '"VERY DISTRESSING TO SEE POLICE HIGH-HANDEDNESS" — SC BENCH'}
+                  {activePoster === 'cjp_congress' && '"I\'M WITH YOU" — RAHUL RESPONSES TO TEEN ACTIVIST'}
+                  {activePoster === 'cjp_d_splinter' && 'BRAHMBHATT CLAIMS CJP IS TEAM KEJRIWAL; DIPKE REJECTS GIMMICK'}
+                  {activePoster === 'akhilesh_meet' && 'LUCKNOW DIALOGUE SPARKS HOT DEBATE IN UP POLITICS'}
+                  {activePoster === 'ips_radar' && 'DEMANDING PROBE INTO POLICE INACTION IN VICTIM CASE'}
+                  {activePoster === 'ashramshala' && 'DEMANDING SURPRISE VISITS TO TRIBAL HOSTELS IN MAHARASHTRA'}
+                  {activePoster === 'meta_takedown' && 'ALT NEWS IMPACT WIPES HARASSING MEDIA FROM IG & FB'}
+                  {activePoster === 'dharna' && 'SAURAV DAS & NISHU AZAD ON 24-HR POLICE STATION SIEGE'}
                   {activePoster === 'sc_verdict' && '2,700 STUDENT FIRS EXPUNGED NATIONWIDE!'}
-                  {activePoster === 'sep5' && 'BE READY FOR COCKROACHES! CHALO POLICE HQ'}
-                  {activePoster === 'ward_centers' && 'FROM STREET MARCHES TO 24/7 MUNICIPAL AUDITS'}
-                  {activePoster === 'school' && 'DESKS BEFORE SPEECHES, SCIENCE LABS BEFORE RIBBON CUTTINGS'}
-                  {activePoster === 'black_monday' && 'WEAR BLACK EVERY MONDAY · DEMAND ASPHALT WARRANTIES'}
                 </p>
 
                 <div className="mt-3 pt-2.5 border-t border-[#16120D]/20">
@@ -474,6 +533,46 @@ export const HomePage: React.FC = () => {
           {/* Campaign Selector Tabs */}
           <div className="flex justify-center items-center gap-2.5 mb-6 flex-wrap">
             <button
+              onClick={() => setFeaturedTab('swatantra_arrest')}
+              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
+                featuredTab === 'swatantra_arrest'
+                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
+                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
+              }`}
+            >
+              <span>🚨</span> <span>1. SWATANTRA ARRESTED</span>
+            </button>
+            <button
+              onClick={() => setFeaturedTab('sc_slams_police')}
+              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
+                featuredTab === 'sc_slams_police'
+                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
+                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
+              }`}
+            >
+              <span>⚖️</span> <span>2. SC JUDGE SLAMS POLICE</span>
+            </button>
+            <button
+              onClick={() => setFeaturedTab('cjp_congress')}
+              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
+                featuredTab === 'cjp_congress'
+                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
+                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
+              }`}
+            >
+              <span>🤝</span> <span>3. RAHUL GANDHI &amp; CJP</span>
+            </button>
+            <button
+              onClick={() => setFeaturedTab('cjp_d_splinter')}
+              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
+                featuredTab === 'cjp_d_splinter'
+                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
+                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
+              }`}
+            >
+              <span>🪳</span> <span>4. CJP-D SPLINTER</span>
+            </button>
+            <button
               onClick={() => setFeaturedTab('sc_verdict')}
               className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
                 featuredTab === 'sc_verdict'
@@ -481,47 +580,7 @@ export const HomePage: React.FC = () => {
                   : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
               }`}
             >
-              <span>⚖️</span> <span>1. SC 142 VERDICT</span>
-            </button>
-            <button
-              onClick={() => setFeaturedTab('sep5')}
-              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
-                featuredTab === 'sep5'
-                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
-                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
-              }`}
-            >
-              <Megaphone size={16} /> <span>2. 5 SEP DELHI MARCH</span>
-            </button>
-            <button
-              onClick={() => setFeaturedTab('ward_centers')}
-              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
-                featuredTab === 'ward_centers'
-                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
-                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
-              }`}
-            >
-              <span>🏢</span> <span>3. 84 WARD CENTERS</span>
-            </button>
-            <button
-              onClick={() => setFeaturedTab('school')}
-              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
-                featuredTab === 'school'
-                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
-                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
-              }`}
-            >
-              <GraduationCap size={16} /> <span>4. SCHOOL THIK KARO</span>
-            </button>
-            <button
-              onClick={() => setFeaturedTab('black_monday')}
-              className={`px-4 py-2.5 text-xs font-black uppercase border-2 border-[#16120D] transition-all flex items-center gap-2 rounded ${
-                featuredTab === 'black_monday'
-                  ? 'bg-[#D9572B] text-white border-[#D9572B] shadow-md'
-                  : 'bg-[#EADBCE] text-[#16120D] hover:bg-[#16120D] hover:text-white'
-              }`}
-            >
-              <span>🖤</span> <span>5. BLACK MONDAY</span>
+              <span>📜</span> <span>5. SC 142 DECREE</span>
             </button>
           </div>
 
@@ -533,15 +592,15 @@ export const HomePage: React.FC = () => {
                 <div className="border-2 border-[#EADBCE] bg-[#16120D] p-2 shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform w-full max-w-[420px] min-h-[320px]">
                   <img
                     src={
-                      featuredTab === 'sc_verdict'
-                        ? "/cjp_sep3_sc_verdict_poster.svg"
-                        : featuredTab === 'sep5'
-                        ? "/cjp_sep5_protest_poster.png"
-                        : featuredTab === 'ward_centers'
-                        ? "/cjp_sep3_ward_centers_poster.svg"
-                        : featuredTab === 'school'
-                        ? "/cjp_sep3_school_phase2_poster.svg"
-                        : "/cjp_sep3_black_monday_accord.svg"
+                      featuredTab === 'swatantra_arrest'
+                        ? "/cjp_poster_swatantra_arrest.png"
+                        : featuredTab === 'sc_slams_police'
+                        ? "/cjp_poster_sc_judge_slams_police.png"
+                        : featuredTab === 'cjp_congress'
+                        ? "/cjp_poster_cjp_congress_table.png"
+                        : featuredTab === 'cjp_d_splinter'
+                        ? "/cjp_poster_cjp_congress_table.png"
+                        : "/cjp_poster_sc_quash_firs.png"
                     }
                     alt="Featured Campaign Poster - Cockroach Janta Party"
                     className="w-full h-auto object-contain mx-auto"
@@ -553,52 +612,52 @@ export const HomePage: React.FC = () => {
               <div className="md:col-span-7 space-y-4">
                 <div className="flex items-center gap-2 text-xs font-extrabold text-[#D9572B] uppercase tracking-widest">
                   <span>
-                    {featuredTab === 'sc_verdict' && '🔥 #1 TRENDING STORY · SUPREME COURT ARTICLE 142 DECREE'}
-                    {featuredTab === 'sep5' && 'FEATURED PROTEST MARCH · 5 SEPTEMBER 2026'}
-                    {featuredTab === 'ward_centers' && 'FEATURED CIVIC INITIATIVE · 84 METRO WARD AUDIT HUBS'}
-                    {featuredTab === 'school' && 'FEATURED CAMPAIGN · EDUCATION & SCHOOL REFORM'}
-                    {featuredTab === 'black_monday' && 'FEATURED MOVEMENT · 10 MILLION BLACK MONDAY ACCORD'}
+                    {featuredTab === 'swatantra_arrest' && '🚨 BREAKING NEWS · THE HINDU & PATIALA HOUSE COURT'}
+                    {featuredTab === 'sc_slams_police' && '⚖️ SUPREME COURT · NDTV & ASIANET DISPATCH'}
+                    {featuredTab === 'cjp_congress' && '🤝 THEPRINT EXCLUSIVE · CROSS-PARTY SOLIDARITY'}
+                    {featuredTab === 'cjp_d_splinter' && '🪳 INTERNAL DISPUTE · HT & INDIA TODAY COVERAGE'}
+                    {featuredTab === 'sc_verdict' && '🔥 ARTICLE 142 DECREE · 2,700 FIRS EXPUNGED'}
                   </span>
                 </div>
 
                 <h2 className="font-display text-4xl sm:text-6xl text-[#F5EFE6] uppercase leading-none">
+                  {featuredTab === 'swatantra_arrest' && 'SWATANTRA BHARDWAJ ARRESTED!'}
+                  {featuredTab === 'sc_slams_police' && 'SC JUDGE SLAMS POLICE CRACKDOWN!'}
+                  {featuredTab === 'cjp_congress' && 'RAHUL GANDHI & CJP HQ VISIT!'}
+                  {featuredTab === 'cjp_d_splinter' && 'REBEL FLOATS CJP-DEMOCRATIC!'}
                   {featuredTab === 'sc_verdict' && 'SC ARTICLE 142 VERDICT!'}
-                  {featuredTab === 'sep5' && '5 SEPTEMBER DELHI MARCH'}
-                  {featuredTab === 'ward_centers' && '84 WARD COMMAND CENTERS'}
-                  {featuredTab === 'school' && 'SCHOOL THIK KARO PHASE 2'}
-                  {featuredTab === 'black_monday' && '10M BLACK MONDAY ACCORD'}
                 </h2>
 
                 <div className="flex items-center gap-4 text-xs font-bold text-[#EADBCE] bg-[#16120D]/60 p-3 border border-[#EADBCE]/30">
                   <span className="flex items-center gap-1.5">
                     <MapPin size={14} className="text-[#D9572B]" />
+                    {featuredTab === 'swatantra_arrest' && 'BULANDSHAHR, UP → PATIALA HOUSE COURT, DELHI'}
+                    {featuredTab === 'sc_slams_police' && 'SUPREME COURT OF INDIA · JANTAR MANTAR'}
+                    {featuredTab === 'cjp_congress' && 'DELHI POLICE HQ · NEW DELHI'}
+                    {featuredTab === 'cjp_d_splinter' && 'NEW DELHI MUNICIPAL SECRETARIAT'}
                     {featuredTab === 'sc_verdict' && 'SUPREME COURT OF INDIA · ALL STATE HIGH COURTS'}
-                    {featuredTab === 'sep5' && 'INDIA GATE → DELHI POLICE HQ'}
-                    {featuredTab === 'ward_centers' && '84 METROPOLITAN CITIES NATIONWIDE'}
-                    {featuredTab === 'school' && '500 MUNICIPAL PRIMARY SCHOOLS NATIONWIDE'}
-                    {featuredTab === 'black_monday' && '45 METRO SECTORS & MUNICIPAL WARDS'}
                   </span>
                 </div>
 
                 <p className="text-xs md:text-sm text-[#EADBCE] leading-relaxed font-medium">
+                  {featuredTab === 'swatantra_arrest' &&
+                    'Following an intense 24-hour siege outside Parliament Street Police Station, Delhi Police tracked and arrested Swatantra Bhardwaj in Bulandshahr, UP. Patiala House Court remanded him to 1-day police custody.'}
+                  {featuredTab === 'sc_slams_police' &&
+                    'Supreme Court Justice Ujjal Bhuyan expressed deep distress over police aggression against peaceful CJP student demonstrators at Jantar Mantar, reaffirming constitutional protest rights.'}
+                  {featuredTab === 'cjp_congress' &&
+                    'Viral assault video led Rahul Gandhi to respond "I\'m with you" to a CJP teen activist. Within hours, a Congress delegation joined CJP leaders outside Delhi Police HQ.'}
+                  {featuredTab === 'cjp_d_splinter' &&
+                    'Rebel leader Brahmbhatt launched CJP-Democratic (CJP-D), alleging CJP is "Team Kejriwal". Founder Abhijeet Dipke dismissed the claim, reiterating CJP\'s strict 100% non-partisan mandate.'}
                   {featuredTab === 'sc_verdict' &&
                     'The Supreme Court invoked Article 142 to expunge all 2,700 student protest FIRs nationwide, ordering state DGP offices to issue clean criminal record certificates.'}
-                  {featuredTab === 'sep5' &&
-                    'CJP doubles down on its nationwide youth protest march to Delhi Police HQ over pending assurances on student FIR quashings, contractor road warranty notice boards, and NEET exam fairness.'}
-                  {featuredTab === 'ward_centers' &&
-                    'CJP launched 84 permanent municipal ward audit command centers to inspect public works, water purity, and drain desilting schedules 24 hours a day.'}
-                  {featuredTab === 'school' &&
-                    'CJP launched Phase 2 of its school improvement initiative, adopting 500 municipal primary schools for library and science laboratory upgrades.'}
-                  {featuredTab === 'black_monday' &&
-                    'Over 10 million citizens across 45 metro sectors wore black armbands every Monday to demand mandatory 3-year paving warranties and transparent municipal ledgers.'}
                 </p>
 
                 <div className="bg-[#D9572B] text-[#F5EFE6] p-3.5 text-xs font-extrabold uppercase tracking-wider">
+                  {featuredTab === 'swatantra_arrest' && '"NO VIRAL BOAST CAN ERASE PHYSICAL ASSAULT — JUSTICE FOR SANJAY KUMAR!" — CJP LEADERSHIP'}
+                  {featuredTab === 'sc_slams_police' && '"POLICE HIGH-HANDEDNESS CANNOT SUPPRESS PEACEFUL CITIZEN QUESTIONS!" — SUPREME COURT BENCH'}
+                  {featuredTab === 'cjp_congress' && '"CROSS-PARTY CITIZEN DEMAND FOR POLICE ACCOUNTABILITY AND STUDENT SAFETY." — CJP CELL'}
+                  {featuredTab === 'cjp_d_splinter' && '"CJP REMAINS DEDICATED TO SUBTERRANEAN CIVIC AUDITS, NOT ELECTORAL POLITICS." — ABHIJEET DIPKE'}
                   {featuredTab === 'sc_verdict' && '"NO STUDENT SHALL CARRY A CRIMINAL RECORD FOR ASKING CIVIC QUESTIONS!" — CJP LEGAL CELL'}
-                  {featuredTab === 'sep5' && '"BE READY FOR COCKROACHES ON SEPTEMBER 5!" — CJP SECRETARIAT'}
-                  {featuredTab === 'ward_centers' && '"FROM STREET MARCHES TO 24/7 MUNICIPAL WARD AUDITS." — CJP TASK FORCE'}
-                  {featuredTab === 'school' && '"DESKS BEFORE SPEECHES, SCIENCE LABS BEFORE RIBBON CUTTINGS." — CJP EDUCATION DESK'}
-                  {featuredTab === 'black_monday' && '"WEAR BLACK, DEMAND ASPHALT WARRANTIES, STOP REPAYING FOR RE-PAVING." — CJP COUNCIL'}
                 </div>
 
                 <div className="pt-2 flex items-center gap-4 flex-wrap">
@@ -886,6 +945,63 @@ export const HomePage: React.FC = () => {
               <span className="bg-[#16120D] text-[#EADBCE] text-[10px] font-extrabold px-3.5 py-2 border border-[#16120D] uppercase tracking-wider">
                 PAGE {videoPage} OF {totalVideoPages} · {videosList.length} TOTAL VIDEOS
               </span>
+            </div>
+          </div>
+
+          {/* Featured Live Stream Spotlight */}
+          <div className="mb-12 bg-[#16120D] border-4 border-[#16120D] text-[#F5EFE6] p-6 md:p-8 shadow-2xl relative overflow-hidden">
+            <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+              <div className="flex items-center gap-3">
+                <span className="bg-[#D9572B] text-white text-[11px] font-black px-3 py-1 uppercase tracking-widest animate-pulse flex items-center gap-1.5 rounded">
+                  <span className="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+                  🔴 CJP LIVE BROADCAST
+                </span>
+                <span className="text-xs font-bold text-[#EADBCE] uppercase tracking-wider hidden sm:inline">
+                  LIVE STREAM DISPATCH
+                </span>
+              </div>
+              <a
+                href="https://www.youtube.com/live/LcQsEWUHOjM?si=ZzSuUzAw8xCLtuMO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#D9572B] text-white text-xs font-black uppercase px-4 py-2 hover:bg-white hover:text-[#16120D] transition-all flex items-center gap-1.5"
+              >
+                <span>OPEN ON YOUTUBE</span>
+                <ExternalLink size={14} />
+              </a>
+            </div>
+
+            <div className="grid lg:grid-cols-12 gap-6 items-center">
+              <div className="lg:col-span-8">
+                <div className="relative aspect-video bg-black border-2 border-[#EADBCE] shadow-2xl overflow-hidden rounded">
+                  <iframe
+                    src="https://www.youtube.com/embed/LcQsEWUHOjM"
+                    title="CJP Live Stream Broadcast"
+                    className="w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+              <div className="lg:col-span-4 flex flex-col justify-between">
+                <div>
+                  <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-2">
+                    SPECIAL LIVE COVERAGE
+                  </span>
+                  <h3 className="font-display text-3xl text-white uppercase leading-tight mb-4">
+                    CJP Live Broadcast: Special Coverage & Youth Movement Update
+                  </h3>
+                  <p className="text-xs text-[#EADBCE] font-medium leading-relaxed mb-6">
+                    Watch the live ground coverage, legal dispatches, and public updates from Cockroach Janta Party. Stay informed on student protections, FIR quashing, and municipal ward audit progress.
+                  </p>
+                </div>
+                <div className="bg-[#241E17] border border-[#3A332B] p-4 rounded">
+                  <div className="flex items-center justify-between text-[11px] font-extrabold text-[#EADBCE]">
+                    <span>STATUS: BROADCASTING LIVE</span>
+                    <span className="text-[#D9572B]">● HIGH PRIORITY</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

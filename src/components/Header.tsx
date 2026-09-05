@@ -12,16 +12,22 @@ import {
   ShieldAlert,
   Radio,
   Check,
-  Search
+  Search,
+  Newspaper,
+  ExternalLink
 } from 'lucide-react';
 import { GlobalSearchModal } from './GlobalSearchModal';
 import { SocialShareModal } from './SocialShareModal';
+import { mediaOutletsData } from '../data/mediaOutletsData';
 
 export const Header: React.FC = () => {
   const { lang, setLang, t } = useLanguage();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const [newsDropdownOpen, setNewsDropdownOpen] = useState(false);
+  const [outletSearchFilter, setOutletSearchFilter] = useState('');
+  const [mobileNewsOpen, setMobileNewsOpen] = useState(false);
   const [supportModalOpen, setSupportModalOpen] = useState(false);
   const [shareModalOpen, setShareModalOpen] = useState(false);
   const [modalQrRevealed, setModalQrRevealed] = useState(false);
@@ -155,6 +161,162 @@ export const Header: React.FC = () => {
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
               const linkText = link.titleCustom;
+
+              if (link.titleCustom === 'NEWS') {
+                return (
+                  <div
+                    key={link.href}
+                    className="relative group"
+                    onMouseEnter={() => setNewsDropdownOpen(true)}
+                    onMouseLeave={() => setNewsDropdownOpen(false)}
+                  >
+                    <Link
+                      to="/news"
+                      onClick={() => setNewsDropdownOpen(false)}
+                      className={`relative py-1 px-1 whitespace-nowrap transition-colors duration-150 flex items-center gap-1 ${
+                        isActive ? 'text-[#D9572B] font-black' : 'text-[#16120D] hover:text-[#D9572B]'
+                      }`}
+                    >
+                      <span>NEWS</span>
+                      <ChevronDown
+                        size={12}
+                        className={`transition-transform duration-200 ${
+                          newsDropdownOpen ? 'rotate-180 text-[#D9572B]' : ''
+                        }`}
+                      />
+                      <span
+                        className={`absolute bottom-0 left-0 w-full h-[2.5px] bg-[#D9572B] transition-transform duration-200 origin-left ${
+                          isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                        }`}
+                      />
+                    </Link>
+
+                    {/* MEGA DROPDOWN MENU */}
+                    {newsDropdownOpen && (
+                      <div
+                        className="absolute right-0 lg:-right-36 mt-1 w-[920px] max-w-[95vw] bg-[#F5EFE6] border-4 border-[#16120D] shadow-[10px_10px_0px_0px_#16120D] p-5 z-50 animate-dropdown rounded-2xl text-[#16120D]"
+                      >
+                        {/* Dropdown Header */}
+                        <div className="flex flex-wrap items-center justify-between pb-3 mb-4 border-b-2 border-[#16120D] gap-3">
+                          <div className="flex items-center gap-2">
+                            <Newspaper size={22} className="text-[#D9572B] flex-shrink-0" />
+                            <div>
+                              <h4 className="font-display text-xl text-[#16120D] tracking-wide uppercase leading-none">
+                                CJP VERIFIED MEDIA COVERAGE (42 OUTLETS)
+                              </h4>
+                              <p className="text-[10.5px] text-[#3A332B] font-extrabold mt-0.5">
+                                Direct links &amp; syndicated stories across global, national &amp; regional newsrooms
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-2">
+                            <div className="relative">
+                              <input
+                                type="text"
+                                placeholder="Search 42 outlets..."
+                                value={outletSearchFilter}
+                                onChange={(e) => setOutletSearchFilter(e.target.value)}
+                                className="px-2.5 py-1 text-xs border-2 border-[#16120D] bg-white text-[#16120D] font-bold rounded-lg w-48 focus:outline-none focus:border-[#D9572B]"
+                              />
+                              {outletSearchFilter && (
+                                <button
+                                  onClick={() => setOutletSearchFilter('')}
+                                  className="absolute right-2 top-1.5 text-xs text-gray-500 font-bold hover:text-black"
+                                >
+                                  ✕
+                                </button>
+                              )}
+                            </div>
+
+                            <Link
+                              to="/news"
+                              onClick={() => setNewsDropdownOpen(false)}
+                              className="btn-brutal px-3 py-1 text-xs bg-[#D9572B] text-white font-extrabold hover:bg-[#16120D] rounded-md flex items-center gap-1 whitespace-nowrap"
+                            >
+                              <span>ALL NEWS ARCHIVES</span>
+                              <ArrowRight size={12} />
+                            </Link>
+                          </div>
+                        </div>
+
+                        {/* 3 Outlet Category Columns */}
+                        <div className="grid grid-cols-3 gap-4 max-h-[460px] overflow-y-auto pr-1">
+                          {(['Global & Wires', 'National Dailies & Digital', 'TV Networks & Regional'] as const).map(
+                            (cat) => {
+                              const outlets = mediaOutletsData.filter(
+                                (o) =>
+                                  o.category === cat &&
+                                  o.name.toLowerCase().includes(outletSearchFilter.toLowerCase())
+                              );
+
+                              return (
+                                <div key={cat} className="bg-[#EADBCE]/60 border-2 border-[#16120D] p-3 rounded-xl">
+                                  <div className="flex items-center justify-between border-b-2 border-[#16120D] pb-1.5 mb-2">
+                                    <span className="font-extrabold text-[11px] uppercase tracking-wider text-[#D9572B]">
+                                      {cat}
+                                    </span>
+                                    <span className="text-[10px] bg-[#16120D] text-white px-1.5 py-0.5 rounded font-mono font-bold">
+                                      {outlets.length}
+                                    </span>
+                                  </div>
+
+                                  <div className="space-y-1.5">
+                                    {outlets.map((outlet) => (
+                                      <div
+                                        key={outlet.id}
+                                        className="p-1.5 bg-[#F5EFE6] border border-[#16120D] rounded-lg hover:border-[#D9572B] hover:bg-[#EADBCE]/80 transition-all flex items-center justify-between group/item"
+                                      >
+                                        <a
+                                          href={outlet.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          onClick={() => setNewsDropdownOpen(false)}
+                                          className="flex-1 min-w-0 font-extrabold text-xs text-[#16120D] group-hover/item:text-[#D9572B] truncate block cursor-pointer"
+                                          title={`Visit Official Website: ${outlet.name} (${outlet.url})`}
+                                        >
+                                          <div className="flex items-center gap-1.5">
+                                            <span className="truncate">{outlet.name}</span>
+                                            <ExternalLink size={11} className="text-[#D9572B] flex-shrink-0" />
+                                          </div>
+                                          <span className="block text-[9px] font-bold text-gray-500 truncate">
+                                            {outlet.domain} · {outlet.language}
+                                          </span>
+                                        </a>
+
+                                        <Link
+                                          to={`/news?source=${encodeURIComponent(outlet.name)}`}
+                                          onClick={() => setNewsDropdownOpen(false)}
+                                          className="text-[9px] font-black bg-[#16120D] text-white hover:bg-[#D9572B] px-1.5 py-0.5 rounded flex-shrink-0 ml-1"
+                                          title={`Filter internal CJP archive for ${outlet.name}`}
+                                        >
+                                          CJP
+                                        </Link>
+                                      </div>
+                                    ))}
+
+                                    {outlets.length === 0 && (
+                                      <p className="text-[10px] text-gray-500 font-bold italic p-2 text-center">
+                                        No outlets match "{outletSearchFilter}"
+                                      </p>
+                                    )}
+                                  </div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+
+                        <div className="mt-3 pt-2 border-t border-[#16120D] flex justify-between items-center text-[10px] text-gray-600 font-bold">
+                          <span>⚡ Verified press database automatically updated with live search syndications.</span>
+                          <span>Showing all 42 verified news partners</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={link.href}
@@ -273,11 +435,56 @@ export const Header: React.FC = () => {
 
         {/* MOBILE NAVIGATION DRAWER */}
         {mobileMenuOpen && (
-          <div className="xl:hidden bg-[#EADBCE] border-t-2 border-[#16120D] px-4 py-5 shadow-2xl space-y-3 animate-dropdown">
+          <div className="xl:hidden bg-[#EADBCE] border-t-2 border-[#16120D] px-4 py-5 shadow-2xl space-y-3 animate-dropdown max-h-[80vh] overflow-y-auto">
             <nav className="flex flex-col space-y-2 font-extrabold uppercase text-xs sm:text-sm">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.href;
                 const linkText = link.titleCustom;
+
+                if (link.titleCustom === 'NEWS') {
+                  return (
+                    <div key={link.href} className="flex flex-col space-y-1">
+                      <div className="flex items-center justify-between border-2 border-[#16120D] bg-[#F5EFE6] text-[#16120D] p-1.5 shadow-[2px_2px_0px_0px_#16120D]">
+                        <Link
+                          to="/news"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="py-1 px-2 font-black text-sm text-[#D9572B]"
+                        >
+                          NEWS ARCHIVES
+                        </Link>
+                        <button
+                          onClick={() => setMobileNewsOpen(!mobileNewsOpen)}
+                          className="btn-brutal px-2 py-1 bg-[#16120D] text-white text-xs font-black flex items-center gap-1"
+                        >
+                          <span>42 OUTLETS</span>
+                          <ChevronDown size={14} className={mobileNewsOpen ? 'rotate-180' : ''} />
+                        </button>
+                      </div>
+
+                      {mobileNewsOpen && (
+                        <div className="p-3 bg-[#F5EFE6] border-2 border-[#16120D] rounded-lg space-y-2 max-h-80 overflow-y-auto">
+                          <div className="text-[10px] font-black text-[#D9572B] uppercase">SELECT PRESS OUTLET:</div>
+                          <div className="grid grid-cols-2 gap-1.5">
+                            {mediaOutletsData.map((outlet) => (
+                              <a
+                                key={outlet.id}
+                                href={outlet.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="p-1.5 bg-white border border-[#16120D] text-[10px] font-extrabold text-[#16120D] hover:bg-[#D9572B] hover:text-white rounded truncate flex items-center justify-between"
+                              >
+                                <span className="truncate">{outlet.name}</span>
+                                <ExternalLink size={10} className="flex-shrink-0 ml-1 text-[#D9572B]" />
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.href}
