@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEOHead } from '../components/SEOHead';
 import { FACT_CHECK_DATABASE, type FactCheckRecord } from '../data/masterArchiveData';
 import { CheckCircle2, XCircle, AlertTriangle, HelpCircle, ExternalLink, Search } from 'lucide-react';
 
@@ -33,6 +34,11 @@ export const FactCheckPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead
+        title="Public Fact-Check & Claims Verification Matrix | Cockroach Janta Party"
+        description="Independent fact-checking database evaluating viral claims, political statements, and media reports surrounding Cockroach Janta Party with primary sources."
+        canonicalUrl="https://cockroachjantapartywale.com/fact-check"
+      />
       <div className="max-w-6xl mx-auto space-y-8">
         
         {/* Banner */}

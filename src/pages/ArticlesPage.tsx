@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SEOHead } from '../components/SEOHead';
 import { newsData } from '../data/newsData';
 import { Search } from 'lucide-react';
 
@@ -18,6 +19,11 @@ export const ArticlesPage: React.FC = () => {
 
   return (
     <div className="articles-page py-12 bg-[#0d0a07] text-[#f1e8d2] font-sans">
+      <SEOHead
+        title="The CJP Journal — Empirical Articles, RTI Notes & Civic Audits"
+        description="Read empirical ward audit notes, contractor warranty disclosures, school roof inspection reports, and field investigations by Cockroach Janta Party research secretariat."
+        canonicalUrl="https://cockroachjantapartywale.com/articles"
+      />
       <div className="max-w-[1440px] mx-auto px-4">
         
         <div className="mb-10">

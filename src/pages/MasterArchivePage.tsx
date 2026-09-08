@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { SEOHead } from '../components/SEOHead';
 import { 
   MASTER_TIMELINE, 
   PEOPLE_DATABASE, 
@@ -84,6 +85,11 @@ export const MasterArchivePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans">
+      <SEOHead
+        title="Master Digital Public Archive (23 Tables) | Cockroach Janta Party"
+        description="Comprehensive public repository documenting Cockroach Janta Party from May 2026 origins to present: master timeline, domain discovery, social media archives, and manifesto evolution."
+        canonicalUrl="https://cockroachjantapartywale.com/archive"
+      />
       {/* Header Banner */}
       <div className="border-b border-[#D9572B]/30 bg-gradient-to-b from-[#2A1E17] to-[#16120D] py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

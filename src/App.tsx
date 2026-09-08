@@ -17,6 +17,7 @@ import { PostersPage } from './pages/PostersPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { UpdatesPage } from './pages/UpdatesPage';
 import { NewsPage } from './pages/NewsPage';
+import { LiveTvPage } from './pages/LiveTvPage';
 import { ProtestsPage } from './pages/ProtestsPage';
 import { BlackMondayPage } from './pages/BlackMondayPage';
 import { MembersPage } from './pages/MembersPage';
@@ -126,6 +127,9 @@ export default function App() {
               <Route path="/updates" element={<UpdatesPage />} />
               <Route path="/news" element={<NewsPage />} />
               <Route path="/news/*" element={<NewsPage />} />
+              <Route path="/live-tv" element={<LiveTvPage />} />
+              <Route path="/live" element={<LiveTvPage />} />
+              <Route path="/cjp-24x7" element={<LiveTvPage />} />
               <Route path="/articles" element={<ArticlesPage />} />
               <Route path="/protests" element={<ProtestsPage />} />
               <Route path="/black-monday" element={<BlackMondayPage />} />

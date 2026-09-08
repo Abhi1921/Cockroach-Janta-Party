@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SEOHead } from '../components/SEOHead';
 import { SPELLING_ALIASES_CLUSTER, type SpellingAliasRecord } from '../data/masterArchiveData';
 import { Globe, Search, ArrowRight, BookOpen, Filter } from 'lucide-react';
 
@@ -17,6 +18,11 @@ export const CanonicalSpellingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead
+        title="Canonical Spelling Index & Entity Guide | Cockroach Janta Party"
+        description="Official spelling disambiguation directory and transliteration index for Cockroach Janta Party, Cockroach Janata Party, CJP, and Devanagari variants."
+        canonicalUrl="https://cockroachjantapartywale.com/canonical-spelling"
+      />
       <div className="max-w-6xl mx-auto space-y-8">
         
         {/* Banner */}

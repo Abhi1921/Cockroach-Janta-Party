@@ -1,10 +1,16 @@
 import React from 'react';
+import { SEOHead } from '../components/SEOHead';
 import { CJP_MASTER_DATABASE_STATS, DUPLICATE_CANONICAL_MAP, OPEN_RESEARCH_QUESTIONS } from '../data/masterArchiveData';
 import { Database, FileCheck, AlertTriangle } from 'lucide-react';
 
 export const ResearchDashboardPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead
+        title="Research Dashboard & Quality Control Panel | CJP Archive"
+        description="Database health metrics, source reliability ratios, duplicate mapping, and open research investigation logs for Cockroach Janta Party data."
+        canonicalUrl="https://cockroachjantapartywale.com/research"
+      />
       <div className="max-w-6xl mx-auto space-y-8">
         
         {/* Banner Header */}

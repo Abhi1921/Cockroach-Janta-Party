@@ -9,10 +9,11 @@ export const NewsPage: React.FC = () => {
   const { lang } = useLanguage();
   const [searchParams] = useSearchParams();
   const sourceParam = searchParams.get('source') || '';
+  const categoryParam = searchParams.get('category') || 'ALL';
 
   const [searchQuery, setSearchQuery] = useState(sourceParam);
   const [activeMonth, setActiveMonth] = useState('ALL');
-  const [activeCategory, setActiveCategory] = useState('ALL');
+  const [activeCategory, setActiveCategory] = useState(categoryParam);
   const [activeStatus, setActiveStatus] = useState('ALL');
   const [selectedNews, setSelectedNews] = useState<any | null>(null);
 
@@ -20,7 +21,11 @@ export const NewsPage: React.FC = () => {
     if (sourceParam) {
       setSearchQuery(sourceParam);
     }
-  }, [sourceParam]);
+    const cat = searchParams.get('category');
+    if (cat) {
+      setActiveCategory(cat);
+    }
+  }, [searchParams, sourceParam]);
 
   // 1,000 - 1,500 Word Flagship Historical Feature
   const flagshipFeature = {
@@ -1338,12 +1343,37 @@ export const NewsPage: React.FC = () => {
   ];
 
   const months = ['ALL', 'SEPTEMBER 2026', 'AUGUST 2026', 'JULY 2026', 'JUNE 2026', 'MAY 2026'];
-  const categories = ['ALL', 'ORGANISATION', 'EDUCATION', 'MANIFESTO', 'SOCIAL MEDIA', 'PROTEST REPORT', 'LEGAL & COURT', 'PUBLIC ISSUES', 'BREAKING'];
+  const categories = [
+    'ALL',
+    'BREAKING',
+    'POLITICS',
+    'POLICE & CRIME',
+    'LEGAL & COURT',
+    'FACT CHECK & MEDIA',
+    'POLITICS SATIRE',
+    'PROTEST REPORT',
+    'CIVIC AUDIT',
+    'PUBLIC ISSUES',
+    'EDUCATION',
+    'ORGANISATION'
+  ];
   const statuses = ['ALL', 'VERIFIED', 'PRIMARY SOURCE', 'REPORTED CLAIM', 'PARTIALLY VERIFIED'];
 
   const filteredNews = newsDatabase.filter((item) => {
     const matchesMonth = activeMonth === 'ALL' || item.month === activeMonth;
-    const matchesCategory = activeCategory === 'ALL' || item.category === activeCategory;
+
+    const catUpper = activeCategory.toUpperCase();
+    const itemCatUpper = item.category.toUpperCase();
+    const matchesCategory =
+      activeCategory === 'ALL' ||
+      itemCatUpper === catUpper ||
+      itemCatUpper.includes(catUpper) ||
+      catUpper.includes(itemCatUpper) ||
+      (catUpper.includes('POLICE') && (itemCatUpper.includes('POLICE') || itemCatUpper.includes('CRIME'))) ||
+      (catUpper.includes('CRIME') && (itemCatUpper.includes('CRIME') || itemCatUpper.includes('POLICE'))) ||
+      (catUpper.includes('POLITICS') && itemCatUpper.includes('POLITICS')) ||
+      (catUpper.includes('FACT') && (itemCatUpper.includes('FACT') || itemCatUpper.includes('MEDIA')));
+
     const matchesStatus = activeStatus === 'ALL' || item.verificationStatus === activeStatus;
     
     const query = searchQuery.toLowerCase().trim();
@@ -1400,62 +1430,105 @@ export const NewsPage: React.FC = () => {
 
       <div className="max-w-[1440px] mx-auto px-4">
         
-        {/* Header Hero */}
-        <div className="mb-12 text-center max-w-4xl mx-auto">
-          <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
-            {lang === 'hi' ? 'नागरिक समाचार व पुरालेख' : 'THE CJP NEWS & HISTORICAL ARCHIVE'}
-          </span>
-          <h1 className="font-display text-6xl md:text-8xl text-[#16120D] mb-4 uppercase leading-none">
-            COCKROACH JANTA PARTY
-          </h1>
-          <p className="text-xs md:text-sm font-serif italic text-[#D9572B] max-w-2xl mx-auto mb-3 font-bold">
-            "Where protest meets politics, satire meets accountability, and the swarm keeps crawling."
-          </p>
-          <div className="text-[10px] font-extrabold text-[#3A332B] uppercase tracking-widest border-t border-b border-[#16120D]/20 py-2">
-            STRICT ARCHIVE CUTOFF: 30 AUGUST 2026, 11:59 PM IST · INDEPENDENT SATIRE &amp; CIVIC ARCHIVE
-          </div>
-        </div>
-
-        {/* 1,000 - 1,500 WORD FLAGSHIP HISTORICAL FEATURE SECTION */}
-        <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 md:p-12 mb-16 shadow-2xl">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest">
-              FLAGSHIP HISTORICAL FEATURE (1,200 WORDS)
-            </span>
-            <span className="text-xs font-bold text-[#16120D]">PUBLISHED: {flagshipFeature.publishedDate}</span>
-          </div>
-
-          <h2 className="font-display text-4xl md:text-6xl text-[#16120D] mb-3 leading-tight uppercase">
-            {flagshipFeature.title}
-          </h2>
-
-          <p className="text-sm font-serif text-[#D9572B] italic font-bold mb-8 leading-relaxed max-w-3xl">
-            {flagshipFeature.subtitle}
-          </p>
-
-          {/* Feature Hero Artwork */}
-          <div className="mb-8 border-2 border-[#16120D] bg-[#16120D] overflow-hidden">
-            <img src={flagshipFeature.heroImage} alt="Symbolic CJP Artwork" className="w-full max-h-[480px] object-cover" />
-            <div className="p-3 bg-[#16120D] text-[#F5EFE6] text-[11px] font-medium flex justify-between items-center border-t border-[#16120D]">
-              <span>caption: {flagshipFeature.heroCaption}</span>
-              <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2 py-0.5 uppercase tracking-wider">
-                {flagshipFeature.heroLabel}
+        {/* Header Hero when ALL categories are selected */}
+        {activeCategory === 'ALL' && !searchQuery && (
+          <>
+            <div className="mb-12 text-center max-w-4xl mx-auto">
+              <span className="inline-block bg-[#16120D] text-[#F5EFE6] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-widest mb-4">
+                {lang === 'hi' ? 'नागरिक समाचार व पुरालेख' : 'THE CJP NEWS & HISTORICAL ARCHIVE'}
               </span>
+              <h1 className="font-display text-6xl md:text-8xl text-[#16120D] mb-4 uppercase leading-none">
+                COCKROACH JANTA PARTY
+              </h1>
+              <p className="text-xs md:text-sm font-serif italic text-[#D9572B] max-w-2xl mx-auto mb-3 font-bold">
+                "Where protest meets politics, satire meets accountability, and the swarm keeps crawling."
+              </p>
+              <div className="text-[10px] font-extrabold text-[#3A332B] uppercase tracking-widest border-t border-b border-[#16120D]/20 py-2">
+                STRICT ARCHIVE CUTOFF: 30 AUGUST 2026, 11:59 PM IST · INDEPENDENT SATIRE &amp; CIVIC ARCHIVE
+              </div>
             </div>
-          </div>
 
-          {/* 1200 Word Text Content */}
-          <div className="space-y-6 text-xs md:text-sm text-[#3A332B] font-medium leading-relaxed max-w-4xl border-b border-[#16120D]/20 pb-8 mb-6">
-            {flagshipFeature.contentParagraphs.map((para, idx) => (
-              <p key={idx}>{para}</p>
-            ))}
-          </div>
+            {/* 1,000 - 1,500 WORD FLAGSHIP HISTORICAL FEATURE SECTION */}
+            <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-8 md:p-12 mb-16 shadow-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="bg-[#D9572B] text-white text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest">
+                  FLAGSHIP HISTORICAL FEATURE (1,200 WORDS)
+                </span>
+                <span className="text-xs font-bold text-[#16120D]">PUBLISHED: {flagshipFeature.publishedDate}</span>
+              </div>
 
-          <div className="flex items-center justify-between text-xs font-extrabold text-[#16120D]">
-            <span>BY {flagshipFeature.author.toUpperCase()}</span>
-            <span className="text-[#D9572B]">STATUS: VERIFIED DOCUMENTARY ARCHIVE (AUG 30, 2026)</span>
+              <h2 className="font-display text-4xl md:text-6xl text-[#16120D] mb-3 leading-tight uppercase">
+                {flagshipFeature.title}
+              </h2>
+
+              <p className="text-sm font-serif text-[#D9572B] italic font-bold mb-8 leading-relaxed max-w-3xl">
+                {flagshipFeature.subtitle}
+              </p>
+
+              {/* Feature Hero Artwork */}
+              <div className="mb-8 border-2 border-[#16120D] bg-[#16120D] overflow-hidden">
+                <img src={flagshipFeature.heroImage} alt="Symbolic CJP Artwork" className="w-full max-h-[480px] object-cover" />
+                <div className="p-3 bg-[#16120D] text-[#F5EFE6] text-[11px] font-medium flex justify-between items-center border-t border-[#16120D]">
+                  <span>caption: {flagshipFeature.heroCaption}</span>
+                  <span className="bg-[#D9572B] text-white text-[9px] font-extrabold px-2 py-0.5 uppercase tracking-wider">
+                    {flagshipFeature.heroLabel}
+                  </span>
+                </div>
+              </div>
+
+              {/* 1200 Word Text Content */}
+              <div className="space-y-6 text-xs md:text-sm text-[#3A332B] font-medium leading-relaxed max-w-4xl border-b border-[#16120D]/20 pb-8 mb-6">
+                {flagshipFeature.contentParagraphs.map((para, idx) => (
+                  <p key={idx}>{para}</p>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-between text-xs font-extrabold text-[#16120D]">
+                <span>BY {flagshipFeature.author.toUpperCase()}</span>
+                <span>CJP EDITORIAL DESK</span>
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* Dynamic Category Newsroom Spotlight Header when a category or search is active */}
+        {(activeCategory !== 'ALL' || searchQuery) && (
+          <div className="bg-[#16120D] text-[#F5EFE6] border-4 border-[#16120D] p-6 sm:p-8 shadow-2xl rounded-2xl mb-12">
+            <div className="flex items-center justify-between flex-wrap gap-3 mb-2">
+              <div className="flex items-center gap-2">
+                <span className="bg-[#D9572B] text-white px-3 py-1 rounded text-xs font-black uppercase tracking-wider">
+                  CJP 24x7 SPECIAL NEWS DESK
+                </span>
+                <span className="bg-[#E6A100] text-[#16120D] px-2.5 py-1 rounded text-xs font-black uppercase">
+                  {displayNewsList.length} VERIFIED STORIES
+                </span>
+              </div>
+
+              <button
+                onClick={() => {
+                  setActiveCategory('ALL');
+                  setSearchQuery('');
+                }}
+                className="btn-brutal px-3.5 py-1.5 bg-[#D9572B] text-white text-xs font-black uppercase rounded hover:bg-white hover:text-[#16120D]"
+              >
+                ← BACK TO ALL ARCHIVES
+              </button>
+            </div>
+
+            <h1 className="font-display text-3xl sm:text-6xl uppercase text-white mb-2 leading-none">
+              {activeCategory === 'POLITICS' && '🏛️ POLITICS & SWARM NEWSROOM'}
+              {activeCategory === 'BREAKING' && '🔥 SUPER EXCLUSIVE & BREAKING DISPATCHES'}
+              {activeCategory === 'POLICE & CRIME' && '⚖️ CRIME & POLICE INVESTIGATION DESK'}
+              {activeCategory === 'FACT CHECK & MEDIA' && '🔍 FACT CHECK TV & MEDIA VERIFICATION'}
+              {activeCategory === 'POLITICS SATIRE' && '📰 SATIRE & OPINION COLUMNS'}
+              {activeCategory === 'LEGAL & COURT' && '⚖️ SUPREME COURT & LEGAL DECREES'}
+              {activeCategory === 'PROTEST REPORT' && '🔥 PROTEST & SIEGE REPORTS'}
+              {activeCategory === 'CIVIC AUDIT' && '🏫 CIVIC & WARD AUDIT REPORTS'}
+              {![ 'POLITICS', 'BREAKING', 'POLICE & CRIME', 'FACT CHECK & MEDIA', 'POLITICS SATIRE', 'LEGAL & COURT', 'PROTEST REPORT', 'CIVIC AUDIT' ].includes(activeCategory) && `${activeCategory} DISPATCHES`}
+            </h1>
+
           </div>
-        </div>
+        )}
 
         {/* Multi-Field Search & Filter Toolbar */}
         <div className="bg-[#F5EFE6] border-2 border-[#16120D] p-6 mb-12 shadow-md space-y-4">

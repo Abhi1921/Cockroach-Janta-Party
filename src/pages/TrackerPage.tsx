@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEOHead } from '../components/SEOHead';
 import { MapPin } from 'lucide-react';
 
 export const TrackerPage: React.FC = () => {
@@ -47,6 +48,11 @@ export const TrackerPage: React.FC = () => {
 
   return (
     <div className="tracker-page py-12 bg-[#0d0a07] text-[#f1e8d2] font-sans">
+      <SEOHead
+        title="Movement Tracker — Active Audits & Action Timeline | CJP"
+        description="Real-time newsroom tracker logging municipal sewer audits, contractor warranty verifications, school inspection drives, and RTI filings."
+        canonicalUrl="https://cockroachjantapartywale.com/tracker"
+      />
       <div className="max-w-[1440px] mx-auto px-4">
         
         <div className="mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 border-b border-[rgba(241,232,210,0.15)] pb-8">

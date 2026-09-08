@@ -412,7 +412,8 @@ export const postersData: Poster[] = [
     bgColor: '#F5EFE6',
     textColor: '#16120D',
     date: '2026-08-12',
-    downloads: 870
+    downloads: 870,
+    image: '/cjp_poster_sanitation.png'
   },
   {
     id: 'poster-10',
@@ -424,7 +425,8 @@ export const postersData: Poster[] = [
     bgColor: '#231F1A',
     textColor: '#F5EFE6',
     date: '2026-08-22',
-    downloads: 540
+    downloads: 540,
+    image: '/cjp_poster_satya_niketan.png'
   },
   {
     id: 'poster-11',
@@ -436,7 +438,8 @@ export const postersData: Poster[] = [
     bgColor: '#16120D',
     textColor: '#F5EFE6',
     date: '2026-08-25',
-    downloads: 1680
+    downloads: 1680,
+    image: '/cjp_sep5_protest_poster.png'
   },
   {
     id: 'poster-12',
@@ -448,7 +451,8 @@ export const postersData: Poster[] = [
     bgColor: '#EADBCE',
     textColor: '#16120D',
     date: '2026-08-14',
-    downloads: 920
+    downloads: 920,
+    image: '/cjp_poster_abp_majha.png'
   },
   {
     id: 'poster-13',
@@ -460,7 +464,8 @@ export const postersData: Poster[] = [
     bgColor: '#16120D',
     textColor: '#F5EFE6',
     date: '2026-08-28',
-    downloads: 1250
+    downloads: 1250,
+    image: '/cjp_poster_bbc_women.png'
   },
   {
     id: 'poster-14',
@@ -472,7 +477,8 @@ export const postersData: Poster[] = [
     bgColor: '#F5EFE6',
     textColor: '#16120D',
     date: '2026-08-30',
-    downloads: 430
+    downloads: 430,
+    image: '/cjp_sep5_withdrawn_poster.png'
   },
   {
     id: 'poster-15',
@@ -484,7 +490,8 @@ export const postersData: Poster[] = [
     bgColor: '#231F1A',
     textColor: '#F5EFE6',
     date: '2026-09-01',
-    downloads: 810
+    downloads: 810,
+    image: '/cjp_poster_sanitation.png'
   },
   {
     id: 'poster-16',
@@ -496,7 +503,8 @@ export const postersData: Poster[] = [
     bgColor: '#16120D',
     textColor: '#F5EFE6',
     date: '2026-09-02',
-    downloads: 2040
+    downloads: 2040,
+    image: '/cjp_black_monday_poster.png'
   },
   {
     id: 'poster-17',
@@ -508,7 +516,8 @@ export const postersData: Poster[] = [
     bgColor: '#16120D',
     textColor: '#F5EFE6',
     date: '2026-08-04',
-    downloads: 910
+    downloads: 910,
+    image: '/cjp_poster_facial_rec_jail.png'
   },
   {
     id: 'poster-18',
@@ -520,7 +529,8 @@ export const postersData: Poster[] = [
     bgColor: '#EADBCE',
     textColor: '#16120D',
     date: '2026-08-08',
-    downloads: 1120
+    downloads: 1120,
+    image: '/cjp_school_thik_karo_poster.png'
   },
   {
     id: 'poster-19',
@@ -532,7 +542,8 @@ export const postersData: Poster[] = [
     bgColor: '#231F1A',
     textColor: '#F5EFE6',
     date: '2026-08-16',
-    downloads: 1750
+    downloads: 1750,
+    image: '/cjp_system_change_quote.jpg'
   },
   {
     id: 'poster-20',
@@ -544,7 +555,8 @@ export const postersData: Poster[] = [
     bgColor: '#16120D',
     textColor: '#F5EFE6',
     date: '2026-08-21',
-    downloads: 1490
+    downloads: 1490,
+    image: '/cjp_sc_fir_quash_poster.png'
   },
   {
     id: 'poster-21',
@@ -556,7 +568,8 @@ export const postersData: Poster[] = [
     bgColor: '#EADBCE',
     textColor: '#16120D',
     date: '2026-08-23',
-    downloads: 1380
+    downloads: 1380,
+    image: '/cjp_poster_abp_majha.png'
   },
   {
     id: 'poster-22',
@@ -568,7 +581,8 @@ export const postersData: Poster[] = [
     bgColor: '#231F1A',
     textColor: '#F5EFE6',
     date: '2026-08-26',
-    downloads: 1620
+    downloads: 1620,
+    image: '/cjp_dispatch_paying_attention_poster.png'
   },
   {
     id: 'poster-23',
@@ -580,7 +594,8 @@ export const postersData: Poster[] = [
     bgColor: '#16120D',
     textColor: '#F5EFE6',
     date: '2026-08-29',
-    downloads: 1040
+    downloads: 1040,
+    image: '/cjp_poster_scst_pocso.png'
   },
   {
     id: 'poster-24',
@@ -592,7 +607,8 @@ export const postersData: Poster[] = [
     bgColor: '#F5EFE6',
     textColor: '#16120D',
     date: '2026-08-31',
-    downloads: 830
+    downloads: 830,
+    image: '/cjp_poster_sanitation.png'
   },
   {
     id: 'poster-25',
@@ -604,7 +620,8 @@ export const postersData: Poster[] = [
     bgColor: '#16120D',
     textColor: '#F5EFE6',
     date: '2026-09-01',
-    downloads: 970
+    downloads: 970,
+    image: '/cjp_poster_satya_niketan.png'
   },
   {
     id: 'poster-26',
@@ -616,7 +633,8 @@ export const postersData: Poster[] = [
     bgColor: '#231F1A',
     textColor: '#F5EFE6',
     date: '2026-09-02',
-    downloads: 1890
+    downloads: 1890,
+    image: '/cjp_sep5_protest_poster.png'
   },
   {
     id: 'poster-27',
@@ -628,7 +646,8 @@ export const postersData: Poster[] = [
     bgColor: '#EADBCE',
     textColor: '#16120D',
     date: '2026-09-02',
-    downloads: 1210
+    downloads: 1210,
+    image: '/cjp_poster_bbc_women.png'
   },
   {
     id: 'poster-28',
@@ -640,7 +659,8 @@ export const postersData: Poster[] = [
     bgColor: '#16120D',
     textColor: '#F5EFE6',
     date: '2026-09-03',
-    downloads: 1530
+    downloads: 1530,
+    image: '/cjp_sc_fir_quash_poster.png'
   },
   {
     id: 'poster-29',
@@ -652,7 +672,8 @@ export const postersData: Poster[] = [
     bgColor: '#F5EFE6',
     textColor: '#16120D',
     date: '2026-09-03',
-    downloads: 990
+    downloads: 990,
+    image: '/cjp_school_thik_karo_poster.png'
   },
   {
     id: 'poster-30',
@@ -665,7 +686,8 @@ export const postersData: Poster[] = [
     textColor: '#F5EFE6',
     date: '2026-09-03',
     downloads: 2310,
-    featured: true
+    featured: true,
+    image: '/cjp_news_hero_poster.png'
   },
   {
     id: 'poster-31',
@@ -678,7 +700,8 @@ export const postersData: Poster[] = [
     textColor: '#F5EFE6',
     date: '2026-05-17',
     downloads: 3450,
-    featured: true
+    featured: true,
+    image: '/cjp_poster_sc_judge_slams_police.png'
   },
   {
     id: 'poster-32',
@@ -690,7 +713,8 @@ export const postersData: Poster[] = [
     bgColor: '#EADBCE',
     textColor: '#16120D',
     date: '2026-05-18',
-    downloads: 2890
+    downloads: 2890,
+    image: '/cjp_banner.png'
   },
   {
     id: 'poster-33',
@@ -702,7 +726,8 @@ export const postersData: Poster[] = [
     bgColor: '#16120D',
     textColor: '#F5EFE6',
     date: '2026-07-08',
-    downloads: 3120
+    downloads: 3120,
+    image: '/cjp_poster_sc_quash_firs.png'
   },
   {
     id: 'poster-34',
@@ -715,7 +740,8 @@ export const postersData: Poster[] = [
     textColor: '#FFFFFF',
     date: '2026-07-25',
     downloads: 4120,
-    featured: true
+    featured: true,
+    image: '/cjp_sep5_withdrawn_poster.png'
   },
   {
     id: 'poster-35',
@@ -727,7 +753,8 @@ export const postersData: Poster[] = [
     bgColor: '#231F1A',
     textColor: '#F5EFE6',
     date: '2026-06-28',
-    downloads: 2780
+    downloads: 2780,
+    image: '/cjp_poster_cjp_congress_table.png'
   },
   {
     id: 'poster-36',
@@ -739,6 +766,7 @@ export const postersData: Poster[] = [
     bgColor: '#EADBCE',
     textColor: '#16120D',
     date: '2026-05-23',
-    downloads: 3950
+    downloads: 3950,
+    image: '/cjp_banner.png'
   }
 ];

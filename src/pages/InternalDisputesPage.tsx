@@ -1,10 +1,16 @@
 import React from 'react';
+import { SEOHead } from '../components/SEOHead';
 import { INTERNAL_DISPUTES_DATABASE, type InternalDisputeRecord } from '../data/masterArchiveData';
 import { ExternalLink, ShieldAlert, FileText, Scale } from 'lucide-react';
 
 export const InternalDisputesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead
+        title="Internal Disputes & Factional Split Archive | CJP vs CJP-D"
+        description="Source-backed public log of internal leadership disputes, CJP-Democratic breakaway claims, and media reports (Loksatta, Indian Express, Times of India)."
+        canonicalUrl="https://cockroachjantapartywale.com/internal-disputes"
+      />
       <div className="max-w-6xl mx-auto space-y-8">
         
         {/* Banner */}

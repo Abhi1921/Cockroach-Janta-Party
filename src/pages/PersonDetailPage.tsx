@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { SEOHead } from '../components/SEOHead';
 import { PEOPLE_DATABASE } from '../data/masterArchiveData';
 import { User, ExternalLink, ArrowLeft, Quote } from 'lucide-react';
 
@@ -10,6 +11,11 @@ export const PersonDetailPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead
+        title={`${person.fullName} (${person.role}) | CJP People Directory`}
+        description={`Documented public biography, speeches, and verified activity log for ${person.fullName}, ${person.role} at Cockroach Janta Party.`}
+        canonicalUrl={`https://cockroachjantapartywale.com/person/${person.id}`}
+      />
       <div className="max-w-4xl mx-auto space-y-8">
         
         {/* Back Link */}

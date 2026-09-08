@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEOHead } from '../components/SEOHead';
 import { YOUTUBE_MASTER_DATABASE, type YouTubeVideoRecord } from '../data/masterArchiveData';
 import { Video, Filter, PlayCircle } from 'lucide-react';
 
@@ -11,6 +12,11 @@ export const YouTubeDirectoryPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead
+        title="YouTube Master Video & Channel Archive | Cockroach Janta Party"
+        description="Curated video directory of third-party news coverage (The Lallantop, Manish Kasyap), official speeches, student rally livestreams, and member interviews."
+        canonicalUrl="https://cockroachjantapartywale.com/youtube-directory"
+      />
       <div className="max-w-6xl mx-auto space-y-8">
         
         {/* Header */}

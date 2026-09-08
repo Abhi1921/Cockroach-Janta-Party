@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEOHead } from '../components/SEOHead';
 import { SOCIAL_MEDIA_DATABASE, type SocialMediaPostRecord } from '../data/masterArchiveData';
 import { Share2, ExternalLink, Filter } from 'lucide-react';
 
@@ -11,6 +12,11 @@ export const SocialDirectoryPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead
+        title="Social Media Accounts & Viral Posts Directory | CJP"
+        description="Multi-platform directory tracking official handles, founder profiles, discovered accounts, and viral posts across X/Twitter, Instagram, and Telegram."
+        canonicalUrl="https://cockroachjantapartywale.com/social-directory"
+      />
       <div className="max-w-6xl mx-auto space-y-8">
         
         {/* Banner */}

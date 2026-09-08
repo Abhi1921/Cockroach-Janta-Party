@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEOHead } from '../components/SEOHead';
 import { DOMAIN_DISCOVERY_MAP, type DomainRecord } from '../data/masterArchiveData';
 import { Globe, ShieldCheck, ShieldAlert, ExternalLink, Filter, HelpCircle } from 'lucide-react';
 
@@ -25,6 +26,11 @@ export const DomainsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead
+        title="13 Discovered CJP Web Domains & Verification Directory"
+        description="Independent domain intelligence map identifying official outlets, fan projects, satirical mirrors, and unverified typosquatting domains using CJP branding."
+        canonicalUrl="https://cockroachjantapartywale.com/domains"
+      />
       <div className="max-w-6xl mx-auto space-y-8">
         
         {/* Banner */}

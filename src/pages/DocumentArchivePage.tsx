@@ -1,10 +1,16 @@
 import React from 'react';
+import { SEOHead } from '../components/SEOHead';
 import { DOCUMENTS_DATABASE, type DocumentRecord } from '../data/masterArchiveData';
 import { FileText, ExternalLink } from 'lucide-react';
 
 export const DocumentArchivePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#16120D] text-[#EADBCE] font-sans py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead
+        title="Public Document Archive & Court Records | Cockroach Janta Party"
+        description="Public repository documenting CJP charters, court hearing transcripts, press releases, RTI ledger templates, and official manifesto documents."
+        canonicalUrl="https://cockroachjantapartywale.com/document-archive"
+      />
       <div className="max-w-6xl mx-auto space-y-8">
         
         {/* Banner */}

@@ -20,6 +20,473 @@ export interface NewsArticle {
 }
 
 export const newsData: NewsArticle[] = [
+  // 1. Live Law: HC Rejects Bhardwaj Plea
+  {
+    slug: "delhi-hc-rejects-swatantra-bhardwaj-arrest-plea-2026",
+    title: "Delhi High Court Rejects Swatantra Bhardwaj's Plea Against Arrest In CJP Protester Assault Case",
+    summary: "Live Law reports Delhi High Court dismissing Swatantra Bhardwaj's petition challenging police detention after violent assault on student activist Nishu Azad's father.",
+    category: "LEGAL & COURT",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "Live Law Desk",
+      role: "High Court Reporting Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_swatantra_arrest.png",
+    imageAlt: "Delhi High Court rejects Bhardwaj plea poster graphic",
+    tags: ["Live Law", "Delhi High Court", "Swatantra Bhardwaj", "Nishu Azad", "Patiala House"],
+    content: [
+      {
+        heading: "High Court Refuses Relief to Assault Accused",
+        text: "The High Court of Delhi dismissed the writ petition filed by influencer Swatantra Bhardwaj seeking quashing of the police FIR registered following the physical assault on Sanjay Kumar at Jantar Mantar."
+      }
+    ]
+  },
+  // 2. TOI: CJP Activist Alleges Stone Pelting
+  {
+    slug: "cjp-activist-alleges-stone-pelting-at-home-2026",
+    title: "CJP Activist Alleges Stone Pelting at Home Hours After 'Influencer' Swatantra Bhardwaj's Arrest",
+    summary: "The Times of India reports student activist Nishu Azad reporting stone-pelting attacks on her family home following Bhardwaj's arrest in Bulandshahr.",
+    category: "POLICE & CRIME",
+    publishDate: "SEP 06, 2026",
+    author: {
+      name: "The Times of India",
+      role: "City Crime Desk"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_parliament_dharna.png",
+    imageAlt: "CJP activist home stone pelting TOI graphic poster",
+    tags: ["Times of India", "Nishu Azad", "Stone Pelting", "Bulandshahr Arrest", "Delhi Police"],
+    content: [
+      {
+        heading: "Intimidation Hours After Police Detention",
+        text: "Hours after Delhi Police arrested Swatantra Bhardwaj in Bulandshahr, student leader Nishu Azad reported that unidentified miscreants pelted stones at her residence, demanding immediate police protection."
+      }
+    ]
+  },
+  // 3. India.com: Judicial Custody Till Sept 21
+  {
+    slug: "swatantra-bhardwaj-judicial-custody-sept-21-2026",
+    title: "Swatantra Bhardwaj Sent to Judicial Custody Till Sept 21 in CJP Assault Case",
+    summary: "India.com confirms Patiala House Metropolitan Magistrate remanding Bhardwaj to Tihar Judicial Custody until September 21 under non-bailable assault sections.",
+    category: "LEGAL & COURT",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "India.com Bureau",
+      role: "Crime & Legal Desk"
+    },
+    readingTime: "3 min read",
+    featuredImage: "/cjp_poster_swatantra_arrest.png",
+    imageAlt: "Judicial custody till Sept 21 India.com graphic",
+    tags: ["India.com", "Judicial Custody", "Patiala House Court", "Sept 21", "Tihar Jail"],
+    content: [
+      {
+        heading: "Patiala House Court Order",
+        text: "The Metropolitan Magistrate court at Patiala House remanded Swatantra Bhardwaj to 14 days of judicial custody until September 21 after Delhi Police completed initial custodial interrogation."
+      }
+    ]
+  },
+  // 4. HT: Minor CJP Activist Seeks Security
+  {
+    slug: "jantar-mantar-assault-minor-cjp-activist-police-security-2026",
+    title: "Jantar Mantar Assault Case: Minor CJP Activist Alleges Stone Pelting Outside Home, Seeks Security",
+    summary: "Hindustan Times details formal petition submitted to Delhi Police Commissioner seeking immediate armed security cover for the victim's family.",
+    category: "POLICE & CRIME",
+    publishDate: "SEP 06, 2026",
+    author: {
+      name: "Hindustan Times",
+      role: "Special Correspondent"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_parliament_dharna.png",
+    imageAlt: "Minor CJP activist seeks police security HT graphic",
+    tags: ["Hindustan Times", "Nishu Azad", "Police Protection", "Jantar Mantar", "Delhi Police HQ"],
+    content: [
+      {
+        heading: "Security Petition to Police Commissioner",
+        text: "CJP legal cell filed an urgent petition with the Delhi Police Commissioner seeking round-the-clock security protection for minor activist Nishu Azad and her father Sanjay Kumar following repeated threats."
+      }
+    ]
+  },
+  // 5. TOI: Don't Stoop So Low
+  {
+    slug: "dont-stoop-so-low-cjp-activist-reacts-to-deities-complaint-2026",
+    title: "'Don't Stoop So Low': CJP Activist Reacts to Advocates' Complaint Over 'Objectionable' Remarks",
+    summary: "The Times of India reports CJP activist hitting back at two advocates who filed police complaints against her and her father over alleged objectionable remarks.",
+    category: "LEGAL ADVOCACY",
+    publishDate: "SEP 06, 2026",
+    author: {
+      name: "The Times of India",
+      role: "Legal & City Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_scst_pocso.png",
+    imageAlt: "CJP activist reacts to advocates complaint poster graphic",
+    tags: ["Times of India", "CJP Activist", "Legal Complaint", "Counter Statement"],
+    content: [
+      {
+        heading: "Countering Distraction Tactics",
+        text: "The CJP activist condemned frivolous police complaints filed by opposing counsel, stating: 'Do not stoop so low to distract public attention from camera-documented physical assault.'"
+      }
+    ]
+  },
+  // 6. TNIE: Sonam Wangchuk Interview
+  {
+    slug: "sonam-wangchuk-interview-cjp-neutral-pressure-group-2026",
+    title: "INTERVIEW | 'CJP Must Remain Neutral Pressure Group, Not Political Party': Sonam Wangchuk",
+    summary: "The New Indian Express interview with climate activist Sonam Wangchuk after his 26-day fast, emphasizing that CJP should avoid political party affiliation and remain a neutral pressure group.",
+    category: "POLITICS",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "The New Indian Express",
+      role: "Special Interview Desk"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_cjp_congress_table.png",
+    imageAlt: "Sonam Wangchuk interview CJP pressure group poster graphic",
+    tags: ["Sonam Wangchuk", "The New Indian Express", "Paper Leak", "Neutral Pressure Group"],
+    content: [
+      {
+        heading: "Advice for Civic Movement Independence",
+        text: "In an exclusive interview with TNIE, climate activist Sonam Wangchuk commended CJP's anti-paper-leak campaign, urging the youth movement to maintain 100% non-partisan independence."
+      }
+    ]
+  },
+  // 7. NDTV: Ram Temple Trust CEO Fake Video Row
+  {
+    slug: "ram-temple-trust-ceo-fake-video-shared-by-cjp-row-2026",
+    title: "Video | Ram Temple Trust CEO's Fake Video Shared By Political Handles Sparks Row",
+    summary: "NDTV reports on misleading video controversy claiming to show Ram Temple Trust CEO Jitendra Mishra, triggering fact-checks by Alt News and CJP verification teams.",
+    category: "FACT CHECK & MEDIA",
+    publishDate: "SEP 07, 2026",
+    author: {
+      name: "NDTV Verification Unit",
+      role: "Fact-Check Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_sc_judge_slams_police.png",
+    imageAlt: "NDTV Ram Temple CEO fake video row graphic",
+    tags: ["NDTV", "Fact Check", "Ram Temple CEO", "Misleading Video", "Alt News"],
+    content: [
+      {
+        heading: "AI Deepfake & Misleading Footage Debunked",
+        text: "NDTV and Alt News forensic analysis revealed that viral clips attributed to Ram Temple Trust CEO Jitendra Mishra were digitally altered, highlighting the need for strict fact-checking."
+      }
+    ]
+  },
+  // 8. TOI: Satya Niketan Youth Left to Live Like Cockroaches
+  {
+    slug: "satya-niketan-tragedy-youth-left-to-live-like-cockroaches-2026",
+    title: "'Youth Left To Live Like Cockroaches': After Satya Niketan Tragedy, CJP’s Saurav Das Flags 'PG Mafia'",
+    summary: "The Times of India reports CJP spokesperson Saurav Das exposing South Delhi's illegal PG mafia after building collapse killed students.",
+    category: "PUBLIC ISSUES",
+    publishDate: "SEP 07, 2026",
+    author: {
+      name: "The Times of India",
+      role: "City Special Bureau"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_satya_niketan.png",
+    imageAlt: "Satya Niketan collapse Saurav Das PG mafia TOI poster graphic",
+    tags: ["Times of India", "Satya Niketan", "PG Mafia", "Saurav Das", "Hostel Safety"],
+    content: [
+      {
+        heading: "Exposing Unregulated PG Hostels",
+        text: "Following the fatal Satya Niketan building collapse in South Delhi, CJP leader Saurav Das slammed municipal authorities for allowing PG mafias to rent unsafe subterranean accommodations to outstation students."
+      }
+    ]
+  },
+  // 9. The Hindu: CJP Demands Accountability Over South Delhi Collapse
+  {
+    slug: "cjp-demands-accountability-south-delhi-hostel-collapse-dipke-questions-pm-2026",
+    title: "CJP Demands Accountability Over South Delhi Hostel Collapse; Abhijeet Dipke Questions PM",
+    summary: "The Hindu reports CJP Chief Abhijeet Dipke questioning PM and Municipal Corporation of Delhi on overdue safety certifications for student hostels.",
+    category: "CIVIC AUDIT",
+    publishDate: "SEP 07, 2026",
+    author: {
+      name: "The Hindu",
+      role: "Delhi Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_satya_niketan.png",
+    imageAlt: "CJP demands accountability South Delhi hostel collapse graphic",
+    tags: ["The Hindu", "Abhijeet Dipke", "Satya Niketan", "MCD", "Student Hostels"],
+    content: [
+      {
+        heading: "Audit Demand to Prime Minister & MCD",
+        text: "CJP Chief Abhijeet Dipke issued an open letter to the PM and MCD Commissioner, demanding immediate structural safety audits for all student PG buildings across Delhi University hubs."
+      }
+    ]
+  },
+  // 10. HT: CJP's 7 Demands After Satya Niketan Tragedy
+  {
+    slug: "cjps-7-demands-satya-niketan-tragedy-pg-mafia-2026",
+    title: "CJP's 7 Demands After Satya Niketan Tragedy: 'Probe PG Mafia, Build Government Hostels'",
+    summary: "Hindustan Times details CJP's 7-point charter demanding government-built student housing, rent caps, and criminal prosecution of negligent building owners.",
+    category: "PUBLIC ISSUES",
+    publishDate: "SEP 07, 2026",
+    author: {
+      name: "Hindustan Times",
+      role: "National Desk"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_satya_niketan.png",
+    imageAlt: "CJP 7 demands Satya Niketan HT graphic poster",
+    tags: ["Hindustan Times", "7 Demands", "PG Mafia", "Government Hostels", "Satya Niketan"],
+    content: [
+      {
+        heading: "7-Point Charter for Student Housing Rights",
+        text: "Hindustan Times published CJP's 7 demands following the Satya Niketan tragedy, including mandatory fire & structural safety certificates, rent regulation, and municipal hostel construction."
+      }
+    ]
+  },
+  // 11. The Week: Satya Niketan What Are CJP's 7 Demands
+  {
+    slug: "satya-niketan-building-collapse-what-are-cjps-7-demands-2026",
+    title: "Satya Niketan Building Collapse: What Are CJP's 7 Demands? Crackdown on 'PG Mafia', Ministerial Accountability",
+    summary: "The Week analyzes CJP's nationwide campaign against unchecked urban student housing exploitation following the South Delhi tragedy.",
+    category: "PUBLIC ISSUES",
+    publishDate: "SEP 07, 2026",
+    author: {
+      name: "The Week",
+      role: "Special Feature Desk"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_satya_niketan.png",
+    imageAlt: "The Week Satya Niketan building collapse CJP 7 demands graphic",
+    tags: ["The Week", "Satya Niketan", "PG Mafia", "Ministerial Accountability"],
+    content: [
+      {
+        heading: "National Media Analysis of CJP Housing Campaign",
+        text: "The Week provided an in-depth feature analyzing CJP's 7-point charter and why urban student housing reform has become a central civic priority."
+      }
+    ]
+  },
+  // 12. Loksatta (लोकसत्ता): CJP Instagram Post Takedown Allegation
+  {
+    slug: "loksatta-marathi-cjp-meta-instagram-allegation-2026",
+    title: "“सरकारला प्रश्न विचारणे इन्स्टाचे उल्लंघन आहे का?”; CJP आणि सौरव दास यांच्या पोस्ट हटवल्याचा ‘मेटा’वर आरोप",
+    summary: "Loksatta Marathi daily covers CJP accusing Meta Instagram of removing civic audit reels and restricting official handles.",
+    category: "FACT CHECK & MEDIA",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "Loksatta Bureau (लोकसत्ता)",
+      role: "Maharashtra & Tech Desk"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_abp_majha.png",
+    imageAlt: "Loksatta Marathi CJP Meta Instagram takedown graphic",
+    tags: ["Loksatta", "लोकसत्ता", "Meta", "Instagram", "Saurav Das", "Marathi News"],
+    content: [
+      {
+        heading: "इन्स्टाग्राम पोस्ट हटवल्याने सीजेपी आक्रमक",
+        text: "सीजेपीच्या अधिकृत हँडल व सौरव दास यांच्या नागरी ऑडिट पोस्ट्स इंस्टाग्रामने हटवल्यानंतर 'मेटा' कंपनीकडे तात्काळ डिजिटल स्पष्टीकरण मागण्यात आले आहे."
+      }
+    ]
+  },
+  // 13. HT: CJP Slams PM Modi Dimagi Naxal Remark at SRCC
+  {
+    slug: "cjp-slams-pm-modi-dimagi-naxal-remark-srcc-2026",
+    title: "CJP Slams PM Modi for Reviving ‘Dimagi Naxal’ Remark at SRCC: ‘Give Hope, Not Stupid Labels’",
+    summary: "Hindustan Times reports Saurav Das declaring that labelling questioning youth as Dimagi Naxals is among the most shameful things a Prime Minister can do.",
+    category: "POLITICS",
+    publishDate: "SEP 06, 2026",
+    author: {
+      name: "Hindustan Times",
+      role: "Political Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_cjp_congress_table.png",
+    imageAlt: "CJP slams PM Modi Dimagi Naxal SRCC HT graphic",
+    tags: ["Hindustan Times", "PM Modi", "Dimagi Naxal", "SRCC", "Saurav Das"],
+    content: [
+      {
+        heading: "Rebuttal to SRCC Address",
+        text: "CJP spokesperson Saurav Das issued a formal statement rejecting political labels used against active student auditors, asserting that demanding fair exams and road warranties is genuine nation-building."
+      }
+    ]
+  },
+  // 14. BBC News: Women Protesters Doxxed & Abused
+  {
+    slug: "bbc-news-women-protesters-doxxed-sluts-shamed-2026",
+    title: "'I Was Slut-Shamed': BBC News Special Report on Women CJP Protesters Doxxed & Abused",
+    summary: "BBC News dispatches by Zoya Mateen and Nikita Yadav expose online harassment, doctored photos, and lathi charge targeting female CJP student activists following July 20 Parliament march.",
+    category: "SPECIAL REPORT",
+    publishDate: "AUG 04, 2026",
+    author: {
+      name: "Zoya Mateen & Nikita Yadav",
+      role: "BBC News, Delhi"
+    },
+    readingTime: "6 min read",
+    featuredImage: "/cjp_poster_bbc_women.png",
+    imageAlt: "BBC News special report graphic on female CJP student activists",
+    tags: ["BBC News", "Zoya Mateen", "Women Activists", "Online Abuse", "Doxxing", "20 July March"],
+    content: [
+      {
+        heading: "Viral Reels and Cyber Harassment Exposed",
+        text: "While thousands of young people filled social media with memes mocking bureaucratic apathy, women creators behind CJP's viral Instagram reels faced coordinated online harassment, doctored photos, and doxxing following the 20 July march to Parliament."
+      },
+      {
+        heading: "Resilience of Female Youth Activists",
+        text: "Despite threats and account take-downs, student activists reaffirmed their determination to continue asking questions regarding exam integrity, municipal sanitation, and civil rights."
+      }
+    ]
+  },
+  // 15. ABP Majha: CJP Split & CJP-D Announcement
+  {
+    slug: "abp-majha-cjp-split-manish-brahmbhatt-cjp-d-2026",
+    title: "CJP Controversy: सीजेपींमध्ये मोठी फूट, विरोधात आता CJP D पक्षाची घोषणा; म्हणाले, अभिजीत दिपकेने टीममध्ये मैत्रिणी भरल्या",
+    summary: "ABP Majha dispatches on Manish Brahmbhatt forming Cockroach Janata Party Democratic (CJP-D), accusing Abhijeet Dipke of Team Kejriwal ties.",
+    category: "POLITICS & SATIRE",
+    publishDate: "SEP 03, 2026",
+    author: {
+      name: "ABP Majha Bureau (एबीपी माझा)",
+      role: "Maharashtra & National Desk"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_abp_majha.png",
+    imageAlt: "ABP Majha CJP split CJP-D poster graphic",
+    tags: ["ABP Majha", "एबीपी माझा", "CJP-D", "Manish Brahmbhatt", "Abhijeet Dipke", "Marathi News"],
+    content: [
+      {
+        heading: "सीजेपी आंदोलनात फूट व नवीन पक्षाची घोषणा",
+        text: "अहमदाबादचे रहिवासी मनीष ब्रह्मभट्ट यांनी 'कॉकरोच जनता पार्टी डेमोक्रेटिक' (CJP Democratic) ची घोषणा करत मूळ सीजेपी नेतृत्व अरविंद केजरीवाल यांची टीम बनल्याचा आरोप केला."
+      }
+    ]
+  },
+  // 16. ABP Majha: Uddhav Thackeray Maratha Reservation
+  {
+    slug: "abp-majha-uddhav-thackeray-maratha-reservation-2026",
+    title: "Uddhav Thackeray: तेव्हा गुलालाने दाढी लाल करुन घेणारे आता कुठे गेले? उद्धवांचा मराठा आरक्षणावरुन टोला",
+    summary: "ABP Majha reports Shiv Sena (UBT) chief Uddhav Thackeray attacking Eknath Shinde over Maratha reservation and student agitations.",
+    category: "POLITICS",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "ABP Majha Bureau (एबीपी माझा)",
+      role: "State Politics Desk"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_abp_majha.png",
+    imageAlt: "ABP Majha Uddhav Thackeray graphic",
+    tags: ["ABP Majha", "Uddhav Thackeray", "Maratha Reservation", "Eknath Shinde", "Marathi News"],
+    content: [
+      {
+        heading: "मराठा आरक्षण व राजकीय टोलेबाजी",
+        text: "उद्धव ठाकरेंनी मराठा आरक्षणावरुन सत्ताधाऱ्यांवर कडाडून हल्ला चढवला आणि तरुणांच्या आंदोलनांवर भाष्य केले."
+      }
+    ]
+  },
+  // 17. ABP Majha: Gautami Patil Flying Kiss Complaint
+  {
+    slug: "abp-majha-gautami-patil-flying-kiss-bjp-complaint-2026",
+    title: "Gautami Patil Crime: गौतमी पाटीलला 'तो' फ्लाईंग किस महागात पडणार, ठाण्यातील भाजप नगरसेविकेची तक्रार",
+    summary: "ABP Majha report on BJP municipal councillor filing police complaint against dancer Gautami Patil.",
+    category: "REGIONAL DISPATCH",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "ABP Majha Bureau (एबीपी माझा)",
+      role: "Crime & Culture Desk"
+    },
+    readingTime: "3 min read",
+    featuredImage: "/cjp_poster_abp_majha.png",
+    imageAlt: "ABP Majha Gautami Patil complaint graphic",
+    tags: ["ABP Majha", "Gautami Patil", "Thane BJP", "Police Complaint", "Marathi News"],
+    content: [
+      {
+        heading: "ठाण्यात पोलिसांत तक्रार दाखल",
+        text: "ठाण्यातील भाजप नगरसेविकेने गौतमी पाटीलच्या नृत्यावर आक्षेप घेत पोलिसांत तक्रार दाखल केली."
+      }
+    ]
+  },
+  // 18. ABP Majha: Rohit Pawar MPSC Irregularities Leak
+  {
+    slug: "abp-majha-rohit-pawar-mpsc-chairman-resignation-2026",
+    title: "Rohit Pawar MPSC: तक्रारी अन् पुरावे बघा.. रोहित पवारांनी शेअर केली कागदपत्रे; म्हणाले, हा फक्त ट्रेलर",
+    summary: "ABP Majha covers NCP MLA Rohit Pawar leaking documents on MPSC exam irregularities, demanding chairman's resignation.",
+    category: "EDUCATION",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "ABP Majha Bureau (एबीपी माझा)",
+      role: "Education & Politics Desk"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_abp_majha.png",
+    imageAlt: "ABP Majha Rohit Pawar MPSC documents graphic",
+    tags: ["ABP Majha", "Rohit Pawar", "MPSC Exam", "Paper Leak", "Resignation Demand"],
+    content: [
+      {
+        heading: "MPSC अध्यक्षांच्या राजीनाम्याची मागणी",
+        text: "आमदार रोहित पवार यांनी MPSC परीक्षेतील कथित अनियमिततेची कागदपत्रे शेअर करत अध्यक्षांच्या राजीनाम्याची जोरदार मागणी केली."
+      }
+    ]
+  },
+  // 19. ABP Majha: Manoj Jarange vs Vikhe Patil
+  {
+    slug: "abp-majha-manoj-jarange-vs-vikhe-patil-2026",
+    title: "Manoj Jarange Patil vs Radhakrishna Vikhe Patil: तुझ्या सात पिढ्या राजकारणात असल्या तरी मी जरांगे आहे!",
+    summary: "ABP Majha reports Maratha quota leader Manoj Jarange Patil's fiery response on Day 11 of his hunger strike.",
+    category: "POLITICS",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "ABP Majha Bureau (एबीपी माझा)",
+      role: "Protest Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_abp_majha.png",
+    imageAlt: "ABP Majha Manoj Jarange Patil hunger strike graphic",
+    tags: ["ABP Majha", "Manoj Jarange Patil", "Radhakrishna Vikhe Patil", "Hunger Strike", "Day 11"],
+    content: [
+      {
+        heading: "आंदोलनाचा ११ वा दिवस व राजकीय वाद",
+        text: "मनोज जरांगे पाटील यांनी उपोषणाच्या ११ व्या दिवशी विखे-पाटलांवर जोरदार पलटवार केला."
+      }
+    ]
+  },
+  // 20. ABP Majha: Fadnavis Western Freight Corridor
+  {
+    slug: "abp-majha-fadnavis-western-freight-corridor-2026",
+    title: "Devendra Fadnavis on Western Dedicated Freight Corridor: चीनला टक्कर देण्याच्यादृष्टीने महत्त्वाचं पाऊल",
+    summary: "ABP Majha coverage of Dy CM Devendra Fadnavis explaining the economic importance of the Western Freight Corridor.",
+    category: "PUBLIC ISSUES",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "ABP Majha Bureau (एबीपी माझा)",
+      role: "Economy Desk"
+    },
+    readingTime: "3 min read",
+    featuredImage: "/cjp_poster_abp_majha.png",
+    imageAlt: "ABP Majha Devendra Fadnavis freight corridor graphic",
+    tags: ["ABP Majha", "Devendra Fadnavis", "Western Freight Corridor", "Economy", "China Competition"],
+    content: [
+      {
+        heading: "आर्थिक व पायाभूत सुविधांवर वक्तव्य",
+        text: "उपमुख्यमंत्री देवेंद्र फडणवीस यांनी वेस्टर्न डेडिकेटेड फ्रेट कॉरिडोअरच्या महत्त्वाबाबत भाष्य केले."
+      }
+    ]
+  },
+  // 21. ABP Majha: Share Market & Gold Price Surge
+  {
+    slug: "abp-majha-share-market-ipo-gold-price-2026",
+    title: "Share Market & Gold Price: आयपीओ लिस्ट होताच शेअर 3 दिवसात 200% वाढला; सोन्याच्या दरात पुन्हा वाढ",
+    summary: "ABP Majha market report on Sensex 400 point dip, gold/silver MCX surge, and IPO 200% rally.",
+    category: "PUBLIC ISSUES",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "ABP Majha Business Bureau",
+      role: "Finance Desk"
+    },
+    readingTime: "3 min read",
+    featuredImage: "/cjp_poster_abp_majha.png",
+    imageAlt: "ABP Majha share market gold rates graphic",
+    tags: ["ABP Majha", "Share Market", "IPO Rally", "Gold Price", "Sensex Dip"],
+    content: [
+      {
+        heading: "शेअर बाजार व सोन्या-चांदीचे दर",
+        text: "आयपीओच्या तुफान लिस्टिंगनंतर शेअर्समध्ये २००% वाढ झाली तर सोन्याच्या दरातही मोठी वाढ नोंदवली गेली."
+      }
+    ]
+  },
+  // Additional Historical News Items
   {
     slug: "scst-pocso-sections-invoked-swatantra-bhardwaj-2026",
     title: "NDTV & The Hindu: SC/ST Act, POCSO & Attempt-to-Murder Sections Invoked Against Swatantra Bhardwaj",
@@ -38,10 +505,6 @@ export const newsData: NewsArticle[] = [
       {
         heading: "Severe Penal Provisions Added to FIR",
         text: "Under mounting public pressure and representations by CJP leaders Saurav Das and Ashutosh Ranka, Delhi Police formally added provisions under the SC/ST (Prevention of Atrocities) Act, POCSO Act, and IPC Section 307 (Attempt to Murder) against Swatantra Bhardwaj."
-      },
-      {
-        heading: "72-Hour Police Assurance",
-        text: "Senior police officials assured student activist Nishu Azad that rigorous legal steps and apprehension would be finalized within 72 hours."
       }
     ]
   },
@@ -84,31 +547,6 @@ export const newsData: NewsArticle[] = [
       {
         heading: "Police Tracking & Bulandshahr Arrest",
         text: "Following an intense 24-hour sit-in outside Parliament Street Police Station led by CJP's Saurav Das and Nishu Azad, a special team of Delhi Police tracked and arrested influencer Swatantra Bhardwaj from Bulandshahr, UP."
-      },
-      {
-        heading: "Patiala House Court Remand",
-        text: "The Metropolitan Magistrate court at Patiala House remanded Bhardwaj to one day of police custody to facilitate ongoing investigations into the physical assault on Sanjay Kumar."
-      }
-    ]
-  },
-  {
-    slug: "delhi-police-detains-swatantra-bhardwaj-bulandshahr-assault-2026",
-    title: "Delhi Police Detains Swatantra Bhardwaj in Bulandshahr for Assaulting CJP Protester's Father",
-    summary: "The Times of India reports special police team traced Bhardwaj across state borders after video boast of attacking Sanjay Kumar triggered nationwide student outrage.",
-    category: "POLICE & CRIME",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "The Times of India",
-      role: "Special City Bureau"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_swatantra_arrest.png",
-    imageAlt: "Delhi Police detains Bhardwaj in Bulandshahr poster graphic",
-    tags: ["Times of India", "Bulandshahr", "Delhi Police", "Assault FIR"],
-    content: [
-      {
-        heading: "Inter-State Police Operation",
-        text: "Delhi Police deployed satellite tracking and field teams to apprehend Swatantra Bhardwaj in Bulandshahr following intense media pressure and public siege at Parliament Street station."
       }
     ]
   },
@@ -130,715 +568,6 @@ export const newsData: NewsArticle[] = [
       {
         heading: "Apex Court Bench Expresses Distress",
         text: "During hearings on student protest rights, Supreme Court Justice Ujjal Bhuyan described video footage of police cracking down on CJP student demonstrators at Jantar Mantar as 'very distressing to see'."
-      },
-      {
-        heading: "Reaffirming Right to Peaceful Demonstration",
-        text: "The bench reminded law enforcement that peaceful assembly is a constitutionally protected fundamental right that cannot be met with police high-handedness."
-      }
-    ]
-  },
-  {
-    slug: "cracked-open-skull-no-jail-cjp-demands-attempted-murder-charge-2026",
-    title: "‘Cracked Open Skull, No Jail’—CJP Demands Attempted Murder Charge Against Hindutva Influencer",
-    summary: "ThePrint reports CJP legal cell demanding Section 307 (Attempted Murder) charges after influencer bragged on camera about physically assaulting protester's father.",
-    category: "LEGAL ADVOCACY",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "ThePrint Bureau",
-      role: "Legal & Politics Desk"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_scst_pocso.png",
-    imageAlt: "CJP demands attempted murder charge poster graphic",
-    tags: ["ThePrint", "Section 307", "Swatantra Bhardwaj", "Saurav Das"],
-    content: [
-      {
-        heading: "Demand for Criminal Escalation",
-        text: "CJP Legal Spokesperson Saurav Das submitted formal petitions demanding that police invoke Section 307 (Attempted Murder) rather than minor assault charges given the severe head injuries inflicted on Sanjay Kumar."
-      }
-    ]
-  },
-  {
-    slug: "rahul-gandhi-cjp-teen-post-congress-delegation-delhi-police-2026",
-    title: "How a Hindutva Influencer’s ‘Skull-Cracker’ Brag Brought CJP & Congress to the Same Table",
-    summary: "Rahul Gandhi responded to CJP teen activist's post saying 'I'm with you'. Shortly after, a Congress delegation met Delhi Police demanding answers and immediate arrest.",
-    category: "POLITICS & SOLIDARITY",
-    publishDate: "SEP 05, 2026",
-    author: {
-      name: "ThePrint Bureau",
-      role: "Political Bureau"
-    },
-    readingTime: "5 min read",
-    featuredImage: "/cjp_poster_cjp_congress_table.png",
-    imageAlt: "Rahul Gandhi CJP teen post Congress delegation poster graphic",
-    tags: ["Rahul Gandhi", "Congress", "CJP Teen Activist", "Delhi Police HQ", "ThePrint"],
-    content: [
-      {
-        heading: "Cross-Party Solidarity for Youth Activists",
-        text: "After a CJP teen activist posted video evidence of the assault on social media, Rahul Gandhi responded directly: 'I\\'m with you'. Within hours, a senior Congress delegation visited Delhi Police HQ demanding immediate enforcement."
-      }
-    ]
-  },
-  {
-    slug: "cjp-nationwide-protest-call-abhijeet-dipke-cannot-be-wiped-out-2026",
-    title: "CJP Calls for Nationwide Protests; Chief Abhijeet Dipke Asserts Movement Cannot Be Wiped Out",
-    summary: "Manorama Online reports CJP founder Abhijeet Dipke issuing a call for nationwide student demonstrations demanding Union Education Minister's resignation, asserting CJP's subterranean roots cannot be erased.",
-    category: "PROTEST DISPATCH",
-    publishDate: "SEP 05, 2026",
-    author: {
-      name: "Manorama Online",
-      role: "National Desk"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_parliament_dharna.png",
-    imageAlt: "CJP nationwide protest call Abhijeet Dipke poster graphic",
-    tags: ["Manorama Online", "Abhijeet Dipke", "Nationwide Protest", "Education Minister"],
-    content: [
-      {
-        heading: "Subterranean Movement Cannot Be Erased",
-        text: "Addressing regional swarms, CJP Chief Abhijeet Dipke declared that student demands for exam integrity and municipal accountability are deeply rooted across India and cannot be suppressed by police intimidation."
-      }
-    ]
-  },
-  {
-    slug: "rebel-floats-cjp-democratic-cjp-d-team-kejriwal-claim-2026",
-    title: "Rebel Faction Floats 'Cockroach Janta Party-Democratic' (CJP-D); Claims Dipke's CJP Is 'Team Kejriwal'",
-    summary: "Hindustan Times, The Hindu, and India Today report internal split as rebel leader Brahmbhatt launches CJP-D, accusing Dipke of AAP alignment. Dipke dismisses the group as a political gimmick.",
-    category: "POLITICS & SATIRE",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "Hindustan Times & India Today",
-      role: "Political Bureau"
-    },
-    readingTime: "5 min read",
-    featuredImage: "/cjp_poster_cjp_congress_table.png",
-    imageAlt: "CJP-D splinter controversy poster graphic",
-    tags: ["CJP-D", "Brahmbhatt", "Abhijeet Dipke", "Hindustan Times", "India Today", "The Hindu"],
-    content: [
-      {
-        heading: "Rebel Splinter Group Announced",
-        text: "Disgruntled activist Brahmbhatt announced the formation of 'Cockroach Janta Party-Democratic' (CJP-D), alleging that Abhijeet Dipke's platform had morphed into 'Team Kejriwal'."
-      },
-      {
-        heading: "Dipke's Rebuttal",
-        text: "CJP Chief Abhijeet Dipke rejected the claims, asserting: 'CJP remains 100% non-partisan and dedicated strictly to subterranean civic audits, RTI disclosures, and student rights.'"
-      }
-    ]
-  },
-  {
-    slug: "akhilesh-yadav-cjp-meeting-raises-hackles-in-up-sbsp-attack-2026",
-    title: "Akhilesh Yadav & CJP Delegation Meeting Raises Hackles In UP; NDA Ally SBSP Hits Out",
-    summary: "Deccan Chronicle reports SP chief Akhilesh Yadav meeting CJP leaders in Lucknow, drawing sharp criticism from UP Cabinet Minister O.P. Rajbhar (SBSP/BJP ally).",
-    category: "POLITICS",
-    publishDate: "SEP 05, 2026",
-    author: {
-      name: "Deccan Chronicle",
-      role: "UP State Bureau"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_cjp_congress_table.png",
-    imageAlt: "Akhilesh Yadav CJP meeting poster graphic",
-    tags: ["Akhilesh Yadav", "Deccan Chronicle", "UP Politics", "O.P. Rajbhar", "SBSP"],
-    content: [
-      {
-        heading: "Lucknow Meeting Triggers Political Sparks",
-        text: "Samajwadi Party president Akhilesh Yadav met a CJP delegation in Lucknow to discuss youth exam integrity and road warranties. The meeting prompted NDA ally O.P. Rajbhar to accuse SP of fueling student unrest."
-      }
-    ]
-  },
-  {
-    slug: "cjp-targets-ips-sachin-sharma-ruined-girls-lives-2026",
-    title: "CJP Targets IPS Sachin Sharma: 'Ruined Two Girls' Lives' — Saurav Das & Ashutosh Ranka Demand Probe",
-    summary: "Pudhari reports CJP leaders Saurav Das and Ashutosh Ranka placing IPS officer Sachin Sharma under public radar over alleged inaction in a high-profile case.",
-    category: "POLICE ACCOUNTABILITY",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "Pudhari News Bureau",
-      role: "Maharashtra & Crime Desk"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_parliament_dharna.png",
-    imageAlt: "CJP targets IPS Sachin Sharma poster graphic",
-    tags: ["IPS Sachin Sharma", "Pudhari", "Saurav Das", "Ashutosh Ranka", "Police Accountability"],
-    content: [
-      {
-        heading: "CJP Turns Spotlight on Police Inaction",
-        text: "CJP leaders Saurav Das and Ashutosh Ranka issued a public warning demanding a departmental inquiry into IPS Sachin Sharma, accusing police administration of failing two young female victims."
-      }
-    ]
-  },
-  {
-    slug: "cjp-chief-abhijeet-dipke-urges-fadnavis-visit-ashramshalas-2026",
-    title: "CJP Chief Abhijeet Dipke Urges CM Devendra Fadnavis to Visit Maharashtra Ashramshalas",
-    summary: "Daily Pioneer reports CJP founder Abhijeet Dipke asking CM Devendra Fadnavis to inspect tribal school hostels following CJP audit on safety, food quality, and facility deficits.",
-    category: "CIVIC AUDIT",
-    publishDate: "SEP 05, 2026",
-    author: {
-      name: "Daily Pioneer",
-      role: "Mumbai & Tribal Affairs Bureau"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_school_thik_karo_poster.png",
-    imageAlt: "Abhijeet Dipke urges Devendra Fadnavis Ashramshala audit graphic",
-    tags: ["Abhijeet Dipke", "Devendra Fadnavis", "Daily Pioneer", "Ashramshalas", "Tribal Schools"],
-    content: [
-      {
-        heading: "Audit Exposes Hostel Infrastructure Deficits",
-        text: "Following field inspections across Maharashtra tribal hostels, CJP Chief Abhijeet Dipke wrote to CM Devendra Fadnavis urging surprise visits to address substandard food, unsafe hygiene, and missing educational tools."
-      }
-    ]
-  },
-  {
-    slug: "alt-news-impact-meta-removes-ai-fakes-cjp-female-protesters-2026",
-    title: "Alt News Impact: Meta Takes Down AI Fake Photos & Harassing Videos Targeting Female CJP Protesters",
-    summary: "Alt News fact-check investigation forces Meta to delete coordinated Instagram and Facebook accounts generating AI deepfakes targeting women activists at Jantar Mantar.",
-    category: "FACT CHECK & MEDIA",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "Alt News Desk",
-      role: "Fact-Check Bureau"
-    },
-    readingTime: "5 min read",
-    featuredImage: "/cjp_poster_sc_judge_slams_police.png",
-    imageAlt: "Alt News Meta AI takedown poster graphic",
-    tags: ["Alt News", "Meta", "Instagram", "Facebook", "AI Deepfakes", "Jantar Mantar"],
-    content: [
-      {
-        heading: "Exposing Coordinated Cyber Harassment",
-        text: "An Alt News investigation revealed a network of malicious social media handles disseminating AI-altered videos and fake images aimed at intimidating women participating in CJP's Jantar Mantar protests."
-      },
-      {
-        heading: "Meta Swift Action",
-        text: "Following Alt News disclosures, Meta permanently suspended the offending accounts and removed violating media across Instagram and Facebook."
-      }
-    ]
-  },
-  {
-    slug: "mathrubhumi-delhi-police-station-siege-cjp-protest-2026",
-    title: "Action Demanded Against Skull Attacker: Mathrubhumi Reports CJP Parliament Street Siege",
-    summary: "Mathrubhumi dispatches report on CJP's capital protest demanding criminal prosecution of Hindutva influencer following assault on protester's father.",
-    category: "REGIONAL DISPATCH",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "Mathrubhumi Bureau",
-      role: "Delhi Bureau"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_parliament_dharna.png",
-    imageAlt: "Mathrubhumi CJP Parliament Street protest graphic",
-    tags: ["Mathrubhumi", "Malayalam News", "Parliament Street", "CJP Protest"],
-    content: [
-      {
-        heading: "Capital Siege Demanding Justice",
-        text: "Mathrubhumi reported on CJP's intense sit-in outside Parliament Street Police Station, highlighting student solidarity against physical attacks on protesters' families."
-      }
-    ]
-  },
-  {
-    slug: "team-cjp-parliament-street-police-station-protest-2026",
-    title: "CJP Protesters Lay Siege to Parliament Street Police Station Over Assault on Student Leader's Father",
-    summary: "Team CJP led by Saurav Das and Nishu Azad reached Parliament Street Police Station in New Delhi, sitting on a dharna demanding immediate arrest and action over the assault on Sanjay Kumar.",
-    category: "BREAKING",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "Saurav Das",
-      role: "National Spokesperson & Legal Lead"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_parliament_dharna.png",
-    imageAlt: "CJP protesters sit on dharna outside Parliament Street Police Station graphic poster",
-    tags: ["Parliament Street", "Saurav Das", "Nishu Azad", "Sanjay Kumar", "CJP Protest"],
-    content: [
-      {
-        heading: "Hundreds of Protesters Surround Police Station",
-        text: "Following viral video statements by right-wing influencer Swatantra Bhardwaj boasting of physically assaulting student protester Nishu Azad's father (Sanjay Kumar) during the July 20 demonstration, Team CJP assembled at Parliament Street Police Station."
-      },
-      {
-        heading: "24-Hour Ultimatum for Arrest",
-        text: "CJP leaders Saurav Das and Nishu Azad sat on an indefinite dharna on the road outside the station premises, urging immediate registration of criminal charges and arrest."
-      }
-    ]
-  },
-  {
-    slug: "influencer-claims-cracked-skull-cjp-protest-fir-twist-2026",
-    title: "'Kapil Mishra Called': Influencer Boasts of 'Not Being Jailed' After 'Cracking Skull' at CJP Protest; FIR Twist Follows",
-    summary: "Influencer Swatantra Bhardwaj boasted on video about allegedly assaulting Sanjay Kumar during the CJP protest and claimed political patronage, sparking intense outrage and an FIR twist.",
-    category: "LEGAL & POLITICS",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "Ananya Sen",
-      role: "Legal & Advocacy Secretariat"
-    },
-    readingTime: "5 min read",
-    featuredImage: "/cjp_poster_swatantra_arrest.png",
-    imageAlt: "Influencer assault claim and FIR twist poster graphic",
-    tags: ["Swatantra Bhardwaj", "Kapil Mishra", "Sanjay Kumar", "Times of India", "FIR Twist"],
-    content: [
-      {
-        heading: "Boasting on Camera Triggers Public Backlash",
-        text: "Swatantra Bhardwaj's video claims that he assaulted student activist Nishu Azad's father and remains unpunished due to high-level political connections drew nationwide condemnation across news channels and social media platforms."
-      },
-      {
-        heading: "Delhi Police Registers FIR Twist",
-        text: "Under mounting public pressure and media scrutiny from TOI and India Today, Delhi Police updated the case status, initiating investigative procedures into the assault."
-      }
-    ]
-  },
-  {
-    slug: "ndtv-man-who-hit-students-father-defiant-cjp-protest-2026",
-    title: "'Will Do Again If...': Man Who Hit Student's Father Issues Defiant Statement As CJP Protests In Delhi",
-    summary: "NDTV report captures provocative statements by Swatantra Bhardwaj after hitting Sanjay Kumar during CJP Jantar Mantar protests, fueling widespread student indignation.",
-    category: "PROTEST REPORT",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "NDTV Media Desk",
-      role: "Broadcast News Partner"
-    },
-    readingTime: "3 min read",
-    featuredImage: "/cjp_poster_swatantra_arrest.png",
-    imageAlt: "NDTV report poster graphic on assault at CJP protest",
-    tags: ["NDTV", "Sanjay Kumar", "CJP Protest", "Delhi Police"],
-    content: [
-      {
-        heading: "Defiant Statements Trigger Campaign Surge",
-        text: "Despite widespread condemnation, Swatantra Bhardwaj asserted he had no regret for hitting student leader Nishu Azad's father, sparking calls from student bodies nationwide to join CJP's Parliament Street sit-in."
-      }
-    ]
-  },
-  {
-    slug: "delhi-police-facial-recognition-jail-fiasco-cjp-protest-2026",
-    title: "Police Say Cameras 'Caught' 2,873 History Sheeters at CJP Protest — 162 Were Actually Already in Jail",
-    summary: "Delhi Police told Supreme Court its facial recognition system flagged 2,873 people with criminal records at CJP protest, but court audits revealed 162 were physically locked inside prison during the event.",
-    category: "INVESTIGATION",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "The Indian Express & ThePrint",
-      role: "Investigative Bureau"
-    },
-    readingTime: "6 min read",
-    featuredImage: "/cjp_poster_facial_rec_jail.png",
-    imageAlt: "Facial recognition AI fiasco poster graphic showing 162 in jail",
-    tags: ["Facial Recognition", "Delhi Police", "Supreme Court", "ThePrint", "Indian Express"],
-    content: [
-      {
-        heading: "Flawed AI Algorithmic Match Exposed",
-        text: "Delhi Police attempted to justify heavy policing at CJP's July 20 demonstration by presenting facial recognition matches of 2,873 alleged history sheeters. Independent court verification proved 162 flagged individuals were actively incarcerated in jail on July 20."
-      },
-      {
-        heading: "Supreme Court Reprimand",
-        text: "The Supreme Court noted the alarming inaccuracies in automated criminal profiling used against peaceful student demonstrators."
-      }
-    ]
-  },
-  {
-    slug: "livelaw-withdrawing-september-5-protest-cjp-tells-supreme-court-2026",
-    title: "Withdrawing September 5 Protest: CJP Leader Saurav Das Tells Supreme Court As Centre Acts To Drop FIRs",
-    summary: "Live Law report detailing how CJP leader Saurav Das informed Supreme Court of canceling the September 5 march following central government commitments.",
-    category: "LEGAL & COURT",
-    publishDate: "SEP 01, 2026",
-    author: {
-      name: "Live Law Bureau",
-      role: "Legal Reporting Desk"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_sc_quash_firs.png",
-    imageAlt: "Live Law poster graphic on September 5 protest withdrawal",
-    tags: ["Live Law", "Saurav Das", "Supreme Court", "Protest Withdrawn"],
-    content: [
-      {
-        heading: "Courtroom Statement by CJP Counsel",
-        text: "Saurav Das informed the bench that since the Centre and state governments initiated Article 142 proceedings to quash all student FIRs, CJP voluntarily called off its planned India Gate march."
-      }
-    ]
-  },
-  {
-    slug: "ndtv-supreme-court-cancels-all-firs-against-cjp-protesters-2026",
-    title: "Supreme Court Cancels All FIRs Against CJP Protesters, Criminal Antecedents Only Exception",
-    summary: "NDTV coverage of Supreme Court's historic Article 142 ruling quashing all police FIRs registered against student protesters across Delhi and multiple states.",
-    category: "LEGAL & COURT",
-    publishDate: "SEP 02, 2026",
-    author: {
-      name: "NDTV Desk",
-      role: "National News Bureau"
-    },
-    readingTime: "5 min read",
-    featuredImage: "/cjp_poster_sc_quash_firs.png",
-    imageAlt: "Supreme Court quashes FIRs poster graphic NDTV",
-    tags: ["NDTV", "Article 142", "FIR Quashed", "Supreme Court"],
-    content: [
-      {
-        heading: "Complete Protection for Student Careers",
-        text: "The apex court granted comprehensive legal relief to over 2,700 students who participated in CJP's NEET paper leak and road warranty demonstrations."
-      }
-    ]
-  },
-  {
-    slug: "toi-cjp-calls-off-sept-5-march-after-sc-quashes-firs-2026",
-    title: "CJP Calls Off Sept 5 March After SC Quashes All FIRs Against Protesters on Centre's Request",
-    summary: "The Times of India reports CJP calling off its nationwide protest march following Supreme Court's order granting amnesty to student activists.",
-    category: "PROTEST REPORT",
-    publishDate: "SEP 01, 2026",
-    author: {
-      name: "The Times of India",
-      role: "Special Correspondent"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_sc_quash_firs.png",
-    imageAlt: "TOI CJP calls off Sept 5 march poster graphic",
-    tags: ["Times of India", "Sept 5 March", "FIR Quash", "CJP"],
-    content: [
-      {
-        heading: "Victory for Democratic Dialogue",
-        text: "TOI highlighted CJP's strategic decision to transition from street rallies back to 24/7 municipal ward audits after securing full legal protection for student youth."
-      }
-    ]
-  },
-  {
-    slug: "bar-and-bench-cjp-cancels-september-5-protest-march-2026",
-    title: "Bar and Bench: CJP Cancels September 5 Protest March After Supreme Court Quashes FIRs in Delhi, Other States",
-    summary: "Bar & Bench legal dispatch covering the Supreme Court hearing and CJP's formal cancellation of protest marches.",
-    category: "LEGAL & COURT",
-    publishDate: "SEP 02, 2026",
-    author: {
-      name: "Bar and Bench",
-      role: "Legal Correspondents"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_sc_quash_firs.png",
-    imageAlt: "Bar and Bench CJP SC FIR quash poster graphic",
-    tags: ["Bar and Bench", "Supreme Court", "CJP Protest", "Article 142"],
-    content: [
-      {
-        heading: "Judicial Precedent Established",
-        text: "Bar & Bench documented how the apex court bench barred police from registering fresh FIRs against student demonstrators."
-      }
-    ]
-  },
-  {
-    slug: "news18-hindi-cjp-parliament-street-police-station-protest-live-2026",
-    title: "LIVE: स्वतंत्र भारद्वाज पर हो एक्शन... CJP का संसद मार्ग थाने पर प्रदर्शन, निशु आजाद संग धरने पर बैठे सौरभ",
-    summary: "News18 Hindi coverage of CJP leaders Saurav Das and Nishu Azad sitting on dharna outside Parliament Street Police Station in Delhi.",
-    category: "BREAKING",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "News18 Hindi Team",
-      role: "Delhi Regional Bureau"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_parliament_dharna.png",
-    imageAlt: "News18 Hindi Parliament Street CJP protest poster graphic",
-    tags: ["News18 Hindi", "Saurav Das", "Nishu Azad", "Parliament Street"],
-    content: [
-      {
-        heading: "संसद मार्ग थाने पर भारी संख्या में पहुंचे कॉकरोच समर्थक",
-        text: "दिल्ली के जंतर-मंतर पर CJP प्रदर्शन के दौरान निशु आजाद के पिता संजय कुमार पर हमले के विरोध में सौरभ दास और निशु आजाद संसद मार्ग थाने के बाहर धरने पर बैठ गए।"
-      }
-    ]
-  },
-  {
-    slug: "theprint-cjp-protest-facial-recognition-162-in-jail-2026",
-    title: "CJP Protest: Of 2,873 History Sheeters That Delhi Cops Seek to Probe, 162 Were 'Supposed to Be in Jail'",
-    summary: "ThePrint investigation disclosing that 162 of the 2,873 history sheeters Delhi Police sought to probe were actually serving sentences in jail on July 20.",
-    category: "INVESTIGATION",
-    publishDate: "SEP 01, 2026",
-    author: {
-      name: "ThePrint Bureau",
-      role: "Special Investigation Desk"
-    },
-    readingTime: "5 min read",
-    featuredImage: "/cjp_poster_facial_rec_jail.png",
-    imageAlt: "ThePrint facial recognition 162 in jail poster graphic",
-    tags: ["ThePrint", "Facial Recognition", "Delhi Police", "History Sheeters"],
-    content: [
-      {
-        heading: "Police Database Errors Exposed",
-        text: "ThePrint analyzed police submissions and verified jail ledgers, revealing that 162 individuals flagged as active rally participants were physically locked inside prison cells on July 20."
-      }
-    ]
-  },
-  {
-    slug: "hindustan-cjp-protest-parliament-street-police-station-2026",
-    title: "CJP Protest News: कॉकरोचों ने घेरा दिल्ली का संसद मार्ग थाना, क्यों मचा बवाल और हंगामा",
-    summary: "Hindustan Hindi dispatch on hundreds of CJP protesters surrounding Delhi's Parliament Street Police Station demanding immediate arrest.",
-    category: "BREAKING",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "Hindustan Live Bureau",
-      role: "Crime & Politics Desk"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_parliament_dharna.png",
-    imageAlt: "Hindustan Hindi CJP Parliament Street police station siege graphic",
-    tags: ["Hindustan", "Parliament Street", "CJP Protest", "Hindi News"],
-    content: [
-      {
-        heading: "सड़क पर शुरू हुआ अनिश्चितकालीन धरना",
-        text: "दिल्ली में सैकड़ों की तादाद में सड़क पर उतरे कॉकरोच कार्यकर्ता संसद मार्ग थाने का घेराव कर रहे हैं और हमलावर पर सख्त कार्रवाई की मांग कर रहे हैं।"
-      }
-    ]
-  },
-  {
-    slug: "hans-india-cjp-protest-row-cracked-skull-claim-sparks-storm-2026",
-    title: "CJP Protest Row: Activist's 'Cracked Skull' Claim Sparks Political Storm, Delhi Police Gives FIR Details",
-    summary: "The Hans India reports on activist Swatantra Bhardwaj's remarks about allegedly assaulting a student protester's father and Delhi Police's FIR updates.",
-    category: "POLITICS",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "The Hans India Desk",
-      role: "National Bureau"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_poster_swatantra_arrest.png",
-    imageAlt: "Hans India CJP protest cracked skull claim poster graphic",
-    tags: ["The Hans India", "Swatantra Bhardwaj", "Sanjay Kumar", "FIR Details"],
-    content: [
-      {
-        heading: "Political Storm Erupts",
-        text: "Remarks by Swatantra Bhardwaj claiming physical assault on Sanjay Kumar triggered sharp political reactions across parties, prompting police to release FIR registration details."
-      }
-    ]
-  },
-  {
-    slug: "careers360-cjp-protesters-protest-outside-delhi-police-station-2026",
-    title: "CJP Protesters Protest Outside Delhi Police Station Over Alleged Assault on Student Protester's Father",
-    summary: "Careers360 reports on student groups protesting outside Delhi Police station following viral video of assault on student leader's father Sanjay Kumar.",
-    category: "EDUCATION",
-    publishDate: "SEP 04, 2026",
-    author: {
-      name: "Careers360 News Bureau",
-      role: "Student & Campus Desk"
-    },
-    readingTime: "3 min read",
-    featuredImage: "/cjp_poster_parliament_dharna.png",
-    imageAlt: "Careers360 CJP protest outside Delhi police station graphic",
-    tags: ["Careers360", "Student Protest", "Sanjay Kumar", "Parliament Street"],
-    content: [
-      {
-        heading: "Student Solidarity Outside Police HQ",
-        text: "Youth organisations joined CJP's sit-in outside Parliament Street Police Station following viral video interviews showing physical attack on Sanjay Kumar during the July 20 NEET demonstration."
-      }
-    ]
-  },
-  {
-    slug: "dainik-bhaskar-sc-quashes-jantar-mantar-cjp-firs-2026",
-    title: "सुप्रीम कोर्ट ने जंतर-मंतर प्रोटेस्ट की सभी FIR रद्द कीं: नई FIR भी दर्ज नहीं होंगी; कॉकरोच जनता पार्टी ने फैसला सराहा",
-    summary: "Dainik Bhaskar report on Supreme Court quashing all FIRs related to CJP's NEET paper leak protest at Jantar Mantar and barring fresh cases.",
-    category: "LEGAL & COURT",
-    publishDate: "SEP 02, 2026",
-    author: {
-      name: "Dainik Bhaskar National Bureau",
-      role: "Legal & Politics Desk"
-    },
-    readingTime: "5 min read",
-    featuredImage: "/cjp_poster_sc_quash_firs.png",
-    imageAlt: "Dainik Bhaskar Supreme Court FIR quash poster graphic",
-    tags: ["Dainik Bhaskar", "Supreme Court", "NEET Paper Leak", "CJP"],
-    content: [
-      {
-        heading: "छात्रों को बड़ी राहत — सभी प्राथमिकियां रद्द",
-        text: "नई दिल्ली में NEET पेपर लीक के विरोध में CJP के जंतर-मंतर प्रदर्शन के दौरान दर्ज सभी एफआईआर सुप्रीम कोर्ट ने रद्द कर दी हैं।"
-      }
-    ]
-  },
-  {
-    slug: "indian-express-how-cjp-protest-led-to-dharmendra-pradhan-quitting-2026",
-    title: "How Did CJP Protest Lead to Dharmendra Pradhan Quitting? Ashutosh Ranka Explains",
-    summary: "The Indian Express interview with Ashutosh Ranka explaining how 37 days of CJP nationwide protests forced Education Minister Dharmendra Pradhan's resignation.",
-    category: "POLITICS",
-    publishDate: "SEP 03, 2026",
-    author: {
-      name: "The Indian Express",
-      role: "Senior Political Editor"
-    },
-    readingTime: "6 min read",
-    featuredImage: "/cjp_poster_scst_pocso.png",
-    imageAlt: "Indian Express Ashutosh Ranka Dharmendra Pradhan quitting poster graphic",
-    tags: ["Indian Express", "Ashutosh Ranka", "Dharmendra Pradhan", "NEET Protest"],
-    content: [
-      {
-        heading: "37 Days of Non-Stop Pressure",
-        text: "Ashutosh Ranka stated that the central government did not engage with protesters for 37 days until CJP launched intense nationwide ward audits and street demonstrations, leading to minister Dharmendra Pradhan's departure."
-      }
-    ]
-  },
-  {
-    slug: "sc-quashes-firs-against-cjp-protesters-2026",
-    title: "Supreme Court Cancels All FIRs Against CJP Protesters Under Article 142",
-    summary: "In a landmark order, the Supreme Court of India invoked Article 142 to quash all police cases registered against student protesters across Delhi and other states.",
-    category: "LEGAL & COURT",
-    publishDate: "SEP 01, 2026",
-    author: {
-      name: "Saurav Das",
-      role: "Policy & Media Spokesperson"
-    },
-    readingTime: "4 min read",
-    featuredImage: "/cjp_sc_fir_quash_poster.png",
-    imageAlt: "Supreme Court quashes FIRs against student protesters poster graphic",
-    tags: ["Supreme Court", "Article 142", "CJP Protests", "Student Immunity"],
-    content: [
-      {
-        heading: "Landmark Verdict Protects Student Protesters",
-        text: "The Supreme Court invoked its extraordinary powers under Article 142 of the Constitution to cancel all FIRs registered against NEET and youth protesters in New Delhi, Rajasthan, and UP."
-      },
-      {
-        heading: "Withdrawal of September 5 Protest March",
-        text: "Following government assurances and the apex court order, Cockroach Janta Party (CJP) formally called off its planned September 5 march to Delhi Police HQ."
-      }
-    ]
-  },
-  {
-    slug: "public-audit-subterranean-drainage-2026",
-    title: "Public Audit Demands Standardized Inspection of Urban Subterranean Sewer Systems",
-    summary: "Independent audit of municipal sanitation budgets highlights key areas where open data and quarterly public reporting can improve drainage maintenance across urban zones.",
-    category: "CIVIC SANITATION",
-    publishDate: "AUG 25, 2026",
-    author: {
-      name: "Abhijeet Dipke",
-      role: "Chief Secretariat Observer"
-    },
-    readingTime: "5 min read",
-    featuredImage: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Urban drainage inspection site with engineers reviewing municipal blueprints",
-    tags: ["Sanitation", "Urban Audit", "Public Health", "Governance"],
-    content: [
-      {
-        heading: "Overview of Municipal Sanitation Auditing",
-        text: "Cockroach Janta Party research wing published its quarterly recommendations on urban civic hygiene. The report advocates for mandatory public disclosure of drain cleaning schedules, subterranean sewer desilting depth measurements, and contractor service level agreements (SLAs)."
-      },
-      {
-        heading: "Key Recommendations for Wards",
-        text: "Municipal authorities must establish transparent digital dashboards tracking daily maintenance operations to ensure public funds directly yield cleaner neighborhoods.",
-        list: [
-          "Mandatory publication of zone-wise sanitation schedules 48 hours prior to execution.",
-          "Installation of verified water sample testing points in high-density residential sectors.",
-          "Establishment of non-punitive grievance reporting tools for local resident welfare associations."
-        ]
-      }
-    ]
-  },
-  {
-    slug: "contractor-warranty-notice-board-compliance",
-    title: "On-Site Notice Board Audit: Verifying 3-Year Contractor Road Repair Warranties",
-    summary: "CJP field observers inspected 45 public road paving sites in Commercial Sector 18, requesting mandatory notice boards listing contractor warranty liability periods.",
-    category: "PUBLIC ACCOUNTABILITY",
-    publishDate: "AUG 18, 2026",
-    author: {
-      name: "Ananya Sen",
-      role: "Head of RTI Legal Advocacy"
-    },
-    readingTime: "4 min read",
-    featuredImage: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Public tender documents and analytical charts on civic expenditure",
-    tags: ["Contractor Warranty", "RTI", "Tenders", "Road Paving"],
-    content: [
-      {
-        heading: "Audit Findings",
-        text: "Under municipal guidelines, all public works over ₹5 Lakhs must display transparent warranty boards. Our physical field audit discovered only 12 out of 45 sites had legible contractor details."
-      }
-    ]
-  },
-  {
-    slug: "community-water-quality-testing-charter",
-    title: "Safe Piped Household Water: Deploying Rapid TDS and Chlorine Testing Kiosks",
-    summary: "Evaluating mobile volunteer kiosks providing residents free water quality testing across high-footfall metro transit hubs.",
-    category: "PUBLIC HEALTH",
-    publishDate: "AUG 10, 2026",
-    author: {
-      name: "Priya Nambiar",
-      role: "Water Quality Lead"
-    },
-    readingTime: "6 min read",
-    featuredImage: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Public health worker testing household water sample",
-    tags: ["Water Safety", "Public Health", "Community Testing"],
-    content: [
-      {
-        heading: "Piped Water Safety Guarantee",
-        text: "Access to uncontaminated piped drinking water is a non-negotiable fundamental civic right. CJP volunteer kiosks empower households with immediate water quality diagnostics."
-      }
-    ]
-  },
-  {
-    slug: "school-thik-karo-pan-india-launch",
-    title: "School Thik Karo Campaign Launches Across 12 States to Audit Classroom Infrastructure",
-    summary: "CJP launches nation-wide citizen audit of government school desks, roofs, and sanitation blocks using standardized RTI scorecards.",
-    category: "SOCIETY",
-    publishDate: "AUG 05, 2026",
-    author: {
-      name: "Meera Iyer",
-      role: "Education Reform Observer"
-    },
-    readingTime: "4 min read",
-    featuredImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Students sitting in a classroom during an educational audit",
-    tags: ["Education", "School Thik Karo", "RTI", "Public Schools"],
-    content: [
-      {
-        heading: "Audit Charter Launched",
-        text: "The School Thik Karo initiative urges citizens to report leaking classroom roofs, missing desks, and broken water filters. Initial RTI findings indicate over 30% of audited schools operate with overdue maintenance tenders."
-      }
-    ]
-  },
-  {
-    slug: "dimagi-naxal-satire-manifesto-release",
-    title: "Why Asking Questions About Road Tenders Does Not Make You a 'Dimagi Naxal'",
-    summary: "A satirical essay breaking down the political rhetoric surrounding civic activism, RTI inquiries, and urban citizen rights.",
-    category: "POLITICS SATIRE",
-    publishDate: "JUL 28, 2026",
-    author: {
-      name: "Abhijeet Dipke",
-      role: "Chief Secretariat Observer"
-    },
-    readingTime: "7 min read",
-    featuredImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Editorial writing setup with fountain pen and newsprint notebook",
-    tags: ["Dimagi Naxal", "Satire", "RTI", "Civil Liberties"],
-    content: [
-      {
-        heading: "The Satire Behind the Label",
-        text: "When asking why a road melted in three days gets labeled as 'subversive thinking', humor becomes the sharpest tool for democracy. CJP breaks down why civic curiosity is the ultimate form of nation-building."
-      }
-    ]
-  },
-  {
-    slug: "bitchat-decentralized-mesh-for-civic-alerts",
-    title: "BitChat Mesh: Testing Offline Peer-to-Peer Civic Ticker Technology",
-    summary: "Exploring CJP's experimental lightweight BitChat protocol designed for neighborhood civic updates and offline rally safety coordination.",
-    category: "TECHNOLOGY",
-    publishDate: "JUL 20, 2026",
-    author: {
-      name: "Tech Swarm Guild",
-      role: "Open Source Tech Collective"
-    },
-    readingTime: "5 min read",
-    featuredImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Cyberpunk digital matrix code stream representing mesh technology",
-    tags: ["BitChat", "Technology", "Mesh Network", "Privacy"],
-    content: [
-      {
-        heading: "Decentralized Civic Communication",
-        text: "BitChat allows citizens to relay emergency traffic blockages, pothole warnings, and RTI meeting locations over Bluetooth mesh without relying on centralized servers."
-      }
-    ]
-  },
-  {
-    slug: "black-monday-20-july-recap-report",
-    title: "Black Monday Recap: 45,000 Citizens Wear Black Attire Demanding 3-Year Asphalt Guarantees",
-    summary: "Field report from Black Monday demonstrations across New Delhi, Bengaluru, and Pune documenting pothole maps and contractor liability petitions.",
-    category: "CJP COMMENTARY",
-    publishDate: "JUL 21, 2026",
-    author: {
-      name: "Rohan Verma",
-      role: "Road Safety Inspector"
-    },
-    readingTime: "5 min read",
-    featuredImage: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Citizens meeting in dark attire discussing civic priorities",
-    tags: ["Black Monday", "Roads", "Protests", "Contractor Warranty"],
-    content: [
-      {
-        heading: "Nationwide Civic Action",
-        text: "Thousands of residents wore black clothing to work and posted photos cataloging pothole coordinates to demonstrate solidarity for durable public road standards."
       }
     ]
   }
