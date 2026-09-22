@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Heart, Mail, CheckCircle, Shield, Share2, TrendingUp } from 'lucide-react';
-import { SupportDevBanner } from './SupportDevBanner';
+import { ShieldCheck, Mail, CheckCircle, Shield, Share2, TrendingUp } from 'lucide-react';
 import { SocialShareModal } from './SocialShareModal';
 import { SEOAdsGuideModal } from './SEOAdsGuideModal';
 
@@ -21,7 +20,6 @@ export const Footer: React.FC = () => {
 
   return (
     <>
-      <SupportDevBanner />
       <SocialShareModal isOpen={shareModalOpen} onClose={() => setShareModalOpen(false)} />
       <SEOAdsGuideModal isOpen={seoGuideOpen} onClose={() => setSeoGuideOpen(false)} />
 
@@ -194,7 +192,6 @@ export const Footer: React.FC = () => {
                 <li><Link to="/school-thik-karo" className="hover:text-[#D9572B] transition-colors">School Thik Karo</Link></li>
                 <li><Link to="/memes" className="hover:text-[#D9572B] transition-colors">Memes</Link></li>
                 <li><Link to="/issues" className="hover:text-[#D9572B] transition-colors">Issues</Link></li>
-                <li><Link to="/campaign/donate-to-abdul" className="hover:text-[#D9572B] transition-colors text-[#D9572B] flex items-center gap-1">Donate to Abdul</Link></li>
                 <li><Link to="/news" className="hover:text-[#D9572B] transition-colors">News</Link></li>
                 <li><Link to="/quotes" className="hover:text-[#D9572B] transition-colors">Quotes</Link></li>
               </ul>
@@ -213,7 +210,6 @@ export const Footer: React.FC = () => {
                 <li><Link to="/leave-swarm" className="hover:text-[#D9572B] transition-colors">Leave the swarm</Link></li>
                 <li><button onClick={() => setShareModalOpen(true)} className="hover:text-[#F59E0B] transition-colors text-left flex items-center gap-1 text-[#F59E0B] font-bold"><Share2 size={11} /> Viral Share Toolkit</button></li>
                 <li><button onClick={() => setSeoGuideOpen(true)} className="hover:text-emerald-400 transition-colors text-left flex items-center gap-1 text-emerald-400 font-bold"><TrendingUp size={11} /> SEO &amp; Ads Guide</button></li>
-                <li><Link to="/support-dev" className="hover:text-[#D9572B] transition-colors flex items-center gap-1 text-[#D9572B]"><Heart size={11} /> Support Developer</Link></li>
               </ul>
             </div>
 

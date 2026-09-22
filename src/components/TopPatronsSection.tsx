@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Crown, Star, CheckCircle2, Coffee, ShieldCheck, Zap, Sparkles, ArrowUpRight, Flame, Heart, Search, MapPin, Award } from 'lucide-react';
+import { Crown, Star, CheckCircle2, Coffee, ShieldCheck, Zap, Sparkles, ArrowUpRight, Flame, Search, MapPin, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface Patron {
@@ -158,19 +158,17 @@ export const TopPatronsSection: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
             <Link
-              to="/support-dev"
+              to="/join"
               className="flex-1 lg:flex-none bg-[#D9572B] text-white font-black text-xs uppercase px-6 py-4 border-2 border-white hover:bg-white hover:text-[#120F0C] transition-all flex items-center justify-center gap-2 shadow-2xl tracking-wider hover:scale-[1.02] active:scale-[0.98]"
             >
-              <Coffee size={16} />
-              <span>BUY A CHAI ☕</span>
+              <span>JOIN THE SWARM 🪳</span>
             </Link>
 
             <Link
-              to="/donate-to-abdul"
+              to="/manifesto"
               className="flex-1 lg:flex-none bg-[#231F1A] text-[#EADBCE] font-black text-xs uppercase px-6 py-4 border-2 border-white/20 hover:border-[#D9572B] hover:text-white transition-all flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98]"
             >
-              <Heart size={15} className="text-[#D9572B]" />
-              <span>DONATE TO ABDUL</span>
+              <span>READ MANIFESTO</span>
             </Link>
           </div>
         </div>
@@ -426,10 +424,10 @@ export const TopPatronsSection: React.FC = () => {
               {/* Bottom Action Link */}
               <div className="pt-2">
                 <Link
-                  to="/support-dev"
+                  to="/join"
                   className="w-full bg-[#120F0C] text-[#F5EFE6] text-xs font-black uppercase py-3.5 border-2 border-white/20 hover:bg-[#D9572B] hover:border-[#D9572B] hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg tracking-wider"
                 >
-                  <span>SUPPORT DEV &amp; BECOME A PATRON</span>
+                  <span>REGISTER WITH CJP CIVIC MOVEMENT</span>
                   <ArrowUpRight size={15} />
                 </Link>
               </div>

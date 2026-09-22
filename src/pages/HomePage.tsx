@@ -268,7 +268,7 @@ export const HomePage: React.FC = () => {
                   BREAKING NEWS
                 </span>
                 <div className="truncate text-white">
-                  CJP LAUNCHES 'ADIVASI SCHOOL THIK KARO' FROM GADCHIROLI · 590 Tribal Student Deaths in 2 Years · Bhardwaj Released From Tihar With Social Media Gag · Dipke's Mock MP CM Resignation Goes Viral · Gaurav Bhatia Files ₹2Cr Defamation Suit
+                  UN GENEVA YOUTH FORUM INVITES CJP FOUNDER DIPE · Delhi HC Mandates Contractor Road Warranty Boards Across Capital · CJP Launches 'Adivasi School Thik Karo' From Gadchiroli · Bhardwaj Released From Tihar With Social Media Gag
                 </div>
               </div>
 

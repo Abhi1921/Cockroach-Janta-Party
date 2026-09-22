@@ -20,6 +20,58 @@ export interface NewsArticle {
 }
 
 export const newsData: NewsArticle[] = [
+  // NEW TRENDING 1: UN Geneva Youth Forum Invitation (Sep 22, 2026)
+  {
+    slug: "un-geneva-youth-civic-forum-invites-cjp-founder-dipke-2026",
+    title: "UN General Assembly Youth Civic Forum Invites CJP Founder Abhijeet Dipke to Geneva Summit",
+    summary: "BBC World and Reuters report UN Geneva Youth Civic Forum extending an official delegation invite to Cockroach Janta Party founder Abhijeet Dipke to address global youth leaders on digital decentralization and grassroot municipal accountability.",
+    category: "GLOBAL & UN",
+    publishDate: "SEP 22, 2026",
+    author: {
+      name: "BBC World & Reuters",
+      role: "Global Affairs Desk"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_un_geneva.png",
+    imageAlt: "UN Geneva Youth Civic Forum 2026 CJP Poster Graphic",
+    tags: ["BBC World", "Reuters", "UN Geneva", "Abhijeet Dipke", "Global Youth Summit", "CJP International"],
+    content: [
+      {
+        heading: "Global Invitation to Geneva Youth Summit",
+        text: "The United Nations General Assembly Youth Civic Forum has officially invited CJP founder Abhijeet Dipke to deliver a keynote address at the Palais des Nations in Geneva, Switzerland. The invitation highlights CJP's innovative use of satirical political mascotry, open RTI audit ledgers, and peer-to-peer BitChat technology."
+      },
+      {
+        heading: "International Recognition of Youth Civic Movement",
+        text: "Delegates from over 70 nations will convene in October 2026 to analyze CJP's 'School Thik Karo' campaign and subterranean municipal ward audits as a benchmark case study for youth-driven public accountability in developing democracies."
+      }
+    ]
+  },
+  // NEW TRENDING 2: Delhi HC Contractor Road Warranty Mandate (Sep 21, 2026)
+  {
+    slug: "delhi-hc-mandates-contractor-road-warranty-notice-boards-2026",
+    title: "Delhi High Court Mandates Contractor Warranty Notice Boards on All Capital Municipal Roads",
+    summary: "LiveLaw and Times of India report Delhi High Court issuing landmark directions ordering MCD and PWD to install permanent warranty notice boards displaying contractor names, toll-free complaint numbers, and guarantee durations on all newly paved roads.",
+    category: "CIVIC & COURT",
+    publishDate: "SEP 21, 2026",
+    author: {
+      name: "LiveLaw / Times of India",
+      role: "Judicial Bureau"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_mcd_road_warranty.png",
+    imageAlt: "Delhi High Court Contractor Road Warranty Board CJP Victory Poster Graphic",
+    tags: ["LiveLaw", "Times of India", "Delhi High Court", "Road Audit", "Contractor Warranty", "Civic Accountability"],
+    content: [
+      {
+        heading: "High Court Accepts CJP PIL Recommendations",
+        text: "In a landmark verdict, a division bench of the Delhi High Court directed municipal authorities (MCD, PWD, NDMC) to mandate physical contractor warranty notice boards across all capital municipal roads within 30 days."
+      },
+      {
+        heading: "Public Inspection & Asphalt Thickness Transparency",
+        text: "The court agreed with CJP's submission that citizens have a fundamental right under Article 21 to inspect road warranty periods, contractor phone numbers, and asphalt thickness metrics directly on street corners."
+      }
+    ]
+  },
   // NEW-1: Adivasi School Thik Karo Campaign Launch (Sep 17)
   {
     slug: "cjp-launches-adivasi-school-thik-karo-gadchiroli-2026",

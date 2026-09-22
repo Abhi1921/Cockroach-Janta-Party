@@ -8,8 +8,6 @@ import {
   Menu,
   X,
   ArrowRight,
-  Heart,
-  ShieldAlert,
   Radio,
   Check,
   Search,
@@ -33,20 +31,9 @@ export const Header: React.FC = () => {
   const [pagesDropdownOpen, setPagesDropdownOpen] = useState(false);
   const [outletSearchFilter, setOutletSearchFilter] = useState('');
   const [mobilePagesOpen, setMobilePagesOpen] = useState(false);
-  const [supportModalOpen, setSupportModalOpen] = useState(false);
   const [shareModalOpen, setShareModalOpen] = useState(false);
-  const [modalQrRevealed, setModalQrRevealed] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [selectedTier, setSelectedTier] = useState({ id: 'coffee', label: 'Buy a Coffee', amount: '50' });
   const [searchModalOpen, setSearchModalOpen] = useState(false);
-
-  const supportTiers = [
-    { id: 'chai', label: 'Chai ☕', amount: '20', desc: 'Buy a hot cutting chai' },
-    { id: 'coffee', label: 'Coffee ☕', amount: '50', desc: 'Buy a cold coffee' },
-    { id: 'lunch', label: 'Lunch 🍱', amount: '150', desc: 'Sponsor a developer thali' },
-    { id: 'dinner', label: 'Dinner 🍽️', amount: '300', desc: 'Sponsor a full meal' },
-    { id: 'server', label: 'Server 💻', amount: '500', desc: 'Host 1 month server bandwidth' }
-  ];
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -198,14 +185,6 @@ export const Header: React.FC = () => {
             <span>SEARCH</span>
           </button>
 
-          <button
-            onClick={() => setSupportModalOpen(true)}
-            className="text-[10px] font-black bg-[#D9572B] text-white hover:bg-white hover:text-[#16120D] px-2 py-0.5 rounded flex items-center gap-1 cursor-pointer"
-          >
-            <Heart size={11} className="fill-current text-white animate-pulse" />
-            <span>SUPPORT DEV</span>
-          </button>
-
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
@@ -292,17 +271,8 @@ export const Header: React.FC = () => {
             </div>
           </Link>
 
-          {/* Quick Header Actions (Donate, Watch Live TV & Mega Directory) */}
+          {/* Quick Header Actions (Watch Live TV & Mega Directory) */}
           <div className="flex items-center gap-2 flex-shrink-0">
-            <button
-              onClick={() => setSupportModalOpen(true)}
-              className="btn-brutal h-9 px-3 bg-[#E6A100] text-[#16120D] text-xs font-black uppercase flex items-center gap-1.5 hover:bg-[#D9572B] hover:text-white rounded-lg shadow cursor-pointer"
-              title="Support & Donate"
-            >
-              <Heart size={14} className="fill-current text-[#D9572B] animate-pulse" />
-              <span>DONATE</span>
-            </button>
-
             <Link
               to="/live-tv"
               className="btn-brutal h-9 px-3 bg-[#D9572B] text-white text-xs font-black uppercase flex items-center gap-1.5 hover:bg-[#16120D] rounded-lg shadow"
@@ -574,114 +544,9 @@ export const Header: React.FC = () => {
               </div>
             </nav>
 
-            <div className="pt-3 border-t-2 border-[#16120D] flex flex-col gap-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setSupportModalOpen(true);
-                }}
-                className="w-full btn-brutal py-2.5 bg-[#D9572B] text-white font-black text-xs uppercase flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <Heart size={16} className="fill-current text-white animate-heart-beat" />
-                <span>SUPPORT DEVELOPER</span>
-              </button>
-            </div>
           </div>
         )}
       </header>
-
-      {/* SUPPORT THE DEV MODAL */}
-      {supportModalOpen && (
-        <div
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
-          onClick={() => setSupportModalOpen(false)}
-        >
-          <div
-            className="bg-[#F5EFE6]/95 backdrop-blur-2xl border-4 border-[#16120D] p-6 sm:p-8 max-w-md w-full shadow-[10px_10px_0px_0px_#16120D] relative text-[#16120D] animate-dropdown rounded-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setSupportModalOpen(false)}
-              className="absolute top-4 right-4 btn-brutal p-1.5 bg-[#EADBCE] text-[#16120D] hover:bg-[#D9572B] hover:text-white cursor-pointer rounded-lg"
-            >
-              <X size={18} />
-            </button>
-
-            <div className="text-center mb-6">
-              <div className="inline-flex items-center gap-1.5 bg-[#D9572B] text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest mb-3 border border-[#16120D] shadow-[2px_2px_0px_0px_#16120D] rounded-full">
-                <Heart size={12} className="fill-current text-white animate-heart-beat" /> VOLUNTARY SOFTWARE SUPPORT
-              </div>
-              <h3 className="font-display text-3xl sm:text-4xl text-[#16120D] uppercase leading-none mb-1">
-                SUPPORT THE DEV
-              </h3>
-              <p className="text-xs text-[#3A332B] font-extrabold">
-                Sponsor server bandwidth &amp; open-source software maintenance.
-              </p>
-            </div>
-
-            <div className="space-y-2 mb-5">
-              <span className="text-[10px] font-black text-[#16120D] uppercase tracking-wider block">SELECT CONTRIBUTION TIER:</span>
-              <div className="grid grid-cols-2 gap-2">
-                {supportTiers.map((tier) => (
-                  <button
-                    key={tier.id}
-                    onClick={() => setSelectedTier(tier)}
-                    className={`p-2.5 border-2 text-left transition-all cursor-pointer rounded-xl ${
-                      selectedTier.id === tier.id
-                        ? 'bg-[#16120D] text-[#F5EFE6] border-[#16120D] shadow-[3px_3px_0px_0px_#D9572B]'
-                        : 'bg-[#EADBCE]/80 text-[#16120D] border-[#16120D] hover:bg-[#D9572B] hover:text-white shadow-[2px_2px_0px_0px_#16120D]'
-                    }`}
-                  >
-                    <div className="flex justify-between items-center text-xs font-black">
-                      <span>{tier.label}</span>
-                      <span className="font-extrabold text-[#D9572B]">₹{tier.amount}</span>
-                    </div>
-                    <div className="text-[9.5px] opacity-90 mt-0.5 font-bold">{tier.desc}</div>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div
-              onClick={() => setModalQrRevealed(!modalQrRevealed)}
-              className="bg-[#16120D] border-2 border-[#16120D] p-4 text-center text-[#F5EFE6] mb-5 shadow-[4px_4px_0px_0px_#16120D] rounded-xl cursor-pointer group select-none"
-            >
-              <span className="text-[10px] font-black uppercase tracking-widest block mb-2 text-[#E6A100]">
-                {modalQrRevealed ? '✅ SCAN TO PAY VIA GPAY / UPI' : 'TAP & PAY TO UNBLUR'}
-              </span>
-              
-              <div className="relative bg-white p-2.5 border-2 border-[#EADBCE] max-w-[190px] mx-auto shadow-inner rounded-lg overflow-hidden">
-                <img
-                  src="/gpay_scanner.png"
-                  alt="Google Pay Scanner QR Code"
-                  className={`w-full h-auto object-contain mx-auto rounded transition-all duration-500 ${
-                    modalQrRevealed ? 'filter blur-0 opacity-100' : 'filter blur-md opacity-40'
-                  }`}
-                />
-                {!modalQrRevealed && (
-                  <div className="absolute inset-0 bg-[#16120D]/65 backdrop-blur-xs flex flex-col items-center justify-center text-white p-2">
-                    <span className="text-xs font-black uppercase tracking-wider text-center text-white bg-[#D9572B] px-2.5 py-1 rounded shadow-md border border-white/20">
-                      TAP &amp; PAY
-                    </span>
-                    <span className="text-[9px] text-[#E6A100] font-bold mt-1">
-                      Unblur Scanner (₹{selectedTier.amount})
-                    </span>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div className="bg-[#EADBCE] border-2 border-[#16120D] p-3 text-[10px] text-[#3A332B] font-bold space-y-1 rounded-xl">
-              <div className="flex items-center gap-1.5 text-[#D9572B] font-black uppercase">
-                <ShieldAlert size={14} className="flex-shrink-0" /> NON-POLITICAL VOLUNTARY DONATION POLICY:
-              </div>
-              <p className="leading-tight">
-                All contributions are personal voluntary software tips for web hosting and server costs. This portal does NOT collect political party funds.
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Global Search Modal */}
       <GlobalSearchModal isOpen={searchModalOpen} onClose={() => setSearchModalOpen(false)} />

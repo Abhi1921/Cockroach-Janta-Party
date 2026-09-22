@@ -1,24 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
-import { ShieldCheck, Heart, Copy, ExternalLink } from 'lucide-react';
+import { ShieldCheck, Heart, ExternalLink } from 'lucide-react';
 
 export const DonateAbdulPage: React.FC = () => {
   const { lang } = useLanguage();
-  const [copied, setCopied] = useState(false);
-  const [selectedAmount, setSelectedAmount] = useState('500');
 
   const campaignStats = {
     target: 50000,
     raised: 38500,
     percent: 77,
     donors: 142
-  };
-
-  const handleCopyUPI = () => {
-    navigator.clipboard.writeText('cjpindia@upi');
-    setCopied(true);
-    setTimeout(() => setCopied(false), 3000);
   };
 
   return (
@@ -118,83 +110,17 @@ export const DonateAbdulPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Contribution & UPI Scanner Box */}
-        <div className="bg-[#16120D] text-[#F5EFE6] border-4 border-[#16120D] p-8 md:p-10 shadow-2xl mb-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          
-          {/* Quick Amounts */}
-          <div className="md:col-span-7 space-y-5">
-            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block">
-              CHOOSE CONTRIBUTION AMOUNT:
-            </span>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {['100', '250', '500', '1000'].map((amt) => (
-                <button
-                  key={amt}
-                  onClick={() => setSelectedAmount(amt)}
-                  className={`p-3.5 border-2 text-center transition-all font-mono font-black text-sm ${
-                    selectedAmount === amt
-                      ? 'bg-[#D9572B] text-white border-white shadow-lg'
-                      : 'bg-[#231F1A] text-[#EADBCE] border-white/20 hover:border-[#D9572B]'
-                  }`}
-                >
-                  ₹{amt}
-                </button>
-              ))}
-            </div>
-
-            <div className="bg-[#231F1A] border border-white/10 p-4 space-y-3">
-              <div className="flex justify-between items-center text-xs text-[#EADBCE]">
-                <span>UPI ID: <strong className="text-white font-mono">cjpindia@upi</strong></span>
-                <button
-                  onClick={handleCopyUPI}
-                  className="bg-[#D9572B] text-white text-[10px] font-extrabold px-2.5 py-1 uppercase hover:bg-white hover:text-[#16120D] transition-colors inline-flex items-center gap-1"
-                >
-                  <Copy size={11} />
-                  <span>{copied ? 'COPIED!' : 'COPY UPI'}</span>
-                </button>
-              </div>
-
-              {/* DIRECT RAZORPAY PAYMENT LINK BUTTON */}
-              <a
-                href="https://razorpay.me/@skabdulhafij"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-[#D9572B] text-white font-extrabold text-xs uppercase py-3.5 px-4 border-2 border-white hover:bg-white hover:text-[#16120D] transition-all flex items-center justify-center gap-2 tracking-wider shadow-lg"
-              >
-                <span>PAY DIRECTLY VIA RAZORPAY (CARDS / NETBANKING / UPI)</span>
-                <ExternalLink size={14} />
-              </a>
-
-              <p className="text-[10px] text-[#EADBCE]/70">
-                Direct transfers go 100% to Abdul&apos;s verified defense escrow account.
-              </p>
-            </div>
+        {/* Official Non-Monetary Campaign & Legal Defense Notice Box */}
+        <div className="bg-[#16120D] text-[#F5EFE6] border-4 border-[#16120D] p-8 md:p-10 shadow-2xl mb-12 space-y-4">
+          <div className="flex items-center gap-2 text-[#D9572B] font-extrabold uppercase text-sm">
+            <ShieldCheck size={20} /> OFFICIAL NON-MONETARY MOVEMENT NOTICE
           </div>
-
-          {/* Scanner Box */}
-          <div className="md:col-span-5 text-center bg-[#231F1A] p-6 border-2 border-white/20">
-            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-3">
-              SCAN WITH ANY UPI APP
-            </span>
-
-            <div className="bg-white p-4 border-4 border-[#EADBCE] max-w-[220px] mx-auto mb-4 shadow-2xl">
-              <img
-                src="/gpay_scanner.png"
-                alt="UPI Scanner QR Code"
-                className="w-full h-auto object-contain mx-auto"
-              />
-            </div>
-
-            <div className="bg-[#D9572B] text-white text-xs font-black py-1.5 px-3 uppercase tracking-wider inline-block mb-2">
-              SELECTED: ₹{selectedAmount}
-            </div>
-
-            <p className="text-[10px] text-[#EADBCE] font-mono">
-              GPay, PhonePe, Paytm, BHIM, or Cred
-            </p>
-          </div>
-
+          <h3 className="font-serif font-black text-2xl uppercase text-white">
+            100% NON-PARTISAN &amp; FREE LEGAL ADVOCACY
+          </h3>
+          <p className="text-xs text-[#EADBCE] leading-relaxed">
+            Cockroach Janta Party (CJP) is a non-partisan youth civic movement. We do not collect online payments, Razorpay subscriptions, or commercial political donations. All legal support, RTI filing guidance, and student defense for Abdul and civic volunteers are provided 100% free of cost through our pro-bono legal panel.
+          </p>
         </div>
 
         {/* Legal Aid Link Disclaimer */}

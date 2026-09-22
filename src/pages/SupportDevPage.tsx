@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { SEOHead } from '../components/SEOHead';
 import { TopPatronsSection } from '../components/TopPatronsSection';
@@ -6,15 +6,6 @@ import { ShieldAlert, Code, ShieldCheck, Info, CheckCircle } from 'lucide-react'
 
 export const SupportDevPage: React.FC = () => {
   const { lang } = useLanguage();
-  const [selectedTier, setSelectedTier] = useState({ id: 'coffee', label: 'Buy a Coffee ☕', amount: '50', desc: 'Sponsor a cold coffee for midnight coding sessions' });
-
-  const tiers = [
-    { id: 'chai', label: 'Cutting Chai ☕', amount: '20', desc: 'Buy a quick hot chai for dev coding breaks' },
-    { id: 'coffee', label: 'Cold Coffee ☕', amount: '50', desc: 'Sponsor a coffee during late night development' },
-    { id: 'lunch', label: 'Developer Thali 🍱', amount: '150', desc: 'Sponsor a hearty lunch meal during build sprints' },
-    { id: 'dinner', label: 'Full Dinner 🍽️', amount: '300', desc: 'Sponsor a late night coding dinner session' },
-    { id: 'server', label: 'Server Hosting 💻', amount: '500', desc: 'Host 1 month of cloud server & CDN bandwidth' }
-  ];
 
   return (
     <div className="support-dev-page py-16 bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white">
@@ -66,65 +57,17 @@ export const SupportDevPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Scanner & Tier Selection Box */}
-        <div className="bg-[#16120D] text-[#F5EFE6] border-4 border-[#16120D] p-8 shadow-2xl mb-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          
-          {/* Tiers Selector */}
-          <div className="md:col-span-7 space-y-4">
-            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block">
-              1. SELECT CONTRIBUTION TIER:
-            </span>
-            <div className="space-y-2.5">
-              {tiers.map((tier) => {
-                const isSelected = selectedTier.id === tier.id;
-                return (
-                  <button
-                    key={tier.id}
-                    onClick={() => setSelectedTier(tier)}
-                    className={`w-full p-3.5 border-2 text-left transition-all flex items-center justify-between ${
-                      isSelected
-                        ? 'bg-[#D9572B] text-white border-white shadow-lg'
-                        : 'bg-[#231F1A] text-[#EADBCE] border-white/20 hover:border-[#D9572B]'
-                    }`}
-                  >
-                    <div>
-                      <div className="font-bold text-sm uppercase">{tier.label}</div>
-                      <div className="text-[10px] opacity-80 mt-0.5">{tier.desc}</div>
-                    </div>
-                    <div className="font-mono font-black text-base text-right">₹{tier.amount}</div>
-                  </button>
-                );
-              })}
-            </div>
+        {/* Open-Source Platform Disclosure Box */}
+        <div className="bg-[#16120D] text-[#F5EFE6] border-4 border-[#16120D] p-8 shadow-2xl mb-12 space-y-4">
+          <div className="flex items-center gap-2 text-[#D9572B] font-extrabold uppercase text-sm">
+            <ShieldCheck size={20} /> OPEN-SOURCE SOFTWARE STATEMENT
           </div>
-
-          {/* Scanner Box */}
-          <div className="md:col-span-5 text-center bg-[#231F1A] p-6 border-2 border-white/20">
-            <span className="text-[10px] font-extrabold text-[#D9572B] uppercase tracking-widest block mb-3">
-              2. SCAN WITH GPAY / ANY UPI APP
-            </span>
-
-            <div className="bg-white p-4 border-4 border-[#EADBCE] max-w-[220px] mx-auto mb-4 shadow-2xl">
-              <img
-                src="/gpay_scanner.png"
-                alt="Google Pay Scanner QR Code"
-                className="w-full h-auto object-contain mx-auto"
-              />
-            </div>
-
-            <div className="bg-[#D9572B] text-white text-xs font-black py-1.5 px-3 uppercase tracking-wider inline-block mb-3 rounded">
-              TIER: ₹{selectedTier.amount} ({selectedTier.label})
-            </div>
-
-            <div className="bg-[#16120D] border border-white/20 p-2 text-xs font-mono text-[#EADBCE] rounded flex items-center justify-between mb-2">
-              <span className="font-bold">UPI ID: abhishekrajput62394-1@oksbi</span>
-            </div>
-
-            <p className="text-[10px] text-[#EADBCE] font-mono leading-tight">
-              Scan with Google Pay, PhonePe, Paytm, BHIM, or any UPI App
-            </p>
-          </div>
-
+          <h3 className="font-serif font-black text-2xl uppercase text-white">
+            PUBLIC-INTEREST OPEN-SOURCE INITIATIVE
+          </h3>
+          <p className="text-xs text-[#EADBCE] leading-relaxed">
+            The Cockroach Janta Party portal operates as an open-source public-interest civic platform. We do not process active online payments or commercial donations. All codebase enhancements, satellite dispatches, and RTI data visualizations are published under open-source software principles.
+          </p>
         </div>
 
         {/* Legal Disclaimer Box */}

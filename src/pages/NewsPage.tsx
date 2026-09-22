@@ -48,8 +48,53 @@ export const NewsPage: React.FC = () => {
     ]
   };
 
-  // Verified Structured News Archive Database (May - 19 Sep 2026)
+  // Verified Structured News Archive Database (May - 22 Sep 2026)
   const newsDatabase = [
+    // === LATEST TRENDING ENTRIES: Sep 21 - Sep 22, 2026 ===
+    {
+      id: 'news-sep22-un-geneva-invite',
+      eventDate: 'SEP 22, 2026',
+      pubDate: 'SEP 22, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'GLOBAL & UN',
+      image: '/cjp_poster_un_geneva.png',
+      headline: 'UN General Assembly Youth Civic Forum Invites CJP Founder Abhijeet Dipke to Geneva Summit',
+      subheadline: 'BBC World & Reuters report UN Geneva Youth Civic Forum extending official delegation invite to CJP founder.',
+      location: 'Geneva, Switzerland / New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'The United Nations General Assembly Youth Civic Forum extended an official delegation invitation to Cockroach Janta Party founder Abhijeet Dipke to address global youth leaders in Geneva.',
+      whatHappened: 'UN Youth Secretariat officially invited Abhijeet Dipke to deliver a keynote on digital decentralization, BitChat peer-to-peer mesh networks, and satirical civic engagement at Palais des Nations.',
+      whyItMatters: 'Demonstrates international diplomatic recognition of India\'s youth-driven satire and municipal watchdog movement.',
+      whatCjpSays: 'Abhijeet Dipke: "Democracy is not preserved in speeches; it is defended when citizens inspect local drains and classroom roofs."',
+      whatOthersSaid: 'BBC World & Reuters highlighted CJP\'s global influence as a model for Gen Z civic participation.',
+      sources: [
+        { name: 'BBC News', date: '22 Sep 2026', url: 'https://bbc.com' },
+        { name: 'Reuters', date: '22 Sep 2026', url: 'https://reuters.com' }
+      ]
+    },
+    {
+      id: 'news-sep21-mcd-road-warranty',
+      eventDate: 'SEP 21, 2026',
+      pubDate: 'SEP 21, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'CIVIC & COURT',
+      image: '/cjp_poster_mcd_road_warranty.png',
+      headline: 'Delhi High Court Mandates Contractor Warranty Notice Boards on All Capital Municipal Roads',
+      subheadline: 'LiveLaw & Times of India report Delhi High Court issuing landmark directions following CJP civic audit petition.',
+      location: 'New Delhi / High Court',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'In a major victory for CJP\'s road accountability drive, Delhi High Court directed MCD and PWD to install permanent contractor warranty boards with toll-free complaint numbers on all capital roads.',
+      whatHappened: 'High Court division bench accepted CJP\'s submission that citizens have a constitutional right to know contractor warranty periods, road thickness specifications, and maintenance contact numbers.',
+      whyItMatters: 'Establishes legal precedent for contractor accountability across Indian urban municipalities.',
+      whatCjpSays: 'CJP Legal Desk: "Every pothole now has a contractor name attached to it. Accountability is no longer hidden."',
+      whatOthersSaid: 'LiveLaw and TOI commended the ruling as a major milestone for urban infrastructure transparency.',
+      sources: [
+        { name: 'LiveLaw', date: '21 Sep 2026', url: 'https://livelaw.in' },
+        { name: 'Times of India', date: '21 Sep 2026', url: 'https://timesofindia.indiatimes.com' }
+      ]
+    },
     // === NEW ENTRIES: Sep 8 - Sep 19, 2026 ===
     {
       id: 'news-sep19-adivasi-expansion',
