@@ -20,7 +20,213 @@ export interface NewsArticle {
 }
 
 export const newsData: NewsArticle[] = [
-  // 1. Live Law: HC Rejects Bhardwaj Plea
+  // NEW-1: Adivasi School Thik Karo Campaign Launch (Sep 17)
+  {
+    slug: "cjp-launches-adivasi-school-thik-karo-gadchiroli-2026",
+    title: "CJP Launches 'Adivasi School Thik Karo' Campaign From Gadchiroli; Dipke Tears Up MoU at Press Conference",
+    summary: "The Hindu and India Today report CJP founder Abhijeet Dipke launching a nationwide tribal school audit campaign from Gadchiroli, Maharashtra, documenting damaged roofs, broken walls, and lack of basic amenities in residential schools.",
+    category: "CIVIC AUDIT",
+    publishDate: "SEP 17, 2026",
+    author: {
+      name: "The Hindu & India Today",
+      role: "National Education Desk"
+    },
+    readingTime: "6 min read",
+    featuredImage: "/cjp_poster_adivasi_school.png",
+    imageAlt: "CJP Adivasi School Thik Karo campaign Gadchiroli poster graphic",
+    tags: ["The Hindu", "India Today", "Adivasi School Thik Karo", "Gadchiroli", "Tribal Schools", "Abhijeet Dipke"],
+    content: [
+      {
+        heading: "Tribal School Audit Campaign Launched",
+        text: "CJP founder Abhijeet Dipke launched the 'Adivasi School Thik Karo' campaign from Gadchiroli, Maharashtra on September 17. Ground inspections revealed severely damaged infrastructure — broken roofs, missing doors, no boundary walls, and absent bathrooms in tribal residential schools."
+      },
+      {
+        heading: "590 Tribal Students Dead in 2 Years",
+        text: "Dipke alleged that over 590 tribal students in Maharashtra have died in the last two years from snakebites, malaria, and malnutrition. He dramatically tore up a copy of a government MoU with a trust regarding tribal hostels to protest unmet commitments, demanding accountability from Chief Minister Devendra Fadnavis."
+      }
+    ]
+  },
+  // NEW-2: Bhardwaj Interim Bail (Sep 15)
+  {
+    slug: "delhi-court-grants-swatantra-bhardwaj-interim-bail-2026",
+    title: "Delhi Court Grants Swatantra Bhardwaj 3-Week Interim Bail With Strict Social Media Gag Order",
+    summary: "Bar & Bench and The Hindu report Delhi court granting 3-week interim bail to Swatantra Bhardwaj on September 15 with strict conditions including a complete ban on discussing the case, defense, or complainant's family on social media.",
+    category: "LEGAL & COURT",
+    publishDate: "SEP 15, 2026",
+    author: {
+      name: "Bar & Bench / The Hindu",
+      role: "Legal Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_bhardwaj_bail.png",
+    imageAlt: "Swatantra Bhardwaj interim bail Delhi court poster graphic",
+    tags: ["Bar & Bench", "The Hindu", "Interim Bail", "Social Media Gag", "Swatantra Bhardwaj", "Oct 6 Hearing"],
+    content: [
+      {
+        heading: "Strict Bail Conditions Imposed",
+        text: "The Delhi court granted interim bail to Swatantra Bhardwaj with stringent conditions: a complete bar on discussing the case on social media, prohibition on contacting the complainant or witnesses, and no evidence tampering. The next hearing is scheduled for October 6, 2026."
+      }
+    ]
+  },
+  // NEW-3: Bhardwaj Released From Tihar (Sep 17)
+  {
+    slug: "swatantra-bhardwaj-released-tihar-jail-social-media-gag-2026",
+    title: "Swatantra Bhardwaj Released From Tihar Jail; Barred From Discussing CJP Assault Case Online",
+    summary: "ANI and LiveLaw confirm Swatantra Bhardwaj walked out of Tihar Jail on September 17 after Delhi court's interim bail order, with strict conditions barring any online commentary about the assault case.",
+    category: "BREAKING",
+    publishDate: "SEP 17, 2026",
+    author: {
+      name: "ANI & LiveLaw",
+      role: "Crime & Legal Bureau"
+    },
+    readingTime: "3 min read",
+    featuredImage: "/cjp_poster_bhardwaj_bail.png",
+    imageAlt: "Swatantra Bhardwaj Tihar release breaking news poster",
+    tags: ["ANI", "LiveLaw", "Tihar Jail", "Bhardwaj Release", "Social Media Gag"],
+    content: [
+      {
+        heading: "Tihar Release After 12 Days",
+        text: "Swatantra Bhardwaj was released from Tihar Jail on September 17, 2026, after spending 12 days in judicial custody. The court noted that bail is an expression of trust and imposed strict conditions including no social media commentary about the case or the complainant's family."
+      }
+    ]
+  },
+  // NEW-4: Dipke Mock MP CM Resignation (Sep 13)
+  {
+    slug: "abhijeet-dipke-mock-resignation-mp-cm-balaghat-tribal-2026",
+    title: "Abhijeet Dipke Posts Satirical 'Resignation' as MP CM Over Balaghat Tribal Children Deaths; Sparks Debate",
+    summary: "Times of India and YouTube channels report CJP founder Abhijeet Dipke posting a mock resignation letter as Madhya Pradesh Chief Minister addressed to Governor Mangubhai Patel, after visiting Balaghat district where 30+ tribal children died of infectious diseases.",
+    category: "POLITICS & SATIRE",
+    publishDate: "SEP 13, 2026",
+    author: {
+      name: "Times of India",
+      role: "National Political Bureau"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_dipke_mp_resign.png",
+    imageAlt: "Abhijeet Dipke mock resignation MP CM Balaghat poster graphic",
+    tags: ["Times of India", "Abhijeet Dipke", "Balaghat", "Tribal Children", "Mock Resignation", "Madhya Pradesh"],
+    content: [
+      {
+        heading: "Satirical Resignation Over 30+ Tribal Deaths",
+        text: "After visiting Balaghat district to meet families of tribal children who died due to suspected measles, malaria, and malnutrition, Abhijeet Dipke shared a mock resignation letter addressed to MP Governor Mangubhai Patel. The letter sarcastically 'resigned' as CM, criticizing the Mohan Yadav government's handling of the healthcare tragedy."
+      },
+      {
+        heading: "Heckled By Influencers During Visit",
+        text: "During his Balaghat visit, Dipke was reportedly heckled by social media influencers who accused him of 'doing politics on corpses'. The incident went viral, with supporters defending his criticism and opponents demanding legal action for impersonating a government office."
+      }
+    ]
+  },
+  // NEW-5: Gaurav Bhatia Defamation Suit (Sep 8)
+  {
+    slug: "bjp-gaurav-bhatia-defamation-suit-saurav-das-ashutosh-ranka-2026",
+    title: "BJP's Gaurav Bhatia Files ₹2 Crore Defamation Suit Against CJP's Saurav Das & Ashutosh Ranka in Delhi HC",
+    summary: "OpIndia reports BJP national spokesperson Gaurav Bhatia filing a ₹2 crore defamation case against CJP leaders Saurav Das and Ashutosh Ranka in Delhi High Court over an AI-generated image allegedly showing Bhatia making derogatory remarks.",
+    category: "LEGAL & COURT",
+    publishDate: "SEP 08, 2026",
+    author: {
+      name: "OpIndia / Delhi HC Registry",
+      role: "Legal & Political Desk"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_sc_judge_slams_police.png",
+    imageAlt: "BJP Gaurav Bhatia defamation suit CJP leaders poster",
+    tags: ["OpIndia", "Gaurav Bhatia", "Defamation", "₹2 Crore", "Delhi HC", "Saurav Das", "Ashutosh Ranka"],
+    content: [
+      {
+        heading: "₹2 Crore Defamation in Delhi High Court",
+        text: "BJP advocate and national spokesperson Gaurav Bhatia filed a ₹2 crore defamation case against CJP spokespersons Saurav Das and Ashutosh Ranka. The case stems from an AI-generated image shared on September 5 that appeared to show Bhatia making derogatory remarks toward Swatantra Bhardwaj."
+      }
+    ]
+  },
+  // NEW-6: Ashutosh Ranka Meets Akhilesh Yadav (Sep 3)
+  {
+    slug: "ashutosh-ranka-akhilesh-yadav-lucknow-meeting-2026",
+    title: "CJP's Ashutosh Ranka Holds 90-Minute Closed-Door Meeting With Akhilesh Yadav in Lucknow",
+    summary: "Organiser reports CJP leader Ashutosh Ranka held a 90-minute closed-door meeting with Samajwadi Party president Akhilesh Yadav at Janeshwar Mishra Trust office in Lucknow, sparking political speculation about CJP's UP strategy.",
+    category: "POLITICS",
+    publishDate: "SEP 03, 2026",
+    author: {
+      name: "Organiser",
+      role: "Political Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_cjp_congress_table.png",
+    imageAlt: "Ashutosh Ranka Akhilesh Yadav Lucknow meeting poster",
+    tags: ["Organiser", "Ashutosh Ranka", "Akhilesh Yadav", "Lucknow", "Samajwadi Party"],
+    content: [
+      {
+        heading: "Closed-Door Lucknow Meeting",
+        text: "CJP leader Ashutosh Ranka held a 90-minute meeting with SP president Akhilesh Yadav at the Janeshwar Mishra Trust office in Lucknow on September 3. Neither party disclosed details, but the meeting sparked speculation about CJP's expanding political outreach in UP."
+      }
+    ]
+  },
+  // NEW-7: Multi-State Expansion of Adivasi Campaign (Sep 19)
+  {
+    slug: "cjp-adivasi-school-thik-karo-multi-state-expansion-2026",
+    title: "CJP Plans Multi-State Expansion of 'Adivasi School Thik Karo' — Rajasthan, Jharkhand, Odisha, Gujarat Next",
+    summary: "Deccan Chronicle and The New Indian Express report CJP planning to extend the tribal school audit campaign to Rajasthan, Jharkhand, Odisha, and Gujarat following the Gadchiroli launch.",
+    category: "CIVIC AUDIT",
+    publishDate: "SEP 19, 2026",
+    author: {
+      name: "Deccan Chronicle & TNIE",
+      role: "National Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_adivasi_school.png",
+    imageAlt: "CJP Adivasi School Thik Karo multi-state expansion poster",
+    tags: ["Deccan Chronicle", "TNIE", "Rajasthan", "Jharkhand", "Odisha", "Gujarat", "Tribal Schools"],
+    content: [
+      {
+        heading: "Nationwide Tribal School Audit Expansion",
+        text: "Building on the momentum of the Gadchiroli launch, CJP announced plans to take the 'Adivasi School Thik Karo' campaign to Rajasthan, Jharkhand, Odisha, Gujarat, and Chhattisgarh. The campaign aims to document and publicize conditions in Eklavya Model Residential Schools (EMRS), with Dipke alleging only 477 of 720 sanctioned schools are functional."
+      }
+    ]
+  },
+  // NEW-8: MP HC Admits PIL on Tribal Deaths (Sep 13)
+  {
+    slug: "madhya-pradesh-hc-pil-balaghat-tribal-children-deaths-2026",
+    title: "Madhya Pradesh High Court Admits PIL on Balaghat Tribal Children Deaths; Seeks State Government Response",
+    summary: "Free Press Journal reports MP High Court admitting a Public Interest Litigation seeking accountability for 30+ tribal children deaths in Balaghat from infectious diseases and malnutrition.",
+    category: "LEGAL & COURT",
+    publishDate: "SEP 13, 2026",
+    author: {
+      name: "Free Press Journal",
+      role: "Legal Desk"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_dipke_mp_resign.png",
+    imageAlt: "MP High Court PIL Balaghat tribal deaths poster",
+    tags: ["Free Press Journal", "MP High Court", "PIL", "Balaghat", "Tribal Deaths", "State Response"],
+    content: [
+      {
+        heading: "HC Seeks State Government Response",
+        text: "The Madhya Pradesh High Court admitted a PIL on the Balaghat tribal healthcare crisis, directing the state government to respond on healthcare and living conditions in affected tribal areas. Over 30 children from the Baiga and Gond tribes had died since mid-2026, drawing criticism from political figures including Rahul Gandhi."
+      }
+    ]
+  },
+  // NEW-9: Dharmendra Pradhan Resignation Impact (Jul 25 - context update)
+  {
+    slug: "dharmendra-pradhan-resignation-education-minister-cjp-impact-2026",
+    title: "Pralhad Joshi Takes Charge as Education Minister After Dharmendra Pradhan Resigns Under CJP Protest Pressure",
+    summary: "The Hindu and Business Standard confirm Pralhad Joshi appointed as new Education Minister following Dharmendra Pradhan's resignation on July 25, driven by CJP-led nationwide student protests over NEET-UG irregularities.",
+    category: "POLITICS",
+    publishDate: "SEP 10, 2026",
+    author: {
+      name: "The Hindu & Business Standard",
+      role: "National Political Bureau"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_parliament_dharna.png",
+    imageAlt: "Dharmendra Pradhan resignation Pralhad Joshi education minister poster",
+    tags: ["The Hindu", "Dharmendra Pradhan", "Pralhad Joshi", "Education Minister", "NEET Protest"],
+    content: [
+      {
+        heading: "CJP's Key Demand Fulfilled",
+        text: "The resignation of Education Minister Dharmendra Pradhan on July 25 was a direct outcome of sustained CJP-led student agitations. Pralhad Joshi took charge of the Education Ministry alongside his existing portfolios. CJP declared this a 'historic victory for youth accountability'."
+      }
+    ]
+  },
+  // NEW-10: HC Rejects Bhardwaj Plea + Oct 6 date
   {
     slug: "delhi-hc-rejects-swatantra-bhardwaj-arrest-plea-2026",
     title: "Delhi High Court Rejects Swatantra Bhardwaj's Plea Against Arrest In CJP Protester Assault Case",

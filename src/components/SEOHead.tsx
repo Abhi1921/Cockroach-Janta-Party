@@ -17,7 +17,7 @@ export interface SEOHeadProps {
 export const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
-  keywords = "Cockroach Janta Party, Cockroach Janta Party Wale, cockroachjanatapartywale.com, CJP, CJP Party, Abhijeet Dipke, Ashutosh Ranka, Saurav Das, School Thik Karo, Supreme Court FIR quash archive, Black Monday 20 July, youth civic movement, public accountability, RTI transparency, urban governance, ward audit",
+  keywords = "Cockroach Janta Party, Cockroach Janta Party Wale, cockroachjanatapartywale.com, CJP, CJP Party, Abhijeet Dipke, Ashutosh Ranka, Saurav Das, School Thik Karo, Adivasi School Thik Karo, Gadchiroli tribal schools, Balaghat tribal deaths, Swatantra Bhardwaj bail, Swatantra Bhardwaj arrest, social media gag order, Gaurav Bhatia defamation, Dharmendra Pradhan resignation, Pralhad Joshi education minister, Supreme Court FIR quash archive, Black Monday 20 July, youth civic movement, public accountability, RTI transparency, urban governance, ward audit, NEET protest, Eklavya Model Residential Schools, tribal education India",
   ogImage = "/cjp_banner.png",
   canonicalUrl,
   ogType = 'website',

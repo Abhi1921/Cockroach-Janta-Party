@@ -46,11 +46,11 @@ export const HomePage: React.FC = () => {
 
   // Interactive Live Chat Feed
   const [chatMessages, setChatMessages] = useState<{ id: number; user: string; text: string; time: string; badge?: string }[]>([
-    { id: 1, user: 'DelhiSwarm_RTI', text: 'Supreme Court Article 142 decision quashed all FIRs! Huge victory!', time: '15:34', badge: 'Verified' },
-    { id: 2, user: 'PotholeAuditor_99', text: 'Sector 62 contractor road warranty board missing! Reporting now.', time: '15:35' },
-    { id: 3, user: 'NishuAzad_Fan', text: 'Full support to Sanjay Kumar Ji! Sec 307 & POCSO added.', time: '15:35', badge: 'Mod' },
-    { id: 4, user: 'DeshKaNagarik', text: 'Abhijeet Sir live on Desh Ki Baat debate tonight at 8 PM!', time: '15:36' },
-    { id: 5, user: 'CivicWatchman', text: 'CJP 24x7 reporting real facts when main TV channels stay quiet.', time: '15:36', badge: 'Verified' }
+    { id: 1, user: 'DelhiSwarm_RTI', text: 'Adivasi School Thik Karo campaign launched from Gadchiroli! 590 deaths in 2 years is shocking!', time: '14:10', badge: 'Verified' },
+    { id: 2, user: 'TribalAudit_CJP', text: 'Dipke tore up the government MoU at press conference! Historic moment!', time: '14:11' },
+    { id: 3, user: 'NishuAzad_Fan', text: 'Bhardwaj got bail but social media gag! Oct 6 hearing crucial.', time: '14:12', badge: 'Mod' },
+    { id: 4, user: 'DeshKaNagarik', text: 'MP High Court admitted PIL on Balaghat tribal deaths! Justice incoming!', time: '14:13' },
+    { id: 5, user: 'CivicWatchman', text: 'Multi-state expansion to Rajasthan, Jharkhand, Odisha next! CJP unstoppable! 🪳', time: '14:14', badge: 'Verified' }
   ]);
   const [chatInput, setChatInput] = useState('');
 
@@ -153,10 +153,10 @@ export const HomePage: React.FC = () => {
           <TrendingUp size={12} /> ROACH-SENSEX &amp; CIVIC INDEX
         </div>
         <div className="animate-ticker flex items-center gap-8 pl-4 whitespace-nowrap text-[#EADBCE]">
-          <span className="flex items-center gap-1"><strong className="text-white">ROACH-SENSEX:</strong> 74,820 <span className="text-green-400">▲ +420.5 (Subterranean Rally)</span></span>
-          <span className="flex items-center gap-1"><strong className="text-white">POTHOLE WARRANTY COMPLIANCE:</strong> <span className="text-red-400">14% (86% Missing Boards)</span></span>
-          <span className="flex items-center gap-1"><strong className="text-white">SUGAR TENDER PRICE:</strong> ₹42/kg <span className="text-green-400">▼ -₹2.0</span></span>
-          <span className="flex items-center gap-1"><strong className="text-white">SWARM WEATHER:</strong> NEW DELHI 34°C <span className="text-[#E6A100]">(HIGH HUMIDITY &amp; PROTESTS)</span></span>
+          <span className="flex items-center gap-1"><strong className="text-white">ROACH-SENSEX:</strong> 82,150 <span className="text-green-400">▲ +680.2 (Tribal Audit Rally)</span></span>
+          <span className="flex items-center gap-1"><strong className="text-white">ADIVASI SCHOOL AUDIT:</strong> <span className="text-red-400">590 Deaths in 2 Years — Gadchiroli Launch</span></span>
+          <span className="flex items-center gap-1"><strong className="text-white">BHARDWAJ BAIL:</strong> <span className="text-[#E6A100]">Released From Tihar · Social Media Gag · Oct 6 Hearing</span></span>
+          <span className="flex items-center gap-1"><strong className="text-white">SWARM WEATHER:</strong> NEW DELHI 32°C <span className="text-[#E6A100]">(MONSOON &amp; TRIBAL SCHOOL AUDITS)</span></span>
           <span className="flex items-center gap-1"><strong className="text-white">NEET FIRs EXPUNGED:</strong> 2,700 <span className="text-green-400">▲ 100% CLEAN</span></span>
         </div>
       </div>
@@ -237,10 +237,10 @@ export const HomePage: React.FC = () => {
                     SPECIAL LIVE SATELLITE DISPATCH
                   </div>
                   <h2 className="font-display text-2xl sm:text-4xl text-white uppercase leading-tight">
-                    "DESH KI BAAT: SUPREME COURT ARTICLE 142 VERDICT &amp; SWATANTRA ARREST"
+                    "DESH KI BAAT: ADIVASI SCHOOL THIK KARO &amp; BHARDWAJ BAIL UPDATE"
                   </h2>
                   <p className="text-xs text-[#EADBCE] font-bold">
-                    Anchor Abhijeet Dipke &amp; Saurav Das analyzing SC/ST Act, POCSO and Parliament Street Dharna
+                    Anchor Abhijeet Dipke analyzing Gadchiroli Tribal School Crisis, Balaghat Deaths &amp; Swatantra Bhardwaj Bail Conditions
                   </p>
 
                   <div className="flex items-center justify-center gap-3 pt-2">
@@ -268,7 +268,7 @@ export const HomePage: React.FC = () => {
                   BREAKING NEWS
                 </span>
                 <div className="truncate text-white">
-                  NDTV &amp; The Hindu: SC/ST Act, POCSO &amp; Sec 307 Attempt-to-Murder Sections Invoked Against Swatantra Bhardwaj Following CJP Parliament Street Dharna · Remanded to 1-Day Police Custody
+                  CJP LAUNCHES 'ADIVASI SCHOOL THIK KARO' FROM GADCHIROLI · 590 Tribal Student Deaths in 2 Years · Bhardwaj Released From Tihar With Social Media Gag · Dipke's Mock MP CM Resignation Goes Viral · Gaurav Bhatia Files ₹2Cr Defamation Suit
                 </div>
               </div>
 

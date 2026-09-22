@@ -223,8 +223,8 @@ export const ManifestoPage: React.FC = () => {
   return (
     <div className="manifesto-page bg-[#EADBCE] text-[#16120D] font-sans selection:bg-[#D9572B] selection:text-white overflow-hidden">
       <SEOHead
-        title="Official Civic Manifesto | Cockroach Janta Party"
-        description="Read the official editorial manifesto of Cockroach Janta Party: 7-point civic demands including drain desilting, contractor warranty boards, RTI transparency, and sanitation safety."
+        title="Cockroach Janta Party Manifesto 2026 | CJP Seven-Point Civic Charter & Demands"
+        description="Read the official Cockroach Janta Party (CJP) Manifesto 2026: seven civic demands including drain desilting transparency, 3-year contractor road warranty boards, free drinking water testing, sanitation worker dignity, open RTI digitization, school renovation, and citizen civic audits. The complete CJP civic charter explained."
         canonicalUrl="https://cockroachjantapartywale.com/manifesto"
       />
 
@@ -265,7 +265,7 @@ export const ManifestoPage: React.FC = () => {
             <p className="md:col-span-8 text-base sm:text-lg md:text-2xl text-[#EADBCE]/90 font-medium leading-relaxed max-w-3xl">
               {lang === 'hi'
                 ? "कम समारोह। अधिक जवाबदेही। कम खोखले नारे। बेहतर और तीखे सवाल। कॉकरोच जनता पार्टी का 7-सूत्रीय नागरिक चार्टर।"
-                : "Less ceremony. More contractual accountability. Fewer election slogans. Sharper citizen questions. Read CJP's 7-point civic declaration."}
+                : "The official Cockroach Janta Party (CJP) Manifesto: seven core civic demands for transparent municipal governance. Less ceremony, more contractual accountability. Fewer election slogans, sharper citizen questions."}
             </p>
 
             <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 justify-end">

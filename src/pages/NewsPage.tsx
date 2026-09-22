@@ -32,7 +32,7 @@ export const NewsPage: React.FC = () => {
     title: "From Viral Satire to National Youth Movement: Story of Cockroach Janta Party, 2026",
     subtitle: "A documentary investigation into how a satirical emblem evolved into a youth-driven civic watchdog across 45 metro sectors (May 2026 – 30 August 2026 Archive Cutoff).",
     author: "CJP Editorial Research Secretariat",
-    publishedDate: "30 August 2026",
+    publishedDate: "19 September 2026",
     heroImage: "/cjp_news_hero_poster.png",
     heroCaption: "Symbolic illustration of youth activism, protest and political satire surrounding Cockroach Janta Party.",
     heroLabel: "AI-generated symbolic illustration.",
@@ -44,13 +44,213 @@ export const NewsPage: React.FC = () => {
       "The movement reached national media prominence in July 2026 when student observers and CJP volunteers assembled at Jantar Mantar in New Delhi for a peaceful demonstration. Carrying placards demanding 3-year contractor paving liability boards and open RTI tender ledgers, the demonstration coincided with broader student solidarity actions regarding NEET and UGC-NET examination reforms.",
       "In August 2026, CJP initiated a major organizational restructuring. An official secretariat bulletin announced the formation of the National Working Committee, appointing regional coordinators including Saurav Das and Ashutosh Ranka. CJP clarified its positioning as a non-partisan pressure group, explicitly opting out of electoral party politics to preserve its independent watchdog role.",
       "Field teams in August inspected 68 public road construction worksites in metro sectors, uncovering 34 sites lacking mandatory contractor warranty notice boards. The research secretariat also published its quarterly desilting depth audit, releasing geotagged drain clearance data across 45 sectors ahead of heavy monsoon rains.",
-      "As of the 30 August 2026 archive cutoff, CJP announced plans for a nationwide September youth ward audit march. While political commentators continue to debate whether satirical civic watchdogs can sustain long-term administrative pressure, CJP's date-wise archive stands as empirical proof that young citizens refuse to normalize broken public systems."
+      "In September 2026, the movement reached a critical inflection point. The Supreme Court invoked Article 142 to quash all FIRs against CJP protesters, Swatantra Bhardwaj was arrested, remanded, and later granted interim bail with a social media gag order. Abhijeet Dipke launched the 'Adivasi School Thik Karo' campaign from Gadchiroli, Maharashtra, auditing tribal schools and alleging 590 student deaths in two years. His satirical mock resignation as MP Chief Minister over 30+ tribal children deaths in Balaghat went viral, drawing both praise and criticism. As of the 19 September 2026 archive cutoff, CJP is expanding its tribal school audit to Rajasthan, Jharkhand, Odisha, and Gujarat — empirical proof that young citizens refuse to normalize broken public systems."
     ]
   };
 
-  // Verified Structured News Archive Database (May - 5 Sep 2026)
+  // Verified Structured News Archive Database (May - 19 Sep 2026)
   const newsDatabase = [
+    // === NEW ENTRIES: Sep 8 - Sep 19, 2026 ===
     {
+      id: 'news-sep19-adivasi-expansion',
+      eventDate: 'SEP 19, 2026',
+      pubDate: 'SEP 19, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'CIVIC AUDIT',
+      image: '/cjp_poster_adivasi_school.png',
+      headline: 'CJP Plans Multi-State Expansion of \'Adivasi School Thik Karo\' — Rajasthan, Jharkhand, Odisha, Gujarat Next',
+      subheadline: 'Deccan Chronicle & TNIE report CJP extending tribal school audit campaign to 5+ additional states.',
+      location: 'National / Multi-State',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'CJP announced plans to extend the Adivasi School Thik Karo campaign to Rajasthan, Jharkhand, Odisha, Gujarat, and Chhattisgarh following the Gadchiroli launch.',
+      whatHappened: 'Building on the Gadchiroli launch, CJP declared multi-state expansion targeting Eklavya Model Residential Schools (EMRS). Dipke alleged only 477 of 720 sanctioned EMRS are functional, with thousands of vacant teaching posts.',
+      whyItMatters: 'First nationwide tribal education campaign by a youth civic movement in India.',
+      whatCjpSays: 'Abhijeet Dipke: "Tribal children\'s educational rights are not negotiable. Every state must be audited."',
+      whatOthersSaid: 'Deccan Chronicle and TNIE highlighted CJP\'s systematic multi-state expansion strategy.',
+      sources: [
+        { name: 'Deccan Chronicle', date: '19 Sep 2026', url: 'https://deccanchronicle.com' },
+        { name: 'The New Indian Express', date: '19 Sep 2026', url: 'https://newindianexpress.com' }
+      ]
+    },
+    {
+      id: 'news-sep17-adivasi-school',
+      eventDate: 'SEP 17, 2026',
+      pubDate: 'SEP 17, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'CIVIC AUDIT',
+      image: '/cjp_poster_adivasi_school.png',
+      headline: 'CJP Launches \'Adivasi School Thik Karo\' Campaign From Gadchiroli; Dipke Tears Up MoU',
+      subheadline: 'The Hindu & India Today report CJP founder documenting damaged infrastructure in tribal residential schools.',
+      location: 'Gadchiroli, Maharashtra',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Abhijeet Dipke launched the Adivasi School Thik Karo campaign from Gadchiroli, revealing severely damaged infrastructure — broken roofs, missing doors, no boundary walls — in tribal residential schools.',
+      whatHappened: 'CJP ground inspection teams documented conditions in tribal schools including damaged roofs, missing bathrooms, and absent boundary walls. Dipke tore up a copy of a government MoU at a press conference to protest unfulfilled commitments. He alleged 590 tribal students died in 2 years from snakebites, malaria, and malnutrition.',
+      whyItMatters: 'Focuses national attention on tribal educational infrastructure and government accountability.',
+      whatCjpSays: 'Abhijeet Dipke: "Tribal children deserve safe hostels, nutritious meals, and quality education. 590 deaths in 2 years is state-sponsored negligence."',
+      whatOthersSaid: 'The Hindu and India Today provided extensive coverage of the campaign launch and tribal school conditions.',
+      sources: [
+        { name: 'The Hindu', date: '17 Sep 2026', url: 'https://thehindu.com' },
+        { name: 'India Today', date: '17 Sep 2026', url: 'https://indiatoday.in' },
+        { name: 'Free Press Journal', date: '17 Sep 2026', url: 'https://freepressjournal.in' }
+      ]
+    },
+    {
+      id: 'news-sep17-bhardwaj-release',
+      eventDate: 'SEP 17, 2026',
+      pubDate: 'SEP 17, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'BREAKING',
+      image: '/cjp_poster_bhardwaj_bail.png',
+      headline: 'Swatantra Bhardwaj Released From Tihar Jail After 12 Days; Barred From Social Media Commentary',
+      subheadline: 'ANI & LiveLaw confirm Bhardwaj walks out of Tihar under strict interim bail conditions.',
+      location: 'Tihar Jail / New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Swatantra Bhardwaj walked out of Tihar Jail on September 17 after 12 days in judicial custody, following Delhi court interim bail with strict social media gag order.',
+      whatHappened: 'Bhardwaj was released after Delhi court granted 3-week interim bail with conditions including a complete ban on discussing the case, complainant, or defense on social media. No contact with witnesses or complainant permitted.',
+      whyItMatters: 'Tests whether bail conditions including social media gag orders are enforceable in the digital age.',
+      whatCjpSays: 'CJP Legal Secretariat: "Bail is not acquittal. The October 6 hearing will determine the full course of justice."',
+      whatOthersSaid: 'ANI and LiveLaw confirmed the release and outlined the strict bail conditions.',
+      sources: [
+        { name: 'ANI', date: '17 Sep 2026', url: 'https://aninews.in' },
+        { name: 'LiveLaw', date: '17 Sep 2026', url: 'https://livelaw.in' }
+      ]
+    },
+    {
+      id: 'news-sep15-bhardwaj-bail',
+      eventDate: 'SEP 15, 2026',
+      pubDate: 'SEP 15, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'LEGAL & COURT',
+      image: '/cjp_poster_bhardwaj_bail.png',
+      headline: 'Delhi Court Grants Swatantra Bhardwaj 3-Week Interim Bail With Social Media Gag Order',
+      subheadline: 'Bar & Bench & The Hindu detail strict conditions — no online commentary, no witness contact.',
+      location: 'Patiala House Court, New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Delhi court granted Swatantra Bhardwaj 3-week interim bail with strict conditions: complete bar on discussing the case on social media, prohibition on contacting complainant or witnesses.',
+      whatHappened: 'The court noted that bail is an expression of trust. Strict conditions imposed include: no social media posts about case/defense/complainant family, no contact with complainant Nishu Azad or father, no tampering with evidence. Next hearing scheduled for October 6, 2026.',
+      whyItMatters: 'Establishes precedent for social media gag orders in assault cases involving influencers.',
+      whatCjpSays: 'CJP Legal Desk: "We will monitor compliance with every bail condition. October 6 will be decisive."',
+      whatOthersSaid: 'Bar & Bench and The Hindu provided detailed legal analysis of the bail order and its conditions.',
+      sources: [
+        { name: 'Bar & Bench', date: '15 Sep 2026', url: 'https://barandbench.com' },
+        { name: 'The Hindu', date: '15 Sep 2026', url: 'https://thehindu.com' }
+      ]
+    },
+    {
+      id: 'news-sep13-dipke-mp-resign',
+      eventDate: 'SEP 13, 2026',
+      pubDate: 'SEP 13, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'POLITICS & SATIRE',
+      image: '/cjp_poster_dipke_mp_resign.png',
+      headline: 'Abhijeet Dipke Posts Satirical \'Resignation\' as MP CM Over 30+ Balaghat Tribal Children Deaths',
+      subheadline: 'Times of India reports mock resignation letter addressed to MP Governor Mangubhai Patel.',
+      location: 'Balaghat, Madhya Pradesh',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'CJP founder Abhijeet Dipke shared a mock resignation letter as Madhya Pradesh CM addressed to Governor Mangubhai Patel after visiting Balaghat where 30+ tribal children from Baiga and Gond tribes died of infectious diseases.',
+      whatHappened: 'After visiting Balaghat to meet families of deceased tribal children, Dipke was heckled by influencers accusing him of "doing politics on corpses". He responded with a satirical resignation letter criticizing CM Mohan Yadav\'s handling of the healthcare tragedy.',
+      whyItMatters: 'Draws national media spotlight on Balaghat tribal healthcare crisis and government negligence.',
+      whatCjpSays: 'Abhijeet Dipke: "If visiting families of dead children is \'doing politics\', then this government has failed at governance."',
+      whatOthersSaid: 'Times of India, Indiatimes, and YouTube channels covered the viral satirical resignation and subsequent debate.',
+      sources: [
+        { name: 'Times of India', date: '13 Sep 2026', url: 'https://timesofindia.indiatimes.com' },
+        { name: 'Indiatimes', date: '13 Sep 2026', url: 'https://indiatimes.com' }
+      ]
+    },
+    {
+      id: 'news-sep13-mp-hc-pil',
+      eventDate: 'SEP 13, 2026',
+      pubDate: 'SEP 13, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'LEGAL & COURT',
+      image: '/cjp_poster_dipke_mp_resign.png',
+      headline: 'Madhya Pradesh High Court Admits PIL on Balaghat Tribal Children Deaths; Seeks State Response',
+      subheadline: 'Free Press Journal reports HC directing state government to respond on healthcare and living conditions.',
+      location: 'Jabalpur, Madhya Pradesh',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'MP High Court admitted a Public Interest Litigation on Balaghat tribal healthcare crisis. Over 30 children from Baiga and Gond tribes died since mid-2026.',
+      whatHappened: 'The Madhya Pradesh High Court admitted a PIL seeking accountability for tribal children deaths in Balaghat. Court directed the state government to respond on healthcare and living conditions in the affected tribal areas.',
+      whyItMatters: 'Judicial intervention ensures government accountability for tribal healthcare negligence.',
+      whatCjpSays: 'CJP Legal Cell: "Judicial oversight is essential when state machinery fails the most vulnerable."',
+      whatOthersSaid: 'Free Press Journal reported the PIL admission and Rahul Gandhi\'s criticism of the state government.',
+      sources: [
+        { name: 'Free Press Journal', date: '13 Sep 2026', url: 'https://freepressjournal.in' },
+        { name: 'National Herald', date: '13 Sep 2026', url: 'https://nationalheraldindia.com' }
+      ]
+    },
+    {
+      id: 'news-sep10-pradhan-resign',
+      eventDate: 'SEP 10, 2026',
+      pubDate: 'SEP 10, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'POLITICS',
+      image: '/cjp_poster_parliament_dharna.png',
+      headline: 'Pralhad Joshi Takes Charge as Education Minister After Dharmendra Pradhan Resigns Under CJP Pressure',
+      subheadline: 'The Hindu & Business Standard confirm key CJP demand fulfilled following NEET protest pressure.',
+      location: 'New Delhi, DL',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'Pralhad Joshi took charge of the Education Ministry after Dharmendra Pradhan resigned on July 25 under sustained CJP-led student protest pressure over NEET-UG irregularities.',
+      whatHappened: 'Pradhan\'s resignation was a direct outcome of CJP-led student agitations demanding accountability for NEET-UG examination irregularities. Pralhad Joshi was appointed to take charge alongside his existing portfolios.',
+      whyItMatters: 'Demonstrates that sustained citizen pressure can lead to ministerial-level accountability.',
+      whatCjpSays: 'CJP Secretariat: "This is a historic victory for youth accountability. One minister has gone, but systemic reform must continue."',
+      whatOthersSaid: 'The Hindu and Business Standard confirmed the appointment and linked it to CJP protest pressure.',
+      sources: [
+        { name: 'The Hindu', date: '10 Sep 2026', url: 'https://thehindu.com' },
+        { name: 'Business Standard', date: '10 Sep 2026', url: 'https://business-standard.com' }
+      ]
+    },
+    {
+      id: 'news-sep08-defamation',
+      eventDate: 'SEP 08, 2026',
+      pubDate: 'SEP 08, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'LEGAL & COURT',
+      image: '/cjp_poster_sc_judge_slams_police.png',
+      headline: 'BJP\'s Gaurav Bhatia Files ₹2 Crore Defamation Suit Against CJP\'s Saurav Das & Ashutosh Ranka',
+      subheadline: 'OpIndia reports Delhi HC defamation case over AI-generated image controversy.',
+      location: 'Delhi High Court, New Delhi',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'BJP national spokesperson Gaurav Bhatia filed a ₹2 crore defamation case against CJP\'s Saurav Das and Ashutosh Ranka over an AI-generated image shared on September 5.',
+      whatHappened: 'The defamation case stems from an AI-generated image shared by Saurav Das that appeared to show Bhatia making derogatory remarks toward Swatantra Bhardwaj. Bhatia sought ₹2 crore in damages through Delhi High Court.',
+      whyItMatters: 'Highlights intersection of AI-generated content, political free speech, and defamation law.',
+      whatCjpSays: 'CJP Legal Team: "We will defend the right to political satire and commentary in court."',
+      whatOthersSaid: 'OpIndia published details of the defamation filing and legal arguments.',
+      sources: [
+        { name: 'OpIndia', date: '08 Sep 2026', url: 'https://opindia.com' }
+      ]
+    },
+    {
+      id: 'news-sep03-akhilesh',
+      eventDate: 'SEP 03, 2026',
+      pubDate: 'SEP 03, 2026',
+      month: 'SEPTEMBER 2026',
+      category: 'POLITICS',
+      image: '/cjp_poster_cjp_congress_table.png',
+      headline: 'CJP\'s Ashutosh Ranka Holds 90-Minute Closed-Door Meeting With Akhilesh Yadav in Lucknow',
+      subheadline: 'Organiser reports the meeting at Janeshwar Mishra Trust office sparks political speculation.',
+      location: 'Lucknow, UP',
+      verificationStatus: 'VERIFIED',
+      satireStatus: 'OFFICIAL / REPORTED FACT',
+      summary: 'CJP leader Ashutosh Ranka held a 90-minute closed-door meeting with SP president Akhilesh Yadav at Janeshwar Mishra Trust office in Lucknow.',
+      whatHappened: 'Neither party disclosed the details of the meeting, but the 90-minute session sparked political speculation about CJP\'s expanding outreach in Uttar Pradesh politics.',
+      whyItMatters: 'Shows CJP\'s growing political influence and outreach beyond civic campaigns.',
+      whatCjpSays: 'CJP UP Cell: "We engage with all democratic leaders willing to discuss education reform and civic accountability."',
+      whatOthersSaid: 'Organiser highlighted the political implications of the Lucknow meeting.',
+      sources: [
+        { name: 'Organiser', date: '03 Sep 2026', url: 'https://organiser.org' }
+      ]
+    },
+    // === EXISTING ENTRIES BELOW ===
+    {
+
       id: 'news-sep05-scst-pocso',
       eventDate: 'SEP 05, 2026',
       pubDate: 'SEP 05, 2026',
@@ -1817,7 +2017,7 @@ export const NewsPage: React.FC = () => {
                 <span className="text-[#D9572B] font-extrabold uppercase block mb-1">SOURCE CARD &amp; ATTRIBUTION</span>
                 <p>• Primary Source: CJP Secretariat / Reported Media</p>
                 <p>• Publication Date: {selectedNews.pubDate}</p>
-                <p>• Last Verified: 30 August 2026 (Archive Cutoff)</p>
+                <p>• Last Verified: 19 September 2026 (Archive Cutoff)</p>
               </div>
 
               <button
