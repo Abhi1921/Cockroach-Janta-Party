@@ -20,6 +20,128 @@ export interface NewsArticle {
 }
 
 export const newsData: NewsArticle[] = [
+  // BREAKING NEWS 1: CEC Gyanesh Kumar Resignation Ultimatum (Sep 26, 2026)
+  {
+    slug: "cec-gyanesh-kumar-resignation-cjp-ultimatum-jantar-mantar-2-2026",
+    title: "Resign In 48 Hours Or Face Jantar Mantar 2.0: CJP's Ultimatum To Chief Election Commissioner Gyanesh Kumar",
+    summary: "NDTV, The Hindu, Telegraph India, and Times of India report CJP founder Abhijeet Dipke issuing a 48-hour ultimatum to CEC Gyanesh Kumar amid the SIR row, backed by author Amitav Ghosh, warning of nationwide October 2 protests and asking opposition parties to stop participating in rigged polls.",
+    category: "BREAKING & POLITICS",
+    publishDate: "SEP 26, 2026",
+    author: {
+      name: "NDTV, The Hindu & TOI",
+      role: "National Political Bureau"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_cec_gyanesh_resignation.png",
+    imageAlt: "CJP CEC Gyanesh Kumar Resignation Ultimatum Graphic Poster",
+    tags: ["NDTV", "The Hindu", "Telegraph India", "Times of India", "CEC Gyanesh Kumar", "Jantar Mantar 2.0", "Abhijeet Dipke", "Amitav Ghosh", "SIR Row"],
+    content: [
+      {
+        heading: "48-Hour Ultimatum to Poll Body Chief",
+        text: "In a fiery national press briefing, Cockroach Janta Party (CJP) founder Abhijeet Dipke issued an explicit 48-hour deadline demanding the immediate resignation of Chief Election Commissioner Gyanesh Kumar. Dipke warned that if the CEC fails to step down by Saturday, CJP will launch nationwide 'Jantar Mantar 2.0' agitations starting October 2."
+      },
+      {
+        heading: "Prominent Support & Advice to Opposition",
+        text: "Renowned author Amitav Ghosh publicly backed CJP's call for Gyanesh Kumar's resignation. Meanwhile, addressing opposition parties amid the SIR controversy, Dipke urged them to stop participating in elections if they are merely handed token wins, declaring that citizens have lost faith in contaminated electoral processes."
+      }
+    ]
+  },
+  // BREAKING NEWS 2: Delhi High Court Meta Deepfake Order (Sep 25, 2026)
+  {
+    slug: "delhi-hc-orders-meta-remove-morphed-pm-photo-cjp-notice-2026",
+    title: "Delhi High Court Orders Meta to Remove Morphed Photo With PM Within 24 Hours; Issues Notice to CJP Leaders",
+    summary: "The Indian Express, LiveLaw, NDTV, Times of India, and Pudhari report Delhi High Court ordering Meta to remove deepfake images involving Prime Minister Narendra Modi within 24 hours, while directing police protection for the complainant and issuing notices to CJP spokespersons.",
+    category: "LEGAL & COURT",
+    publishDate: "SEP 25, 2026",
+    author: {
+      name: "The Indian Express & LiveLaw",
+      role: "High Court Bureau"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_delhi_hc_meta_notice.png",
+    imageAlt: "Delhi High Court Meta Deepfake Order CJP Poster Graphic",
+    tags: ["The Indian Express", "LiveLaw", "NDTV", "Times of India", "Pudhari", "Delhi High Court", "Meta Takedown", "Deepfake PM", "Saurav Das", "Abhijeet Dipke", "Ashutosh Ranka"],
+    content: [
+      {
+        heading: "High Court Issues 24-Hour Mandate to Meta",
+        text: "Observing that the matter concerns the Prime Minister of India, a bench of the Delhi High Court gave Meta 24 hours to take down all online instances of a morphed deepfake photograph. The court also ordered Delhi Police to provide adequate security cover to the complainant."
+      },
+      {
+        heading: "Notice Issued to CJP Leadership",
+        text: "The High Court issued formal notices to CJP leaders Saurav Das, Abhijeet Dipke, and Ashutosh Ranka regarding allegations surrounding the viral dissemination of the image. CJP legal counsel stated that the party respects the judiciary and will present full evidentiary compliance during the urgent hearing."
+      }
+    ]
+  },
+  // BREAKING NEWS 3: Abhijeet Dipke Rejects Union Minister NDA Offer
+  {
+    slug: "abhijeet-dipke-rejects-union-minister-nda-offer-2026",
+    title: "CJP Leader Abhijeet Dipke Rejects Union Minister's Offer to Join NDA; Reaffirms Non-Electoral Independence",
+    summary: "Hindustan Times reports CJP convenor Abhijeet Dipke turning down an official offer from a Union Minister to join the BJP-led NDA coalition, reiterating that CJP will never contest elections or compromise its independent student movement.",
+    category: "POLITICS",
+    publishDate: "SEP 24, 2026",
+    author: {
+      name: "Hindustan Times",
+      role: "Special Political Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_cjp_congress_table.png",
+    imageAlt: "Abhijeet Dipke rejects NDA offer poster graphic",
+    tags: ["Hindustan Times", "Abhijeet Dipke", "NDA Offer", "Non-Electoral Independence", "Union Minister"],
+    content: [
+      {
+        heading: "Union Minister Offer Turned Down",
+        text: "Hindustan Times confirmed that a senior Union Minister extended an informal offer inviting CJP to join the BJP-led National Democratic Alliance (NDA). Dipke firmly declined the invitation, stating that the public has lost faith in party politics."
+      },
+      {
+        heading: "Commitment to Non-Partisan Pressure Group",
+        text: "Dipke reaffirmed CJP's core charter: 'We are a grassroots civic pressure group championing school quality, road warranties, and RTI transparency. We will not become a conventional political party or enter electoral seat-sharing.'"
+      }
+    ]
+  },
+  // BREAKING NEWS 4: Jaipur School Inspection Attack
+  {
+    slug: "jaipur-rampura-kanwarpura-school-inspection-attack-cjp-2026",
+    title: "Abhijeet Dipke Warns of Protests After CJP Team Attacked During Jaipur School Audit in Rampura Kanwarpura",
+    summary: "The Indian Express reports CJP founder Abhijeet Dipke alleging a violent attack on CJP student inspectors during a 'School Thik Karo' inspection at a government school in Rampura Kanwarpura village, Bagru (Jaipur).",
+    category: "CIVIC AUDIT",
+    publishDate: "SEP 23, 2026",
+    author: {
+      name: "The Indian Express",
+      role: "Rajasthan Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_adivasi_revolution.png",
+    imageAlt: "Jaipur school inspection attack CJP protest poster graphic",
+    tags: ["The Indian Express", "School Thik Karo", "Jaipur Attack", "Rampura Kanwarpura", "Bagru", "Abhijeet Dipke"],
+    content: [
+      {
+        heading: "'All Levels of Disgust Crossed': Dipke",
+        text: "Following an unprovoked assault on CJP volunteers inspecting leaking ceilings and missing desks in Rampura Kanwarpura village of Jaipur's Bagru, Abhijeet Dipke condemned local hooliganism, warning of state-wide school strikes."
+      }
+    ]
+  },
+  // BREAKING NEWS 5: National Working Committee Expansion
+  {
+    slug: "cjp-announces-national-working-committee-expansion-2026",
+    title: "CJP Announces Nationwide Expansion Plan & National Working Committee Led by Baliyan, Mallangi, Bharadwaj, and Ingale",
+    summary: "The Hindu reports CJP establishing its National Working Committee led by Deepak Baliyan, Vijay Reddy Mallangi, Ankit Bharadwaj, and Yogesh Ingale to oversee public dialogues and member enrollment across 6 new states.",
+    category: "MILESTONE",
+    publishDate: "SEP 22, 2026",
+    author: {
+      name: "The Hindu",
+      role: "National Affairs Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_news_hero_poster.png",
+    imageAlt: "CJP National Working Committee expansion graphic",
+    tags: ["The Hindu", "CJP Expansion", "National Working Committee", "Deepak Baliyan", "Vijay Reddy Mallangi", "Ankit Bharadwaj", "Yogesh Ingale"],
+    content: [
+      {
+        heading: "State Zonal Leads Appointed",
+        text: "The Hindu reported CJP formalizing a 6-month national rollout plan. Deepak Baliyan, Vijay Reddy Mallangi, Ankit Bharadwaj, and Yogesh Ingale will head Northern, Southern, Central, and Western zonal wings respectively."
+      }
+    ]
+  },
   // LATEST UP-TO-DATE NEWS (SEP 26, 2026)
   {
     slug: "cjp-launches-5-state-adivasi-school-thik-karo-yatra-2026",

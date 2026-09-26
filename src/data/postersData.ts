@@ -15,6 +15,34 @@ export interface Poster {
 
 export const postersData: Poster[] = [
   {
+    id: 'poster-cec-gyanesh-resignation',
+    title: 'CEC Gyanesh Kumar Resign In 48 Hours',
+    slogan: 'RESIGN OR FACE JANTAR MANTAR 2.0 NATIONWIDE PROTESTS FROM OCT 2',
+    category: 'protest',
+    style: 'placard',
+    accentColor: '#C0392B',
+    bgColor: '#16120D',
+    textColor: '#F5EFE6',
+    date: '2026-09-26',
+    downloads: 14920,
+    featured: true,
+    image: '/cjp_poster_cec_gyanesh_resignation.png'
+  },
+  {
+    id: 'poster-delhi-hc-meta-notice',
+    title: 'Delhi High Court Mandate: Meta 24-Hour Takedown Order',
+    slogan: 'HIGH COURT MANDATES 24-HOUR DEEPFAKE REMOVAL & POLICE PROTECTION',
+    category: 'editorial',
+    style: 'editorial',
+    accentColor: '#2980B9',
+    bgColor: '#0B132B',
+    textColor: '#F5EFE6',
+    date: '2026-09-25',
+    downloads: 13650,
+    featured: true,
+    image: '/cjp_poster_delhi_hc_meta_notice.png'
+  },
+  {
     id: 'poster-adivasi-revolution-2026',
     title: 'Adivasi School Thik Karo Revolution 2026',
     slogan: 'REPAIR OUR SCHOOLS NOW — STAND WITH TRIBAL STUDENTS NATIONWIDE',

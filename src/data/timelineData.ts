@@ -102,11 +102,20 @@ export const timelineData: TimelineEvent[] = [
   },
   {
     year: '2026',
+    date: 'SEP 26 2026',
+    title: 'CJP Issues 48-Hour Resignation Ultimatum to CEC Gyanesh Kumar',
+    category: 'Campaign',
+    description: 'CJP warns of nationwide Jantar Mantar 2.0 protests from October 2 if poll body chief does not step down.',
+    posterId: 'poster-cec-gyanesh-resignation',
+    tag: 'JANTAR MANTAR 2.0'
+  },
+  {
+    year: '2026',
     date: 'SEP 25 2026',
-    title: 'Delhi HC Directs MCD/PWD Asphalt & Subterranean Audits',
+    title: 'Delhi High Court Orders Meta 24-Hour Deepfake Takedown',
     category: 'Court Order',
-    description: 'Delhi High Court mandates bi-monthly asphalt thickness laboratory vouchers and drain desilting logs.',
-    posterId: 'poster-contractor-road-warranty-2026',
-    tag: 'ROAD WARRANTY'
+    description: 'High Court gives Meta 24 hours to remove morphed image with PM Modi and issues notice to CJP spokespersons.',
+    posterId: 'poster-delhi-hc-meta-notice',
+    tag: 'HIGH COURT ORDER'
   }
 ];
