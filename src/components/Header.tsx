@@ -265,7 +265,7 @@ export const Header: React.FC = () => {
                 <span>INDIA'S SUBTERRANEAN CIVIC WATCHDOG</span>
                 <span className="hidden sm:inline">·</span>
                 <span className="hidden sm:inline flex items-center gap-1 text-[#3A332B]">
-                  <Calendar size={10} /> Tuesday, 08 September 2026
+                  <Calendar size={10} /> {new Date().toLocaleDateString('en-US', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' })}
                 </span>
               </div>
             </div>

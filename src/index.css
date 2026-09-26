@@ -6,6 +6,9 @@
   --cjp-dark-charcoal: #231F1A;
   --cjp-card-bg: #F5EFE6;
   --cjp-accent-red: #D9572B;
+  --cjp-accent-gold: #E6A100;
+  --cjp-accent-green: #27AE60;
+  --cjp-accent-blue: #2980B9;
   --cjp-border-dark: rgba(22, 18, 13, 0.18);
 
   /* Typography Variables */
@@ -31,20 +34,24 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Accessibility Skip Link */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -50px;
   left: 10px;
   background: #16120D;
   color: #F5EFE6;
-  padding: 8px 16px;
+  padding: 10px 18px;
   z-index: 100;
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
+  border-radius: 8px;
+  border: 2px solid #D9572B;
   transition: top 0.2s ease;
 }
 .skip-link:focus {
@@ -73,6 +80,50 @@ body {
   font-family: var(--font-hindi-serif);
 }
 
+/* Glassmorphism & Modern Card Utility Classes */
+.glass-panel {
+  background: rgba(245, 239, 230, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(22, 18, 13, 0.15);
+}
+
+.glass-panel-dark {
+  background: rgba(22, 18, 13, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Tactile Brutalist & Premium Shadow Utilities */
+.shadow-brutal-sm {
+  box-shadow: 3px 3px 0px 0px #16120D;
+}
+
+.shadow-brutal-md {
+  box-shadow: 6px 6px 0px 0px #16120D;
+}
+
+.shadow-brutal-lg {
+  box-shadow: 10px 10px 0px 0px #16120D;
+}
+
+.shadow-brutal-orange {
+  box-shadow: 6px 6px 0px 0px #D9572B;
+}
+
+.shadow-brutal-gold {
+  box-shadow: 6px 6px 0px 0px #E6A100;
+}
+
+.shadow-glow-red {
+  box-shadow: 0 0 20px rgba(217, 87, 43, 0.4);
+}
+
+.shadow-glow-gold {
+  box-shadow: 0 0 20px rgba(230, 161, 0, 0.4);
+}
+
 /* Ticker Animation */
 @keyframes continuousTicker {
   0% { transform: translateX(0); }
@@ -94,7 +145,7 @@ body {
 @keyframes dropdownSlide {
   from {
     opacity: 0;
-    transform: translateY(-6px) scale(0.97);
+    transform: translateY(-8px) scale(0.98);
   }
   to {
     opacity: 1;
@@ -116,6 +167,11 @@ body {
 @keyframes scrollBounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(8px); }
+}
+
+@keyframes shimmerGlow {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 .animate-fade-in-up {
@@ -157,25 +213,26 @@ body {
 }
 
 .animate-dropdown {
-  animation: dropdownSlide 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: dropdownSlide 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Tactile Brutalist Interactive Buttons */
 .btn-brutal {
+  display: inline-flex;
   white-space: nowrap;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   font-weight: 800;
   border: 2px solid #16120D;
-  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 3px 3px 0px 0px #16120D;
   user-select: none;
 }
 
 .btn-brutal:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0px 0px #16120D;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px 0px #16120D;
 }
 
 .btn-brutal:active {
@@ -190,6 +247,25 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #16120D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9572B;
+  border-radius: 5px;
+  border: 2px solid #16120D;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E6A100;
 }
 
 /* Dedicated Print Stylesheet: Print ONLY the Membership Card */
@@ -223,5 +299,6 @@ body {
     print-color-adjust: exact !important;
   }
 }
+
 
 
