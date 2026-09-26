@@ -89,5 +89,24 @@ export const timelineData: TimelineEvent[] = [
     description: 'Supreme Court quashes police cases against student delegates, upholding peaceful assembly rights.',
     posterId: 'poster-1',
     tag: 'LANDMARK VERDICT'
+  },
+  {
+    year: '2026',
+    date: 'SEP 26 2026',
+    title: '5-State Adivasi School Thik Karo Yatra Launched',
+    category: 'Campaign',
+    description: 'CJP founders and student delegates start 5-state tribal hostel audit tour from Gadchiroli to Bastar and Mayurbhanj.',
+    relatedCampaign: 'school-thik-karo',
+    posterId: 'poster-adivasi-revolution-2026',
+    tag: 'TRIBAL EDUCATION'
+  },
+  {
+    year: '2026',
+    date: 'SEP 25 2026',
+    title: 'Delhi HC Directs MCD/PWD Asphalt & Subterranean Audits',
+    category: 'Court Order',
+    description: 'Delhi High Court mandates bi-monthly asphalt thickness laboratory vouchers and drain desilting logs.',
+    posterId: 'poster-contractor-road-warranty-2026',
+    tag: 'ROAD WARRANTY'
   }
 ];

@@ -109,29 +109,39 @@ export const PosterCard: React.FC<PosterCardProps> = ({ poster, onSelect }) => {
             </button>
 
             {/* Poster Large Art View */}
-            <div 
-              className="p-6 border-4 border-[#16120D] text-center shadow-[6px_6px_0px_0px_#16120D] mb-6 flex flex-col items-center justify-center min-h-[300px]"
-              style={{ backgroundColor: poster.bgColor, color: poster.textColor }}
-            >
+            {poster.image ? (
+              <div className="border-4 border-[#16120D] shadow-[6px_6px_0px_0px_#16120D] mb-6 overflow-hidden rounded bg-black">
+                <img src={poster.image} alt={poster.title} className="w-full max-h-[420px] object-contain mx-auto" />
+                <div className="p-4 bg-[#16120D] text-[#F5EFE6]">
+                  <h2 className="font-serif font-black text-2xl uppercase leading-tight">{poster.title}</h2>
+                  <p className="text-xs font-bold text-[#E6A100] uppercase mt-1">"{poster.slogan}"</p>
+                </div>
+              </div>
+            ) : (
               <div 
-                className="w-16 h-16 rounded-full flex items-center justify-center text-3xl font-black mb-4 border-2 border-current shadow-lg"
-                style={{ backgroundColor: poster.accentColor, color: '#FFFFFF' }}
+                className="p-6 border-4 border-[#16120D] text-center shadow-[6px_6px_0px_0px_#16120D] mb-6 flex flex-col items-center justify-center min-h-[300px]"
+                style={{ backgroundColor: poster.bgColor, color: poster.textColor }}
               >
-                🪳
+                <div 
+                  className="w-16 h-16 rounded-full flex items-center justify-center text-3xl font-black mb-4 border-2 border-current shadow-lg"
+                  style={{ backgroundColor: poster.accentColor, color: '#FFFFFF' }}
+                >
+                  🪳
+                </div>
+                <h2 className="font-display text-4xl sm:text-5xl uppercase leading-none mb-3 font-black">
+                  {poster.title}
+                </h2>
+                <p 
+                  className="text-base sm:text-lg font-extrabold uppercase tracking-wide max-w-md mb-4"
+                  style={{ color: poster.accentColor }}
+                >
+                  "{poster.slogan}"
+                </p>
+                <div className="text-[10px] uppercase font-mono tracking-widest border-t-2 border-current/30 pt-3">
+                  COCKROACH JANTA PARTY • HAR GHAR KI SARKAR • EST. 2026
+                </div>
               </div>
-              <h2 className="font-display text-4xl sm:text-5xl uppercase leading-none mb-3 font-black">
-                {poster.title}
-              </h2>
-              <p 
-                className="text-base sm:text-lg font-extrabold uppercase tracking-wide max-w-md mb-4"
-                style={{ color: poster.accentColor }}
-              >
-                "{poster.slogan}"
-              </p>
-              <div className="text-[10px] uppercase font-mono tracking-widest border-t-2 border-current/30 pt-3">
-                COCKROACH JANTA PARTY • HAR GHAR KI SARKAR • EST. 2026
-              </div>
-            </div>
+            )}
 
             <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
               <div className="text-xs text-[#3A332B] font-bold">
@@ -140,11 +150,13 @@ export const PosterCard: React.FC<PosterCardProps> = ({ poster, onSelect }) => {
               </div>
 
               <a
-                href={`data:text/plain;charset=utf-8,${encodeURIComponent(`CJP SATIRE POSTER\nTitle: ${poster.title}\nSlogan: ${poster.slogan}\nCategory: ${poster.category}\nOfficial Fictional Parody Artwork - Cockroach Janata Party`)}`}
-                download={`cjp_poster_${poster.id}.txt`}
+                href={poster.image || `data:text/plain;charset=utf-8,${encodeURIComponent(`CJP SATIRE POSTER\nTitle: ${poster.title}\nSlogan: ${poster.slogan}\nCategory: ${poster.category}\nOfficial Fictional Parody Artwork - Cockroach Janata Party`)}`}
+                download={poster.image ? `cjp_poster_${poster.id}.png` : `cjp_poster_${poster.id}.txt`}
+                target="_blank"
+                rel="noreferrer"
                 className="w-full sm:w-auto btn-brutal py-2.5 px-5 bg-[#D9572B] text-white hover:bg-[#16120D] text-xs font-black uppercase flex items-center justify-center gap-2"
               >
-                <Download size={14} /> DOWNLOAD ARTWORK ASSETS
+                <Download size={14} /> DOWNLOAD POSTER ASSET
               </a>
             </div>
 

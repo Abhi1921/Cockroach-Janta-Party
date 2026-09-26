@@ -15,6 +15,48 @@ export interface Poster {
 
 export const postersData: Poster[] = [
   {
+    id: 'poster-adivasi-revolution-2026',
+    title: 'Adivasi School Thik Karo Revolution 2026',
+    slogan: 'REPAIR OUR SCHOOLS NOW — STAND WITH TRIBAL STUDENTS NATIONWIDE',
+    category: 'campaign',
+    style: 'placard',
+    accentColor: '#D9572B',
+    bgColor: '#16120D',
+    textColor: '#F5EFE6',
+    date: '2026-09-26',
+    downloads: 12840,
+    featured: true,
+    image: '/cjp_poster_adivasi_revolution.png'
+  },
+  {
+    id: 'poster-contractor-road-warranty-2026',
+    title: 'Contractor Road Warranty - 3 Year Guarantee',
+    slogan: 'DEMANDING ACCOUNTABILITY & QUALITY INFRASTRUCTURE ON EVERY METRO ROAD',
+    category: 'protest',
+    style: 'banner',
+    accentColor: '#E6A100',
+    bgColor: '#1A1713',
+    textColor: '#F5EFE6',
+    date: '2026-09-25',
+    downloads: 11950,
+    featured: true,
+    image: '/cjp_poster_road_warranty_2026.png'
+  },
+  {
+    id: 'poster-un-geneva-summit-2026',
+    title: 'UN Geneva Youth Civic Forum 2026 Summit',
+    slogan: 'ADVOCATING FOR YOUTH VOICES IN GLOBAL MUNICIPAL GOVERNANCE',
+    category: 'editorial',
+    style: 'editorial',
+    accentColor: '#2980B9',
+    bgColor: '#0B132B',
+    textColor: '#F5EFE6',
+    date: '2026-09-24',
+    downloads: 10420,
+    featured: true,
+    image: '/cjp_poster_geneva_summit_2026.png'
+  },
+  {
     id: 'poster-scst-pocso-invoked',
     title: 'SC/ST & POCSO Acts Invoked against Bhardwaj',
     slogan: 'DELHI POLICE ADD SEC 307 ATTEMPT TO MURDER & SC/ST SECTIONS',

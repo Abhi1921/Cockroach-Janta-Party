@@ -20,6 +20,120 @@ export interface NewsArticle {
 }
 
 export const newsData: NewsArticle[] = [
+  // LATEST UP-TO-DATE NEWS (SEP 26, 2026)
+  {
+    slug: "cjp-launches-5-state-adivasi-school-thik-karo-yatra-2026",
+    title: "CJP Launches 5-State 'Adivasi School Thik Karo' Yatra From Gadchiroli to Bastar & Mayurbhanj",
+    summary: "The Hindu & India Today report CJP founder Abhijeet Dipke and CJP youth delegates embarking on a 5-state tribal education yatra across Maharashtra, Chhattisgarh, Odisha, Jharkhand, and Rajasthan to audit residential hostels.",
+    category: "BREAKING & CIVIC",
+    publishDate: "SEP 26, 2026",
+    author: {
+      name: "The Hindu & India Today",
+      role: "National Education & Tribal Bureau"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_adivasi_revolution.png",
+    imageAlt: "CJP Adivasi School Thik Karo Revolution Poster Artwork",
+    tags: ["The Hindu", "India Today", "Adivasi School Thik Karo", "Gadchiroli", "Bastar", "Mayurbhanj", "Abhijeet Dipke"],
+    content: [
+      {
+        heading: "5-State Tribal School Inspection Yatra Launched",
+        text: "Building upon the Gadchiroli declaration, CJP founder Abhijeet Dipke led a delegation of 50 student auditors on a 5-state 'Adivasi School Thik Karo' yatra. The team will inspect over 100 residential tribal hostels in Maharashtra, Chhattisgarh, Odisha, Jharkhand, and Rajasthan."
+      },
+      {
+        heading: "Demanding Emergency Sanitation & Roof Repair Vouchers",
+        text: "Dipke stated that tribal students in interior belts deserve state-of-the-art STEM laboratories, clean drinking water, and structurally sound residential quarters. CJP plans to release bi-weekly video evidence logs directly to the Union Tribal Affairs Ministry."
+      }
+    ]
+  },
+  {
+    slug: "delhi-hc-directs-mcd-pwd-asphalt-drainage-audit-reports-2026",
+    title: "Delhi High Court Orders PWD & MCD to File Bi-Monthly Asphalt Thickness & Subterranean Drain Vouchers",
+    summary: "LiveLaw and Times of India report Delhi High Court issuing fresh enforcement directions ordering municipal authorities to publish core sample asphalt tests and drain desilting logs on CJP's open transparency dashboard.",
+    category: "CIVIC & COURT",
+    publishDate: "SEP 25, 2026",
+    author: {
+      name: "LiveLaw / Times of India",
+      role: "Judicial Reporting Bureau"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_road_warranty_2026.png",
+    imageAlt: "Contractor Road Warranty 3-Year Guarantee Graphic Poster",
+    tags: ["LiveLaw", "Times of India", "Delhi High Court", "Asphalt Audit", "Contractor Warranty", "Subterranean Drains"],
+    content: [
+      {
+        heading: "High Court Enforces Paving Accountability",
+        text: "In continuation of its contractor road warranty directives, the Delhi High Court ordered PWD and MCD engineers to upload core asphalt thickness lab reports and contractor bank guarantee receipts prior to disbursing public funds."
+      },
+      {
+        heading: "Citizen Audit Panels Authorized",
+        text: "The High Court bench explicitly permitted CJP ward delegates to inspect municipal paving sites alongside division engineers, cementing student-led civic monitoring in municipal law."
+      }
+    ]
+  },
+  {
+    slug: "un-geneva-youth-forum-finalizes-cjp-keynote-schedule-2026",
+    title: "UN Geneva Secretariat Finalizes Keynote Plenary Slot for CJP Digital Decentralization Address",
+    summary: "BBC World reports the United Nations Office at Geneva officially placing CJP's BitChat governance framework and student-led municipal audits as the opening keynote of the Global Youth Civic Summit.",
+    category: "GLOBAL & UN",
+    publishDate: "SEP 24, 2026",
+    author: {
+      name: "BBC World Service",
+      role: "International Desk"
+    },
+    readingTime: "5 min read",
+    featuredImage: "/cjp_poster_geneva_summit_2026.png",
+    imageAlt: "UN Geneva Youth Civic Forum 2026 Official CJP Poster",
+    tags: ["BBC World", "UN Geneva", "Global Youth Summit", "BitChat", "Abhijeet Dipke", "International Civic Reform"],
+    content: [
+      {
+        heading: "Keynote Address at Palais des Nations",
+        text: "The UN Youth Secretariat confirmed that CJP delegates will deliver the inaugural address at the Palais des Nations in October 2026. The plenary session will focus on how decentralized mobile tech can empower youth in emerging economies to enforce local government transparency."
+      }
+    ]
+  },
+  {
+    slug: "swatantra-bhardwaj-bail-compliance-report-patiala-house-2026",
+    title: "Police & Legal Observers File Bail Compliance Report in Patiala House Court Ahead of Oct 6 Hearing",
+    summary: "Bar & Bench reports Delhi Police and CJP legal observers submitting verification reports confirming Swatantra Bhardwaj's compliance with interim bail conditions and social media gag orders.",
+    category: "LEGAL & COURT",
+    publishDate: "SEP 26, 2026",
+    author: {
+      name: "Bar & Bench",
+      role: "Patiala House Legal Desk"
+    },
+    readingTime: "4 min read",
+    featuredImage: "/cjp_poster_bhardwaj_bail.png",
+    imageAlt: "Swatantra Bhardwaj Bail Compliance Patiala House Graphic",
+    tags: ["Bar & Bench", "Patiala House Court", "Interim Bail", "Oct 6 Hearing", "Social Media Gag"],
+    content: [
+      {
+        heading: "Court Prepares for Oct 6 Final Arguments",
+        text: "Ahead of the upcoming October 6 hearing, Patiala House Metropolitan Magistrate received compliance affidavits confirming the accused has refrained from online publishing regarding the Jantar Mantar assault case."
+      }
+    ]
+  },
+  {
+    slug: "cjp-swarm-reaches-150000-verified-student-observers-2026",
+    title: "CJP Swarm Network Crosses 150,000 Verified Student Auditors Across 85 Indian Cities",
+    summary: "Official CJP Secretariat announcement confirms the citizen swarm network has flagged over 19,000 potholes, filed 3,240 RTI transparency applications, and established 84 ward command centers.",
+    category: "MILESTONE",
+    publishDate: "SEP 24, 2026",
+    author: {
+      name: "CJP Movement Secretariat",
+      role: "Data & Audit Bureau"
+    },
+    readingTime: "3 min read",
+    featuredImage: "/cjp_news_hero_poster.png",
+    imageAlt: "CJP 150k Swarm Members Milestone Poster",
+    tags: ["CJP Swarm", "Milestone", "150k Members", "RTI Audits", "Ward Centers", "Youth Civic Movement"],
+    content: [
+      {
+        heading: "Rapid Expansion Across Tier 2 & Tier 3 Cities",
+        text: "The Cockroach Janta Party swarm network logged a 250% surge in active memberships across Tier 2 and Tier 3 municipal hubs, driven by popular demand for school infrastructure audits and transparent paving warranties."
+      }
+    ]
+  },
   // NEW TRENDING 1: UN Geneva Youth Forum Invitation (Sep 22, 2026)
   {
     slug: "un-geneva-youth-civic-forum-invites-cjp-founder-dipke-2026",
