@@ -534,6 +534,62 @@ export const DOMAIN_DISCOVERY_MAP: DomainRecord[] = [
 
 export const YOUTUBE_MASTER_DATABASE: YouTubeVideoRecord[] = [
   {
+    id: 'YT-CEC-001',
+    title: 'The Hindu Livestream: CEC Gyanesh Kumar Row — Abhijeet Dipke & Saurav Das Address New Delhi Presser',
+    channelName: 'The Hindu',
+    channelUrl: 'https://youtube.com/@thehindu',
+    videoUrl: 'https://youtube.com/watch?v=thehindu_cjp_presser',
+    uploadDate: '2026-09-25',
+    duration: '6:54:24',
+    views: '1.8M',
+    category: 'NEWS_COVERAGE',
+    peopleInvolved: ['Abhijeet Dipke', 'Saurav Das'],
+    description: 'CJP founder Abhijeet Dipke and chief spokesperson Saurav Das address press conference in New Delhi over Election Commission SIR row.',
+    confidence: 'HIGH'
+  },
+  {
+    id: 'YT-ANI-002',
+    title: 'SIR Row: CJP\'s Abhijeet Dipke & Saurav Das Address Press in Delhi',
+    channelName: 'ANI News',
+    channelUrl: 'https://youtube.com/@aninews',
+    videoUrl: 'https://youtube.com/watch?v=ani_sir_row_presser',
+    uploadDate: '2026-09-25',
+    duration: '5:37:02',
+    views: '2.4M',
+    category: 'NEWS_COVERAGE',
+    peopleInvolved: ['Abhijeet Dipke', 'Saurav Das'],
+    description: 'ANI News live coverage of CJP press conference outlining demands for CEC Gyanesh Kumar resignation.',
+    confidence: 'HIGH'
+  },
+  {
+    id: 'YT-IT-003',
+    title: 'CJP Co-Convenor Ashutosh Ranka | CEC Gyanesh Kumar Row',
+    channelName: 'India Today',
+    channelUrl: 'https://youtube.com/@indiatoday',
+    videoUrl: 'https://youtube.com/watch?v=indiatoday_ashutosh_ranka',
+    uploadDate: '2026-09-25',
+    duration: '07:40',
+    views: '920K',
+    category: 'INTERVIEW',
+    peopleInvolved: ['Ashutosh Ranka'],
+    description: 'India Today interview with Ashutosh Ranka on CJP\'s Oct 2 nationwide protest strategy.',
+    confidence: 'HIGH'
+  },
+  {
+    id: 'YT-BBC-004',
+    title: 'Abhijeet Dipke on Life After CJP & Being an Introvert Leading a Mass Youth Movement',
+    channelName: 'BBC News India',
+    channelUrl: 'https://youtube.com/@bbcnewsindia',
+    videoUrl: 'https://youtube.com/watch?v=bbc_abhijeet_dipke_interview',
+    uploadDate: '2026-08-26',
+    duration: '21:19',
+    views: '3.1M',
+    category: 'INTERVIEW',
+    peopleInvolved: ['Abhijeet Dipke'],
+    description: 'Exclusive 21-minute feature interview with Abhijeet Dipke on starting CJP as satire and evolving into a youth civic movement.',
+    confidence: 'HIGH'
+  },
+  {
     id: 'YT-001',
     title: 'Why Gen-Z Formed the Cockroach Janta Party - Full Ground Report',
     channelName: 'Independent Media Desk',
