@@ -7,8 +7,9 @@ export const NotFoundPage: React.FC = () => {
   return (
     <div className="not-found-page py-24 bg-[#EADBCE] text-[#16120D] text-center font-sans selection:bg-[#D9572B] selection:text-white">
       <SEOHead
-        title="404 — This Cockroach Couldn't Find the Page | CJP"
+        title="404 — Page Not Found | Cockroach Janta Party Wale"
         description="404 Error: The page you are looking for does not exist on Cockroach Janata Party (CJP) portal."
+        noindex={true}
       />
 
       <div className="max-w-md mx-auto px-4 bg-[#F5EFE6] border-4 border-[#16120D] p-10 shadow-[8px_8px_0px_0px_#16120D]">

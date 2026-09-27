@@ -89,6 +89,10 @@ export default function App() {
             <Routes>
               {/* Core & Vision */}
               <Route path="/" element={<HomePage />} />
+              <Route path="/index.html" element={<HomePage />} />
+              <Route path="/index" element={<HomePage />} />
+              <Route path="/index.htm" element={<HomePage />} />
+              <Route path="/index.php" element={<HomePage />} />
               <Route path="/cocroach-janata-party" element={<HomePage />} />
               <Route path="/cockroach-janata-party" element={<HomePage />} />
               <Route path="/cockroach-janta-party" element={<HomePage />} />
@@ -144,8 +148,8 @@ export default function App() {
               <Route path="/master-archive" element={<MasterArchivePage />} />
               <Route path="/digital-archive" element={<MasterArchivePage />} />
               <Route path="/sources" element={<MasterArchivePage />} />
-              <Route path="/cockroach-janta-party" element={<CanonicalSpellingPage />} />
-              <Route path="/cockroach-janata-party" element={<CanonicalSpellingPage />} />
+              <Route path="/canonical-spelling" element={<CanonicalSpellingPage />} />
+              <Route path="/spelling" element={<CanonicalSpellingPage />} />
               <Route path="/what-is-cjp" element={<CanonicalSpellingPage />} />
               <Route path="/internal-disputes" element={<InternalDisputesPage />} />
               <Route path="/fact-check" element={<FactCheckPage />} />
